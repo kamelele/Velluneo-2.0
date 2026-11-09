@@ -25,6 +25,8 @@ Przy sztywnym celu 38 × 17 × 15 mm kolejny krok to wstępny dobór węższego 
 
 ## Podglądy 3D
 
+Dwie płytki we wspólnej scenie KiCad, w dwóch ujęciach wzorowanych na prezentacji JLCPCB. Oznaczenia i obrysy montażowe dodano na potrzeby podglądu. Widok bez elementów pokazuje rzeczywiste pady rozmieszczenia Rev E. Ścieżki są na dalszym etapie projektu. [Obie płytki z elementami](Podglady/RevE_JLC_obsadzone.png) · [Obie płytki z góry](Podglady/RevE_JLC_widok_PCB.png) · [Wzorzec JLCPCB](https://jlcpcb.com/blog/kicad-mcp-how-to-design-a-pcb-with-claude-code)
+
 Poprzednie modele niestandardowych obudów w Rev D były prostymi bryłami zastępczymi. Dodałem własne modele do podglądu, z kształtem korpusów i wyprowadzeń. Obejmują m.in. warystor, kondensator Y1, dławik, kondensator SMD, bezpiecznik, mostek prostowniczy i układy scalone. Model transformatora odwzorowuje przyjętą obwiednię i układ sześciu wyprowadzeń, a wygląd rdzenia i uzwojenia pozostaje orientacyjny do wyboru dostawcy. Modele i materiały służą do wizualizacji. Do sprawdzenia mechaniki obowiązują rysunki wymiarowe i próbki komponentów. [Nichicon C6](https://www.nichicon.com/en-us/part/ucm1h471mnj1ms/2563/) · [Würth L1](https://www.we-online.com/components/products/datasheet/768772102.pdf) · [Vishay CY1](https://www.vishay.com/docs/23102/440lseries.pdf) · [Podgląd na stronie JLCPCB](https://jlcpcb.com/blog/kicad-mcp-how-to-design-a-pcb-with-claude-code)
 
 [Rev D z nowymi modelami od góry](Podglady/RevD_nowe_modele_gora.png) · [Rev D od spodu](Podglady/RevD_nowe_modele_dol.png)
