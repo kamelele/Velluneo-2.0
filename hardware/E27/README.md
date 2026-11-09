@@ -6,6 +6,7 @@
 - [Projekt wkładu LED](outputs/Wklad_LED) · [mechanizm wymiany](outputs/Mechanizm_E27_RevA.svg)
 - [Pakiet KiCad Rev B](outputs/E27_RevB_pakiet_KiCad.zip) · [plan prób](outputs/Plan_prob_RevB.md)
 - [Dokumentacja rewizji A](outputs/Raport_E27_RevA.md) · [pakiet Rev A](outputs/E27_RevA_pakiet_KiCad.zip)
+- [Studium Rev C](outputs/Studium_RevC/README.md) · [model mechaniczny KiCad](outputs/Studium_RevC/E27_RevC_Gabaryty.kicad_pcb) · [specyfikacja próbek transformatora EFD20](outputs/Studium_RevC/RFQ_T1_EFD20.md)
 
 Pliki obu rewizji są dokumentacją rozwojową. Pliki oznaczone `Produkcja_DO_PRZEGLADU` służą do przeglądu technologicznego. Przed próbami z siecią konieczny jest przegląd transformatora, ochrony, izolacji kompletnego zespołu oraz stanowiska.
 

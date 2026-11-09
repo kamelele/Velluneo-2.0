@@ -2,7 +2,7 @@
 
 **Rewizja B zasilacza · prototyp laboratoryjny · 9 listopada 2026**
 
-Płytka zasilacza ma **66 × 34 mm**, o 25,2% mniejszą powierzchnię niż Rev A. Sam zespół PCB z elementami ma szacunkowo **25 mm wysokości** przed uwzględnieniem lutowia, mocowania i przegrody. Najwyższy element od góry to C2 (maks. 18 mm), a od dołu F1 (5,35 mm), z PCB 1,6 mm pomiędzy. Cel **38 × 17 × 15 mm** pozostaje otwarty. Płytka służy do walidacji elektrycznej poza korpusem A60.
+Płytka zasilacza ma **66 × 34 mm**, o 25,2% mniejszą powierzchnię niż Rev A. C2 (maks. 18 mm), PCB (1,6 mm) i F1 (5,35 mm) dają razem około 25 mm. Po weryfikacji rysunku RV1 dla prostych wyprowadzeń przyjęto konserwatywnie do 22 mm od góry. Daje to **około 29 mm budżetu wysokości** przed doliczeniem montażu i obudowy. Rzeczywistą wysokość RV1 ustali próbka z określonym formowaniem wyprowadzeń. Cel **38 × 17 × 15 mm** pozostaje otwarty. Płytka służy do walidacji elektrycznej poza korpusem A60. [Rysunek wymiarowy Littelfuse TMOV](https://www.littelfuse.com/assetdocs/varistors-tmov-datasheet?assetguid=bd475732-1071-4352-b8aa-f78b0007eb05)
 
 Wkład Ø30 mm nadal ma 16 diod Cree JE2835B i dwa szeregi po osiem LED, każdy z własnym regulatorem 127 mA. Interfejs wkładu pozostaje trzystykowy (A+, K1, K2). S1 i czujnik TH1 trafiają do J2. Przewody J2/J3 lutuje się do PCB z osobnym odciążeniem mechanicznym. Dobór blokowanego złącza poza płytką, bariery korpusu i systemu prowadzenia przewodów wymaga sprawdzenia z mechaniką. Katalogowy model optyczny Rev A daje 764, 844 i 833 lm odpowiednio dla 2700, 4000 i 6500 K. Wynik zależy od binu, temperatury i dyfuzora.
 
@@ -22,6 +22,8 @@ W pakiecie należy otworzyć `Zasilacz_RevB/Zasilacz_RevB.kicad_pro` oraz `Wklad
 Dzielnik R14/R15 to 226 kΩ i 10,0 kΩ, oba ±0,1% i ±25 ppm/K. TPS26600 nominalnie odcina przy 28,08 V. Dla progu komparatora 1,170–1,225 V i prądu wejściowego ±100 nA obliczony próg wynosi **27,54–28,99 V** przy początkowej tolerancji rezystorów. Przy osobnym skrajnym dryfcie każdego rezystora o 0,2% dla zmiany temperatury o 80 K przedział poszerza się do **27,43–29,10 V**. Analogicznie policzona górna granica Rev A wynosiła 30,24 V przy początkowej tolerancji. Te przedziały dotyczą powolnej zmiany napięcia. Zmierzyć także maksymalne chwilowe napięcie na A+ przy uszkodzeniu regulacji, rozłączeniu wkładu, krótkich impulsach i ponownych załączeniach. Celem projektu jest **≤30 V na dostępnym wyjściu** w zdefiniowanych próbach. [TI TPS26600](https://www.ti.com/lit/ds/symlink/tps2660.pdf)
 
 Dzielnik CV R10/R11 to 110 kΩ i 5,62 kΩ, oba ±0,1%. Z zakresem odniesienia LYT6073C 1,25–1,28 V przy 25°C daje **25,67–26,38 V** przed doliczeniem przesunięcia masy czujnika prądu, tętnień i dynamiki. Górną granicę tego przedziału od obliczonego minimum OVP po dryfcie rezystorów dzieli około 1 V. W próbach sprawdzić zarówno samoczynne wyłączenia na gorąco, jak i zapas dla LED o najwyższym zimnym Vf. [Power Integrations LYTSwitch-6](https://www.power.com/sites/default/files/documents/lytswitch-6_family_datasheet.pdf?language=en)
+
+Limit sumarycznego prądu flybacka z R9 = 0,11 Ω wynosi **326 mA typ.** przy tabelarycznym 35,90 mV. Skraje 35,17–36,62 mV i R9 ±1% dają **317–336 mA** przy 25°C. Wartość 318 mA w starszej dokumentacji korzystała z przybliżenia 35 mV. W próbie uwzględnić temperaturę i zmierzyć spadek bezpośrednio przy padach R9. [Power Integrations LYTSwitch-6, tabela parametrów wtórnych](https://www.power.com/sites/default/files/documents/lytswitch-6_family_datasheet.pdf?language=en)
 
 ## Wykonanie i kolejność prób
 

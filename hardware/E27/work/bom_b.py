@@ -28,7 +28,7 @@ for part in parts:
         'Nazwa i funkcja': part['function'], 'Parametry': part['val'], 'Producent': part['maker'],
         'MPN': part['part'], 'Obudowa / footprint': part['footprint'],
         'Ilość na płytce / zespole': 1,
-        'Uwagi montażowe': part['notes'] if ref in changed | {'RV1'} else old.get('Uwagi montażowe', part['notes']),
+        'Uwagi montażowe': part['notes'] if ref in changed | {'RV1','R9'} else old.get('Uwagi montażowe', part['notes']),
     })
     if ref in names:
         seller,p1,q1,p2,q2,status,source = names[ref]

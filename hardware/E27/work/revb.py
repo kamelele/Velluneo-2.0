@@ -42,7 +42,7 @@ def circuit():
        notes='UMT-H. 1,5 kA przy 277 VAC UL albo przy 250 VAC IEC, warunki z karty. Wymaga testu zdolności wyłączania całego zespołu.')
     ch('R1',val='22R / 1.1W fusible',footprint='E27:AC01_CS_WSZ',part='AC01000902209JBMCS',maker='Vishay',
        notes='AC01-CS WSZ. Potwierdzić obrys, impuls rozruchowy, temperaturę i koordynację z F1.')
-    ch('RV1',connection={1:'P_LR',2:'P_N'},notes='Umieszczony za R1. Sprawdzić surge, ciągłe przepięcie i rozłączenie termiczne.')
+    ch('RV1',connection={1:'P_LR',2:'P_N'},notes='Za R1. Budżet wysokości 22 mm dla prostych wyprowadzeń. Sprawdzić udar, ciągłe przepięcie i rozłączenie termiczne.')
     for ref in ('D1','D2','D3','D4'):
         del parts[ref]
     parts['BR1']=a.Device('BR1','MB10S','Package_SO:OnSemi_751EP_SOIC-4_3.9x4.725mm_P2.54mm',
@@ -53,6 +53,7 @@ def circuit():
        notes='1 mH, 0,5 A, Isat 0,55 A typ. Brak ekranu. Sprawdzić EMI, udar i rozgrzanie w rzeczywistym układzie.')
     ch('C6',footprint='E27:UCM_12p5',part='UCM1H471MNJ1MS',maker='Nichicon',
        notes='470 µF/50 V, Ø12,5 × 13,5 mm nominalnie. 5 000 h przy 105°C. Zweryfikować lutowanie reflow i nagrzewanie.')
+    ch('R9',function='Limit sumy prądów 326 mA typ.',notes='317–336 mA przy 25°C z tolerancją R9 ±1%. Sprawdzić przebieg i temperaturę.')
     ch('J2',footprint='E27:Harness_4pos',part='',maker='',notes='Przewody do S1/TH1 i S2 lutowane, odciążone w korpusie. Złącze serwisowe poza PCB.')
     ch('J3',footprint='E27:Harness_3pos',part='',maker='',notes='Przewody A+/K1/K2 lutowane, odciążone w korpusie. Złącze serwisowe poza PCB.')
     ch('R10',val='110k 0.1%',part='ERA-3AEB114V',notes='Dzielnik CV, ±25 ppm/K.')
