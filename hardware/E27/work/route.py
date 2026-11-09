@@ -158,7 +158,7 @@ def squish(path):
     small.append(path[-1])
     return small
 
-def route_board(b,fx,nets):
+def route_board(b,fx,nets,controller_fanout=True):
     pads=get_pad_data(fx)
     names=list(nets)
     preferred=['P_D','P_CL','S_VO','S_FB','S_EN','S_OVP','S_ILIM','S_SLEW','S_FUSED','S_SET_A','S_SET_B',
@@ -176,14 +176,14 @@ def route_board(b,fx,nets):
         if (ref,num) in FRONT_ESCAPE:
             dx=FRONT_ESCAPE[ref,num]
             a=(x,y)
-            elbow=(round((x+dx)/STEP)*STEP-.20,y)
+            elbow=(round((x+dx)/STEP)*STEP-math.copysign(.20,dx),y)
             target=(round((x+dx)/STEP)*STEP,round(y/STEP)*STEP)
             track(b,nets[net],[abspt(*a),abspt(*elbow),abspt(*target)],.30,p.F_Cu)
             escape_vias.append((net,target,via(b,nets[net],*target),1))
             routes.extend([(net,0,a,elbow,.30),(net,0,elbow,target,.30),(net,None,target,target,VIA_D)])
             ports[(ref,num)]=(ref,num,net,*target,box,(0,1))
             continue
-        if ref!='U1' or not num.isdigit() or not 1<=int(num)<=7:
+        if not controller_fanout or ref!='U1' or not num.isdigit() or not 1<=int(num)<=7:
             continue
         target=(BOUNDARY+(6.7 if int(num)%2 else 7.5),round(y/STEP)*STEP)
         elbow=(target[0]-.25,y)

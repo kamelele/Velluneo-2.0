@@ -2,6 +2,8 @@
 
 Wynik każdej próby zapisać razem z identyfikatorem płytki, partią elementów, temperaturą, ustawieniami i plikami przebiegów. Wartości liczbowe poniżej są celami rozwojowymi projektu.
 
+Przed próbami z zamkniętą pętlą S1 skorygować poziom SHDN zgodnie z [instrukcją Rev B1](https://github.com/kamelele/Velluneo-2.0/blob/main/hardware/E27/outputs/Zasilacz_RevB1/README.md#4-próba-porównawcza-rev-b-i-b1). Zalecany przez TI zakres pinu wynosi 0–4 V.
+
 ## Część wtórna z izolowanego zasilacza laboratoryjnego
 
 1. **Prądy kanałów.** Podać nominalne 26 V na S_RAW przy odłączonej stronie pierwotnej. Zmierzyć oddzielnie K1 i K2 przy dwóch obciążeniach, po otwarciu każdego kanału i z trzema wkładami. Sprawdzić około 127 mA na kanał, brak podwojenia prądu czynnego szeregu po przerwaniu drugiego oraz utrzymanie regulacji przy zimnym Vf. Powtórzyć po nagrzaniu. Udokumentować minimum napięcia S_RAW potrzebne do regulacji obu kanałów.

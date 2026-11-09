@@ -8,6 +8,8 @@ Wkład Ø30 mm nadal ma 16 diod Cree JE2835B i dwa szeregi po osiem LED, każdy 
 
 W pakiecie należy otworzyć `Zasilacz_RevB/Zasilacz_RevB.kicad_pro` oraz `Wklad_LED/Wklad_LED.kicad_pro`. Dla zasilacza obowiązuje BOM Rev B. Raport Rev A zawiera dane wkładu, mechaniki i specyfikację zamówienia transformatora.
 
+**Aktualizacja przed próbami.** W obwodzie S1 trzeba skorygować napięcie sterujące SHDN. Szczegóły są w [planie prób](Plan_prob_RevB.md).
+
 ## Ochrona wejścia i kondensatory
 
 - **F1** to ceramiczny Schurter 3403.0271.23, T500 mA / 277 VAC. Karta podaje 1,5 kA dla 277 VAC w warunkach UL albo 250 VAC w warunkach IEC. Producent podaje typową całkę przedłukową 0,62 A²s przy 10 × In. Koordynacja wejścia w gotowym zespole oraz spodziewany prąd zwarciowy wymagają oddzielnej próby. [Schurter UMT-H](https://www.schurter.com/en/datasheet/UMT-H)
