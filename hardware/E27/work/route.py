@@ -158,14 +158,14 @@ def squish(path):
     small.append(path[-1])
     return small
 
-def route_board(b,fx,nets,controller_fanout=True):
+def route_board(b,fx,nets,controller_fanout=True,seed_routes=(),term_filter=None,anchors=None):
     pads=get_pad_data(fx)
     names=list(nets)
     preferred=['P_D','P_CL','S_VO','S_FB','S_EN','S_OVP','S_ILIM','S_SLEW','S_FUSED','S_SET_A','S_SET_B',
        'S_LED_KA','S_LED_KB','S_LED_PLUS','S_RTN','S_GND','S_SW','P_BPP','S_FWD','S_BPS',
        'P_L','P_LF','P_LR','P_N','P_0','P_BULK','S_RAW']
     names=EARLY+[n for n in preferred if n not in EARLY]+[n for n in names if n not in preferred and n not in EARLY]
-    routes=[]
+    routes=list(seed_routes)
     failed=[]
     # Fan out the seven controller pins in a staggered row of tented vias.
     # Every pin has a dedicated escape. This prevents a routed ground from
@@ -193,7 +193,10 @@ def route_board(b,fx,nets,controller_fanout=True):
         routes.extend([(net,1,a,elbow,.21),(net,1,elbow,target,.21),(net,None,target,target,VIA_D)])
         ports[(ref,num)]=(ref,num,net,*target,box,(0,1))
     for name in names:
-        terms=[ports.get((d[0],d[1]),d) for d in pads if d[2]==name]
+        terms=[ports.get((d[0],d[1]),d) for d in pads
+               if d[2]==name and (term_filter is None or term_filter(d[0],d[1]))]
+        if anchors:
+            terms=[*anchors.get(name,()),*terms]
         if len(terms)<2: continue
         width=MAINS_WIDTH if name in MAINS else .29 if name in WIDE else .21
         group=[terms.pop(0)]

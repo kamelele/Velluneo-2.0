@@ -2,6 +2,7 @@
 
 Żarówka E27 230 V z wymiennym wkładem Ø30 mm. Trzy wersje barwy (2700 K, 4000 K i 6500 K) korzystają z tego samego interfejsu i mechanizmu.
 
+- [Zasilacz Rev D · jedna płytka do wyceny w JLCPCB](outputs/Zasilacz_RevD_JLCPCB/README.md)
 - [Zasilacz Rev B1 · odprowadzanie ciepła przez PCB](outputs/Zasilacz_RevB1/README.md) · [weryfikacja KiCad](outputs/Zasilacz_RevB1/Weryfikacja_KiCad_RevB1.md)
 - [Zasilacz Rev B2 · moduł prób ochrony zwarciowej](outputs/Zasilacz_RevB2_Ochrona/README.md) · [wyniki modelu](outputs/Zasilacz_RevB2_Ochrona/Model_RevB2_przypadki.csv)
 - [Rewizja B zasilacza i wyniki weryfikacji](outputs/Raport_E27_RevB.md) · [projekt KiCad](outputs/Zasilacz_RevB) · [BOM](outputs/BOM_Zasilacz_RevB.csv)
