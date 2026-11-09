@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640">
+<defs>
+ <style>
+ text{font-family:'Segoe UI',Arial,sans-serif;fill:#152838} .h{font-size:29px;font-weight:700}
+ .sub{font-size:15px;fill:#546879} .label{font-size:17px;font-weight:650} .detail{font-size:14px;fill:#476072}
+ .call{stroke:#597281;stroke-width:1.5;fill:none} .thin{stroke:#9fb2bb;stroke-width:1.2;fill:none}
+ .dim{font-size:13px;fill:#476072} .accent{fill:#007976}
+ </style>
+ <marker id="arrow" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto-start-reverse">
+   <path d="M0 0 L7 3.5 L0 7 Z" fill="#597281"/>
+ </marker>
+</defs>
+<rect width="1120" height="640" fill="#f6f8f9"/>
+<text x="36" y="52" class="h">Wymienny wkład E27</text>
+<text x="36" y="78" class="sub">Przekrój koncepcyjny korpusu po miniaturyzacji. Wymiary w mm. Geometria do prób.</text>
+<line x1="36" y1="101" x2="1084" y2="101" stroke="#c6d1d6"/>
+
+<!-- Dome and bayonet -->
+<path d="M105 267 C46 205 103 123 252 122 C401 123 458 205 399 267 L376 278 L368 248 C409 178 327 148 252 148 C177 148 95 178 136 248 L127 278 Z" fill="#dfeef2" stroke="#7294a0" stroke-width="2"/>
+<path d="M125 253 H162 V271 H147 V302 H124 Z M380 253 H343 V271 H358 V302 H381 Z" fill="#548582" stroke="#27605e" stroke-width="2"/>
+<!-- Insulating carrier and LED board -->
+<rect x="144" y="284" width="216" height="23" rx="6" fill="#d8e9df" stroke="#538776" stroke-width="2"/>
+<rect x="165" y="282" width="174" height="11" rx="2" fill="#0d766a"/>
+<rect x="179" y="273" width="21" height="9" rx="2" fill="#e7b732"/>
+<rect x="217" y="273" width="21" height="9" rx="2" fill="#e7b732"/>
+<rect x="255" y="273" width="21" height="9" rx="2" fill="#e7b732"/>
+<rect x="293" y="273" width="21" height="9" rx="2" fill="#e7b732"/>
+<rect x="166" y="294" width="172" height="7" fill="#e39a50"/>
+<path d="M172 223 H208 V239 H187 V263 H176 V239 H172 Z" fill="#b6d6d4" stroke="#488482" stroke-width="1.6"/>
+<path d="M181 238 v19 l-3 8 h6 l-3 8" stroke="#af862d" stroke-width="3" fill="none"/>
+<!-- Radiator and shroud -->
+<path d="M108 306 H396 V325 H367 V392 H137 V325 H108 Z" fill="#bbc9cf" stroke="#667d89" stroke-width="2"/>
+<path d="M143 320 V388 M157 320 V388 M172 320 V388 M187 320 V388 M317 320 V388 M332 320 V388 M347 320 V388 M361 320 V388" stroke="#8299a3" stroke-width="5"/>
+<path d="M105 319 L119 396 L156 432 H348 L385 396 L399 319" stroke="#466371" stroke-width="7" fill="none"/>
+<rect x="151" y="392" width="202" height="16" fill="#508c83" stroke="#27605e" stroke-width="2"/>
+<rect x="179" y="409" width="146" height="93" rx="12" fill="#e8edef" stroke="#647e8b" stroke-width="2"/>
+<path d="M180 469 H324 V501 H180 Z" fill="#e3e9ec"/>
+<path d="M177 505 H327 L310 565 H194 Z" fill="#a9b7bd" stroke="#546e7a" stroke-width="2"/>
+<path d="M184 517 L321 512 M187 529 L317 524 M190 541 L314 536 M193 553 L312 548" stroke="#627783" stroke-width="3"/>
+<rect x="221" y="564" width="62" height="11" rx="4" fill="#5a6970"/>
+<text x="252" y="452" class="dim" text-anchor="middle">Komora zasilacza</text>
+<text x="252" y="470" class="dim" text-anchor="middle">z dostępem serwisowym</text>
+<!-- Dimensions -->
+<path d="M165 267 V230 M339 267 V230" class="thin"/>
+<path d="M166 246 H338" class="call" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="252" y="236" class="dim" text-anchor="middle">Ø30</text>
+<path d="M109 313 H81 M108 391 H81 M85 313 V391" class="call" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="70" y="359" class="dim" text-anchor="middle" transform="rotate(-90 70 359)">strefa żeber ~30</text>
+
+<path d="M373 191 H455 L481 158" class="call"/>
+<circle cx="373" cy="191" r="4" class="accent"/>
+<text x="493" y="155" class="label">Zdejmowany klosz</text>
+<text x="493" y="177" class="detail">Bagnet uruchamia osobno dwa przełączniki.</text>
+
+<path d="M183 258 H218 L411 225 H480" class="call"/>
+<circle cx="183" cy="258" r="4" class="accent"/>
+<text x="493" y="223" class="label">Stała, osłonięta głowica</text>
+<text x="493" y="245" class="detail">Trzy styki sprężynujące. Przesłonę otwiera klucz wkładu.</text>
+
+<path d="M339 291 H480" class="call"/>
+<circle cx="339" cy="291" r="4" class="accent"/>
+<text x="493" y="286" class="label">MCPCB, uchwyt i suchy TIM</text>
+<text x="493" y="308" class="detail">Ścięcie pozycjonuje wkład. Obrzeże przenosi docisk.</text>
+
+<path d="M364 351 H480" class="call"/>
+<circle cx="364" cy="351" r="4" class="accent"/>
+<text x="493" y="347" class="label">Radiator Ø48–54 za osłoną</text>
+<text x="493" y="369" class="detail">Sprawdzić dostęp do metalu i temperaturę chwytu.</text>
+
+<path d="M353 400 H480" class="call"/>
+<circle cx="353" cy="400" r="4" class="accent"/>
+<text x="493" y="397" class="label">Stała przegroda izolacyjna</text>
+<text x="493" y="419" class="detail">Osłania komorę sieciową także przy zdjętym kloszu.</text>
+
+<line x1="493" y1="452" x2="1065" y2="452" stroke="#c6d1d6"/>
+<text x="493" y="485" class="label">Kolejność przy otwieraniu</text>
+<circle cx="506" cy="518" r="12" fill="#d7ece9"/><text x="506" y="523" text-anchor="middle" class="detail">1</text>
+<text x="528" y="523" class="detail">S1 wyłącza sterowanie wyjścia.</text>
+<circle cx="506" cy="548" r="12" fill="#d7ece9"/><text x="506" y="553" text-anchor="middle" class="detail">2</text>
+<text x="528" y="553" class="detail">S2 rozłącza dodatni tor zasilania.</text>
+<circle cx="506" cy="578" r="12" fill="#d7ece9"/><text x="506" y="583" text-anchor="middle" class="detail">3</text>
+<text x="528" y="583" class="detail">Zwalnia się docisk i można wyjąć wkład za obrzeże.</text>
+<text x="36" y="614" class="sub">Rev A · Schemat konstrukcji · Osłona, krzywki i uchwyt wymagają rysunków wykonawczych oraz prób.</text>
+</svg>

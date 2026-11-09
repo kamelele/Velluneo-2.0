@@ -1,0 +1,2485 @@
+(kicad_pcb
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(general
+		(thickness 1.6)
+		(legacy_teardrops no)
+	)
+	(paper "A4")
+	(layers
+		(0 "F.Cu" signal)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+		(39 "User.1" user)
+		(41 "User.2" user)
+		(43 "User.3" user)
+		(45 "User.4" user)
+	)
+	(setup
+		(pad_to_mask_clearance 0)
+		(allow_soldermask_bridges_in_footprints no)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
+		(pcbplotparams
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+			(disableapertmacros no)
+			(usegerberextensions no)
+			(usegerberattributes yes)
+			(usegerberadvancedattributes yes)
+			(creategerberjobfile yes)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
+			(svgprecision 4)
+			(plotframeref no)
+			(mode 1)
+			(useauxorigin no)
+			(pdf_front_fp_property_popups yes)
+			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
+			(dxfpolygonmode yes)
+			(dxfimperialunits yes)
+			(dxfusepcbnewfont yes)
+			(psnegative no)
+			(psa4output no)
+			(plot_black_and_white yes)
+			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
+			(subtractmaskfromsilk no)
+			(outputformat 1)
+			(mirror no)
+			(drillshape 1)
+			(scaleselection 1)
+			(outputdirectory "")
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "036c942e-9f9b-4578-a82d-0275fea6125e")
+		(at 102.5 77.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D3"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ed97c05b-06b6-47c7-90b1-169f6df0f4d2")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e68fcda7-63b0-46cb-a54a-536c26600e1e")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0c80e73-4427-4945-bd75-491ef595ee95")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d6da0ab8-3705-4081-a696-ce6068d1ebbe")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/c6e4ee07-f2e1-4187-8822-d2d5ba198ca6")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "3b943b52-8ce2-412d-88d7-1d7e3bd8ca79")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9498b312-8592-428c-b58c-b30bfc64754b")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "f74240c2-48f4-4170-a94f-0059909050f9")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A3")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "9049fbfc-675d-4f48-81ee-f44ed53f5b73")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A2")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "e671791a-aac9-4767-8907-9d0e14dbad19")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "24ee5cf7-75d0-4e0e-8bfd-558486cdafc6")
+		(at 92.5 87.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D9"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5639a09d-a4ac-46a8-9c28-15f5f784ea83")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cf5c1f9f-9e51-45f3-8ac2-11920b81fa84")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bada415d-f2b7-4392-9212-a5f260c8a319")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3dd02be7-117b-4a7d-82a1-aba21e5b4a1d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/04b75bbe-0167-401b-bb95-a1a48f1b3b06")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "00791c65-1577-4aa2-8b50-ef7105d9accb")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "ebc98cb6-a15c-4f78-9f76-de866e1ce998")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "458d1717-f321-4236-ac34-dd57a26ef611")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B1")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "3ee86ba7-7caa-4730-adaa-4f700b3aada0")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/LED_PLUS")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "1da2eaa0-c84d-40ac-b28d-2d80c86aa0cc")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "281729a1-cd18-49bb-94ba-2a91aca732b8")
+		(at 92.5 82.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D8"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "231a6f4d-125d-4d5f-b023-4caa4b8ecd32")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "efae1b5d-0f92-4321-abfc-3f0a44bfbb0d")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8f5ba767-56b8-4695-92eb-016e1ab79cca")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aaa204eb-6c96-4a0d-815e-7681d5bd17e8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/d80ef40d-9512-4410-960c-30e6f38ad4c8")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "dd43fc14-d634-4ca5-b4eb-8a9eae885b6a")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "2cddb2a0-dabe-4ff4-b7f6-44dad334bc1f")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "f7b54c1d-c8d9-4d34-9fb3-eba810cbf981")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/LED_KA")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "b653a83b-d275-4598-856d-03943576b192")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A7")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "dbe39f8f-275a-4824-824e-45fa75e90e8c")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "2d6611ee-7f4f-44a7-87a9-4c7b0a943090")
+		(at 92.5 92.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D16"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "74691b57-71b3-45ef-a136-b63b9a0515a8")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ceae944e-6d17-4bbc-95c7-1e5c342c870f")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b170d4ac-66d1-4942-91e0-e60415030a72")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f7a13bd9-f102-4f03-9e44-83fad5aad245")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/5dcf55fa-058b-40b6-a053-54ce2d8b6f09")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "ae520e91-619b-48c0-8eea-92502f4cc402")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "32d356a6-a502-4877-ac3b-585fd961cb1b")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "bbaa8061-0271-4e47-8a16-8f7090e821ad")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/LED_KB")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "3d109b01-5ae9-4495-95a2-c8d4622c5cd3")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B7")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "feb2311a-3733-4b6f-85da-b0e5264cc1df")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "31810a34-9946-474d-9c82-6287fa39549d")
+		(at 97.5 87.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D10"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "dcb759ac-02fa-48e8-9b8c-a6890acda669")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3dc2b188-d9ae-4916-9660-2a7bca0b28b6")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "58a8c664-a056-4c19-a641-38d7dd382dda")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ebf83a77-2c3c-4ff7-b4c8-45cb4b08754c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/47ee2575-7318-40af-8e9d-d906f98e75f9")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "06fc5de4-7452-4256-b248-61c299467b29")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f07674b5-7d6f-4bff-b495-6f7b8f855e6b")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "19eed63a-b79f-4552-8f5e-a706d15d5261")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B2")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "0b68a97e-5ce1-46e0-8a6b-da59ecfd89ef")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B1")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "c6070ed3-e7ea-480b-aaf8-b2d3ad35f550")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:SpringPad"
+		(layer "F.Cu")
+		(uuid "3ea3757d-70f2-4d31-b79a-df6c6ca5a885")
+		(at 92.75 95.55)
+		(descr "Flat top contact; 2.4 x 1.6; no paste")
+		(property "Reference" "J3"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0df72d9e-9066-4a29-a455-53515f54c136")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "LED_KB"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4f92b798-1a6c-409a-ae38-477a3a7eaf84")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cbbbf875-568a-4fd2-b379-dc75a549840c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "847dfdec-3057-4119-a2ee-e787e3cbfa8c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/6d9ba73d-5add-48ed-abcf-efb9936afe2a")
+		(attr smd exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.43 -0.81)
+			(end 1.43 0.81)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "cfaf0466-d287-4c4b-86f5-91ba5df9a474")
+		)
+		(pad "1" smd rect
+			(at 0 0)
+			(size 2.4 1.6)
+			(layers "F.Cu" "F.Mask")
+			(net "/LED_KB")
+			(uuid "3fd7d9b4-d63f-4852-9750-9e568e182110")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "47d993a4-40dc-4cef-90b2-944811c40486")
+		(at 102.5 82.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D6"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e62e7a9e-da7f-4189-98e8-e88debcef90d")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3cfe4013-a1db-48dd-b87b-a5e2ccc45ad0")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8d599314-c46a-4498-994b-eef2b865df3f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ac5f797d-0887-4b00-ba43-3d7b721349f3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/ebd53548-983f-42e7-827e-667e565e164b")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "11ce9077-d887-4fd3-8ebb-f77b176d1606")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "4c423930-0791-439a-81b7-0076a7145c83")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "b3792cdc-06c1-4f28-870c-d7f46850c1de")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A6")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "6957f433-3e8f-4ded-9585-0f1225e63f95")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A5")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "8e65a62f-2f89-4e1a-88c5-d4b1c5c937a8")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "5a691b57-f52f-4382-9df5-4ca0a5e8270a")
+		(at 107.5 92.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D13"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "44f81e5e-63e9-48f2-8fd6-3dc9f0c20645")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "44be3a06-1cda-4d30-be21-05eb956020de")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4e4e4239-edd4-4d4b-90c3-2085fc0ad2de")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a7167591-74af-43a2-b2f4-3fb7faaaddea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/8d60d2bf-482f-4e72-8d27-fe3c59a589a2")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "0a2ad55c-9113-4c0a-aee7-0320de2c4279")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f6edfe29-822c-4846-a0df-547b3063d099")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "adc8f51d-a6fb-4304-a135-20f8e079ae43")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B5")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "a6cdaf12-e055-4207-abae-c1479e15fcab")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B4")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "d722815a-86e3-471b-9793-04efc35b4886")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "86c1e4c4-71df-48f6-8b0d-65546b4f1800")
+		(at 92.5 77.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D1"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "71be0aba-6059-4d30-905f-1daf46385da9")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6352b393-48e8-444b-8e22-a1f62d322ed4")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1450ffe4-d0ec-4d43-9f62-eed618fbb268")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5933e8de-68a3-475a-b88a-c16cf766655f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/a3af8600-2653-4d54-858a-2101b931a326")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "ad9d1da9-d15a-48e1-974b-224d87199b62")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9e0e300f-b891-4c4a-bbe2-53bf6c9e9cae")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "90c9a12c-1445-40c0-85bc-9c0332b54db3")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A1")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "874c46ac-46b0-4188-889d-4f407f1aa374")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/LED_PLUS")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "2c191862-a70b-47b6-8919-c389616c2005")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "8d6bd8cd-722b-4a06-963d-f999e7545727")
+		(at 107.5 87.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D12"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d6bc66c5-d5d6-41b2-b8ab-d986e3a6a1a6")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "59818ba5-3beb-4e6e-bc12-780f84b3f5ba")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d9ac8540-34b6-49ae-af86-dc715f99e803")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3b4fc305-2d6e-413b-9d97-55f26f10c279")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/ab32634e-ec56-453a-93b1-be38e1c0302f")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "69e78881-e013-40d8-85e2-9aa7f211f995")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "c6a2d7dc-325e-41fd-a0aa-091f13cb2ad2")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "d814404f-8a9a-4aca-a50f-9bdde55896e6")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B4")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "b05a1778-5c66-4292-a854-db858015fa8f")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B3")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "10df29dd-5c46-4507-9984-7fef3c4949b2")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "9bb100a1-ae69-450a-863a-179362a1ab5c")
+		(at 97.5 82.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D7"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "016d913d-ca56-4863-98b7-cb96f893bed9")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "362c79b5-bc00-4589-aa60-50e1dd72e5ab")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a8dd34ca-ae55-4bed-964d-c711d05e8d2f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1cbe6793-134c-4f67-8b26-5bb2264dfa37")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/9ab9d87d-b624-40b5-ace3-b13943cf641a")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "389c8113-7bb6-4349-8a3b-0d0647bbd240")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "4d0f5ff0-7679-4ca0-8b5d-fdad0dd014dc")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "454239e9-5140-4132-bb55-f7066df59075")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A7")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "5ed7abb6-1093-4876-8d11-6584f9b48ea0")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A6")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "6798d122-4531-4d72-901c-f0ce7eaa4173")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:SpringPad"
+		(layer "F.Cu")
+		(uuid "a5ec9f73-5d85-457a-9270-24dfc86993c5")
+		(at 92.75 85)
+		(descr "Flat top contact; 2.4 x 1.6; no paste")
+		(property "Reference" "J2"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b669db3f-e91a-4c10-96a1-8f970cf7abca")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "LED_KA"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fa394749-fce9-481d-9a68-e4906c70ee8e")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "96f85673-8301-46f7-87b9-788adf715aa8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "64223b63-10c1-47b8-bb89-286fa8aa4005")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/afa14f60-e493-4145-ab1e-fe0d948538e6")
+		(attr smd exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.43 -0.81)
+			(end 1.43 0.81)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "fd7de82c-d02e-42ae-beec-0d7f7377949d")
+		)
+		(pad "1" smd rect
+			(at 0 0)
+			(size 2.4 1.6)
+			(layers "F.Cu" "F.Mask")
+			(net "/LED_KA")
+			(uuid "7e07ddaf-7c8f-4074-bb59-fedafeabc994")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "a9d85824-c49a-49f7-81a1-5467ec160295")
+		(at 102.5 92.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D14"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d8de0123-60af-4b04-89f0-d0697d2cf43c")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e2409fb5-718c-4ab4-8c7d-b33852280f5c")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "490bb4e4-1751-4aa0-8d94-9fea93b91eb5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "01809341-6ca8-425b-85b6-191fe54c0d20")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/cb769c85-7425-476c-8d7a-deac47037ff4")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "3b68889f-a8f6-47c4-93d1-e7a6b9ad4b6b")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "58eab799-fd73-4bf7-94c1-998d97e61254")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "901594e4-b852-45f1-a9b3-b0f996de5c6c")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B6")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "6b13c815-a835-440e-b734-051f01510cfe")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B5")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "1be658d2-9ea5-43bf-9a5e-d949247b247f")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "acf278d4-dd64-4da4-95eb-bb44dfc7365a")
+		(at 107.5 77.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D4"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "482c82d4-2276-4418-b5e8-cfd8b66ce7be")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "79309183-e3a7-476b-9ab3-786a3738ac07")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "75bfc37f-2104-4ade-ab4d-3e312a59ef23")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e5bae4c9-b9d7-485c-828d-b37fc26506cf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/4d283b17-8fa9-4dae-9be8-ba49af85d4c5")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "8f18282c-a976-4b0f-adb0-82ff865b2313")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "31d55b6c-7dc1-436b-b249-47a9193cfa65")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "16091b38-b250-40f7-9687-80d9ade56e95")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A4")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "efc15362-0c70-47b7-ae8b-44b7fe61bb8a")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A3")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "d6d4d085-2830-4fed-a3c1-401c13fa0e3b")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:SpringPad"
+		(layer "F.Cu")
+		(uuid "c16aab1d-843b-4bfe-98d7-7ef89797fde0")
+		(at 88.3 85)
+		(descr "Flat top contact; 2.4 x 1.6; no paste")
+		(property "Reference" "J1"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "585d035f-fe32-49e1-a12f-31d54f4376d3")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "LED_PLUS"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "01d417eb-e6a3-4a76-a67b-1411d2515c99")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "546cb622-83a6-4d61-ae29-3ae96076b3a7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9a59204c-2a97-4a05-a5a3-3fd21cf58026")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/dd103d56-fd1f-4ede-9865-4fa2bb43b403")
+		(attr smd exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.43 -0.81)
+			(end 1.43 0.81)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "071e5580-212d-4218-9f2b-835b37889353")
+		)
+		(pad "1" smd rect
+			(at 0 0)
+			(size 2.4 1.6)
+			(layers "F.Cu" "F.Mask")
+			(net "/LED_PLUS")
+			(uuid "4aec3906-0eee-4466-bae2-0f699b34009e")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "d25309ac-1563-4cf4-9808-e3a40733336b")
+		(at 97.5 92.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D15"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "4835030d-5c91-4720-95e4-62fb44829e33")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "41d0743c-258a-4a25-be52-e0b9dfc5b183")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9f94b922-90ca-4970-99d7-6098a3123801")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ad775c0d-0ade-4fb0-bec0-8b36bde9b660")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/8ff0e396-d8a2-4d6c-8724-76069a951e04")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "11f7cf73-2a95-49bb-ad88-7336e2fe7800")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9bdf32ef-60c7-4dfa-8916-53e82c8872b0")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "33d735d2-d1b4-4abe-978c-be30983d50d6")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B7")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "991d6532-14e7-45ce-9133-bdbf2dc94319")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B6")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "73bb1ece-261c-46ea-b1a0-3013881ecd97")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "e44537f0-8972-4bda-abba-004077b45489")
+		(at 97.5 77.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D2"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7fac6f8e-2a06-4457-b1d1-f984832e8258")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "217be2d2-3211-46e1-a771-14f58a450801")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b380751b-4eaa-4973-9112-558bed0b81d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5310dd9b-fc24-4120-82fe-c6432b100a85")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/af7aa8c1-383a-45b4-a964-ef0b10b0818c")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "1e64670b-5c15-4bb3-a053-752c5881bea7")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f7f7a17f-359a-4e99-864c-3b2192de09c6")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "5d3af122-e950-4745-8514-7e83913176f3")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A2")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "eb6b3d61-5401-4db7-8004-4e8ca8e1d906")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A1")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "19a026aa-440c-4e67-a56f-084945c24b2e")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "efb49f8a-1a8b-424e-9726-0678943bce88")
+		(at 102.5 87.5 180)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D11"
+			(at 0 -2.3 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f3eff2b1-1923-48b3-b7df-ba4b85e9c97e")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "62905074-2feb-4124-b8dd-5d27f3d6ae51")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "772b209b-7938-477d-9fab-3b06273c019c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "21d4fa66-fde8-43c0-b632-5ad7d7e9bbd3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/691db1a4-af73-474c-8730-55b5dbc3819a")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "8cdcb7e4-92b0-4d6b-b88a-eae45a1a244b")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "096fdb41-c345-40df-88f5-febe1fe6477b")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "063b6d64-9127-4434-bcdb-59f1c64ad958")
+		)
+		(pad "1" smd rect
+			(at -0.845 0 180)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B3")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "b6250147-be45-40aa-9ce1-bd46ebb4754b")
+		)
+		(pad "2" smd rect
+			(at 1.395 0 180)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/B2")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "dce34ae2-a14d-4a84-993f-64e003a9ebbc")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "E27:Cree_JE2835B"
+		(layer "F.Cu")
+		(uuid "fcb372de-4854-4856-aae4-7b8bf212147b")
+		(at 107.5 82.5)
+		(descr "JE2835B CLJ-DS40 p57: pad 1 cathode")
+		(property "Reference" "D5"
+			(at 0 -2.3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "4009baf4-7040-47ce-92c1-d48d90be8c9c")
+			(effects
+				(font
+					(size 0.68 0.68)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "JE2835B"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8f9bdac6-5b6d-4967-bad2-be053565fdb5")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e836a639-118e-4e59-9dcc-7776258936e6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "40cd5ef5-b028-4cc0-bfd2-f9301c7f928b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/588e0fa6-09b1-45b7-8347-f7ac85ca7339/884e6764-7b86-4949-8658-b54cb8113993")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.02 -1.12)
+			(end -2.02 1.12)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "ac78dc52-e47f-440b-8634-0a85949b22c5")
+		)
+		(fp_rect
+			(start -2.2 -1.65)
+			(end 2.2 1.65)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "3ccde1b9-d2cf-4375-b779-1b7657339ecd")
+		)
+		(fp_rect
+			(start -1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "3d648f8f-5d4f-4055-bfaa-cb9e51e69d01")
+		)
+		(pad "1" smd rect
+			(at -0.845 0)
+			(size 2.2 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A5")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "c9987cfe-6a46-4801-a400-fe642cb5c021")
+		)
+		(pad "2" smd rect
+			(at 1.395 0)
+			(size 1.1 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/A4")
+			(solder_paste_margin_ratio -0.2)
+			(uuid "dbba97f9-cef8-4e35-88ef-75822c075cfb")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cree_JE2835B.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(gr_line
+		(start 113.4 91.74092)
+		(end 113.4 78.25908)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "677e9140-6c93-4e2b-93e8-9b3697eba7b7")
+	)
+	(gr_arc
+		(start 113.4 91.74092)
+		(mid 85 85)
+		(end 113.4 78.25908)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f9dea750-2367-4b70-99a2-b10577572798")
+	)
+	(gr_text "A+"
+		(at 88.3 82.55 0)
+		(layer "F.SilkS")
+		(uuid "c4de90e0-3d0b-413a-a078-af1861663f87")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(gr_text "K1"
+		(at 95.35 85 0)
+		(layer "F.SilkS")
+		(uuid "0bcd300f-9530-404d-96f0-d9d3d53835d7")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(gr_text "K2"
+		(at 95.35 95.55 0)
+		(layer "F.SilkS")
+		(uuid "748f4d93-4656-4105-906f-d9a5e2807323")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(gr_text "D30 / KEY"
+		(at 101 96 0)
+		(layer "F.SilkS")
+		(uuid "4e5b126d-9d77-4c12-b917-967e4ae62f26")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(gr_text "E27 / REV A"
+		(at 100.6 74 0)
+		(layer "F.SilkS")
+		(uuid "52040473-89d8-4afe-a9fd-9b6aace38b73")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.12)
+			)
+		)
+	)
+	(segment
+		(start 93.345 77.5)
+		(end 96.105 77.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/A1")
+		(uuid "f1c1ed9f-61ff-44c0-82e0-4b5f6078d8df")
+	)
+	(segment
+		(start 98.345 77.5)
+		(end 101.105 77.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/A2")
+		(uuid "199b0694-9de1-4c3e-8eda-3384b3097688")
+	)
+	(segment
+		(start 103.345 77.5)
+		(end 106.105 77.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/A3")
+		(uuid "bd02d685-42dd-4828-b5ce-93497c54ddd8")
+	)
+	(segment
+		(start 111.35 78.15)
+		(end 111.35 81.85)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/A4")
+		(uuid "6e27cae6-5098-4f68-b3e6-b9ede5606b94")
+	)
+	(segment
+		(start 108.345 77.5)
+		(end 110.7 77.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/A4")
+		(uuid "b2b89459-6e62-43a5-99b6-c799047b3882")
+	)
+	(segment
+		(start 111.35 81.85)
+		(end 110.7 82.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/A4")
+		(uuid "b5e86c69-e646-410e-a10e-a4d166997108")
+	)
+	(segment
+		(start 110.7 77.5)
+		(end 111.35 78.15)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/A4")
+		(uuid "b934461d-bcc8-4afa-b5e5-75be91387a19")
+	)
+	(segment
+		(start 110.7 82.5)
+		(end 108.895 82.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/A4")
+		(uuid "c88a8505-0024-4b6f-8e91-914bc7df5e3c")
+	)
+	(segment
+		(start 106.655 82.5)
+		(end 103.895 82.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/A5")
+		(uuid "8d1a067b-6c44-49be-8593-ef19e6faee48")
+	)
+	(segment
+		(start 101.655 82.5)
+		(end 98.895 82.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/A6")
+		(uuid "811e3eac-dcb0-44f0-9385-1c53089baf79")
+	)
+	(segment
+		(start 96.655 82.5)
+		(end 93.895 82.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/A7")
+		(uuid "f7d4ad4f-ee8b-4e88-8fee-43c731318770")
+	)
+	(segment
+		(start 93.345 87.5)
+		(end 96.105 87.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/B1")
+		(uuid "05bb08c0-b5b9-43d3-81e3-c36b7b1570ae")
+	)
+	(segment
+		(start 98.345 87.5)
+		(end 101.105 87.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/B2")
+		(uuid "b17dddaa-2294-45b0-89e2-cc6a52e95fd8")
+	)
+	(segment
+		(start 103.345 87.5)
+		(end 106.105 87.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/B3")
+		(uuid "cb4da0ad-1498-42da-90bf-5dab9ace8796")
+	)
+	(segment
+		(start 108.345 87.5)
+		(end 110.7 87.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/B4")
+		(uuid "0568d247-5912-4727-8436-f32bb1a924e3")
+	)
+	(segment
+		(start 110.7 87.5)
+		(end 111.35 88.15)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/B4")
+		(uuid "0f452ec7-06ca-4596-8c02-f0f23dac0a17")
+	)
+	(segment
+		(start 110.7 92.5)
+		(end 108.895 92.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/B4")
+		(uuid "862fa87a-bbe1-44f4-aee9-8b9a14d2d8e9")
+	)
+	(segment
+		(start 111.35 88.15)
+		(end 111.35 91.85)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/B4")
+		(uuid "b20e0729-0198-49c8-8f79-18ec3cac3513")
+	)
+	(segment
+		(start 111.35 91.85)
+		(end 110.7 92.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/B4")
+		(uuid "dfb91aec-717a-4438-ba00-2d0d24095127")
+	)
+	(segment
+		(start 106.655 92.5)
+		(end 103.895 92.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/B5")
+		(uuid "3b86882f-2452-4986-ba35-fd4811761f5e")
+	)
+	(segment
+		(start 101.655 92.5)
+		(end 98.895 92.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/B6")
+		(uuid "0af19b38-6c27-4061-b4ae-a2f6cb58eda7")
+	)
+	(segment
+		(start 96.655 92.5)
+		(end 93.895 92.5)
+		(width 0.52)
+		(layer "F.Cu")
+		(net "/B7")
+		(uuid "fe8e2cf7-c6b1-4694-8e44-33acbf6eaa15")
+	)
+	(segment
+		(start 91.655 83.905)
+		(end 92.75 85)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_KA")
+		(uuid "1ffcc2bd-3997-447e-b913-0d1a93967219")
+	)
+	(segment
+		(start 91.655 82.5)
+		(end 91.655 83.905)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_KA")
+		(uuid "db5e7c21-d683-4d1e-b88e-06b0d0b9f5a5")
+	)
+	(segment
+		(start 91.655 94.455)
+		(end 92.75 95.55)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_KB")
+		(uuid "1a6416ad-8ded-4980-aaa9-9e6e06f0c8cf")
+	)
+	(segment
+		(start 91.655 92.5)
+		(end 91.655 94.455)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_KB")
+		(uuid "458ca8ba-ecd2-40c6-9dc0-17affc24b55e")
+	)
+	(segment
+		(start 88.3 85)
+		(end 88.3 86.7)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_PLUS")
+		(uuid "18bd8331-c72c-44ca-b9f0-ede897f06cce")
+	)
+	(segment
+		(start 88.3 78.3)
+		(end 89.1 77.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_PLUS")
+		(uuid "255d5a05-bfe7-45cb-89ba-be9240625c65")
+	)
+	(segment
+		(start 88.3 86.7)
+		(end 89.1 87.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_PLUS")
+		(uuid "8c063cf5-f4a2-4256-972f-54279ebe5533")
+	)
+	(segment
+		(start 89.1 87.5)
+		(end 91.105 87.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_PLUS")
+		(uuid "aa619142-0ad8-4fd8-9c7a-55fd3adbd199")
+	)
+	(segment
+		(start 89.1 77.5)
+		(end 91.105 77.5)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_PLUS")
+		(uuid "bc3f185d-57a3-4e9e-8263-3361a457559e")
+	)
+	(segment
+		(start 88.3 85)
+		(end 88.3 78.3)
+		(width 0.45)
+		(layer "F.Cu")
+		(net "/LED_PLUS")
+		(uuid "f23f566e-46e6-483e-ae56-8d7e35adde0a")
+	)
+	(embedded_fonts no)
+)
