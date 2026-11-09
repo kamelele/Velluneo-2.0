@@ -10,6 +10,8 @@ Dwa układy rozmieszczenia wykonane w KiCad na podstawie elektrycznej Rev D. Oba
 
 ## Dwie płytki
 
+![Płytka mocy i płytka sterowania w tej samej skali](Podglady/RevE_dwie_plytki.png)
+
 - **57 × 32 mm, moc.** Wejście 230 V, przetwornica i transformator, prostownik wtórny D7 oraz kondensator wyjściowy C6. D7 i C6 pozostają na tej samej płytce co transformator. J101 wyprowadza S_RAW i S_RTN za układem pomiaru prądu. Pas między padami P/S wynosi 8,2 mm. [Płytka mocy w KiCad](E_Moc.kicad_pcb) · [Podgląd 3D](Podglady/RevE_plytka_mocy.png)
 - **30 × 26 mm, sterowanie.** J102 przyjmuje wyłącznie wtórne 26 V i jego powrót. Na tej płytce są eFuse, dwa regulatory prądu, pomiar K1/K2, zatrzask zwarciowy, blokady i punkty testowe. J101/J102 mają zgodne przypisanie: pad 1 S_RAW, pad 2 S_RTN. Docelowy przewód i jego odciążenie wymagają projektu wraz z korpusem. [Płytka sterowania w KiCad](E_Sterowanie.kicad_pcb) · [Podgląd 3D](Podglady/RevE_plytka_sterowania.png)
 
