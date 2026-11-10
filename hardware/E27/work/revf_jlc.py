@@ -10,9 +10,10 @@ import pcbnew as pcb
 
 from revf_power import devices
 import revg_power
+import revh_power
 
 OUT=Path('outputs')
-NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME,'Zasilacz_RevG_Sterowanie')
+NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME,'Zasilacz_RevG_Sterowanie',revh_power.NAME)
 D=OUT/'Zasilacz_RevD_JLCPCB'
 GERBER_SUFFIXES={'.gtl','.gbl','.gto','.gbo','.gts','.gbs','.gtp','.gbp','.gm1'}
 
@@ -32,22 +33,25 @@ def write_csv(path,columns,rows):
 def complete_power_bom(folder,footprints):
     previous={item['Ref']:item for item in read_csv(D/'BOM_pelny_RevD.csv')}
     rows=[]
-    revg=folder.name==revg_power.NAME
-    for part in (revg_power.devices() if revg else devices()):
+    variants={revg_power.NAME:revg_power,revh_power.NAME:revh_power}
+    variant=variants.get(folder.name)
+    for part in (variant.devices() if variant else devices()):
         assert part.ref in footprints
         previous_item=previous.get(part.ref,{})
-        code=revg_power.PART_CODES.get(part.ref) if revg else None
-        source='JLCPCB, dokładny MPN' if code else previous_item.get('Źródło','')
+        code=variant.PART_CODES.get(part.ref) if variant else None
+        source='JLCPCB/LCSC, dokładny MPN' if code else previous_item.get('Źródło','')
         code=code or previous_item.get('LCSC Part #','')
         rows.append((part.ref,part.val,part.part,part.footprint,code,source))
-    write_csv(folder/('BOM_RevG.csv' if revg else 'BOM_RevF.csv'),('Ref','Wartość','MPN','Footprint','LCSC Part #','Źródło'),rows)
+    revision=folder.name.split('_')[1][-1]
+    write_csv(folder/f'BOM_Rev{revision}.csv',('Ref','Wartość','MPN','Footprint','LCSC Part #','Źródło'),rows)
 
 
 def position_files(board,footprints,working,folder):
     placements=read_csv(working/'smd.csv')
     by_ref={x['Ref']:x for x in placements}
     assert len(placements)==len(by_ref)
-    smd={ref for ref,f in footprints.items() if f.GetAttributes() & pcb.FP_SMD}
+    dnp={ref for ref,f in footprints.items() if f.IsDNP()}
+    smd={ref for ref,f in footprints.items() if f.GetAttributes() & pcb.FP_SMD} - dnp
     assert smd==by_ref.keys(),smd^by_ref.keys()
     origin=board.GetDesignSettings().GetAuxOrigin()
     for ref,row in by_ref.items():
@@ -55,7 +59,7 @@ def position_files(board,footprints,working,folder):
         assert abs(float(row['PosX'])-pcb.ToMM(pos.x-origin.x))<.00001,ref
         assert abs(float(row['PosY'])-pcb.ToMM(origin.y-pos.y))<.00001,ref
         assert row['Side']==('top' if footprints[ref].GetLayer()==pcb.F_Cu else 'bottom'),ref
-    revision='G' if folder.name.startswith('Zasilacz_RevG_') else 'F'
+    revision=folder.name.split('_')[1][-1]
     source_bom=read_csv(folder/f'BOM_Rev{revision}.csv')
     ref_bom={row['Ref']:row for row in source_bom}
     assert len(ref_bom)==len(source_bom) and set(ref_bom)=={r for r in footprints if not r.startswith('TP')}
@@ -63,7 +67,9 @@ def position_files(board,footprints,working,folder):
     outside=[]
     for ref,p in ref_bom.items():
         code=p['LCSC Part #']
-        if ref not in smd:
+        if ref in dnp:
+            why='DNP, pola do ręcznego dostrojenia'
+        elif ref not in smd:
             why='Montaż THT do uzgodnienia lub wiązka'
         elif not re.fullmatch(r'C\d+',code):
             why='Dokładny MPN poza zweryfikowanym katalogiem'
@@ -94,7 +100,7 @@ def pack_board(name,working):
     folder=OUT/name
     board=pcb.LoadBoard(str(folder/f'{name}.kicad_pcb'))
     footprints={f.GetReference():f for f in board.GetFootprints()}
-    if name in (NAMES[0],revg_power.NAME):
+    if name.endswith('_Moc'):
         complete_power_bom(folder,footprints)
     mounted,included,other=position_files(board,footprints,working,folder)
     count=board.GetCopperLayerCount()

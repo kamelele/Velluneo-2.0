@@ -31,7 +31,7 @@ def devices():
                   {1:'S_RAW',2:'S_RTN'},(0,0),(129.54,202.565),'LINK')]
 
 
-def write_schematic(parts, destination=DEST, name=NAME, revision='F'):
+def write_schematic(parts, destination=DEST, name=NAME, revision='F', dnp_refs=()):
     sheet=k.uid()
     symbols,items,paths={},{},{}
     for d in parts:
@@ -54,6 +54,8 @@ def write_schematic(parts, destination=DEST, name=NAME, revision='F'):
         instance=k.placed(lib,d.ref,d.val,d.footprint,x,y,sid,name,sheet,list(d.connection))
         instance=instance.replace(k.prop('Reference',d.ref,x,y-3.81),k.prop('Reference',d.ref,x,y-gap))
         instance=instance.replace(k.prop('Value',d.val,x,y+3.81),k.prop('Value',d.val,x,y+gap))
+        if d.ref in dnp_refs:
+            instance=instance.replace('(dnp no)','(dnp yes)',1)
         content=[instance]
         for n,dx,dy in ends:
             x1,y1=x+dx,y-dy

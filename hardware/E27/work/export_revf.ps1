@@ -26,6 +26,11 @@ if ($args -contains '-RevGControl') {
     $types=@('Sterowanie')
     if ($args -contains '-Rebuild') { Run-Python work/revg_control.py }
 }
+if ($args -contains '-RevHPower') {
+    $revision='H'
+    $types=@('Moc')
+    if ($args -contains '-Rebuild') { Run-Python work/revh_power.py }
+}
 foreach ($type in $types) {
     $name="Zasilacz_Rev${revision}_$type"
     $dir="outputs/$name"
@@ -45,8 +50,10 @@ foreach ($type in $types) {
     if ($type -eq 'Sterowanie') { $layers += ',In1.Cu,In2.Cu' }
     Run-KiCad pcb export gerbers --use-drill-file-origin --subtract-soldermask -o "$review/" -l $layers $pcb
     Run-KiCad pcb export drill --drill-origin plot --excellon-separate-th --generate-report --report-path "$dir/Wiercenia.rpt" -o "$review/" $pcb
-    Run-KiCad pcb export pos --format csv --units mm --side both --smd-only --use-drill-file-origin -o "$review/smd.csv" $pcb
-    if ($revision -eq 'G' -and $type -eq 'Moc') {
+    Run-KiCad pcb export pos --format csv --units mm --side both --smd-only --exclude-dnp --use-drill-file-origin -o "$review/smd.csv" $pcb
+    if ($revision -eq 'H') {
+        Run-Python work/verify_revh_power.py "$review/netlist.xml"
+    } elseif ($revision -eq 'G' -and $type -eq 'Moc') {
         Run-Python work/verify_revg_power.py "$review/netlist.xml"
     } elseif ($revision -eq 'G') {
         Run-Python work/revg_control.py "$review/netlist.xml"
