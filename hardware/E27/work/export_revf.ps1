@@ -21,6 +21,11 @@ if ($args -contains '-RevGPower') {
     if ($args -contains '-Rebuild') { Run-Python work/revg_power.py }
     Run-Python work/model_revf_rcd.py
 }
+if ($args -contains '-RevGControl') {
+    $revision='G'
+    $types=@('Sterowanie')
+    if ($args -contains '-Rebuild') { Run-Python work/revg_control.py }
+}
 foreach ($type in $types) {
     $name="Zasilacz_Rev${revision}_$type"
     $dir="outputs/$name"
@@ -41,8 +46,10 @@ foreach ($type in $types) {
     Run-KiCad pcb export gerbers --use-drill-file-origin --subtract-soldermask -o "$review/" -l $layers $pcb
     Run-KiCad pcb export drill --drill-origin plot --excellon-separate-th --generate-report --report-path "$dir/Wiercenia.rpt" -o "$review/" $pcb
     Run-KiCad pcb export pos --format csv --units mm --side both --smd-only --use-drill-file-origin -o "$review/smd.csv" $pcb
-    if ($revision -eq 'G') {
+    if ($revision -eq 'G' -and $type -eq 'Moc') {
         Run-Python work/verify_revg_power.py "$review/netlist.xml"
+    } elseif ($revision -eq 'G') {
+        Run-Python work/revg_control.py "$review/netlist.xml"
     } elseif ($type -eq 'Moc') {
         Run-Python work/verify_revf_power.py "$review/netlist.xml"
     } else {

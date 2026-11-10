@@ -1,6 +1,6 @@
 # Velluneo E27 · Rev G · płytka mocy
 
-Rev G jest aktualnym wariantem rozwojowym strony sieciowej. Współpracuje z [płytką sterowania Rev F](../Zasilacz_RevF_Sterowanie/README.md). J101-1 prowadzi nominalne 26 V, J101-2 to S_RTN. Format płytki mocy pozostaje **55,5 × 34 mm** na dwóch warstwach. [Rev F mocy](../Zasilacz_RevF_Moc/README.md) zachowano do porównań.
+Rev G jest aktualnym wariantem rozwojowym strony sieciowej. Współpracuje z [płytką sterowania Rev G](../Zasilacz_RevG_Sterowanie/README.md). J101-1 prowadzi nominalne 26 V, J101-2 to S_RTN. Format płytki mocy pozostaje **55,5 × 34 mm** na dwóch warstwach. [Rev F mocy](../Zasilacz_RevF_Moc/README.md) zachowano do porównań.
 
 [Projekt KiCad](Zasilacz_RevG_Moc.kicad_pro) · [PCB](Zasilacz_RevG_Moc.kicad_pcb) · [Schemat](Zasilacz_RevG_Moc.kicad_sch) · [Podgląd schematu](Podglady/Zasilacz_RevG_Moc.svg) · [Pełna lista części](BOM_RevG.csv)
 
@@ -10,4 +10,4 @@ Rev G jest aktualnym wariantem rozwojowym strony sieciowej. Współpracuje z [p�
 
 Przed zwolnieniem do serii obowiązują kwalifikacja T1, pomiary obwodu RCD i temperatur, przegląd izolacji kompletnego zasilacza oraz próby EMC. [Dane próbek T1](RFQ_T1_EE16.md)
 
-![Płytka mocy Rev G](Podglady/RevG_3D.png)
+![Płytki mocy i sterowania Rev G](Podglady/Zasilacz_RevG_razem.png)

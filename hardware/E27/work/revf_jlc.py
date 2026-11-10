@@ -12,7 +12,7 @@ from revf_power import devices
 import revg_power
 
 OUT=Path('outputs')
-NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME)
+NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME,'Zasilacz_RevG_Sterowanie')
 D=OUT/'Zasilacz_RevD_JLCPCB'
 GERBER_SUFFIXES={'.gtl','.gbl','.gto','.gbo','.gts','.gbs','.gtp','.gbp','.gm1'}
 
@@ -55,7 +55,7 @@ def position_files(board,footprints,working,folder):
         assert abs(float(row['PosX'])-pcb.ToMM(pos.x-origin.x))<.00001,ref
         assert abs(float(row['PosY'])-pcb.ToMM(origin.y-pos.y))<.00001,ref
         assert row['Side']==('top' if footprints[ref].GetLayer()==pcb.F_Cu else 'bottom'),ref
-    revision='G' if folder.name==revg_power.NAME else 'F'
+    revision='G' if folder.name.startswith('Zasilacz_RevG_') else 'F'
     source_bom=read_csv(folder/f'BOM_Rev{revision}.csv')
     ref_bom={row['Ref']:row for row in source_bom}
     assert len(ref_bom)==len(source_bom) and set(ref_bom)=={r for r in footprints if not r.startswith('TP')}
