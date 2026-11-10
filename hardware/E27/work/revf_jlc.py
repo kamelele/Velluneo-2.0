@@ -11,9 +11,10 @@ import pcbnew as pcb
 from revf_power import devices
 import revg_power
 import revh_power
+import revk_power
 
 OUT=Path('outputs')
-NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME,'Zasilacz_RevG_Sterowanie',revh_power.NAME,'Zasilacz_RevH_Sterowanie')
+NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME,'Zasilacz_RevG_Sterowanie',revh_power.NAME,'Zasilacz_RevH_Sterowanie',revk_power.NAME)
 D=OUT/'Zasilacz_RevD_JLCPCB'
 GERBER_SUFFIXES={'.gtl','.gbl','.gto','.gbo','.gts','.gbs','.gtp','.gbp','.gm1'}
 
@@ -33,7 +34,7 @@ def write_csv(path,columns,rows):
 def complete_power_bom(folder,footprints):
     previous={item['Ref']:item for item in read_csv(D/'BOM_pelny_RevD.csv')}
     rows=[]
-    variants={revg_power.NAME:revg_power,revh_power.NAME:revh_power}
+    variants={revg_power.NAME:revg_power,revh_power.NAME:revh_power,revk_power.NAME:revk_power}
     variant=variants.get(folder.name)
     for part in (variant.devices() if variant else devices()):
         assert part.ref in footprints

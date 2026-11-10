@@ -1,0 +1,18 @@
+(version 1)
+(rule "Primary to secondary — engineering target"
+    (constraint clearance (min 8.0mm))
+    (constraint creepage (min 8.0mm))
+    (condition "(A.NetName == '/P_*' && (B.NetName != '' && B.NetName != 'unconnected-*' && !(B.NetName == '/P_*'))) || ((A.NetName != '' && A.NetName != 'unconnected-*' && !(A.NetName == '/P_*')) && B.NetName == '/P_*')"))
+(rule "Mains lines separated"
+    (constraint clearance (min 1.5mm))
+    (condition "(A.NetName == '/P_N' && B.NetName == '/P_L*') || (A.NetName == '/P_L*' && B.NetName == '/P_N')"))
+(rule "HV nodes to primary return"
+    (constraint clearance (min 1.1mm))
+    (condition "(A.NetName == '/P_0' && (B.NetName == '/P_D' || B.NetName == '/P_BULK' || B.NetName == '/P_BR' || B.NetName == '/P_CL*')) || (B.NetName == '/P_0' && (A.NetName == '/P_D' || A.NetName == '/P_BULK' || A.NetName == '/P_BR' || A.NetName == '/P_CL*'))"))
+(rule "Functional spacing across fuse and input resistor"
+ (constraint clearance (min 1.5mm))
+ (condition "A.NetName != B.NetName && A.NetName == '/P_L*' && B.NetName == '/P_L*'"))
+
+(rule "Thermal copper to mains inputs"
+ (constraint clearance (min 1.5mm))
+ (condition "(A.Type == 'Zone' && A.NetName == '/P_0' && (B.NetName == '/P_N' || B.NetName == '/P_L*')) || (B.Type == 'Zone' && B.NetName == '/P_0' && (A.NetName == '/P_N' || A.NetName == '/P_L*'))"))

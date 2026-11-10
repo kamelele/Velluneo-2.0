@@ -2,7 +2,7 @@
 
 Żarówka E27 230 V z wymiennym wkładem Ø30 mm. Trzy wersje barwy (2700 K, 4000 K i 6500 K) korzystają z tego samego interfejsu i mechanizmu.
 
-- [Sterowanie Rev H · uporządkowane ścieżki i pakiet prototypu JLCPCB](outputs/Zasilacz_RevH_Sterowanie/README.md)
+- **Zasilacz dzielony · wariant prototypowy** · [moc Rev K 55,5 × 34 mm](outputs/Zasilacz_RevK_Moc/README.md) · [sterowanie Rev H 30 × 25 mm](outputs/Zasilacz_RevH_Sterowanie/README.md) · [wspólny podgląd](outputs/Zasilacz_RevK_Moc/Podglady/Zasilacz_RevK_RevH_razem.png)
 - **Zasilacz dzielony · wariant archiwalny do oceny** · [moc Rev H 55,5 × 34 mm](outputs/Zasilacz_RevH_Moc/README.md) · [sterowanie Rev G 30 × 25 mm](outputs/Zasilacz_RevG_Sterowanie/README.md)
 - [Studium Rev J · korekcja harmonicznych i rozmieszczenie valley-fill](outputs/Studium_RevJ_ValleyFill/README.md)
 - **Zasilacz dzielony Rev G** · [moc Rev G 55,5 × 34 mm](outputs/Zasilacz_RevG_Moc/README.md) · [sterowanie Rev G 30 × 25 mm](outputs/Zasilacz_RevG_Sterowanie/README.md) · [wspólny podgląd](outputs/Zasilacz_RevG_Moc/Podglady/Zasilacz_RevG_razem.png)

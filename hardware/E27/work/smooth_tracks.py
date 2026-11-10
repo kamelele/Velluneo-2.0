@@ -52,7 +52,7 @@ def chains(board):
     groups = defaultdict(list)
     joins = defaultdict(set)
     for t in tracks(board):
-        key = t.GetLayer(), t.GetNetCode(), t.GetWidth()
+        key = t.GetLayer(), t.GetNetname(), t.GetWidth()
         groups[key].append(t)
         for pt in (t.GetStart(), t.GetEnd()):
             joins[key[:2], xy(pt)].add(key[2])
@@ -74,10 +74,10 @@ def chains(board):
         anchors = defaultdict(list)
         for fp in board.GetFootprints():
             for pad in fp.Pads():
-                if pad.GetNetCode() == net and pad.IsOnLayer(layer):
+                if pad.GetNetname() == net and pad.IsOnLayer(layer):
                     anchors[layer, net].append(pad.GetEffectiveShape(layer))
         for t in board.GetTracks():
-            if type(t) is not pcb.PCB_TRACK and t.GetNetCode() == net and t.IsOnLayer(layer):
+            if type(t) is not pcb.PCB_TRACK and t.GetNetname() == net and t.IsOnLayer(layer):
                 anchors[layer, net].append(t.GetEffectiveShape(layer))
 
         visited = set()
@@ -100,9 +100,24 @@ def chains(board):
                     yield layer_net_width, points, route
 
 
+def power_gap(a, b):
+    """Mirror copper spacing of the power-board rules for early path screening."""
+    if a and b and not (a.startswith("unconnected-") or b.startswith("unconnected-")):
+        if a.startswith("/P_") != b.startswith("/P_"):
+            return 8000000
+    if all(n == "/P_N" or n.startswith("/P_L") for n in (a, b)):
+        return 1500000
+    if "/P_0" in (a, b):
+        other = b if a == "/P_0" else a
+        if other in ("/P_D", "/P_BULK", "/P_BR") or other.startswith("/P_CL"):
+            return 1100000
+    return 0
+
+
 class Copper:
-    def __init__(self, board, gap):
+    def __init__(self, board, gap, power):
         self.gap = gap
+        self.power = power
         self.edge = board.GetBoardEdgesBoundingBox()
         self.by_layer = defaultdict(list)
         layers = [l for l in board.GetEnabledLayers().Seq() if pcb.IsCopperLayer(l)]
@@ -112,16 +127,19 @@ class Copper:
                     continue
                 geometry = item.GetEffectiveShape(layer)
                 bounds = geometry.BBox()
-                self.by_layer[layer].append((item.GetNetCode(), geometry, bounds))
+                self.by_layer[layer].append((item.GetNetname(), geometry, bounds))
 
     def allows(self, layer, net, path, width):
         for a, b in zip(path, path[1:]):
             copper = shape(a, b, width)
-            box = copper.BBox(self.gap)
-            if not self.edge.Contains(box):
+            if not self.edge.Contains(copper.BBox(self.gap)):
                 return False
+            box = copper.BBox(8000000 if self.power else self.gap)
             for other_net, other, other_box in self.by_layer[layer]:
-                if other_net != net and box.Intersects(other_box) and copper.Collide(other, self.gap):
+                if other_net == net or not box.Intersects(other_box):
+                    continue
+                gap = max(self.gap, power_gap(net, other_net)) if self.power else self.gap
+                if copper.BBox(gap).Intersects(other_box) and copper.Collide(other, gap):
                     return False
         return True
 
@@ -152,11 +170,13 @@ def simplify(points, layer, net, width, copper):
     return result
 
 
-def optimize(source, output, gap):
+def optimize(source, output, gap, power):
     board = pcb.LoadBoard(str(source))
-    copper = Copper(board, gap)
+    copper = Copper(board, gap, power)
     edits = []
     for (layer, net, width), points, items in sorted(chains(board), key=lambda entry: -len(entry[2])):
+        if power and net in {"/P_D", "/P_BULK", "/P_CL", "/P_CLMID", "/S_SW", "/S_DAMP"}:
+            continue
         result = simplify(points, layer, net, width, copper)
         if result != points:
             copper.add(layer, net, result, width)
@@ -191,7 +211,8 @@ if __name__ == "__main__":
     args.add_argument("source", type=Path)
     args.add_argument("output", type=Path, nargs="?")
     args.add_argument("--gap", type=float, default=.21)
+    args.add_argument("--power", action="store_true")
     a = args.parse_args()
     stats(a.source)
     if a.output:
-        optimize(a.source, a.output, pcb.FromMM(a.gap))
+        optimize(a.source, a.output, pcb.FromMM(a.gap), a.power)
