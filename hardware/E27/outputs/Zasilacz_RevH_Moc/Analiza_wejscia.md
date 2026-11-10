@@ -1,0 +1,17 @@
+# Wejście sieciowe Rev H · rozruch i harmoniczne
+
+## Stan ustalony obecnego obwodu
+
+Model obejmuje sieć sinusoidalną 50 Hz, mostek o uproszczonym spadku 1,6 V, rezystancję szeregową 26 Ω, liniowy L1 1 mH, C2, rezystory rozładowujące i przetwornicę pobierającą stałą moc 7,8–8,4 W. Nie obejmuje przebiegu przełączeń flyback, wpływu C1 na EMI, impedancji rzeczywistej sieci ani zapadów napięcia. Porównano wyniki kroku 2 µs i 1 µs dla punktu nominalnego. [Wyniki](Model_wejscia.csv)
+
+- Przy 230 VAC, 10 µF i 8,4 W na wejściu flybacku model daje **8,69 W z sieci**, **77,6 mA RMS**, **286 mA szczytu** i **299–322 V** na C2. Na R1 szacuje 0,132 W. Składowa tętnień C2 w modelu ma ok. 73 mA RMS. Katalog BXW podaje 130 mA przy 120 Hz i 325 mA przy 100 kHz w warunkach katalogowych. Składowe obu częstotliwości i temperaturę trzeba zmierzyć łącznie. [Rubycon BXW](https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/BXW.pdf)
+- Obliczony **PF wynosi 0,49**, przesunięcie fazy składowej podstawowej odpowiada **DF 0,98**, a zniekształcenie prądu **THDi ok. 175%**. Wysokie harmoniczne wynikają z ładowania C2 w wąskim przedziale przy szczycie napięcia. Obniżenie C2 do 4,7 µF poprawia PF tylko do ok. 0,53 przy 230 V i zwiększa tętnienia szyny.
+- DF opisuje przesunięcie składowej podstawowej, a PF obejmuje wpływ całego przebiegu prądu. Wymagania dotyczące DF i ograniczenia emisji harmonicznych rozpatruje się osobno, według klasyfikacji kompletnej lampy. Obliczone wartości uzasadniają pomiar harmonicznych przed decyzją o serii. [Rozporządzenie UE 2019/2020, tabela 4](https://eur-lex.europa.eu/eli/reg/2019/2020/2021-09-01/eng/pdf) · [IEC 61000-3-2](https://webstore.iec.ch/en/publication/92799)
+
+## Włączenie przy szczycie sieci
+
+Model górnego oszacowania ładuje pusty C2 o górnej tolerancji 12 µF stałym napięciem 253 × √2 V przez minimalne R1 = 20,9 Ω. Pominięto spadki mostka i opory przewodów, bezpiecznika oraz uzwojenia L1. Wynik to **17,1 A**, **0,0368 A²s** i **0,768 J** do rozproszenia w modelowej rezystancji. Dławik wchodzi w zakres nasycenia przy włączeniu, więc jego nominalnego 1 mH nie użyto do ograniczenia szczytu w tym oszacowaniu.
+
+- MB10S ma 35 A dla pojedynczej półsinusoidy 8,3 ms. F1 3403.0271.23 ma katalogowe 0,62 A²s w określonych warunkach. R1 AC01-CS ma wykresy dla impulsów 1,2/50 µs. Ładowanie C2 ma inny kształt i czas, dlatego przeżywalność przy powtórzeniach oraz przebieg w torze L1 wymagają pomiaru. [onsemi MB10S](https://www.onsemi.com/download/data-sheet/pdf/mb10s-d.pdf) · [Schurter UMT-H](https://us.schurter.com/pdf/english/typ_UMT-H.pdf) · [Vishay AC01-CS](https://www.vishay.com/docs/28909/acxxcs.pdf) · [Würth 768772102](https://www.we-online.com/components/products/datasheet/768772102.pdf)
+- Na stanowisku z ograniczoną energią mierzyć prąd włączenia, napięcie na C2 i temperaturę R1/L1. Porównać fazy załączenia, zimny i gorący start, krótkie zaniki oraz powtarzane włączenia. Do prób udarowych potrzebna jest oddzielna procedura.
+- R6 i R7 2,2 MΩ ±1% dają próg zatrzymania klucza ok. **462–524 V** z zależności I_OV × R przy 25°C. Przy badaniu valley-fill rozważyć obniżenie sumy do ok. 3,6–3,74 MΩ. Dla 3,6 MΩ ±1% model daje ok. **378–429 V** i próg brown-in do ok. **103 V** w tym samym przybliżeniu. Wyłączenie klucza nie odcina ładowania C2 z mostka, więc koordynację RV1, F1 i napięcia kondensatora rozpatruje się osobno. [LYTSwitch-6, Line Overvoltage / Brown-In](https://www.power.com/sites/default/files/documents/lytswitch-6_family_datasheet.pdf)

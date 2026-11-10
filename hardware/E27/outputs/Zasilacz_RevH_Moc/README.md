@@ -9,4 +9,6 @@ Płytka mocy ma **55,5 × 34 mm** i współpracuje ze [sterowaniem Rev G](../Zas
 - W porównaniu z Rev G do importu montażowego dodano pięć pozycji katalogowych. Wyszczególniono wyprowadzenia, części wymagające ręcznego montażu oraz pozycje do oddzielnej wyceny. [Dobór części i montaż](Montaż_JLCPCB.md)
 - Obie płytki przeszły kontrole KiCad. Pomiary napięć, temperatur, izolacji i EMC przewidziano na pierwsze egzemplarze. [Weryfikacja Rev H](Weryfikacja_RevH.md) · [Pakiet mocy do wyceny JLCPCB](JLCPCB_DO_WYCENY)
 
+[Analiza wejścia sieciowego](Analiza_wejscia.md) wykazała ryzyko wysokich harmonicznych prądu. [Studium valley-fill](Studium_valley_fill.md) dokumentuje wariant korekcji i wpływ na szynę zasilającą flyback.
+
 ![Płytka mocy Rev H i sterowanie Rev G](Podglady/Zasilacz_RevH_RevG_razem.png)
