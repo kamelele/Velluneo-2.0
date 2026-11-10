@@ -21,7 +21,7 @@ CAP = 'Capacitor_THT:CP_Radial_D6.3mm_P2.50mm'
 HF = 'Capacitor_SMD:C_1210_3225Metric'
 CHARGE = 'Resistor_SMD:R_2512_6332Metric'
 COIL = 'E27:WE_PD2_HV_7850_Studium'
-REPLACE = {'C1', 'C2', 'L1', 'R5'}
+REPLACE = {'C1', 'C2', 'C3', 'L1', 'R5'}
 ADD = {'C17', 'C18', 'C19', 'D10', 'D11', 'D12', 'R24', 'R25', 'R26', 'R27'}
 
 
@@ -61,7 +61,7 @@ def lib_files():
         data = (revh.DEST / f'{revh.NAME}.kicad_{ext}').read_text(encoding='utf8')
         (DEST / f'{NAME}.kicad_{ext}').write_text(data.replace(revh.NAME, NAME), encoding='utf8')
     power.custom(DEST, COIL.split(':')[1], 'Wurth 7850 / provisional study land pattern',
-                 8.0, 7.8, k.smd(1, -2.5, 0, 3.0, 2.0) + k.smd(2, 2.5, 0, 3.0, 2.0),
+                 8.0, 7.8, k.smd(1, -2.5, 0, 3.0, 7.5) + k.smd(2, 2.5, 0, 3.0, 7.5),
                  model=(4.9, '0.20 0.20 0.20'))
 
 
@@ -144,8 +144,8 @@ def rebuild():
     for net in sorted({n for d in parts for n in d.connection.values()}):
         if not board.FindNet('/' + net):
             board.Add(p.NETINFO_ITEM(board, '/' + net))
-    preferred = {'L1': (84.7, 90.9), 'C17': (94.8, 89.7), 'C2': (91.4, 96.4),
-                 'C1': (97.1, 71.8), 'R5': (95.6, 94.8), 'C18': (99.0, 84.7), 'D10': (85.5, 91), 'D11': (83.7, 96.7),
+    preferred = {'L1': (84.7, 90.9), 'C17': (98.2, 89.8), 'C2': (91.4, 96.4),
+                 'C1': (97.1, 71.8), 'R5': (95.6, 94.8), 'C3': (93.2, 92.35), 'C18': (99.0, 84.7), 'D10': (85.5, 91), 'D11': (83.7, 96.7),
                  'D12': (97.0, 94.8), 'R24': (86.0, 100.7), 'R25': (85.4, 74.0),
                  'R26': (89.2, 102.2), 'R27': (98.0, 79.8), 'C19': (98.0, 88.5)}
     front = {'L1', 'C2', 'C17', 'C18', 'C19', 'D12'}
@@ -164,7 +164,8 @@ def rebuild():
             fp.Flip(fp.GetPosition(), p.FLIP_DIRECTION_LEFT_RIGHT)
         if ref == 'C19':
             fp.SetDNP(True)
-        place_near(board, fp, preferred[ref], (0, 90, 180, 270))
+        rotations = {'C17': (270,), 'C18': (270,), 'C3': (180,), 'R24': (180,)}.get(ref, (0, 90, 180, 270))
+        place_near(board, fp, preferred[ref], rotations)
     assert p.SaveBoard(str(pcb), board)
 
 

@@ -42,6 +42,8 @@ def rebuild():
             copy2(source, DEST / source.name)
     for ext in ('pro', 'dru', 'pcb'):
         data = (revg.DEST / f'{revg.NAME}.kicad_{ext}').read_text(encoding='utf8')
+        if ext == 'dru':
+            data = data.replace('=~', '==').replace('!~', '!=')
         (DEST / f'{NAME}.kicad_{ext}').write_text(data.replace(revg.NAME, NAME).replace('REV G MOC', 'REV H MOC'), encoding='utf8')
     for standard, name in DNP_FOOTPRINTS.values():
         library, footprint = standard.split(':')

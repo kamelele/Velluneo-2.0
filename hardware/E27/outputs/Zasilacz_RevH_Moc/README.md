@@ -7,7 +7,7 @@ Płytka mocy ma **55,5 × 34 mm** i współpracuje ze [sterowaniem Rev G](../Zas
 - C16 i R23 to miejsca do ręcznego dostrojenia tłumienia oscylacji przy diodzie D7. Obie pozycje są domyślnie puste. Pola mają miedź i otwarcie maski, a w szablonie pasty pozostają zamknięte. [Dobór i próba RC](Tlumienie_D7.md)
 - Ogranicznik pierwotny RCD z Rev G pozostaje w projekcie. Docelowe rozproszenie T1 wynosi maks. 10 µH, a dla tego przypadku obwiednia obliczeniowa szczytu drenu wynosi 565,6 V. [Analiza RCD](../Zasilacz_RevG_Moc/Analiza_RCD.md) · [Dane próbek transformatora](../Zasilacz_RevG_Moc/RFQ_T1_EE16.md)
 - W porównaniu z Rev G do importu montażowego dodano pięć pozycji katalogowych. Wyszczególniono wyprowadzenia, części wymagające ręcznego montażu oraz pozycje do oddzielnej wyceny. [Dobór części i montaż](Montaż_JLCPCB.md)
-- Obie płytki przeszły kontrole KiCad. Pomiary napięć, temperatur, izolacji i EMC przewidziano na pierwsze egzemplarze. [Weryfikacja Rev H](Weryfikacja_RevH.md) · [Pakiet mocy do wyceny JLCPCB](JLCPCB_DO_WYCENY)
+- **Pakiet Rev H jest wstrzymany do zamówienia.** Ponowny DRC wykazał odstępy poniżej założeń przy BR1 i przelotkach strony pierwotnej. Dane do wyceny technologicznej zachowano jako archiwum. [Weryfikacja Rev H](Weryfikacja_RevH.md) · [Archiwum JLCPCB](JLCPCB_DO_WYCENY)
 
 [Analiza wejścia sieciowego](Analiza_wejscia.md) wykazała ryzyko wysokich harmonicznych prądu. [Studium valley-fill](Studium_valley_fill.md) dokumentuje wariant korekcji i wpływ na szynę zasilającą flyback.
 

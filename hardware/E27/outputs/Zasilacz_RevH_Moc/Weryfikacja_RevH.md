@@ -1,5 +1,8 @@
 # Kontrola płytki mocy Rev H
 
-- KiCad wykazał 0 naruszeń ERC i DRC, 0 brakujących połączeń i 0 rozbieżności ze schematem. Niezależny odczyt porównał 105 przypisań pin–sieć.
+- Wcześniejszy raport DRC opierał się na pliku reguł z nieobsługiwanymi operatorami `=~` i `!~`. Reguły używają teraz `==` i `!=`. Próba z celowo zbyt bliskim odcinkiem miedzi potwierdziła wykrycie naruszenia przez regułę bariery 8 mm. [Dokumentacja KiCad 10](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#custom-design-rules)
+- Po zastosowaniu poprawnych reguł zapisane wypełnienia Rev H dają 96 zgłoszeń. Ponowne wypełnienie stref na kopii zmniejszyło tę liczbę do 10, w tym 9 zgłoszeń odstępów i 1 ostrzeżenia o przelotce. Pozostaje jedno niepołączone miejsce i zero rozbieżności ze schematem. Nie odnotowano naruszeń bariery pierwotna–wtórna. [Raport z kopii po ponownym wypełnieniu](DRC_po_przeliczeniu_stref.rpt)
+- Mostek BR1 ma 0,99 mm między sąsiednimi padami przy celach 1,50 mm dla L–N i 1,10 mm dla wyjścia DC. Aktualny footprint odpowiada zalecanemu wymiarowi pola 1,55 mm przy rastrze 2,54 mm. Przed zmianą footprintu trzeba sprawdzić mostek w większej obudowie lub prostownik z osobnych diod. [Rysunek onsemi MB10S](https://www.onsemi.com/download/data-sheet/pdf/mb10s-d.pdf)
+- Do przeniesienia lub usunięcia po weryfikacji cieplnej są cztery przelotki P_0 przy L1 i C3. Pliki Gerber z pierwotnym wypełnieniem zachowano do celów porównawczych. Zamówienie płytki wymaga ponownego DRC po korekcie projektu i eksportu Gerber.
 - Zachowano trasowanie Rev G i położenia wszystkich poprzednich padów. Dodano 7 odcinków (14.82 mm łącznie) na F.Cu po stronie wtórnej. Ścieżki prowadzą do C16/R23. Części mają flagę DNP i pola lutownicze bez warstwy pasty.
 - Obrys 55,5 × 34 mm, dwie warstwy i pas 8.200 mm między projekcjami skrajnej miedzi stron w osi X. Tłumienie oscylacji i zachowanie cieplne wymagają prób.

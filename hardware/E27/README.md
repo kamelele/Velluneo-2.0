@@ -2,7 +2,7 @@
 
 Żarówka E27 230 V z wymiennym wkładem Ø30 mm. Trzy wersje barwy (2700 K, 4000 K i 6500 K) korzystają z tego samego interfejsu i mechanizmu.
 
-- **Aktualny zasilacz dzielony** · [moc Rev H 55,5 × 34 mm](outputs/Zasilacz_RevH_Moc/README.md) · [sterowanie Rev G 30 × 25 mm](outputs/Zasilacz_RevG_Sterowanie/README.md)
+- **Zasilacz dzielony · wariant archiwalny do oceny** · [moc Rev H 55,5 × 34 mm](outputs/Zasilacz_RevH_Moc/README.md) · [sterowanie Rev G 30 × 25 mm](outputs/Zasilacz_RevG_Sterowanie/README.md)
 - [Studium Rev J · korekcja harmonicznych i rozmieszczenie valley-fill](outputs/Studium_RevJ_ValleyFill/README.md)
 - **Zasilacz dzielony Rev G** · [moc Rev G 55,5 × 34 mm](outputs/Zasilacz_RevG_Moc/README.md) · [sterowanie Rev G 30 × 25 mm](outputs/Zasilacz_RevG_Sterowanie/README.md) · [wspólny podgląd](outputs/Zasilacz_RevG_Moc/Podglady/Zasilacz_RevG_razem.png)
 - **Zasilacz dzielony Rev F** · [płytka mocy 55,5 × 34 mm](outputs/Zasilacz_RevF_Moc/README.md) · [sterowanie 30 × 25 mm](outputs/Zasilacz_RevF_Sterowanie/README.md) · pliki do wyceny technologicznej JLCPCB
@@ -16,6 +16,6 @@
 - [Dokumentacja rewizji A](outputs/Raport_E27_RevA.md) · [pakiet Rev A](outputs/E27_RevA_pakiet_KiCad.zip)
 - [Studium Rev C](outputs/Studium_RevC/README.md) · [model mechaniczny KiCad](outputs/Studium_RevC/E27_RevC_Gabaryty.kicad_pcb) · [specyfikacja próbek transformatora EFD20](outputs/Studium_RevC/RFQ_T1_EFD20.md)
 
-Rewizje zasilacza są dokumentacją rozwojową. Pliki oznaczone `Produkcja_DO_PRZEGLADU` służą do przeglądu technologicznego. Przed próbami z siecią konieczny jest przegląd transformatora, ochrony, izolacji kompletnego zespołu oraz stanowiska.
+Rewizje zasilacza są dokumentacją rozwojową. Audyt wykazał błąd składni reguł odstępu w historycznych projektach mocy. Ich wyniki DRC mają wartość archiwalną. Pakiet mocy Rev H wstrzymano do zamówienia. [Wyniki ponownej kontroli](outputs/Zasilacz_RevH_Moc/Weryfikacja_RevH.md). Pliki oznaczone `Produkcja_DO_PRZEGLADU` służą do przeglądu technologicznego. Przed próbami z siecią konieczny jest przegląd transformatora, ochrony, izolacji kompletnego zespołu oraz stanowiska.
 
 Skrypty w katalogu [work](work) uruchamia się z katalogu `hardware/E27` z KiCad 10.0.8. Regeneracja zmienia pliki w `outputs`. Na Windows skrypty zakładają standardową ścieżkę instalacji KiCad.

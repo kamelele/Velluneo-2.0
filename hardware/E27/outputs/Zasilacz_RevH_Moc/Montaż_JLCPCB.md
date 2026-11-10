@@ -10,6 +10,8 @@ W plikach mocy są **32** pozycje do importu SMT. Na sterowaniu jest **45**. BOM
 
 ## Przekazanie do wyceny
 
+**Pakiet archiwalny. Zamówienie płytki mocy jest wstrzymane do korekty odstępów i wydania nowych Gerberów.** [Weryfikacja Rev H](Weryfikacja_RevH.md)
+
 1. Złożyć osobne zapytania o montaż Standard mocy i sterowania. Uzyskać propozycję panelu z szynami i fiducjalami dla obu małych obrysów. Kody C ułatwiają import, a stany, ceny i dopuszczenie części potwierdza aktualna oferta montażu. [Wymiary i obsługiwany montaż JLCPCB](https://jlcpcb.com/capabilities/pcb-assembly-capabilities)
 2. W podglądzie montażu sprawdzić w szczególności T1 poza listą SMT, biegunowość mostka, D5–D9 i kondensatorów, pin 1 U1 oraz położenia części na spodzie. Uzgodnić montaż F1 i rezystora bezpiecznikowego R1 oraz siedmiu pozycji przewlekanych, w tym przyłączy przewodów.
 3. Zamknąć decyzję o T1 po otrzymaniu danych konstrukcji, pomiarów Llk i rysunku. Złącza J101/J102 mają wspólne oznaczenie przewodów S_RAW/S_RTN. Pakiet jest przeznaczony do wyceny technologicznej i przygotowania prototypu po przeglądzie wykonawcy.
