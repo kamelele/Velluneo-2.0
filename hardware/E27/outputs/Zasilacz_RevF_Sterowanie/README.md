@@ -1,0 +1,28 @@
+# Velluneo E27 · Rev F · sterowanie po stronie wtórnej
+
+Rev F rozwija [wariant dzielony Rev E](../Studium_RevE/README.md). Płytka sterowania przyjmuje 26 V przez J102, z tym samym przypisaniem S_RAW i S_RTN co [płytka mocy Rev F](../Zasilacz_RevF_Moc/README.md). Zachowano dwa AL5812 po ok. 127 mA, niezależne odcięcie przepięciowe TPS26600, pętlę S1/TH1 i fizyczny styk S2 w torze dodatnim. [Rev D z plikami do wyceny](../Zasilacz_RevD_JLCPCB/README.md) pozostaje wersją rezerwową.
+
+[Projekt KiCad](Zasilacz_RevF_Sterowanie.kicad_pro) · [Schemat](Zasilacz_RevF_Sterowanie.kicad_sch) · [Widok schematu](Podglady/Zasilacz_RevF_Sterowanie.svg) · [PCB](Zasilacz_RevF_Sterowanie.kicad_pcb) · [BOM](BOM_RevF.csv)
+
+## Zmiana układu odcięcia
+
+- Sprawdzony kandydat MAX16838 integruje dwa regulatory liniowe po 150 mA. Jego opis detekcji zwarcia opiera się na różnicy napięć obu szeregów LED. Z samej różnicy nie wynika wykrycie jednoczesnego podobnego zwarcia w obu kanałach. Jego dokumentacja opisuje też układ wraz z przetwornicą boost lub SEPIC. W Rev F zostają niezależne progi bezwzględne K1 i K2 z Rev D. [Karta MAX16838, Short-LED Detection](https://www.analog.com/media/en/technical-documentation/data-sheets/MAX16838.pdf)
+- Otwarty kolektor TLV1702 wymusza niski FAULT_N po przekroczeniu progu któregokolwiek kanału. Cztery bramki Schmitta w U103 tworzą zatrzask oraz wyjście PERMIT uzależnione od sygnału gotowości 3,3 V. Utrata PG zeruje blokadę. Ponowne zamknięcie S1 przy nieprzerwanym PG pozostawia zapamiętany stan awarii. [TLV1702](https://www.ti.com/lit/ds/symlink/tlv1702.pdf) · [74LVC132A](https://assets.nexperia.com/documents/data-sheet/74LVC132A.pdf)
+- PhotoMOS zastąpił układ tranzystorowy. Q101A jest polaryzowany z S_RAW i domyślnie ściąga SHDN do S_RTN. Q101B zwalnia blokadę po PERMIT. Q102 w torze emitera Q101B wymaga osobno wysokiego PG. R110/C108 ograniczają reakcję na krótki impuls podczas przełączania bramek. Otwarcie S1 lub TH1 odbiera napięcie z dzielnika SHDN, a R18 utrzymuje jego niski stan. S2 rozłącza anodę. [Karta Q101](https://www.diodes.com/datasheet/download/MMDT3904.pdf) · [Karta Q102](https://assets.nexperia.com/documents/data-sheet/2N7002BK.pdf) · [TPS26600, SHDN](https://www.ti.com/lit/ds/symlink/tps2660.pdf)
+
+Zatrzask ma dwa stany przy PG = 1 i FAULT_N = 1. Podczas PG = 0 wyjście jest blokowane również przez Q102. Gdy oba wejścia zatrzasku są jednocześnie aktywne, obie wewnętrzne gałęzie NAND mają stan wysoki. Utrzymująca się awaria po powrocie PG ustawia zatrzask w stan odcięcia. Jeżeli awaria ustępuje dokładnie w chwili powrotu PG, stan zatrzasku wymaga próby czasowej. Model zakłada rozdzielone zdarzenia poza scenariuszem trwałego błędu przy starcie.
+
+## Weryfikacja funkcji i stan PCB
+
+- Model RC i logiki objął **28 przypadków narożnikowych**, m.in. zwarcie K1 i K2 osobno oraz razem, otwarty S1, termostat i S2, utratę PG, ponowne zamknięcie S1 po awarii i impulsy zakłócające. Próg modelowy to **7,15–7,85 V**. Dla idealnego skoku 0→26 V model przewiduje **1,06–2,08 ms do decyzji komparatora**. Do pomiaru pozostaje czas całkowitego odcięcia prądu. [Przypadki modelu](Model_RevF.csv)
+- Przy zamkniętej pętli i zwolnionym zacisku obliczony SHDN wynosi **1,36–2,69 V** dla 18–30 V na S_RAW i założonego budżetu prądu upływu ±10 µA. Przy otwartej pętli górne oszacowanie to **0,102 V**. Wartości Q101 przy małych prądach, upływ Q102, jego zachowanie przy PG około 3,3 V oraz praca przy powolnych zboczach i zapadach wymagają pomiaru. Model tranzystorów został zastąpiony rachunkiem budżetów prądowych i modelem stanów.
+- Płytka ma **30 × 25 mm**, 48 części i trzy pola pomiarowe. Jest o 1 mm krótsza w osi Y od rozplanowanej płytki sterowania Rev E. Zmniejszenie liczby obudów i zniknięcie ciągłego prądu diody PhotoMOS mają dać miejsce i obniżyć straty w zasilaniu logiki. Chłodzenie regulatorów prądu pozostaje zależne od miedzi i rzeczywistego obciążenia. PCB ma cztery warstwy. Na In1.Cu jest ciągłe pole powrotu S_RTN o powierzchni 573,7 mm² i odcinek REF o długości 9,3 mm. Cała sieć REF ma 25,4 mm tras. [Raport kontroli Rev F](Weryfikacja_RevF.md)
+- BOM zawiera kody katalogowe kluczowych nowych elementów. **U103 C548102** ma kartę montażową JLCPCB. Q101 C83572 i Q102 C282405 mają karty LCSC. Dostępność montażowa i pełna wycena pozostają do sprawdzenia przy imporcie. [U103 w JLCPCB](https://jlcpcb.com/partdetail/Nexperia-74LVC132APW118/C548102) · [Q101 w LCSC](https://www.lcsc.com/product-detail/C83572.html) · [Q102 w LCSC](https://lcsc.com/product-detail/MOSFETs_Nexperia-2N7002BK-215_C282405.html)
+
+## Próby do wykonania
+
+1. Uruchomić stronę wtórną z izolowanego źródła DC z ograniczeniem prądu. Sprawdzić PG, FAULT_N, PERMIT, SHDN i prąd wyjściowy podczas szybkich i wolnych ramp, zaniku 3,3 V, zapadów S_RAW oraz ponownych załączeń.
+2. Wymusić zwarcie każdego kanału, obu równocześnie i zwarcia częściowe przy chłodnej i nagrzanej płytce. Zmierzyć czas do wyłączenia prądu, szczyt temperatury AL5812 oraz zachowanie przy wielokrotnych próbach. Sprawdzić osobno S1, TH1 i S2 oraz zgodność sekwencji z urządzeniem.
+3. Przed zestawieniem z płytką mocy sprawdzić odporność na stany uszkodzenia Q101/Q102, przerwy toru pomiarowego oraz nagrzewanie miedzi. Bezpieczeństwo izolacji i zachowanie kompletnego zasilacza wymagają oddzielnego przeglądu i prób.
+
+[Pliki do wyceny technologicznej w JLCPCB](JLCPCB_DO_WYCENY) obejmują Gerbery, wiercenia i parę BOM/CPL. Plik Poza_importem.csv wyszczególnia pozostałe części. Płytka jest po kontroli KiCad i przed próbami fizycznymi. Przed zamówieniem kompletnego zasilacza trzeba zamknąć także [przegląd strony sieciowej](../Zasilacz_RevF_Moc/README.md).

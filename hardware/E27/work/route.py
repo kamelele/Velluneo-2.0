@@ -15,13 +15,16 @@ MAINS_WIDTH=.29
 MAINS_ACROSS=False
 EARLY=[]
 FRONT_ESCAPE={}
+RESERVED_LAYER=None
+DEFAULT_CLEARANCE=.19
+SIGNAL_WIDTH=.21
 
 def sep(a,b):
     if a==b: return 0
     if MAINS_ACROSS and a in MAINS and b in MAINS: return 1.5
     if (a=='P_N' and b.startswith('P_L')) or (b=='P_N' and a.startswith('P_L')): return 1.5
     if (a in HV and b=='P_0') or (b in HV and a=='P_0'): return 1.1
-    return .19
+    return DEFAULT_CLEARANCE
 
 def rel(v):
     return v.x/1e6-ORIGIN[0], v.y/1e6-ORIGIN[1]
@@ -82,7 +85,7 @@ def get_pad_data(fx):
     return pads
 
 def fields(net,pads,routes,width):
-    blocked=np.zeros((2,NX,NY),dtype=bool)
+    blocked=np.zeros((len(LAYERS),NX,NY),dtype=bool)
     via_bad=np.zeros((NX,NY),dtype=bool)
     m=round(1.0/STEP)
     blocked[:,:m,:]=blocked[:,-m:,:]=blocked[:,:,:m]=blocked[:,:,-m:]=True
@@ -93,6 +96,9 @@ def fields(net,pads,routes,width):
     else:
         i=math.ceil((BOUNDARY+4.25)/STEP)
         blocked[:,:i,:]=True; via_bad[:i,:]=True
+    if RESERVED_LAYER is not None:
+        layer, allowed_net = RESERVED_LAYER
+        if net != allowed_net: blocked[LAYERS.index(layer),:,:]=True
     for ref,num,n,x,y,box,mask in pads:
         if n!=net:
             g=sep(net,n)+.035
@@ -105,7 +111,7 @@ def fields(net,pads,routes,width):
             if z is None: stamp_segment(via_bad,a,c,.68)
             continue
         g=sep(net,n)+.035
-        for k in range(2) if z is None else (z,):
+        for k in range(len(LAYERS)) if z is None else (z,):
             stamp_segment(blocked[k],a,c,g+w/2+width/2)
         stamp_segment(via_bad,a,c,g+w/2+VIA_D/2)
     return blocked,via_bad
@@ -140,13 +146,16 @@ def search(starts,ends,blocked,via_bad):
                 previous[t]=s
                 cost[t]=G
                 push(q,(G+h(X,Y),G,t))
-        if not via_bad[x,y] and not blocked[1-k,x,y]:
-            t=x,y,1-k
-            G=g+14
-            if G<cost.get(t,math.inf):
-                previous[t]=s
-                cost[t]=G
-                push(q,(G+h(x,y),G,t))
+        if not via_bad[x,y]:
+            for side in range(len(blocked)):
+                if side == k or blocked[side,x,y]:
+                    continue
+                t=x,y,side
+                G=g+14
+                if G<cost.get(t,math.inf):
+                    previous[t]=s
+                    cost[t]=G
+                    push(q,(G+h(x,y),G,t))
     return None
 
 def squish(path):
@@ -198,7 +207,7 @@ def route_board(b,fx,nets,controller_fanout=True,seed_routes=(),term_filter=None
         if anchors:
             terms=[*anchors.get(name,()),*terms]
         if len(terms)<2: continue
-        width=MAINS_WIDTH if name in MAINS else .29 if name in WIDE else .21
+        width=MAINS_WIDTH if name in MAINS else .29 if name in WIDE else SIGNAL_WIDTH
         group=[terms.pop(0)]
         tries=0
         while terms and tries<len(terms):
@@ -243,6 +252,7 @@ def route_board(b,fx,nets,controller_fanout=True,seed_routes=(),term_filter=None
             b.Remove(v)
     print(f'{len(routes)} objects; {len(failed)} connections failed')
     for f in failed: print(f)
+    return failed
 
 if __name__=='__main__':
     d,b,data,fx,nt=pwr()

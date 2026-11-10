@@ -1,0 +1,29 @@
+Przypadek,Narożnik,SHDN był załączony,Wyjście było załączone,Wykryto,Wyjście aktywne na końcu,Czas detekcji od początku [ms]
+Rozruch normalny,niski/szybki,True,True,False,True,
+Rozruch normalny,wysoki/wolny,True,True,False,True,
+S1 otwarty przy PERMIT,niski/szybki,False,False,False,False,
+S1 otwarty przy PERMIT,wysoki/wolny,False,False,False,False,
+Termostat otwarty przy PERMIT,niski/szybki,False,False,False,False,
+Termostat otwarty przy PERMIT,wysoki/wolny,False,False,False,False,
+S2 fizycznie otwarty,niski/szybki,True,False,False,False,
+S2 fizycznie otwarty,wysoki/wolny,True,False,False,False,
+PG niski i PERMIT zablokowany w stanie wysokim,niski/szybki,False,False,False,False,
+PG niski i PERMIT zablokowany w stanie wysokim,wysoki/wolny,False,False,False,False,
+Zwarcie K1 w pracy,niski/szybki,True,True,True,False,28.060
+Zwarcie K1 w pracy,wysoki/wolny,True,True,True,False,29.070
+Zwarcie K2 w pracy,niski/szybki,True,True,True,False,28.060
+Zwarcie K2 w pracy,wysoki/wolny,True,True,True,False,29.070
+Zwarcie K1 i K2 jednocześnie,niski/szybki,True,True,True,False,28.060
+Zwarcie K1 i K2 jednocześnie,wysoki/wolny,True,True,True,False,29.070
+K1 wymuszone wysoko przed PG,niski/szybki,False,False,True,False,12.000
+K1 wymuszone wysoko przed PG,wysoki/wolny,False,False,True,False,12.000
+Zwarcie przy rozruchu z rampą 11 ms,niski/szybki,True,True,True,False,17.750
+Zwarcie przy rozruchu z rampą 11 ms,wysoki/wolny,True,True,True,False,19.530
+"Impuls 100 µs od 6,4 V",niski/szybki,True,True,False,True,
+"Impuls 100 µs od 6,4 V",wysoki/wolny,True,True,False,True,
+"Impuls 500 µs od 6,4 V",niski/szybki,True,True,True,False,30.120
+"Impuls 500 µs od 6,4 V",wysoki/wolny,True,True,True,False,30.450
+"Po zwarciu ponownie zamknięto S1, PG pozostaje wysoki",niski/szybki,True,True,True,False,28.060
+"Po zwarciu ponownie zamknięto S1, PG pozostaje wysoki",wysoki/wolny,True,True,True,False,29.070
+Po zwarciu utrata PG i powrót,niski/szybki,True,True,True,True,28.060
+Po zwarciu utrata PG i powrót,wysoki/wolny,True,True,True,True,29.070

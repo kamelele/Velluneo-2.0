@@ -2,6 +2,7 @@
 
 Żarówka E27 230 V z wymiennym wkładem Ø30 mm. Trzy wersje barwy (2700 K, 4000 K i 6500 K) korzystają z tego samego interfejsu i mechanizmu.
 
+- **Zasilacz dzielony Rev F** · [płytka mocy 55,5 × 34 mm](outputs/Zasilacz_RevF_Moc/README.md) · [sterowanie 30 × 25 mm](outputs/Zasilacz_RevF_Sterowanie/README.md) · pliki do wyceny technologicznej JLCPCB
 - [Zasilacz Rev E · mniejsza płytka, wariant dzielony i podglądy 3D](outputs/Studium_RevE/README.md)
 - [Zasilacz Rev D · jedna płytka do wyceny w JLCPCB](outputs/Zasilacz_RevD_JLCPCB/README.md)
 - [Zasilacz Rev B1 · odprowadzanie ciepła przez PCB](outputs/Zasilacz_RevB1/README.md) · [weryfikacja KiCad](outputs/Zasilacz_RevB1/Weryfikacja_KiCad_RevB1.md)
