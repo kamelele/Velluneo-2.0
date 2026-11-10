@@ -4,6 +4,7 @@
 
 - **Zasilacz dzielony · wariant prototypowy** · [moc Rev K 55,5 × 34 mm](outputs/Zasilacz_RevK_Moc/README.md) · [sterowanie Rev H 30 × 25 mm](outputs/Zasilacz_RevH_Sterowanie/README.md) · [wspólny podgląd](outputs/Zasilacz_RevK_Moc/Podglady/Zasilacz_RevK_RevH_razem.png) · [pakiet JLCPCB](Pakiet_prototypu_JLCPCB.md)
 - **Zasilacz dzielony · wariant archiwalny do oceny** · [moc Rev H 55,5 × 34 mm](outputs/Zasilacz_RevH_Moc/README.md) · [sterowanie Rev G 30 × 25 mm](outputs/Zasilacz_RevG_Sterowanie/README.md)
+- [Studium Rev L · kompletne trasowanie valley-fill na czterech warstwach](outputs/Studium_RevL_ValleyFill/README.md)
 - [Studium Rev J · korekcja harmonicznych i rozmieszczenie valley-fill](outputs/Studium_RevJ_ValleyFill/README.md)
 - **Zasilacz dzielony Rev G** · [moc Rev G 55,5 × 34 mm](outputs/Zasilacz_RevG_Moc/README.md) · [sterowanie Rev G 30 × 25 mm](outputs/Zasilacz_RevG_Sterowanie/README.md) · [wspólny podgląd](outputs/Zasilacz_RevG_Moc/Podglady/Zasilacz_RevG_razem.png)
 - **Zasilacz dzielony Rev F** · [płytka mocy 55,5 × 34 mm](outputs/Zasilacz_RevF_Moc/README.md) · [sterowanie 30 × 25 mm](outputs/Zasilacz_RevF_Sterowanie/README.md) · pliki do wyceny technologicznej JLCPCB

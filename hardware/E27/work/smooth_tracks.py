@@ -109,7 +109,7 @@ def power_gap(a, b):
         return 1500000
     if "/P_0" in (a, b):
         other = b if a == "/P_0" else a
-        if other in ("/P_D", "/P_BULK", "/P_BR") or other.startswith("/P_CL"):
+        if other in ("/P_D", "/P_BULK", "/P_BR") or other.startswith(("/P_CL", "/P_VF_")):
             return 1100000
     return 0
 
