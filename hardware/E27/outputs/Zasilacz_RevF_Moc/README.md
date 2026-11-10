@@ -10,4 +10,4 @@ Płytka mocy przetwarza napięcie sieciowe na nominalne 26 V DC dla [sterowania 
 
 ## Warunek zwolnienia projektu
 
-Przed zamówieniem zmontowanego prototypu do prób z siecią trzeba rozstrzygnąć obciążenie ogranicznika RCD (D5, C3 i R4), zakwalifikować T1 i uzgodnić sposób montażu obu płytek. Pozytywny DRC obejmuje geometrię i zgodność połączeń, a prób napięciowych i cieplnych Rev F jeszcze nie wykonano.
+Analiza wykazała ryzyko przekroczenia napięcia znamionowego C3 i R4. Kolejnym wariantem do prób jest [Rev G z przebudowanym RCD](../Zasilacz_RevG_Moc/README.md). Pozytywny DRC obejmuje geometrię i zgodność połączeń, a prób napięciowych i cieplnych Rev F jeszcze nie wykonano.

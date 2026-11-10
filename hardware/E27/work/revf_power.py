@@ -31,7 +31,7 @@ def devices():
                   {1:'S_RAW',2:'S_RTN'},(0,0),(129.54,202.565),'LINK')]
 
 
-def write_schematic(parts):
+def write_schematic(parts, destination=DEST, name=NAME, revision='F'):
     sheet=k.uid()
     symbols,items,paths={},{},{}
     for d in parts:
@@ -51,7 +51,7 @@ def write_schematic(parts):
             ends=[(n,xx,yy) for n,_,xx,yy,_ in defs]
             gap=h+2.54
         symbols[lib]=k.symbol(lib,d.ref.rstrip('0123456789'),graphic,pins,d.kind not in ('C','CP','D','Z','R','L','F','MOV'))
-        instance=k.placed(lib,d.ref,d.val,d.footprint,x,y,sid,NAME,sheet,list(d.connection))
+        instance=k.placed(lib,d.ref,d.val,d.footprint,x,y,sid,name,sheet,list(d.connection))
         instance=instance.replace(k.prop('Reference',d.ref,x,y-3.81),k.prop('Reference',d.ref,x,y-gap))
         instance=instance.replace(k.prop('Value',d.val,x,y+3.81),k.prop('Value',d.val,x,y+gap))
         content=[instance]
@@ -61,7 +61,7 @@ def write_schematic(parts):
             content.extend((k.wire(x1,y1,x2,y1),k.label(d.connection[n],x2,y1,0 if dx>0 else 180)))
         items[d.ref]=content
     notes=[
-        k.note('E27 / REV F / PŁYTKA MOCY 230 V AC → 26 V DC',18,18),
+        k.note(f'E27 / REV {revision} / PŁYTKA MOCY 230 V AC → 26 V DC',18,18),
         k.note('01   WEJŚCIE, PROSTOWNIK I FILTR',18,28),
         k.note('02   FLYBACK I BARIERA IZOLACJI',155,28),
         k.note('03   PROSTOWNIK I REGULACJA WTÓRNA',276,28),
@@ -69,8 +69,8 @@ def write_schematic(parts):
         k.note('J101-1 do J102-1 (S_RAW). J101-2 do J102-2 (S_RTN).',18,228),
         k.note('Pętla prostownika D7 i kondensatora C6 pozostaje na płytce mocy.',18,237),
     ]
-    k.schematic(DEST,NAME,sheet,'Velluneo E27 Rev F / płytka mocy',list(symbols.values()),
-                [*notes,*(i for row in items.values() for i in row)],'A3','F')
+    k.schematic(destination,name,sheet,f'Velluneo E27 Rev {revision} / płytka mocy',list(symbols.values()),
+                [*notes,*(i for row in items.values() for i in row)],'A3',revision)
     return sheet,paths
 
 

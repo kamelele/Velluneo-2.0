@@ -1,6 +1,6 @@
 # Velluneo E27 · Rev F · sterowanie po stronie wtórnej
 
-Rev F rozwija [wariant dzielony Rev E](../Studium_RevE/README.md). Płytka sterowania przyjmuje 26 V przez J102, z tym samym przypisaniem S_RAW i S_RTN co [płytka mocy Rev F](../Zasilacz_RevF_Moc/README.md). Zachowano dwa AL5812 po ok. 127 mA, niezależne odcięcie przepięciowe TPS26600, pętlę S1/TH1 i fizyczny styk S2 w torze dodatnim. [Rev D z plikami do wyceny](../Zasilacz_RevD_JLCPCB/README.md) pozostaje wersją rezerwową.
+Rev F rozwija [wariant dzielony Rev E](../Studium_RevE/README.md). Płytka sterowania przyjmuje 26 V przez J102, z tym samym przypisaniem S_RAW i S_RTN co [płytka mocy Rev G](../Zasilacz_RevG_Moc/README.md). Zachowano dwa AL5812 po ok. 127 mA, niezależne odcięcie przepięciowe TPS26600, pętlę S1/TH1 i fizyczny styk S2 w torze dodatnim. [Rev D z plikami do wyceny](../Zasilacz_RevD_JLCPCB/README.md) pozostaje wersją rezerwową.
 
 [Projekt KiCad](Zasilacz_RevF_Sterowanie.kicad_pro) · [Schemat](Zasilacz_RevF_Sterowanie.kicad_sch) · [Widok schematu](Podglady/Zasilacz_RevF_Sterowanie.svg) · [PCB](Zasilacz_RevF_Sterowanie.kicad_pcb) · [BOM](BOM_RevF.csv)
 
@@ -25,4 +25,4 @@ Zatrzask ma dwa stany przy PG = 1 i FAULT_N = 1. Podczas PG = 0 wyjście jest bl
 2. Wymusić zwarcie każdego kanału, obu równocześnie i zwarcia częściowe przy chłodnej i nagrzanej płytce. Zmierzyć czas do wyłączenia prądu, szczyt temperatury AL5812 oraz zachowanie przy wielokrotnych próbach. Sprawdzić osobno S1, TH1 i S2 oraz zgodność sekwencji z urządzeniem.
 3. Przed zestawieniem z płytką mocy sprawdzić odporność na stany uszkodzenia Q101/Q102, przerwy toru pomiarowego oraz nagrzewanie miedzi. Bezpieczeństwo izolacji i zachowanie kompletnego zasilacza wymagają oddzielnego przeglądu i prób.
 
-[Pliki do wyceny technologicznej w JLCPCB](JLCPCB_DO_WYCENY) obejmują Gerbery, wiercenia i parę BOM/CPL. Plik Poza_importem.csv wyszczególnia pozostałe części. Płytka jest po kontroli KiCad i przed próbami fizycznymi. Przed zamówieniem kompletnego zasilacza trzeba zamknąć także [przegląd strony sieciowej](../Zasilacz_RevF_Moc/README.md).
+[Pliki do wyceny technologicznej w JLCPCB](JLCPCB_DO_WYCENY) obejmują Gerbery, wiercenia i parę BOM/CPL. Plik Poza_importem.csv wyszczególnia pozostałe części. Płytka jest po kontroli KiCad i przed próbami fizycznymi. Przed zamówieniem kompletnego zasilacza trzeba zamknąć także [przegląd strony sieciowej](../Zasilacz_RevG_Moc/README.md).
