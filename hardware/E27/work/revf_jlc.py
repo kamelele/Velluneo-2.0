@@ -13,7 +13,7 @@ import revg_power
 import revh_power
 
 OUT=Path('outputs')
-NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME,'Zasilacz_RevG_Sterowanie',revh_power.NAME)
+NAMES=('Zasilacz_RevF_Moc','Zasilacz_RevF_Sterowanie',revg_power.NAME,'Zasilacz_RevG_Sterowanie',revh_power.NAME,'Zasilacz_RevH_Sterowanie')
 D=OUT/'Zasilacz_RevD_JLCPCB'
 GERBER_SUFFIXES={'.gtl','.gbl','.gto','.gbo','.gts','.gbs','.gtp','.gbp','.gm1'}
 
