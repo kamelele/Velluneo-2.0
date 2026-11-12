@@ -17,3 +17,4 @@
 - [E27-8S-SPEC task contract](8s/task-contract.md) and [current specification packet](8s/stage-packet.md). The candidate uses one isolated current-regulated output and targets one power PCB.
 - [Requirements check](8s/requirements-check.json) reports the fabrication and assembly process review as open. [Proposed JLCPCB process](8s/profile-proposal.md) records the available service choices and the information still needed.
 - The cold electrical envelope and connector mapping must be agreed before schematic work. Bench measurements, board-specific process evidence and qualification are separate downstream work. [Specification and test plan](8s/specification.md)
+- [Output protection and cold-start study](8s/output-protection-study.md) records the calculated eFuse window and the contact-side discharge and insertion tests for OPEN-CC.
