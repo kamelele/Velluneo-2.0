@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "stage": "specification",
+  "errors": [
+    {
+      "id": "OPEN-PROFILE",
+      "gate": "specification",
+      "message": "Unresolved: Confirm the proposed fabrication and assembly service and capability constraints for the driver."
+    },
+    {
+      "id": "REQ-JLC",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "matrix": [
+    {
+      "id": "REQ-8S",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "insert",
+          "object": "LED string"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-LIGHT",
+      "revision": "2",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "insert",
+          "object": "LEDs and diffuser",
+          "path": "specification.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-TEMP",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "insert",
+          "object": "MCPCB thermal path",
+          "path": "specification.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-CC",
+      "revision": "2",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Current regulation and LED contacts"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-CONTACT",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Independent cutoff and discharge",
+          "path": "specification.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-ISOLATION",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Mains-to-accessible barrier",
+          "path": "specification.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-INTEGRATION",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Power PCB"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-JLC",
+      "revision": "2",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Fabrication and PCBA process"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-MAINS",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Operate from 207–253 VAC, 50 Hz, per the current design baseline.",
+          "path": "specification.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-INS-BASIS",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Establish the mains-to-accessible insulation design basis."
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-EMC",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Meet applicable complete-lamp EMC, immunity, input and temporal light requirements.",
+          "path": "specification.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-CAP-TEMP",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Keep the electrolytic case at or below 85°C at 40°C ambient.",
+          "path": "specification.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-ASSEMBLY",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Verify the final driver assembly and fabrication inputs."
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "OPEN-PROFILE",
+      "record_id": "REQ-JLC",
+      "field": "fabrication_and_assembly",
+      "owner": "Velluneo project owner",
+      "question": "Confirm the proposed fabrication and assembly service and capability constraints for the driver.",
+      "blocks_stage": "specification",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-CC",
+      "record_id": "REQ-CC",
+      "field": "electrical_envelope",
+      "owner": "Velluneo project owner",
+      "question": "Agree the cold string voltage and drive-current design bounds and the exact contacts, thermostat and removal behavior.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-FOOTPRINT",
+      "record_id": "REQ-INTEGRATION",
+      "field": "mechanical_envelope",
+      "owner": "Velluneo project owner",
+      "question": "Confirm available enclosure envelope, maximum part heights, contact access and thermal mounting.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-BIN",
+      "record_id": "REQ-LIGHT",
+      "field": "optical_measurements",
+      "owner": "Velluneo project owner",
+      "question": "Confirm supplier bins and measure hot luminous flux and CRI for all CCT variants.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-AMBIENT",
+      "record_id": "REQ-TEMP",
+      "field": "ambient_and_temperature_evidence",
+      "owner": "Velluneo project owner",
+      "question": "Define rated ambient and record temperature data from the intended assembly.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-SAFETY",
+      "record_id": "REQ-ISOLATION",
+      "field": "classification",
+      "owner": "Velluneo project owner",
+      "question": "Confirm applicable classification and tests for the complete mains-powered assembly.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-CONTACT",
+      "record_id": "REQ-CONTACT",
+      "field": "fault_test_coverage",
+      "owner": "Velluneo project owner",
+      "question": "Define fault injection points and record worst-case contact peaks and discharge time.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-INS-BASIS",
+      "record_id": "REQ-INS-BASIS",
+      "field": "insulation_basis",
+      "owner": "Velluneo project owner",
+      "question": "Agree insulation classification, material inputs and accessible contact sequence.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-EMC",
+      "record_id": "REQ-EMC",
+      "field": "applicable_test_limits",
+      "owner": "Velluneo project owner",
+      "question": "Agree test classification, applicable EMC and temporal light limits and laboratory conditions.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-INSERT-PROCESS",
+      "record_id": "REQ-LIGHT",
+      "field": "insert_fabrication",
+      "owner": "Velluneo project owner",
+      "question": "Confirm the LED insert MCPCB fabrication, mounting and assembly process separately from the FR-4 driver.",
+      "blocks_stage": "placement",
+      "status": "open"
+    }
+  ],
+  "passed": false,
+  "limitations": [
+    "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+    "Hashes establish freshness, not evidence truth or reviewer authority.",
+    "Electrical checks compare declared DC envelopes only, not complete operation."
+  ],
+  "intent_digest": "42fba813be0bb01826ab7b7f688270b926d10379f9c60d61f1549ab2539b692c",
+  "product": "Velluneo-E27-8S",
+  "revision": "8S-spec-2",
+  "document_sha256": "82ccaee2a16e659424f5c15c18f97675657f77408b7d674c65a156016f3a519c",
+  "blockers": [
+    {
+      "id": "OPEN-PROFILE",
+      "gate": "specification",
+      "message": "Unresolved: Confirm the proposed fabrication and assembly service and capability constraints for the driver."
+    },
+    {
+      "id": "OPEN-CC",
+      "gate": "schematic",
+      "message": "Unresolved: Agree the cold string voltage and drive-current design bounds and the exact contacts, thermostat and removal behavior."
+    },
+    {
+      "id": "OPEN-FOOTPRINT",
+      "gate": "placement",
+      "message": "Unresolved: Confirm available enclosure envelope, maximum part heights, contact access and thermal mounting."
+    },
+    {
+      "id": "OPEN-BIN",
+      "gate": "release",
+      "message": "Unresolved: Confirm supplier bins and measure hot luminous flux and CRI for all CCT variants."
+    },
+    {
+      "id": "OPEN-AMBIENT",
+      "gate": "release",
+      "message": "Unresolved: Define rated ambient and record temperature data from the intended assembly."
+    },
+    {
+      "id": "OPEN-SAFETY",
+      "gate": "release",
+      "message": "Unresolved: Confirm applicable classification and tests for the complete mains-powered assembly."
+    },
+    {
+      "id": "OPEN-CONTACT",
+      "gate": "release",
+      "message": "Unresolved: Define fault injection points and record worst-case contact peaks and discharge time."
+    },
+    {
+      "id": "OPEN-INS-BASIS",
+      "gate": "placement",
+      "message": "Unresolved: Agree insulation classification, material inputs and accessible contact sequence."
+    },
+    {
+      "id": "OPEN-EMC",
+      "gate": "placement",
+      "message": "Unresolved: Agree test classification, applicable EMC and temporal light limits and laboratory conditions."
+    },
+    {
+      "id": "OPEN-INSERT-PROCESS",
+      "gate": "placement",
+      "message": "Unresolved: Confirm the LED insert MCPCB fabrication, mounting and assembly process separately from the FR-4 driver."
+    },
+    {
+      "id": "REQ-8S",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-LIGHT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-TEMP",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-CC",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-CONTACT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-ISOLATION",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-INTEGRATION",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-JLC",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-MAINS",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-INS-BASIS",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-EMC",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-CAP-TEMP",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-ASSEMBLY",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "blocked_stages": [
+    "specification",
+    "schematic",
+    "placement",
+    "routing",
+    "release"
+  ],
+  "toolkit": {
+    "kind": "standalone-candidate",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "ruleset_version": "0.7.1",
+    "publication_ready": false
+  }
+}

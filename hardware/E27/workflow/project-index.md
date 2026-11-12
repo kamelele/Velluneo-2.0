@@ -9,11 +9,11 @@
 ## Baseline and ownership
 
 - Existing CAD baseline [239eeee](https://github.com/kamelele/Velluneo-2.0/commit/239eeee4522100944dae18d29fecb506b6db07f1). The existing [prototype handoff](../Pakiet_prototypu_JLCPCB.md) uses [power Rev K](../outputs/Zasilacz_RevK_Moc/README.md) and [control Rev H](../outputs/Zasilacz_RevH_Sterowanie/README.md). [Rev L valley-fill](../outputs/Studium_RevL_ValleyFill/README.md) is a development study. Historical reports are baseline evidence.
-- Current task is workflow adoption for the existing E27 power supply and control. Coordinator and writer for the adoption documents is Codex. The write scope is `AGENTS.md` and this index. CAD and library ownership has not been assigned for the next task.
-- The project owner is the authority for stage decisions and any delegation. A toolkit stage packet, a stage decision bound to that packet, and the four review reports are pending. The existing LED specification remains the basis for this adoption. A one-string driver is a design proposal discussed separately.
+- On 2026-11-11 the project owner selected one series string of eight LEDs. The Rev K and Rev H pair and its JLCPCB files are the historical 2×8 prototype reference. The existing valley-fill study remains historical evidence for that design family.
+- The active stage is specification. Codex held the documentation write assignment. CAD and library write ownership for 8S will be assigned with the next bounded task. The project owner decides stage acceptance or delegation.
 
-## Next task
+## Active task
 
-- Reconcile the product requirements and the 26 V interface against the existing specification. Prepare separate board records for the prototype pair and document independently sourced connectivity intent and unresolved inputs. Keep the LED insert and mechanical design outside this task. Record any mechanical constraints needed by the electrical design as inputs to confirm.
-- Review fabrication and assembly with the project owner. JLCPCB is the selected supplier. The exact stackup, panel and mounting plan remain to be confirmed. The toolkit JLCPCB profile proposes a 0.20 mm track width and 0.30 mm hole preference. The control prototype has tracks down to 0.18 mm and vias down to 0.20 mm. Map these differences and the existing mains isolation rules before proposing any KiCad configuration change.
-- Acceptance evidence includes the current tool and source revisions, requirements and open questions, the profile comparison, a configuration preview once the environment is ready, and a stage packet with actual review coverage. [Toolkit workflow](https://github.com/wiktor426/pcb-agent-toolkit/blob/86614c3b9b43713031e0ea481edbe26b71cd1b8f/docs/agent-workflow.md) · [Existing-project guide](https://github.com/wiktor426/pcb-agent-toolkit/blob/86614c3b9b43713031e0ea481edbe26b71cd1b8f/docs/existing-projects.md)
+- [E27-8S-SPEC task contract](8s/task-contract.md) and [current specification packet](8s/stage-packet.md). The candidate uses one isolated current-regulated output and targets one power PCB.
+- [Requirements check](8s/requirements-check.json) reports the fabrication and assembly process review as open. [Proposed JLCPCB process](8s/profile-proposal.md) records the available service choices and the information still needed.
+- The cold electrical envelope and connector mapping must be agreed before schematic work. Bench measurements, board-specific process evidence and qualification are separate downstream work. [Specification and test plan](8s/specification.md)

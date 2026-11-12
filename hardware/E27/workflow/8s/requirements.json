@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo-E27-8S",
+  "revision": "8S-spec-2",
+  "subsystems": [
+    {
+      "id": "driver",
+      "kind": "pcb",
+      "owner": "Velluneo project owner"
+    },
+    {
+      "id": "insert",
+      "kind": "pcb",
+      "owner": "Velluneo project owner"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-8S",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Use eight LED packages in one series string.",
+      "basis": "Project owner architecture decision on 2026-11-11",
+      "acceptance": "An independent connectivity review identifies one current path through exactly eight packages.",
+      "gate": "schematic",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "insert",
+          "object": "LED string"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-LIGHT",
+      "revision": "2",
+      "owner": "Velluneo project owner",
+      "text": "Deliver 750–850 lm after the diffuser with CRI at least 80 in 2700 K, 4000 K and 6500 K versions.",
+      "basis": "E27 Rev A product report, optical and protection requirements",
+      "acceptance": "Measure stabilized flux and CRI for each CCT using the intended diffuser. Evaluate bins and fixed current selection using at least three development inserts per CCT and several lots before series.",
+      "gate": "release",
+      "method": "measurement",
+      "implementation": [
+        {
+          "subsystem": "insert",
+          "object": "LEDs and diffuser",
+          "path": "specification.md"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-TEMP",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Target junction temperature at most 95°C in rated operation.",
+      "basis": "E27 Rev A product report, optical and protection requirements",
+      "acceptance": "Derive the hottest junction temperature from measured solder-point temperature and the selected LED thermal model at approved ambient conditions.",
+      "gate": "release",
+      "method": "measurement",
+      "implementation": [
+        {
+          "subsystem": "insert",
+          "object": "MCPCB thermal path",
+          "path": "specification.md"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-CC",
+      "revision": "2",
+      "owner": "Velluneo project owner",
+      "text": "Drive one isolated current-regulated LED output, with a separate removal shutdown and thermal protection function.",
+      "basis": "Owner's 8S decision and E27 Rev A shutdown architecture",
+      "acceptance": "Agree the driver and insert power contact numbers, polarities, source/sink voltage and current envelopes, startup, open/short, removal, thermal behavior and independent cutoff before schematic work.",
+      "gate": "schematic",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Current regulation and LED contacts"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-CONTACT",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Limit accessible contact voltage to 30 V DC including peaks in a single fault, and reach below 5 V within 100 ms after normal opening.",
+      "basis": "E27 Rev A product report, optical and protection requirements",
+      "acceptance": "Measure the contact voltage and elapsed discharge time under approved normal opening and single-fault test conditions.",
+      "gate": "release",
+      "method": "measurement",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Independent cutoff and discharge",
+          "path": "specification.md"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-ISOLATION",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Retain reinforced isolation from mains to accessible parts.",
+      "basis": "E27 Rev A product report, optical and protection requirements",
+      "acceptance": "Approve insulation classification and verify the complete assembly by the applicable test plan.",
+      "gate": "release",
+      "method": "measurement",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Mains-to-accessible barrier",
+          "path": "specification.md"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-INTEGRATION",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Fit the constant-current driver and required protection functions on one power PCB.",
+      "basis": "Packaging objective from the 8S architecture discussion",
+      "acceptance": "Review all required functions, physical fit, thermal path and assembly access against the actual enclosure envelope.",
+      "gate": "placement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Power PCB"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-JLC",
+      "revision": "2",
+      "owner": "Velluneo project owner",
+      "text": "Use a confirmed JLCPCB fabrication and assembly process for the proposed board.",
+      "basis": "Project owner supplier direction and pinned JLCPCB profile",
+      "acceptance": "Record the selected fabrication and assembly service and applicable capability constraints. Verify the actual stackup, laminate and assembly-specific release inputs at their own gates.",
+      "gate": "specification",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Fabrication and PCBA process"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-MAINS",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Operate from 207–253 VAC, 50 Hz, per the current design baseline.",
+      "basis": "E27 baseline report and prototype handoff",
+      "acceptance": "Verify startup, regulated output and fault behavior throughout the input range.",
+      "gate": "release",
+      "method": "measurement",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Operate from 207–253 VAC, 50 Hz, per the current design baseline.",
+          "path": "specification.md"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-INS-BASIS",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Establish the mains-to-accessible insulation design basis.",
+      "basis": "E27 baseline report and prototype handoff",
+      "acceptance": "Review complete assembly classification, laminate, isolation geometry and accessible-contact sequence before layout.",
+      "gate": "placement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Establish the mains-to-accessible insulation design basis."
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-EMC",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Meet applicable complete-lamp EMC, immunity, input and temporal light requirements.",
+      "basis": "E27 baseline report and prototype handoff",
+      "acceptance": "Record test basis and measured EMC, individual harmonics, PF/DF and PstLM/SVM results under approved conditions.",
+      "gate": "release",
+      "method": "measurement",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Meet applicable complete-lamp EMC, immunity, input and temporal light requirements.",
+          "path": "specification.md"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-CAP-TEMP",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Keep the electrolytic case at or below 85°C at 40°C ambient.",
+      "basis": "E27 baseline report and prototype handoff",
+      "acceptance": "Measure stabilized case temperature in the worst approved orientation and fixture.",
+      "gate": "release",
+      "method": "measurement",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Keep the electrolytic case at or below 85°C at 40°C ambient.",
+          "path": "specification.md"
+        }
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-ASSEMBLY",
+      "revision": "1",
+      "owner": "Velluneo project owner",
+      "text": "Verify the final driver assembly and fabrication inputs.",
+      "basis": "E27 baseline report and prototype handoff",
+      "acceptance": "Review actual panel, BOM, exact MPNs, T1, material record and through-hole scope with the intended manufacturing process.",
+      "gate": "release",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "driver",
+          "object": "Verify the final driver assembly and fabrication inputs."
+        }
+      ],
+      "evidence_ids": []
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [
+    {
+      "id": "OPEN-PROFILE",
+      "record_id": "REQ-JLC",
+      "field": "fabrication_and_assembly",
+      "owner": "Velluneo project owner",
+      "question": "Confirm the proposed fabrication and assembly service and capability constraints for the driver.",
+      "blocks_stage": "specification",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-CC",
+      "record_id": "REQ-CC",
+      "field": "electrical_envelope",
+      "owner": "Velluneo project owner",
+      "question": "Agree the cold string voltage and drive-current design bounds and the exact contacts, thermostat and removal behavior.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-FOOTPRINT",
+      "record_id": "REQ-INTEGRATION",
+      "field": "mechanical_envelope",
+      "owner": "Velluneo project owner",
+      "question": "Confirm available enclosure envelope, maximum part heights, contact access and thermal mounting.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-BIN",
+      "record_id": "REQ-LIGHT",
+      "field": "optical_measurements",
+      "owner": "Velluneo project owner",
+      "question": "Confirm supplier bins and measure hot luminous flux and CRI for all CCT variants.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-AMBIENT",
+      "record_id": "REQ-TEMP",
+      "field": "ambient_and_temperature_evidence",
+      "owner": "Velluneo project owner",
+      "question": "Define rated ambient and record temperature data from the intended assembly.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-SAFETY",
+      "record_id": "REQ-ISOLATION",
+      "field": "classification",
+      "owner": "Velluneo project owner",
+      "question": "Confirm applicable classification and tests for the complete mains-powered assembly.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-CONTACT",
+      "record_id": "REQ-CONTACT",
+      "field": "fault_test_coverage",
+      "owner": "Velluneo project owner",
+      "question": "Define fault injection points and record worst-case contact peaks and discharge time.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-INS-BASIS",
+      "record_id": "REQ-INS-BASIS",
+      "field": "insulation_basis",
+      "owner": "Velluneo project owner",
+      "question": "Agree insulation classification, material inputs and accessible contact sequence.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-EMC",
+      "record_id": "REQ-EMC",
+      "field": "applicable_test_limits",
+      "owner": "Velluneo project owner",
+      "question": "Agree test classification, applicable EMC and temporal light limits and laboratory conditions.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-INSERT-PROCESS",
+      "record_id": "REQ-LIGHT",
+      "field": "insert_fabrication",
+      "owner": "Velluneo project owner",
+      "question": "Confirm the LED insert MCPCB fabrication, mounting and assembly process separately from the FR-4 driver.",
+      "blocks_stage": "placement",
+      "status": "open"
+    }
+  ],
+  "evidence": []
+}
