@@ -22,3 +22,4 @@
 - [8S driver circuit proposal and illustrated connections](8s/driver-circuit-proposal.md) develops the single-board power path and the protection and interlock pin groups for the next connectivity review.
 - [8S driver pin intent and protection review](8s/driver-pin-review.md) records the checked active-device pins, JLCPCB resistor candidates, and the remaining voltage and recovery limits.
 - [8S short protection and restart candidate](8s/short-protection.md) records the monitor, startup qualification, retained supply and bench acceptance conditions.
+- [8S schematic capture input](8s/driver-8s-capture-input.md) records the verified Rev K/Rev H CAD delta and the provisional one-board pin map.

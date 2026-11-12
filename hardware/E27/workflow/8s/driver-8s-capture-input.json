@@ -1,0 +1,666 @@
+{
+  "revision": "8S-capture-draft-1",
+  "status": "partial-unapproved",
+  "baseline_commit": "c7a58d33717ac4bcf54ede258c79537e2d14adc2",
+  "basis_files": [
+    {
+      "path": "requirements.json",
+      "sha256": "16ecd3cd2ccae95b866e2cd8b28b53466ed9231e1a1c4418bce945bacdf42607"
+    },
+    {
+      "path": "driver-pin-review.md",
+      "sha256": "13545be82646fd58a9b99a3688dcce8bc78c439740c51d60054f039a6a534295"
+    },
+    {
+      "path": "short-protection.md",
+      "sha256": "0b48a313efa070bef9e8c9cbfb9ef4f3096349a110a1b18ae566c50bc64d86b7"
+    }
+  ],
+  "basis": "Unchanged power-stage connections come from the archived Rev K design inputs. Changed nets and values come from the 8S pin and short-protection proposals.",
+  "removed_baseline_components": {
+    "RevK": [
+      "J101"
+    ],
+    "RevH": [
+      "J102",
+      "U3",
+      "U4"
+    ]
+  },
+  "connector_changes": {
+    "RevH_J3": {
+      "1": "LED_PLUS",
+      "2": "LED_RTN",
+      "3": "removed"
+    },
+    "J2_external_paths": [
+      "1 to S1 NO to TH1 NC to 2",
+      "3 to S2 NO to 4"
+    ]
+  },
+  "open_circuit": {
+    "enable_and_latch_ports": [
+      "PERMIT_FEED",
+      "PERMIT_RETURN",
+      "CONTACT_OK",
+      "HOLD_READY_N",
+      "SHDN",
+      "V3V3_HOLD",
+      "LED_RTN",
+      "RAW"
+    ],
+    "missing": "Part-level implementation of normally inactive permit driver, reset, timer and fault latch.",
+    "dependent": [
+      "final physical contacts",
+      "supplier T1 winding and pin drawing",
+      "current and voltage envelope"
+    ]
+  },
+  "parts": {
+    "J1": {
+      "value": "230 VAC",
+      "mpn": null,
+      "pins": {
+        "1": "P_L",
+        "2": "P_N"
+      }
+    },
+    "F1": {
+      "value": "T 500 mA / 277 VAC",
+      "mpn": "3403.0271.23",
+      "pins": {
+        "1": "P_L",
+        "2": "P_LF"
+      }
+    },
+    "RV1": {
+      "value": "275 VAC",
+      "mpn": "TMOV14RP275E",
+      "pins": {
+        "1": "P_LR",
+        "2": "P_N"
+      }
+    },
+    "R1": {
+      "value": "22R / 1.1W fusible",
+      "mpn": "AC01000902209JBMCS",
+      "pins": {
+        "1": "P_LF",
+        "2": "P_LR"
+      }
+    },
+    "C1": {
+      "value": "100n / 630V",
+      "mpn": "C3225X7T2J104KT000N",
+      "pins": {
+        "1": "P_BR",
+        "2": "P_0"
+      }
+    },
+    "L1": {
+      "value": "1mH",
+      "mpn": "768772102",
+      "pins": {
+        "1": "P_BR",
+        "2": "P_BULK"
+      }
+    },
+    "C2": {
+      "value": "10u / 450V",
+      "mpn": "450BXW10MEFR10X16",
+      "pins": {
+        "1": "P_BULK",
+        "2": "P_0"
+      }
+    },
+    "R2": {
+      "value": "510k HV",
+      "mpn": "CRCW2010510KFKEF",
+      "pins": {
+        "1": "P_BULK",
+        "2": "P_BLEED"
+      }
+    },
+    "R3": {
+      "value": "510k HV",
+      "mpn": "CRCW2010510KFKEF",
+      "pins": {
+        "1": "P_BLEED",
+        "2": "P_0"
+      }
+    },
+    "T1": {
+      "value": "EE16 84:23:13",
+      "mpn": null,
+      "pins": {
+        "1": "P_D",
+        "2": "P_BULK",
+        "3": "P_AUX",
+        "4": "P_0",
+        "5": "RAW",
+        "6": "S_SW"
+      }
+    },
+    "C3": {
+      "value": "2.2n / 630V",
+      "mpn": "C3216C0G2J222JT000N",
+      "pins": {
+        "1": "P_CL",
+        "2": "P_BULK"
+      }
+    },
+    "R4": {
+      "value": "82k / 0.5W",
+      "mpn": "SR1206JR-7W82KL",
+      "pins": {
+        "1": "P_CL",
+        "2": "P_CLMID"
+      }
+    },
+    "D5": {
+      "value": "US1M",
+      "mpn": "US1M-13-F",
+      "pins": {
+        "1": "P_CL",
+        "2": "P_D"
+      }
+    },
+    "D6": {
+      "value": "DFLU1200",
+      "mpn": "DFLU1200-7",
+      "pins": {
+        "1": "P_BIAS",
+        "2": "P_AUX"
+      }
+    },
+    "C4": {
+      "value": "22u / 35V",
+      "mpn": "C3216X5R1V226M160AC",
+      "pins": {
+        "1": "P_BIAS",
+        "2": "P_0"
+      }
+    },
+    "R5": {
+      "value": "10k",
+      "mpn": "ERJ-6ENF1002V",
+      "pins": {
+        "1": "P_BIAS",
+        "2": "P_BPP"
+      }
+    },
+    "R6": {
+      "value": "2.2M HV",
+      "mpn": "CRCW20102M20FKEF",
+      "pins": {
+        "1": "P_BULK",
+        "2": "P_VMID"
+      }
+    },
+    "R7": {
+      "value": "2.2M HV",
+      "mpn": "CRCW20102M20FKEF",
+      "pins": {
+        "1": "P_VMID",
+        "2": "P_V"
+      }
+    },
+    "C5": {
+      "value": "470n / 50V",
+      "mpn": "GRM21BR71H474KA88L",
+      "pins": {
+        "1": "P_BPP",
+        "2": "P_0"
+      }
+    },
+    "U1": {
+      "value": "LYT6073C-TL",
+      "mpn": "LYT6073C-TL",
+      "pins": {
+        "1": "LED_RTN",
+        "2": "SEC_GND",
+        "3": "S_FB",
+        "4": "S_BPS",
+        "5": "SEC_GND",
+        "6": "S_VO",
+        "7": "S_FWD",
+        "13": "P_V",
+        "14": "P_BPP",
+        "16": "P_0",
+        "17": "P_0",
+        "18": "P_0",
+        "19": "P_0",
+        "24": "P_D",
+        "8": null,
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "15": null
+      }
+    },
+    "CY1": {
+      "value": "2.2n Y1",
+      "mpn": "440LD22-R",
+      "pins": {
+        "1": "P_BULK",
+        "2": "RAW"
+      }
+    },
+    "D7": {
+      "value": "SK3200B",
+      "mpn": "SK3200B-LTP",
+      "pins": {
+        "1": "S_SW",
+        "2": "SEC_GND"
+      }
+    },
+    "C6": {
+      "value": "470u / 50V",
+      "mpn": "UCM1H471MNJ1MS",
+      "pins": {
+        "1": "RAW",
+        "2": "SEC_GND"
+      }
+    },
+    "R8": {
+      "value": "47R",
+      "mpn": "RC0805FR-0747RL",
+      "pins": {
+        "1": "S_SW",
+        "2": "S_FWD"
+      }
+    },
+    "C7": {
+      "value": "68p / 250V",
+      "mpn": "GQM1875C2E680GB12D",
+      "pins": {
+        "1": "S_FWD",
+        "2": "SEC_GND"
+      }
+    },
+    "R9": {
+      "value": "0.130 ohm 1%",
+      "mpn": "RLH12FTCR130",
+      "pins": {
+        "1": "LED_RTN",
+        "2": "SEC_GND"
+      }
+    },
+    "D8": {
+      "value": "US1B",
+      "mpn": "US1B-13-F",
+      "pins": {
+        "1": "SEC_GND",
+        "2": "LED_RTN"
+      }
+    },
+    "R10": {
+      "value": "113 kohm 0.1%",
+      "mpn": "RT0603BRD07113KL",
+      "pins": {
+        "1": "RAW",
+        "2": "S_FB"
+      }
+    },
+    "R11": {
+      "value": "5.62k 0.1%",
+      "mpn": "RP0603BRD075K62L",
+      "pins": {
+        "1": "S_FB",
+        "2": "SEC_GND"
+      }
+    },
+    "C8": {
+      "value": "330p",
+      "mpn": "CC0603KRX7R9BB331",
+      "pins": {
+        "1": "S_FB",
+        "2": "SEC_GND"
+      }
+    },
+    "C9": {
+      "value": "2.2u / 25V",
+      "mpn": "C3216X7R1E225K160AE",
+      "pins": {
+        "1": "S_BPS",
+        "2": "SEC_GND"
+      }
+    },
+    "R12": {
+      "value": "2.2k",
+      "mpn": "RC0805FR-072K2L",
+      "pins": {
+        "1": "RAW",
+        "2": "S_Z18"
+      }
+    },
+    "ZD1": {
+      "value": "18V",
+      "mpn": "BZT52C18-7-F",
+      "pins": {
+        "1": "S_Z18",
+        "2": "SEC_GND"
+      }
+    },
+    "Q1": {
+      "value": "MMBT5551",
+      "mpn": "MMBT5551LT1G",
+      "pins": {
+        "1": "S_Z18",
+        "2": "S_VO",
+        "3": "RAW"
+      }
+    },
+    "C10": {
+      "value": "100n / 50V",
+      "mpn": "GRM21BR71H104KA01L",
+      "pins": {
+        "1": "S_VO",
+        "2": "SEC_GND"
+      }
+    },
+    "ZD2": {
+      "value": "27V",
+      "mpn": "BZT52C27-7-F",
+      "pins": {
+        "1": "RAW",
+        "2": "S_OVA"
+      }
+    },
+    "R13": {
+      "value": "100R",
+      "mpn": "ERJ-6ENF1000V",
+      "pins": {
+        "1": "S_OVA",
+        "2": "S_OVB"
+      }
+    },
+    "D9": {
+      "value": "BAV21W",
+      "mpn": "BAV21W-7-F",
+      "pins": {
+        "1": "S_BPS",
+        "2": "S_OVB"
+      }
+    },
+    "BR1": {
+      "value": "ABS10M-13",
+      "mpn": "ABS10M-13",
+      "pins": {
+        "1": "P_BR",
+        "2": "P_N",
+        "3": "P_0",
+        "4": "P_LR"
+      }
+    },
+    "R22": {
+      "value": "82k / 0.5W",
+      "mpn": "SR1206JR-7W82KL",
+      "pins": {
+        "1": "P_CLMID",
+        "2": "P_BULK"
+      }
+    },
+    "C16": {
+      "value": "C_RC (DNP)",
+      "mpn": null,
+      "pins": {
+        "1": "S_SW",
+        "2": "S_DAMP"
+      }
+    },
+    "R23": {
+      "value": "R_RC (DNP)",
+      "mpn": null,
+      "pins": {
+        "1": "S_DAMP",
+        "2": "SEC_GND"
+      }
+    },
+    "U2": {
+      "value": "eFuse",
+      "mpn": "TPS26600PWPR",
+      "pins": {
+        "1": "RAW",
+        "2": "RAW",
+        "3": "EF_RTN",
+        "4": null,
+        "5": "OVP",
+        "6": "MODE",
+        "7": "SHDN",
+        "8": "EF_RTN",
+        "9": "LED_RTN",
+        "10": null,
+        "11": "ILIM",
+        "12": "SLEW",
+        "13": null,
+        "14": null,
+        "15": "FUSED",
+        "16": "FUSED",
+        "17": "EF_RTN"
+      }
+    },
+    "C11": {
+      "value": "100 nF effective minimum",
+      "mpn": null,
+      "pins": {
+        "1": "RAW",
+        "2": "LED_RTN"
+      }
+    },
+    "C12": {
+      "value": "47 nF",
+      "mpn": null,
+      "pins": {
+        "1": "SLEW",
+        "2": "EF_RTN"
+      }
+    },
+    "C13": {
+      "value": "100 nF effective minimum",
+      "mpn": null,
+      "pins": {
+        "1": "FUSED",
+        "2": "LED_RTN"
+      }
+    },
+    "R14": {
+      "value": "226 kohm 0.1%",
+      "mpn": "ERA-3AEB2263V",
+      "pins": {
+        "1": "RAW",
+        "2": "OVP"
+      }
+    },
+    "R15": {
+      "value": "10 kohm 0.1%",
+      "mpn": "ERA-3AEB103V",
+      "pins": {
+        "1": "OVP",
+        "2": "EF_RTN"
+      }
+    },
+    "R16": {
+      "value": "30.1 kohm 1%",
+      "mpn": "ERJ-3EKF3012V",
+      "pins": {
+        "1": "ILIM",
+        "2": "EF_RTN"
+      }
+    },
+    "R17": {
+      "value": "402 kohm 1%",
+      "mpn": "RC0603FR-07402KL",
+      "pins": {
+        "1": "MODE",
+        "2": "EF_RTN"
+      }
+    },
+    "R18": {
+      "value": "10 kohm",
+      "mpn": null,
+      "pins": {
+        "1": "SHDN",
+        "2": "LED_RTN"
+      }
+    },
+    "R19": {
+      "value": "4.7 kohm 1% 0.5 W",
+      "mpn": "ESR18EZPF4701",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "LED_RTN"
+      }
+    },
+    "J2": {
+      "value": "S1/TH1 and S2",
+      "mpn": null,
+      "pins": {
+        "1": "PERMIT_FEED",
+        "2": "PERMIT_RETURN",
+        "3": "FUSED",
+        "4": "LED_PLUS"
+      }
+    },
+    "J3": {
+      "value": "8S LED+ / LED-",
+      "mpn": null,
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "LED_RTN"
+      }
+    },
+    "U101": {
+      "value": "3.3 V fixed LDO",
+      "mpn": "TPS7A1633DGNR",
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": null,
+        "3": null,
+        "4": "LED_RTN",
+        "5": "HOLD_RAW",
+        "6": null,
+        "7": null,
+        "8": "HOLD_RAW",
+        "9": "LED_RTN"
+      }
+    },
+    "U102": {
+      "value": "Output short and hold-ready monitor",
+      "mpn": "TPS3700DDCR",
+      "pins": {
+        "1": "CONTACT_OK",
+        "2": "LED_RTN",
+        "3": "CONTACT_SENSE",
+        "4": "HOLD_SENSE",
+        "5": "V3V3_HOLD",
+        "6": "HOLD_READY_N"
+      }
+    },
+    "R24": {
+      "value": "1 kohm charge resistor",
+      "mpn": null,
+      "pins": {
+        "1": "RAW",
+        "2": "HOLD_CHARGE"
+      }
+    },
+    "D10": {
+      "value": "hold blocking diode, K/A",
+      "mpn": "BAV21W-7-F",
+      "pins": {
+        "1": "HOLD_RAW",
+        "2": "HOLD_CHARGE"
+      }
+    },
+    "C14": {
+      "value": "47 uF 50 V, at least 33 uF effective",
+      "mpn": null,
+      "pins": {
+        "1": "HOLD_RAW",
+        "2": "LED_RTN"
+      }
+    },
+    "C15": {
+      "value": "100 nF LDO input bypass",
+      "mpn": null,
+      "pins": {
+        "1": "HOLD_RAW",
+        "2": "LED_RTN"
+      }
+    },
+    "C17": {
+      "value": "10 uF LDO output, at least 2.2 uF effective",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "R25": {
+      "value": "150 kohm 1%",
+      "mpn": null,
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "CONTACT_DIV"
+      }
+    },
+    "R26": {
+      "value": "150 kohm 1%",
+      "mpn": null,
+      "pins": {
+        "1": "CONTACT_DIV",
+        "2": "CONTACT_SENSE"
+      }
+    },
+    "R27": {
+      "value": "10 kohm 1%",
+      "mpn": null,
+      "pins": {
+        "1": "CONTACT_SENSE",
+        "2": "LED_RTN"
+      }
+    },
+    "R28": {
+      "value": "255 kohm 1%",
+      "mpn": null,
+      "pins": {
+        "1": "HOLD_RAW",
+        "2": "HOLD_DIV"
+      }
+    },
+    "R29": {
+      "value": "255 kohm 1%",
+      "mpn": null,
+      "pins": {
+        "1": "HOLD_DIV",
+        "2": "HOLD_SENSE"
+      }
+    },
+    "R30": {
+      "value": "10 kohm 1%",
+      "mpn": null,
+      "pins": {
+        "1": "HOLD_SENSE",
+        "2": "LED_RTN"
+      }
+    },
+    "R31": {
+      "value": "100 kohm monitor pull-up",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "CONTACT_OK"
+      }
+    },
+    "R32": {
+      "value": "100 kohm monitor pull-up",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "HOLD_READY_N"
+      }
+    }
+  }
+}
