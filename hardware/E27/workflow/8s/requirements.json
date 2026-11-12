@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo-E27-8S",
-  "revision": "8S-spec-2",
+  "revision": "8S-spec-2-process-reviewed",
   "subsystems": [
     {
       "id": "driver",
@@ -153,7 +153,9 @@
           "object": "Fabrication and PCBA process"
         }
       ],
-      "evidence_ids": []
+      "evidence_ids": [
+        "EV-JLC-OWNER-REVIEW"
+      ]
     },
     {
       "id": "REQ-MAINS",
@@ -253,7 +255,11 @@
       "owner": "Velluneo project owner",
       "question": "Confirm the proposed fabrication and assembly service and capability constraints for the driver.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "Owner accepted the proposed FR-4 2-layer 1.6 mm, 1 oz lead-free HASL process and Standard PCBA for design planning. Supplier order details remain due at later stages.",
+      "evidence_ids": [
+        "EV-JLC-OWNER-REVIEW"
+      ]
     },
     {
       "id": "OPEN-CC",
@@ -337,5 +343,21 @@
       "status": "open"
     }
   ],
-  "evidence": []
+  "evidence": [
+    {
+      "id": "EV-JLC-OWNER-REVIEW",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Velluneo project owner",
+      "artifact": "process-decision.md",
+      "sha256": "fcb0c6a94b8c035e106860cdeda9018cd2ff57d95217e3a160254e5e37f998c6",
+      "intent_digest": "3cdd9d3acd8b98e729ecd689bb8b76b2e1260cf768094b1bc6902acbba21121f",
+      "inputs": [
+        {
+          "path": "profile-proposal.md",
+          "sha256": "5c5b2e5da676edcc049ed10e85fd2a4dd523ed240b46cdf3bbaef212bb846d45"
+        }
+      ]
+    }
+  ]
 }

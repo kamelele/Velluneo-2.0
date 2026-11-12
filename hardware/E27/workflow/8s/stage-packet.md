@@ -21,7 +21,7 @@ The [requirements check](requirements-check.json) ran with `requirements workflo
 
 The [specification](specification.md) includes the calculation and bench plan. The candidate changes only workflow documents and contracts. Rev K/H remain the historical 2×8 reference and their CAD and manufacturing reports apply to that design. Before schematic work, review the cold electrical envelope, actual contact assignments and the separate shutdown and disconnect paths. Bench data is required to qualify the 8S optical and thermal performance.
 
-Attachment SHA-256 values for revision 2 after LF line-ending normalization and rerunning the requirements check. The reviewed wording and intent digest are unchanged.
+Attachment SHA-256 values for the frozen reviewed revision 2 at commit 3013cb6. Use the files in that revision to reproduce these hashes.
 
 - `specification.md` — `aaa6cfadcc5bf7dd76286891a27d5f438ac71f174256cf9948cbcaf177b07662`
 - `requirements.json` — `82ccaee2a16e659424f5c15c18f97675657f77408b7d674c65a156016f3a519c`
@@ -31,3 +31,5 @@ Attachment SHA-256 values for revision 2 after LF line-ending normalization and 
 - `task-contract.md` — `328102ca59ce372a409733e5ad85f3f3d37790828e20c7a753f144de2749ddb4`
 
 ## Human decision
+
+Accepted for design planning by the project owner on 2026-11-12. [Owner decision](process-decision.md) · [Passing specification requirements check](requirements-approved-check.json)
