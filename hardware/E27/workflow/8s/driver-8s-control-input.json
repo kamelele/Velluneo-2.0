@@ -1,0 +1,215 @@
+{
+  "revision": "8S-D2",
+  "base": "5a20a9c7f85fb8baec4ab6956e26f457207b724b",
+  "status": "draft",
+  "basis_files": [
+    {
+      "path": "driver-8s-capture-input.json",
+      "sha256": "f7c1826cc5b65e270bd6acaf8c3e90a5187dd5c231751bce89932c5709a06825"
+    },
+    {
+      "path": "short-protection.md",
+      "sha256": "0b48a313efa070bef9e8c9cbfb9ef4f3096349a110a1b18ae566c50bc64d86b7"
+    },
+    {
+      "path": "driver-pin-review.md",
+      "sha256": "13545be82646fd58a9b99a3688dcce8bc78c439740c51d60054f039a6a534295"
+    }
+  ],
+  "added_or_replaced_parts": {
+    "U103": {
+      "value": "74LVC132APW",
+      "mpn": "74LVC132APW,118",
+      "pins": {
+        "1": "CONTACT_OK",
+        "2": "CONTACT_OK",
+        "3": "FAULT_RAW",
+        "4": "FAULT_FILTERED",
+        "5": "BLANK_DONE",
+        "6": "FAULT_SET_N",
+        "7": "LED_RTN",
+        "8": "HOLD_READY_H",
+        "9": "HOLD_READY_N",
+        "10": "HOLD_READY_N",
+        "11": "READY_SET_N",
+        "12": "HOLD_READY_H",
+        "13": "POR_N",
+        "14": "V3V3_HOLD"
+      }
+    },
+    "U104": {
+      "value": "TPS3840PL30DBVR",
+      "mpn": "TPS3840PL30DBVR",
+      "pins": {
+        "1": "POR_N",
+        "2": "V3V3_HOLD",
+        "3": "LED_RTN",
+        "4": null,
+        "5": "POR_CT"
+      }
+    },
+    "U105": {
+      "value": "TPS3840DL29DBVR",
+      "mpn": "TPS3840DL29DBVR",
+      "pins": {
+        "1": "BLANK_DONE",
+        "2": "V3V3_HOLD",
+        "3": "LED_RTN",
+        "4": "PERMIT_RETURN",
+        "5": "BLANK_CT"
+      }
+    },
+    "U106": {
+      "value": "SN74LVC74APWR",
+      "mpn": "SN74LVC74APWR",
+      "pins": {
+        "1": "POR_N",
+        "2": "LED_RTN",
+        "3": "LED_RTN",
+        "4": "READY_SET_N",
+        "5": "READY_LATCH",
+        "6": null,
+        "7": "LED_RTN",
+        "8": "FAULT_CLEAR",
+        "9": null,
+        "10": "FAULT_SET_N",
+        "11": "LED_RTN",
+        "12": "LED_RTN",
+        "13": "POR_N",
+        "14": "V3V3_HOLD"
+      }
+    },
+    "U107": {
+      "value": "SN74LVC1G11DBVR",
+      "mpn": "SN74LVC1G11DBVR",
+      "pins": {
+        "1": "POR_N",
+        "2": "LED_RTN",
+        "3": "READY_LATCH",
+        "4": "PERMIT_DRIVE",
+        "5": "V3V3_HOLD",
+        "6": "FAULT_CLEAR"
+      }
+    },
+    "R33": {
+      "value": "1k",
+      "mpn": null,
+      "pins": {
+        "1": "PERMIT_RETURN",
+        "2": "SHDN"
+      }
+    },
+    "R34": {
+      "value": "10k",
+      "mpn": null,
+      "pins": {
+        "1": "PERMIT_RETURN",
+        "2": "LED_RTN"
+      }
+    },
+    "R35": {
+      "value": "100R",
+      "mpn": null,
+      "pins": {
+        "1": "PERMIT_DRIVE",
+        "2": "PERMIT_FEED"
+      }
+    },
+    "R37": {
+      "value": "100k",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "BLANK_DONE"
+      }
+    },
+    "R38": {
+      "value": "10k / 1%",
+      "mpn": null,
+      "pins": {
+        "1": "FAULT_RAW",
+        "2": "FAULT_FILTERED"
+      }
+    },
+    "C14": {
+      "value": "68u / 50V candidate",
+      "mpn": null,
+      "pins": {
+        "1": "HOLD_RAW",
+        "2": "LED_RTN"
+      }
+    },
+    "C18": {
+      "value": "100n / 10%",
+      "mpn": null,
+      "pins": {
+        "1": "FAULT_FILTERED",
+        "2": "LED_RTN"
+      }
+    },
+    "C19": {
+      "value": "10n",
+      "mpn": null,
+      "pins": {
+        "1": "POR_CT",
+        "2": "LED_RTN"
+      }
+    },
+    "C20": {
+      "value": "39n",
+      "mpn": null,
+      "pins": {
+        "1": "BLANK_CT",
+        "2": "LED_RTN"
+      }
+    },
+    "C21": {
+      "value": "100n",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "C22": {
+      "value": "100n",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "C23": {
+      "value": "100n",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "C24": {
+      "value": "100n",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "C25": {
+      "value": "100n",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "C26": {
+      "value": "100n",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    }
+  }
+}
