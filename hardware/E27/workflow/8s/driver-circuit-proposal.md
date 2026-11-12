@@ -4,6 +4,8 @@
 
 Task E27-8S-CIRCUIT is owned by Codex. It covers the secondary circuit proposal and the illustrated changed connections for REQ-8S, REQ-CC and OPEN-CC. Base Velluneo commit `3df03011a6ec937e147caa2dde65b2f13af18e29`, requirements intent digest `3cdd9d3acd8b98e729ecd689bb8b76b2e1260cf768094b1bc6902acbba21121f`, toolkit revision as pinned in the [workflow index](../project-index.md). The owned files are this proposal, its preview and the index entry. This is a design input for independent pin-intent review. Role reviews are due on the frozen physical pin-intent packet. The drawing shows circuit architecture and candidate pin groups. KiCad sources, layout and manufacturing data are outside this task. The [schematic stage check](schematic-prep-check.json) remains open.
 
+The [follow-up pin and protection review](driver-pin-review.md) records the corrected D8 polarity and the preferred SHDN reference. The preview above reflects the earlier candidate for those details.
+
 ## Power path and pin-intent changes
 
 - Replace the Rev K to Rev H board link with a local RAW and return connection. Start from the Rev K isolated flyback (LYT6073C-TL, T1, D7). Connect RAW to the reservoir C6 positive terminal and eFuse inputs. The C6 negative terminal is at SEC_GND. Keep the nominal 470 µF, 50 V Rev K reservoir for initial analysis. Evaluate a smaller capacitor against ripple, transient energy and thermal results.
