@@ -23,3 +23,4 @@
 - [8S driver pin intent and protection review](8s/driver-pin-review.md) records the checked active-device pins, JLCPCB resistor candidates, and the remaining voltage and recovery limits.
 - [8S short protection and restart candidate](8s/short-protection.md) records the monitor, startup qualification, retained supply and bench acceptance conditions.
 - [8S schematic capture input](8s/driver-8s-capture-input.md) records the verified Rev K/Rev H CAD delta and the provisional one-board pin map.
+- [Native 8S KiCad draft 8S-D1](../outputs/Zasilacz_8S_Draft/README.md) is the owner-authorized preview with open protection logic marked on the sheet. It is separate from the 16-LED baseline.

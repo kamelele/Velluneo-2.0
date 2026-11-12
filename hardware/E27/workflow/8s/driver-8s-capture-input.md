@@ -9,3 +9,5 @@ The [8S capture input](driver-8s-capture-input.json) defines candidate component
 - Map the short and hold-ready monitor and its auxiliary supply. The exported input explicitly marks the permit-driver, startup timer, reset and latch network as open. The new circuit also needs the final connector and transformer drawings and closure of the cold-string electrical envelope. The values and device identifiers in the draft are candidates.
 
 The file is a pre-CAD design input. Its format is separate from the toolkit whole-board connectivity contract, which requires every physical pin, explicit unused-pin reasons, independent review and owner acceptance of its exact digest. No schematic, PCB or fabrication package was generated from it. [Schematic requirements check](schematic-prep-check.json)
+
+The owner later authorized the separate [8S-D1 KiCad draft](../../outputs/Zasilacz_8S_Draft/README.md), captured from this provisional input.
