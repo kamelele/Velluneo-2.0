@@ -1,6 +1,6 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 9, 2026-11-14.
+Packet: VEL-SPEC-RESET-01, revision 10, 2026-11-14.
 Status: interview-derived draft; not an approved specification-stage packet.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
 Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
@@ -81,16 +81,16 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 | U05 | Architecture A selected by owner: isolated CC driver in base, simple LED panel. Select/verify its LED and driver implementation using power, tolerance, thermal and cost calculations; no fixed LED count or current. | Coordinator + independent reviewer | Schematic |
 | U06 | Implement the product-level safety/operating criteria from U16: determine numerical circuit limits, discharge/cooling implementation, short duration/recovery, hot/cold startup and disturbance response. | Electrical reviewer + laboratory lead | Schematic |
 | U07 | Develop thermal/life calculations and detailed optical measurement procedures using the specification decisions from U14/U15; define base lifetime/end-of-life basis. | Coordinator + laboratory lead | Schematic |
-| U08 | Select overtemperature behavior, thresholds and sensor-fault response; define absence/reversal/partial-contact abuse cases even though live replacement is forbidden. | Electrical/mechanical reviewers | Schematic |
+| U08 | Select overtemperature behavior, thresholds and protection-fault response (including sensor faults only if a sensor is selected); define absence/reversal/partial-contact abuse cases even though live replacement is forbidden. | Electrical/mechanical reviewers | Schematic |
 | U09 | Freeze panel/base pin map and independently reviewed intended connectivity with exact datasheet/pin/footprint basis. | Coordinator + independent reviewer + owner decision | Schematic |
 | U10 | Freeze preliminary enclosure envelope, heat path/contact, insulation materials, dimensions, heights, keying and retention. | Mechanical owner (to assign) + coordinator | Placement |
 | U11 | Confirm actual stackup, copper, materials and service limits as needed for insulation/layout/assembly. | Coordinator + supplier | Placement |
 | U12 | Confirm available calibrated instruments, personnel, samples, test limits and stop conditions. Release evidence must cover actual operating/fault conditions. | Laboratory lead + owner | Release / each affected physical test |
 | U13 | Establish BOM availability, exact costs, release outputs, matched revisions and test/programming/assembly instructions. | Coordinator + supplier + owner | Release |
 | U14 | Agree nominal CCT tolerances, stabilized optical acceptance conditions and sample plan; approve a distribution/appearance criterion and assessment method, including side illumination and hidden LED points. | Owner + coordinator + laboratory lead | Specification |
-| U15 | Ambient 10–40°C and all operating orientations accepted on 2026-11-14. Explicit open/ventilated-fixture assumptions remain open; identify thermal worst-case orientation by analysis and test. | Owner + coordinator + technical reviewer | Specification |
+| U15 | Ambient 10–40°C and all orientations are accepted. Define open/ventilated-fixture assumptions and the thermal worst-case analysis/test plan at specification. Actual worst-case measurements belong to R-ENV/U12 before the affected tests and release, not before design. | Owner + coordinator + technical reviewer | Specification |
 | U16 | Define product-level safe-access behavior, normal/fault operating boundaries, applicable fault cases and recovery expectations; competent reviewer establishes the acceptance basis for residual energy, accessible surfaces and cooling. Numerical circuit implementation follows at U06. | Electrical reviewer + owner + laboratory lead | Specification |
-| U17 | Final handover deadline 30 September 2027 accepted. Initial laboratory/iteration booking plan and intermediate milestones remain open; completion of the full prototype is required by the deadline. | Owner + laboratory lead | Specification / schedule baseline |
+| U17 | Final handover deadline 30 September 2027 accepted; the proposed staged planning baseline is recorded. Confirm actual laboratory/iteration bookings before affected work/tests, without blocking ordinary design on bookings. | Owner + laboratory lead | Release / before affected tests |
 
 Unknowns remain open; none are resolved by a convenient default. Assign named people before their gate. More unknowns may emerge from architecture work.
 
@@ -131,9 +131,9 @@ Task VEL-SPEC-RESET-01: prepare this interview-derived first review packet. One 
 
 Toolkit source ZIP supplied by the owner: pcb-agent-toolkit-main.zip. The extracted tree passed package_toolkit.py verify-tree, exit 0, manifest SHA-256 05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822, matching the historical workflow index. This verifies source-tree integrity only; it is not a trusted installable archive digest or an installed launcher. Source provenance is the supplied ZIP, not an asserted new Git revision. No toolkit or KiCad migration is applied.
 
-Requirements CLI: not run; no new machine-readable requirements/interface/evidence contract or installed launcher is claimed. Doctor/ERC/DRC/connectivity/spatial: not run for this draft. No new CAD, simulations or measurements. Historical reports and approvals remain bound to their original revisions and cannot authorize this redesign.
+Historical pre-contract status was: no requirements CLI or machine-readable contract. Current status: draft requirements.json and hardware.json exist, and preflight-output.json records an actual standalone-candidate requirements run returning incompleteness (exit 1); see specification-readiness.md. Installed launcher/doctor and CAD/interface checks remain pending. Doctor/ERC/DRC/connectivity/spatial: not run for this draft. No new CAD, simulations or measurements. Historical reports and approvals remain bound to their original revisions and cannot authorize this redesign.
 
-Before declaring the specification stage ready: resolve U01–U04 and U14–U17, produce the versioned requirements.json and interface/unknown records, install/verify the selected tooling as applicable, retain a fresh requirements --stage specification matrix, perform the four independent review roles on the final frozen packet, close blocking findings and obtain actual owner approval. For a documentation-only preliminary review, reviewer findings may identify these known gaps; they must not be recorded as passes for the formal gate.
+Before declaring the specification stage ready: resolve U01–U04 and U14–U16, produce the versioned requirements.json and interface/unknown records, install/verify the selected tooling as applicable, retain a fresh requirements --stage specification matrix, perform the four independent review roles on the final frozen packet, close blocking findings and obtain actual owner approval. For a documentation-only preliminary review, reviewer findings may identify these known gaps; they must not be recorded as passes for the formal gate.
 
 Integration task before merge or treating this draft as the active brief: update hardware/E27/workflow/project-index.md to point to the reset, mark D5 as historical, and preserve all original records. The existing index is intentionally untouched on this documentation draft branch; it still describes the old active task.
 
@@ -168,3 +168,8 @@ On 2026-11-14 the owner clarified that one colour variant manufacturable and pop
 ## 15. Revision 9 design responsibility clarification
 
 Owner explicitly stated that no external person is assigned to review before fabrication and asked the assistant to produce a correct design. The assistant accepted responsibility for preparing calculations, schematics, part/library checks, PCB and documented verification within the available tools, with independent agent inspections and genuine owner stage decisions. Do not block design on appointing an outside electronics reviewer. Do not interpret that clarification as completed checks, certification, waiver of unresolved technical requirements, permission to skip stage gates, manufacturing authorization or authorization to energize hardware. Physical operation, thermal behavior, isolation and protection still need actual laboratory evidence, with personnel/setup/limits defined before the affected test. Existing role-based engineering unknowns identify work responsibilities rather than a mandatory external appointment.
+
+
+## 16. Revision 10 traceability corrections
+
+Current source-validator status replaces the older pre-contract statement. U08 does not mandate a separate temperature sensor. U15 requires declared environmental assumptions and an analysis/test plan at specification, not measured thermal results before design. U17 bookings are due before affected execution/tests and release, not a prerequisite for ordinary design. U12 and U17 use release as their nearest available machine gate; separate test readiness/authorization checks are required before every physical test because a specification/requirements pass alone cannot enforce test readiness. No existing physical-check or release obligation is waived. Formal specification still has substantive unresolved inputs and no owner stage approval.
