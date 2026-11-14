@@ -1,0 +1,436 @@
+{
+  "model": "ideal single-cycle CrM / no control loop, parasitics or fault simulation",
+  "assumptions": {
+    "bulk_V": [
+      200,
+      260,
+      357.7960312803931
+    ],
+    "output_V": [
+      18,
+      21,
+      24,
+      27
+    ],
+    "total_secondary_average_A": [
+      0.228,
+      0.25,
+      0.2862272727272727
+    ],
+    "Lp_nominal_H": [
+      0.004,
+      0.0047,
+      0.0056
+    ],
+    "Lp_tolerance_factors": [
+      0.9,
+      1.1
+    ],
+    "ratio_Np_Ns": 4,
+    "secondary_diode_assumed_V": 0.8,
+    "dead_time_s": [
+      5e-07,
+      1.5e-06
+    ],
+    "Np": 200,
+    "Ae_m2": 3.1e-05,
+    "MOSFET_conduction_proxy_R_ohm": 4.5,
+    "switching_overlap_assumed_s": 5e-08,
+    "drain_overshoot_assumed_V": 100
+  },
+  "variants": [
+    {
+      "nominal_Lp_H": 0.004,
+      "corners": 144,
+      "bounds": {
+        "primary_peak_A": {
+          "min": 0.14469278019984552,
+          "max": 0.24928465744270725
+        },
+        "secondary_peak_A": {
+          "min": 0.5787711207993821,
+          "max": 0.997138629770829
+        },
+        "primary_rms_A": {
+          "min": 0.033994322472027584,
+          "max": 0.08131394878669716
+        },
+        "secondary_rms_A": {
+          "min": 0.29660278212030666,
+          "max": 0.4362019948986281
+        },
+        "frequency_Hz": {
+          "min": 53377.72558009588,
+          "max": 136855.76608311164
+        },
+        "ton_s": {
+          "min": 1.470091872525433e-06,
+          "max": 5.3865486482540255e-06
+        },
+        "flux_swing_T": {
+          "min": 0.0848375867108325,
+          "max": 0.17375963381464596
+        },
+        "ideal_magnetic_transfer_W": {
+          "min": 4.2863999999999995,
+          "max": 7.957118181818183
+        },
+        "mosfet_conduction_25C_10V_proxy_W": {
+          "min": 0.005200262821494898,
+          "max": 0.02975381220278524
+        },
+        "diode_fixed_drop_proxy_W": {
+          "min": 0.1824,
+          "max": 0.22898181818181818
+        },
+        "drain_flat_V": {
+          "min": 275.2,
+          "max": 468.9960312803931
+        },
+        "drain_assumed_overshoot_V": {
+          "min": 375.2,
+          "max": 568.996031280393
+        },
+        "diode_reverse_before_ringing_V": {
+          "min": 68.0,
+          "max": 116.44900782009827
+        },
+        "hard_switching_overlap_proxy_W": {
+          "min": 0.07717615649389364,
+          "max": 0.2608323630172956
+        }
+      },
+      "max_flux_case": {
+        "vin_V": 200,
+        "vo_V": 27,
+        "total_secondary_A": 0.2862272727272727,
+        "lp_H": 0.0044,
+        "dead_time_s": 1.5e-06,
+        "primary_peak_A": 0.24484312037518294,
+        "secondary_peak_A": 0.9793724815007318,
+        "primary_rms_A": 0.0805863024926376,
+        "secondary_rms_A": 0.4322985961609529,
+        "frequency_Hz": 60333.332787162195,
+        "ton_s": 5.3865486482540255e-06,
+        "toff_s": 9.688037137147528e-06,
+        "flux_swing_T": 0.17375963381464596,
+        "ideal_magnetic_transfer_W": 7.957118181818183,
+        "mosfet_conduction_25C_10V_proxy_W": 0.029223684672457,
+        "diode_fixed_drop_proxy_W": 0.22898181818181818,
+        "drain_flat_V": 311.2,
+        "drain_assumed_overshoot_V": 411.2,
+        "diode_reverse_before_ringing_V": 77.0,
+        "hard_switching_overlap_proxy_W": 0.1149277273762515
+      },
+      "max_frequency_case": {
+        "vin_V": 357.7960312803931,
+        "vo_V": 27,
+        "total_secondary_A": 0.228,
+        "lp_H": 0.0036000000000000003,
+        "dead_time_s": 5e-07,
+        "primary_peak_A": 0.16040652070826916,
+        "secondary_peak_A": 0.6416260828330766,
+        "primary_rms_A": 0.04352486591334136,
+        "secondary_rms_A": 0.3122933950480344,
+        "frequency_Hz": 136855.76608311164,
+        "ton_s": 1.6139460029315689e-06,
+        "toff_s": 5.193016857461951e-06,
+        "flux_swing_T": 0.09313927008867241,
+        "ideal_magnetic_transfer_W": 6.338400000000001,
+        "mosfet_conduction_25C_10V_proxy_W": 0.00852486278748455,
+        "diode_fixed_drop_proxy_W": 0.1824,
+        "drain_flat_V": 468.9960312803931,
+        "drain_assumed_overshoot_V": 568.996031280393,
+        "diode_reverse_before_ringing_V": 116.44900782009827,
+        "hard_switching_overlap_proxy_W": 0.25739155597549757
+      }
+    },
+    {
+      "nominal_Lp_H": 0.0047,
+      "corners": 144,
+      "bounds": {
+        "primary_peak_A": {
+          "min": 0.14372847260907287,
+          "max": 0.24565725670801802
+        },
+        "secondary_peak_A": {
+          "min": 0.5749138904362915,
+          "max": 0.9826290268320721
+        },
+        "primary_rms_A": {
+          "min": 0.03388085522342371,
+          "max": 0.08072017145354576
+        },
+        "secondary_rms_A": {
+          "min": 0.29561277263730723,
+          "max": 0.43301672519876805
+        },
+        "frequency_Hz": {
+          "min": 46458.65894781754,
+          "max": 118747.98188637772
+        },
+        "ton_s": {
+          "min": 1.7136642791316172e-06,
+          "max": 6.250057611561753e-06
+        },
+        "flux_swing_T": {
+          "min": 0.09889391580972069,
+          "max": 0.20161476166328232
+        },
+        "ideal_magnetic_transfer_W": {
+          "min": 4.2863999999999995,
+          "max": 7.957118181818185
+        },
+        "mosfet_conduction_25C_10V_proxy_W": {
+          "min": 0.00516560557801769,
+          "max": 0.029320857357704212
+        },
+        "diode_fixed_drop_proxy_W": {
+          "min": 0.1824,
+          "max": 0.22898181818181818
+        },
+        "drain_flat_V": {
+          "min": 275.2,
+          "max": 468.9960312803931
+        },
+        "drain_assumed_overshoot_V": {
+          "min": 375.2,
+          "max": 568.996031280393
+        },
+        "diode_reverse_before_ringing_V": {
+          "min": 68.0,
+          "max": 116.44900782009827
+        },
+        "hard_switching_overlap_proxy_W": {
+          "min": 0.06656822595848753,
+          "max": 0.2237649652541241
+        }
+      },
+      "max_flux_case": {
+        "vin_V": 200,
+        "vo_V": 27,
+        "total_secondary_A": 0.2862272727272727,
+        "lp_H": 0.005170000000000001,
+        "dead_time_s": 1.5e-06,
+        "primary_peak_A": 0.2417817257857544,
+        "secondary_peak_A": 0.9671269031430176,
+        "primary_rms_A": 0.0800809125464407,
+        "secondary_rms_A": 0.4295874733336617,
+        "frequency_Hz": 52656.0545243141,
+        "ton_s": 6.250057611561753e-06,
+        "toff_s": 1.1241110812161426e-05,
+        "flux_swing_T": 0.20161476166328232,
+        "ideal_magnetic_transfer_W": 7.957118181818185,
+        "mosfet_conduction_25C_10V_proxy_W": 0.028858286494218077,
+        "diode_fixed_drop_proxy_W": 0.22898181818181818,
+        "drain_flat_V": 311.2,
+        "drain_assumed_overshoot_V": 411.2,
+        "diode_reverse_before_ringing_V": 77.0,
+        "hard_switching_overlap_proxy_W": 0.0990492941057489
+      },
+      "max_frequency_case": {
+        "vin_V": 357.7960312803931,
+        "vo_V": 27,
+        "total_secondary_A": 0.228,
+        "lp_H": 0.00423,
+        "dead_time_s": 5e-07,
+        "primary_peak_A": 0.15886254540205433,
+        "secondary_peak_A": 0.6354501816082173,
+        "primary_rms_A": 0.04331488750792858,
+        "secondary_rms_A": 0.31078678801462756,
+        "frequency_Hz": 118747.98188637772,
+        "ton_s": 1.8781330934441647e-06,
+        "toff_s": 6.043062653333541e-06,
+        "flux_swing_T": 0.10838525275011125,
+        "ideal_magnetic_transfer_W": 6.338400000000002,
+        "mosfet_conduction_25C_10V_proxy_W": 0.008442807659210282,
+        "diode_fixed_drop_proxy_W": 0.1824,
+        "drain_flat_V": 468.9960312803931,
+        "drain_assumed_overshoot_V": 568.996031280393,
+        "diode_reverse_before_ringing_V": 116.44900782009827,
+        "hard_switching_overlap_proxy_W": 0.22118564142501304
+      }
+    },
+    {
+      "nominal_Lp_H": 0.0056,
+      "corners": 144,
+      "bounds": {
+        "primary_peak_A": {
+          "min": 0.14283179338630086,
+          "max": 0.24223745075520295
+        },
+        "secondary_peak_A": {
+          "min": 0.5713271735452035,
+          "max": 0.9689498030208118
+        },
+        "primary_rms_A": {
+          "min": 0.033775003577914874,
+          "max": 0.08015634771539748
+        },
+        "secondary_rms_A": {
+          "min": 0.29468920981072744,
+          "max": 0.4299921390973523
+        },
+        "frequency_Hz": {
+          "min": 39830.019570184406,
+          "max": 101499.42392276651
+        },
+        "ton_s": {
+          "min": 2.026606539629446e-06,
+          "max": 7.358290582331525e-06
+        },
+        "flux_swing_T": {
+          "min": 0.11695351239456556,
+          "max": 0.23736421233327495
+        },
+        "ideal_magnetic_transfer_W": {
+          "min": 4.2863999999999995,
+          "max": 7.957118181818185
+        },
+        "mosfet_conduction_25C_10V_proxy_W": {
+          "min": 0.005133378900096731,
+          "max": 0.02891268035582268
+        },
+        "diode_fixed_drop_proxy_W": {
+          "min": 0.1824,
+          "max": 0.22898181818181818
+        },
+        "drain_flat_V": {
+          "min": 275.2,
+          "max": 468.9960312803931
+        },
+        "drain_assumed_overshoot_V": {
+          "min": 375.2,
+          "max": 568.996031280393
+        },
+        "diode_reverse_before_ringing_V": {
+          "min": 68.0,
+          "max": 116.44900782009827
+        },
+        "hard_switching_overlap_proxy_W": {
+          "min": 0.05658822641087814,
+          "max": 0.18921684646871187
+        }
+      },
+      "max_flux_case": {
+        "vin_V": 200,
+        "vo_V": 27,
+        "total_secondary_A": 0.2862272727272727,
+        "lp_H": 0.0061600000000000005,
+        "dead_time_s": 1.5e-06,
+        "primary_peak_A": 0.23890553838738715,
+        "secondary_peak_A": 0.9556221535495486,
+        "primary_rms_A": 0.07960317420889153,
+        "secondary_rms_A": 0.4270246852882164,
+        "frequency_Hz": 45263.97145655378,
+        "ton_s": 7.358290582331525e-06,
+        "toff_s": 1.3234335579732958e-05,
+        "flux_swing_T": 0.23736421233327495,
+        "ideal_magnetic_transfer_W": 7.957118181818183,
+        "mosfet_conduction_25C_10V_proxy_W": 0.0285149940485901,
+        "diode_fixed_drop_proxy_W": 0.22898181818181818,
+        "drain_flat_V": 311.2,
+        "drain_assumed_overshoot_V": 411.2,
+        "diode_reverse_before_ringing_V": 77.0,
+        "hard_switching_overlap_proxy_W": 0.084131468799551
+      },
+      "max_frequency_case": {
+        "vin_V": 357.7960312803931,
+        "vo_V": 27,
+        "total_secondary_A": 0.228,
+        "lp_H": 0.00504,
+        "dead_time_s": 5e-07,
+        "primary_peak_A": 0.1574192222568615,
+        "secondary_peak_A": 0.629676889027446,
+        "primary_rms_A": 0.04311767290819354,
+        "secondary_rms_A": 0.30937176201484806,
+        "frequency_Hz": 101499.42392276651,
+        "ton_s": 2.2174446075753864e-06,
+        "toff_s": 7.134828059123938e-06,
+        "flux_swing_T": 0.12796659357654547,
+        "ideal_magnetic_transfer_W": 6.3384,
+        "mosfet_conduction_25C_10V_proxy_W": 0.008366101726580852,
+        "diode_fixed_drop_proxy_W": 0.1824,
+        "drain_flat_V": 468.9960312803931,
+        "drain_assumed_overshoot_V": 568.996031280393,
+        "diode_reverse_before_ringing_V": 116.44900782009827,
+        "hard_switching_overlap_proxy_W": 0.18734000007748494
+      }
+    }
+  ],
+  "published_AL100_core_candidate": {
+    "Np": 200,
+    "Ns": 50,
+    "Na_exploratory": 50,
+    "nominal_Lp_H": 0.004,
+    "effective_gap_approx_m": 0.00038955748904513437,
+    "published_mechanical_gap_m": 0.00049,
+    "note": "Calculated effective gap is NOT a machining instruction; insulation/fill/core loss unverified.",
+    "hard_limit_flux_sensitivity": [
+      {
+        "assumed_primary_limit_A": 0.25,
+        "flux_T_at_Lp_max": 0.17741935483870966
+      },
+      {
+        "assumed_primary_limit_A": 0.3,
+        "flux_T_at_Lp_max": 0.2129032258064516
+      },
+      {
+        "assumed_primary_limit_A": 0.35,
+        "flux_T_at_Lp_max": 0.24838709677419352
+      }
+    ]
+  },
+  "bulk_hold_up_screen": {
+    "cap_nominal_F": 1e-05,
+    "cap_min_F": 8.000000000000001e-06,
+    "power_W": 10,
+    "discharge_s": 0.01,
+    "low_line_peak_V": 292.7422074112307,
+    "calculated_min_V": 246.36964098687162
+  },
+  "auxiliary_supply": {
+    "Na_Ns_assumption": 1,
+    "normal_aux_range_V": [
+      18.3,
+      27.3
+    ],
+    "startup_UVLO_max_V_from_TI": 29,
+    "running_UVLO_max_V_from_TI": 15.7,
+    "startup_UVLO_min_V_from_TI": 23,
+    "conservative_threshold_only_energy_screen_J_8uF": 0.00113004,
+    "threshold_extremes_not_correlated": true,
+    "hold_up_s_if_10mA_constant_draw_example": 0.005840000000000001,
+    "not_a_selected_cap_or_draw": true
+  },
+  "OVP_tolerance_screen": {
+    "30": {
+      "cap_V_assumption": 30,
+      "load_dump_allowance_V_assumption": 1,
+      "normal_headroom_factor_assumption": 1.1,
+      "max_k_avoid_normal_trip": 0.13407455853499017,
+      "min_k_limit_trip": 0.15100671140939598,
+      "ideal_interval_exists": false,
+      "divider_tolerance_included": false
+    },
+    "33": {
+      "cap_V_assumption": 33,
+      "load_dump_allowance_V_assumption": 1,
+      "normal_headroom_factor_assumption": 1.1,
+      "max_k_avoid_normal_trip": 0.13407455853499017,
+      "min_k_limit_trip": 0.13719512195121952,
+      "ideal_interval_exists": false,
+      "divider_tolerance_included": false
+    },
+    "36": {
+      "cap_V_assumption": 36,
+      "load_dump_allowance_V_assumption": 1,
+      "normal_headroom_factor_assumption": 1.1,
+      "max_k_avoid_normal_trip": 0.13407455853499017,
+      "min_k_limit_trip": 0.12569832402234637,
+      "ideal_interval_exists": true,
+      "divider_tolerance_included": false
+    }
+  },
+  "verification": "Energy and secondary-current identities checked at every enumerated corner. No SPICE, CAD or physical tests."
+}
