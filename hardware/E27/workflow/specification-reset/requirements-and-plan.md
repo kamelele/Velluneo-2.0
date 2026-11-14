@@ -1,6 +1,6 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 4, 2026-11-14.
+Packet: VEL-SPEC-RESET-01, revision 5, 2026-11-14.
 Status: interview-derived draft; not an approved specification-stage packet.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
 Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
@@ -17,7 +17,7 @@ The old 8S/D5 architecture is historical input. Eight LEDs, two contacts, 70 × 
 
 ## 2. Requirements confirmed in the interview
 
-Requirement rows are revision 1 except R-LIGHT, R-CCT and R-ENV (revision 2, incorporating owner-accepted optical and ambient targets). Packet revision 4 confirms the prototype ambient scope. Product decisions belong to the owner; engineering acceptance plans belong to the coordinator and assigned technical reviewer. All physical verification is pending. 'Schematic', 'placement' and 'release' identify the gate by which implementation intent or evidence is needed, not permission to proceed now.
+Requirement rows are revision 1 except R-LIGHT/R-CCT/R-PANEL-LIFE (revision 2) and R-ENV (revision 3). Packet revision 5 records owner-accepted operating orientations and panel lifetime target. Product decisions belong to the owner; engineering acceptance plans belong to the coordinator and assigned technical reviewer. All physical verification is pending. 'Schematic', 'placement' and 'release' identify the gate by which implementation intent or evidence is needed, not permission to proceed now.
 
 | ID | Requirement | Acceptance approach and due gate |
 |---|---|---|
@@ -28,14 +28,14 @@ Requirement rows are revision 1 except R-LIGHT, R-CCT and R-ENV (revision 2, inc
 | R-COMPAT | One base accepts all three panels without settings, switches or user configuration. | Freeze a compatible electrical/mechanical interface before schematic/placement; demonstrate each variant on the same base. |
 | R-REPLACE | Tool-free intuitive replacement; prevent incorrect installation. | Freeze mechanical keying/retention and contact sequence before placement; assess wrong orientation, partial insertion and repeat replacement. |
 | R-OFFLINE | Replacement only after unscrewing from the socket and waiting for cooling/discharge. | Determine safe-access conditions and delay by analysis and measurement; instructions alone are not evidence of safety. Limits before schematic, geometry before placement, measured confirmation before release. |
-| R-ENV | Dry domestic interiors, ambient 10–40°C; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope. | Ambient range accepted; define ventilation assumptions and operating orientations at specification; test thermal worst cases before release. |
+| R-ENV | Dry domestic interiors, ambient 10–40°C; all operating orientations, including base up, base down and horizontal; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope. | Ambient range and all orientations accepted; define ventilation assumptions at specification; identify and test thermal worst-case orientation before release. |
 | R-DIFFUSER | Removable milky diffuser hides individual LEDs and provides broad illumination including the sides. | Agree distribution and appearance criteria at specification; check fit before placement and optical performance on the complete lamp. |
 | R-FAULT | An open/failed panel, missing panel and shorted panel must not damage the base. | Define representative faults and duration before schematic; validate protection and temperatures before release. After offline panel replacement, power cycling restores normal operation without reset or fuse replacement. |
 | R-EMPTY | The energized base can remain without a panel without damage or overheating. | Define duration and accessible-part limits before schematic; verify no-load behavior and recovery with the approved test fixture. This does not authorize live replacement. |
 | R-THERMAL | Protect against overheating using a justified simple implementation. | Select limiting or shutdown/recovery after comparison. Agree thresholds, hysteresis and protection-fault behavior (including sensor faults if a sensor is selected) before schematic; test before release. |
 | R-USE | Design for 8–12 hours/day, including long continuous sessions. | Establish continuous-duty thermal test conditions before schematic; a timetable is not a required forced shutdown. |
 | R-BASE-LIFE | Five-year base life is an acceptable design target; ten years is aspirational. | Assess parts at measured electrical/thermal stress. At 8–12 h/day: 14,600–21,900 h in five years; 29,200–43,800 h in ten. Calendar aging also matters. Agree failure/end-of-life definition before schematic. Do not claim years of demonstrated service from short tests. |
-| R-PANEL-LIFE | Panel life should be comparable to ordinary retail LED lamps. | This is not yet a measurable acceptance limit. Agree hours, lumen maintenance and failure criteria at specification, then establish a feasible validation approach. |
+| R-PANEL-LIFE | Panel design target: 15,000 operating hours while retaining at least 70% of initial luminous flux (L70 target), accepted by owner. | Evaluate exact LED lifetime data at measured operating conditions and document the assessment and uncertainty. A short prototype test does not demonstrate 15,000 h. Define sample/population criteria, catastrophic-failure treatment and maintenance measurement conditions at specification. |
 | R-FEATURES | Basic full-output on/off lighting; no Wi-Fi, app or added smart functions. | Confirm feature scope at specification; check normal behavior before release. Wall-dimmer compatibility is excluded from the primary design. |
 | R-SIZE | Compare a conventional-bulb-sized concept with a moderately larger concept that improves cooling and replacement. | Present actual envelopes and tradeoffs for owner selection before placement; no existing board size is binding. |
 | R-COST | Prefer rational cost and future manufacturability; no fixed prototype budget. | Compare BOM, sourcing, assembly and tooling costs during architecture and release reviews. No invented cost ceiling. |
@@ -75,7 +75,7 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 | ID | Question / closure evidence | Owner | First blocked gate |
 |---|---|---|---|
 | U01 | P-OPTICS and P-CRI accepted by owner on 2026-11-14; P-SUPPLY and its technical basis remain open. Optical measurement conditions are still tracked at U14. | Owner + technical reviewer | Specification |
-| U02 | Define panel service-life hours, lumen maintenance, failure criterion and minimum replacement cycles. | Owner + coordinator | Specification |
+| U02 | Panel target 15,000 h / ≥70% initial flux accepted on 2026-11-14. Define sample/population acceptance, catastrophic-failure treatment, maintenance measurement conditions and minimum replacement cycles; these remain open. | Owner + coordinator | Specification |
 | U03 | Name competent electrical reviewer and responsible laboratory person; establish a feasible proposed fabrication/assembly route, explicitly listing unconfirmed supplier constraints. Detailed order evidence remains due at U11/U13. | Owner + coordinator | Specification |
 | U04 | Select exact laboratory-demo scope versus external qualification; identify applicable product/safety/EMC/flicker requirements without assuming old limits. | Technical reviewer + owner | Specification |
 | U05 | Select driver architecture and LED candidates using power, tolerance, thermal and cost calculations; no fixed LED count or current. | Coordinator + independent reviewer | Schematic |
@@ -88,7 +88,7 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 | U12 | Confirm available calibrated instruments, personnel, samples, test limits and stop conditions. Release evidence must cover actual operating/fault conditions. | Laboratory lead + owner | Release / each affected physical test |
 | U13 | Establish BOM availability, exact costs, release outputs, matched revisions and test/programming/assembly instructions. | Coordinator + supplier + owner | Release |
 | U14 | Agree nominal CCT tolerances, stabilized optical acceptance conditions and sample plan; approve a distribution/appearance criterion and assessment method, including side illumination and hidden LED points. | Owner + coordinator + laboratory lead | Specification |
-| U15 | Ambient range 10–40°C accepted on 2026-11-14; operating orientations and explicit open/ventilated-fixture assumptions remain open for thermal feasibility. | Owner + coordinator + technical reviewer | Specification |
+| U15 | Ambient 10–40°C and all operating orientations accepted on 2026-11-14. Explicit open/ventilated-fixture assumptions remain open; identify thermal worst-case orientation by analysis and test. | Owner + coordinator + technical reviewer | Specification |
 | U16 | Define product-level safe-access behavior, normal/fault operating boundaries, applicable fault cases and recovery expectations; competent reviewer establishes the acceptance basis for residual energy, accessible surfaces and cooling. Numerical circuit implementation follows at U06. | Electrical reviewer + owner + laboratory lead | Specification |
 | U17 | Agree an exact final handover date within September 2027 and an initial laboratory/iteration booking plan. | Owner + laboratory lead | Specification / schedule baseline |
 
@@ -148,3 +148,7 @@ The four review reports in review-status.md cover the exact revision 2 hash only
 ## 10. Revision 4 owner decision
 
 On 2026-11-14, after the narrower-than-retail temperature comparison and a direct question about retaining 10–40°C for the first prototype, the owner confirmed: "Так, можем устаљити." This records acceptance of ambient 10–40°C for the prototype, not a measured thermal pass or full specification-stage approval. U15 remains partially open for orientation and ventilation conditions. No wider-temperature compatibility is claimed. Revision 2 review reports remain historical; affected formal-gate reviews and requirement evidence must be refreshed when the full specification is frozen. No CAD or physical test changes.
+
+## 11. Revision 5 owner decisions
+
+On 2026-11-14 the owner accepted every operating orientation and the proposed panel lifetime plan, in response to a question explicitly describing 15,000 h with at least 70% initial light output and the limitation of short-term testing. Record base-up, base-down and horizontal as required test orientations, plus any intermediate worst case identified. The panel L70 figure is a design target, not demonstrated lifetime; it does not specify a B-value/population failure fraction or catastrophic-failure allowance, which remain U02 questions. U15 remains partly open for fixture/ventilation conditions. Full packet approval is absent; revision 2 reviews are historical and affected formal-gate reviews must be refreshed. No CAD, orders or physical test results changed.
