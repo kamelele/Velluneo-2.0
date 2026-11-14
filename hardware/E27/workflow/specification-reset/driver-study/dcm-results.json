@@ -1,0 +1,464 @@
+{
+  "model": "Ideal sinusoidal-power DCM witness; not IC control/line/fault simulation",
+  "upstream_results_SHA256": "6435677103247ad888ab1bdf2078409f8a5ecadcf165749fc70191534f4addb3",
+  "assumptions": {
+    "mains_rms_V": [
+      207,
+      230,
+      253
+    ],
+    "line_Hz": 50,
+    "Vo_V": [
+      18,
+      21,
+      24,
+      27
+    ],
+    "I_load_A": [
+      0.228,
+      0.25,
+      0.2862272727272727
+    ],
+    "equivalent_extra_secondary_budget_W": [
+      0,
+      0.3
+    ],
+    "Lp_nom_H": 0.0005,
+    "Lp_factors": [
+      0.9,
+      1.1
+    ],
+    "Np": 96,
+    "Ns": 24,
+    "Na_exploratory": 12,
+    "Ae_m2": 3.1e-05,
+    "Vdiode_assumed_V": 0.8,
+    "bias_diode_assumed_V": 0.7,
+    "frequency_witness_floor_Hz": 42000,
+    "frequency_witness_Hz_per_W": 9500,
+    "frequency_jitter_factors": [
+      0.96,
+      1.04
+    ],
+    "phase_degrees": [
+      5,
+      15,
+      30,
+      45,
+      60,
+      75,
+      85,
+      90
+    ],
+    "LYT_frequency_min_typ_Hz": 40000,
+    "LYT_fmax_min_at25C_Hz": 115300,
+    "LYT_Ton_min_max_at25C_s": 1.15e-06,
+    "LYT_Ton_max_min_at25C_s": 5.75e-06,
+    "LYT5225_ILIM_min_at25C_A": 1.232,
+    "LYT5225_ILIM_max_at25C_A": 1.418,
+    "LYT5225_Rds_max_at100C_ohm": 6.55,
+    "drain_overshoot_assumed_V": 100
+  },
+  "electrical_cases": 288,
+  "phase_samples": 2304,
+  "bounds": {
+    "f_Hz": {
+      "min": 40320.0,
+      "max": 81580.32763636364
+    },
+    "ton_s": {
+      "min": 1.1746426534430304e-06,
+      "max": 1.6777551398278797e-06
+    },
+    "zero_interval_crest_s": {
+      "min": 6.402384265306703e-06,
+      "max": 1.7761907673089943e-05
+    },
+    "KDP_crest": {
+      "min": 2.508737398287587,
+      "max": 4.086321382143728
+    },
+    "primary_peak_crest_A": {
+      "min": 0.8447995701267336,
+      "max": 0.9872481295984873
+    },
+    "secondary_peak_crest_A": {
+      "min": 3.3791982805069343,
+      "max": 3.948992518393949
+    },
+    "primary_rms_line_A": {
+      "min": 0.08214096509824516,
+      "max": 0.13625081505724124
+    },
+    "secondary_rms_line_A": {
+      "min": 0.6602950803980794,
+      "max": 0.8217566090232613
+    },
+    "flux_swing_crest_T": {
+      "min": 0.14122395146995512,
+      "max": 0.16503687605132777
+    },
+    "magnetic_transfer_average_W": {
+      "min": 4.2864,
+      "max": 8.257118181818182
+    },
+    "drain_plateau_crest_V": {
+      "min": 367.9422074112307,
+      "max": 468.9960312803931
+    },
+    "drain_assumed_spike_V": {
+      "min": 467.9422074112307,
+      "max": 568.996031280393
+    },
+    "rectifier_reverse_before_ringing_V": {
+      "min": 91.18555185280768,
+      "max": 116.44900782009827
+    },
+    "switch_conduction_hot100C_proxy_W": {
+      "min": 0.044193754864625893,
+      "max": 0.12159606415464473
+    },
+    "rectifier_fixed_drop_proxy_W": {
+      "min": 0.18239999999999998,
+      "max": 0.2417477756286267
+    }
+  },
+  "algebraic_checks_against_limited_table_values": {
+    "frequency_above_typical_40k": true,
+    "frequency_below_25C_minimum_fmax": true,
+    "ton_at_least_25C_max_minimum": true,
+    "ton_below_25C_minimum_maximum": true,
+    "KDP_gt_1p2": true,
+    "peak_below_25C_min_ILIM": true
+  },
+  "minimum_on_time_case": {
+    "vac_rms_V": 253,
+    "vo_V": 18,
+    "io_A": 0.228,
+    "extra_equivalent_secondary_W": 0,
+    "lp_H": 0.00045000000000000004,
+    "f_nom_Hz": 42000,
+    "jitter_factor": 1.04,
+    "f_Hz": 43680.0,
+    "ton_s": 1.1746426534430304e-06,
+    "demag_crest_s": 5.5888627603003515e-06,
+    "zero_interval_crest_s": 1.6130267480029512e-05,
+    "KDP_crest": 3.886144851258193,
+    "primary_peak_crest_A": 0.9339610657213031,
+    "secondary_peak_crest_A": 3.7358442628852124,
+    "primary_rms_line_A": 0.08636690269463186,
+    "secondary_rms_line_A": 0.6942655335285727,
+    "equivalent_secondary_average_A": 0.228,
+    "flux_swing_crest_T": 0.14122395146995512,
+    "magnetic_transfer_average_W": 4.2864,
+    "drain_plateau_crest_V": 432.9960312803931,
+    "drain_assumed_spike_V": 532.996031280393,
+    "rectifier_reverse_before_ringing_V": 107.44900782009827,
+    "switch_conduction_hot100C_proxy_W": 0.04885803432096925,
+    "rectifier_fixed_drop_proxy_W": 0.1824
+  },
+  "maximum_flux_case": {
+    "vac_rms_V": 207,
+    "vo_V": 18,
+    "io_A": 0.228,
+    "extra_equivalent_secondary_W": 0.3,
+    "lp_H": 0.00055,
+    "f_nom_Hz": 43570.8,
+    "jitter_factor": 0.96,
+    "f_Hz": 41827.968,
+    "ton_s": 1.6777551398278797e-06,
+    "demag_crest_s": 6.5312465841589295e-06,
+    "zero_interval_crest_s": 1.5698446995491983e-05,
+    "KDP_crest": 3.4035912276788696,
+    "primary_peak_crest_A": 0.8929995329613664,
+    "secondary_peak_crest_A": 3.5719981318454654,
+    "primary_rms_line_A": 0.09657690402931113,
+    "secondary_rms_line_A": 0.7022252664322803,
+    "equivalent_secondary_average_A": 0.24395744680851061,
+    "flux_swing_crest_T": 0.16503687605132777,
+    "magnetic_transfer_average_W": 4.5864,
+    "drain_plateau_crest_V": 367.9422074112307,
+    "drain_assumed_spike_V": 467.9422074112307,
+    "rectifier_reverse_before_ringing_V": 91.18555185280768,
+    "switch_conduction_hot100C_proxy_W": 0.061092494466858355,
+    "rectifier_fixed_drop_proxy_W": 0.1951659574468085
+  },
+  "maximum_secondary_RMS_case": {
+    "vac_rms_V": 207,
+    "vo_V": 18,
+    "io_A": 0.2862272727272727,
+    "extra_equivalent_secondary_W": 0.3,
+    "lp_H": 0.00045000000000000004,
+    "f_nom_Hz": 53970.1909090909,
+    "jitter_factor": 0.96,
+    "f_Hz": 51811.38327272727,
+    "ton_s": 1.5175866242452735e-06,
+    "demag_crest_s": 5.907734818076054e-06,
+    "zero_interval_crest_s": 1.1875456433771105e-05,
+    "KDP_crest": 3.0101539421565526,
+    "primary_peak_crest_A": 0.9872481295984873,
+    "secondary_peak_crest_A": 3.948992518393949,
+    "primary_rms_line_A": 0.11301602627928947,
+    "secondary_rms_line_A": 0.8217566090232613,
+    "equivalent_secondary_average_A": 0.30218471953578335,
+    "flux_swing_crest_T": 0.14928147120944868,
+    "magnetic_transfer_average_W": 5.681072727272727,
+    "drain_plateau_crest_V": 367.9422074112307,
+    "drain_assumed_spike_V": 467.9422074112307,
+    "rectifier_reverse_before_ringing_V": 91.18555185280768,
+    "switch_conduction_hot100C_proxy_W": 0.08366067538354487,
+    "rectifier_fixed_drop_proxy_W": 0.2417477756286267
+  },
+  "transformer_candidate": {
+    "Lp_H": 0.0005,
+    "Np": 96,
+    "Ns": 24,
+    "Na_exploratory": 12,
+    "required_AL_nH": 54.25347222222222,
+    "AL_is_custom_unconfirmed": true,
+    "normal_bias_V_assuming_drops": [
+      8.700000000000001,
+      13.200000000000001
+    ],
+    "flux_at_25C_table_ILIM_max_and_Lpmax_T_linear": 0.2620631720430107,
+    "propagation_delay_not_added_to_measured_current_limit": true,
+    "winding_fill_losses_and_insulation_unverified": true
+  },
+  "output_storage_screen": [
+    {
+      "center_sqrt_mean_square_V": 18,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.00022,
+      "cap_min_F": 0.00017600000000000002,
+      "stored_energy_swing_pp_J": 0.01432394487827058,
+      "Vmin_ideal_V": 15.57606977241951,
+      "Vmax_ideal_V": 20.134201013318588,
+      "voltage_pp_V": 4.558131240899078,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 4.777547448749686,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 18,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.00047,
+      "cap_min_F": 0.00037600000000000003,
+      "stored_energy_swing_pp_J": 0.01432394487827058,
+      "Vmin_ideal_V": 16.908707872557653,
+      "Vmax_ideal_V": 19.02880968638099,
+      "voltage_pp_V": 2.120101813823336,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 10.206578640510692,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 18,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.001,
+      "cap_min_F": 0.0008,
+      "stored_energy_swing_pp_J": 0.01432394487827058,
+      "Vmin_ideal_V": 17.49557283721118,
+      "Vmax_ideal_V": 18.49067146151914,
+      "voltage_pp_V": 0.9950986243079569,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 21.716124767044025,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 18,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.00022,
+      "cap_min_F": 0.00017600000000000002,
+      "stored_energy_swing_pp_J": 0.016243353491958837,
+      "Vmin_ideal_V": 15.22196501098621,
+      "Vmax_ideal_V": 20.40322967582122,
+      "voltage_pp_V": 5.181264664835009,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 4.777547448749686,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 18,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.00047,
+      "cap_min_F": 0.00037600000000000003,
+      "stored_energy_swing_pp_J": 0.016243353491958837,
+      "Vmin_ideal_V": 16.757075871902746,
+      "Vmax_ideal_V": 19.16247395884192,
+      "voltage_pp_V": 2.405398086939176,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 10.206578640510692,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 18,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.001,
+      "cap_min_F": 0.0008,
+      "stored_energy_swing_pp_J": 0.016243353491958837,
+      "Vmin_ideal_V": 17.426870290877,
+      "Vmax_ideal_V": 18.555435642014675,
+      "voltage_pp_V": 1.1285653511376736,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 21.716124767044025,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 21,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.00022,
+      "cap_min_F": 0.00017600000000000002,
+      "stored_energy_swing_pp_J": 0.01671126902464901,
+      "Vmin_ideal_V": 18.60240865625993,
+      "Vmax_ideal_V": 23.150602415174983,
+      "voltage_pp_V": 4.548193758915055,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 4.777547448749686,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 21,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.00047,
+      "cap_min_F": 0.00037600000000000003,
+      "stored_energy_swing_pp_J": 0.01671126902464901,
+      "Vmin_ideal_V": 19.913692163251444,
+      "Vmax_ideal_V": 22.03281335706491,
+      "voltage_pp_V": 2.1191211938134664,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 10.206578640510692,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 21,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.001,
+      "cap_min_F": 0.0008,
+      "stored_energy_swing_pp_J": 0.01671126902464901,
+      "Vmin_ideal_V": 20.496607370957484,
+      "Vmax_ideal_V": 21.49160501872327,
+      "voltage_pp_V": 0.9949976477657856,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 21.716124767044025,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 21,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.00022,
+      "cap_min_F": 0.00017600000000000002,
+      "stored_energy_swing_pp_J": 0.018950579073951975,
+      "Vmin_ideal_V": 18.25722474149991,
+      "Vmax_ideal_V": 23.423785875437886,
+      "voltage_pp_V": 5.166561133937975,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 4.777547448749686,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 21,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.00047,
+      "cap_min_F": 0.00037600000000000003,
+      "stored_energy_swing_pp_J": 0.018950579073951975,
+      "Vmin_ideal_V": 19.763590861467694,
+      "Vmax_ideal_V": 22.16755458458399,
+      "voltage_pp_V": 2.403963723116295,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 10.206578640510692,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 21,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.001,
+      "cap_min_F": 0.0008,
+      "stored_energy_swing_pp_J": 0.018950579073951975,
+      "Vmin_ideal_V": 20.42821030236276,
+      "Vmax_ideal_V": 21.556628304130495,
+      "voltage_pp_V": 1.1284180017677343,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 21.716124767044025,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 27,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.00022,
+      "cap_min_F": 0.00017600000000000002,
+      "stored_energy_swing_pp_J": 0.02148591731740587,
+      "Vmin_ideal_V": 24.635765146082257,
+      "Vmax_ideal_V": 29.173259599624426,
+      "voltage_pp_V": 4.53749445354217,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 4.777547448749686,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 27,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.00047,
+      "cap_min_F": 0.00037600000000000003,
+      "stored_energy_swing_pp_J": 0.02148591731740587,
+      "Vmin_ideal_V": 25.920196814052932,
+      "Vmax_ideal_V": 28.038248824075307,
+      "voltage_pp_V": 2.1180520100223745,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 10.206578640510692,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 27,
+      "constant_load_A": 0.25,
+      "cap_nom_F": 0.001,
+      "cap_min_F": 0.0008,
+      "stored_energy_swing_pp_J": 0.02148591731740587,
+      "Vmin_ideal_V": 26.497973570694846,
+      "Vmax_ideal_V": 27.492860830527576,
+      "voltage_pp_V": 0.9948872598327299,
+      "estimated_100Hz_cap_ripple_rms_A": 0.17677669529663687,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 21.716124767044025,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 27,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.00022,
+      "cap_min_F": 0.00017600000000000002,
+      "stored_energy_swing_pp_J": 0.024365030237938255,
+      "Vmin_ideal_V": 24.301488188864745,
+      "Vmax_ideal_V": 29.452294847880143,
+      "voltage_pp_V": 5.150806659015398,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 4.777547448749686,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 27,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.00047,
+      "cap_min_F": 0.00037600000000000003,
+      "stored_energy_swing_pp_J": 0.024365030237938255,
+      "Vmin_ideal_V": 25.77206603408151,
+      "Vmax_ideal_V": 28.174467383340932,
+      "voltage_pp_V": 2.4024013492594207,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 10.206578640510692,
+      "not_a_flicker_or_safe_access_result": true
+    },
+    {
+      "center_sqrt_mean_square_V": 27,
+      "constant_load_A": 0.2835,
+      "cap_nom_F": 0.001,
+      "cap_min_F": 0.0008,
+      "stored_energy_swing_pp_J": 0.024365030237938255,
+      "Vmin_ideal_V": 26.429977529361942,
+      "Vmax_ideal_V": 27.558234482590187,
+      "voltage_pp_V": 1.1282569532282452,
+      "estimated_100Hz_cap_ripple_rms_A": 0.2004647724663862,
+      "illustrative_bleed_30to5_s_Cplus20_Rplus1": 21.716124767044025,
+      "not_a_flicker_or_safe_access_result": true
+    }
+  ],
+  "verification": "Dependency hash, magnetic energy/current identities and phase-sample comparisons executed. No controller, fault, CAD or physical validation."
+}
