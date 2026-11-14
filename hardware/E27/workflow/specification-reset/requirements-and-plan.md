@@ -1,6 +1,6 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 8, 2026-11-14.
+Packet: VEL-SPEC-RESET-01, revision 9, 2026-11-14.
 Status: interview-derived draft; not an approved specification-stage packet.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
 Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
@@ -11,7 +11,7 @@ Velluneo is a repairable domestic E27 LED lamp. A user replaces an exhausted LED
 
 Basis: the owner's Polish-language interview in the current conversation on 2026-11-14. The owner confirmed offline tool-free replacement, one base for three colours, about 800 lm, a laboratory prototype by September 2027, and freedom to redesign all existing electronics. This record paraphrases those decisions; it is not a new human approval of this packet. No permanent conversation URL is available; preserve the actual review decision when the owner reviews a frozen packet.
 
-Owner: Kamil Stępak. Coordinator/document writer: the current assistant context. Technical design reviewers and laboratory supervisors have not yet been named. Repository documentation is English; discussion with the owner is Polish.
+Owner: Kamil Stępak. Coordinator/document writer: the current assistant context. Design work and technical checks are assigned to the coordinator and independent agent review contexts; a separate external electronics reviewer is not required to start or continue design. The owner approves stage packets. Laboratory supervisors/support will be established before affected physical tests. Repository documentation is English; discussion with the owner is Polish.
 
 The old 8S/D5 architecture is historical input. Eight LEDs, two contacts, 70 × 34 mm, active load identification, timed probes, a microcontroller and the old current/voltage settings are not constraints for the redesign. Owner selected architecture A on 2026-11-14: isolated constant-current driver in the base and a simple replaceable LED panel. This supersedes the previously open partition choice; exact circuit and all electrical values remain unselected. See architecture-comparison.md revision 2.
 
@@ -76,7 +76,7 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 |---|---|---|---|
 | U01 | P-OPTICS and P-CRI accepted by owner on 2026-11-14; P-SUPPLY and its technical basis remain open. Optical measurement conditions are still tracked at U14. | Owner + technical reviewer | Specification |
 | U02 | Panel target 15,000 h / ≥70% initial flux accepted on 2026-11-14. Define sample/population acceptance, catastrophic-failure treatment, maintenance measurement conditions remain open. Minimum replacement life is now accepted as 50 complete panel-replacement/diffuser-reclosing cycles. | Owner + coordinator | Specification |
-| U03 | Name competent electrical reviewer and responsible laboratory person; establish a feasible proposed fabrication/assembly route, explicitly listing unconfirmed supplier constraints. Detailed order evidence remains due at U11/U13. | Owner + coordinator | Specification |
+| U03 | External pre-fabrication electronics reviewer is not an owner prerequisite. Assign technical calculations/checks to the coordinator and four independent agent contexts; owner retains stage approval. Establish a feasible proposed fabrication/assembly route with unconfirmed constraints explicit. Name physical-test personnel before affected tests; detailed order evidence remains due at U11/U13. | Coordinator + owner | Specification |
 | U04 | Select exact laboratory-demo scope versus external qualification; identify applicable product/safety/EMC/flicker requirements without assuming old limits. | Technical reviewer + owner | Specification |
 | U05 | Architecture A selected by owner: isolated CC driver in base, simple LED panel. Select/verify its LED and driver implementation using power, tolerance, thermal and cost calculations; no fixed LED count or current. | Coordinator + independent reviewer | Schematic |
 | U06 | Implement the product-level safety/operating criteria from U16: determine numerical circuit limits, discharge/cooling implementation, short duration/recovery, hot/cold startup and disturbance response. | Electrical reviewer + laboratory lead | Schematic |
@@ -164,3 +164,7 @@ Owner statement on 2026-11-14: "tak robimy wariant A". Architecture A is the sel
 ## 14. Revision 8 first-sample sourcing decision
 
 On 2026-11-14 the owner clarified that one colour variant manufacturable and populated by JLCPCB is sufficient for initial sampling. Do not block the first prototype on simultaneous JLCPCB availability of all three CCT variants. The owner did not remove the final three-colour product compatibility/optical goals, select the first colour, confirm live stock or authorize orders. 4000 K is the coordinator's first sourcing candidate only. Existing stock/process unknowns now apply to the chosen initial variant for the first order, with other variants tracked for later characterization. No formal stage approval or CAD change.
+
+## 15. Revision 9 design responsibility clarification
+
+Owner explicitly stated that no external person is assigned to review before fabrication and asked the assistant to produce a correct design. The assistant accepted responsibility for preparing calculations, schematics, part/library checks, PCB and documented verification within the available tools, with independent agent inspections and genuine owner stage decisions. Do not block design on appointing an outside electronics reviewer. Do not interpret that clarification as completed checks, certification, waiver of unresolved technical requirements, permission to skip stage gates, manufacturing authorization or authorization to energize hardware. Physical operation, thermal behavior, isolation and protection still need actual laboratory evidence, with personnel/setup/limits defined before the affected test. Existing role-based engineering unknowns identify work responsibilities rather than a mandatory external appointment.
