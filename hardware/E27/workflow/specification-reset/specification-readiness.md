@@ -59,3 +59,6 @@ Then freeze the complete specification candidate, rerun the traceability check w
 
 requirements-and-plan.md r10 updates the historical CLI-status statement and aligns U08/U15/U17 with the corrected contract. Product performance and owner decisions are unchanged. The machine contract remains a draft with no evidence or approvals and an incomplete specification result. The r9 commit remains the interview baseline; r10 corrections are the current planning-state synchronization, not a new owner approval.
 
+## Interview update: guarded base and prototype scope
+
+Packet r11/contract draft3 record the separate base cover, minimum one-colour complete prototype at the unchanged deadline, three colours as a stretch goal, and reference-lamp distribution without cap-direction emission. Preflight is refreshed; old reviews cover their recorded snapshots and require affected updates before formal acceptance. The stage-only checker does not qualify different product-family configurations: finalize scope-specific prototype/family evidence before release and do not treat one panel as proof of three-colour matching. No complete stage approval or physical evidence is claimed.
