@@ -1,6 +1,6 @@
 {
-  "revision": "8S-D2",
-  "base": "5a20a9c7f85fb8baec4ab6956e26f457207b724b",
+  "revision": "8S-D3",
+  "base": "cff8aa2640a1573fba135b6044f90b9f35f552bf",
   "status": "draft",
   "basis_files": [
     {
@@ -22,7 +22,7 @@
       "mpn": "74LVC132APW,118",
       "pins": {
         "1": "CONTACT_OK",
-        "2": "CONTACT_OK",
+        "2": "V3V3_HOLD",
         "3": "FAULT_RAW",
         "4": "FAULT_FILTERED",
         "5": "BLANK_DONE",
@@ -30,7 +30,7 @@
         "7": "LED_RTN",
         "8": "HOLD_READY_H",
         "9": "HOLD_READY_N",
-        "10": "HOLD_READY_N",
+        "10": "V3V3_HOLD",
         "11": "READY_SET_N",
         "12": "HOLD_READY_H",
         "13": "POR_N",
@@ -55,7 +55,7 @@
         "1": "BLANK_DONE",
         "2": "V3V3_HOLD",
         "3": "LED_RTN",
-        "4": "PERMIT_RETURN",
+        "4": "TIMER_PERMIT",
         "5": "BLANK_CT"
       }
     },
@@ -116,7 +116,7 @@
       }
     },
     "R37": {
-      "value": "100k",
+      "value": "33k / 1%",
       "mpn": null,
       "pins": {
         "1": "V3V3_HOLD",
@@ -132,8 +132,8 @@
       }
     },
     "C14": {
-      "value": "68u / 50V candidate",
-      "mpn": null,
+      "value": "100 uF / 50 V candidate",
+      "mpn": "EEHZE1H101V",
       "pins": {
         "1": "HOLD_RAW",
         "2": "LED_RTN"
@@ -206,6 +206,57 @@
     "C26": {
       "value": "100n",
       "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "U108": {
+      "value": "SN74LVC1G17DBVR",
+      "mpn": "SN74LVC1G17DBVR",
+      "pins": {
+        "1": null,
+        "2": "PERMIT_RETURN",
+        "3": "LED_RTN",
+        "4": "TIMER_PERMIT",
+        "5": "V3V3_HOLD"
+      }
+    },
+    "C27": {
+      "value": "100n",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "LED_RTN"
+      }
+    },
+    "R24": {
+      "value": "1k / 1% pulse-rated",
+      "mpn": "CRCW12061K00FKECHP",
+      "pins": {
+        "1": "RAW",
+        "2": "HOLD_CHARGE"
+      }
+    },
+    "R31": {
+      "value": "33k / 1%",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "CONTACT_OK"
+      }
+    },
+    "R32": {
+      "value": "33k / 1%",
+      "mpn": null,
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "HOLD_READY_N"
+      }
+    },
+    "C17": {
+      "value": "10 uF / 50 V",
+      "mpn": "GRM32ER71H106KA12L",
       "pins": {
         "1": "V3V3_HOLD",
         "2": "LED_RTN"

@@ -29,29 +29,30 @@ POSITIONS = {
     "R29": (302.26, 238.76), "R30": (351.79, 238.76),
     "R31": (201.93, 238.76), "R32": (252.73, 238.76),
     "U103": (43.18, 285.75), "U104": (121.92, 285.75), "U105": (193.04, 285.75),
-    "U106": (276.86, 285.75), "U107": (360.68, 285.75),
+    "U106": (276.86, 285.75), "U107": (360.68, 285.75), "U108": (255.27, 340.36),
     "R33": (43.18, 310.0), "R34": (96.52, 310.0), "R35": (149.86, 310.0),
     "R37": (255.27, 310.0), "R38": (326.39, 310.0),
     "C18": (43.18, 322.58), "C19": (96.52, 322.58), "C20": (149.86, 322.58),
     "C21": (203.2, 322.58), "C22": (255.27, 322.58), "C23": (308.61, 322.58),
-    "C24": (43.18, 335.28), "C25": (96.52, 335.28), "C26": (149.86, 335.28),
+    "C24": (43.18, 335.28), "C25": (96.52, 335.28), "C26": (149.86, 335.28), "C27": (368.3, 322.58),
 }
 VALUES = {
     "U2": "TPS26600PWPR", "U101": "TPS7A1633DGNR", "U102": "TPS3700DDCR",
     "R9": "0.130R / 1%", "R10": "113k / 0.1%", "R14": "226k / 0.1%",
     "R15": "10k / 0.1%", "R16": "30.1k / 1%", "R17": "402k / 1%",
-    "R18": "10k", "R19": "4.7k / 0.5W", "R24": "1k",
+    "R18": "10k", "R19": "4.7k / 0.5W", "R24": "1k / pulse-rated",
     "R25": "150k / 1%", "R26": "150k / 1%", "R27": "10k / 1%",
     "R28": "255k / 1%", "R29": "255k / 1%", "R30": "10k / 1%",
-    "R31": "100k", "R32": "100k", "C11": "100n eff. min", "C12": "47n",
-    "C13": "100n eff. min", "C14": "68u / 50V candidate", "C15": "100n",
+    "R31": "33k / 1%", "R32": "33k / 1%", "C11": "100n eff. min", "C12": "47n",
+    "C13": "100n eff. min", "C14": "100u / 50V candidate", "C15": "100n",
     "C17": "10u / 50V candidate", "D10": "BAV21W", "J2": "Interlocks",
     "J3": "8S LED output",
 }
 FP_0603 = "Resistor_SMD:R_0603_1608Metric"
 FP_1206 = "Resistor_SMD:R_1206_3216Metric"
 FOOTPRINTS = {
-    "R9": FP_1206, "R19": FP_1206, "D10": power.SOD,
+    "R9": FP_1206, "R19": FP_1206, "R24": FP_1206, "D10": power.SOD,
+    "C14": "Capacitor_SMD:CP_Elec_10x10.5", "C17": "Capacitor_SMD:C_1210_3225Metric",
     "C11": power.C80, "C12": power.C60, "C13": power.C80, "C15": power.C80,
     "U2": "E27:PWP0016A", "U101": "E27:TPS7A16_DGN",
     "U102": "Package_TO_SOT_SMD:SOT-23-6",
@@ -70,8 +71,8 @@ TSSOP14 = "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
 SOT23_5 = "Package_TO_SOT_SMD:SOT-23-5"
 FOOTPRINTS.update({
     "U103": TSSOP14, "U104": SOT23_5, "U105": SOT23_5, "U106": TSSOP14,
-    "U107": "Package_TO_SOT_SMD:SOT-23-6",
-    **{f"C{number}": power.C60 for number in range(18, 27)},
+    "U107": "Package_TO_SOT_SMD:SOT-23-6", "U108": SOT23_5,
+    **{f"C{number}": power.C60 for number in range(18, 28)},
 })
 
 # U1 SR senses the ground strap at startup and otherwise drives the rectifier.
@@ -124,6 +125,11 @@ PIN_GROUPS = {
     "U107": (
         ((1, "A", "input"), (3, "B", "input"), (6, "C", "input"), (5, "VCC", "power_in"),
          (2, "GND", "power_in")),
+        ((4, "Y", "output"),),
+    ),
+    "U108": (
+        ((2, "A", "input"), (5, "VCC", "power_in"), (3, "GND", "power_in"),
+         (1, "NC", "no_connect")),
         ((4, "Y", "output"),),
     ),
     "J2": (
@@ -258,12 +264,12 @@ def rebuild():
         items.extend((flag, k.wire(x, y, x + 2.54, y), k.label(net, x + 2.54, y)))
 
     k.schematic(DEST, NAME, sheet, "Velluneo E27 / 8S / SCHEMATIC DRAFT",
-                list(definitions.values()), items, "A3", "8S-D2")
+                list(definitions.values()), items, "A3", "8S-D3")
     schematic = DEST / f"{NAME}.kicad_sch"
     text = schematic.read_text(encoding="utf-8")
     text = text.replace("(lib_symbols ", "(lib_symbols" + power_flag_definition() + " ", 1)
     text = text.replace('(paper "A3")', '(paper "User" 420 380)', 1)
-    k.save(schematic, text.replace('(date "2026-11-09")', '(date "2026-11-12")', 1))
+    schematic.write_text(text.replace('(date "2026-11-09")', '(date "2026-11-14")', 1), encoding="utf-8", newline="\n")
     k.save(DEST / "sym-lib-table", '(sym_lib_table (version 7) (lib (name "E27") (type "KiCad") '
            '(uri "${KIPRJMOD}/E27.kicad_sym") (options "") (descr "Velluneo 8S draft")))')
     k.save(DEST / "fp-lib-table", '(fp_lib_table (version 7) (lib (name "E27") (type "KiCad") '

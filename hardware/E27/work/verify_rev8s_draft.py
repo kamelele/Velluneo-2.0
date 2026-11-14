@@ -1,10 +1,12 @@
-"""Check the D2 export and exercise the permit logic at its digital boundaries."""
+"""Check the 8S draft export and exercise the permit logic at its digital boundaries."""
 
 from dataclasses import dataclass
 from hashlib import sha256
 import json
 from pathlib import Path
 import re
+import subprocess
+import sys
 from xml.etree import ElementTree
 
 from rev8s_draft import CAPTURE, CONTROL, DEST, NAME, POWER_SOURCES, source_parts
@@ -52,7 +54,18 @@ def digest(path):
 
 def verify(export):
     plan = source_parts()
+    schematic = (DEST / f"{NAME}.kicad_sch").resolve()
+    original_hash = digest(schematic)
+    erc = DEST / "ERC.rpt"
+    cli = Path(sys.executable).with_name("kicad-cli.exe")
+    export.parent.mkdir(parents=True, exist_ok=True)
+    export.unlink(missing_ok=True)
+    subprocess.run([cli, "sch", "export", "netlist", "--format", "kicadxml", "-o", export, schematic],
+                   check=True)
+    subprocess.run([cli, "sch", "erc", "--format", "report", "-o", erc, schematic], check=True)
+    assert original_hash == digest(schematic)
     tree = ElementTree.parse(export)
+    assert Path(tree.findtext("./design/source")).resolve() == schematic
     components = {part.get("ref"): part for part in tree.findall("./components/comp")}
     assert set(components) == set(plan)
     expected = {(ref, pin): net for ref, part in plan.items() for pin, net in part["pins"].items()}
@@ -71,24 +84,28 @@ def verify(export):
     ]
     assert components["R9"].findtext("value") == "0.130R / 1%"
     assert components["R10"].findtext("value") == "113k / 0.1%"
+    assert components["C14"].findtext("footprint") == "Capacitor_SMD:CP_Elec_10x10.5"
+    assert components["C17"].findtext("footprint") == "Capacitor_SMD:C_1210_3225Metric"
+    assert components["R24"].findtext("footprint") == "Resistor_SMD:R_1206_3216Metric"
+    assert components["U108"].findtext("footprint") == "Package_TO_SOT_SMD:SOT-23-5"
+    assert actual["U105", "4"] == actual["U108", "4"] == "TIMER_PERMIT"
+    assert actual["U108", "2"] == "PERMIT_RETURN"
+    assert all(components[ref].findtext("value") == "33k / 1%" for ref in ("R31", "R32", "R37"))
     assert {ref for ref, part in components.items() if part.find("property[@name='dnp']") is not None} == {"C16", "R23"}
     assert len([pin for ref, pin in actual if ref == "J3"]) == 2
     assert set(components).isdisjoint({"J101", "J102", "U3", "U4"})
 
-    erc = DEST / "ERC.rpt"
     text = erc.read_text(encoding="utf-8-sig")
     errors, warnings = map(int, re.search(r"Errors (\d+)  Warnings (\d+)", text).groups())
     assert (errors, warnings) == (0, 1)
     assert "[pin_to_pin]" in text and "Symbol U1 Pin 5 [SR" in text
     check_sequence()
-    schematic = DEST / f"{NAME}.kicad_sch"
     flag_count = schematic.read_text(encoding="utf-8").count('(lib_id "power:PWR_FLAG")')
     assert flag_count == len(POWER_SOURCES)
-    for file in (schematic, erc):
-        file.write_bytes(file.read_bytes().replace(b"\r\n", b"\n"))
+    erc.write_bytes(erc.read_bytes().replace(b"\r\n", b"\n"))
     report = {
         "status": "draft_map_match",
-        "revision": "8S-D2",
+        "revision": json.loads(CONTROL.read_text(encoding="utf-8"))["revision"],
         "exporter": tree.findtext("./design/tool"),
         "schematic_sha256": digest(schematic),
         "base_draft_map_sha256": digest(CAPTURE),
