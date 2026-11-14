@@ -16,3 +16,5 @@ Open [Zasilacz_8S_Draft.kicad_pro](Zasilacz_8S_Draft.kicad_pro) in KiCad. The [n
 ## 8S-D3 follow-up
 
 The current schematic, image exports and verification report are D3. The circuit change adds a Schmitt buffer in the timer signal, revises three pull-ups, and adds explicit hold-supply and pulse resistor candidates. It exports 90 components and 252 connected pins. ERC reports 0 errors and the retained SR warning. The brownout and reset cases remain open before layout. [D3 review and correction record](../../workflow/8s/driver-8s-d3-review.md) · [D2 snapshot](https://github.com/kamelele/Velluneo-2.0/tree/cff8aa2640a1573fba135b6044f90b9f35f552bf/hardware/E27/outputs/Zasilacz_8S_Draft)
+
+[Unrouted 8S-D3 placement study](Rozmieszczenie_8S_D3.kicad_pcb) · [3D view](8S-D3-3D.png) · [Brownout check](../../workflow/8s/driver-8s-d3-placement-preview.md)

@@ -1,0 +1,17 @@
+# 8S-D3 brownout and placement preview
+
+Scope E27-8S-D3-PREVIEW. Codex prepared the study against schematic commit `7c0014048cc54ff53a8ab4a38373c087210e18a2`. The [KiCad board](../../outputs/Zasilacz_8S_Draft/Rozmieszczenie_8S_D3.kicad_pcb) is an unrouted placement study and the [3D render](../../outputs/Zasilacz_8S_Draft/8S-D3-3D.png) uses that exact board. The study has no placement approval and no fabrication output.
+
+## Brownout check
+
+In D3, U104 senses V3V3_HOLD and clears both U106 storage elements when the held rail falls below its POR threshold. There is no mains-presence input. Therefore a long secondary supply interruption can clear the short-circuit lockout with mains still present. When RAW returns, the hold capacitor recharges, POR releases and a closed S1/TH1 loop can again enable the eFuse subject to its voltage window. S2 still has to be closed for a pulse to reach the contacts.
+
+As a counterexample, assume the short has latched, C14 starts at 20 V with 56 µF effective, the held branch draws a constant 400 µA, and RAW is lost for 3 s with mains still present. The ideal model reaches the 4 V conservative hold floor after 2.24 s and is fully discharged after 2.80 s. Subject to no separate backfeed, this dropout can erase the latch. Reapply RAW with the short still present and S1/TH1 and S2 closed to test the new pulse. At 300 µA the same floor is reached at 2.99 s. Neither estimate establishes a guaranteed trip time because LDO dropout, reset, capacitance, leakage and branch current need measurement. The stated 2.11 s flyback restart off-time is a 25°C datasheet figure at its specified conditions. A system-level bound must also cover recovery, recharge and cumulative dropouts. [D3 circuit and assumptions](driver-8s-d3-review.md) · [TI TPS3840](https://www.ti.com/lit/ds/symlink/tps3840.pdf) · [Power Integrations LYTSwitch-6](https://www.power.com/sites/default/files/documents/lytswitch-6_family_datasheet.pdf)
+
+Treat D3 as finite retention. Before formal placement, verify SHDN and contact current during slow and fast rail collapse and recovery, with a persistent short and S1/S2 held closed. Record RAW, HOLD_RAW, V3V3_HOLD, POR_N, FAULT_CLEAR, SHDN and contact current through the first and any subsequent pulses. This checks the undefined low-supply logic window separately from the loss of volatile state. If the chosen behavior requires mains-only reset, add an independently qualified means to retain the fault or detect genuine mains removal.
+
+## Preview scope
+
+The 84 × 34 mm rectangular, two-layer study uses the Rev K power placement and extends the secondary side for eFuse, control and hold supply. J2 and J3 use temporary JST GH footprint candidates for visualization. The transformer shape is the archived EE16 model. Neither mating clearance nor fit in the enclosure is established. The board has 90 footprints. The generator reloads the board and compares every connected pad to the native D3 net export. No copper tracks or pours are present. The default KiCad DRC reported zero geometry violations and 192 missing connections. This draft did not apply the final project isolation rules. The preview does not establish the required isolation areas, thermal behavior or routing feasibility.
+
+To reproduce, run `work/verify_rev8s_draft.py` to export fresh pins, then run `work/preview_8s_d3.py` with KiCad Python, both from hardware/E27. Render the saved board with the KiCad 3D renderer.
