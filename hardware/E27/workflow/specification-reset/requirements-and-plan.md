@@ -1,6 +1,6 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 7, 2026-11-14.
+Packet: VEL-SPEC-RESET-01, revision 8, 2026-11-14.
 Status: interview-derived draft; not an approved specification-stage packet.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
 Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
@@ -39,7 +39,7 @@ Requirement rows are revision 1 except R-LIGHT/R-CCT/R-PANEL-LIFE/R-REPLACE/R-DE
 | R-FEATURES | Basic full-output on/off lighting; no Wi-Fi, app or added smart functions. | Confirm feature scope at specification; check normal behavior before release. Wall-dimmer compatibility is excluded from the primary design. |
 | R-SIZE | Compare a conventional-bulb-sized concept with a moderately larger concept that improves cooling and replacement. | Present actual envelopes and tradeoffs for owner selection before placement; no existing board size is binding. |
 | R-COST | Prefer rational cost and future manufacturability; no fixed prototype budget. | Compare BOM, sourcing, assembly and tooling costs during architecture and release reviews. No invented cost ceiling. |
-| R-BUILD | Prefer JLCPCB fabrication and populated PCB delivery; laboratory assembly is a fallback. | Confirm actual service, component availability and any transformer/THT/manual work before process acceptance and release. Housing and lamp assembly are separate. |
+| R-BUILD | Prefer JLCPCB fabrication and populated PCB delivery; one LED colour assembled by JLCPCB is sufficient for the first prototype. All three colours need not be stocked/assembled there now. Laboratory assembly remains a fallback; future three-colour common-base compatibility remains required. | Confirm actual service, exact parts/bins for at least one initial colour and any transformer/THT/manual work before process acceptance and release. Future colour variants may use another sourcing/assembly route. Housing and lamp assembly are separate. |
 | R-DEMO | Deliver one complete, integrated, laboratory-tested and documented prototype ready for presentations no later than 30 September 2027; iterations allowed before this final deadline. | Final deadline accepted: 30 September 2027. Agree detailed test scope and intermediate bookings; retain matched hardware revisions and actual reports. Commercial certification and sales release are not automatically included. |
 
 The owner reports access to university laboratories for flux, colour, CRI, safety and interference measurements, with experienced support, and holds SEP qualifications. Instruments, calibrated methods, responsible people and availability remain unverified planning inputs. This packet records no physical tests.
@@ -160,3 +160,7 @@ On 2026-11-14 the owner rejected the proposed 20-cycle minimum and required at l
 ## 13. Revision 7 architecture decision
 
 Owner statement on 2026-11-14: "tak robimy wariant A". Architecture A is the selected direction: isolated mains-to-LED conversion and current regulation in the base; replaceable panel contains LEDs and only justified minor ancillary parts. See architecture-comparison.md revision 2. This accepts functional partition, not a specific part, pin map, LED count/current, protection circuit, electrical safety claim or complete specification-stage packet. Other scope decisions are unchanged. Formal checks and affected reviews remain pending before schematic work.
+
+## 14. Revision 8 first-sample sourcing decision
+
+On 2026-11-14 the owner clarified that one colour variant manufacturable and populated by JLCPCB is sufficient for initial sampling. Do not block the first prototype on simultaneous JLCPCB availability of all three CCT variants. The owner did not remove the final three-colour product compatibility/optical goals, select the first colour, confirm live stock or authorize orders. 4000 K is the coordinator's first sourcing candidate only. Existing stock/process unknowns now apply to the chosen initial variant for the first order, with other variants tracked for later characterization. No formal stage approval or CAD change.
