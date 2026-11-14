@@ -1,0 +1,11 @@
+# Compact 8S-D3 placement study
+
+Task E27-8S-COMPACT, owned by Codex. Input is the unchanged 8S-D3 schematic and Rev K power footprint placement. Starting point is the separate [84 × 34 mm preview](../../outputs/Zasilacz_8S_Draft/Rozmieszczenie_8S_D3.kicad_pcb). Output is a separate [70 × 34 mm KiCad study](../../outputs/Zasilacz_8S_Draft/Rozmieszczenie_8S_D3_Kompakt.kicad_pcb) and its top and bottom views. The 70 mm length is a study target selected for this iteration. No enclosure envelope has been specified for it.
+
+- Board area falls from 2,856 to 2,380 mm², a 16.7% reduction. The study reuses the power stage positions and places most additional control circuitry on the bottom face of the secondary side. The 100 µF hold capacitor, eFuse and provisional output headers are on the top. The connector bodies and mating parts need an enclosure and cable clearance check.
+- All 90 footprint references, including two DNP positions, are present. Every connected pad matches the D3 schematic export. The board has no tracks or copper pours. Default KiCad DRC reports zero listed geometry violations, zero footprint errors and 192 open connections. That check does not validate the isolation target, cable access, routing space or temperature. The same placement method at 66 mm and 68 mm did not place all parts. Those trials do not determine a lower size limit.
+- The proposed TPS3711 inhibit and retained fault mechanism remain under development and are not in D3. Allow for their eventual footprint and routing before adopting this outline. The next physical iteration needs exact component and connector envelopes, review of the 8 mm engineering separation target and routing feasibility on two layers. Two-sided assembly was already the intended process for the baseline. Confirm order-specific panelization and tooling after the design is stable. [8S specification](specification.md) · [Restart decision](driver-8s-restart.md) · [JLCPCB capabilities](https://jlcpcb.com/capabilities/pcb-assembly-capabilities)
+
+[Top view](../../outputs/Zasilacz_8S_Draft/8S-D3-Kompakt-top.png) · [Bottom view](../../outputs/Zasilacz_8S_Draft/8S-D3-Kompakt-bottom.png)
+
+To reproduce from hardware/E27, run `work/verify_rev8s_draft.py` with KiCad Python for a fresh net export, then `work/preview_8s_compact.py` with the same interpreter.

@@ -45,7 +45,7 @@ SIDE_SLOTS = {
 }
 
 
-def build_board():
+def build_board(*, target=TARGET, right_edge=159, place_remaining=None):
     schematic = (DRAFT / "Zasilacz_8S_Draft.kicad_sch").resolve()
     data = ElementTree.parse(EXPORT)
     assert Path(data.findtext("./design/source")).resolve() == schematic
@@ -56,7 +56,7 @@ def build_board():
     board = pcb.BOARD()
     board.SetCopperLayerCount(2)
     board.GetDesignSettings().SetBoardThickness(pcb.FromMM(1.6))
-    vertices = [(75, 70), (159, 70), (159, 104), (75, 104), (75, 70)]
+    vertices = [(75, 70), (right_edge, 70), (right_edge, 104), (75, 104), (75, 70)]
     for start, end in zip(vertices, vertices[1:]):
         k.shape(board, pcb.Edge_Cuts, start, end)
 
@@ -68,9 +68,14 @@ def build_board():
     nets = k.nets_for(board, (net for pins in pin_nets.values() for net in pins.values()))
     front = iter(SIDE_SLOTS[False])
     back = iter(SIDE_SLOTS[True])
+    pending = []
     for part in data.findall("./components/comp"):
         ref = part.get("ref")
-        if ref in PLACEMENT:
+        if place_remaining is not None:
+            if ref not in previous:
+                pending.append(part)
+                continue
+        if place_remaining is None and ref in PLACEMENT:
             x, y, angle, flipped = PLACEMENT[ref]
         elif ref in previous:
             former = previous[ref]
@@ -92,22 +97,24 @@ def build_board():
         item.SetDNP(part.find("property[@name='dnp']") is not None)
         assert {pin for pin in mapping} <= {pad.GetNumber() for pad in item.Pads()}, ref
 
-    assert pcb.SaveBoard(str(TARGET), board)
-    contents = TARGET.read_text(encoding="utf-8")
+    if place_remaining is not None:
+        place_remaining(board, pending, pin_nets, nets, root_uuid, right_edge)
+    assert pcb.SaveBoard(str(target), board)
+    contents = target.read_text(encoding="utf-8")
     for directory in (POWER, CONTROL):
         for model in directory.glob("*.wrl"):
             contents = contents.replace(f'${{KIPRJMOD}}/{model.name}',
                                         f'${{KIPRJMOD}}/../{directory.name}/{model.name}')
     assert not re.search(r'\$\{KIPRJMOD\}/[^/]+\.wrl', contents)
-    TARGET.write_text(contents, encoding="utf-8", newline="\n")
-    saved = pcb.LoadBoard(str(TARGET))
+    target.write_text(contents, encoding="utf-8", newline="\n")
+    saved = pcb.LoadBoard(str(target))
     assert not list(saved.GetTracks())
     assert len(list(saved.GetFootprints())) == len(data.findall("./components/comp"))
     for fp in saved.GetFootprints():
         connected = {pad.GetNumber(): pad.GetNetname().lstrip("/")
                      for pad in fp.Pads() if pad.GetNetCode() > 0}
         assert connected == pin_nets.get(fp.GetReference(), {}), fp.GetReference()
-    print(f"{len(list(saved.GetFootprints()))} footprints, 84 x 34 mm, unrouted")
+    print(f"{len(list(saved.GetFootprints()))} footprints, {right_edge - 75} x 34 mm, unrouted")
 
 
 if __name__ == "__main__":
