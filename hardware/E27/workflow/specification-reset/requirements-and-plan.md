@@ -1,6 +1,6 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 6, 2026-11-14.
+Packet: VEL-SPEC-RESET-01, revision 7, 2026-11-14.
 Status: interview-derived draft; not an approved specification-stage packet.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
 Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
@@ -13,7 +13,7 @@ Basis: the owner's Polish-language interview in the current conversation on 2026
 
 Owner: Kamil Stępak. Coordinator/document writer: the current assistant context. Technical design reviewers and laboratory supervisors have not yet been named. Repository documentation is English; discussion with the owner is Polish.
 
-The old 8S/D5 architecture is historical input. Eight LEDs, two contacts, 70 × 34 mm, active load identification, timed probes, a microcontroller and the old current/voltage settings are not constraints for the redesign. No new electrical architecture is selected in this packet.
+The old 8S/D5 architecture is historical input. Eight LEDs, two contacts, 70 × 34 mm, active load identification, timed probes, a microcontroller and the old current/voltage settings are not constraints for the redesign. Owner selected architecture A on 2026-11-14: isolated constant-current driver in the base and a simple replaceable LED panel. This supersedes the previously open partition choice; exact circuit and all electrical values remain unselected. See architecture-comparison.md revision 2.
 
 ## 2. Requirements confirmed in the interview
 
@@ -78,7 +78,7 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 | U02 | Panel target 15,000 h / ≥70% initial flux accepted on 2026-11-14. Define sample/population acceptance, catastrophic-failure treatment, maintenance measurement conditions remain open. Minimum replacement life is now accepted as 50 complete panel-replacement/diffuser-reclosing cycles. | Owner + coordinator | Specification |
 | U03 | Name competent electrical reviewer and responsible laboratory person; establish a feasible proposed fabrication/assembly route, explicitly listing unconfirmed supplier constraints. Detailed order evidence remains due at U11/U13. | Owner + coordinator | Specification |
 | U04 | Select exact laboratory-demo scope versus external qualification; identify applicable product/safety/EMC/flicker requirements without assuming old limits. | Technical reviewer + owner | Specification |
-| U05 | Select driver architecture and LED candidates using power, tolerance, thermal and cost calculations; no fixed LED count or current. | Coordinator + independent reviewer | Schematic |
+| U05 | Architecture A selected by owner: isolated CC driver in base, simple LED panel. Select/verify its LED and driver implementation using power, tolerance, thermal and cost calculations; no fixed LED count or current. | Coordinator + independent reviewer | Schematic |
 | U06 | Implement the product-level safety/operating criteria from U16: determine numerical circuit limits, discharge/cooling implementation, short duration/recovery, hot/cold startup and disturbance response. | Electrical reviewer + laboratory lead | Schematic |
 | U07 | Develop thermal/life calculations and detailed optical measurement procedures using the specification decisions from U14/U15; define base lifetime/end-of-life basis. | Coordinator + laboratory lead | Schematic |
 | U08 | Select overtemperature behavior, thresholds and sensor-fault response; define absence/reversal/partial-contact abuse cases even though live replacement is forbidden. | Electrical/mechanical reviewers | Schematic |
@@ -156,3 +156,7 @@ On 2026-11-14 the owner accepted every operating orientation and the proposed pa
 ## 12. Revision 6 owner decisions
 
 On 2026-11-14 the owner rejected the proposed 20-cycle minimum and required at least 50 full panel replacement and diffuser reclosing cycles without mounting damage; the earlier no-contact-degradation acceptance proposal is retained. One hundred cycles remains an optional stretch target. The owner confirmed 30 September 2027 must be final completion of the entire prototype, not an intermediate electronics milestone. Existing scope remains one complete tested prototype, not commercial series-production authorization. Targeting main assembly/tests by end of August remains a proposed internal schedule; it is not a separate owner-approved deadline. U02 remains open for lifetime population/failure and measurement details; U17 remains partly open for bookings and intermediate milestones. No full-stage approval, updated formal review, CAD check or physical result is claimed.
+
+## 13. Revision 7 architecture decision
+
+Owner statement on 2026-11-14: "tak robimy wariant A". Architecture A is the selected direction: isolated mains-to-LED conversion and current regulation in the base; replaceable panel contains LEDs and only justified minor ancillary parts. See architecture-comparison.md revision 2. This accepts functional partition, not a specific part, pin map, LED count/current, protection circuit, electrical safety claim or complete specification-stage packet. Other scope decisions are unchanged. Formal checks and affected reviews remain pending before schematic work.
