@@ -1,10 +1,10 @@
 # E27 single-string specification
 
-Revision 8S-spec-2. The project owner selected one series string of eight LEDs on 2026-11-11. This decision selects the architecture for investigation. The detailed specification and stage evidence are for review.
+Revision 8S-spec-3. The owner selected the two-contact interface and automatic restart after D4. The [design decision and test plan](driver-8s-two-contact.md) record the revised behavior. The project owner selected one series string of eight LEDs on 2026-11-11. This decision selects the architecture for investigation. The detailed specification and stage evidence are for review.
 
 ## Product and electrical intent
 
-- The replaceable insert uses eight 3 V LED packages in one current path. The power board is the candidate location for constant-current regulation, independent output overvoltage protection and the existing removal and thermal shutdown functions. The insert interface needs a positive feed and return. Physical contact numbering and the separate interlock and thermostat wiring will be agreed before schematic work.
+- The replaceable insert uses eight 3 V LED packages in one current path. The power board is the candidate location for constant-current regulation, independent output overvoltage protection and electrical load detection and internal thermal shutdown. The insert interface consists of LED+ and LED−.
 - Retain the product targets of 750–850 lm after the diffuser at steady state and CRI ≥80 in 2700 K, 4000 K and 6500 K versions. The first bench sample is 2700 K. Evaluate the other two CCTs before release. Retain the engineering junction-temperature target of ≤95°C under rated conditions from the baseline. Final ambient and measurement setup are open.
 - The baseline target for accessible contacts is ≤30 V DC including ripple and peaks under a single fault and <5 V within 100 ms after normal opening. Evaluate reinforced mains-to-accessible isolation, removal and reinsertion, open LED string, shorted output, sense and feedback faults, independent shutdown and residual energy. Establish the applicable product classification and test conditions before release. Use the baseline 207–253 VAC, 50 Hz range for design screening. Verify startup, continuous regulated output and fault handling across that range. [E27 baseline](../../outputs/Raport_E27_RevA.md)
 - Use the [power Rev K](../../outputs/Zasilacz_RevK_Moc/README.md) and [control Rev H](../../outputs/Zasilacz_RevH_Sterowanie/README.md) as archived engineering references. Treat their native checks and JLCPCB exports as evidence for those revisions.
@@ -12,7 +12,7 @@ Revision 8S-spec-2. The project owner selected one series string of eight LEDs o
 ## Driver-to-insert interface change
 
 - The 2×8 baseline uses a common anode and two regulated cathode returns. The 8S proposal uses one positive feed and one regulated return. Disposition of the former second cathode contact, including its physical removal or safe unused status, remains a connector decision.
-- Retain S1 and TH1 as a shutdown path and retain S2 as an independent physical interruption of the positive feed as the baseline behavior. Review that opening inhibits drive, opens the positive path and discharges the exposed contact side before access. On closing, contacts must mate before re-enabling drive. Verify stuck-switch and wiring faults. Physical pin numbers, tolerance limits and actual contact timing are open.
+- Remove S1, S2 and the separate J2 interlock harness from the active design. Detect an unplugged or cut string electrically, disconnect and discharge the exposed output, and use limited-energy probes to detect a healthy load. On a short, limit delivered energy, pause and retry automatically. Keep temperature sensing inside the supply. Verify contact bounce, rapid reconnection, short duration, hot-insertion peaks, and recovery without user action.
 
 ## LED feasibility
 
@@ -33,7 +33,7 @@ The typical calculation uses 27.2 lm, 85°C and diffuser transmission 0.87. The 
 
 ## Retained verification requirements
 
-- Before layout, establish mains-to-accessible insulation design inputs and the accessible contact sequence with the enclosure. Keep the 8 mm PCB separation target from the baseline as an engineering input. Derive the actual clearance and creepage requirements from the verified materials, insulation system and product classification.
+- Before layout, establish mains-to-accessible insulation design inputs and accessibility during insertion and removal. Keep the 8 mm PCB separation target from the baseline as an engineering input. Derive the actual clearance and creepage requirements from the verified materials, insulation system and product classification.
 - Keep conducted and radiated EMC, immunity, individual mains harmonics, PF and DF, and PstLM/SVM checks for the complete lamp. Confirm classification and applicable limits for this design before layout and collect measured evidence before release. Legacy design targets are documented in the baseline report.
 - Start thermal tests at 25°C and 40°C, in both vertical directions and horizontal, and include the worst intended fixture. Retain the ≤85°C electrolytic case target at 40°C ambient. Confirm the rated ambient and temperature measurement setup before qualification. [E27 baseline](../../outputs/Raport_E27_RevA.md)
 

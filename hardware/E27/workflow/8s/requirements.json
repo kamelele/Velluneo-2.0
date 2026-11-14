@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo-E27-8S",
-  "revision": "8S-spec-2-process-reviewed",
+  "revision": "8S-spec-3-two-contact",
   "subsystems": [
     {
       "id": "driver",
@@ -70,11 +70,11 @@
     },
     {
       "id": "REQ-CC",
-      "revision": "2",
+      "revision": "3",
       "owner": "Velluneo project owner",
-      "text": "Drive one isolated current-regulated LED output, with a separate removal shutdown and thermal protection function.",
-      "basis": "Owner's 8S decision and E27 Rev A shutdown architecture",
-      "acceptance": "Agree the driver and insert power contact numbers, polarities, source/sink voltage and current envelopes, startup, open/short, removal, thermal behavior and independent cutoff before schematic work.",
+      "text": "Drive eight LEDs in series with isolated constant-current output through LED+ and LED− only. Support live disconnection and reconnection, automatic recovery from cleared output faults, and internal thermal protection without user controls or insertion interlocks.",
+      "basis": "Project owner decision after 8S-D4 to use a two-contact interface with automatic recovery.",
+      "acceptance": "Review the two-pin interface, cold voltage/current bounds, no-load mode, short and retry behavior, independent electrical fault voltage protection, and internal thermal shutdown. Demonstrate release behavior under REQ-CONTACT.",
       "gate": "schematic",
       "method": "review",
       "implementation": [
@@ -87,18 +87,18 @@
     },
     {
       "id": "REQ-CONTACT",
-      "revision": "1",
+      "revision": "2",
       "owner": "Velluneo project owner",
-      "text": "Limit accessible contact voltage to 30 V DC including peaks in a single fault, and reach below 5 V within 100 ms after normal opening.",
-      "basis": "E27 Rev A product report, optical and protection requirements",
-      "acceptance": "Measure the contact voltage and elapsed discharge time under approved normal opening and single-fault test conditions.",
+      "text": "Limit accessible contact voltage to 30 V DC including peaks in applicable single faults and to below 5 V within 100 ms after normal disconnection. Verify touch safety and limit the available energy during open-load probing, hot connection, and repeated short-circuit restart attempts.",
+      "basis": "E27 Rev A contact limits and the owner decision to remove insertion interlocks.",
+      "acceptance": "Use approved test conditions and equipment to measure idle, disconnect, probe, and fault transients and touch current, including single faults. Verify recovered operation, no damage and acceptable temperatures under persistent and repeated shorts.",
       "gate": "release",
       "method": "measurement",
       "implementation": [
         {
           "subsystem": "driver",
-          "object": "Independent cutoff and discharge",
-          "path": "specification.md"
+          "object": "Output switch, discharge, limited-energy load detection and independent voltage protection",
+          "path": "driver-8s-two-contact.md"
         }
       ],
       "evidence_ids": []
@@ -266,7 +266,7 @@
       "record_id": "REQ-CC",
       "field": "electrical_envelope",
       "owner": "Velluneo project owner",
-      "question": "Agree the cold string voltage and drive-current design bounds and the exact contacts, thermostat and removal behavior.",
+      "question": "Confirm the cold string voltage/current bounds, electrical load-detection window, independent voltage protection, thermal sensing and automatic restart circuit.",
       "blocks_stage": "schematic",
       "status": "open"
     },
@@ -311,7 +311,7 @@
       "record_id": "REQ-CONTACT",
       "field": "fault_test_coverage",
       "owner": "Velluneo project owner",
-      "question": "Define fault injection points and record worst-case contact peaks and discharge time.",
+      "question": "Define the applicable accessible-contact tests, including touch current, idle/discharge, probe energy, hot insertion and repeated faults. Record worst-case measurements.",
       "blocks_stage": "release",
       "status": "open"
     },
@@ -320,7 +320,7 @@
       "record_id": "REQ-INS-BASIS",
       "field": "insulation_basis",
       "owner": "Velluneo project owner",
-      "question": "Agree insulation classification, material inputs and accessible contact sequence.",
+      "question": "Agree insulation classification, material inputs and physical contact accessibility during removal.",
       "blocks_stage": "placement",
       "status": "open"
     },

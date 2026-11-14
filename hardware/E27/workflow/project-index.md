@@ -30,3 +30,4 @@
 - [8S restart decision and hardware-inhibit candidate](8s/driver-8s-restart.md) records the power-good clamp, restart alternatives, state checks and energy screens.
 - [70 × 34 mm compact 8S-D3 placement study](8s/driver-8s-compact-placement.md) includes both PCB faces and the current size and verification limits.
 - [8S-D4 hardware inhibit and compact placement](8s/driver-8s-d4-inhibit.md) captures the 3.3 V undervoltage clamp and its fit on the 70 × 34 mm draft.
+- [Two-contact output and automatic restart](8s/driver-8s-two-contact.md) is the active design decision after D4. The D4 and earlier interlock designs are archived reference studies.
