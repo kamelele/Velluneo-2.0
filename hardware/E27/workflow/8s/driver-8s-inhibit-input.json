@@ -1,0 +1,66 @@
+{
+  "revision": "8S-D4",
+  "base": "73b075d1cb768e4106da7fd0a0a8540388c2d282",
+  "status": "draft",
+  "basis_files": [
+    {
+      "path": "driver-8s-control-input.json",
+      "sha256": "59880e8e36fc624408f3cd2d6aef36a67f453071b84d3487e9088bd2f29f711a"
+    },
+    {
+      "path": "driver-8s-restart.md",
+      "sha256": "ef3a9ac455e7207b98f0bbb1d0c1b74550c9202f0c991db6731a2fabdcebc42b"
+    }
+  ],
+  "added_or_replaced_parts": {
+    "U109": {
+      "value": "TPS3711DDCT",
+      "mpn": "TPS3711DDCT",
+      "jlcpcb": "C702155",
+      "pins": {
+        "1": "SHDN",
+        "2": "LED_RTN",
+        "3": "V3V3_INHIBIT_SENSE",
+        "4": "LED_RTN",
+        "5": "RAW",
+        "6": "LED_RTN"
+      }
+    },
+    "R33": {
+      "value": "1.2k / 1%",
+      "mpn": "0603WAF1201T5E",
+      "jlcpcb": "C22765",
+      "pins": {
+        "1": "PERMIT_RETURN",
+        "2": "SHDN"
+      }
+    },
+    "R39": {
+      "value": "64.9k / 0.5%",
+      "mpn": "RT0603DRE0764K9L",
+      "jlcpcb": "C863197",
+      "pins": {
+        "1": "V3V3_HOLD",
+        "2": "V3V3_INHIBIT_SENSE"
+      }
+    },
+    "R40": {
+      "value": "10k / 1%",
+      "mpn": "0603WAF1002T5E",
+      "jlcpcb": "C25804",
+      "pins": {
+        "1": "V3V3_INHIBIT_SENSE",
+        "2": "LED_RTN"
+      }
+    },
+    "C28": {
+      "value": "100n / 50V X7R",
+      "mpn": "CC0805KRX7R9BB104",
+      "jlcpcb": "C49678",
+      "pins": {
+        "1": "RAW",
+        "2": "LED_RTN"
+      }
+    }
+  }
+}

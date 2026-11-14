@@ -44,10 +44,23 @@ def check():
     assert transition(State.LOCKED, rail_valid=True, interlock=True, fault=True,
                       reset_authorized=True) is State.LOCKED
 
+    # Screen R33 at its low corner for sink demand and high corner for enable.
+    # Include a 10 uA allowance for eFuse pin current and 300 nA detector leakage.
+    clamp_current = (3.366 - 0.25) / (1200 * 0.99) + 10e-6
+    r33_high = 1200 * 1.01
+    r18_low = 10_000 * 0.99
+    permit_return = 2.35
+    enable_voltage = (permit_return - r33_high * 10.3e-6) / (1 + r33_high / r18_low)
+    assert clamp_current < 3e-3
+    assert 0.25 < 0.55
+    assert enable_voltage > 1.0
+
     reservoir = 0.5 * (470e-6 * 1.2) * 27.07**2
     source_screen = 27.07 * 0.285 * 0.0376
     print(f"Supply detector, falling: {falling[0]:.3f} to {falling[1]:.3f} V")
     print(f"Supply detector, rising:  {rising[0]:.3f} to {rising[1]:.3f} V")
+    print(f"SHDN clamp current screen: {clamp_current * 1e3:.3f} mA at 0.25 V")
+    print(f"SHDN enable screen at 2.35 V return: {enable_voltage:.3f} V")
     print(f"Reservoir inventory (470 uF +20%): {reservoir:.3f} J")
     print(f"Flyback energy screen (37.6 ms): {source_screen:.3f} J")
     print("Retained-state policy checks passed")

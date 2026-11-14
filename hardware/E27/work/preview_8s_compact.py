@@ -1,11 +1,13 @@
 """Build a compact unrouted 8S-D3 study, retaining the Rev K power placement."""
 
 import argparse
+from pathlib import Path
 
 import pcbnew as pcb
 
 import build as k
 from preview_8s_d3 import CONNECTORS, DRAFT, build_board
+from rev8s_draft import D4_DEST
 
 FRONT = pcb.F_Cu
 BACK = pcb.B_Cu
@@ -43,7 +45,7 @@ def conflicts(first, second):
     return a < g + gap and c + gap > e and b < h + gap and d + gap > f
 
 
-def place_remaining(board, pending, planned, nets, root_uuid, right):
+def place_remaining(board, pending, planned, nets, root_uuid, right, project):
     occupied = {FRONT: [], BACK: []}
     for item in board.GetFootprints():
         layer = item.GetLayer()
@@ -55,26 +57,35 @@ def place_remaining(board, pending, planned, nets, root_uuid, right):
 
     parts = {part.get("ref"): part for part in pending}
     assigned = set()
-    for references, (cx, cy), layer, orientation in GROUPS:
+    groups = GROUPS
+    if "U109" in parts:
+        groups += ((("U109", "C28", "R39", "R40"), (137, 100), FRONT, 0),)
+    compact_overrides = {
+        "C28": (134.5, 87), "R16": (131.5, 101), "R17": (135, 101),
+        "R18": (142, 94), "R19": (130, 87.5), "U109": (134, 84),
+        "R39": (130, 85), "R40": (130, 83),
+    } if "U109" in parts else {}
+    for references, (cx, cy), layer, orientation in groups:
         for ref in references:
             part = parts[ref]
             assigned.add(ref)
             identifier = CONNECTORS.get(ref) or part.findtext("footprint")
-            item = k.footprint(board, DRAFT, identifier, ref, part.findtext("value"), 0, 0, 0,
+            item = k.footprint(board, project, identifier, ref, part.findtext("value"), 0, 0, 0,
                                part.findtext("tstamps"), root_uuid,
                                {pin: nets[net] for pin, net in planned[ref].items()})
             if layer == BACK:
                 item.Flip(item.GetPosition(), pcb.FLIP_DIRECTION_LEFT_RIGHT)
             item.SetOrientationDegrees(orientation)
             left, top, stop, bottom = footprint_bounds(item, layer)
+            target_x, target_y = compact_overrides.get(ref, (cx, cy))
             xs = range(254, 2 * right)
             if ref in CONNECTORS:
                 # Mating face points towards the short right-hand edge.
                 xs = [int(2 * (right - 5))]
-                cy = 88 if ref == "J2" else 99
-                cx = right - 5
+                target_y = 88 if ref == "J2" else 99
+                target_x = right - 5
             candidates = ((x / 2, y / 2) for x in xs for y in range(141, 208))
-            for x, y in sorted(candidates, key=lambda xy: (xy[0] - cx)**2 + (xy[1] - cy)**2):
+            for x, y in sorted(candidates, key=lambda xy: (xy[0] - target_x)**2 + (xy[1] - target_y)**2):
                 box = (x + left, y + top, x + stop, y + bottom)
                 if box[0] < 126.5 or box[1] < 70.35 or box[2] > right - 0.35 or box[3] > 103.65:
                     continue
@@ -91,5 +102,11 @@ def place_remaining(board, pending, planned, nets, root_uuid, right):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--width", type=int, default=70)
+    parser.add_argument("--revision", choices=("8S-D3", "8S-D4"), default="8S-D3")
     args = parser.parse_args()
-    build_board(target=TARGET, right_edge=75 + args.width, place_remaining=place_remaining)
+    options = {}
+    target = TARGET
+    if args.revision == "8S-D4":
+        target = D4_DEST / "Zasilacz_8S_D4.kicad_pcb"
+        options = dict(project=D4_DEST, revision=args.revision, export=Path("workflow/8s/.work/rev8s-d4.xml"))
+    build_board(target=target, right_edge=75 + args.width, place_remaining=place_remaining, **options)

@@ -1,9 +1,12 @@
 """Build the separate 8S draft schematic from the reviewed capture input."""
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
 from shutil import copy2
+
+from preview_8s_d3 import CONNECTORS
 
 import build as k
 import power
@@ -13,6 +16,9 @@ NAME = "Zasilacz_8S_Draft"
 DEST = Path("outputs") / NAME
 CAPTURE = Path("workflow/8s/driver-8s-capture-input.json")
 CONTROL = Path("workflow/8s/driver-8s-control-input.json")
+INHIBIT = Path("workflow/8s/driver-8s-inhibit-input.json")
+D4_NAME = "Zasilacz_8S_D4"
+D4_DEST = Path("outputs") / D4_NAME
 REV_H = Path("outputs/Zasilacz_RevH_Sterowanie")
 PASSIVES = {"R", "C", "CP", "D", "Z", "L", "F", "MOV"}
 
@@ -34,6 +40,7 @@ POSITIONS = {
     "R37": (255.27, 310.0), "R38": (326.39, 310.0),
     "C18": (43.18, 322.58), "C19": (96.52, 322.58), "C20": (149.86, 322.58),
     "C21": (203.2, 322.58), "C22": (255.27, 322.58), "C23": (308.61, 322.58),
+    "U109": (65, 387), "R39": (155, 382), "R40": (215, 382), "C28": (275, 382),
     "C24": (43.18, 335.28), "C25": (96.52, 335.28), "C26": (149.86, 335.28), "C27": (368.3, 322.58),
 }
 VALUES = {
@@ -56,6 +63,7 @@ FOOTPRINTS = {
     "C11": power.C80, "C12": power.C60, "C13": power.C80, "C15": power.C80,
     "U2": "E27:PWP0016A", "U101": "E27:TPS7A16_DGN",
     "U102": "Package_TO_SOT_SMD:SOT-23-6",
+    "U109": "Package_TO_SOT_SMD:SOT-23-6", "C28": power.C80,
 }
 DNP = {"C16", "R23"}
 POWER_SOURCES = {
@@ -132,6 +140,11 @@ PIN_GROUPS = {
          (1, "NC", "no_connect")),
         ((4, "Y", "output"),),
     ),
+    "U109": (
+        ((5, "VDD", "power_in"), (3, "SENSE", "input"),
+         (2, "GND", "power_in"), (4, "GND", "power_in"), (6, "GND", "power_in")),
+        ((1, "OUT", "open_collector"),),
+    ),
     "J2": (
         ((1, "S1 / TH1 feed", "passive"), (2, "S1 / TH1 return", "passive"),
          (3, "S2 input", "passive"), (4, "S2 return", "passive")), (),
@@ -172,23 +185,31 @@ def symbol_layout(ref, kind):
     return symbol_name, graphic, pins, ends, height + 2.54
 
 
-def source_parts():
+def source_parts(revision="8S-D3"):
     capture = json.loads(CAPTURE.read_text(encoding="utf-8"))
     control = json.loads(CONTROL.read_text(encoding="utf-8"))
     for source in (capture, control):
         for basis in source["basis_files"]:
             assert hashlib.sha256((CAPTURE.parent / basis["path"]).read_bytes()).hexdigest() == basis["sha256"]
-    return capture["parts"] | control["added_or_replaced_parts"]
+    parts = capture["parts"] | control["added_or_replaced_parts"]
+    if revision == "8S-D4":
+        inhibit = json.loads(INHIBIT.read_text(encoding="utf-8"))
+        assert inhibit["revision"] == revision
+        for basis in inhibit["basis_files"]:
+            contents = (CAPTURE.parent / basis["path"]).read_bytes().replace(b"\r\n", b"\n")
+            assert hashlib.sha256(contents).hexdigest() == basis["sha256"]
+        parts.update(inhibit["added_or_replaced_parts"])
+    return parts
 
 
-def copy_custom_footprint(footprint):
+def copy_custom_footprint(footprint, dest):
     if not footprint.startswith("E27:"):
         return
     filename = footprint.split(":")[1] + ".kicad_mod"
     for reference in (revk_power.DEST, REV_H):
         source = reference / "E27.pretty" / filename
         if source.is_file():
-            copy2(source, DEST / "E27.pretty" / filename)
+            copy2(source, dest / "E27.pretty" / filename)
             return
     raise FileNotFoundError(filename)
 
@@ -201,10 +222,11 @@ def power_flag_definition():
     return library[start:end].replace('"PWR_FLAG"', '"power:PWR_FLAG"', 1)
 
 
-def rebuild():
-    part_data = source_parts()
+def rebuild(revision):
+    name, dest = (D4_NAME, D4_DEST) if revision == "8S-D4" else (NAME, DEST)
+    part_data = source_parts(revision)
     historical = {part.ref: part for part in revk_power.devices()}
-    _, _, sheet = k.begin(NAME, "Schematic draft", .19, .55)
+    _, _, sheet = k.begin(name, "Schematic draft", .19, .55)
     definitions = {}
     items = [
         k.note("VELLUNEO E27 / ZASILACZ 8 LED W SZEREGU", 17, 20, 2.8),
@@ -221,6 +243,11 @@ def rebuild():
         k.note("Sterowanie rozruchem i zatrzask po zwarciu — wariant do pomiaru", 18, 264, 1.55),
         k.note("Do weryfikacji: T1, dobór styków, zimny start i limity zabezpieczeń.", 18, 350, 1.22),
     ]
+    if revision == "8S-D4":
+        items.extend((
+            k.note("Blokada przy zaniku 3,3 V", 18, 366, 1.55),
+            k.note("U109 blokuje SHDN przy spadku 3,3 V. Pamięć awarii po utracie zasilania do opracowania.", 18, 405, 1.18),
+        ))
     for ref, part in part_data.items():
         prior = historical.get(ref)
         kind = prior.kind if prior else ref.rstrip("0123456789")
@@ -229,17 +256,19 @@ def rebuild():
         if ref in PIN_GROUPS and ref != "U1":
             kind = ref
         footprint = FOOTPRINTS.get(ref)
+        if revision == "8S-D4" and ref in CONNECTORS:
+            footprint = CONNECTORS[ref]
         if footprint is None:
             footprint = prior.footprint if prior else FP_0603 if ref.startswith("R") else ""
-        copy_custom_footprint(footprint)
+        copy_custom_footprint(footprint, dest)
         value = VALUES.get(ref, part["value"])
         raw_x, raw_y = POSITIONS[ref] if ref in POSITIONS else prior.schematic
         x, y = (round(round(value / 1.27) * 1.27, 3) for value in (raw_x, raw_y))
-        name, graphic, pins, ends, gap = symbol_layout(ref, kind)
-        symbol = f"E27:EightS_{name}"
+        symbol_name, graphic, pins, ends, gap = symbol_layout(ref, kind)
+        symbol = f"E27:EightS_{symbol_name}"
         definitions[symbol] = k.symbol(symbol, ref.rstrip("0123456789"), graphic, pins, kind not in PASSIVES)
         assert {str(pin) for pin, _, _ in ends} == set(part["pins"]), ref
-        placed = k.placed(symbol, ref, value, footprint, x, y, k.uid(), NAME, sheet, part["pins"])
+        placed = k.placed(symbol, ref, value, footprint, x, y, k.uid(), name, sheet, part["pins"])
         placed = placed.replace(k.prop("Reference", ref, x, y - 3.81), k.prop("Reference", ref, x, y - gap))
         placed = placed.replace(k.prop("Value", value, x, y + 3.81), k.prop("Value", value, x, y + gap))
         if ref in DNP:
@@ -257,24 +286,27 @@ def rebuild():
 
     for index, (net, (x, y)) in enumerate(POWER_SOURCES.items(), 1):
         flag = k.placed("power:PWR_FLAG", f"#FLG{index:02}", "PWR_FLAG", "", x, y,
-                        k.uid(), NAME, sheet, ("1",), hide=True)
+                        k.uid(), name, sheet, ("1",), hide=True)
         flag = flag.replace("(in_bom yes)", "(in_bom no)").replace("(on_board yes)", "(on_board no)")
         flag = flag.replace(k.prop("Reference", f"#FLG{index:02}", x, y - 3.81),
                             k.prop("Reference", f"#FLG{index:02}", x, y - 3.81, True))
         items.extend((flag, k.wire(x, y, x + 2.54, y), k.label(net, x + 2.54, y)))
 
-    k.schematic(DEST, NAME, sheet, "Velluneo E27 / 8S / SCHEMATIC DRAFT",
-                list(definitions.values()), items, "A3", "8S-D3")
-    schematic = DEST / f"{NAME}.kicad_sch"
+    k.schematic(dest, name, sheet, "Velluneo E27 / 8S / SCHEMATIC DRAFT",
+                list(definitions.values()), items, "A3", revision)
+    schematic = dest / f"{name}.kicad_sch"
     text = schematic.read_text(encoding="utf-8")
     text = text.replace("(lib_symbols ", "(lib_symbols" + power_flag_definition() + " ", 1)
-    text = text.replace('(paper "A3")', '(paper "User" 420 380)', 1)
+    height = 420 if revision == "8S-D4" else 380
+    text = text.replace('(paper "A3")', f'(paper "User" 420 {height})', 1)
     schematic.write_text(text.replace('(date "2026-11-09")', '(date "2026-11-14")', 1), encoding="utf-8", newline="\n")
-    k.save(DEST / "sym-lib-table", '(sym_lib_table (version 7) (lib (name "E27") (type "KiCad") '
+    k.save(dest / "sym-lib-table", '(sym_lib_table (version 7) (lib (name "E27") (type "KiCad") '
            '(uri "${KIPRJMOD}/E27.kicad_sym") (options "") (descr "Velluneo 8S draft")))')
-    k.save(DEST / "fp-lib-table", '(fp_lib_table (version 7) (lib (name "E27") (type "KiCad") '
+    k.save(dest / "fp-lib-table", '(fp_lib_table (version 7) (lib (name "E27") (type "KiCad") '
            '(uri "${KIPRJMOD}/E27.pretty") (options "") (descr "Velluneo draft footprints")))')
 
 
 if __name__ == "__main__":
-    rebuild()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--revision", choices=("8S-D3", "8S-D4"), default="8S-D3")
+    rebuild(parser.parse_args().revision)

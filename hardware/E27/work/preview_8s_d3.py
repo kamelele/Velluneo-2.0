@@ -1,5 +1,7 @@
 """Build the unrouted 8S-D3 placement study from the current KiCad export."""
 
+from hashlib import sha256
+import json
 from pathlib import Path
 import re
 from xml.etree import ElementTree
@@ -45,11 +47,16 @@ SIDE_SLOTS = {
 }
 
 
-def build_board(*, target=TARGET, right_edge=159, place_remaining=None):
-    schematic = (DRAFT / "Zasilacz_8S_Draft.kicad_sch").resolve()
-    data = ElementTree.parse(EXPORT)
+def build_board(*, target=TARGET, right_edge=159, place_remaining=None,
+                export=EXPORT, revision="8S-D3", project=DRAFT):
+    schematic = (project / f"{project.name}.kicad_sch").resolve()
+    if revision == "8S-D4":
+        report = json.loads((project / "Draft_Check.json").read_text(encoding="utf-8"))
+        assert sha256(schematic.read_bytes()).hexdigest() == report["schematic_sha256"], "Re-export the changed schematic"
+        assert sha256(export.read_bytes()).hexdigest() == report["export_sha256"], "Re-export the D4 netlist"
+    data = ElementTree.parse(export)
     assert Path(data.findtext("./design/source")).resolve() == schematic
-    assert data.findtext("./design/sheet/title_block/rev") == "8S-D3"
+    assert data.findtext("./design/sheet/title_block/rev") == revision
     root_uuid = re.search(r'\(uuid "([^"]+)"\)', schematic.read_text(encoding="utf-8"))[1]
     base = pcb.LoadBoard(str(POWER / "Zasilacz_RevK_Moc.kicad_pcb"))
     previous = {item.GetReference(): item for item in base.GetFootprints()}
@@ -61,11 +68,21 @@ def build_board(*, target=TARGET, right_edge=159, place_remaining=None):
         k.shape(board, pcb.Edge_Cuts, start, end)
 
     pin_nets = {}
+    unconnected = {}
     for net in data.findall("./nets/net"):
         for pin in net.findall("node"):
+            name = net.get("name").lstrip("/")
+            ref, number = pin.get("ref"), pin.get("pin")
             if "no_connect" not in pin.get("pintype", "").split("+"):
-                pin_nets.setdefault(pin.get("ref"), {})[pin.get("pin")] = net.get("name").lstrip("/")
+                pin_nets.setdefault(ref, {})[number] = name
+            elif revision == "8S-D4":
+                unconnected.setdefault(ref, {})[number] = name
     nets = k.nets_for(board, (net for pins in pin_nets.values() for net in pins.values()))
+    for pins in unconnected.values():
+        for name in pins.values():
+            net = pcb.NETINFO_ITEM(board, name)
+            board.Add(net)
+            nets[name] = net
     front = iter(SIDE_SLOTS[False])
     back = iter(SIDE_SLOTS[True])
     pending = []
@@ -88,7 +105,7 @@ def build_board(*, target=TARGET, right_edge=159, place_remaining=None):
         name = CONNECTORS.get(ref) or part.findtext("footprint")
         assert name, ref
         mapping = {pin: nets[net] for pin, net in pin_nets.get(ref, {}).items()}
-        item = k.footprint(board, DRAFT, name, ref, part.findtext("value"), x, y, 0,
+        item = k.footprint(board, project, name, ref, part.findtext("value"), x, y, 0,
                            part.findtext("tstamps"), root_uuid,
                            mapping)
         if flipped:
@@ -98,7 +115,12 @@ def build_board(*, target=TARGET, right_edge=159, place_remaining=None):
         assert {pin for pin in mapping} <= {pad.GetNumber() for pad in item.Pads()}, ref
 
     if place_remaining is not None:
-        place_remaining(board, pending, pin_nets, nets, root_uuid, right_edge)
+        place_remaining(board, pending, pin_nets, nets, root_uuid, right_edge, project)
+    for item in board.GetFootprints():
+        nc_pads = unconnected.get(item.GetReference(), {})
+        for pad in item.Pads():
+            if pad.GetNumber() in nc_pads:
+                pad.SetNet(nets[nc_pads[pad.GetNumber()]])
     assert pcb.SaveBoard(str(target), board)
     contents = target.read_text(encoding="utf-8")
     for directory in (POWER, CONTROL):
@@ -113,7 +135,8 @@ def build_board(*, target=TARGET, right_edge=159, place_remaining=None):
     for fp in saved.GetFootprints():
         connected = {pad.GetNumber(): pad.GetNetname().lstrip("/")
                      for pad in fp.Pads() if pad.GetNetCode() > 0}
-        assert connected == pin_nets.get(fp.GetReference(), {}), fp.GetReference()
+        expected = pin_nets.get(fp.GetReference(), {}) | unconnected.get(fp.GetReference(), {})
+        assert connected == expected, fp.GetReference()
     print(f"{len(list(saved.GetFootprints()))} footprints, {right_edge - 75} x 34 mm, unrouted")
 
 

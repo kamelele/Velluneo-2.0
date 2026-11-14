@@ -1,5 +1,6 @@
 """Check the 8S draft export and exercise the permit logic at its digital boundaries."""
 
+import argparse
 from dataclasses import dataclass
 from hashlib import sha256
 import json
@@ -9,7 +10,7 @@ import subprocess
 import sys
 from xml.etree import ElementTree
 
-from rev8s_draft import CAPTURE, CONTROL, DEST, NAME, POWER_SOURCES, source_parts
+from rev8s_draft import CAPTURE, CONTROL, D4_DEST, D4_NAME, DEST, INHIBIT, NAME, POWER_SOURCES, source_parts
 
 
 @dataclass
@@ -52,11 +53,12 @@ def digest(path):
     return sha256(path.read_bytes()).hexdigest()
 
 
-def verify(export):
-    plan = source_parts()
-    schematic = (DEST / f"{NAME}.kicad_sch").resolve()
+def verify(export, revision="8S-D3"):
+    name, dest = (D4_NAME, D4_DEST) if revision == "8S-D4" else (NAME, DEST)
+    plan = source_parts(revision)
+    schematic = (dest / f"{name}.kicad_sch").resolve()
     original_hash = digest(schematic)
-    erc = DEST / "ERC.rpt"
+    erc = dest / "ERC.rpt"
     cli = Path(sys.executable).with_name("kicad-cli.exe")
     export.parent.mkdir(parents=True, exist_ok=True)
     export.unlink(missing_ok=True)
@@ -66,6 +68,7 @@ def verify(export):
     assert original_hash == digest(schematic)
     tree = ElementTree.parse(export)
     assert Path(tree.findtext("./design/source")).resolve() == schematic
+    assert tree.findtext("./design/sheet/title_block/rev") == revision
     components = {part.get("ref"): part for part in tree.findall("./components/comp")}
     assert set(components) == set(plan)
     expected = {(ref, pin): net for ref, part in plan.items() for pin, net in part["pins"].items()}
@@ -95,6 +98,12 @@ def verify(export):
     assert len([pin for ref, pin in actual if ref == "J3"]) == 2
     assert set(components).isdisjoint({"J101", "J102", "U3", "U4"})
 
+    if revision == "8S-D4":
+        assert components["U109"].findtext("footprint") == "Package_TO_SOT_SMD:SOT-23-6"
+        assert components["C28"].findtext("footprint") == "Capacitor_SMD:C_0805_2012Metric"
+        for ref in ("U109", "C28", "R33", "R39", "R40"):
+            assert components[ref].findtext("value") == plan[ref]["value"], ref
+
     text = erc.read_text(encoding="utf-8-sig")
     errors, warnings = map(int, re.search(r"Errors (\d+)  Warnings (\d+)", text).groups())
     assert (errors, warnings) == (0, 1)
@@ -105,7 +114,7 @@ def verify(export):
     erc.write_bytes(erc.read_bytes().replace(b"\r\n", b"\n"))
     report = {
         "status": "draft_map_match",
-        "revision": json.loads(CONTROL.read_text(encoding="utf-8"))["revision"],
+        "revision": revision,
         "exporter": tree.findtext("./design/tool"),
         "schematic_sha256": digest(schematic),
         "base_draft_map_sha256": digest(CAPTURE),
@@ -120,10 +129,17 @@ def verify(export):
         "permit_sequence_model": "passed",
         "approved_connectivity_contract": False,
     }
+    if revision == "8S-D4":
+        report["inhibit_map_sha256"] = digest(INHIBIT)
+        report["export_sha256"] = digest(export)
     payload = json.dumps(report, indent=2) + "\n"
-    (DEST / "Draft_Check.json").write_text(payload, encoding="utf-8", newline="\n")
+    (dest / "Draft_Check.json").write_text(payload, encoding="utf-8", newline="\n")
     print(payload, end="")
 
 
 if __name__ == "__main__":
-    verify(Path("workflow/8s/.work/rev8s-draft.xml"))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--revision", choices=("8S-D3", "8S-D4"), default="8S-D3")
+    revision = parser.parse_args().revision
+    filename = "rev8s-d4.xml" if revision == "8S-D4" else "rev8s-draft.xml"
+    verify(Path("workflow/8s/.work") / filename, revision)
