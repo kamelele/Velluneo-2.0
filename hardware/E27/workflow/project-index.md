@@ -32,3 +32,4 @@
 - [8S-D4 hardware inhibit and compact placement](8s/driver-8s-d4-inhibit.md) captures the 3.3 V undervoltage clamp and its fit on the 70 × 34 mm draft.
 - [Two-contact output and automatic restart](8s/driver-8s-two-contact.md) is the active design decision after D4. The D4 and earlier interlock designs are archived reference studies.
 - [D5 secondary circuit and footprint study](8s/driver-8s-two-contact-circuit.md) records the two-contact shutdown and retry path, probe limits and the 70 × 34 mm placement experiment.
+- [D5 two-level probe and hardware timing](8s/driver-8s-probe-timing.md) records transient discrimination, pulse and idle interval bounds, and the probe overvoltage cutoff candidate.
