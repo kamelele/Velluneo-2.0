@@ -1,6 +1,6 @@
 # Consolidated specification readiness and design responsibility
 
-VEL-SPEC-READINESS-01 r1, 2026-11-14. Preliminary review package; specification stage remains open. Input product packet revision 9, commit 2ef2b41108f5fe334be4c28f32f8fa52a7eb8188, blob 1963181ebe95987158387b6d1ebd70d7cb05e928, at hardware/E27/workflow/specification-reset/requirements-and-plan.md. Owner decisions are in the original conversation; this document creates no new approval.
+VEL-SPEC-READINESS-01 r2, 2026-11-14. Preliminary review package; specification stage remains open. Input product packet revision 9, commit 2ef2b41108f5fe334be4c28f32f8fa52a7eb8188, blob 1963181ebe95987158387b6d1ebd70d7cb05e928, at hardware/E27/workflow/specification-reset/requirements-and-plan.md. Owner decisions are in the original conversation; this document creates no new approval.
 
 ## Responsibility and authority
 
@@ -26,7 +26,7 @@ Verified source toolkit manifest: 05935449180ad59d486071675d9465ad4d15f1f66f3e17
 
 The exact local directory was /workspace/scratch/d4c1ae92033a/spec-contract, an isolated staging mirror of this documentation directory. No existing KiCad sources or project configurations were touched. Source validator identity in the report is standalone-candidate. This is a requirements preflight, not use of an installed project launcher. Trusted installable archive/digest, launcher lock and doctor remain pending before CAD. Do not misreport this run as completing those steps.
 
-Result: exit 1, passed=false, no configuration_error. The contract was parsed and produced 21 matrix rows and 17 open questions; nine current specification findings remain. This is incompleteness, not a tool failure or a passed gate.
+Result: exit 1, passed=false, no configuration_error. The contract was parsed and produced 21 matrix rows and 17 open questions; eight current specification findings remain. This is incompleteness, not a tool failure or a passed gate.
 
 | Finding | Actual remaining scope |
 |---|---|
@@ -37,10 +37,12 @@ Result: exit 1, passed=false, no configuration_error. The contract was parsed an
 | U14 | CCT and optical/distribution/appearance acceptance conditions and sample plan. |
 | U15 | Fixture/ventilation test definition and thermal worst-case orientation; 10–40°C/all positions are accepted. |
 | U16 | Safe-access, operating/fault behavior and technical acceptance basis before circuit implementation. No nominal voltage is a safety certificate. |
-| U17 | Booking/intermediate schedule plan; final deadline 30 September 2027 is accepted. Assess whether booking details belong at later execution gates rather than artificially blocking design. |
+
 | R-SPEC-PACKET | Review evidence for the complete current contract is absent. This file and past reviews alone do not close it. |
 
-Any future change to requirement text, unknowns or methods changes the intent digest; refresh affected evidence/reviews. The source-validator report is an observation of this draft, not evidence for its own completeness. No evidence records claim that measurements or supplier acceptance occurred.
+Any future change to requirement text, unknowns or methods changes the intent digest; refresh affected evidence/reviews. U17 bookings now block release/before affected execution rather than specification. U15 requires an early conditions/analysis plan; measured worst-case confirmation remains due later. U12/U17 before-test timing cannot be enforced by this stage-only requirements validator: retain a separate test-readiness/authorization check before every physical test, regardless of stage-check status.
+
+The source-validator report is an observation of this draft, not evidence for its own completeness. No evidence records claim that measurements or supplier acceptance occurred.
 
 ## Standards research — scope assessment still required
 
@@ -53,3 +55,7 @@ Full applicable text, exact product classification and relevant EN/Polish adopti
 Coordinator: prepare concrete proposed optical/environment/test acceptance and the safety/interface assessment; finish the controller/transformer and first-colour process feasibility comparisons; split mixed planning unknowns by the gate that genuinely needs them. Preserve accepted owner decisions while closing only the remaining technical parts.
 
 Then freeze the complete specification candidate, rerun the traceability check with genuine evidence, refresh all four role reviews and present a concise owner decision packet. Do not ask the non-expert owner to certify a mains circuit; their decision concerns the desired behavior and the reviewed stage packet. Schematic work is not authorized by this incomplete draft. No source/manufacturing order, supplier message, physical test or product certification is performed by creating these records.
+
+## Revision 2 synchronization
+
+requirements-and-plan.md r10 updates the historical CLI-status statement and aligns U08/U15/U17 with the corrected contract. Product performance and owner decisions are unchanged. The machine contract remains a draft with no evidence or approvals and an incomplete specification result. The r9 commit remains the interview baseline; r10 corrections are the current planning-state synchronization, not a new owner approval.
