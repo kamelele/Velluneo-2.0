@@ -30,17 +30,12 @@
     {
       "id": "U15",
       "gate": "specification",
-      "message": "Unresolved: Ambient 10\u201340\u00b0C and all operating orientations accepted on 2026-11-14. Explicit open/ventilated-fixture assumptions remain open; identify thermal worst-case orientation by analysis and test."
+      "message": "Unresolved: Ambient 10\u201340\u00b0C and all orientations are accepted. Define open/ventilated-fixture assumptions and the thermal worst-case analysis/test plan at specification. Actual worst-case measurements belong to R-ENV/U12 before the affected tests and release, not before design."
     },
     {
       "id": "U16",
       "gate": "specification",
       "message": "Unresolved: Define product-level safe-access behavior, normal/fault operating boundaries, applicable fault cases and recovery expectations; competent reviewer establishes the acceptance basis for residual energy, accessible surfaces and cooling. Numerical circuit implementation follows at U06."
-    },
-    {
-      "id": "U17",
-      "gate": "specification",
-      "message": "Unresolved: Final handover deadline 30 September 2027 accepted. Initial laboratory/iteration booking plan and intermediate milestones remain open; completion of the full prototype is required by the deadline."
     },
     {
       "id": "R-SPEC-PACKET",
@@ -637,7 +632,7 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Electrical/mechanical reviewers",
-      "question": "Select overtemperature behavior, thresholds and sensor-fault response; define absence/reversal/partial-contact abuse cases even though live replacement is forbidden.",
+      "question": "Select overtemperature behavior, thresholds and protection-fault response (including sensor faults only if a sensor is selected); define absence/reversal/partial-contact abuse cases even though live replacement is forbidden.",
       "blocks_stage": "schematic",
       "status": "open"
     },
@@ -700,7 +695,7 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Owner + coordinator + technical reviewer",
-      "question": "Ambient 10\u201340\u00b0C and all operating orientations accepted on 2026-11-14. Explicit open/ventilated-fixture assumptions remain open; identify thermal worst-case orientation by analysis and test.",
+      "question": "Ambient 10\u201340\u00b0C and all orientations are accepted. Define open/ventilated-fixture assumptions and the thermal worst-case analysis/test plan at specification. Actual worst-case measurements belong to R-ENV/U12 before the affected tests and release, not before design.",
       "blocks_stage": "specification",
       "status": "open"
     },
@@ -718,8 +713,8 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Owner + laboratory lead",
-      "question": "Final handover deadline 30 September 2027 accepted. Initial laboratory/iteration booking plan and intermediate milestones remain open; completion of the full prototype is required by the deadline.",
-      "blocks_stage": "specification",
+      "question": "Final handover deadline 30 September 2027 accepted; the proposed staged planning baseline is recorded. Confirm actual laboratory/iteration bookings before affected work/tests, without blocking ordinary design on bookings.",
+      "blocks_stage": "release",
       "status": "open"
     }
   ],
@@ -729,10 +724,10 @@
     "Hashes establish freshness, not evidence truth or reviewer authority.",
     "Electrical checks compare declared DC envelopes only, not complete operation."
   ],
-  "intent_digest": "a34bf4ab06c86a44c27f62777c47f83cf80d217a32efd98300cf895fea0fdd7b",
+  "intent_digest": "5f5a06d4342fe1db64343d62caa0ce48a4d757a069789483361b8f1ef6366aa2",
   "product": "Velluneo E27 repairable LED lamp",
-  "revision": "specification-contract-draft-1",
-  "document_sha256": "558d12103d3e4966adba5591e489f9edd2fb3ad8137472149b328e49104a5c42",
+  "revision": "specification-contract-draft-2",
+  "document_sha256": "ed6852df70fdac2f9ea172fedf7f4699683b978b0d19dfa82577dd8bd5d70b47",
   "blockers": [
     {
       "id": "U01",
@@ -772,7 +767,7 @@
     {
       "id": "U08",
       "gate": "schematic",
-      "message": "Unresolved: Select overtemperature behavior, thresholds and sensor-fault response; define absence/reversal/partial-contact abuse cases even though live replacement is forbidden."
+      "message": "Unresolved: Select overtemperature behavior, thresholds and protection-fault response (including sensor faults only if a sensor is selected); define absence/reversal/partial-contact abuse cases even though live replacement is forbidden."
     },
     {
       "id": "U09",
@@ -807,7 +802,7 @@
     {
       "id": "U15",
       "gate": "specification",
-      "message": "Unresolved: Ambient 10\u201340\u00b0C and all operating orientations accepted on 2026-11-14. Explicit open/ventilated-fixture assumptions remain open; identify thermal worst-case orientation by analysis and test."
+      "message": "Unresolved: Ambient 10\u201340\u00b0C and all orientations are accepted. Define open/ventilated-fixture assumptions and the thermal worst-case analysis/test plan at specification. Actual worst-case measurements belong to R-ENV/U12 before the affected tests and release, not before design."
     },
     {
       "id": "U16",
@@ -816,8 +811,8 @@
     },
     {
       "id": "U17",
-      "gate": "specification",
-      "message": "Unresolved: Final handover deadline 30 September 2027 accepted. Initial laboratory/iteration booking plan and intermediate milestones remain open; completion of the full prototype is required by the deadline."
+      "gate": "release",
+      "message": "Unresolved: Final handover deadline 30 September 2027 accepted; the proposed staged planning baseline is recorded. Confirm actual laboratory/iteration bookings before affected work/tests, without blocking ordinary design on bookings."
     },
     {
       "id": "R-PURPOSE",
