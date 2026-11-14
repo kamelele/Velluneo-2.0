@@ -1,6 +1,6 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 3, 2026-11-14.
+Packet: VEL-SPEC-RESET-01, revision 4, 2026-11-14.
 Status: interview-derived draft; not an approved specification-stage packet.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
 Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
@@ -17,7 +17,7 @@ The old 8S/D5 architecture is historical input. Eight LEDs, two contacts, 70 × 
 
 ## 2. Requirements confirmed in the interview
 
-Requirement rows are revision 1 except R-LIGHT and R-CCT (revision 2, incorporating the owner's accepted optical targets). Packet revision 3 records those decisions and a conditional ambient proposal. Product decisions belong to the owner; engineering acceptance plans belong to the coordinator and assigned technical reviewer. All physical verification is pending. 'Schematic', 'placement' and 'release' identify the gate by which implementation intent or evidence is needed, not permission to proceed now.
+Requirement rows are revision 1 except R-LIGHT, R-CCT and R-ENV (revision 2, incorporating owner-accepted optical and ambient targets). Packet revision 4 confirms the prototype ambient scope. Product decisions belong to the owner; engineering acceptance plans belong to the coordinator and assigned technical reviewer. All physical verification is pending. 'Schematic', 'placement' and 'release' identify the gate by which implementation intent or evidence is needed, not permission to proceed now.
 
 | ID | Requirement | Acceptance approach and due gate |
 |---|---|---|
@@ -28,7 +28,7 @@ Requirement rows are revision 1 except R-LIGHT and R-CCT (revision 2, incorporat
 | R-COMPAT | One base accepts all three panels without settings, switches or user configuration. | Freeze a compatible electrical/mechanical interface before schematic/placement; demonstrate each variant on the same base. |
 | R-REPLACE | Tool-free intuitive replacement; prevent incorrect installation. | Freeze mechanical keying/retention and contact sequence before placement; assess wrong orientation, partial insertion and repeat replacement. |
 | R-OFFLINE | Replacement only after unscrewing from the socket and waiting for cooling/discharge. | Determine safe-access conditions and delay by analysis and measurement; instructions alone are not evidence of safety. Limits before schematic, geometry before placement, measured confirmation before release. |
-| R-ENV | Dry domestic interiors; open or ventilated fixtures. Closed fixtures, damp locations and outdoor use are outside prototype scope. | Define rated ambient, ventilation assumptions and operating orientations before schematic/placement; test thermal worst cases before release. |
+| R-ENV | Dry domestic interiors, ambient 10–40°C; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope. | Ambient range accepted; define ventilation assumptions and operating orientations at specification; test thermal worst cases before release. |
 | R-DIFFUSER | Removable milky diffuser hides individual LEDs and provides broad illumination including the sides. | Agree distribution and appearance criteria at specification; check fit before placement and optical performance on the complete lamp. |
 | R-FAULT | An open/failed panel, missing panel and shorted panel must not damage the base. | Define representative faults and duration before schematic; validate protection and temperatures before release. After offline panel replacement, power cycling restores normal operation without reset or fuse replacement. |
 | R-EMPTY | The energized base can remain without a panel without damage or overheating. | Define duration and accessible-part limits before schematic; verify no-load behavior and recovery with the approved test fixture. This does not authorize live replacement. |
@@ -50,7 +50,7 @@ The owner reports access to university laboratories for flux, colour, CRI, safet
 |---|---|---|
 | P-OPTICS | 750–850 lm per variant; brightest/dimmest ratio no greater than 1.10 under the same stabilized conditions. | OWNER ACCEPTED on 2026-11-14 in this conversation. Both limits must hold; conditions/sample plan remain open. This accepts desired performance, not measured compliance. |
 | P-CRI | CRI Ra ≥80 for all variants. | OWNER ACCEPTED on 2026-11-14 in this conversation. Not a measured result. |
-| P-AMBIENT | Proposed 10–40°C ambient. | CONDITIONAL only: owner accepted if comparable to ordinary retail lamps. Manufacturer example Philips MASTER LEDbulb DT 8-60W E27 A60 CL specifies −20 to +45°C; 10–40°C is narrower than that example. No universal market classification/equivalence established. Ask whether narrower prototype scope is acceptable; U15 remains open. Source: https://www.signify.com/api/assets/v1/file/Signify/content/929002490221_EU.en_AE.PROF.FP/MAS_LEDbulb_DT_8_60W_E27_A60_CL.pdf (checked 2026-11-14). |
+| P-AMBIENT | Ambient 10–40°C for the first prototype. | OWNER ACCEPTED on 2026-11-14 after clarification that this is a narrower prototype scope, not retail-range equivalence. Wider-temperature operation is outside current scope. |
 | P-SUPPLY | Evaluate 207–253 V AC / 50 Hz as the initial normal-operation screening range. | Requires competent review of the applicable supply/product requirements; not a complete surge or fault envelope. |
 | P-ISOLATION | Compare an isolated driver first because the LED panel is user-accessible. | A starting architecture preference only. Determine actual protection class, insulation system, barriers, contact voltage/energy and safe-access limits before schematic. Do not equate low voltage or an isolation label with proven safety. |
 | P-SIMPLICITY | Remove the requirement for live-insertion recognition and retry probes. | Consider omitting their implementation only after showing the simpler driver meets open/short/no-load and residual-energy requirements. |
@@ -88,7 +88,7 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 | U12 | Confirm available calibrated instruments, personnel, samples, test limits and stop conditions. Release evidence must cover actual operating/fault conditions. | Laboratory lead + owner | Release / each affected physical test |
 | U13 | Establish BOM availability, exact costs, release outputs, matched revisions and test/programming/assembly instructions. | Coordinator + supplier + owner | Release |
 | U14 | Agree nominal CCT tolerances, stabilized optical acceptance conditions and sample plan; approve a distribution/appearance criterion and assessment method, including side illumination and hidden LED points. | Owner + coordinator + laboratory lead | Specification |
-| U15 | Establish rated ambient range, operating orientations and explicit open/ventilated-fixture assumptions for thermal feasibility. | Owner + coordinator + technical reviewer | Specification |
+| U15 | Ambient range 10–40°C accepted on 2026-11-14; operating orientations and explicit open/ventilated-fixture assumptions remain open for thermal feasibility. | Owner + coordinator + technical reviewer | Specification |
 | U16 | Define product-level safe-access behavior, normal/fault operating boundaries, applicable fault cases and recovery expectations; competent reviewer establishes the acceptance basis for residual energy, accessible surfaces and cooling. Numerical circuit implementation follows at U06. | Electrical reviewer + owner + laboratory lead | Specification |
 | U17 | Agree an exact final handover date within September 2027 and an initial laboratory/iteration booking plan. | Owner + laboratory lead | Specification / schedule baseline |
 
@@ -144,3 +144,7 @@ Human approval: NOT GIVEN. Next owner action: review desired behavior, proposed 
 Owner decision in the current conversation, 2026-11-14: accepted proposed brightness and colour rendering; accepted 10–40°C only if comparable to ordinary bulbs. Record P-OPTICS/P-CRI as confirmed performance intent and P-AMBIENT as conditional, pending clarification after manufacturer comparison. No exact message URL is available; the original conversation remains the approval source. This does not approve the full packet or any circuit.
 
 The four review reports in review-status.md cover the exact revision 2 hash only. Revision 3 changes optical requirement text, adds manufacturer comparison and records owner decisions. Affected requirements/contracts/digests and reviews must be refreshed for a future formal gate. No formal requirements check, new independent review, CAD check or physical measurement is claimed for revision 3. All other open questions and the integration-index task remain open.
+
+## 10. Revision 4 owner decision
+
+On 2026-11-14, after the narrower-than-retail temperature comparison and a direct question about retaining 10–40°C for the first prototype, the owner confirmed: "Так, можем устаљити." This records acceptance of ambient 10–40°C for the prototype, not a measured thermal pass or full specification-stage approval. U15 remains partially open for orientation and ventilation conditions. No wider-temperature compatibility is claimed. Revision 2 review reports remain historical; affected formal-gate reviews and requirement evidence must be refreshed when the full specification is frozen. No CAD or physical test changes.
