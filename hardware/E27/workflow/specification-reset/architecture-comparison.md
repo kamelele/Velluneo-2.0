@@ -1,6 +1,6 @@
 # Velluneo architecture comparison — preliminary recommendation
 
-Record VEL-ARCH-01 revision 1, 2026-11-14. Status: engineering proposal within specification; no selected circuit, stage approval, CAD changes or manufacturing authorization.
+Record VEL-ARCH-01 revision 2, 2026-11-14. Status: owner-selected architecture A within specification; no selected circuit, full-stage approval, CAD changes or manufacturing authorization.
 Input: requirements-and-plan.md packet revision 6, repository file blob ff6cb3b4640164cbd3d4037c002d571d7c52e0dc, on spec/owner-interview-reset-2026-11-14. Coordinator owns this note. Technical review and final gate reviews are pending.
 
 ## Decision to make
@@ -19,11 +19,11 @@ A constant-current (CC) driver controls the LED operating current. A constant-vo
 
 These are alternative functional partitions, not approved schematics. A transformer/barrier alone does not establish reinforced insulation, accessible-contact safety or suitable fault behavior.
 
-## Initial recommendation
+## Selected direction and engineering recommendation
 
-Investigate A first, with C as the principal fallback if output ripple, controllability, sourcing or integration makes A unsuitable. Keep B available only if per-panel current adjustment demonstrably provides a necessary benefit that cannot be achieved economically by LED selection in A/C.
+The owner selected A on 2026-11-14: "tak robimy wariant A". Develop the isolated constant-current base and simple replaceable panel as the primary architecture. C and B remain comparison alternatives only; changing the selected architecture requires an explained owner decision if A proves infeasible. Selection of A does not establish optical matching, cost, safety, efficiency or physical fit.
 
-This is a provisional engineering judgment based on repairability and panel-cost requirements, not a quantified claim that A is cheapest or most efficient. No BOM quote, transformer supply confirmation, layout feasibility or measured efficiency exists yet. The comparison must be revisited once real LED operating data and supplier constraints are known.
+The recommendation was based on repairability and panel-cost requirements; owner selection does not constitute a quantified claim that A is cheapest or most efficient. No BOM quote, transformer supply confirmation, layout feasibility or measured efficiency exists yet. The comparison must be revisited once real LED operating data and supplier constraints are known.
 
 Do not copy the old LYTSwitch circuit automatically. The old part family is evidence of an available functional approach, not a qualified part choice for the new power range. Do not select the old 270 mA, eight LEDs, voltage thresholds or 70 × 34 mm by default.
 
@@ -55,6 +55,10 @@ For initial optical/thermal characterization, panel samples may need to be built
 
 ## Remaining owner and expert inputs
 
-Owner can accept A as the first architecture to investigate without accepting a specific circuit. Numeric CCT/distribution/appearance tolerances, supply envelope, service-access criteria, named technical reviewers, exact fabrication/assembly feasibility and lab bookings remain open per the specification packet. This note does not close those questions.
+Owner has accepted A as the architecture direction without accepting a specific circuit. Numeric CCT/distribution/appearance tolerances, supply envelope, service-access criteria, named technical reviewers, exact fabrication/assembly feasibility and lab bookings remain open per the specification packet. This note does not close those questions.
 
 Checks performed: requirement/document comparison and primary manufacturer-source lookup only. No toolkit requirements CLI, doctor, electrical simulation, ERC, DRC, intended-connectivity export, thermal model or physical measurement performed for this note. Revision-2 packet reviews do not automatically cover this new note. Independent architecture reviews and final specification review remain pending.
+
+## Owner decision record
+
+On 2026-11-14 the owner stated "tak robimy wariant A" in the current conversation, after receiving the comparison. Accepted scope: isolated current-regulated driver in the base and a simple LED panel. Exact LED count, operating current/voltage, transformer/controller, connector/contact count, protection implementation and PCB geometry remain open. No permanent message URL is available; retain the source conversation. This decision does not approve the entire specification packet or authorize schematic-stage progression, manufacture or physical tests. No new independent review or physical validation is claimed for this revision.
