@@ -27,3 +27,4 @@
 - [8S-D2 startup and short control](8s/driver-8s-control.md) captures the complete candidate permit path and records verification and remaining prototype checks.
 - [8S-D3 schematic corrections and review](8s/driver-8s-d3-review.md) records the timer input, hold supply, fresh checks and remaining brownout and re-enable cases.
 - [8S-D3 brownout check and unrouted 3D placement study](8s/driver-8s-d3-placement-preview.md) records the conditional re-enable path and the draft PCB preview.
+- [8S restart decision and hardware-inhibit candidate](8s/driver-8s-restart.md) records the power-good clamp, restart alternatives, state checks and energy screens.
