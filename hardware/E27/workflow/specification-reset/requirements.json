@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo E27 repairable LED lamp",
-  "revision": "specification-contract-draft-2",
+  "revision": "specification-contract-draft-3",
   "subsystems": [
     {
       "id": "BASE",
@@ -165,26 +165,26 @@
     },
     {
       "id": "R-OFFLINE",
-      "revision": "interview-r9",
+      "revision": "interview-r11",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
-      "text": "Replacement only after unscrewing from the socket and waiting for cooling/discharge.",
+      "text": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
       "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
       "acceptance": "Determine safe-access conditions and delay by analysis and measurement; instructions alone are not evidence of safety. Limits before schematic, geometry before placement, measured confirmation before release.",
       "gate": "release",
       "implementation": [
         {
           "subsystem": "BASE",
-          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge.",
+          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
           "path": "requirements-and-plan.md"
         },
         {
           "subsystem": "PANEL",
-          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge.",
+          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
           "path": "requirements-and-plan.md"
         },
         {
           "subsystem": "BODY",
-          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge.",
+          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
           "path": "requirements-and-plan.md"
         }
       ],
@@ -221,21 +221,21 @@
     },
     {
       "id": "R-DIFFUSER",
-      "revision": "interview-r9",
+      "revision": "interview-r11",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
-      "text": "Removable milky diffuser hides individual LEDs and provides broad illumination including the sides.",
+      "text": "Removable milky diffuser hides individual LEDs and provides broad side illumination assessed against an ordinary milky E27 lamp around 800 lm. Emission towards the cap is not required.",
       "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
       "acceptance": "Agree distribution and appearance criteria at specification; check fit before placement and optical performance on the complete lamp.",
       "gate": "release",
       "implementation": [
         {
           "subsystem": "PANEL",
-          "object": "Removable milky diffuser hides individual LEDs and provides broad illumination including the sides.",
+          "object": "Removable milky diffuser hides individual LEDs and provides broad side illumination assessed against an ordinary milky E27 lamp around 800 lm. Emission towards the cap is not required.",
           "path": "requirements-and-plan.md"
         },
         {
           "subsystem": "BODY",
-          "object": "Removable milky diffuser hides individual LEDs and provides broad illumination including the sides.",
+          "object": "Removable milky diffuser hides individual LEDs and provides broad side illumination assessed against an ordinary milky E27 lamp around 800 lm. Emission towards the cap is not required.",
           "path": "requirements-and-plan.md"
         }
       ],
@@ -484,26 +484,26 @@
     },
     {
       "id": "R-DEMO",
-      "revision": "interview-r9",
+      "revision": "interview-r11",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
-      "text": "Deliver one complete, integrated, laboratory-tested and documented prototype ready for presentations no later than 30 September 2027; iterations allowed before this final deadline.",
+      "text": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
       "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
       "acceptance": "Final deadline accepted: 30 September 2027. Agree detailed test scope and intermediate bookings; retain matched hardware revisions and actual reports. Commercial certification and sales release are not automatically included.",
       "gate": "release",
       "implementation": [
         {
           "subsystem": "BASE",
-          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype ready for presentations no later than 30 September 2027; iterations allowed before this final deadline.",
+          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
           "path": "requirements-and-plan.md"
         },
         {
           "subsystem": "PANEL",
-          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype ready for presentations no later than 30 September 2027; iterations allowed before this final deadline.",
+          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
           "path": "requirements-and-plan.md"
         },
         {
           "subsystem": "BODY",
-          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype ready for presentations no later than 30 September 2027; iterations allowed before this final deadline.",
+          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
           "path": "requirements-and-plan.md"
         }
       ],
@@ -663,7 +663,7 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Owner + coordinator + laboratory lead",
-      "question": "Agree nominal CCT tolerances, stabilized optical acceptance conditions and sample plan; approve a distribution/appearance criterion and assessment method, including side illumination and hidden LED points.",
+      "question": "Owner accepted an ordinary milky approximately 800 lm E27 lamp as distribution reference, without cap-direction emission. Select exact reference/comparison conditions; finalize CCT tolerances, stabilized optical conditions and sample plan.",
       "blocks_stage": "specification",
       "status": "open"
     },
@@ -681,7 +681,7 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Electrical reviewer + owner + laboratory lead",
-      "question": "Define product-level safe-access behavior, normal/fault operating boundaries, applicable fault cases and recovery expectations; competent reviewer establishes the acceptance basis for residual energy, accessible surfaces and cooling. Numerical circuit implementation follows at U06.",
+      "question": "Owner accepted separate base shielding: only panel/mounting accessible after diffuser removal. Define remaining normal/fault, recovery, residual-energy and cooling criteria through coordinator and independent technical reviews; implementation follows U06.",
       "blocks_stage": "specification",
       "status": "open"
     },
