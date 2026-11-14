@@ -1,6 +1,6 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 5, 2026-11-14.
+Packet: VEL-SPEC-RESET-01, revision 6, 2026-11-14.
 Status: interview-derived draft; not an approved specification-stage packet.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
 Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
@@ -17,7 +17,7 @@ The old 8S/D5 architecture is historical input. Eight LEDs, two contacts, 70 × 
 
 ## 2. Requirements confirmed in the interview
 
-Requirement rows are revision 1 except R-LIGHT/R-CCT/R-PANEL-LIFE (revision 2) and R-ENV (revision 3). Packet revision 5 records owner-accepted operating orientations and panel lifetime target. Product decisions belong to the owner; engineering acceptance plans belong to the coordinator and assigned technical reviewer. All physical verification is pending. 'Schematic', 'placement' and 'release' identify the gate by which implementation intent or evidence is needed, not permission to proceed now.
+Requirement rows are revision 1 except R-LIGHT/R-CCT/R-PANEL-LIFE/R-REPLACE/R-DEMO (revision 2) and R-ENV (revision 3). Packet revision 6 records the minimum replacement-cycle count and final handover deadline. Product decisions belong to the owner; engineering acceptance plans belong to the coordinator and assigned technical reviewer. All physical verification is pending. 'Schematic', 'placement' and 'release' identify the gate by which implementation intent or evidence is needed, not permission to proceed now.
 
 | ID | Requirement | Acceptance approach and due gate |
 |---|---|---|
@@ -26,7 +26,7 @@ Requirement rows are revision 1 except R-LIGHT/R-CCT/R-PANEL-LIFE (revision 2) a
 | R-LIGHT | 750–850 lm emitted by each complete lamp variant with its diffuser fitted (owner accepted). | Stabilized conditions/sample plan remain to be agreed at specification; measure before final demonstration. |
 | R-CCT | Panels in nominal 2700 K, 4000 K and 6500 K; brightest/dimmest flux ratio ≤1.10 and CRI Ra ≥80 (owner accepted). | Agree CCT tolerances and stabilized conditions at specification; measure all three variants. |
 | R-COMPAT | One base accepts all three panels without settings, switches or user configuration. | Freeze a compatible electrical/mechanical interface before schematic/placement; demonstrate each variant on the same base. |
-| R-REPLACE | Tool-free intuitive replacement; prevent incorrect installation. | Freeze mechanical keying/retention and contact sequence before placement; assess wrong orientation, partial insertion and repeat replacement. |
+| R-REPLACE | Tool-free intuitive replacement; prevent incorrect installation. Minimum 50 complete panel replacement and diffuser reclosing cycles without damage to mountings or loss of reliable electrical contact. | Freeze mechanical keying/retention and contact sequence before placement; assess wrong orientation, partial insertion and at least 50 full replacement/reclosing cycles. Keep 100 cycles as a stretch goal only. |
 | R-OFFLINE | Replacement only after unscrewing from the socket and waiting for cooling/discharge. | Determine safe-access conditions and delay by analysis and measurement; instructions alone are not evidence of safety. Limits before schematic, geometry before placement, measured confirmation before release. |
 | R-ENV | Dry domestic interiors, ambient 10–40°C; all operating orientations, including base up, base down and horizontal; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope. | Ambient range and all orientations accepted; define ventilation assumptions at specification; identify and test thermal worst-case orientation before release. |
 | R-DIFFUSER | Removable milky diffuser hides individual LEDs and provides broad illumination including the sides. | Agree distribution and appearance criteria at specification; check fit before placement and optical performance on the complete lamp. |
@@ -40,7 +40,7 @@ Requirement rows are revision 1 except R-LIGHT/R-CCT/R-PANEL-LIFE (revision 2) a
 | R-SIZE | Compare a conventional-bulb-sized concept with a moderately larger concept that improves cooling and replacement. | Present actual envelopes and tradeoffs for owner selection before placement; no existing board size is binding. |
 | R-COST | Prefer rational cost and future manufacturability; no fixed prototype budget. | Compare BOM, sourcing, assembly and tooling costs during architecture and release reviews. No invented cost ceiling. |
 | R-BUILD | Prefer JLCPCB fabrication and populated PCB delivery; laboratory assembly is a fallback. | Confirm actual service, component availability and any transformer/THT/manual work before process acceptance and release. Housing and lamp assembly are separate. |
-| R-DEMO | Deliver one complete, laboratory-tested prototype for presentations by September 2027; iterations allowed. | Agree final review date and test scope; retain matched hardware revisions and actual reports. Commercial certification and sales release are not automatically included. |
+| R-DEMO | Deliver one complete, integrated, laboratory-tested and documented prototype ready for presentations no later than 30 September 2027; iterations allowed before this final deadline. | Final deadline accepted: 30 September 2027. Agree detailed test scope and intermediate bookings; retain matched hardware revisions and actual reports. Commercial certification and sales release are not automatically included. |
 
 The owner reports access to university laboratories for flux, colour, CRI, safety and interference measurements, with experienced support, and holds SEP qualifications. Instruments, calibrated methods, responsible people and availability remain unverified planning inputs. This packet records no physical tests.
 
@@ -55,7 +55,7 @@ The owner reports access to university laboratories for flux, colour, CRI, safet
 | P-ISOLATION | Compare an isolated driver first because the LED panel is user-accessible. | A starting architecture preference only. Determine actual protection class, insulation system, barriers, contact voltage/energy and safe-access limits before schematic. Do not equate low voltage or an isolation label with proven safety. |
 | P-SIMPLICITY | Remove the requirement for live-insertion recognition and retry probes. | Consider omitting their implementation only after showing the simpler driver meets open/short/no-load and residual-energy requirements. |
 
-One hundred mechanical replacement cycles is an owner-accepted stretch goal, not a prototype pass/fail requirement. Minimum cycle life remains open. A replacement diffuser is a future product direction; the present requirement is repeat removal and refitting. Optional dimmable-driver work must have a separate scope and must not block the basic prototype.
+One hundred mechanical replacement cycles is an owner-accepted stretch goal, not a prototype pass/fail requirement. Minimum 50 full panel-replacement and diffuser-reclosing cycles is required; mountings and reliable electrical contact must remain intact. A replacement diffuser is a future product direction; the present requirement is repeat removal and refitting. Optional dimmable-driver work must have a separate scope and must not block the basic prototype.
 
 ## 4. Subsystems, interfaces and four profile layers
 
@@ -75,7 +75,7 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 | ID | Question / closure evidence | Owner | First blocked gate |
 |---|---|---|---|
 | U01 | P-OPTICS and P-CRI accepted by owner on 2026-11-14; P-SUPPLY and its technical basis remain open. Optical measurement conditions are still tracked at U14. | Owner + technical reviewer | Specification |
-| U02 | Panel target 15,000 h / ≥70% initial flux accepted on 2026-11-14. Define sample/population acceptance, catastrophic-failure treatment, maintenance measurement conditions and minimum replacement cycles; these remain open. | Owner + coordinator | Specification |
+| U02 | Panel target 15,000 h / ≥70% initial flux accepted on 2026-11-14. Define sample/population acceptance, catastrophic-failure treatment, maintenance measurement conditions remain open. Minimum replacement life is now accepted as 50 complete panel-replacement/diffuser-reclosing cycles. | Owner + coordinator | Specification |
 | U03 | Name competent electrical reviewer and responsible laboratory person; establish a feasible proposed fabrication/assembly route, explicitly listing unconfirmed supplier constraints. Detailed order evidence remains due at U11/U13. | Owner + coordinator | Specification |
 | U04 | Select exact laboratory-demo scope versus external qualification; identify applicable product/safety/EMC/flicker requirements without assuming old limits. | Technical reviewer + owner | Specification |
 | U05 | Select driver architecture and LED candidates using power, tolerance, thermal and cost calculations; no fixed LED count or current. | Coordinator + independent reviewer | Schematic |
@@ -90,7 +90,7 @@ Before schematic, define BASE–PANEL voltage/current windows, polarity, source/
 | U14 | Agree nominal CCT tolerances, stabilized optical acceptance conditions and sample plan; approve a distribution/appearance criterion and assessment method, including side illumination and hidden LED points. | Owner + coordinator + laboratory lead | Specification |
 | U15 | Ambient 10–40°C and all operating orientations accepted on 2026-11-14. Explicit open/ventilated-fixture assumptions remain open; identify thermal worst-case orientation by analysis and test. | Owner + coordinator + technical reviewer | Specification |
 | U16 | Define product-level safe-access behavior, normal/fault operating boundaries, applicable fault cases and recovery expectations; competent reviewer establishes the acceptance basis for residual energy, accessible surfaces and cooling. Numerical circuit implementation follows at U06. | Electrical reviewer + owner + laboratory lead | Specification |
-| U17 | Agree an exact final handover date within September 2027 and an initial laboratory/iteration booking plan. | Owner + laboratory lead | Specification / schedule baseline |
+| U17 | Final handover deadline 30 September 2027 accepted. Initial laboratory/iteration booking plan and intermediate milestones remain open; completion of the full prototype is required by the deadline. | Owner + laboratory lead | Specification / schedule baseline |
 
 Unknowns remain open; none are resolved by a convenient default. Assign named people before their gate. More unknowns may emerge from architecture work.
 
@@ -111,7 +111,7 @@ A completed DRC, calculation or simulated fault is not physical validation. Reco
 
 ## 7. Proposed staged schedule
 
-These are planning windows, not promised supplier/laboratory bookings. The owner deadline is September 2027; the exact handover date is open.
+These are planning windows, not promised supplier/laboratory bookings. The owner-confirmed final handover deadline is 30 September 2027. Earlier internal dates remain proposed planning milestones, not confirmed bookings.
 
 | Window | Work and exit |
 |---|---|
@@ -121,7 +121,7 @@ These are planning windows, not promised supplier/laboratory bookings. The owner
 | Apr–May 2027 | Release review, separately authorized prototype order and first supervised laboratory bring-up. Panel samples may be needed earlier for driver compliance/thermal decisions. |
 | Jun–Jul 2027 | Integrate enclosure/diffuser, measure all variants, correct defects and make a further iteration if needed. |
 | Aug 2027 | Final measurements, documentation and demonstration procedure; preserve schedule contingency. |
-| Sep 2027 | One reviewed integrated prototype with evidence and explicit remaining limitations. |
+| Sep 2027 | Final corrections, documentation and presentation preparation; by 30 September deliver one complete, integrated, reviewed and tested prototype with its evidence and stated limitations. This is the final completion deadline, not the start of integration. |
 
 Every stage has a frozen packet, independent reviews, fresh applicable checks and explicit human decision. Ordering, physical testing and public demonstration each require their appropriate authorization and conditions; starting this project does not grant them.
 
@@ -152,3 +152,7 @@ On 2026-11-14, after the narrower-than-retail temperature comparison and a direc
 ## 11. Revision 5 owner decisions
 
 On 2026-11-14 the owner accepted every operating orientation and the proposed panel lifetime plan, in response to a question explicitly describing 15,000 h with at least 70% initial light output and the limitation of short-term testing. Record base-up, base-down and horizontal as required test orientations, plus any intermediate worst case identified. The panel L70 figure is a design target, not demonstrated lifetime; it does not specify a B-value/population failure fraction or catastrophic-failure allowance, which remain U02 questions. U15 remains partly open for fixture/ventilation conditions. Full packet approval is absent; revision 2 reviews are historical and affected formal-gate reviews must be refreshed. No CAD, orders or physical test results changed.
+
+## 12. Revision 6 owner decisions
+
+On 2026-11-14 the owner rejected the proposed 20-cycle minimum and required at least 50 full panel replacement and diffuser reclosing cycles without mounting damage; the earlier no-contact-degradation acceptance proposal is retained. One hundred cycles remains an optional stretch target. The owner confirmed 30 September 2027 must be final completion of the entire prototype, not an intermediate electronics milestone. Existing scope remains one complete tested prototype, not commercial series-production authorization. Targeting main assembly/tests by end of August remains a proposed internal schedule; it is not a separate owner-approved deadline. U02 remains open for lifetime population/failure and measurement details; U17 remains partly open for bookings and intermediate milestones. No full-stage approval, updated formal review, CAD check or physical result is claimed.
