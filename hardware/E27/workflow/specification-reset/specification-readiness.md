@@ -37,7 +37,6 @@ Result: exit 1, passed=false, no configuration_error. The contract was parsed an
 | U14 | CCT and optical/distribution/appearance acceptance conditions and sample plan. |
 | U15 | Fixture/ventilation test definition and thermal worst-case orientation; 10–40°C/all positions are accepted. |
 | U16 | Safe-access, operating/fault behavior and technical acceptance basis before circuit implementation. No nominal voltage is a safety certificate. |
-
 | R-SPEC-PACKET | Review evidence for the complete current contract is absent. This file and past reviews alone do not close it. |
 
 Any future change to requirement text, unknowns or methods changes the intent digest; refresh affected evidence/reviews. U17 bookings now block release/before affected execution rather than specification. U15 requires an early conditions/analysis plan; measured worst-case confirmation remains due later. U12/U17 before-test timing cannot be enforced by this stage-only requirements validator: retain a separate test-readiness/authorization check before every physical test, regardless of stage-check status.
@@ -59,3 +58,4 @@ Then freeze the complete specification candidate, rerun the traceability check w
 ## Revision 2 synchronization
 
 requirements-and-plan.md r10 updates the historical CLI-status statement and aligns U08/U15/U17 with the corrected contract. Product performance and owner decisions are unchanged. The machine contract remains a draft with no evidence or approvals and an incomplete specification result. The r9 commit remains the interview baseline; r10 corrections are the current planning-state synchronization, not a new owner approval.
+
