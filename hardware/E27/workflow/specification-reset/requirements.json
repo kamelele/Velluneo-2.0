@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo E27 repairable LED lamp",
-  "revision": "specification-contract-draft-1",
+  "revision": "specification-contract-draft-2",
   "subsystems": [
     {
       "id": "BASE",
@@ -609,7 +609,7 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Electrical/mechanical reviewers",
-      "question": "Select overtemperature behavior, thresholds and sensor-fault response; define absence/reversal/partial-contact abuse cases even though live replacement is forbidden.",
+      "question": "Select overtemperature behavior, thresholds and protection-fault response (including sensor faults only if a sensor is selected); define absence/reversal/partial-contact abuse cases even though live replacement is forbidden.",
       "blocks_stage": "schematic",
       "status": "open"
     },
@@ -672,7 +672,7 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Owner + coordinator + technical reviewer",
-      "question": "Ambient 10–40°C and all operating orientations accepted on 2026-11-14. Explicit open/ventilated-fixture assumptions remain open; identify thermal worst-case orientation by analysis and test.",
+      "question": "Ambient 10–40°C and all orientations are accepted. Define open/ventilated-fixture assumptions and the thermal worst-case analysis/test plan at specification. Actual worst-case measurements belong to R-ENV/U12 before the affected tests and release, not before design.",
       "blocks_stage": "specification",
       "status": "open"
     },
@@ -690,8 +690,8 @@
       "record_id": "R-SPEC-PACKET",
       "field": "acceptance",
       "owner": "Owner + laboratory lead",
-      "question": "Final handover deadline 30 September 2027 accepted. Initial laboratory/iteration booking plan and intermediate milestones remain open; completion of the full prototype is required by the deadline.",
-      "blocks_stage": "specification",
+      "question": "Final handover deadline 30 September 2027 accepted; the proposed staged planning baseline is recorded. Confirm actual laboratory/iteration bookings before affected work/tests, without blocking ordinary design on bookings.",
+      "blocks_stage": "release",
       "status": "open"
     }
   ],
