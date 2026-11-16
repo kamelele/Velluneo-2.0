@@ -1,0 +1,151 @@
+{
+  "study": "VEL-CTRL-EVIDENCE-01",
+  "date": "2026-11-16",
+  "method": "Archive/text audit only; no new simulation or decryption",
+  "pspice_archive_SHA256": "b58a5070f5f94132cc7e7cd7d0be0e7484e3e743a80283aa0d745d4436926441",
+  "entries": [
+    {
+      "path": "UCC28710_PSPICE_TRANS/",
+      "bytes": 0
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/",
+      "bytes": 0
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/",
+      "bytes": 0
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/Test_UCC28710_Low_Side.ALS",
+      "bytes": 2899
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/Test_UCC28710_Low_Side.net",
+      "bytes": 1137
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/Test_UCC28710_Low_Side_sch.prp",
+      "bytes": 4550
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/",
+      "bytes": 0
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR.sim",
+      "bytes": 1718
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.1OP",
+      "bytes": 37090
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.cir",
+      "bytes": 872
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.dat",
+      "bytes": 42045759
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.mif",
+      "bytes": 7821
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.mrk",
+      "bytes": 216
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.out",
+      "bytes": 80906
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.prb",
+      "bytes": 1448
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710.DSN",
+      "bytes": 286720
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710.lib",
+      "bytes": 231492
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710.OLB",
+      "bytes": 29696
+    },
+    {
+      "path": "UCC28710_PSPICE_TRANS/UCC28710.opj",
+      "bytes": 2048
+    }
+  ],
+  "selected_payloads": {
+    "UCC28710_PSPICE_TRANS/UCC28710.lib": {
+      "SHA256": "a05c986be2e06f6ff7673daf17fcc4c19ceee5f2fd1af091ece198b6ce47dc66",
+      "bytes": 231492
+    },
+    "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/Test_UCC28710_Low_Side.net": {
+      "SHA256": "e36fb2c99a645188e69a85ed544678af1cfb448289bddc5250d7144f30e07155",
+      "bytes": 1137
+    },
+    "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.cir": {
+      "SHA256": "8d46b18e75246d32f50b9ef823aa6d703cf7edebe35414becee2677285abf25d",
+      "bytes": 872
+    },
+    "UCC28710_PSPICE_TRANS/UCC28710-PSpiceFiles/Test_UCC28710_Low_Side/TR/TR.out": {
+      "SHA256": "b8a7dcf59d4da1483bc88057fb8954bc23df13c467f5c14d8623bf041c77481e",
+      "bytes": 80906
+    }
+  },
+  "declared_model": {
+    "name": "UCC28710",
+    "terminals": [
+      "CS",
+      "VS",
+      "CBC",
+      "DRV",
+      "VDD",
+      "GND",
+      "HV"
+    ],
+    "encrypted_marker_present": true,
+    "CBC_not_modeled_note": true,
+    "declared_simulator": "PSpice16.2",
+    "model_date": "2015-05-26"
+  },
+  "reference_fixture": {
+    "forced_VDD_ramp_V": 25,
+    "ramp_end_s": 0.0006,
+    "bulk_ramp_V": 135,
+    "bulk_ramp_end_s": 0.0003,
+    "VDD_cap_F": 3.3e-07,
+    "output_cap_F": 0.00112,
+    "load_R_ohm": 200,
+    "upper_divider_R_ohm": 121000,
+    "lower_divider_R_ohm": 30100,
+    "switch": "Voltage-controlled ideal switch, not physical MOSFET",
+    "requested_transient_end_s": 0.01,
+    "requested_max_step_s": 2e-08
+  },
+  "bundled_log": {
+    "job_aborted_marker": true,
+    "is_new_execution": false,
+    "is_golden_success": false,
+    "last_valid_time_determined": false
+  },
+  "tina_archive": {
+    "native_LIBs": [
+      {
+        "path": "UCC28710_TINA_TRANS/UCC28710_TRANS.LIB",
+        "SHA256": "b51477f155cfd7ee34a4bb2c6f913428c5f8bcf926934dca20533f2bfc6af58e",
+        "encrypted_marker_present": true
+      }
+    ]
+  },
+  "actual_UCC28711_verified": false,
+  "controller_current_model_verified": false,
+  "new_simulation_performed": false,
+  "working_driver_verified": false
+}
