@@ -1,0 +1,524 @@
+{
+  "study": "VEL-COMPONENT-01",
+  "date": "2026-11-16",
+  "partial_candidate_BOM": {
+    "VDD": "2x KEMET C2220C474J5GACTU, 470nF/50V/C0G/5%",
+    "Cout_preferred_comparison": "Panasonic EEHZA1J100P,10uF/63V/20%,1000mA@100kHz",
+    "Cout_smaller_alternative": "Panasonic EEHZA1H100R,10uF/50V/20%,750mA@100kHz",
+    "Qswitch": "ST STN1NK80Z,800V,SOT223,16ohm max@10V/25C"
+  },
+  "magnetics_proposal": {
+    "core_gapped": "TDK B66421U0160K187",
+    "core_ungapped": "B66421G0000X187",
+    "bobbin": "B66422W1010D001",
+    "Np": 120,
+    "Ns": 30,
+    "Na": 22,
+    "AL_H": 1.6e-07,
+    "Lp_H": 0.002304,
+    "Ae_min_m2": 5.7e-05,
+    "assembly_not_qualified": true
+  },
+  "drain_stress_V_with_100V_assumed_overshoot": 608.9738179594901,
+  "rejected_600V_device_stress_test": "Fails the 100V overshoot/OVP static screen; not selected",
+  "backup_flux_with_430ns_extra_ramp_proxy_T": 0.2751640841585763,
+  "auxiliary_takeover_V_proxy": 15.181818181818183,
+  "normal_VDD_trough_proxy_V": [
+    11.566666666666666,
+    19.68
+  ],
+  "CV_sensitivity_V": [
+    27.9749770727591,
+    32.42331060849627
+  ],
+  "OVP25_sensitivity_V": [
+    32.992865812852635,
+    36.59444666977425
+  ],
+  "cdd_tolerance_temperature_range_F": [
+    8.903209999999999e-07,
+    9.89961e-07
+  ],
+  "cdd_area_body_nom_mm2": 57.0,
+  "additional_VDD_capacitance_budget_F": 5e-09,
+  "cout_initial_room_range_F": [
+    8e-06,
+    1.2e-05
+  ],
+  "cout_stressed_sensitivity_F": [
+    4.0320000000000005e-06,
+    2.0592000000000002e-05
+  ],
+  "cout_stress_factors_not_guaranteed": [
+    0.7,
+    0.9,
+    0.8,
+    1.3,
+    1.1,
+    1.2
+  ],
+  "budget": {
+    "IRUN_max_A": 0.00265,
+    "Qg_allowance_C_assumed_at_actual_drive": 1.2e-08,
+    "fmax_table_Hz": 106000,
+    "other_bias_A_assumed": 0.0003,
+    "conditional_draw_A": 0.004222,
+    "rounded_conditional_budget_A": 0.0043,
+    "Qg_table_typical_C_at_10V_only": 7.7e-09
+  },
+  "bootstrap_sensitivity": [
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 15.077618239775676,
+      "charge_margin_to_10V_C": 4.520710148855319e-06
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.0001,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 14.59464636783286,
+      "charge_margin_to_10V_C": 4.090710148855319e-06
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.0003,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 13.628702623947229,
+      "charge_margin_to_10V_C": 3.2307101488553197e-06
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.001,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 10.247899520347515,
+      "charge_margin_to_10V_C": 2.2071014885531886e-07
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.005,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": -9.070975357365135,
+      "charge_margin_to_10V_C": -1.6979289851144684e-05
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 13.526909171780012,
+      "charge_margin_to_10V_C": 3.1400813007283528e-06
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.0001,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 12.852994931859804,
+      "charge_margin_to_10V_C": 2.5400813007283517e-06
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.0003,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 11.505166452019388,
+      "charge_margin_to_10V_C": 1.340081300728353e-06
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.001,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": 6.7877667725779265,
+      "charge_margin_to_10V_C": -2.8599186992716482e-06
+    },
+    {
+      "Cout_F": 1.2e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.005,
+      "charge_time_s": 0.0008121346165452744,
+      "VDD_at_takeover_V_proxy": -20.16880282423042,
+      "charge_margin_to_10V_C": -2.685991869927165e-05
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 13.390994082879217,
+      "charge_margin_to_10V_C": 3.0190732428631077e-06
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.0001,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 12.908022210936402,
+      "charge_margin_to_10V_C": 2.5890732428631076e-06
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.0003,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 11.94207846705077,
+      "charge_margin_to_10V_C": 1.7290732428631082e-06
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.001,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 8.561275363451054,
+      "charge_margin_to_10V_C": -1.2809267571368944e-06
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.005,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": -10.757599514261592,
+      "charge_margin_to_10V_C": -1.8480926757136892e-05
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 11.17348011564542,
+      "charge_margin_to_10V_C": 1.0447739900415457e-06
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.0001,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 10.499565875725212,
+      "charge_margin_to_10V_C": 4.4477399004154554e-07
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.0003,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 9.151737395884796,
+      "charge_margin_to_10V_C": -7.552260099584531e-07
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.001,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": 4.434337716443332,
+      "charge_margin_to_10V_C": -4.955226009958455e-06
+    },
+    {
+      "Cout_F": 1.716e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.005,
+      "charge_time_s": 0.0011613525016597422,
+      "VDD_at_takeover_V_proxy": -22.522231880365013,
+      "charge_margin_to_10V_C": -2.8955226009958456e-05
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 12.26919289945506,
+      "charge_margin_to_10V_C": 2.0203100914357275e-06
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.0001,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 11.786221027512244,
+      "charge_margin_to_10V_C": 1.5903100914357274e-06
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.0003,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 10.820277283626611,
+      "charge_margin_to_10V_C": 7.30310091435728e-07
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.001,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 7.439474180026899,
+      "charge_margin_to_10V_C": -2.279689908564271e-06
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.0043,
+      "initial_acquisition_s_assumed": 0.005,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": -11.87940069768575,
+      "charge_margin_to_10V_C": -1.9479689908564272e-05
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 9.608176138774501,
+      "charge_margin_to_10V_C": -3.488490119501473e-07
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.0001,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 8.934261898854293,
+      "charge_margin_to_10V_C": -9.488490119501467e-07
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.0003,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 7.586433419013876,
+      "charge_margin_to_10V_C": -2.148849011950147e-06
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.001,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": 2.8690337395724157,
+      "charge_margin_to_10V_C": -6.348849011950146e-06
+    },
+    {
+      "Cout_F": 2.0592000000000002e-05,
+      "draw_A": 0.006,
+      "initial_acquisition_s_assumed": 0.005,
+      "charge_time_s": 0.001393623001991691,
+      "VDD_at_takeover_V_proxy": -24.087535857235927,
+      "charge_margin_to_10V_C": -3.0348849011950145e-05
+    }
+  ],
+  "normal_component_cases": 2592,
+  "normal_component_bounds": {
+    "f_Hz": [
+      33204.51817558298,
+      82004.03676019971
+    ],
+    "cap_RMS_upper_A": [
+      0.46738135689411364,
+      0.5188064811319579
+    ],
+    "cap_ripple_utilization_50V_part": [
+      0.7331472265005705,
+      0.9223226331234807
+    ],
+    "cap_ripple_utilization_63V_part": [
+      0.5498604198754278,
+      0.6917419748426106
+    ],
+    "normal_flux_T": [
+      0.0934664019366627,
+      0.12791472351765493
+    ],
+    "MOS_conduction_25C_W": [
+      0.0451792451897645,
+      0.12650527748632656
+    ],
+    "MOS_hot_conduction_2p5x_proxy_W": [
+      0.11294811297441126,
+      0.3162631937158164
+    ]
+  },
+  "switching_witness_cases": [
+    {
+      "nLED": 7,
+      "C_F": 4.0320000000000005e-06,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.18622883509997215,
+      "ILED_max_A": 0.29736750136174916,
+      "ILED_mean_A": 0.24858330305986384,
+      "cap_RMS_A": 0.36016964874100077,
+      "voltage_pp_V": 0.8030174413322371
+    },
+    {
+      "nLED": 7,
+      "C_F": 4.0320000000000005e-06,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.18413890488225415,
+      "ILED_max_A": 0.29814681376277574,
+      "ILED_mean_A": 0.24858331947417725,
+      "cap_RMS_A": 0.3544000884994571,
+      "voltage_pp_V": 0.824259715632472
+    },
+    {
+      "nLED": 7,
+      "C_F": 8e-06,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.21385824764200478,
+      "ILED_max_A": 0.273715619627323,
+      "ILED_mean_A": 0.24858311989180942,
+      "cap_RMS_A": 0.36124690341291626,
+      "voltage_pp_V": 0.43101089802612336
+    },
+    {
+      "nLED": 7,
+      "C_F": 8e-06,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.21088740565732522,
+      "ILED_max_A": 0.27647733297369376,
+      "ILED_mean_A": 0.24858314618065327,
+      "cap_RMS_A": 0.3553976186373483,
+      "voltage_pp_V": 0.47239956932166294
+    },
+    {
+      "nLED": 7,
+      "C_F": 1e-05,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.21978360980525513,
+      "ILED_max_A": 0.26911670646233815,
+      "ILED_mean_A": 0.24858334735800738,
+      "cap_RMS_A": 0.36137381715887545,
+      "voltage_pp_V": 0.3549809330411513
+    },
+    {
+      "nLED": 7,
+      "C_F": 1e-05,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.216616504901259,
+      "ILED_max_A": 0.27275446657315516,
+      "ILED_mean_A": 0.2485834156531941,
+      "cap_RMS_A": 0.3555127599023832,
+      "voltage_pp_V": 0.4039485896086745
+    },
+    {
+      "nLED": 7,
+      "C_F": 1.716e-05,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.22990966198320523,
+      "ILED_max_A": 0.26201785953338896,
+      "ILED_mean_A": 0.2486013624404041,
+      "cap_RMS_A": 0.36151411364438946,
+      "voltage_pp_V": 0.23073705591144034
+    },
+    {
+      "nLED": 7,
+      "C_F": 1.716e-05,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 47522.9492628985,
+      "ILED_min_A": 0.2264039597974767,
+      "ILED_max_A": 0.2686405466205441,
+      "ILED_mean_A": 0.24860287436665185,
+      "cap_RMS_A": 0.3556367728255483,
+      "voltage_pp_V": 0.30326676292805743
+    },
+    {
+      "nLED": 8,
+      "C_F": 4.0320000000000005e-06,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.1987916675295676,
+      "ILED_max_A": 0.28585554718867856,
+      "ILED_mean_A": 0.24829062687661316,
+      "cap_RMS_A": 0.36150163559196585,
+      "voltage_pp_V": 0.7178491093112775
+    },
+    {
+      "nLED": 8,
+      "C_F": 4.0320000000000005e-06,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.19661293078800918,
+      "ILED_max_A": 0.2868950513104548,
+      "ILED_mean_A": 0.24829064354514813,
+      "cap_RMS_A": 0.3563909390464452,
+      "voltage_pp_V": 0.7447762141654231
+    },
+    {
+      "nLED": 8,
+      "C_F": 8e-06,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.22082219963619149,
+      "ILED_max_A": 0.2678444736948343,
+      "ILED_mean_A": 0.24829089183763575,
+      "cap_RMS_A": 0.36213567213470926,
+      "voltage_pp_V": 0.3866997505920011
+    },
+    {
+      "nLED": 8,
+      "C_F": 8e-06,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.21801142433053347,
+      "ILED_max_A": 0.2707270643781409,
+      "ILED_mean_A": 0.24829096794044977,
+      "cap_RMS_A": 0.3569786907349368,
+      "voltage_pp_V": 0.433565857178408
+    },
+    {
+      "nLED": 8,
+      "C_F": 1e-05,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.22548085651650882,
+      "ILED_max_A": 0.2643796475788088,
+      "ILED_mean_A": 0.2482933748638409,
+      "cap_RMS_A": 0.36220886884169695,
+      "voltage_pp_V": 0.31971878592881
+    },
+    {
+      "nLED": 8,
+      "C_F": 1e-05,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.22253303815229578,
+      "ILED_max_A": 0.2681089643827801,
+      "ILED_mean_A": 0.24829369778158386,
+      "cap_RMS_A": 0.3570448472661048,
+      "voltage_pp_V": 0.3745511174365923
+    },
+    {
+      "nLED": 8,
+      "C_F": 1.716e-05,
+      "ESR_ohm_assumed": 0.12,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.2334395980522248,
+      "ILED_max_A": 0.25919686268091363,
+      "ILED_mean_A": 0.24835648659284681,
+      "cap_RMS_A": 0.36228677546831206,
+      "voltage_pp_V": 0.2114747691669585
+    },
+    {
+      "nLED": 8,
+      "C_F": 1.716e-05,
+      "ESR_ohm_assumed": 0.24,
+      "frequency_Hz": 54056.88190391179,
+      "ILED_min_A": 0.23025903097985734,
+      "ILED_max_A": 0.26585964266349804,
+      "ILED_mean_A": 0.24835968780371873,
+      "cap_RMS_A": 0.3571126113899844,
+      "voltage_pp_V": 0.2920032000179127
+    }
+  ],
+  "half_step_peak_current_difference_A": 3.7987380672399595e-05,
+  "switching_source_is_constructed_not_controller_model": true,
+  "temperature_C": 25,
+  "no_actual_SPICE_CAD_or_physical_test": true
+}
