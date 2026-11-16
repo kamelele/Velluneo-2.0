@@ -1,6 +1,6 @@
 # Current programming, startup and integrated-switch comparison
 
-VEL-FLYBACK-CTRL-01 r1, 2026-11-14. Specification investigation; product packet r11 and owner-selected architecture A remain authoritative. No schematic or component selection is approved. Read with `feasibility.md` r2 and its unchanged `results.json`.
+VEL-FLYBACK-CTRL-01 r2, 2026-11-16 (r1 dated 2026-11-14). Specification investigation; product packet r11 and owner-selected architecture A remain authoritative. No schematic or component selection is approved. Read with `feasibility.md` r2 and its unchanged `results.json`.
 
 ## Engineering outcome
 
@@ -24,7 +24,7 @@ Regulation must include auxiliary secondary loads: the output capacitor supplies
 
 TI lists isolated-mode hard threshold 3.2–3.6 V. With the comparison 2.21 ohm +/-1%, that corresponds to 1.434–1.645 A before delay. A linear extrapolation through the exploratory 3.6–4.4 mH and 200-turn/31 mm2 magnetic model gives 0.832–1.168 T. This is a warning index, not a physically valid prediction through saturation. It cannot be treated as adequate transformer protection. It does not prove the actual controller reaches that current: control-loop action, short-circuit low-frequency transitions and saturation dynamics were not simulated.
 
-TI's separate SLVA511 conventional-flyback example uses a lower-threshold configuration, nominal 0.64 V, plus an external short-circuit detection network. It is a physically isolated transformer application even though the mode table calls that controller setting non-isolated. That manufacturer's specific use does not authorize a pin-level design here. Regulation/timing compatibility and its external protection network require verification together.
+TI's separate SLVA511 conventional-flyback example uses a lower-threshold configuration, nominal 0.64 V, with its ZCD filtering/clamp network. It is a physically isolated transformer application even though the mode table calls that controller setting non-isolated. That manufacturer's specific use does not authorize a pin-level design here. Regulation/timing compatibility and the ZCD filtering/clamp network require verification together. Detailed native Figure 13 inspection on 2026-11-16 does not establish a separate active short-circuit detector as mandatory: the optional line-compensation network and rapid gate turn-off circuit must not be conflated with one. This narrows the earlier wording, without qualifying SCP in Velluneo.
 
 Applying the lower comparator's 0.59–0.68 V table range to the same comparison resistor gives 0.264–0.311 A before delay. Adding the illustrative 210 ns typical propagation delay gives a worst sampled current near 0.332 A and a worst sampled linear flux near 0.233 T. These two maxima are from different corners. The delay is not a guaranteed maximum; neither result qualifies hot saturation or short-circuit survival. The lower threshold leaves much less normal-current margin than the isolated-mode threshold, so both nuisance triggering and faults must be checked. No sense resistor, MODE connection or external protection circuit is released.
 
@@ -76,3 +76,8 @@ Sources inspected 2026-11-14:
 - TI product lifecycle listing: https://www.ti.com/product/TPS92310
 - PI exact device catalogue: https://www.power.com/products/lytswitch/lytswitch-5/lyt5225d
 - JLCPCB permitted sourcing methods, not project confirmation: https://jlcpcb.com/help/article/pcba-parts-sourcing-instruction
+
+
+## 2026-11-16 source clarification (r2)
+
+Native SLVA511 pages 8–10/14 were re-inspected at readable resolution. The lower-threshold isolated-transformer reference uses ZCD filtering/clamping; this note no longer implies that its optional compensation/gate-discharge additions constitute a mandatory separate active SCP detector. Existing numerical results are unchanged. The earlier AN-65 HTTP 406 limitation is historical: indexed guide text became accessible in VEL-FLYBACK-DCM-01. That is not a completed manufacturer-tool workflow. The new protection-study packet records the targeted review of this correction; original r1 review scope is retained where unaffected.
