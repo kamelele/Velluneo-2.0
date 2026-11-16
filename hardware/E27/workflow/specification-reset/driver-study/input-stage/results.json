@@ -1,0 +1,224 @@
+{
+  "study": "VEL-INPUT-01",
+  "date": "2026-11-17",
+  "cases_count": 288,
+  "assumptions": {
+    "Vac_rms_V": [
+      207,
+      230,
+      253
+    ],
+    "input_envelope_is_engineering_proposal_not_new_owner_acceptance": true,
+    "line_Hz": 50,
+    "remaining_bus_load_W": [
+      6,
+      8,
+      10
+    ],
+    "bulk_nom_F": [
+      1e-05,
+      1.5e-05
+    ],
+    "preferred_bulk_nom_F": 1.5e-05,
+    "bulk_initial_cap_factors": [
+      0.8,
+      1.2
+    ],
+    "bridge_drop_sensitivity_V": [
+      1.6,
+      2.2
+    ],
+    "fixed_Rin_ohm": 47,
+    "fixed_Rin_tolerance": 0.05,
+    "source_resistance_sensitivity_ohm": [
+      0,
+      10
+    ],
+    "no_old_external_startup_feed": true,
+    "primary_bleeder_ohm": 998000,
+    "no_cap_leakage_ESR_age_or_controller_modeled": true
+  },
+  "bounds": {
+    "bulk_min_V": [
+      248.87096827708984,
+      342.6894451244344
+    ],
+    "bulk_max_V": [
+      281.3694083821545,
+      353.4995129839098
+    ],
+    "calculated_line_input_W": [
+      6.258101045703926,
+      10.61149288220313
+    ],
+    "line_rms_A": [
+      0.04887775028291185,
+      0.09089941396447866
+    ],
+    "repetitive_charge_peak_A": [
+      0.16934695775801617,
+      0.28452962241866775
+    ],
+    "capacitor_LF_rms_A": [
+      0.04550478203165421,
+      0.08322928951579948
+    ],
+    "candidate_Rin_loss_upper_allocation_W": [
+      0.11461908303851173,
+      0.4554716931686243
+    ],
+    "fixed_bridge_loss_W": [
+      0.02822636887288131,
+      0.08279228619246877
+    ],
+    "dedicated_bleeder_loss_W": [
+      0.07214756928808318,
+      0.12063096343551945
+    ],
+    "true_power_factor": [
+      0.4808094608850387,
+      0.5915859427972036
+    ]
+  },
+  "half_step_max_abs_differences": {
+    "bulk_min_V": 6.69490323161881e-05,
+    "bulk_max_V": 1.4762064438400557e-05,
+    "line_rms_A": 3.9131283567639397e-08,
+    "capacitor_LF_rms_A": 4.15647605570002e-08,
+    "repetitive_charge_peak_A": 1.1264359101037513e-07,
+    "calculated_line_input_W": 2.6998675828338037e-07
+  },
+  "cold_charge_step_comparison": {
+    "fixed_source_step_V": 357.7960312803931,
+    "Cmax_F": 1.8e-05,
+    "Rmin_ohm": 44.65,
+    "peak_A_comparison": 8.013348964846431,
+    "tau_s": 0.0008037,
+    "energy_dissipated_R_J_comparison": 1.1521620000000004,
+    "I2t_A2s_comparison": 0.025804300111982093,
+    "fuse_melting_I2t_typ_A2s_at10In": 0.15,
+    "I2t_fraction_of_fuse_typ_comparison": 0.17202866741321396,
+    "this_is_not_verified_repetitive_or_fault_coordination": true
+  },
+  "bulk_ripple_screen": [
+    {
+      "bulk_nom_F": 1e-05,
+      "LF_A": 0.08243066447946654,
+      "constructed_primary_RMS_upper_A": 0.08891895097725462,
+      "LF_reference_A": 0.10400000000000001,
+      "HF_reference_A": 0.273,
+      "normalized_triangle_sum": 1.1183129862119203,
+      "minimum_bus_V": 248.87096827708984,
+      "load_consistency_not_verified": true,
+      "interpretation": "LF/HF terms come from uncoupled load/control models. HF0.0889A is not a proved bound for10W. Triangle inequality is conservative only for valid same-design spectrum bounds; this is an investigation comparison, not whole-converter rating/life qualification. Prior HF witness bus>=240V."
+    },
+    {
+      "bulk_nom_F": 1.5e-05,
+      "LF_A": 0.08322928951579948,
+      "constructed_primary_RMS_upper_A": 0.08891895097725462,
+      "LF_reference_A": 0.15200000000000002,
+      "HF_reference_A": 0.399,
+      "normalized_triangle_sum": 0.770415628962978,
+      "minimum_bus_V": 259.04673242014735,
+      "load_consistency_not_verified": true,
+      "interpretation": "LF/HF terms come from uncoupled load/control models. HF0.0889A is not a proved bound for10W. Triangle inequality is conservative only for valid same-design spectrum bounds; this is an investigation comparison, not whole-converter rating/life qualification. Prior HF witness bus>=240V."
+    }
+  ],
+  "preferred_15uF_bounds": {
+    "bulk_min_V": [
+      259.04673242014735,
+      342.6894451244344
+    ],
+    "bulk_max_V": [
+      281.3694083821545,
+      352.30511381341347
+    ],
+    "calculated_line_input_W": [
+      6.262389260608299,
+      10.61149288220313
+    ],
+    "line_rms_A": [
+      0.04924458211697299,
+      0.09089941396447866
+    ],
+    "repetitive_charge_peak_A": [
+      0.17161824336418005,
+      0.28452962241866775
+    ],
+    "capacitor_LF_rms_A": [
+      0.0459298867587492,
+      0.08322928951579948
+    ],
+    "candidate_Rin_loss_upper_allocation_W": [
+      0.11727974252288234,
+      0.4554716931686243
+    ],
+    "fixed_bridge_loss_W": [
+      0.02822636887288131,
+      0.08164543634761671
+    ],
+    "dedicated_bleeder_loss_W": [
+      0.07399780828989946,
+      0.12063096343551945
+    ],
+    "true_power_factor": [
+      0.4808094608850387,
+      0.5871593815405719
+    ]
+  },
+  "bulk_initial_energy_J_at_highline_Cmax": 1.1521620000000004,
+  "primary_bleeder_each_series_499k_initial_nom_W": 0.0641372745490982,
+  "discharge_to30V_s_comparison_at998k_plus1percent_Cmax": 44.97383245698276,
+  "no_safe_service_time_or_surge_pass": true,
+  "worst_low_bulk_case": {
+    "vac_rms_V": 207,
+    "cap_nom_F": 1e-05,
+    "cap_factor": 0.8,
+    "remaining_bus_load_W": 10,
+    "series_R_ohm": 59.35,
+    "bulk_min_V": 248.87096827708984,
+    "bulk_max_V": 285.5096966985659,
+    "calculated_line_input_W": 10.599594511276317,
+    "line_rms_A": 0.08655677371872465,
+    "repetitive_charge_peak_A": 0.25391259049104514,
+    "capacitor_LF_rms_A": 0.07793223862136005,
+    "lumped_series_loss_W": 0.44465465579588614,
+    "fixed_bridge_loss_W": 0.08279228619246877,
+    "startup_feed_bus_draw_W": 0.0,
+    "dedicated_bleeder_loss_W": 0.07214756928808318,
+    "true_power_factor": 0.5915859427972036,
+    "fundamental_displacement_factor": 0.9749826747121351,
+    "current_THD_ratio": 1.310029479423122,
+    "periodic_energy_delta_J": 0.0,
+    "energy_balance_residual_J": 1.2112533198660458e-15,
+    "sampled_bulk_meets_200V_comparison": true,
+    "bridge_total_drop_V_assumed": 2.2,
+    "candidate_Rin_loss_upper_allocation_W": 0.44465465579588614
+  },
+  "max_Rin_heat_case": {
+    "vac_rms_V": 207,
+    "cap_nom_F": 1.5e-05,
+    "cap_factor": 1.2,
+    "remaining_bus_load_W": 10,
+    "series_R_ohm": 59.35,
+    "bulk_min_V": 265.10003160904245,
+    "bulk_max_V": 281.3694083821545,
+    "calculated_line_input_W": 10.61149288220313,
+    "line_rms_A": 0.08760327333524788,
+    "repetitive_charge_peak_A": 0.2615094841543966,
+    "capacitor_LF_rms_A": 0.07946794926241758,
+    "lumped_series_loss_W": 0.4554716931686243,
+    "fixed_bridge_loss_W": 0.08109461579210794,
+    "startup_feed_bus_draw_W": 0.0,
+    "dedicated_bleeder_loss_W": 0.07492657324268197,
+    "true_power_factor": 0.5851750589556598,
+    "fundamental_displacement_factor": 0.9945077458864663,
+    "current_THD_ratio": 1.374160152898286,
+    "periodic_energy_delta_J": 0.0,
+    "energy_balance_residual_J": 2.8399504969911506e-15,
+    "sampled_bulk_meets_200V_comparison": true,
+    "bridge_total_drop_V_assumed": 2.2,
+    "candidate_Rin_loss_upper_allocation_W": 0.4554716931686243
+  },
+  "new_simulation_type": "Averaged line/bulk numerical integration only; no controller or switched converter"
+}
