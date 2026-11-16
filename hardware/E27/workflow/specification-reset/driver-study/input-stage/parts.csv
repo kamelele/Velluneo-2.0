@@ -1,0 +1,10 @@
+Ref,Quantity,Manufacturer,MPN,Value or package,Status,Qualification boundary
+F1,1,SCHURTER,3403.0268.23,UMT-H250mA277VAC5.3x16mm,Preferred input candidate,MeltingI2t0.15A2s typical at10In not minimum; actual fault and repeated-pulse coordination pending
+RIN,1,Vishay,AC05000004709JAC00,47ohm5percentAC05body18x7.5mm,Preferred fixed inrush candidate,5W at40C4.7W at70C; hot pulse and mounting pending; not a fuse
+BR1,1,Diodes Incorporated,MB10S-13,MBS1000V,Preferred bridge candidate,No generic MB10S substitution; native pad/temperature/capacitive-load derating applies
+CBULK,1,Rubycon,450BXW15MEFR10X20,15uF450V20percent10x20mm,Preferred over10uF comparison,0.190A120Hz0.475A100kHz105C;10000h endurance not lamp lifetime
+RB1 RB2,2,Vishay,CRCW1206499KFKEA,499kohm1percent1206,Series bleeder candidate,998kohm total; source200V operating each; not an exposed-safe energy/time approval
+CBULK-COMP,0,Rubycon,450BXW10MEFR10X16,10uF450V20percent10x16mm,Comparison not fitted,Conservative mixed-band screen exceeds1; not proof actual physical failure
+DOUT,1,STMicroelectronics,STTH2R02A,200V2ASMA,Output rectifier candidate,Native TL90C2A rating not ambient guarantee; pulse forward/recovery conditions apply
+DAUX,1,STMicroelectronics,STTH1R02A,200VSMA,Auxiliary rectifier candidate,Native1.5A TL150C rating; actual peak sharing and low-current drop pending
+RT1,1,Vishay,NTCS0603E3104FXT,100kohm1percentB4100K1percent0603,Base thermistor candidate,Approx88C constant-beta trip not an accepted guaranteed cutoff temperature
