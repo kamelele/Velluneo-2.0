@@ -1,0 +1,271 @@
+{
+  "study": "VEL-STARTUP-01",
+  "date": "2026-11-16",
+  "assumptions": {
+    "Np": 120,
+    "Ns": 30,
+    "Na": 22,
+    "Lp_H": 0.002304,
+    "Lp_factors": [
+      0.9,
+      1.1
+    ],
+    "Rcs_ohm": 2.37,
+    "Rcs_factors": [
+      0.99,
+      1.01
+    ],
+    "VCCR_V": [
+      0.318,
+      0.343
+    ],
+    "VCSTmax_V": [
+      0.738,
+      0.81
+    ],
+    "Cdd_min_F": 8.90321e-07,
+    "Cdd_max_F": 9.89961e-07,
+    "VDD_on_min_V": 19,
+    "VDD_target_trough_V": 10,
+    "Vout_main_diode_min_V": 0.5,
+    "Vout_main_diode_max_V": 1.2,
+    "aux_diode_max_V": 1.0,
+    "aux_winding_loss_assumed_V": 0.5,
+    "aux_ripple_allowance_assumed_V": 0.5,
+    "Cout_F": [
+      4.032e-06,
+      1.2e-05,
+      1.716e-05,
+      2.0592e-05
+    ],
+    "Cout_ESR_assumed_ohm": [
+      0,
+      0.24
+    ],
+    "nLED": [
+      7,
+      8
+    ],
+    "LED_voltage_shift_per_diode_assumed_V": [
+      0,
+      -0.3
+    ],
+    "Qg_actual_drive_budget_assumed_C": [
+      1.2e-08,
+      1.6e-08
+    ],
+    "base_VDD_draw_assumed_A": [
+      0.00295,
+      0.0035
+    ],
+    "base_budget_includes_0p3mA_allowance": true,
+    "IRUN_source_2p65mA_test_VDD_V": 25,
+    "first3_time_s_assumed": [
+      0.0003,
+      0.0006,
+      0.001,
+      0.0015
+    ],
+    "post3_settling_s_assumed": 0.0001,
+    "settling_f_Hz_assumed": 106000,
+    "LED25_model": {
+      "Is_A": 9.8487e-31,
+      "N": 1.5601,
+      "Rs_ohm": 0.86341,
+      "T_K": 298.15
+    },
+    "RS1_proposed_ohm": 80600,
+    "RS2_proposed_ohm": 17400,
+    "divider_envelope_factors": [
+      0.979,
+      1.021
+    ],
+    "RLC_proposed_ohm": 1400,
+    "RLC_total_delay_s_assumed": [
+      1e-07,
+      1.5e-07
+    ],
+    "pin_capacitance_sensitivity_F": [
+      2e-12,
+      5e-12,
+      1e-11,
+      1.5e-11
+    ],
+    "VS_initial_error_assumed_V": 1.0,
+    "VS_final_error_target_V": 0.1,
+    "combined_reset_engineering_budget_s": 6e-07,
+    "other_recovery_allocation_s_assumed": 1e-07,
+    "charge_current_fraction_assumed": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "Qoss_typ_only_at_640V_C": 6.08e-09
+  },
+  "cases": 128,
+  "charging_bounds": {
+    "charge_time_s": [
+      0.00028325394651717005,
+      0.0014522129139212666
+    ],
+    "LED_current_at_takeover_A": [
+      3.009238866264642e-09,
+      0.0055729300816917
+    ],
+    "VDD_charge_ramp_C": [
+      9.262195837617843e-07,
+      5.70063103042722e-06
+    ],
+    "max_first3_time_s_proxy": [
+      0.000498473705592223,
+      0.0022469387851654973
+    ]
+  },
+  "main_budget_min_first3_time_s": 0.0009516089932729406,
+  "all_sensitivity_min_first3_time_s": 0.000498473705592223,
+  "first3_0p3ms_worst_VDD_V": 10.780233162615259,
+  "main_budget_first3_1ms_worst_VDD_V": 9.839660673122587,
+  "worst_startup_case": {
+    "Cout_F": 2.0592e-05,
+    "ESR_assumed_ohm": 0,
+    "nLED": 7,
+    "LED_shift_assumed_V": -0.3,
+    "Qg_assumed_C": 1.6e-08,
+    "base_draw_assumed_A": 0.0035,
+    "charge_time_s": 0.0014522129139212666,
+    "Vout_takeover_trough_target_V": 15.863636363636363,
+    "LED_current_at_takeover_A": 0.0055729300816917,
+    "ramp_gate_frequency_max_envelope_Hz": 49620.10863923111,
+    "VDD_charge_ramp_C": 5.70063103042722e-06,
+    "post3_settling_charge_C": 5.196000000000001e-07,
+    "first3_gate_charge_C": 4.8000000000000006e-08,
+    "max_first3_time_s_proxy": 0.000498473705592223,
+    "VDD_at_takeover_scenarios_V": {
+      "0.0003": 10.780233162615259,
+      "0.0006": 9.600883242754895,
+      "0.001": 8.028416682941074,
+      "0.0015": 6.062833483173797
+    },
+    "old_constant_6mA_remaining_time_s_proxy": -0.00011673141392126653
+  },
+  "proposed_divider": {
+    "RS1_ohm": 80600,
+    "RS2_ohm": 17400,
+    "RLC_ohm": 1400,
+    "CV_sensitivity_V": [
+      27.927187112871856,
+      33.54268684546239
+    ],
+    "OVP25_sensitivity_V": [
+      32.93596362124308,
+      37.86020981208754
+    ],
+    "Rth_ohm": [
+      14010.089387755099,
+      14611.135102040816
+    ],
+    "negative_VS_current_high_line_max_A": 0.0008313027557373843,
+    "negative_VS_current_at_400V_max_A": 0.0009293593925707013,
+    "line_run_rms_sensitivity_V": [
+      57.824901539464804,
+      83.69393643869905,
+      60.305642974252876,
+      87.2844832522081
+    ],
+    "RLC_delay_sensitivity_ohm": [
+      1085.3522727272725,
+      1940.0671874999998
+    ]
+  },
+  "clamp_reset_proxy_with_new_OVP_s": 1.1863582855487728e-07,
+  "minimum_primary_current_A": 0.07310857668045286,
+  "node_charge_allocations": [
+    {
+      "mean_current_fraction_assumed": 0.5,
+      "Q_node_budget_C": 1.3940495885636562e-08,
+      "remaining_after_typical_Qoss_C": 7.860495885636561e-09
+    },
+    {
+      "mean_current_fraction_assumed": 0.75,
+      "Q_node_budget_C": 2.0910743828454843e-08,
+      "remaining_after_typical_Qoss_C": 1.4830743828454844e-08
+    },
+    {
+      "mean_current_fraction_assumed": 1.0,
+      "Q_node_budget_C": 2.7880991771273123e-08,
+      "remaining_after_typical_Qoss_C": 2.1800991771273124e-08
+    }
+  ],
+  "minimum_demag_s": 1.0908622674960634e-06,
+  "pin_capacitance_settling_sensitivity": [
+    {
+      "Cpin_F_assumed": 2e-12,
+      "settle_to_0p1V_s": 6.728676375536244e-08,
+      "available_s": 2.9086226749606343e-07,
+      "within_combined_allocation": true
+    },
+    {
+      "Cpin_F_assumed": 5e-12,
+      "settle_to_0p1V_s": 1.682169093884061e-07,
+      "available_s": 2.9086226749606343e-07,
+      "within_combined_allocation": true
+    },
+    {
+      "Cpin_F_assumed": 1e-11,
+      "settle_to_0p1V_s": 3.364338187768122e-07,
+      "available_s": 2.9086226749606343e-07,
+      "within_combined_allocation": false
+    },
+    {
+      "Cpin_F_assumed": 1.5e-11,
+      "settle_to_0p1V_s": 5.046507281652183e-07,
+      "available_s": 2.9086226749606343e-07,
+      "within_combined_allocation": false
+    }
+  ],
+  "max_pin_capacitance_for_combined_allocation_F": 8.645452723913568e-12,
+  "scenario_min_VDD_V": {
+    "0.0003": 10.780233162615259,
+    "0.0006": 9.600883242754895,
+    "0.001": 8.028416682941074,
+    "0.0015": 6.062833483173797
+  },
+  "main_budget_worst_case": {
+    "Cout_F": 2.0592e-05,
+    "ESR_assumed_ohm": 0,
+    "nLED": 7,
+    "LED_shift_assumed_V": -0.3,
+    "Qg_assumed_C": 1.2e-08,
+    "base_draw_assumed_A": 0.00295,
+    "charge_time_s": 0.0014522129139212666,
+    "Vout_takeover_trough_target_V": 15.863636363636363,
+    "LED_current_at_takeover_A": 0.0055729300816917,
+    "ramp_gate_frequency_max_envelope_Hz": 49620.10863923111,
+    "VDD_charge_ramp_C": 4.747442469844826e-06,
+    "post3_settling_charge_C": 4.222e-07,
+    "first3_gate_charge_C": 3.6e-08,
+    "max_first3_time_s_proxy": 0.0009516089932729406,
+    "VDD_at_takeover_scenarios_V": {
+      "0.0003": 12.15904884884797,
+      "0.0006": 11.165025344965663,
+      "0.001": 9.839660673122587,
+      "0.0015": 8.18295483331874
+    },
+    "old_constant_6mA_remaining_time_s_proxy": -0.00011673141392126653
+  },
+  "old_divider_same_envelope": {
+    "RS1_ohm": 93100,
+    "RS2_ohm": 20500,
+    "CV_sensitivity_V": [
+      27.463359554736616,
+      33.00942374899695
+    ],
+    "OVP25_sensitivity_V": [
+      32.39206700862623,
+      37.25689047032216
+    ],
+    "Rth_max_ohm": 17153.42913732394,
+    "max_pin_capacitance_same_allocation_F": 7.79464375590182e-12
+  },
+  "no_valid_controller_or_full_circuit_SPICE_or_physical_test": true
+}
