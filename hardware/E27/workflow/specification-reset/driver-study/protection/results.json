@@ -1,0 +1,243 @@
+{
+  "study": "VEL-PROTECTION-01",
+  "date": "2026-11-16",
+  "assumptions": {
+    "Np": 200,
+    "Ns": 50,
+    "Na": 48,
+    "Ae_m2": 3.1e-05,
+    "Lp_H": 0.004,
+    "Lp_factors": [
+      0.9,
+      1.1
+    ],
+    "normal_bus_screen_V": [
+      240,
+      280,
+      357.7960312803931
+    ],
+    "normal_output_V": [
+      18,
+      21,
+      24,
+      27
+    ],
+    "Rsense_ohm": 2.21,
+    "resistor_factors": [
+      0.99,
+      1.01
+    ],
+    "Vref_design_V": 0.14,
+    "diode_main_V_assumed": [
+      0.5,
+      1.2
+    ],
+    "diode_aux_V_assumed": [
+      0.5,
+      1.0
+    ],
+    "aux_plateau_loss_V_assumed": [
+      0,
+      0.5
+    ],
+    "dead_time_s": [
+      5e-07,
+      1.5e-06
+    ],
+    "OCP_low_V_from_table": [
+      0.59,
+      0.68
+    ],
+    "OVP_V_from_table": [
+      4.1,
+      4.5
+    ],
+    "ZCD_arm_V_from_table": [
+      1.16,
+      1.3
+    ],
+    "ZCD_trigger_min_V_from_table": 0.48,
+    "ZCD_input_A_sensitivity": [
+      -1e-06,
+      1e-06
+    ],
+    "Ru_ohm": 100000,
+    "Rl_ohm": 16200,
+    "prop_delay_typ_s_at_test_conditions": 2.1e-07,
+    "extra_gate_turnoff_s_assumed": [
+      0,
+      1e-07
+    ],
+    "Cout_nom_F": 2.2e-05,
+    "Cout_factors": [
+      0.8,
+      1.2
+    ],
+    "bleeder_output_ohm": 10000,
+    "CVCC_nom_F": 2.2e-05,
+    "CVCC_factors": [
+      0.8,
+      1.2
+    ],
+    "Rstart_nom_ohm": 474000,
+    "VCC_start_minmax_V": [
+      23,
+      29
+    ],
+    "VCC_off_max_V": 15.7,
+    "VCC_operating_max_V": 36,
+    "startup_Ton_s_typ": 1.5e-06,
+    "startup_Toff_s_sensitivity": [
+      5e-05,
+      7.2e-05,
+      9.4e-05
+    ],
+    "startup_delivery_efficiency_assumed": [
+      0.5,
+      0.8
+    ],
+    "VCC_draw_A_assumed": [
+      0.002,
+      0.003,
+      0.005
+    ],
+    "post_arm_net_output_charging_W_assumed": 1.0,
+    "post_threshold_energy_pulses_assumed": 4,
+    "illustrative_output_working_ceiling_V": 40,
+    "working_ceiling_is_not_touch_safety_limit": true
+  },
+  "ideal_normal_cycle_cases": 96,
+  "ideal_normal_cycle_bounds": {
+    "primary_peak_A": {
+      "min": 0.15856762876190333,
+      "max": 0.21486872533645568
+    },
+    "normal_sense_V": {
+      "min": 0.35365199481227577,
+      "max": 0.4711900198380407
+    },
+    "frequency_Hz": {
+      "min": 63399.58809870084,
+      "max": 125846.44609333565
+    },
+    "ton_s": {
+      "min": 1.6098169432986807e-06,
+      "max": 3.856189525328517e-06
+    },
+    "normal_flux_T": {
+      "min": 0.09290098603229056,
+      "max": 0.14927185259336193
+    }
+  },
+  "application_note_efficiency_sensitivity": {
+    "max_normal_sense_V": 0.5345454545454547,
+    "min_headroom_V": 0.05545454545454531,
+    "not_a_guaranteed_loss_or_control_model": true
+  },
+  "low_OCP_delay_proxy_bounds": {
+    "trip_A": {
+      "min": 0.26432507504144076,
+      "max": 0.31080031080031084
+    },
+    "peak_with_delay_proxy_A": {
+      "min": 0.2757796204959862,
+      "max": 0.34161052460501135
+    },
+    "flux_with_delay_proxy_T": {
+      "min": 0.1616081080885785,
+      "max": 0.23845776406746608
+    },
+    "energy_per_pulse_J": {
+      "min": 0.00013943672531428256,
+      "max": 0.00024838401427062346
+    }
+  },
+  "OVP_ZCD_screen": {
+    "trip_output_V": [
+      28.808834112577923,
+      34.33327604751216
+    ],
+    "normal_ZCD_V": [
+      2.351339240246757,
+      3.8537118115150566
+    ],
+    "normal_headroom_to_min_OVP_V": 0.24628818848494305,
+    "short_ZCD_static_range_V": [
+      -0.01687798408488064,
+      0.1774315805897956
+    ],
+    "ringing_and_secondary_shorts_not_simulated": true,
+    "assumed_post_threshold_energy_J": 0.0009935360570824938,
+    "capacitive_post_threshold_peak_V_proxy": 35.939889660697865,
+    "pulse_count_is_not_guaranteed_stop_latency": true
+  },
+  "VCC_screen": {
+    "normal_V": [
+      16.259999999999998,
+      26.572
+    ],
+    "min_headroom_to_max_UVLOoff_V": 0.5599999999999987,
+    "proxy_after_OVP_peak_max_V": 35.15429407426995,
+    "margin_to_36V_operating_limit_proxy": 0.8457059257300514,
+    "no_worst_case_ringing_or_clamp_validation": true
+  },
+  "bootstrap_sensitivity": {
+    "arm_output_V_max": 10.008131598910921,
+    "aux_takeover_output_V_proxy": 17.416666666666668,
+    "max_to_aux_s": 0.022389056504115698,
+    "min_hold_s": 0.025696000000000004,
+    "minimum_margin_s": 0.0033069434958843047,
+    "DC_0to29V_charge_s_maxRC_at240V": 1.6803950320359722,
+    "not_an_actual_startup_or_delay_guarantee": true
+  },
+  "additional_guard_feasibility": {
+    "family_candidate": "ATL431B Q-temperature grade, not an ordering selection",
+    "static_clamp_sensitivity_V": [
+      30.617387871287136,
+      34.21937555555555
+    ],
+    "divider_top_ohm": 1210000.0,
+    "divider_bottom_ohm": 100000,
+    "reference_KA_current_and_test_conditions_not_reproduced": true,
+    "unresolved": "Current limiting versus low-normal VCC headroom; capacitor stability at >30V; turn-on dynamics, leakage, transient/average heating and single faults; no clamp release."
+  },
+  "short_circuit_demagnetization_diagnostic_s": 0.0007392190686091449,
+  "low_frequency_offtime_max_table_s_for_comparison": 9.4e-05,
+  "short_diagnostic_is_not_actual_CCM_fault_simulation": true,
+  "output_capacitor": {
+    "nominal_F": 2.2e-05,
+    "cap_plus20_energy_at40V_J": 0.02112,
+    "passive_40to5V_s_Cplus20_Rplus1": 0.5544622926735113,
+    "not_a_service_wait_time": true
+  },
+  "updated_primary_buffer_dependency_SHA256": "432a8a480078e093359206ea02cce14c5861ab6c60d7f580ed7b8c6516fc25ea",
+  "updated_primary_buffer_Rstart_ohm": 474000,
+  "updated_primary_10uF_cases": 54,
+  "updated_primary_10uF_bounds": {
+    "bulk_min_V": {
+      "min": 250.13638178976157,
+      "max": 342.1329504031625
+    },
+    "bulk_max_V": {
+      "min": 285.8874834815755,
+      "max": 355.9037184951644
+    },
+    "calculated_line_input_W": {
+      "min": 6.311562040187861,
+      "max": 10.692729301192752
+    },
+    "capacitor_LF_rms_A": {
+      "min": 0.04856378202717246,
+      "max": 0.09781768353522484
+    },
+    "true_power_factor": {
+      "min": 0.403624085293807,
+      "max": 0.575119750019093
+    },
+    "fundamental_displacement_factor": {
+      "min": 0.9533723498650114,
+      "max": 0.9951729800194574
+    }
+  },
+  "verification": "Arithmetic, energy/current identities and refreshed ideal bridge/CPL grid; no SPICE/actual controller/fault/physical test."
+}
