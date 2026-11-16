@@ -1,0 +1,273 @@
+{
+  "study": "VEL-BIAS-REPAIR-01",
+  "date": "2026-11-16",
+  "assumptions": {
+    "Np": 152,
+    "Ns": 38,
+    "Na": 28,
+    "Ae_m2": 3.1e-05,
+    "AL_nom_H": 1e-07,
+    "Lp_factors": [
+      0.9,
+      1.1
+    ],
+    "bus_V": [
+      240,
+      280,
+      357.7960312803931
+    ],
+    "Vo_normal_V": [
+      18,
+      21,
+      24,
+      27
+    ],
+    "Rcs_ohm": 2.37,
+    "resistor_factors": [
+      0.99,
+      1.01
+    ],
+    "VCCR_table_V": [
+      0.318,
+      0.33,
+      0.343
+    ],
+    "VCSTmax_table_V": [
+      0.738,
+      0.78,
+      0.81
+    ],
+    "eta_transformer_assumed": [
+      0.85,
+      0.9,
+      0.95
+    ],
+    "main_diode_V_assumed": [
+      0.5,
+      1.2
+    ],
+    "sample_diode_V_assumed": [
+      0.3,
+      0.8
+    ],
+    "aux_diode_V_assumed": [
+      0.5,
+      1.0
+    ],
+    "aux_loss_V_assumed": [
+      0,
+      0.5
+    ],
+    "aux_positive_ringing_allowance_V_assumed": 3,
+    "VDD_normal_ripple_allowance_V_assumed": 0.5,
+    "VDD_min_recommended_V": 9,
+    "VDD_max_recommended_V": 35,
+    "VDD_on_table_V": [
+      19,
+      21,
+      23
+    ],
+    "VDD_off_max_table_V": 8.5,
+    "VDD_effective_cap_range_F": [
+      7.5e-07,
+      1e-06
+    ],
+    "VDD_cap_range_is_unqualified_component_contract": true,
+    "Cout_nom_F": 1e-05,
+    "Cout_max_F": 1.2e-05,
+    "Cout_effective_min_assumed_F": 4e-06,
+    "bleeder_output_ohm": 10000,
+    "VDD_run_budget_A_assumed": 0.006,
+    "run_current_table_max_without_gate_A": 0.00265,
+    "VDD_start_sink_table_max_A": 3e-05,
+    "HV_charge_current_sensitivity_A": [
+      0.0001,
+      0.00025,
+      0.0003,
+      0.0005
+    ],
+    "HV_current_at_other_VDD_is_not_guaranteed_by_endpoint_spec": true,
+    "VDD_boot_reserve_V_assumed": 1.0,
+    "VS_Rtop_ohm": 93100,
+    "VS_Rbottom_ohm": 20500,
+    "VS_ref25_table_V": [
+      4.01,
+      4.05,
+      4.09
+    ],
+    "VS_temp_slope_proxy_V_per_C": -0.0008,
+    "Tj_sensitivity_C": [
+      -40,
+      25,
+      125
+    ],
+    "VS_bias_table_A": [
+      -2.5e-07,
+      2.5e-07
+    ],
+    "cable_comp_at_full_load_table_V": [
+      -0.055,
+      0.025
+    ],
+    "VS_OVP25_table_V": [
+      4.55,
+      4.71
+    ],
+    "RLC_total_delay_assumed_s": [
+      1e-07,
+      1.5e-07
+    ],
+    "KLC_table": [
+      24,
+      25,
+      28.6
+    ],
+    "NTC_R25_nom_ohm_assumed": 100000,
+    "NTC_B_nom_K_assumed": 4250,
+    "NTC_relative_tolerance_assumed": 0.01,
+    "NTC_threshold_table_V": [
+      0.9,
+      1.0
+    ],
+    "NTC_current_table_A": [
+      9e-05,
+      0.000125
+    ],
+    "fault_CS_threshold_table_V": [
+      1.4,
+      1.6
+    ]
+  },
+  "candidate": "UCC28711DR bounded replacement, not a qualified released circuit",
+  "native_source_SHA256": "762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248",
+  "Lp_nom_H": 0.0023103999999999998,
+  "Np_Ns_ratio": 4.0,
+  "Na_Ns_ratio": 0.7368421052631579,
+  "normal_cases": 2592,
+  "normal_bounds": {
+    "f_Hz": {
+      "min": 33112.53890085838,
+      "max": 81776.87876363409
+    },
+    "primary_peak_A": {
+      "min": 0.30830931194385264,
+      "max": 0.34522439585730724
+    },
+    "secondary_peak_A": {
+      "min": 1.2332372477754105,
+      "max": 1.380897583429229
+    },
+    "ton_s": {
+      "min": 1.791764007525201e-06,
+      "max": 3.6556962025316453e-06
+    },
+    "tdemag_s": {
+      "min": 5.683386975918168e-06,
+      "max": 1.1856312008210742e-05
+    },
+    "idle_s": {
+      "min": 3.873816446355419e-06,
+      "max": 1.5891584858773263e-05
+    },
+    "effective_demag_duty": {
+      "min": 0.39259259259259255,
+      "max": 0.464769647696477
+    },
+    "CC_total_A": {
+      "min": 0.22584283744830178,
+      "max": 0.2777564676298853
+    },
+    "LED_after_10k_A": {
+      "min": 0.22314283744830177,
+      "max": 0.2759564676298853
+    },
+    "normal_flux_T": {
+      "min": 0.13605391572231945,
+      "max": 0.18619844834626376
+    },
+    "primary_rms_A": {
+      "min": 0.05313852486059696,
+      "max": 0.08891895097725462
+    },
+    "secondary_rms_A": {
+      "min": 0.46738135689411364,
+      "max": 0.5188064811319579
+    }
+  },
+  "normal_bias_screen_V": [
+    11.63157894736842,
+    19.77894736842105
+  ],
+  "normal_bias_headroom_to_9V_V": 2.6315789473684195,
+  "aux_bias_at_40V_output_plus3V_ringing_proxy": 32.857894736842105,
+  "bootstrap": {
+    "aux_takeover_output_V_proxy": 15.107142857142858,
+    "available_output_charge_current_A_proxy": 0.2243321231625875,
+    "charge_time_s_proxy": 0.0008081130411908295,
+    "charge_needed_by_run_budget_C": 4.848678247144977e-06,
+    "available_charge_C": 6.75e-06,
+    "charge_margin_ratio_before_initial_cycles": 1.392131969980596,
+    "remaining_initial_cycle_time_s_at_6mA_proxy": 0.0003168869588091705,
+    "three_initial_low_current_cycles_not_time_bounded": true,
+    "required_CDD_F_manufacturer_formula_with_6mA": 5.103871839099976e-07,
+    "endpoint_constant_charge_examples_s": {
+      "0.0001": 0.3285714285714285,
+      "0.00025": 0.10454545454545454,
+      "0.0003": 0.0851851851851852,
+      "0.0005": 0.04893617021276596
+    }
+  },
+  "CV_output_sensitivity_V": [
+    27.837953372412628,
+    32.267485319884386
+  ],
+  "OVP25_output_sensitivity_V": [
+    32.83194740422,
+    36.41875882848961
+  ],
+  "VS_negative_current_A": [
+    0.00047016969207803246,
+    0.0007150972152878069
+  ],
+  "RLC_starting_sensitivity_ohm": [
+    1244.25,
+    2224.096875
+  ],
+  "NTC_beta_comparison_trip_C": [
+    78.40779155621016,
+    93.64501589510866
+  ],
+  "NTC_trip_not_approved": true,
+  "backup_OCP_linear_flux_T": 0.3677994041407679,
+  "backup_not_validated_fault_waveform": true,
+  "input_overlay_cases": 54,
+  "input_overlay_bounds": {
+    "bulk_min_V": {
+      "min": 250.66667920163994,
+      "max": 342.645577488179
+    },
+    "bulk_max_V": {
+      "min": 285.9261802280522,
+      "max": 355.9108399567739
+    },
+    "calculated_line_input_W": {
+      "min": 6.154996284164571,
+      "max": 10.511145141756336
+    },
+    "capacitor_LF_rms_A": {
+      "min": 0.04709736576467002,
+      "max": 0.09668723674707654
+    },
+    "true_power_factor": {
+      "min": 0.40049057363747886,
+      "max": 0.5737370850353387
+    },
+    "fundamental_displacement_factor": {
+      "min": 0.9540171491398883,
+      "max": 0.9953959026020529
+    }
+  },
+  "old_external_startup_feed_removed_only_in_memory": true,
+  "unresolved": "Initial 3-cycle timing; effective capacitor/diode/gate-charge bounds; actual sample/valley/ripple/fault/thermal/optical behavior; components/sourcing/insulation.",
+  "no_SPICE_or_CAD_or_physical_test": true
+}
