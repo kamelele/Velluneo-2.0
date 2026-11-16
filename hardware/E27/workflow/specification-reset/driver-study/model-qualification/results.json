@@ -1,0 +1,99 @@
+{
+  "study": "VEL-MODEL-01",
+  "date": "2026-11-16",
+  "runtime": "ngspice44.2 shared library with native spice2poly44.2",
+  "model_temperature_C": 25,
+  "native_model_SHA256": "933152bf1e41754019a24c07749437fea9e5cb89d978a52e7a67cda45d1fa2d3",
+  "adapter": "Remove5 MODTYPE=ELDO selector lines only; E3 POLY and every numeric parameter retained",
+  "RC_smoke": {
+    "complete": true,
+    "sample_t_s": 2.001e-06,
+    "simulated_V": 0.632304478535947,
+    "analytical_V": 0.6323044372512285,
+    "absolute_difference_V": 4.1284718421685795e-08
+  },
+  "Rds_at_10V": [
+    {
+      "I_A": 0.1,
+      "Rds_ohm": 12.3249695587748
+    },
+    {
+      "I_A": 0.3,
+      "Rds_ohm": 12.829247601957187
+    },
+    {
+      "I_A": 0.5,
+      "Rds_ohm": 13.376465237840543
+    }
+  ],
+  "Coss_1MHz": [
+    {
+      "Vds_V": 0.0,
+      "Coss_F": 3.615786200516881e-10
+    },
+    {
+      "Vds_V": 1.0,
+      "Coss_F": 1.888420471015334e-10
+    },
+    {
+      "Vds_V": 4.0,
+      "Coss_F": 1.3899244828378325e-10
+    },
+    {
+      "Vds_V": 10.0,
+      "Coss_F": 1.0917781800060923e-10
+    },
+    {
+      "Vds_V": 25.0,
+      "Coss_F": 8.517125225126634e-11
+    },
+    {
+      "Vds_V": 50.0,
+      "Coss_F": 7.072447729427052e-11
+    },
+    {
+      "Vds_V": 100.0,
+      "Coss_F": 5.895429625565168e-11
+    },
+    {
+      "Vds_V": 200.0,
+      "Coss_F": 4.936046444804251e-11
+    },
+    {
+      "Vds_V": 400.0,
+      "Coss_F": 4.1509299079438054e-11
+    },
+    {
+      "Vds_V": 500.0,
+      "Coss_F": 3.929251548950238e-11
+    },
+    {
+      "Vds_V": 640.0,
+      "Coss_F": 3.699540548081764e-11
+    }
+  ],
+  "integrated_AC_charge_proxy_0_to_640V_C": 3.1657761241954205e-08,
+  "coarse_charge_proxy_C": 3.167554216937703e-08,
+  "charge_grid_refinement_difference_C": 1.778092742282256e-11,
+  "native_datasheet_Coss25V_typ_F": 2.6e-11,
+  "model_to_datasheet_typ_Coss25V_ratio": 3.2758173942794744,
+  "native_datasheet_Qoss_time_equivalent_typ_at640V_C": 6.08e-09,
+  "integral_is_a_quasistatic_proxy_not_validated_transient_charge": true,
+  "component_transient": {
+    "complete": false,
+    "rows": 66,
+    "last_time_s": 1.000000013977598e-07,
+    "requested_end_s": 1.2e-05,
+    "errors": [
+      "stderr Warning: singular matrix:  check node xq.5",
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 1e-07, timestep = 1.95837e-21: trouble with node \"e.xq.e2#branch\"",
+      "stderr run simulation(s) aborted"
+    ]
+  },
+  "gate_charge_verified": false,
+  "controller_or_whole_converter_simulated": false,
+  "warnings": [
+    "stderr Warning: can't find the initialization file spinit.",
+    "stderr Warning: singular matrix:  check node xq.5"
+  ]
+}
