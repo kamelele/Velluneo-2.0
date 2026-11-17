@@ -1,3 +1,5 @@
+> Update2026-11-17: the owner subsequently approved this exact graph in the current conversation; see [actual decision](../schematic-capture/owner-intent-approval.md). Historical pending-decision wording below is retained as review provenance. Graph digest is unchanged; native draft capture is now in ../Velluneo_specification_reset.kicad_sch.
+
 # Driver physical-pin intent — review packet r1
 
 2026-11-17. One complete isolated flyback candidate,28 components,73 physical terminals,21 nets,4 explicit unused bobbin terminals. Sole shared writer: coordinator. GroupA source work by/root/model_compatibility and groupB by/root/support_design are implementer inputs, not independent reviews. No schematic or PCB has been generated from this graph.

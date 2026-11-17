@@ -1,3 +1,5 @@
+> Update2026-11-17: the owner subsequently approved this exact graph in the current conversation; see [actual decision](../schematic-capture/owner-intent-approval.md). Historical pending-decision wording below is retained as review provenance. Graph digest is unchanged; native draft capture is now in ../Velluneo_specification_reset.kicad_sch.
+
 # Physical-pin intent review record
 
 Final draft digest b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57. All eleven frozen source hashes were checked by four actual independent reviewer contexts. Full reports are ../scope-reviews/reality.md, simplicity.md, completeness.md and change.md. Each recommends owner review of this graph, not electrical acceptance.

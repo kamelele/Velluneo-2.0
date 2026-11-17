@@ -1,0 +1,155 @@
+{
+  "runtime": "KiCad10.0.6 genuineUbuntu26.10 rootfs",
+  "physical_graph_equal_base_flag": true,
+  "cases": {
+    "base": {
+      "physical_graph": {
+        "components": [
+          "J1",
+          "U1"
+        ],
+        "nets": [
+          [
+            "/TEST_SUPPLY",
+            [
+              [
+                "J1",
+                "1",
+                "passive"
+              ],
+              [
+                "U1",
+                "1",
+                "power_in"
+              ]
+            ]
+          ]
+        ]
+      },
+      "erc_counts": {
+        "error:power_pin_not_driven": 1,
+        "warning:endpoint_off_grid": 3,
+        "warning:lib_symbol_issues": 2
+      },
+      "export_stdout": "",
+      "sha256": {
+        ".kicad_sch": "b1a8c7404fe5e05b9d4a53595cdbdec171de8277ceb4b7ff1f83a17e4dfc5f6a",
+        ".xml": "1ad577d5e5c2b1f9f183cd62d415c87b39a80e657209ee551d0324867e1dd874",
+        "-erc.json": "47f53b6823eea438e0b55e91efcd48906258ffb47b2126732376a1fd4d32d79c"
+      }
+    },
+    "flag": {
+      "physical_graph": {
+        "components": [
+          "J1",
+          "U1"
+        ],
+        "nets": [
+          [
+            "/TEST_SUPPLY",
+            [
+              [
+                "J1",
+                "1",
+                "passive"
+              ],
+              [
+                "U1",
+                "1",
+                "power_in"
+              ]
+            ]
+          ]
+        ]
+      },
+      "erc_counts": {
+        "warning:endpoint_off_grid": 4,
+        "warning:lib_symbol_issues": 3
+      },
+      "export_stdout": "",
+      "sha256": {
+        ".kicad_sch": "8372a4a7aa7c30fbd557ee5331da80972c2e888201b8e52cdf2bb04c870d436d",
+        ".xml": "264336e123bcc4ac87e244e8633ee429fc260796bda7f204164851676b2f7261",
+        "-erc.json": "5a809441d66a85a057f794b9bddba92d97e10d87b13adce19872a216073eb14e"
+      }
+    },
+    "physical-source": {
+      "physical_graph": {
+        "components": [
+          "J1",
+          "PS1",
+          "U1"
+        ],
+        "nets": [
+          [
+            "/TEST_SUPPLY",
+            [
+              [
+                "J1",
+                "1",
+                "passive"
+              ],
+              [
+                "PS1",
+                "1",
+                "power_out"
+              ],
+              [
+                "U1",
+                "1",
+                "power_in"
+              ]
+            ]
+          ]
+        ]
+      },
+      "erc_counts": {
+        "warning:endpoint_off_grid": 4,
+        "warning:lib_symbol_issues": 3
+      },
+      "export_stdout": "",
+      "sha256": {
+        ".kicad_sch": "7b5c8520966664a20daac3653d8850735ba2c58a62cbb0004e918c8816b044c8",
+        ".xml": "0f2fb55ef8045236b5d96bf7d3d1f4857b57196fb22cbbb8612b955faed159d8",
+        "-erc.json": "e1c30cdc8f2f491094181ad540ad0309520fff57324f008cd4042fb8ce99ff84"
+      }
+    },
+    "nonnumeric": {
+      "physical_graph": {
+        "components": [
+          "JIN",
+          "ULOAD"
+        ],
+        "nets": [
+          [
+            "/TEST_SUPPLY",
+            [
+              [
+                "JIN",
+                "1",
+                "passive"
+              ],
+              [
+                "ULOAD",
+                "1",
+                "power_in"
+              ]
+            ]
+          ]
+        ]
+      },
+      "erc_counts": {
+        "error:power_pin_not_driven": 1,
+        "warning:endpoint_off_grid": 3,
+        "warning:lib_symbol_issues": 2
+      },
+      "export_stdout": "Warning: schematic has annotation errors, please use the schematic editor to fix them\n",
+      "sha256": {
+        ".kicad_sch": "91fc9978e3dc99b1fb6600c5abe82370b67bcd22e540e277fba3087b2cbbf36a",
+        ".xml": "b789b111669ad7beb50aa0d797c0a7c5c5f3778f24ef24a344889586a7e45af1",
+        "-erc.json": "6b0e2bc73260bf1f2dd44e3aa7d7949523b142a9df38f3fb9508847b7f9ba079"
+      }
+    }
+  },
+  "base_flag_physical_graph_sha256": "19c71a540118eb82c4dc86035f16dcb7998f5d3d62823aa505de64fcc7e7f1e3"
+}

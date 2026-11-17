@@ -1,3 +1,5 @@
+> Subsequent actual owner decision2026-11-17 approves the specified pin graph. See [decision](schematic-capture/owner-intent-approval.md) and [draft capture](schematic-capture/README.md). The scope integration history below is retained; schematic-stage acceptance remains incomplete.
+
 # Accepted scope integration and next pin-intent decision
 
 VEL-SPEC-SYNC-01 r1,2026-11-17. Existing draft PR https://github.com/kamelele/Velluneo-2.0/pull/1; baseline2578929a50d68ce576d10348b9865001273e5bd8. Sole source writer/integrator:/root. Exact pinned KiCad10.0.6/ruleset0.7.1. Authorized owner:Kamil Stępak.
