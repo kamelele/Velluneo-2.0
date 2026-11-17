@@ -1,0 +1,76 @@
+{
+  "scope": "Idealhybrid3commandedpulses, notTIstate-machine/SPICE/validatedtransistor model",
+  "cases": 768,
+  "all_on_times_less_1over106k": true,
+  "max_on_time": 1.1285236808419857e-06,
+  "max_first3_peak_primary": 0.24209741921523636,
+  "max_first3_flux_proxy": 0.07981965375796247,
+  "Vo_after_3periods_range": [
+    0.4205981544948215,
+    4.3058528871295065
+  ],
+  "after3_remaining_primary_equivalent_range": [
+    0.025150547047514602,
+    0.22113792806725371
+  ],
+  "cases_withoutreset_between_firsttwo": 768,
+  "LEB_limited_pulses": 1515,
+  "max_peak_case": {
+    "bus": 357.7960312803931,
+    "Lp": 0.0020736,
+    "Rcs": 2.32023,
+    "VCSTmin": 0.215,
+    "LEB": 2.8e-07,
+    "totaldelay_assumed": 1.5e-07,
+    "diode_drop_assumed": 0.5,
+    "Cout": 2.0592e-05,
+    "command_frequency": 106000,
+    "pulses": [
+      {
+        "pulse": 1,
+        "initial_primary_residual": 0.0,
+        "ton": 6.870279473208681e-07,
+        "ideal_threshold_rise_time": 5.370279473208681e-07,
+        "LEB_limited": false,
+        "peak_primary": 0.11854546341151698,
+        "remaining_primary_equivalent": 0.10845405090500719,
+        "Vo_at_nextclock": 0.19330450229403956,
+        "fully_demagnetized": false,
+        "peak_flux_proxy_T": 0.03593799311843883
+      },
+      {
+        "pulse": 2,
+        "initial_primary_residual": 0.10845405090500719,
+        "ton": 4.3e-07,
+        "ideal_threshold_rise_time": 0.0,
+        "LEB_limited": true,
+        "peak_primary": 0.18264979427430167,
+        "remaining_primary_equivalent": 0.1679016758459419,
+        "Vo_at_nextclock": 0.5006279046502696,
+        "fully_demagnetized": false,
+        "peak_flux_proxy_T": 0.055371727106314605
+      },
+      {
+        "pulse": 3,
+        "initial_primary_residual": 0.1679016758459419,
+        "ton": 4.3e-07,
+        "ideal_threshold_rise_time": 0.0,
+        "LEB_limited": true,
+        "peak_primary": 0.24209741921523636,
+        "remaining_primary_equivalent": 0.22113792806725371,
+        "Vo_at_nextclock": 0.9067281209079424,
+        "fully_demagnetized": false,
+        "peak_flux_proxy_T": 0.07339374393051376
+      }
+    ]
+  },
+  "omissions": [
+    "actualgatecharge/driveMiller/Coss/spikes/recovery",
+    "actualstartupVS/CSfilterandfaultstate transitions",
+    "RLCsubtraction (omittedforupperthresholdpeak illustration,notminimumenergyguarantee)",
+    "actualoffphasewindingcoupling/leakage/auxdraw",
+    "temperaturedependentVf/currentlimits",
+    "magneticnonlinearity/initialremanence"
+  ],
+  "conclusion": "Residualcurrent+LEBpermitscommandedmaxfrequencyinthisconstructedhybridwitness,withhigherthanVCSTmin/Rcs peaks; first3arenotassumedfullyDCM. Notproofactualstartupmatchesit."
+}

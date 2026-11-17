@@ -1,0 +1,16 @@
+{
+  "scope": "conditional steady-state DCM model; inherited peak bound and same11W maximum bus power; not startup/fault/transient or actual waveform",
+  "bulk_min_V": 255.73470929495608,
+  "maximum_bus_power_bound_W": 11.0,
+  "inherited_primary_peak_bound_A": 0.358521767,
+  "primary_rms_from_energy_bound_A": 0.10139432282815258,
+  "derivation": "Ip_rms^2=f*Ip^2*ton/3; Pmag=f*Lp*Ip^2/2; ton=Lp*Ip/V. Therefore <=2*Pmag*Ip/(3*Vmin). Assumes ideal linear fully-reset triangular magnetizing current, bounded power and peak.",
+  "capacitor_total_rms_triangle_bound_A": 0.20062144545962662,
+  "triangle_note": "Ic=Ibridge-Ip; RMS(Ic)<=RMS(Ibridge)+RMS(Ip), combining separate maxima conservatively. Averaged line-current model is not a proven switching-current bound.",
+  "native15uF_120Hz_rating_A": 0.19,
+  "conservative_low_frequency_factor": 0.8,
+  "all_band_conservative_rating_A": 0.15200000000000002,
+  "ratio_of_conservative_bound_to_rating": 1.319877930655438,
+  "conclusion": "This conservative screen does not establish15uF ripple acceptance; it does not prove actual capacitor fails. Need actual/sufficiently bounded current spectrum, thermal/ripple assessment before accepting input stage. No capacitance ECO selected.",
+  "transformer_propagation": "Measured/guaranteed hot winding resistances and AC/core/aux loss must be propagated through real regulation, auxiliary takeover and thermal model; ideal transformer sweeps are not silently upgraded to physical results."
+}

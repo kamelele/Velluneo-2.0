@@ -1,5 +1,11 @@
 # E27 workflow index
 
+## Current electrical integration and passive ECO review — 17 November 2026
+
+The [ELEC-CLOSE-01 r2 packet](specification-reset/electrical-integration/README.md) adds source-backed startup analysis(128ramp/768residual-current cases), an authentic-core/bobbin winding-window diagnostic, hot copper-loss calculations and1152averaged input cases with timestep refinement. It identifies a bulk-bleeder one-open/one-short weakness and prepares a specific [31-position passive/numeric-reference ECO](specification-reset/electrical-integration/ECO-01.md), [proposed graph](specification-reset/electrical-integration/proposed-connectivity.json) digest5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8. The changed graph is unapproved and unapplied; the existing approved28-position native schematic/local library remains byte-identical.
+
+[Four actual independent reviews and integration record](specification-reset/electrical-integration/integration-record.md) recommend exactECOintent human review only. Current native doctor/oldgraph/ERC checks pass in their limited scopes; schematic requirementsU05–U09 and fullmanagedconfiguration still fail. Newcapacitortotalripple and current/flux budget gaps are explicit, along with all earlier electrical/model/thermal/safety majors. Proposed40V openfault ceiling is illustrative/unapproved; no complete service wait is established. No finished supply/PCB/DRC/order or physical measurement is claimed.
+
 ## Current all-position library candidates — 17 November 2026
 
 All28 physical component positions now have candidate footprints using18 unique definitions. The [current packet](specification-reset/transformer-footprint/README.md) resolves the earlier T1 view ambiguity through independently checked authentic STEP/PDF marking correlation. [Current editable ZIP](specification-reset/transformer-footprint/Velluneo_driver_all_footprints.zip) includes the complete local library. Current52-file source hashes and four targeted final reviews retain prior17 unchanged module scopes.

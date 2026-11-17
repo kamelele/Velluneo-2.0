@@ -1,0 +1,36 @@
+{
+  "scope": "Startup integration rerun; not physical/controller-model validation",
+  "commands": [
+    {
+      "command": "python device-repo/hardware/E27/workflow/specification-reset/electrical-integration/startup/calculate.py --source-dir tmp/eclose-startup --ucc-pdf bias-repair/source/ucc2871x.pdf",
+      "exit_code": 0
+    },
+    {
+      "command": "python device-repo/hardware/E27/workflow/specification-reset/electrical-integration/startup/hybrid3.py",
+      "exit_code": 0
+    }
+  ],
+  "comparisons": {
+    "results.json": {
+      "all_calculated_values_equal_original": true,
+      "comparison_excludes": "input_SHA256 provenance metadata: stable labels and additional repository input hashes",
+      "original_sha256": "7572e1e668f61858a61fcf5af2bf7a827822d60c607cacef160f65132ff29c24",
+      "integrated_sha256": "dc57679fd1803f0de3f80a375e7a13acb059dccfc3985d50679c9c6dcde5dc36"
+    },
+    "rows.json": {
+      "all_calculated_values_equal_original": true,
+      "comparison_excludes": null,
+      "original_sha256": "bc9be18312f9fd92cc22225ec37c5bdb4a9606e1925c4456628ee72df595b6d9",
+      "integrated_sha256": "bc9be18312f9fd92cc22225ec37c5bdb4a9606e1925c4456628ee72df595b6d9"
+    },
+    "hybrid3-results.json": {
+      "all_calculated_values_equal_original": true,
+      "comparison_excludes": null,
+      "original_sha256": "aac241a0633476e459801ae2420ab65f3753041a188e553f75d363fa449328cb",
+      "integrated_sha256": "aac241a0633476e459801ae2420ab65f3753041a188e553f75d363fa449328cb"
+    }
+  },
+  "native_PDF_files_in_integrated_directory": 0,
+  "rendered_vendor_pages_in_integrated_directory": 0,
+  "physical_graph_or_CAD_changes": false
+}

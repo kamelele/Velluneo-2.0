@@ -1,0 +1,65 @@
+{
+  "retrieved_date": "2026-11-17",
+  "vendor_files_redistributed": false,
+  "sources": [
+    {
+      "id": "tdk-bobbin-step",
+      "url": "https://product.tdk.com/system/files/dam/doc/product/ferrite/ferrite/ferrite-acc/3doutline_step/c61036-a0162-b202_efd25_sw.step",
+      "sha256": "f6acdbbccb291fd39ac8028c163d7bdb47fa6849c8c7d94dce01076f05dfb2f0",
+      "basis": "Native nominal bobbin geometry; explicit --bobbin-step input"
+    },
+    {
+      "id": "tdk-core-step",
+      "url": "https://product.tdk.com/system/files/dam/doc/product/ferrite/ferrite/ferrite-core/3doutline_step/c61036-a0162-c001_efd25.step",
+      "sha256": "062a59009fed08ba69f30db6acdb0448a2e1f085f2e5882620ddc56f0536783f",
+      "basis": "Native nominal core geometry; explicit --core-step input"
+    },
+    {
+      "id": "elektrisola-wire",
+      "url": "https://www.elektrisola.com/Download/Enamelled%20wire_eng.pdf",
+      "sha256": "061d2605a50cd0dbf6c1b04ef13a96cb159a131b6bcc8232a99450e56839e2bb",
+      "basis": "P180 product p2, Grade2 dimensions and R20 p4"
+    },
+    {
+      "id": "furukawa-tex",
+      "url": "https://www.furukawaelectric.com/en/product/catalogue/pdf/tex_m028_e.pdf",
+      "sha256": "555d1d7ad971071b09ec2c6b4ae72e9c951c6c7c7eb22d37676d2d6e434ba713",
+      "basis": "Thermal p1, reference OD/R20 table p2"
+    },
+    {
+      "id": "3m-tape",
+      "url": "https://multimedia.3m.com/mws/media/86180O/3m-tape.pdf?fn=1350FDS.pdf",
+      "sha256": "d1eae6e4f40279fa49f7aa2322cbde5c276ea7a635e5550c19feb68cc3997468",
+      "basis": "November2024 p1, representative thickness and130C rating"
+    },
+    {
+      "id": "furukawa-product-page",
+      "url": "https://www.furukawaelectric.com/tex-e/en/product/texe_series.html",
+      "sha256": "72f1f858fcf6735d90e7988418ad5ad962ddf69467ba14108480843426a7d8c9",
+      "basis": "Retrieved2026-11-17; dynamic HTML hash identifies original snapshot only"
+    },
+    {
+      "id": "tdk-core-entry-html",
+      "url": "https://product.tdk.com/en/search/ferrite/ferrite/ferrite-core/info?part_no=B66421G0000X187",
+      "sha256": "ed9933a767807d78d98d84071ac0f83a4ab7fe43afa41a0b744b151d3a1ccb63",
+      "basis": "Actual HTML STEP link extraction on2026-11-17; dynamic snapshot identity, not guaranteed future pagehash"
+    }
+  ],
+  "existing_read_only_evidence": [
+    {
+      "original_path": "component-study/source/efd25.pdf",
+      "sha256": "f4b6084fa9171a0157c3744663e146da6b3a738171dab4dfd3e137c125f6f06e",
+      "basis": "TDK October2022 p2core/p3bobbin; exact-part pages supply datasheet retrieval link"
+    },
+    {
+      "repo_relative_path": "../../schematic-intent/pin-basis-primary.md",
+      "sha256": "f02c2faa3cf05bd833c44a56180a7f53140158d84717fa14907b37ea9d7d56a4",
+      "basis": "Approved winding pins/dots"
+    }
+  ],
+  "manufacturer_entry_pages": [
+    "https://product.tdk.com/en/search/ferrite/ferrite/ferrite-acc/info?part_no=B66422W1010D001",
+    "https://product.tdk.com/en/search/ferrite/ferrite/ferrite-core/info?part_no=B66421G0000X187"
+  ],
+  "retrieval_rule": "Download original files externally, compare exact SHA256. A changed manufacturer file is a new input requiring review; never bypass mismatch merely to reproduce."
+}
