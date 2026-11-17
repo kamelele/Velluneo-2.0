@@ -10,6 +10,9 @@ for a in contract['parts']:expected[a['name']]=a['pads']
 t1path=P/'transformer-footprint/geometry-contract.json'
 if t1path.exists():
  t1=json.loads(t1path.read_text());expected[t1['name']]=t1['pads']
+overlay=P/'library-source-03/geometry-contract.json'
+if overlay.exists():
+ g=json.loads(overlay.read_text());expected[g['name']]=g['pads']
 results=[]
 for name,pads in expected.items():
  fp=pcbnew.FootprintLoad(str(L),name);assert fp is not None,name

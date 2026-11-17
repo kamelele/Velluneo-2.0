@@ -1,5 +1,11 @@
 # E27 workflow index
 
+## Current library source confirmation — 17 November 2026
+
+[LIB-SOURCE-03](specification-reset/library-source-03/README.md) uses primary KEMET commercial C0G Table3 densityB lands for C2/C3 and confirms F1 copper directly against the downloaded official SCHURTER PDF/drawings. [Current KiCad draft ZIP](specification-reset/library-source-03/Velluneo_driver_LIB03_KiCad.zip) and [schematic PDF](specification-reset/library-source-03/Velluneo_driver_LIB03.pdf) supersede earlier native packages for the new assignment bytes. The owner-approved ECO-01 physical graph,31positions/79terminals/22nets/4NC, values, electrical types and rules are unchanged.19available modules include one retained historical KEMET pattern;18definitions are active.
+
+Actual pinned KiCad10.0.6/matching pcbnew doctor, all-module geometry, graph, MPN/BOM contract, enabled ERC and output/member checks pass at their stated scopes. Requirements U05-U09 and managed work-check configuration remain incomplete. Source confirmation does not qualify soldering, body tolerances, fuse coordination or any inherited electrical/model/thermal/insulation/process finding. No PCB, routing, DRC or physical measurement is created. The separately supplied toolkit-reference checkout was verified as exact86614c3; the unchanged installed manifest/lock remains authoritative. Prior capture packages and reports below are historical for their own source revisions.
+
 ## Current electrical refinement evidence — 17 November 2026
 
 [ELEC-REFINE-02 r2](specification-reset/electrical-refinement/README.md) adds64actual finite-R switched-load endpoint cases with200ns/100ns convergence/KCL/RMS/FFT,48finite-auxiliaryloss/charge scenarios,100optical/metrologicalbudgetcases and clamp/winding commutationfrontiers. WorstmodeledbulkRMS127.135mA vssevere152mAcomparison supports retaining15uFcandidates; updatedactive-R13/noVFoutminimum startupwitnessVDD11.2246V supports retainedRAUX4.7underdeclaredhypotheses. Factory-onlyopticalcalibration is analyzed at the accepted230V50Hz/25±1°Ccomplete-lamp condition; no measuredflux orchangedR92.37value.

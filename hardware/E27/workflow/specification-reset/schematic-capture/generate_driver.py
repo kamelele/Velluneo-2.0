@@ -3,9 +3,10 @@
 Does not create/approve expected intent, fabricate footprints, or generate a PCB.
 """
 from pathlib import Path
-import json,uuid,csv,hashlib
+import json,uuid,csv,hashlib,argparse
 P=Path(__file__).resolve().parent.parent
-D=P/'eco01-capture';D.mkdir(exist_ok=True);L=P/'libraries';L.mkdir(exist_ok=True)
+args=argparse.ArgumentParser();args.add_argument('--output-dir',type=Path,default=P/'eco01-capture');opts=args.parse_args()
+D=opts.output_dir;D.mkdir(exist_ok=True);L=P/'libraries';L.mkdir(exist_ok=True)
 NAME='Velluneo_specification_reset'
 parts=json.loads((P/'electrical-integration/proposed-parts.json').read_text())
 assignment_path=P/'footprint-study/assignments.json'
@@ -52,8 +53,8 @@ syms['POWER_SOURCE']=([pin('1','~',0,0,90,typ='power_out',length=0)],line([(0,0)
 def library_symbol(name,qualified=False):
  pins,graphics,ref=syms[name];symname='Velluneo_Driver:'+name if qualified else name
  return f'(symbol {q(symname)} '+('(power) ' if name=='POWER_SOURCE' else '')+f'(pin_names (offset .5)) (in_bom yes) (on_board yes) '+prop('Reference',ref,0,5.08,False)+prop('Value',name,0,-5.08,False)+prop('Footprint','')+f'(symbol {q(name+"_0_1")} {graphics})'+f'(symbol {q(name+"_1_1")} '+''.join(pinsex(p) for p in pins)+'))'
-(L/'Velluneo_Driver.kicad_sym').write_text('(kicad_symbol_lib (version 20241209) (generator "velluneo_capture")\n'+ '\n'.join(library_symbol(k) for k in syms)+'\n)\n')
-(P/'sym-lib-table').write_text('(sym_lib_table (version 7) (lib (name "Velluneo_Driver") (type "KiCad") (uri "${KIPRJMOD}/libraries/Velluneo_Driver.kicad_sym") (options "") (descr "Source-derived local driver symbols; footprints pending qualification")))\n')
+(L/'Velluneo_Driver.kicad_sym').write_text('(kicad_symbol_lib (version 20241209) (generator "velluneo_capture")\n'+ '\n'.join(library_symbol(k) for k in syms)+'\n)\n',encoding='utf-8',newline='\n')
+(P/'sym-lib-table').write_text('(sym_lib_table (version 7) (lib (name "Velluneo_Driver") (type "KiCad") (uri "${KIPRJMOD}/libraries/Velluneo_Driver.kicad_sym") (options "") (descr "Source-derived local driver symbols; footprints pending qualification")))\n',encoding='utf-8',newline='\n')
 positions={
 'J1':(30.48,50.8),'F1':(76.2,40.64),'RIN':(129.54,40.64),'BR1':(157.48,66.04),'CBULK':(45.72,91.44),'RB1':(96.52,91.44),'RB2':(152.4,91.44),
 'T1':(246.38,50.8),'DCL':(226.06,106.68),'TVS1':(266.7,106.68),'Q1':(241.3,132.08),'RCS':(241.3,156.21),
@@ -150,7 +151,7 @@ text('J2 is internal wiring, not the final tool-free panel dock.',302.26,141.0,.
 text('Kelvin sense: R9 top -> R6; R9 bottom -> U1 GND.',17.78,251.46,.95)
 header=f'(kicad_sch (version 20250114) (generator "velluneo_capture") (uuid {q(rootuid)}) (paper "A3") (title_block (title "Velluneo E27 - isolated LED driver") (date "2026-11-17") (rev "SCH-ECO01-02") (company "Velluneo") (comment 1 "Owner-approved ECO-01 intent 5c2b5fdd; electrical qualification pending"))'
 schematic=header+'\n(lib_symbols\n'+'\n'.join(library_symbol(k,True) for k in syms)+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
-(P/(NAME+'.kicad_sch')).write_text(schematic)
+(P/(NAME+'.kicad_sch')).write_text(schematic,encoding='utf-8',newline='\n')
 pro=P/(NAME+'.kicad_pro')
 if not pro.exists():pro.write_text(json.dumps({'meta':{'filename':NAME+'.kicad_pro','version':1}},indent=2)+'\n')
 with (D/'BOM.csv').open('w',newline='') as f:
