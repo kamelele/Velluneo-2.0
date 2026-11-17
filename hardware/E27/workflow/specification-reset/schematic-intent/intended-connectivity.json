@@ -1,0 +1,828 @@
+{
+  "schema_version": 1,
+  "revision": "driver-pin-intent-draft-1",
+  "basis": "Independent pre-CAD architecture and exact native pin inventories; draft for four-role and owner review; no CAD netlist used.",
+  "basis_sources": [
+    {
+      "path": "schematic-intent/pin-basis-primary.md",
+      "sha256": "f02c2faa3cf05bd833c44a56180a7f53140158d84717fa14907b37ea9d7d56a4"
+    },
+    {
+      "path": "schematic-intent/local-terminal-contract.md",
+      "sha256": "6b82a32d748c79b55f9b0e83b7c651575417e410e839f9e03b9bdd76e00167ee"
+    },
+    {
+      "path": "schematic-intent/owner-scope-acceptance.md",
+      "sha256": "724c17767acef7f4768c870529746470e837d427348d708051a41b3c17cc2500"
+    },
+    {
+      "path": "schematic-intent/pin-basis-secondary.md",
+      "sha256": "6323b4bf6d7661210e3081af8eeb39779bf153d198120fdaf24f8b81467ebc32"
+    },
+    {
+      "path": "schematic-intent/native-source-register-primary.json",
+      "sha256": "41b7de71c5abe4b5630ab500f2657f02640b035bb6a02aee68d071b0d55797af"
+    },
+    {
+      "path": "schematic-intent/native-source-register-secondary.json",
+      "sha256": "7c3333ec2122c8f57f053e7ba81ac329d61acaaab696ef3dca3735f5a36844c9"
+    },
+    {
+      "path": "schematic-intent/parts.json",
+      "sha256": "808295707d760d62e198794e6f406f1879cdff322e48412e9bd4d2df784bc221"
+    }
+  ],
+  "components": [
+    {
+      "ref": "J1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "F1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RIN",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "BR1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "CBULK",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RB1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RB2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "Q1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "T1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "DCL",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "TVS1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "CV1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "CV2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RVS1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RVS2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RLC",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RG",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RGS",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RCS",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "DAUX",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RAUX",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "DOUT",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "COUT",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RBO1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RBO2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RT1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "id": "AC_CAP_A",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "1"
+        },
+        {
+          "ref": "F1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "AC_CAP_B",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "2"
+        },
+        {
+          "ref": "BR1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "AC_FUSED",
+      "pins": [
+        {
+          "ref": "F1",
+          "pin": "2"
+        },
+        {
+          "ref": "RIN",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "AC_LIMITED",
+      "pins": [
+        {
+          "ref": "RIN",
+          "pin": "2"
+        },
+        {
+          "ref": "BR1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "id": "BULK_POS",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "1"
+        },
+        {
+          "ref": "CBULK",
+          "pin": "1"
+        },
+        {
+          "ref": "RB1",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "7"
+        },
+        {
+          "ref": "T1",
+          "pin": "1"
+        },
+        {
+          "ref": "TVS1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "PRIMARY_GND",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "3"
+        },
+        {
+          "ref": "CBULK",
+          "pin": "2"
+        },
+        {
+          "ref": "RB2",
+          "pin": "2"
+        },
+        {
+          "ref": "U1",
+          "pin": "4"
+        },
+        {
+          "ref": "T1",
+          "pin": "2"
+        },
+        {
+          "ref": "CV1",
+          "pin": "2"
+        },
+        {
+          "ref": "CV2",
+          "pin": "2"
+        },
+        {
+          "ref": "RVS2",
+          "pin": "2"
+        },
+        {
+          "ref": "RCS",
+          "pin": "2"
+        },
+        {
+          "ref": "RT1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "BLEED_MID",
+      "pins": [
+        {
+          "ref": "RB1",
+          "pin": "2"
+        },
+        {
+          "ref": "RB2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "VDD",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "1"
+        },
+        {
+          "ref": "CV1",
+          "pin": "1"
+        },
+        {
+          "ref": "CV2",
+          "pin": "1"
+        },
+        {
+          "ref": "RAUX",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "VS",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "2"
+        },
+        {
+          "ref": "RVS1",
+          "pin": "2"
+        },
+        {
+          "ref": "RVS2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "NTC",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "3"
+        },
+        {
+          "ref": "RT1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "CS",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "5"
+        },
+        {
+          "ref": "RLC",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "DRV",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "6"
+        },
+        {
+          "ref": "RG",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "GATE",
+      "pins": [
+        {
+          "ref": "Q1",
+          "pin": "1"
+        },
+        {
+          "ref": "RG",
+          "pin": "2"
+        },
+        {
+          "ref": "RGS",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "DRAIN",
+      "pins": [
+        {
+          "ref": "Q1",
+          "pin": "2"
+        },
+        {
+          "ref": "Q1",
+          "pin": "4"
+        },
+        {
+          "ref": "T1",
+          "pin": "5"
+        },
+        {
+          "ref": "DCL",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "SENSE",
+      "pins": [
+        {
+          "ref": "Q1",
+          "pin": "3"
+        },
+        {
+          "ref": "RLC",
+          "pin": "1"
+        },
+        {
+          "ref": "RGS",
+          "pin": "2"
+        },
+        {
+          "ref": "RCS",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "AUX_RAW",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "4"
+        },
+        {
+          "ref": "RVS1",
+          "pin": "1"
+        },
+        {
+          "ref": "DAUX",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "OUTPUT_NEG",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "6"
+        },
+        {
+          "ref": "COUT",
+          "pin": "2"
+        },
+        {
+          "ref": "RBO1",
+          "pin": "2"
+        },
+        {
+          "ref": "RBO2",
+          "pin": "2"
+        },
+        {
+          "ref": "J2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "SECONDARY_RAW",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "10"
+        },
+        {
+          "ref": "DOUT",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "CLAMP",
+      "pins": [
+        {
+          "ref": "DCL",
+          "pin": "1"
+        },
+        {
+          "ref": "TVS1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "AUX_RECT",
+      "pins": [
+        {
+          "ref": "DAUX",
+          "pin": "1"
+        },
+        {
+          "ref": "RAUX",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "OUTPUT_POS",
+      "pins": [
+        {
+          "ref": "DOUT",
+          "pin": "1"
+        },
+        {
+          "ref": "COUT",
+          "pin": "1"
+        },
+        {
+          "ref": "RBO1",
+          "pin": "1"
+        },
+        {
+          "ref": "RBO2",
+          "pin": "1"
+        },
+        {
+          "ref": "J2",
+          "pin": "1"
+        }
+      ]
+    }
+  ],
+  "no_connects": [
+    {
+      "ref": "T1",
+      "pin": "3",
+      "reason": "Raw bobbin terminal deliberately has no winding wire or PCB electrical connection."
+    },
+    {
+      "ref": "T1",
+      "pin": "7",
+      "reason": "Raw bobbin terminal deliberately has no winding wire or PCB electrical connection."
+    },
+    {
+      "ref": "T1",
+      "pin": "8",
+      "reason": "Raw bobbin terminal deliberately has no winding wire or PCB electrical connection."
+    },
+    {
+      "ref": "T1",
+      "pin": "9",
+      "reason": "Raw bobbin terminal deliberately has no winding wire or PCB electrical connection."
+    }
+  ],
+  "barriers": [
+    {
+      "id": "PRIMARY_TO_ISOLATED_OUTPUT",
+      "side_a": [
+        "AC_CAP_A",
+        "AC_CAP_B",
+        "AC_FUSED",
+        "AC_LIMITED",
+        "BULK_POS",
+        "PRIMARY_GND",
+        "BLEED_MID",
+        "VDD",
+        "VS",
+        "NTC",
+        "CS",
+        "DRV",
+        "GATE",
+        "DRAIN",
+        "SENSE",
+        "AUX_RAW",
+        "CLAMP",
+        "AUX_RECT"
+      ],
+      "side_b": [
+        "OUTPUT_NEG",
+        "OUTPUT_POS",
+        "SECONDARY_RAW"
+      ],
+      "basis": "Architecture A electrical separation through transformer only; not a physical-insulation/withstand qualification."
+    }
+  ],
+  "empty_design_reason": null,
+  "approval": null
+}

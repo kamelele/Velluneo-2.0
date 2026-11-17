@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo E27 repairable LED lamp",
-  "revision": "specification-contract-draft-3",
+  "revision": "specification-contract-accepted-scope-4",
   "subsystems": [
     {
       "id": "BASE",
@@ -50,16 +50,16 @@
     },
     {
       "id": "R-SUPPLY",
-      "revision": "interview-r9",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
-      "text": "E27, nominal Polish 230 V AC / 50 Hz supply; 120 V operation unnecessary.",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Establish actual line-voltage design/test envelope before schematic; verify startup, running and faults at its corners before release.",
+      "text": "E27 nominal230Vac50Hz; normaldesign/test207–253Vac49–51Hz; no120V support.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Verify cold/hot startup and normal/fault behavior at declared line/ambient corners; start≤1s and ≥90% stabilizedflux; no repetitive healthy restarts.",
       "gate": "release",
       "implementation": [
         {
           "subsystem": "BASE",
-          "object": "E27, nominal Polish 230 V AC / 50 Hz supply; 120 V operation unnecessary.",
+          "object": "E27 nominal230Vac50Hz; normaldesign/test207–253Vac49–51Hz; no120V support.",
           "path": "requirements-and-plan.md"
         }
       ],
@@ -68,11 +68,11 @@
     },
     {
       "id": "R-LIGHT",
-      "revision": "interview-r9",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
       "text": "750–850 lm emitted by each complete lamp variant with its diffuser fitted (owner accepted).",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Stabilized conditions/sample plan remain to be agreed at specification; measure before final demonstration.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Whole lamp with diffuser750–850lm. Baseline230Vac50Hz/25±1C/baseup;≥30minandthree5minspacedreadingschange<0.5%; record calibration/uncertainty/sample IDs.",
       "gate": "release",
       "implementation": [
         {
@@ -91,11 +91,11 @@
     },
     {
       "id": "R-CCT",
-      "revision": "interview-r9",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
       "text": "Panels in nominal 2700 K, 4000 K and 6500 K; brightest/dimmest flux ratio ≤1.10 and CRI Ra ≥80 (owner accepted).",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Agree CCT tolerances and stabilized conditions at specification; measure all three variants.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "CCT2700±150K/4000±200K/6500±300K;Ra≥80;eachlamp750–850lm;brightest/dimmest≤1.10 on samebase and matched stabilized conditions. One4000Kprototype does not verify family.",
       "gate": "release",
       "implementation": [
         {
@@ -165,11 +165,11 @@
     },
     {
       "id": "R-OFFLINE",
-      "revision": "interview-r11",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
       "text": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Determine safe-access conditions and delay by analysis and measurement; instructions alone are not evidence of safety. Limits before schematic, geometry before placement, measured confirmation before release.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Onlypanel/mountaccessibleafterdiffuserremoval;driverbehindcover. Offlineunscrewedservicegoals≤5VDC/≤0.5mJ/≤45C; derivewaitfromwholeassemblyworstcasecooling/discharge,includingfaults;notuniversalstandardlimits.",
       "gate": "release",
       "implementation": [
         {
@@ -221,11 +221,11 @@
     },
     {
       "id": "R-DIFFUSER",
-      "revision": "interview-r11",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
       "text": "Removable milky diffuser hides individual LEDs and provides broad side illumination assessed against an ordinary milky E27 lamp around 800 lm. Emission towards the cap is not required.",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Agree distribution and appearance criteria at specification; check fit before placement and optical performance on the complete lamp.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "CoreProA60~806lmreferenceidentified in finalizationU14; matchednormalized90degreeintensity≥75%reference;individualLEDpointsnotdistinguishableat0.5m/0,45,90degrees/twoazimuths/100–300lxafteropticaltestreadiness;capdirectionnotrequired.",
       "gate": "release",
       "implementation": [
         {
@@ -244,11 +244,11 @@
     },
     {
       "id": "R-FAULT",
-      "revision": "interview-r9",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
       "text": "An open/failed panel, missing panel and shorted panel must not damage the base.",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Define representative faults and duration before schematic; validate protection and temperatures before release. After offline panel replacement, power cycling restores normal operation without reset or fuse replacement.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Missing/open/hardshortpanel must not damagebase or needfuse/manualreset; offlinepanelswap+powercycle restoresoperation. Initial24hfaultscreen aftersteadystate, repeat recovery; individualLED/contact/partialinsertionfaultcases before schematicacceptance.",
       "gate": "release",
       "implementation": [
         {
@@ -262,11 +262,11 @@
     },
     {
       "id": "R-EMPTY",
-      "revision": "interview-r9",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
       "text": "The energized base can remain without a panel without damage or overheating.",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Define duration and accessible-part limits before schematic; verify no-load behavior and recovery with the approved test fixture. This does not authorize live replacement.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Continuous absentpaneloperation must not damagebase/overheat;initial24hscreenaftersteadystate,recoveryafterofflinepanelreplacement/powercycle. No livereplacement.",
       "gate": "release",
       "implementation": [
         {
@@ -280,11 +280,11 @@
     },
     {
       "id": "R-THERMAL",
-      "revision": "interview-r9",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
       "text": "Protect against overheating using a justified simple implementation.",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Select limiting or shutdown/recovery after comparison. Agree thresholds, hysteresis and protection-fault behavior (including sensor faults if a sensor is selected) before schematic; test before release.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "AutomaticNTCinhibition/retry direction; select justifiedtrip/restart/lag andsensoropen/shortresponse before schematicacceptance, thenmeasure actualpart/materialprotection.",
       "gate": "release",
       "implementation": [
         {
@@ -512,11 +512,11 @@
     },
     {
       "id": "R-SPEC-PACKET",
-      "revision": "draft-1",
+      "revision": "accepted-scope-2026-11-17",
       "owner": "Coordinator; owner stage decision",
       "text": "Complete specification has reviewed product, safety, interfaces, fabrication/assembly, owned unknowns and test scope before schematic work.",
-      "basis": "Toolkit first-project.md and project stage instructions; requirements-and-plan.md section8",
-      "acceptance": "Complete packet, independent role reports, specification-stage matrix and genuine owner decision; no invented measurements or supplier approval.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Owner scope acceptance2026-11-17 plus independently reviewed finalization criteria/direction and synchronized requirements/owned later gaps; no circuit or manufacturing qualification inferred.",
       "gate": "specification",
       "implementation": [
         {
@@ -536,7 +536,9 @@
         }
       ],
       "method": "review",
-      "evidence_ids": []
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     }
   ],
   "interfaces": [],
@@ -548,7 +550,11 @@
       "owner": "Owner + technical reviewer",
       "question": "P-OPTICS and P-CRI accepted by owner on 2026-11-14; P-SUPPLY and its technical basis remain open. Optical measurement conditions are still tracked at U14.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "Owner accepted207–253Vac49–51Hz normaldesignrange and opticaltargets; frequencycorners/startupimplementation remains dueU06.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     },
     {
       "id": "U02",
@@ -557,7 +563,11 @@
       "owner": "Owner + coordinator",
       "question": "Panel target 15,000 h / ≥70% initial flux accepted on 2026-11-14. Define sample/population acceptance, catastrophic-failure treatment, maintenance measurement conditions remain open. Minimum replacement life is now accepted as 50 complete panel-replacement/diffuser-reclosing cycles.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "One P0 specimen;100h zero-failure/≥95%initialflux screen, not population/lifetimeproof; exactlifeassessment U07 and actualmeasurements U12 remain.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     },
     {
       "id": "U03",
@@ -566,7 +576,11 @@
       "owner": "Coordinator + owner",
       "question": "External pre-fabrication electronics reviewer is not an owner prerequisite. Assign technical calculations/checks to the coordinator and four independent agent contexts; owner retains stage approval. Establish a feasible proposed fabrication/assembly route with unconfirmed constraints explicit. Name physical-test personnel before affected tests; detailed order evidence remains due at U11/U13.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "JLC2layer1.6mm2ozENIG/SMDpopulationplusagreedTHT/customtransformer/manualfallback proposedandaccepted; technicalrolecoverage is recorded; order-specificprocessconfirmationU11/U13 remains.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     },
     {
       "id": "U04",
@@ -575,7 +589,11 @@
       "owner": "Technical reviewer + owner",
       "question": "Select exact laboratory-demo scope versus external qualification; identify applicable product/safety/EMC/flicker requirements without assuming old limits.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "Laboratorydemonstrator scope, applicablecompleteproduct/controlgear/module/EMC sourcefamilies andclassificationlead identifiedinfinalizationU04. Fullclauses/numericalimplementation/ENadoption/commercialqualification arenot claimed and remainU06/U11/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     },
     {
       "id": "U05",
@@ -665,7 +683,11 @@
       "owner": "Owner + coordinator + laboratory lead",
       "question": "Owner accepted an ordinary milky approximately 800 lm E27 lamp as distribution reference, without cap-direction emission. Select exact reference/comparison conditions; finalize CCT tolerances, stabilized optical conditions and sample plan.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "CCTwindows, identifiedCoreProreference,stabilization/sample/matchedpolar/LEDpointappearance methods set infinalizationU14; physicalphotometry remains dueR-LIGHT/R-CCT/R-DIFFUSER/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     },
     {
       "id": "U15",
@@ -674,7 +696,11 @@
       "owner": "Owner + coordinator + technical reviewer",
       "question": "Ambient 10–40°C and all orientations are accepted. Define open/ventilated-fixture assumptions and the thermal worst-case analysis/test plan at specification. Actual worst-case measurements belong to R-ENV/U12 before the affected tests and release, not before design.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "Openbarelampholder/stillair/200mmclearance and10/25/40C×3orientations+anyworse,≥3h/steady<1K/hfor1h planned; actualworstcase/materialtemperatures remainU07/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     },
     {
       "id": "U16",
@@ -683,7 +709,11 @@
       "owner": "Electrical reviewer + owner + laboratory lead",
       "question": "Owner accepted separate base shielding: only panel/mounting accessible after diffuser removal. Define remaining normal/fault, recovery, residual-energy and cooling criteria through coordinator and independent technical reviews; implementation follows U06.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "Separatecover/offlineaccessgoals, faultscreenandrecoverycriteriaandNTCretrydirection set; thresholds,sensorfaults,insulationconstruction andwholeassemblywaitimplementation remainU06/U08/U09/U10/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
     },
     {
       "id": "U17",
@@ -695,5 +725,49 @@
       "status": "open"
     }
   ],
-  "evidence": []
+  "evidence": [
+    {
+      "id": "E-SPEC-SCOPE-REVIEW",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Coordinator integration review with actual independent Reality, Overengineering, Completeness and Change reports; scope-only, no circuit qualification",
+      "artifact": "scope-synchronization-review.md",
+      "sha256": "56daf81e5a0916bd3a620c361b18b655bb952f68ac7f8cff7b2e5e32c7d67c6a",
+      "intent_digest": "0480357ecf126fcbeab03e8d5f8a343cf413db0a4b0a816a157aca1aa1da106b",
+      "inputs": [
+        {
+          "path": "requirements-and-plan.md",
+          "sha256": "a0c2867d511313741495cf9d2696590e756c0d6a335d7180df5409cc6532b34e"
+        },
+        {
+          "path": "finalization/decision-packet.md",
+          "sha256": "ea6ef879ed417a6ced7360e1434ce873637becf548e33cf261296bcfa9401fba"
+        },
+        {
+          "path": "finalization/review.md",
+          "sha256": "112fc650642c2871de6ddb6a1612b7ad469f8dfe5b9a27d14c0b782f3ae5d4ba"
+        },
+        {
+          "path": "schematic-intent/owner-scope-acceptance.md",
+          "sha256": "724c17767acef7f4768c870529746470e837d427348d708051a41b3c17cc2500"
+        },
+        {
+          "path": "scope-reviews/reality.md",
+          "sha256": "3896fe9e679d1484079fb049e8b9629384253a244842fb520d8bb7b498419aae"
+        },
+        {
+          "path": "scope-reviews/simplicity.md",
+          "sha256": "c6abf6951d2f69c354c69b6ff20d3f818529b5c61bf6b4f3bebe1cc2914d0073"
+        },
+        {
+          "path": "scope-reviews/completeness.md",
+          "sha256": "aaf6b0c0f2f4a14c2a490445e89a7c1fa5e12b4788f76ed9114c4250d06f0daf"
+        },
+        {
+          "path": "scope-reviews/change.md",
+          "sha256": "d45ab378ee3dd1d0759bd20bf55f2cc12b8156bdb88a9b4fb39bb83179521df5"
+        }
+      ]
+    }
+  ]
 }

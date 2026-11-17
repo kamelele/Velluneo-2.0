@@ -1,0 +1,9 @@
+# Final scope/pin-intent integration record — 2026-11-17
+
+The coordinator inserted one genuine review evidence record after the four independent content reviews. Existing requirements body was unchanged. Each actual reviewer context /root/spec_reality,/root/spec_simplicity,/root/spec_completeness,/root/spec_change then independently verified the evidence artifact and eight input hashes, preserved copied role report, reconstructed pre-evidence file identity, current requirements intent digest and actual passing preflight. Each explicitly retained its scope and denied any implied CAD/circuit/graph approval.
+
+Current requirementsSHA256:8b5220dcf3d55e56961a94257bf5a0ae77233bfa948f378c4364f6753b7166f9. Requirementsintent:0480357ecf126fcbeab03e8d5f8a343cf413db0a4b0a816a157aca1aa1da106b. Newgraphintent:b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57. These are different identities. Current scope-sync-inputs.json binds the final evidence-bearing requirements file; original five reviewed hashes are preserved in scope-reviews/reviewed-inputs-before-evidence.json. Lifecycle metadata does not enter its own evidence input and creates no hash cycle.
+
+Root lifecycle/index updates report this same observed state and mark old review prose historical. hardware.json only declares the new still-unapproved connectivity file; it does not apply process rules or manufacture a human approval. No oldCAD/library/manufacturing file is modified. Sole shared writer:/root.
+
+The graph is complete and independently reviewable; user decision is pending. No generated productCAD/nativeconnectivity/ERC/DRC, physical measurement, order or merge occurs in this scope. Final atomic publication is checked against the existing branch lease and intended file blob identities; record the resulting commit separately rather than inventing it here.

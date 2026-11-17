@@ -1,3 +1,5 @@
+> Historical review retained. Current2026-11-17 owner scope acceptance, r12 synchronization, passing specification preflight and separately unapproved physical-pin intent are recorded in [scope-stage-packet.md](scope-stage-packet.md). Old statements that owner scope/tool installation is pending do not describe the current state. No historical CAD approval is reactivated.
+
 # Preliminary specification review record
 
 Packet VEL-SPEC-RESET-01 revision 2, 2026-11-14.

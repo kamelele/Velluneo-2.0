@@ -1,3 +1,5 @@
+> Historical review retained. Current2026-11-17 owner scope acceptance, r12 synchronization, passing specification preflight and separately unapproved physical-pin intent are recorded in [scope-stage-packet.md](scope-stage-packet.md). Old statements that owner scope/tool installation is pending do not describe the current state. No historical CAD approval is reactivated.
+
 # Consolidated traceability review record
 
 2026-11-14. Product brief r10, requirements contract draft2, readiness r2, hardware profile draft and actual preflight report. Writer/coordinator /root.

@@ -1,9 +1,9 @@
 # Velluneo E27 — product reset and specification review
 
-Packet: VEL-SPEC-RESET-01, revision 11, 2026-11-14.
-Status: interview-derived draft; not an approved specification-stage packet.
+Packet: VEL-SPEC-RESET-01, revision 12, 2026-11-17.
+Status: owner accepted product scope/criteria on2026-11-17; integrated specification preflight and fresh review pending. New physical-pin graph has separate unapproved intent.
 Repository baseline: 377fc0a08e74043e255b732f7c2beb63134a3576.
-Scope: requirements and planning only. No CAD, libraries, manufacturing exports or historical approvals are changed.
+Scope: accepted requirements and planning, plus separately drafted pre-CAD connectivity. No CAD, libraries, manufacturing exports or historical approvals are changed.
 
 ## 1. Purpose and decision basis
 
@@ -181,3 +181,19 @@ The owner accepted a separate base cover: diffuser removal exposes only the LED 
 The final deadline remains 30 September 2027 for one complete tested prototype with at least one colour. All three completed colour panels by then are desirable, not mandatory if time is insufficient. The three-colour common-base product-family goal remains; never claim unbuilt variants were measured. Before release distinguish tested prototype configuration from future family qualification rather than using one panel to pass all-colour criteria. First sample colour remains a sourcing choice; 4000 K is proposed.
 
 Light distribution is compared against an ordinary milky approximately 800 lm lamp; emission towards the cap is not required. Exact reference/test conditions remain to be selected; no numeric 220–360 degree criterion is adopted. Current priority remains the driver, with mechanical interface assumptions only as needed for isolation, heat and fit. These are actual owner decisions from the current conversation on 2026-11-14, not approval of the complete stage or circuit.
+
+## 2026-11-17 accepted-scope addendum (revision12)
+
+This addendum supersedes earlier descriptions of scope/criteria as awaiting owner decision. Actual owner message and its scope are preserved in schematic-intent/owner-scope-acceptance.md. The owner accepts desired behavior and continued design, not electrical certification or the subsequently prepared physical-pin graph.
+
+Use finalization/decision-packet.md (frozen SHA256 ea6ef879ed417a6ced7360e1434ce873637becf548e33cf261296bcfa9401fba) for the concrete proposed procedures accepted as engineering planning direction: normal207–253Vac/49–51Hz; start≤1s/≥90% stabilizedflux; PstLM≤1.0/SVM≤0.4; CCT2700±150K/4000±200K/6500±300K; first4000K; one measured complete configuration by30September2027 with eventual family requirements retained.
+
+Photometry at230Vac50Hz,25±1C,complete lamp/baseup; at least30min and three5minspaced fluxreadings differing<0.5%,extenduntilstable. CorePro reference and matched polar/appearance comparison follow U14. Thermal baseline is barelampholder,stillair,no surroundingfixture,≥200mm nearbyclearance,10/25/40C/baseup/basedown/horizontal plus anyworseorientation; steadycriticaltemperatures<1K/hourfor1hour after≥3hours. These are planned methods, not measurements.
+
+P0 sample target is one complete prototype.100h/zero catastrophicfailures/≥95%initialflux is an early-workmanshipscreen, not15000hL70orpopulationproof. Base5yearassessment needs component-specific actualtemperature/stress/calendar evidence;10yearsaspirational.
+
+Open/absent/hardshort panel outcomes include no base damage, no fuse/manualreset, offline replacement andpowercycle recovery. Plan24h faultscreen after thermalsteadystate plus repeatedrecovery; individualLEDfaults/contactbounce/wrongorpartialinsertion are separateimplementationcases. AutomaticNTCinhibition/retry is selected direction, threshold/lag/sensorfaultadequacy remains due at schematicacceptance. Servicegoals≤5VDC/≤0.5mJ/≤45C are projectgoals, not universalstandardlimits; actual instructionwait comes from wholeassemblymeasurements.
+
+Proposeddriverfabrication2layerFR4/1.6mm/2oz/greenmask/leadfreeENIG and supplierSMDpopulation, agreedTHT/customtransformerroute, manualfallback; order-specificmaterial/CTI/stackup/assemblyconfirmation is due beforeplacement/processacceptance. No orderauthorized. Completeproductsemi-luminaireclassification and nativeIEC60598/61347/62031/CISPR15/61547/61000-3-2 sourcefamilies are identified in U04; fullclause/numericalinsulation/ENadoption/commercialqualification remain owned implementation gaps. This prototype scope does not assert compliance.
+
+Pre-CAD connectivity is schematic-intent/intended-connectivity.json, independent of oldCAD and not yet approved. Existing circuit/modelmajorfindings remain open at their original acceptance scope.

@@ -1,6 +1,8 @@
+> Current update2026-11-17: owner product-scope acceptance is recorded; the synchronized specification preflight passes. New independent28-component pin intent is in [../schematic-intent/](../schematic-intent/README.md), pending its genuine owner decision. UCC28711 remains the current engineering candidate rather than an accepted functioning circuit. No schematic/model/physical major is closed. Earlier proposal and numeric scopes below are retained.
+
 # Driver investigation index and ownership
 
-Updated 2026-11-17 (support-component and supported-toolchain finalization). Investigation coordinator/document owner and sole writer: `/root`. Device: Velluneo E27, product reset packet r11. This folder is a specification investigation on `spec/owner-interview-reset-2026-11-14`; no active CAD writer, selected controller or schematic-stage approval exists. The existing historical CAD/main-branch workflow is not reactivated by this index.
+Updated 2026-11-17 (support-component and supported-toolchain finalization). Investigation coordinator/document owner and sole writer: `/root`. Device: Velluneo E27, product reset packet r12. This folder is a specification investigation on `spec/owner-interview-reset-2026-11-14`; no active CAD writer, selected controller or schematic-stage approval exists. The existing historical CAD/main-branch workflow is not reactivated by this index.
 
 ## Current engineering recommendation
 
