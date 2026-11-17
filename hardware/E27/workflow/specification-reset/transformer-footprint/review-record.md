@@ -1,0 +1,13 @@
+# Final all-position candidate-library integration review
+
+2026-11-17. Actual contexts /root/spec_reality,/root/spec_simplicity,/root/spec_completeness,/root/spec_change reviewed the52-file final snapshot b29a7cea6caa2933fc678f7d919830b8055a8929b3c1d1a72f2844538d805e74. Full role reports in reviews/*.md each verify all52hashes and explicitly retain their unchanged earlier17-module scopes. All recommend bounded candidate transfer; no schematic-stage or manufacturing acceptance.
+
+Reality independently imported authentic STEP before T1 integration, reproduced mark/tip geometry and handedness, then checked the actual ten-pad footprint and all28 assignments. Completeness reconciled all28 positions/18 modules/73 terminals, layers/drills/current reports. Overengineering checked that the view gap is resolved by specific source correlation rather than added electronics or assumed fit. Change verified the exact pad/assignment delta, unchanged earlier modules/intent and preserved generator/verifier behavior. See exact execution limits: none of these final role checks is a separate nativeCAD-suite run or a physical test.
+
+The coordinator's genuine pinned native checks pass for all18 module loads/geometry, full28-component73-terminal21-net4NC approved graph and zero enabled ERC findings. Actual schematic requirements still fail U05–U09; full check still reports configuration failure for unadopted managed rules/ownership and absentPCB. These are not hidden, downgraded or replaced by votes. No source pin type, global severity or expected graph is altered.
+
+Only the specific raw-bobbin viewing ambiguity is addressed at the reviewed source-inference level. Finished-transformer construction/envelope/insulation, F1 drawing verification, project-selected copper/drill/forming/wire geometry, process and all existing startup/clamp/model/input/service/thermal/safety majors remain open. SCH-LIB-001 remains partial, SCH-ANN-001 remains open. All28 assignments does not mean all28 manufacturing qualifications.
+
+The preliminary implementer view-handedness error was corrected and independently verified BEFORE shared T1 footprint creation. The source handoff preserves this correction. Earlier27-position reports are retained as history; final52-file hashes and retained-scope reports cover the actual integrated state. No fabricated human approval is recorded.
+
+Root remains sole shared writer. Lifecycle/index/package records summarize these inspected sources without changing them; ZIP/native extraction checks are coordinator evidence, not extra reviewer executions. Publication must preserve all untouched base blobs and use the existing draft-branch lease. No merge, order, PCB placement, routing or physical energization occurs.

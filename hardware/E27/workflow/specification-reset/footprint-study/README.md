@@ -1,3 +1,5 @@
+> Current project source now has all28 candidate footprint assignments. See [latest packet](../transformer-footprint/README.md) and its all-footprints ZIP for current checks. The earlier task/source/package scope below is historical, not an updated claim of completed physical/process or schematic-stage qualification.
+
 # FOOTPRINT-01 — three native critical footprint candidates
 
 2026-11-17. This is schematic/library work within the still-incomplete schematic stage. It creates actual local `.kicad_mod` files and assigns them to U1, BR1 and Q1. It does not create or approve a product PCB, placement or manufacturing release.

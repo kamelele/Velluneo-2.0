@@ -1,3 +1,5 @@
+> Current project source now has all28 candidate footprint assignments. See [latest packet](../transformer-footprint/README.md) and its all-footprints ZIP for current checks. The earlier task/source/package scope below is historical, not an updated claim of completed physical/process or schematic-stage qualification.
+
 # FOOTPRINT-01 status and next owned work
 
 Three native KiCad footprint candidates are created and assigned: U1UCC28711DR,BR1MB10S-13,Q1STN1NK80Z. All15 copper pad geometries and physical numbers have source-based independent review. Exact file/current evidence is frozen in frozen-inputs.json.

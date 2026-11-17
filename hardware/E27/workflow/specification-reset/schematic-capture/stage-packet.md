@@ -1,3 +1,5 @@
+> Current project source now has all28 candidate footprint assignments. See [latest packet](../transformer-footprint/README.md) and its all-footprints ZIP for current checks. The earlier task/source/package scope below is historical, not an updated claim of completed physical/process or schematic-stage qualification.
+
 > Historical initial capture context. The root schematic, generator and BOM now include three candidate footprint assignments under [FOOTPRINT-01](../footprint-study/README.md). Current source/check hashes are there; the initial capture ZIP/reviews retain their original scope and are not a current footprint-library acceptance.
 
 # SCH-CAPTURE-01 — delivered native schematic draft, stage incomplete

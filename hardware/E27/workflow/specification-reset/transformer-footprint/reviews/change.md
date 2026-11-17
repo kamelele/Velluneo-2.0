@@ -1,0 +1,80 @@
+# Independent Change review — final T1 integration
+
+2026-11-17. Actual reviewer /root/spec_change. Read-only shared inspection; sole written output is this report. Followed repository/locked project and Change-review obligations. Targeted final delta from the earlier FOOTPRINT-02 candidate; no stage approval.
+
+Recommendation: **bounded raw-bobbin footprint candidate transfer is reviewable**. No new actionable Change defect found within this delta. Retain prior17-module Change coverage at its exact original source/process limitations; all17 saved module bytes remain identical to the independently reviewed FOOTPRINT-02 hashes.
+
+## Inspected identity and actual checks
+
+All52 current frozen inputs independently match manifest SHA256b29a7cea6caa2933fc678f7d919830b8055a8929b3c1d1a72f2844538d805e74. Read current README, native STEP inference/findings and separate Reality diagnostic, source/geometry contract, generator/verifier changes, saved T1 module, assignments and native reports/command results. Viewed the actual T1 footprint PNG. Original authentic STEP and native PDF still match f6acdbbccb291fd39ac8028c163d7bdb47fa6849c8c7d94dce01076f05dfb2f0 and f4b6084fa9171a0157c3744663e146da6b3a738171dab4dfd3e137c125f6f06e respectively. I did not independently reimport the STEP/BRep or repeat Reality's geometric source audit; the separately recorded independent geometric inference is the source-view evidence, not my own new CAD-kernel execution.
+
+Independently extracted all ten actual T1 copper pads and compared numbers, type, shape, centres, sizes and drill with the final contract: exact match. Pads use *.Cu/*.Mask, no through-hole paste. Pin1 alone is square at(-10,+11.25), upper row10/9/8/7/6 and lower1/2/3/4/5 left-to-right, pitch5 and rows22.5mm. The actual generator implements (X_STEP,-Z_STEP); the preliminary opposite-handed proposal is explicitly corrected in the retained handoff and is not used by any saved pad coordinate. No pin or physical intent is changed to fit a generic transformer.
+
+Central assignments are28 positions/18 module definitions. The remaining-footprint generator merges into existing assignments, explicitly preserves a pre-existing T1 entry and no longer asserts that it must be missing. Verifier conditionally consumes the separate T1 geometry contract and maps all ten terminals; no earlier17 module is rewritten with a different geometry. Current reports explicitly show28 assigned positions/73 physical terminals/no unassigned component. This closes the candidate view/assignment omission only, not source/process/finished-transformer qualification.
+
+Graph file remains SHA256b48f1f4942dde63f388b7ffbc0072651ec3fb2dc9d105a13340ced493938598a and all seven basis-source hashes remain intact. Independently parsed the actual current native10.0.6 netlist export SHA256ace4e9bb12419f4ff5a09dd85f29ed5eb191213103c4a17ae9a0cd5654bf2bf6 through locked parse_export/compare: approved digest b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57,28components/73terminals/21nets/fourNC, pass. This is independent comparison of the saved native export, not my separate native rerun. The four unwound/NC T1 terminals remain represented as physical copper terminals, with no change to their electrical no-connection intent.
+
+Recorded doctor/native-library/SVG/connectivity/ERC/PDF commands succeed. Enabled ERC reports zero violations. Requirements exits1 and full-work check2 remain visibly failed, with existing U05–U09/configuration/ownership/rules/realPCB gaps. Non-numeric-reference warning and all startup/clamp/model/input/service/thermal/safety majors remain open. Old FOOTPRINT-02 evidence is explicitly historical for its former27-assignment state, never relabelled current; the unchanged17 source geometry retains its bounded scope.
+
+## Acceptance boundaries
+
+Native mark-correlation and handedness are properly described as a reviewed geometric inference, not a manufacturer-written TOP label, actual sample verification, numbered STEP metadata, or an accepted finished transformer. The authentic STEP/explicit native pin1 mark supports this candidate; revised mapping is not invented by accepting the earlier mirrored guess. Proposed1.35mm finished plated hole/2.4mm copper, raw-bobbin outline and provisional courtyard remain project choices with fabrication compensation/square-pin assembly/leadout/insulation/process work due. No unverified 3D placement transform is attached. Complete core/yokes/winding envelope and winding insulation remain unknown and cannot inherit the raw25.2×26mm body boundary.
+
+This review does not approve schematic-stage, process, placement, board geometry, safety/function, manufacturing or physical tests. It introduces no new finding requiring correction before clearly labelled candidate transfer; all unaffected prior Change limitations and technical obligations are retained. This partial materialization has no full remote Git history, so exhaustive legacy-tree publication/no-overwrite comparison remains the coordinator's check.
+
+## Independently verified frozen hashes
+
+| File | SHA256 |
+|---|---|
+| Velluneo_specification_reset.kicad_sch | 8a21535690628f24b807437ba1a38816085650f5e7269a520993c967d94b419a |
+| footprint-completion/README.md | 9b05153a8cb4feadc08725fe2dec9d3594a5b3c2aea3f3add15e41b47a873c9a |
+| footprint-completion/generate_remaining_footprints.py | cedda6fba8e63ca0bd355a900cc1a9f7bc11f2f064ac9e19fbf587595e8512d5 |
+| footprint-completion/geometry-contract.json | 84ceca8587d3e2e7a1df6468c3c7220e3f20a21ce5a63479e43f74e67e0d0fb5 |
+| footprint-completion/verify_native_library.py | 0b64e90f1d64bb6e3bd04fba986bd7b4a334150d0bf8195ed8f86f6aa06da1f4 |
+| footprint-study/assignments.json | ee9a9c077ea352a1508075cd0340a8eaacf7bd05280056171b6eac54135ba5b1 |
+| footprint-study/generate_critical_footprints.py | 1bba7bfe417a3cea962de423452e8fcfa4c51ab18a9c96e874d2e0a84bc80046 |
+| footprint-study/geometry-contract.json | 64aaa5af681733ac94767242f42f7430ccfd602e6ea219de1e8b540ec7613e3a |
+| fp-lib-table | 43087dad28dd81785c75c80de00a43e57a804233247bb1ab231fefd394afccb5 |
+| hardware.json | b7f1834a473c8c67f45e589269b5f1087fc87ca94d199dbe0dd4da5debc805b1 |
+| libraries/Velluneo_Driver.kicad_sym | a83b3e6805eab01297799f033350774fd1ac9c280472f7bd2b564abf407caf60 |
+| libraries/Velluneo_Driver.pretty/AC05_P25p4_FORMED_PROJECT_CANDIDATE.kicad_mod | 288597c84066e0f67bcce2d6fc18fc6f0b08c80fe39a6e39c213968217fb3670 |
+| libraries/Velluneo_Driver.pretty/CRCW_0603_NativeReflow.kicad_mod | 6ce9d8219cf3d026257b29951362b6d29805bb7c79d5a61d9b424ab21fd19d65 |
+| libraries/Velluneo_Driver.pretty/CRCW_0805_NativeReflow.kicad_mod | 116da79996b767451514af4d416b12ea00a224e41304efdc99a551743744699f |
+| libraries/Velluneo_Driver.pretty/CRCW_1206_NativeReflow.kicad_mod | 26284dae917c9bc653b71a53703cd738d31f5c590c9e148166150a64ba3a1f7e |
+| libraries/Velluneo_Driver.pretty/CRCW_2512_NativeReflow.kicad_mod | b65aaee3ae313ad4347cbb67e2c7ba5c13a353a45f9f8cdfca7fc68dbbccd72c |
+| libraries/Velluneo_Driver.pretty/Diodes_US1M_SMA_Native.kicad_mod | 93bfb8f50376a5e473bdcddb9a0258d09d41a6c6c678554f65fc91be7bf0d97f |
+| libraries/Velluneo_Driver.pretty/InternalWirePair_P7p62_D1p6_PROJECT_CANDIDATE.kicad_mod | c68a8f13b2d6387395b29ca4d2f2c1efcdfd9b9b7f88c8f1cb6dd09c30cba280 |
+| libraries/Velluneo_Driver.pretty/KEMET_2220_PROJECT_CANDIDATE.kicad_mod | a4852937a199183f1b8c3e212894d7b8e33588cc0076ad9472f3004f2ab94629 |
+| libraries/Velluneo_Driver.pretty/MB10S_Diodes_MBS_1P_2AC_3N_4AC.kicad_mod | bcb61b86077c0befe787d45ba0b056c501d47edd3b1cdd96596489004b025f4f |
+| libraries/Velluneo_Driver.pretty/NTCS0603_NativeReflow.kicad_mod | 09aadb843153732b79f2dfa754966acef83e3fc2b81fd022d618a7395aa29da8 |
+| libraries/Velluneo_Driver.pretty/Panasonic_ZA_D_Standard_Native.kicad_mod | 3cad320ca90ea5bcc770010add35997d1ca4734cb1f365bb90770208badb93bf |
+| libraries/Velluneo_Driver.pretty/Rubycon_BXW_D10_P5_PROJECT_CANDIDATE.kicad_mod | 472c0a4206408f1c4d1ac6575d0019013cec599348f97b10591de1cb81600893 |
+| libraries/Velluneo_Driver.pretty/SCHURTER_UMTH_WEB_PROVISIONAL.kicad_mod | edbae882a0b49ee5a8a0efa9310fd4078bc1beb2f1fe9901f4271d46f7273b24 |
+| libraries/Velluneo_Driver.pretty/STN1NK80Z_SOT223_Tab4.kicad_mod | f1b8edf66033160f5165cb03e9bd5d579b107ceceda4ca7340bc40d4d0cf1306 |
+| libraries/Velluneo_Driver.pretty/ST_STTH_SMA_Native.kicad_mod | 439f295996b42dc62b7d182151cd56a335307b36709fece4b013b9f3d6b7ee26 |
+| libraries/Velluneo_Driver.pretty/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.kicad_mod | 68e8826b5ed994ee4e42c043c01a7265bf0e4cbc9cab5a256581b05b47ef7b1c |
+| libraries/Velluneo_Driver.pretty/UCC28711DR_SOIC7_HV7.kicad_mod | bbefd0cca0948ac2e7cbb2dd72de07704e9e18e39963371ef723b69b4a102d82 |
+| libraries/Velluneo_Driver.pretty/Vishay_SMBJ_PROJECT_CANDIDATE.kicad_mod | cbd89ab8d291673d4963cbf734bee43ff964d8ea8598579e912d64451a34a944 |
+| schematic-capture/BOM.csv | f10db48b40d418fe58163ae989ba547c1c8819e515fe710ad7fcb41d12c6e48a |
+| schematic-capture/generate_driver.py | 1ba0871b18f847d629879732b1199496232d56d08c10d555e5a9a5079679e61c |
+| schematic-intent/intended-connectivity.json | b48f1f4942dde63f388b7ffbc0072651ec3fb2dc9d105a13340ced493938598a |
+| transformer-footprint/BOM.csv | f10db48b40d418fe58163ae989ba547c1c8819e515fe710ad7fcb41d12c6e48a |
+| transformer-footprint/README.md | 68d706fedef6be116db0bb44a275a5f6e0a3425a5bb7845dd7aa0b226861d206 |
+| transformer-footprint/T1-native-footprint.png | 0ca56174c85241b5b2bcde60eab92d3c2e59cf8eeefb815f7d56d0105f7c116c |
+| transformer-footprint/Velluneo_driver_all_footprints.pdf | f67a64372c85eb4fcef396ca5f495745564804f817691a81d9ac7c9d3e3c5ddc |
+| transformer-footprint/check-work.json | 787c0d6d1ee4d6a54abbb5dbab8e9411d04ad6810f7a74150f6941002bf91ad7 |
+| transformer-footprint/command-results.json | 5d88cf5fc32936cd16e6e82cdbe8ae721a0293a91cb2dc71fa0f0dedef528ebf |
+| transformer-footprint/connectivity.json | 190ecadf4ff2c120ab67bd4a2bcde3b58691fe51c46ffaf1f04658c69b8b83d7 |
+| transformer-footprint/doctor.json | 3004b39891f39f9e04f109d2b76424e09491471d6536f06e95a3bdd536fe7c1e |
+| transformer-footprint/erc.json | 0b5e0ecc733c983765f52ffbe5368ca3e4ce0d66f79a2287d9f1d1b953c4b65a |
+| transformer-footprint/generate_transformer_footprint.py | 1f2f09ee0f655eaa51f695f760826f3525bd028fd7fb36ddb3308a86e0a67b20 |
+| transformer-footprint/geometry-contract.json | 109a8d8be457b0f5bb0128eada3f6cb42bd6905a9f9853e92570b89c567cba79 |
+| transformer-footprint/independent-view-review.md | b8beaf696a4b99349525165d86c20da42bd0ab8b2575146f5f4957a106ca4221 |
+| transformer-footprint/native-library-check.json | fd7b488a61080bb45103e717d60563d4dcc313cc2e49f99ff8bf580224a31624 |
+| transformer-footprint/native-svg/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.svg | 98e8fed9d3b7d147c8d0a7d5ffc96e643389445d9b54a6d9d9bf5cf43d59707f |
+| transformer-footprint/requirements-schematic.json | 2533ce43dcf30924ed6c638778a49207a0b76d81b2e330642bb4682c946fb174 |
+| transformer-footprint/source-step-explicit-views.py | 6308394d82ca226ffe6844fab53a248e935704eb7d8f6dabbda302dbeddc87b0 |
+| transformer-footprint/source-step-faces.json | fb4872226bbccab48e8622123bcab8856e4d342a4b3c8fec575714f74500fef4 |
+| transformer-footprint/source-step-findings.json | a169c159ee7c9185201e590d104430db13f1179642cad6bc5b203d2a2e176eb7 |
+| transformer-footprint/source-step-inference.md | 586a873d5a5443204d904f7d98af07d540aa388f8c29964f2580e239513c048e |
+| transformer-footprint/source-step-render.py | 2dd8f7cea93dcc189e7632473be694a3a5428d77c6e36261b609717f967d3c7e |

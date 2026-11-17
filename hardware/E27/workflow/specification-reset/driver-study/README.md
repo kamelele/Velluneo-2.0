@@ -1,3 +1,5 @@
+> Current all-position library update2026-11-17: [T1/source integration](../transformer-footprint/README.md) completes28 candidate assignments/18 definitions with fresh native checks. The source-view ambiguity is addressed; all old electrical/model/thermal/insulation obligations remain open.
+
 > Library update2026-11-17: [FOOTPRINT-01](../footprint-study/README.md) adds three source-backed native candidate footprints without changing circuit values or approved physical connectivity. Native library/graph/ERC checks pass; no old analog or stage blocker is closed.
 
 > Subsequent capture update2026-11-17: actual owner graph acceptance is recorded and a [native schematic draft](../schematic-capture/README.md) now exists. Physical-pin comparison and native ERC pass at their stated scopes; schematic-stage acceptance, numeric-reference correction, physical libraries and all old electrical/model/thermal/insulation majors remain open. Prior investigation history below is retained.

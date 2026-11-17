@@ -1,6 +1,12 @@
 # E27 workflow index
 
-## Current critical footprint library — 17 November 2026
+## Current all-position library candidates — 17 November 2026
+
+All28 physical component positions now have candidate footprints using18 unique definitions. The [current packet](specification-reset/transformer-footprint/README.md) resolves the earlier T1 view ambiguity through independently checked authentic STEP/PDF marking correlation. [Current editable ZIP](specification-reset/transformer-footprint/Velluneo_driver_all_footprints.zip) includes the complete local library. Current52-file source hashes and four targeted final reviews retain prior17 unchanged module scopes.
+
+Native KiCad10.0.6 checks pass for all18 module geometries/28 assignments/73 footprint terminals, unchanged full28-component graph and zero reported enabled ERC findings. Completing assignment does not qualify every part/process: F1 source-visual gap, KEMET/project copper, THT/wire construction and finished transformer insulation/envelope remain explicit. Schematic requirements U05–U09, full managed-configuration failure and all existing electrical/model/thermal/safety majors stay open. No productPCB, copper, DRC or manufacturing release exists.
+
+## Earlier three-part footprint library — 17 November 2026
 
 The [FOOTPRINT-01 packet](specification-reset/footprint-study/README.md) creates and assigns three actual native footprints for U1, BR1 and Q1, with source-backed copper and exact approved numbering. [Current ZIP](specification-reset/footprint-study/Velluneo_driver_3_footprints.zip) includes the local library and assignments. Four independent contexts reviewed the36-file candidate packet. Native15-pad geometry, unchanged28-component physical graph and ERC checks pass at their stated scopes; only3of28 footprints are addressed. Schematic-stage acceptance, remaining physical libraries/interfaces/process and all old electrical majors stay open. No productPCB exists. Earlier capture reports/packages below remain historical for their source revision.
 

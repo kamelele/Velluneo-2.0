@@ -28,7 +28,9 @@ for a in items:
  content=f'(footprint {q(a["name"])} (version 20241229) (generator "velluneo_fp_capture") (layer "F.Cu") (descr {q(a["mpn"]+"; source-backed copper candidate; process and board qualification incomplete")}) (tags "candidate source-checked") (attr smd) '+props+graphics+''.join(pad(*p) for p in a['pads'])+')\n'
  (L/(a['name']+'.kicad_mod')).write_text(content)
 assignment={a['ref']:{'mpn':a['mpn'],'footprint':'Velluneo_Driver:'+a['name'],'status':'Source-backed candidate copper lands; mask/paste/courtyard/assembly and board qualification remain open'} for a in items}
-(D/'assignments.json').write_text(json.dumps(assignment,indent=2)+'\n')
+existing_assignments=json.loads((D/'assignments.json').read_text()) if (D/'assignments.json').exists() else {}
+existing_assignments.update(assignment)
+(D/'assignments.json').write_text(json.dumps(existing_assignments,indent=2)+'\n')
 (D/'geometry-contract.json').write_text(json.dumps({'units':'mm','view':'Component/top side; Xright/Ydown; centered origins and body centre display are project conventions','copper_corner_choice':'rectangular; TI native rounded-corner radius unspecified so no false native radius claimed','courtyard_choice':'Project provisional visual handling envelope approximately0.25mm above source body/padextents, roundedoutward; NOT insulation distance or process-approvedcourtyard','mask_paste_choice':'F.Mask/F.Paste present; no explicit margin or paste reduction overrides; inherited project rules are not yet adopted/qualified','parts':items},indent=2)+'\n')
 (P/'fp-lib-table').write_text('(fp_lib_table (version 7) (lib (name "Velluneo_Driver") (type "KiCad") (uri "${KIPRJMOD}/libraries/Velluneo_Driver.pretty") (options "") (descr "Source-backed critical footprint candidates; process qualification incomplete")))\n')
 print('Created3localfootprintcandidates; noPCB')

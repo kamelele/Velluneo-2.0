@@ -1,0 +1,33 @@
+{
+  "result": "pass",
+  "scope": "ActualKiCad10.0.6libraryverificationandERConfreshlyextractedall-footprintsarchive; nofunction/PCBreleaseclaim",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/all-footprints-package-test/Velluneo_driver/footprint-completion/verify_native_library.py",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/all-footprints-package-test/Velluneo_driver/package-library.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"result\": \"pass\", \"native_pcbnew\": \"10.0.6\", \"unique_modules\": 18, \"assigned_components\": 28, \"mapped_physical_terminals\": 73, \"unassigned_components\": [], \"scope\": \"Native parse, exact numbered copper coordinates/sizes/layers/drills and symbol-terminal coverage. Does not qualify source completeness, forming, assembly, process, insulation, board geometry, or function.\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/all-footprints-package-test/Velluneo_driver/package-erc.json",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/all-footprints-package-test/Velluneo_driver/Velluneo_specification_reset.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to /workspace/hardware/E27/workflow/specification-reset/.work/all-footprints-package-test/Velluneo_driver/package-erc.json\n",
+      "stderr": ""
+    }
+  ]
+}
