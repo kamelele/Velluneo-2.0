@@ -1,0 +1,82 @@
+{
+  "family_typical": {
+    "2700": {
+      "LED_count": 8,
+      "current_A": 0.2560067013300516,
+      "Vf25_typical_V": 2.933245508841356,
+      "Vf85_typical_V": 2.879245508841356,
+      "panel_V85_typical_V": 23.03396407073085,
+      "panel_electrical85_typical_W": 5.896849160302732,
+      "whole_lamp_flux_typical_lm": 815.5539939095808,
+      "spectral_LER_typical_lm_per_radiant_W": 326.42783841187185,
+      "escaping_radiant_typical_W": 2.49842047135867,
+      "LED_emitted_radiant_typical_W_neutral_diffuser": 2.8717476682283567,
+      "LED_local_heat_typical_W": 3.0251014920743757,
+      "diffuser_absorption_typical_W_neutral_diffuser": 0.3733271968696865,
+      "panel_plus_diffuser_heat_typical_W": 3.3984286889440622,
+      "per_LED_electrical85_typical_W": 0.7371061450378416,
+      "junction_rise_full_electrical_times_7p6_typical_K": 5.6020067022875955
+    },
+    "4000": {
+      "LED_count": 7,
+      "current_A": 0.2560067013300516,
+      "Vf25_typical_V": 2.933245508841356,
+      "Vf85_typical_V": 2.879245508841356,
+      "panel_V85_typical_V": 20.154718561889492,
+      "panel_electrical85_typical_W": 5.15974301526489,
+      "whole_lamp_flux_typical_lm": 787.06957132818,
+      "spectral_LER_typical_lm_per_radiant_W": 336.624607104618,
+      "escaping_radiant_typical_W": 2.338122510109816,
+      "LED_emitted_radiant_typical_W_neutral_diffuser": 2.68749713805726,
+      "LED_local_heat_typical_W": 2.4722458772076306,
+      "diffuser_absorption_typical_W_neutral_diffuser": 0.3493746279474439,
+      "panel_plus_diffuser_heat_typical_W": 2.8216205051550745,
+      "per_LED_electrical85_typical_W": 0.7371061450378416,
+      "junction_rise_full_electrical_times_7p6_typical_K": 5.6020067022875955
+    },
+    "6500": {
+      "LED_count": 7,
+      "current_A": 0.2560067013300516,
+      "Vf25_typical_V": 2.933245508841356,
+      "Vf85_typical_V": 2.879245508841356,
+      "panel_V85_typical_V": 20.154718561889492,
+      "panel_electrical85_typical_W": 5.15974301526489,
+      "whole_lamp_flux_typical_lm": 784.4460060904194,
+      "spectral_LER_typical_lm_per_radiant_W": 310.88430157670194,
+      "escaping_radiant_typical_W": 2.5232731344489565,
+      "LED_emitted_radiant_typical_W_neutral_diffuser": 2.900313947642479,
+      "LED_local_heat_typical_W": 2.2594290676224116,
+      "diffuser_absorption_typical_W_neutral_diffuser": 0.37704081319352234,
+      "panel_plus_diffuser_heat_typical_W": 2.636469880815934,
+      "per_LED_electrical85_typical_W": 0.7371061450378416,
+      "junction_rise_full_electrical_times_7p6_typical_K": 5.6020067022875955
+    }
+  },
+  "screen_power_W": 7.808248839403387,
+  "checks": [
+    {
+      "CCT": "2700",
+      "LER_1nm_vs_quarter_nm_delta_percent": -0.0007323846791917887
+    },
+    {
+      "CCT": "4000",
+      "LER_1nm_vs_quarter_nm_delta_percent": -0.00021376668908335006
+    },
+    {
+      "CCT": "6500",
+      "LER_1nm_vs_quarter_nm_delta_percent": -0.0006472393692558143
+    },
+    {
+      "check": "all_model_LED_heat_positive",
+      "pass": true
+    },
+    {
+      "check": "all_integration_errors_below_0p02percent",
+      "pass": true
+    },
+    {
+      "check": "ring_body_fits_48mm",
+      "pass": true
+    }
+  ]
+}

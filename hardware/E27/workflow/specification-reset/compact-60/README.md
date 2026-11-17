@@ -1,0 +1,13 @@
+# COMPACT-60 — owner-constrained compact design development
+
+Current owner target is overall diameter60mm/fullheight120mm. The approximately170mm proposal is rejected. This packet supersedes the larger cooling concepts as the selected direction, not their historical evidence. It does not advance a product stage or assert PCB readiness.
+
+Concrete new results:
+- Actual current CreeG-class panel spectra and CIE photopic integration give2.636-3.398W typical panel+diffuser heat; rigorous no-optical-credit screening remains7.808W. Current8/7/7LED family and active driver are unchanged. New2026 Cree LM80 listing links this LEDfamily to105C/359mA test conditions; it does not warrant a finished lamp.
+-108normal driver scenario calculations give1.336-2.156W, with a separately varied24V case1.430-2.120W. These replace arbitrary4W budgets for feasibility only. Hot switching/core/ESR and fault losses are still not fully bounded. AC05 cannot be stood on an invented long lead; retain47ohm and actual pulse/fuse qualification. Four499k HV2512 resistors must not be downsized.
+- Retained430-face source geometry establishes raw bobbin12.9mm abovePCB and regular winding12.43mm. A2mm spacer can leave pins short. Finished core/yoke/leadout envelope is still conditional; family selector29.3x27.3x12.5 conflicts with an unverified28mm proposal.
+- A120mm construction stack and source-conditioned30mm cooler frontier are defined, together with exact31part/79pad footprint inventory. The first circular51mm packing diagnostic assigns all31parts in the final analytical candidate; earlier incomplete attempts are superseded. R1court overrun, unknown heights and opposite-face C4/T1 tolerance are unresolved. No PCB/DRC or claimed complete fit.
+
+See led-heat/, driver-closure/, transformer-compact/ and mechanics/ for executed calculations, exact sources, assumptions and reproducible handoffs. Only actual R-SIZE/scope evidence is updated in requirements.json. Active schematic, approved graph, values, libraries, rules and profiles remain unchanged. The earlier7position thermalbackup ECO is not applied merely to appear complete. NativeTINA absence is not a product requirement; source-bound actual fault/startup/temperature behavior remains necessary.
+
+PCB-entry status: BLOCKED on the specific residuals in closure-ledger.json. Full prototype measurements and final Gerbers are not falsely demanded at schematic stage, but normative insulation design, coherent physical interfaces and source-supported protection cannot be waived. No unlicensed standard or expired rendering is used. Four genuine separate final reviews assess this exact frozen packet; their recommendations are not owner stage approval.

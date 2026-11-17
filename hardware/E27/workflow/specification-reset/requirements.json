@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo E27 repairable LED lamp",
-  "revision": "specification-contract-accepted-scope-4",
+  "revision": "specification-contract-owner-compact-5",
   "subsystems": [
     {
       "id": "BASE",
@@ -400,27 +400,27 @@
     },
     {
       "id": "R-SIZE",
-      "revision": "interview-r9",
+      "revision": "owner-compact-2026-11-17",
       "owner": "Owner (product intent); coordinator (engineering implementation)",
-      "text": "Compare a conventional-bulb-sized concept with a moderately larger concept that improves cooling and replacement.",
-      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
-      "acceptance": "Present actual envelopes and tradeoffs for owner selection before placement; no existing board size is binding.",
+      "text": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+      "basis": "compact-60/owner-size-decision.md; actual latest owner instruction in this conversation",
+      "acceptance": "Before placement provide tolerance-aware complete mechanical envelope, component/pin/body fit, cooling and replacement access against diameter60mm/fullheight120mm. Quantify any deviation and obtain actual owner acceptance; no larger alternative is selected.",
       "gate": "placement",
       "implementation": [
         {
           "subsystem": "BASE",
-          "object": "Compare a conventional-bulb-sized concept with a moderately larger concept that improves cooling and replacement.",
-          "path": "requirements-and-plan.md"
+          "object": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+          "path": "compact-60/owner-size-decision.md"
         },
         {
           "subsystem": "PANEL",
-          "object": "Compare a conventional-bulb-sized concept with a moderately larger concept that improves cooling and replacement.",
-          "path": "requirements-and-plan.md"
+          "object": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+          "path": "compact-60/owner-size-decision.md"
         },
         {
           "subsystem": "BODY",
-          "object": "Compare a conventional-bulb-sized concept with a moderately larger concept that improves cooling and replacement.",
-          "path": "requirements-and-plan.md"
+          "object": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+          "path": "compact-60/owner-size-decision.md"
         }
       ],
       "method": "review",
@@ -730,10 +730,10 @@
       "id": "E-SPEC-SCOPE-REVIEW",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Coordinator integration review with actual independent Reality, Overengineering, Completeness and Change reports; scope-only, no circuit qualification",
-      "artifact": "scope-synchronization-review.md",
-      "sha256": "56daf81e5a0916bd3a620c361b18b655bb952f68ac7f8cff7b2e5e32c7d67c6a",
-      "intent_digest": "0480357ecf126fcbeab03e8d5f8a343cf413db0a4b0a816a157aca1aa1da106b",
+      "verified_by": "Coordinator actual scope-only delta review; earlier separate role reviews apply to their earlier digest only",
+      "artifact": "compact-60/scope-delta-review.md",
+      "sha256": "cdf1b2115ff2d5181a2b543268b8fa9604df08baa5fc10ff9fdeb95db311d86a",
+      "intent_digest": "fa7de07f04f44a297515073678922a89826fa0990d6e9af7d48581082294f82b",
       "inputs": [
         {
           "path": "requirements-and-plan.md",
@@ -766,6 +766,10 @@
         {
           "path": "scope-reviews/change.md",
           "sha256": "d45ab378ee3dd1d0759bd20bf55f2cc12b8156bdb88a9b4fb39bb83179521df5"
+        },
+        {
+          "path": "compact-60/owner-size-decision.md",
+          "sha256": "217f83108249427b8f3012c3a9d5a2de35722207bbeacbc078778620512ff5d0"
         }
       ]
     }

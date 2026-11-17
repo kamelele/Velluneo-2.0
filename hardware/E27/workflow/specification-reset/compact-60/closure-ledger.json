@@ -1,0 +1,57 @@
+{
+  "target": {
+    "diameter_mm": 60,
+    "height_mm": 120,
+    "approved_larger_size": false
+  },
+  "PCB_entry_ready": false,
+  "closed_with_limited_scope": [
+    "Owner size direction recorded in actual R-SIZE; unrelated requirement/unknown objects retained.",
+    "Typical LED heat and actual driver scenario loss replacing arbitrary allocation, with uncertainty retained.",
+    "Raw bobbin mounting-plane height and prohibition of2mm blanket spacer."
+  ],
+  "blocked": [
+    {
+      "id": "C60-MECH",
+      "owner": "Coordinator mechanical/layout",
+      "gate": "placement",
+      "needed": "Complete31position/body/pad/joint/height fit within tolerance-aware60x120; qualify31position analytical candidate and round-outline toolkit limitation. Exact E27 cap, cooler and service interface geometry."
+    },
+    {
+      "id": "C60-MAG",
+      "owner": "Coordinator plus transformer builder/qualified insulation reviewer",
+      "gate": "schematic/placement",
+      "needed": "Exact finished core/yoke/TIW leadouts/process drawing; builder-adopted EIS/qualified interfaces; source-supported leakage<=20uH and full magnetic loss/temperature bounds. Actual units can be verified at prototype release, but design/manufacturing contract cannot be absent before PCB."
+    },
+    {
+      "id": "C60-FAULT",
+      "owner": "Coordinator power verification",
+      "gate": "schematic",
+      "needed": "Bound actual UCC28711 startup/short/open/recovery, NTCopen passive or qualified independent thermal path, clamp/MOSFET/SOA and fault energy/temperature. NativeTINA is one possible method, not a requirement itself. Do not apply unqualified backup."
+    },
+    {
+      "id": "C60-THERM",
+      "owner": "Coordinator thermal/mechanical",
+      "gate": "placement",
+      "needed": "Exact orientation/enclosure source conditions and loss bounds; source-based MCPCB/TIM/contact and driver cup paths satisfying unchanged actual ambient/life/safety criteria. Proposed5.35K/W and20% coupling not guarantees."
+    },
+    {
+      "id": "C60-ISO",
+      "owner": "Qualified safety reviewer with authorized applicable IEC/EN sources",
+      "gate": "schematic/placement",
+      "needed": "Applicable-edition actual tables/clauses and insulation coordination for working/transient voltage, material group/CTI, pollution/OVC, solid insulation, core/winding/touchable metal and service interface; resulting dimensioned creepage/clearance/test/material contract. Public manufacturer notes and standards previews do not supply all values."
+    },
+    {
+      "id": "C60-PROCESS",
+      "owner": "Owner/workshop process with coordinator profile preparation",
+      "gate": "placement",
+      "needed": "Genuine selected board/assembly capability/material profile and confirmation; joint/strain-relief/inspection access. Do not invent supplier confirmation."
+    }
+  ],
+  "later_release_not_current_blockers_by_themselves": [
+    "Measured final photometry/temperature/hipot/fault test on built prototype; instead current stage needs a design capable of being tested with explicit limits.",
+    "Final Gerbers/routing/release manufacturing files before schematic/placement.",
+    "Installation of TINA-TI specifically."
+  ],
+  "access": "Automatic review rejected downloading a full standard from unverified previewnorm due possible license circumvention. No retry/bypass used; legitimate manufacturer/CIE sources only. User already states no full standards and noTINA; do not ask the same questions again."
+}

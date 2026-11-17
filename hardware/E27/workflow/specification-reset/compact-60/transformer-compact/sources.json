@@ -1,0 +1,38 @@
+{
+  "inspected": "2026-11-17",
+  "scope": "Manufacturer web text and retained source-pinned BRep inventory; no new STEP/PDF binary was retrieved by this implementer",
+  "primary_sources": [
+    {
+      "url": "https://product.tdk.com/system/files/dam/doc/product/ferrite/ferrite/ferrite-acc/data_sheet/80/db/fer/efd_25_13_9.pdf",
+      "also_indexed_at": "https://www.tdk-electronics.tdk.com/inf/80/db/fer/efd_25_13_9.pdf",
+      "title": "TDK EFD25/13/9 Core and accessories B66421/B66422,10/22",
+      "pages": [2,3],
+      "facts": {
+        "core_width_mm": "25±0.65",
+        "core_half_depth_mm": "12.5±0.15",
+        "core_height_mm": "9.1±0.2",
+        "former_max_height_above_mount_plane_mm": 12.9,
+        "pin_projection_mm": "3.5±0.2",
+        "former_plan_mm": ["25±0.2", "26−0.3"],
+        "yoke_thickness_mm": 0.4,
+        "yoke_drawing_labels_not_yet_assigned_to_assembly_axes_mm": ["25.6", "23.7min", "6.15", "8.3max"]
+      },
+      "limitation": "Indexed description is not own visual inspection of the dimensioned drawing. Do not claim a completed assembled core/yoke bounding box from these labels alone."
+    },
+    {
+      "url": "https://www.tdk-electronics.tdk.com/download/540068/ff773c871f7fe223337ec3513ef0012e/pdf-selectorguide.pdf",
+      "title": "TDK Ferrites and accessories Selector guide3/23",
+      "page": 17,
+      "facts": {
+        "family": "EFD25/13/9 B66421/B66422",
+        "assembly_mounting_dimensions_L_W_H_mm": [29.3, 27.3, 12.5],
+        "height_definition": "Height above mounting plane"
+      },
+      "limitation": "Exact bobbin suffix is absent from this table;12.5mm differs from exact PTH former12.9max. Resolve variant and mounting-envelope definition, do not select smaller values silently."
+    }
+  ],
+  "retrieval_failures": [
+    "Child Python urllib exact current official EFD25 URL: getaddrinfo11001 DNS failure; no binary retained.",
+    "Web screenshot calls returned citation strings without inspectable image; no visual-source pass claimed."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "kind": "Retained-source geometry replay and conditional construction envelope; not finished-source CAD or measured build",
+  "input_sha256": {
+    "transformer-footprint/source-step-faces.json": "fb4872226bbccab48e8622123bcab8856e4d342a4b3c8fec575714f74500fef4",
+    "transformer-footprint/source-step-findings.json": "a169c159ee7c9185201e590d104430db13f1179642cad6bc5b203d2a2e176eb7",
+    "design-closure-02/transformer/construction-contract.json": "eb9d292daf7725750930a3ab6f873a0cd16adc3bf6c372624f1c86b9579bba88",
+    "design-closure-02/transformer/results.json": "63b3b393f05aa0c1437e9006e0ea19439366444b86e3735f078197c441810255"
+  },
+  "fresh_STEP_import": false,
+  "face_count": 430,
+  "raw_STEP_bbox_Xmin_Xmax_Ymin_Ymax_Zmin_Zmax_mm": [
+    -12.5000001,
+    12.5000001,
+    -6.150000100000338,
+    10.25,
+    -13.0000001,
+    13.0000001
+  ],
+  "mount_plane_STEP_Y_mm": 6.75,
+  "support_face_ids": [
+    170,
+    191,
+    306,
+    369
+  ],
+  "pin_tip_STEP_Y_mm": 10.25,
+  "nominal_pin_projection_from_mount_plane_mm": 3.5,
+  "raw_bobbin_above_PCB_nominal_mm": 12.900000100000337,
+  "raw_bobbin_plan_tolerance_max_mm": [
+    25.2,
+    26.0
+  ],
+  "C2_regular_coil_shell_plan_width_and_axial_band_mm": [
+    17.56,
+    13.8
+  ],
+  "C2_regular_coil_shell_top_above_PCB_mm": 12.43,
+  "C2_regular_coil_top_below_nominal_bobbin_top_mm": 0.47000010000033754,
+  "pin_projection_source_tolerance_mm": [
+    3.3,
+    3.7
+  ],
+  "PCB_thickness_design_requirement_mm": [
+    1.5,
+    1.7
+  ],
+  "flush_pin_protrusion_below_PCB_mm": [
+    1.5999999999999999,
+    2.2
+  ],
+  "with_2mm_standoff_protrusion_below_PCB_mm": [
+    -0.40000000000000013,
+    0.20000000000000018
+  ],
+  "hypothetical_0p8mm_min_protrusion_max_standoff_mm": 0.7999999999999998,
+  "protrusion_0p8_scope": "Arithmetic sensitivity only; actual joint acceptance/process must set required protrusion.",
+  "raw_bobbin_plan_margin_inside_28square_each_side_mm": [
+    1.4000000000000004,
+    1.0
+  ],
+  "limits": [
+    "Raw bobbin is not finished transformer. Core, two yokes, terminal wraps, tubes and wire exits require separate maximum bounds.",
+    "25.7x26.5 courtyard is a raw-bobbin pad/body allocation; cannot be promoted to finished transformer envelope.",
+    "C2 end-pocket axial arithmetic does not establish actual bend radius, local clearance or builder capability.",
+    "No normal/fault thermal, EIS adoption, core/yoke-to-TIW leadout isolation or supplier approval is established here.",
+    "No circuit, pin map, KiCad or approved construction altered."
+  ]
+}

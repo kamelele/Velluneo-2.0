@@ -1,0 +1,41 @@
+{
+  "packet": "COMPACT-60-r1",
+  "body_sha256": "577ac06f3069e8f979a9f3722b7cdcf5c42155e77ed1e416a9386cee6bcf594a",
+  "reviewed_members": 85,
+  "reports": [
+    {
+      "role": "reality",
+      "actor": "/root/c2_reality",
+      "report": "reviews/reality.md",
+      "sha256": "d221fa0bfefa2410c34c403d6899dda6f7842d0f33e1019d93f3d8fdc06dbf3d",
+      "reviewed_body_sha256": "577ac06f3069e8f979a9f3722b7cdcf5c42155e77ed1e416a9386cee6bcf594a",
+      "recommendation": "ready_for_human_review for compact feasibility packet only; actual PCB entry remains blocked"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c2_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "e9b3bd769e35438b5c5d03126959ddc54bfeeacd874ccbe6609564e197fae006",
+      "reviewed_body_sha256": "577ac06f3069e8f979a9f3722b7cdcf5c42155e77ed1e416a9386cee6bcf594a",
+      "recommendation": "ready_for_human_review for compact feasibility packet only; actual PCB entry remains blocked"
+    },
+    {
+      "role": "change",
+      "actor": "/root/c2_change",
+      "report": "reviews/change.md",
+      "sha256": "979b7f63459b6fd99d41057a9f39f6386c0579dd1ff612850d51b03a12fe6945",
+      "reviewed_body_sha256": "577ac06f3069e8f979a9f3722b7cdcf5c42155e77ed1e416a9386cee6bcf594a",
+      "recommendation": "ready_for_human_review for compact feasibility packet only; actual PCB entry remains blocked"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/c2_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "d7313ecc7daa27b3f17bf594a775cd9112fca3a4c143c044a16cb4535ce5eecf",
+      "reviewed_body_sha256": "577ac06f3069e8f979a9f3722b7cdcf5c42155e77ed1e416a9386cee6bcf594a",
+      "recommendation": "ready_for_human_review for compact feasibility packet only; actual PCB entry remains blocked"
+    }
+  ],
+  "stage_approval": false,
+  "independence": "Four actual separate nonimplementer read-only role contexts independently inspect sources; same model identity is not proof of independence."
+}

@@ -1,0 +1,42 @@
+{
+  "scope": "Source-conditioned feasibility calculation, not a qualified thermal solution. Rth natural-convection test load/orientation and assembled effects unavailable. No extrapolated guarantee.",
+  "ambient_C": 40,
+  "LED_no_optical_credit_heat_W": 7.808248839403387,
+  "driver_scenario_heat_W": 2.156,
+  "driver_heat_coupled_to_LED_fraction_assumption": 0.2,
+  "proposed_base_C": 85,
+  "source_cooler": "Malico MPS60-30: listed diameter60 family, height30mm, natural convection5.35K/W; exact dimensional drawing/tolerances/conditions not yet available.",
+  "source_url": "https://www.malico.com/led/",
+  "Rth_source_K_per_W": 5.35,
+  "required_assembled_Rth_to_hold85C_K_per_W": 5.461530361690846,
+  "base_C_source_condition_only": 84.08105129080812,
+  "solder_C_with_existing1plus10KperW_allowances": 103.0439413293592,
+  "junction_C_with_additional15KperW_allowance": 119.77590312808074,
+  "sensitivity_1p25R_base_C": 95.10131411351014,
+  "assumed_MPS60_20_Rth6p08_base_C": 90.09584894357259,
+  "primary_heat_remaining_W": 1.7248,
+  "geometry_proposal_mm": {
+    "total_height": 120,
+    "outer_diameter": 60,
+    "E27_and_driver_cup_to_Z": 70,
+    "cooler_Z": [
+      70,
+      100
+    ],
+    "diffuser_Z": [
+      100,
+      120
+    ],
+    "MCPCB_diameter": 48,
+    "PCB_study_diameter": 51
+  },
+  "closed": false,
+  "residual_conditions": [
+    "Rth5.35 source conditions cannot be treated as guaranteed assembled bound or worst orientation.",
+    "20% driver coupling and driver2.156W are assumptions/scenario, not measured/bounded upper limits.",
+    "85C LED-base proposal replaces prior75C agent working target only; actualTs<=105C andTj<=125C are not relaxed. Allowance15K/W vs typical7.6 is not a guaranteed source maximum.",
+    "Actual primary cup wall/floor dielectric geometry/material and internal-air/NTC/capacitor temperatures unqualified.",
+    "Source cooler60mm nominal leaves no tolerance or surrounding guard allowance under60mm target. Obtain exact drawing/tolerance before selecting.",
+    "Complete stack/component placement/heights/joints/service connector/tolerances are not verified."
+  ]
+}
