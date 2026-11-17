@@ -1,3 +1,5 @@
+> Historical initial capture context. The root schematic, generator and BOM now include three candidate footprint assignments under [FOOTPRINT-01](../footprint-study/README.md). Current source/check hashes are there; the initial capture ZIP/reviews retain their original scope and are not a current footprint-library acceptance.
+
 # Velluneo E27 driver — native KiCad schematic draft
 
 SCH-CAPTURE-01, 2026-11-17. Native KiCad10.0.6 source, not a manufactured or qualified power supply. Open ../Velluneo_specification_reset.kicad_pro or its .kicad_sch. The adjacent sym-lib-table resolves ../libraries/Velluneo_Driver.kicad_sym relative to the project; no third-party symbol library is required. Physical footprints are deliberately not assigned while exact pad/insulation/process choices remain unqualified.

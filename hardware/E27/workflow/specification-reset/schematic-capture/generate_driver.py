@@ -8,6 +8,10 @@ P=Path(__file__).resolve().parent.parent
 D=P/'schematic-capture';L=P/'libraries';L.mkdir(exist_ok=True)
 NAME='Velluneo_specification_reset'
 parts=json.loads((P/'schematic-intent/parts.json').read_text())
+assignment_path=P/'footprint-study/assignments.json'
+footprints=json.loads(assignment_path.read_text()) if assignment_path.exists() else {}
+for a in parts:
+ if a['ref'] in footprints:assert footprints[a['ref']]['mpn']==a['mpn']
 intent=json.loads((P/'schematic-intent/intended-connectivity.json').read_text())
 digest=hashlib.sha256(json.dumps({k:v for k,v in intent.items() if k!='approval'},sort_keys=True,ensure_ascii=False,separators=(',',':'),allow_nan=False).encode()).hexdigest()
 assert intent['approval']['intent_digest']==digest=='b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57'
@@ -71,7 +75,7 @@ for a in parts:
  assert {p['n'] for p in pins}==set(a['pins'])
  yoff=20.32 if ref=='U1' else 15.24 if ref=='Q1' else 12.7 if ref in ['BR1','T1'] else 8.89 if ref in ['J1','J2'] else 5.08
  value=vals.get(ref,a['mpn']);rx=x+15.24 if ref=='Q1' else x; ry=y-2.54 if ref=='Q1' else y-yoff; vx=x+15.24 if ref=='Q1' else x;vy=y+2.54 if ref=='Q1' else y+yoff
- items.append(f'(symbol (lib_id {q("Velluneo_Driver:"+style)}) (at {x} {y} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid {q(uid(ref))}) '+prop('Reference',ref,rx,ry,False,1.2)+prop('Value',value,vx,vy,False,.95)+prop('Footprint','',x,y)+prop('MPN',a['mpn'],x,y)+prop('Description',a['value'],x,y)+prop('Library_Status','Symbol pin basis checked; physical footprint pending',x,y)+''.join(f'(pin {q(pp["n"])} (uuid {q(uid(ref+"/pin/"+pp["n"]))}))' for pp in pins)+f'(instances (project {q(NAME)} (path {q("/"+rootuid)} (reference {q(ref)}) (unit 1)))))')
+ items.append(f'(symbol (lib_id {q("Velluneo_Driver:"+style)}) (at {x} {y} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid {q(uid(ref))}) '+prop('Reference',ref,rx,ry,False,1.2)+prop('Value',value,vx,vy,False,.95)+prop('Footprint',footprints.get(ref,{}).get('footprint',''),x,y)+prop('MPN',a['mpn'],x,y)+prop('Description',a['value'],x,y)+prop('Library_Status',footprints.get(ref,{}).get('status','Symbol pin basis checked; physical footprint pending'),x,y)+''.join(f'(pin {q(pp["n"])} (uuid {q(uid(ref+"/pin/"+pp["n"]))}))' for pp in pins)+f'(instances (project {q(NAME)} (path {q("/"+rootuid)} (reference {q(ref)}) (unit 1)))))')
  for pp in pins:
   n=pp['n'];net=a['pins'][n];px=x+pp['x'];py=y-pp['y'];ang=pp['angle'];k=ref+'/'+n
   if net is None:items.append(f'(no_connect (at {fmt(px)} {fmt(py)}) (uuid {q(uid("nc/"+k))}))');continue
@@ -137,6 +141,6 @@ schematic=header+'\n(lib_symbols\n'+'\n'.join(library_symbol(k,True) for k in sy
 pro=P/(NAME+'.kicad_pro')
 if not pro.exists():pro.write_text(json.dumps({'meta':{'filename':NAME+'.kicad_pro','version':1}},indent=2)+'\n')
 with (D/'BOM.csv').open('w',newline='') as f:
- w=csv.writer(f);w.writerow(['Reference','Quantity','Value','MPN_or_custom_requirement','Symbol','Footprint_status'])
- for a in parts:w.writerow([a['ref'],1,vals.get(a['ref'],a['mpn']),a['mpn'],'Velluneo_Driver:'+styles[a['ref']],'Not selected/qualified; not order-ready'])
+ w=csv.writer(f);w.writerow(['Reference','Quantity','Value','MPN_or_custom_requirement','Symbol','Footprint','Footprint_status'])
+ for a in parts:w.writerow([a['ref'],1,vals.get(a['ref'],a['mpn']),a['mpn'],'Velluneo_Driver:'+styles[a['ref']],footprints.get(a['ref'],{}).get('footprint',''),footprints.get(a['ref'],{}).get('status','Not selected/qualified; not order-ready')])
 print('Generated native schematic, local symbols, project and BOM; approved intent unchanged:',digest)

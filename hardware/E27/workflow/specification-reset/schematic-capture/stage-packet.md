@@ -1,3 +1,5 @@
+> Historical initial capture context. The root schematic, generator and BOM now include three candidate footprint assignments under [FOOTPRINT-01](../footprint-study/README.md). Current source/check hashes are there; the initial capture ZIP/reviews retain their original scope and are not a current footprint-library acceptance.
+
 # SCH-CAPTURE-01 — delivered native schematic draft, stage incomplete
 
 Date2026-11-17; baseline0b79ac05d025fdcde1de0418874043a2d5f530b2; existing draft PR https://github.com/kamelele/Velluneo-2.0/pull/1. Actual owner Kamil Stępak approved the exact pre-existing pin graph, digestb6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57. See owner-intent-approval.md for actual text/context. This does not record a later schematic-stage approval.

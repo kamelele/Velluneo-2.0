@@ -1,6 +1,10 @@
 # E27 workflow index
 
-## Current redesign schematic draft — 17 November 2026
+## Current critical footprint library — 17 November 2026
+
+The [FOOTPRINT-01 packet](specification-reset/footprint-study/README.md) creates and assigns three actual native footprints for U1, BR1 and Q1, with source-backed copper and exact approved numbering. [Current ZIP](specification-reset/footprint-study/Velluneo_driver_3_footprints.zip) includes the local library and assignments. Four independent contexts reviewed the36-file candidate packet. Native15-pad geometry, unchanged28-component physical graph and ERC checks pass at their stated scopes; only3of28 footprints are addressed. Schematic-stage acceptance, remaining physical libraries/interfaces/process and all old electrical majors stay open. No productPCB exists. Earlier capture reports/packages below remain historical for their source revision.
+
+## Earlier native schematic capture — 17 November 2026
 
 The owner accepted the exact independently reviewed physical-pin map and instructed capture. [Actual decision](specification-reset/schematic-capture/owner-intent-approval.md) binds graphintent b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57 to prior commit0b79ac05d025fdcde1de0418874043a2d5f530b2. Graph topology/basis remains unchanged; only its approval is now recorded. This is not approval of the newly generated schematic stage.
 

@@ -1,3 +1,5 @@
+> Library update2026-11-17: [FOOTPRINT-01](../footprint-study/README.md) adds three source-backed native candidate footprints without changing circuit values or approved physical connectivity. Native library/graph/ERC checks pass; no old analog or stage blocker is closed.
+
 > Subsequent capture update2026-11-17: actual owner graph acceptance is recorded and a [native schematic draft](../schematic-capture/README.md) now exists. Physical-pin comparison and native ERC pass at their stated scopes; schematic-stage acceptance, numeric-reference correction, physical libraries and all old electrical/model/thermal/insulation majors remain open. Prior investigation history below is retained.
 
 > Current update2026-11-17: owner product-scope acceptance is recorded; the synchronized specification preflight passes. New independent28-component pin intent is in [../schematic-intent/](../schematic-intent/README.md), pending its genuine owner decision. UCC28711 remains the current engineering candidate rather than an accepted functioning circuit. No schematic/model/physical major is closed. Earlier proposal and numeric scopes below are retained.
