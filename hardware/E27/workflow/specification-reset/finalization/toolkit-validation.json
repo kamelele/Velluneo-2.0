@@ -1,0 +1,1066 @@
+{
+  "cad": {
+    "kicad_version": "10.0.6",
+    "passed": true,
+    "tests": [
+      {
+        "detail": [],
+        "name": "connectivity valid",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "connectivity renamed",
+        "passed": true
+      },
+      {
+        "detail": [
+          "barrier_breached",
+          "merged_nets"
+        ],
+        "name": "connectivity merged",
+        "passed": true
+      },
+      {
+        "detail": {
+          "drc_parity_clean": true,
+          "erc_clean": true,
+          "errors": [
+            "Connectivity: merged_nets: Distinct intended nets are electrically merged",
+            "Connectivity: barrier_breached: Declared electrical separation is bridged"
+          ]
+        },
+        "name": "connectivity mismatch cannot be hidden by clean ERC parity DRC",
+        "passed": true
+      },
+      {
+        "detail": [
+          "split_net"
+        ],
+        "name": "connectivity split",
+        "passed": true
+      },
+      {
+        "detail": [
+          "barrier_breached",
+          "merged_nets",
+          "split_net"
+        ],
+        "name": "connectivity wrong-pin",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_nc_marker",
+          "unassigned_expected_pins",
+          "unit_instance_count_mismatch"
+        ],
+        "name": "connectivity omitted-unit",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_nc_marker"
+        ],
+        "name": "connectivity missing-nc",
+        "passed": true
+      },
+      {
+        "detail": [
+          "connected_nc",
+          "missing_nc_marker"
+        ],
+        "name": "connectivity connected-nc",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "DRC valid",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard",
+          "shorting_items",
+          "silk_overlap",
+          "tracks_crossing",
+          "unconnected_items"
+        ],
+        "name": "DRC short",
+        "passed": true
+      },
+      {
+        "detail": [
+          "clearance"
+        ],
+        "name": "DRC clearance",
+        "passed": true
+      },
+      {
+        "detail": [
+          "track_width"
+        ],
+        "name": "DRC width",
+        "passed": true
+      },
+      {
+        "detail": [
+          "drill_out_of_range",
+          "unconnected_items",
+          "via_dangling"
+        ],
+        "name": "DRC hole",
+        "passed": true
+      },
+      {
+        "detail": [
+          "annular_width",
+          "unconnected_items",
+          "via_dangling"
+        ],
+        "name": "DRC ring",
+        "passed": true
+      },
+      {
+        "detail": [
+          "copper_edge_clearance"
+        ],
+        "name": "DRC edge",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "ERC valid",
+        "passed": true
+      },
+      {
+        "detail": [
+          "pin_to_pin"
+        ],
+        "name": "ERC conflict",
+        "passed": true
+      },
+      {
+        "detail": [
+          "power_pin_not_driven"
+        ],
+        "name": "ERC power",
+        "passed": true
+      },
+      {
+        "detail": [
+          "pin_not_connected",
+          "pin_not_driven"
+        ],
+        "name": "ERC unconnected",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "DRC scope-applies",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "DRC scope-other-net",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "DRC priority-local",
+        "passed": true
+      },
+      {
+        "detail": [
+          "Spatial contract missing: adopt product.spatial_file",
+          "Fabrication field missing: service",
+          "Fabrication field missing: stackup",
+          "Fabrication field missing: copper",
+          "Fabrication field missing: finish",
+          "Fabrication field missing: confirmation_evidence",
+          "Service is outside selected fabrication profile",
+          "Assembly process not confirmed",
+          "Product domain list missing",
+          "Missing/stale user approval: specification",
+          "Missing/stale user approval: schematic",
+          "Missing/stale user approval: placement",
+          "Missing/stale user approval: routing",
+          "Missing/stale user approval: release",
+          "Release approval does not cover current artifacts",
+          "Release artifact missing: gerbers",
+          "Release artifact missing: drills",
+          "Release artifact missing: bom",
+          "Release artifact missing: positions",
+          "Release artifact missing: assembly_drawing",
+          "Release artifact missing: bringup_plan"
+        ],
+        "name": "release incomplete jlcpcb/supplier",
+        "passed": true
+      },
+      {
+        "detail": [
+          "Spatial contract missing: adopt product.spatial_file",
+          "Fabrication field missing: service",
+          "Fabrication field missing: stackup",
+          "Fabrication field missing: copper",
+          "Fabrication field missing: finish",
+          "Fabrication field missing: confirmation_evidence",
+          "Service is outside selected fabrication profile",
+          "Assembly process not confirmed",
+          "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation",
+          "Product domain list missing",
+          "Missing/stale user approval: specification",
+          "Missing/stale user approval: schematic",
+          "Missing/stale user approval: placement",
+          "Missing/stale user approval: routing",
+          "Missing/stale user approval: release",
+          "Release approval does not cover current artifacts",
+          "Release artifact missing: gerbers",
+          "Release artifact missing: drills",
+          "Release artifact missing: bom",
+          "Release artifact missing: positions",
+          "Release artifact missing: assembly_drawing",
+          "Release artifact missing: bringup_plan"
+        ],
+        "name": "release incomplete jlcpcb/inhouse",
+        "passed": true
+      },
+      {
+        "detail": [
+          "Spatial contract missing: adopt product.spatial_file",
+          "Fabrication field missing: service",
+          "Fabrication field missing: stackup",
+          "Fabrication field missing: copper",
+          "Fabrication field missing: finish",
+          "Fabrication field missing: confirmation_evidence",
+          "Service is outside selected fabrication profile",
+          "Assembly process not confirmed",
+          "Product domain list missing",
+          "Missing/stale user approval: specification",
+          "Missing/stale user approval: schematic",
+          "Missing/stale user approval: placement",
+          "Missing/stale user approval: routing",
+          "Missing/stale user approval: release",
+          "Release approval does not cover current artifacts",
+          "Release artifact missing: gerbers",
+          "Release artifact missing: drills",
+          "Release artifact missing: bom",
+          "Release artifact missing: positions",
+          "Release artifact missing: assembly_drawing",
+          "Release artifact missing: bringup_plan"
+        ],
+        "name": "release incomplete eurocircuits/supplier",
+        "passed": true
+      },
+      {
+        "detail": [
+          "Spatial contract missing: adopt product.spatial_file",
+          "Fabrication field missing: service",
+          "Fabrication field missing: stackup",
+          "Fabrication field missing: copper",
+          "Fabrication field missing: finish",
+          "Fabrication field missing: confirmation_evidence",
+          "Service is outside selected fabrication profile",
+          "Assembly process not confirmed",
+          "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation",
+          "Product domain list missing",
+          "Missing/stale user approval: specification",
+          "Missing/stale user approval: schematic",
+          "Missing/stale user approval: placement",
+          "Missing/stale user approval: routing",
+          "Missing/stale user approval: release",
+          "Release approval does not cover current artifacts",
+          "Release artifact missing: gerbers",
+          "Release artifact missing: drills",
+          "Release artifact missing: bom",
+          "Release artifact missing: positions",
+          "Release artifact missing: assembly_drawing",
+          "Release artifact missing: bringup_plan"
+        ],
+        "name": "release incomplete eurocircuits/inhouse",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "release complete synthetic manifest",
+        "passed": true
+      },
+      {
+        "detail": [
+          "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation"
+        ],
+        "name": "local PCBA confirmation missing",
+        "passed": true
+      },
+      {
+        "detail": [
+          "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation"
+        ],
+        "name": "local PCBA confirmation obsolete draft key only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "local PCBA confirmation canonical field",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "release refuses stale spatial approval",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "release refuses undeclared spatial contract",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "release refuses stale independent intent approval",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "release refuses undeclared independent connectivity",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "release refuses stale contract evidence",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "release refuses missing contract declaration",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "legacy work report identifies unconfigured requirements",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "release stale approvals refused",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "missing CAD tool fails closed",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "adoption preview leaves existing CAD unchanged",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "adoption preserves unrelated KiCad settings",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "adopted existing project passes real ERC DRC parity",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "repeat adoption is a source no-op",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "adoption rollback restores exact original CAD bytes",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "blocked adoption still reports actual CAD violations",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "managed ERC policy tampering refused",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial no-outline preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial no-outline saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC no-outline",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial outside preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial outside saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC outside",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "spatial preview includes footprint envelopes and pads",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "spatial divergent routing versus DRC refused",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "spatial stale preview refused",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "spatial repeat configure preserves PCB bytes",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "spatial moved protective area fails verification",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "spatial mismatched area adoption preserves source",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial track preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial track saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "items_not_allowed",
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC track",
+        "passed": true
+      },
+      {
+        "detail": null,
+        "name": "spatial transaction rollback restores original PCB",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial local-exception preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial local-exception saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC local-exception",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial other-net-exception preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial other-net-exception saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "items_not_allowed",
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC other-net-exception",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial other-layer preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial other-layer saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC other-layer",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial via preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial via saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "items_not_allowed",
+          "missing_courtyard",
+          "unconnected_items",
+          "via_dangling"
+        ],
+        "name": "spatial DRC via",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial via-outside preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial via-outside saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard",
+          "unconnected_items",
+          "via_dangling"
+        ],
+        "name": "spatial DRC via-outside",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial pad preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial pad saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "items_not_allowed",
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC pad",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial pad-outside preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial pad-outside saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC pad-outside",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial zone preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial zone saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "isolated_copper",
+          "items_not_allowed",
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC zone",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial zone-outside preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial zone-outside saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "isolated_copper",
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC zone-outside",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial class-width preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial class-width saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard",
+          "track_width"
+        ],
+        "name": "spatial DRC class-width",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard",
+          "track_width"
+        ],
+        "name": "spatial shared netclass width class-width",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial class-width-valid preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial class-width-valid saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC class-width-valid",
+        "passed": true
+      },
+      {
+        "detail": [
+          "missing_courtyard"
+        ],
+        "name": "spatial shared netclass width class-width-valid",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial exception-other-area preview read-only",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "spatial exception-other-area saved geometry and consumer inputs",
+        "passed": true
+      },
+      {
+        "detail": [
+          "items_not_allowed",
+          "missing_courtyard"
+        ],
+        "name": "spatial DRC exception-other-area",
+        "passed": true
+      }
+    ]
+  },
+  "candidate_only": true,
+  "commands": {
+    "cad": {
+      "exit_code": 0
+    },
+    "installed-trial": {
+      "exit_code": 0
+    },
+    "recipient-example": {
+      "exit_code": 0
+    },
+    "requirements-example": {
+      "exit_code": 0
+    },
+    "workflow-example": {
+      "exit_code": 0
+    }
+  },
+  "inputs_unchanged": true,
+  "installed_trial": {
+    "cad_and_approval_fields_unchanged": true,
+    "commands": [
+      {
+        "exit_code": 0,
+        "name": "install",
+        "stderr": "",
+        "stdout": "{\n  \"installed\": {\n    \"manifest_sha256\": \"05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\",\n    \"archive_sha256\": \"15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4\",\n    \"package_version\": \"0.7.1-preview.3\",\n    \"ruleset_version\": \"0.7.1\",\n    \"kicad_version\": \"10.0.6\",\n    \"candidate_accepted\": true,\n    \"publication_ready\": false\n  },\n  \"checks_required\": true\n}\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "doctor",
+        "stderr": "",
+        "stdout": "{\n  \"passed\": true,\n  \"configuration_error\": false,\n  \"pin\": {\n    \"archive_sha256\": \"15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4\",\n    \"candidate_accepted\": true,\n    \"kicad_version\": \"10.0.6\",\n    \"manifest_sha256\": \"05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\",\n    \"package_version\": \"0.7.1-preview.3\",\n    \"publication_ready\": false,\n    \"ruleset_version\": \"0.7.1\"\n  },\n  \"python\": \"3.14.8 (main, Oct  1 2026, 20:09:47) [GCC 15.3.0]\",\n  \"cad_runtime\": {\n    \"pcbnew\": \"10.0.6\",\n    \"python\": \"3.14.8 (main, Oct  1 2026, 20:09:47) [GCC 15.3.0]\"\n  },\n  \"kicad_cli_version\": \"10.0.6\",\n  \"platform\": \"Linux-6.18.57-x86_64-with-glibc2.44\",\n  \"config_directories\": {\n    \"KICAD_CONFIG_HOME\": \"/validation/.work/installed-trial/dd0866457a324b8f8fddbcc0cab9db02/installed_board/.work/kicad-config\",\n    \"KICAD_DOCUMENTS_HOME\": \"/validation/.work/installed-trial/dd0866457a324b8f8fddbcc0cab9db02/installed_board/.work/kicad-documents\"\n  }\n}\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "configure preview",
+        "stderr": "",
+        "stdout": "Plan: abc59f7c59c0b4e24a4c9eeb25a5a8e3d86774ace0299f2deffb07f8037b1551\nDiff: .work/configure/plans/abc59f7c59c0b4e24a4c9eeb25a5a8e3d86774ace0299f2deffb07f8037b1551.diff\nClose KiCad and review the diff before configure --apply PLAN_ID.\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "configure apply",
+        "stderr": "",
+        "stdout": "No changes required.\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "snapshot before update",
+        "stderr": "",
+        "stdout": "d983982b0decd75c1f0a9bedae4715e6127a27b9a179b99db8b0ef5cb4848422\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "work check before update",
+        "stderr": "",
+        "stdout": ""
+      },
+      {
+        "exit_code": 0,
+        "name": "plan dependency update",
+        "stderr": "",
+        "stdout": "{\n  \"plan_id\": \"ef6c822fe3974acb220ce9d9360e227e8b081f574d0ab143386634996c84aecc\",\n  \"schema_version\": 1,\n  \"lock_sha256\": \"a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d\",\n  \"before\": {\n    \"archive_sha256\": \"15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4\",\n    \"candidate_accepted\": true,\n    \"kicad_version\": \"10.0.6\",\n    \"manifest_sha256\": \"05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\",\n    \"package_version\": \"0.7.1-preview.3\",\n    \"publication_ready\": false,\n    \"ruleset_version\": \"0.7.1\"\n  },\n  \"archive\": \"/validation/.work/installed-trial/dd0866457a324b8f8fddbcc0cab9db02/0.7.0-install-trial.2.zip\",\n  \"pin\": {\n    \"manifest_sha256\": \"4db33d1d9db7f63dd7d9a64a1f05bb0aa9d0db1b888395ecf705e530cd815220\",\n    \"archive_sha256\": \"ff5eccbb4c47c066a84944e6c801547c6a899f5aced401c696ef0929ee67c014\",\n    \"package_version\": \"0.7.0-install-trial.2\",\n    \"ruleset_version\": \"0.7.1\",\n    \"kicad_version\": \"10.0.6\",\n    \"candidate_accepted\": true,\n    \"publication_ready\": false\n  },\n  \"differences\": [\n    {\n      \"path\": \"README.md\",\n      \"before\": {\n        \"sha256\": \"ba7ce0181384a069f60d4b6e3dec2b3854fe9c50cd6d178a867e780efec361dc\",\n        \"size\": 5809\n      },\n      \"after\": {\n        \"sha256\": \"db51285cc8e739be15767b34a92b9759ded90cfcce4663aab486ab29840da840\",\n        \"size\": 5854\n      }\n    },\n    {\n      \"path\": \"distribution/package.json\",\n      \"before\": {\n        \"sha256\": \"74788aa631a7686c6c7ce2fcb654e0328ebdd0a0b06482147a19bf6b6659cb9d\",\n        \"size\": 41970\n      },\n      \"after\": {\n        \"sha256\": \"abe03d3caed405afef2da935ee9b6c95c5208df9f9073998c61395b51bab4eff\",\n        \"size\": 42348\n      }\n    },\n    {\n      \"path\": \"examples/fictional.kicad_sch\",\n      \"before\": null,\n      \"after\": {\n        \"sha256\": \"16840269d4b0794b7c6a916d9cf4939f04570c50f72fd931e590ce5570913069\",\n        \"size\": 56\n      }\n    }\n  ],\n  \"no_op\": false,\n  \"impact\": \"All affected board snapshots/reviews need rechecking; CAD configuration is not migrated automatically.\"\n}\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "apply dependency update",
+        "stderr": "",
+        "stdout": "{\n  \"changed\": true,\n  \"current\": {\n    \"manifest_sha256\": \"4db33d1d9db7f63dd7d9a64a1f05bb0aa9d0db1b888395ecf705e530cd815220\",\n    \"archive_sha256\": \"ff5eccbb4c47c066a84944e6c801547c6a899f5aced401c696ef0929ee67c014\",\n    \"package_version\": \"0.7.0-install-trial.2\",\n    \"ruleset_version\": \"0.7.1\",\n    \"kicad_version\": \"10.0.6\",\n    \"candidate_accepted\": true,\n    \"publication_ready\": false\n  },\n  \"rollback_to\": \"a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d\",\n  \"checks_required\": true\n}\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "snapshot after update",
+        "stderr": "",
+        "stdout": "af47a3e286390851998e38953961aed68c56cd2c4f93930b0fcd23501f3ef15a\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "work check after update",
+        "stderr": "",
+        "stdout": ""
+      },
+      {
+        "exit_code": 0,
+        "name": "rollback dependency",
+        "stderr": "",
+        "stdout": "{\n  \"restored\": {\n    \"archive_sha256\": \"15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4\",\n    \"candidate_accepted\": true,\n    \"kicad_version\": \"10.0.6\",\n    \"manifest_sha256\": \"05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\",\n    \"package_version\": \"0.7.1-preview.3\",\n    \"publication_ready\": false,\n    \"ruleset_version\": \"0.7.1\"\n  },\n  \"checks_required\": true,\n  \"note\": \"CAD/configuration and human approvals are not changed.\"\n}\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "snapshot after rollback",
+        "stderr": "",
+        "stdout": "d983982b0decd75c1f0a9bedae4715e6127a27b9a179b99db8b0ef5cb4848422\n"
+      },
+      {
+        "exit_code": 0,
+        "name": "work check after rollback",
+        "stderr": "",
+        "stdout": ""
+      }
+    ],
+    "doctor": {
+      "cad_runtime": {
+        "pcbnew": "10.0.6",
+        "python": "3.14.8 (main, Oct  1 2026, 20:09:47) [GCC 15.3.0]"
+      },
+      "config_directories": {
+        "KICAD_CONFIG_HOME": "/validation/.work/installed-trial/dd0866457a324b8f8fddbcc0cab9db02/installed_board/.work/kicad-config",
+        "KICAD_DOCUMENTS_HOME": "/validation/.work/installed-trial/dd0866457a324b8f8fddbcc0cab9db02/installed_board/.work/kicad-documents"
+      },
+      "configuration_error": false,
+      "kicad_cli_version": "10.0.6",
+      "passed": true,
+      "pin": {
+        "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+        "candidate_accepted": true,
+        "kicad_version": "10.0.6",
+        "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+        "package_version": "0.7.1-preview.3",
+        "publication_ready": false,
+        "ruleset_version": "0.7.1"
+      },
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.44",
+      "python": "3.14.8 (main, Oct  1 2026, 20:09:47) [GCC 15.3.0]"
+    },
+    "limitations": [
+      "Original empty-board fixture; synthetic contract approvals, no manufacturing release.",
+      "CI-equivalent commands run locally/in-container; no hosted GitHub workflow claimed."
+    ],
+    "passed": true,
+    "rollback_restored_snapshot_and_lock": true,
+    "schema_version": 1,
+    "snapshot_changed_on_update": true,
+    "source_archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4"
+  },
+  "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+  "os_release": {
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "DOCUMENTATION_URL": "https://docs.ubuntu.com",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "ID": "ubuntu",
+    "ID_LIKE": "debian",
+    "LOGO": "ubuntu-logo",
+    "NAME": "Ubuntu",
+    "PRETTY_NAME": "Ubuntu 26.10",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "RELEASE_TYPE": "stable",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "UBUNTU_CODENAME": "stonking",
+    "VENDOR_NAME": "Canonical",
+    "VENDOR_URL": "https://canonical.com/",
+    "VERSION": "26.10 (Stonking Stingray)",
+    "VERSION_CODENAME": "stonking",
+    "VERSION_ID": "26.10"
+  },
+  "package_version": "0.7.1-preview.3",
+  "passed": true,
+  "pending_acceptance": [
+    "Technical preview: independent recipient/runtime experience is not validated.",
+    "Production/process qualification and project-specific hardware approval are outside toolkit publication.",
+    "Public first export/release requires review and merge; community synchronization remains to be exercised."
+  ],
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.44",
+  "publication_ready": false,
+  "python": "3.14.8 (main, Oct  1 2026, 20:09:47) [GCC 15.3.0]",
+  "recipient_example": {
+    "actual_agents_launched": 0,
+    "actual_human_approvals": 0,
+    "corrected": {
+      "drc_findings": 0,
+      "erc_findings": 0,
+      "passed": true,
+      "snapshot": "3dd33c6eb7a138aa441a2eeefd9115d5d8d782326c2c9bd3805ee2c8ea68ee75"
+    },
+    "defect": {
+      "connectivity_passed": false,
+      "erc_clean": true,
+      "findings": [
+        {
+          "actual_nets": [
+            {
+              "code": "1",
+              "name": "/LINE_1"
+            },
+            {
+              "code": "2",
+              "name": "/LINE_2"
+            }
+          ],
+          "message": "An intended net is split across exported nets",
+          "net_id": "LINE_1",
+          "type": "split_net"
+        },
+        {
+          "actual_nets": [
+            {
+              "code": "1",
+              "name": "/LINE_1"
+            },
+            {
+              "code": "2",
+              "name": "/LINE_2"
+            }
+          ],
+          "message": "An intended net is split across exported nets",
+          "net_id": "LINE_2",
+          "type": "split_net"
+        },
+        {
+          "actual_net": "/LINE_1",
+          "intended_nets": [
+            "LINE_1",
+            "LINE_2"
+          ],
+          "message": "Distinct intended nets are electrically merged",
+          "pins": [
+            {
+              "pin": "1",
+              "ref": "J1"
+            },
+            {
+              "pin": "2",
+              "ref": "J2"
+            }
+          ],
+          "type": "merged_nets"
+        },
+        {
+          "actual_net": "/LINE_2",
+          "intended_nets": [
+            "LINE_1",
+            "LINE_2"
+          ],
+          "message": "Distinct intended nets are electrically merged",
+          "pins": [
+            {
+              "pin": "2",
+              "ref": "J1"
+            },
+            {
+              "pin": "1",
+              "ref": "J2"
+            }
+          ],
+          "type": "merged_nets"
+        }
+      ]
+    },
+    "kicad_version": "10.0.6",
+    "limitations": [
+      "Synthetic approval fields only; no real reviewers or agents are claimed.",
+      "Fictional generic parts and process; no order, release package or physical qualification.",
+      "Real recipient/agent execution and assistance logging remain a separate pilot."
+    ],
+    "mode": "authored tutorial with executed CAD checks",
+    "passed": true,
+    "physical_measurements": 0,
+    "release": {
+      "errors": [
+        "Fabrication field missing: service",
+        "Fabrication field missing: stackup",
+        "Fabrication field missing: copper",
+        "Fabrication field missing: finish",
+        "Fabrication field missing: confirmation_evidence",
+        "Service is outside selected fabrication profile",
+        "Assembly process not confirmed",
+        "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation",
+        "Missing/stale user approval: specification",
+        "Missing/stale user approval: schematic",
+        "Missing/stale user approval: placement",
+        "Missing/stale user approval: routing",
+        "Missing/stale user approval: release",
+        "Release approval does not cover current artifacts",
+        "Release artifact missing: gerbers",
+        "Release artifact missing: drills",
+        "Release artifact missing: bom",
+        "Release artifact missing: positions",
+        "Release artifact missing: assembly_drawing",
+        "Release artifact missing: bringup_plan"
+      ],
+      "exit_code": 1,
+      "passed": false
+    },
+    "ruleset_version": "0.7.1",
+    "schema_version": 1,
+    "source_hashes": {
+      "Tutorial.kicad_sym": "2435dee87de84483cf07721c80413ae9abf66af55072626047bee0eb06d19bf3",
+      "Tutorial.pretty/Connector_2.kicad_mod": "1ec7a536f598cd6387e07cae4430f682aa3c36dfcf5704bbbf1f3b56813ef604",
+      "board.kicad_dru": "8d7fda4a35a3543786e2a039734fbe00be564684c6bb9270ddd08eca9a038ce5",
+      "board.kicad_pcb": "c4c9a5ae1e351189cb0c8781598ea5917d21e88ab3fe6e2947c2406cfa11851b",
+      "board.kicad_pro": "8e41039eb0330899424b97cb661f839d9ba8b551859ab2a4fb90ddd13585de30",
+      "board.kicad_sch": "eb993876f12e8f4bdb63931635661dacf0e0abd49d9057c56b0cfb8572bc8969",
+      "bom.csv": "73f67031c2acb78ddebce0ba63a0e5fb68e20d4e732585f3925202b1fe31a369",
+      "bringup-plan.md": "1425bb62c4a47114ef99b88f373012d5d05d739266098454d4d693daa891632d",
+      "fp-lib-table": "06d7cb92e21487b6bb107ed85467a7b2a182bf9d668181ecafd1bd1bed4387b5",
+      "hardware.json": "49d31ec4e5dbf0a3237bbbace79ce4840a86ed6ffa37257f341091f6898c35d2",
+      "intended-connectivity.json": "7333252bf8afa0ca1f593c3f2065fd6e44a906b66cd1903705b15998c36086c0",
+      "requirements.json": "04d7381ef3061a33b2da0efcf64f76029b966a6d162d8d1800dfc2660436d07a",
+      "review-basis.md": "76e2812a3050686b5aa5b7387eff8a8b774d25af6cec98461ed1193e9d08ca7d",
+      "spatial-constraints.json": "dbc4909404929e5d6a4266ceaa583202f1d19b4158699214a85f5f493bea66c1",
+      "specification.md": "b310010cdbdf155460f0d6f486dbed141d006aa2325d599c6e3f3915eb3fab16",
+      "sym-lib-table": "ca8951058007e510dd140558c092f75d7d1287f8e123b6cbca1301c734fa0b6b"
+    },
+    "source_inputs_unchanged": true,
+    "view_commands": [
+      {
+        "command": [
+          "kicad-cli",
+          "sch",
+          "export",
+          "svg",
+          "-o",
+          "/validation/.work/recipient-example/2ca30c46a63d4370803cc751ea477427/board/.work/views",
+          "/validation/.work/recipient-example/2ca30c46a63d4370803cc751ea477427/board/board.kicad_sch"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "stdout": "Plotted to '/validation/.work/recipient-example/2ca30c46a63d4370803cc751ea477427/board/.work/views/board.svg'.\nDone.\n"
+      },
+      {
+        "command": [
+          "kicad-cli",
+          "pcb",
+          "export",
+          "svg",
+          "--mode-single",
+          "--page-size-mode",
+          "2",
+          "--exclude-drawing-sheet",
+          "--layers",
+          "F.Cu,Edge.Cuts,F.SilkS",
+          "-o",
+          "/validation/.work/recipient-example/2ca30c46a63d4370803cc751ea477427/board/.work/views/pcb.svg",
+          "/validation/.work/recipient-example/2ca30c46a63d4370803cc751ea477427/board/board.kicad_pcb"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "stdout": "Plotted to '/validation/.work/recipient-example/2ca30c46a63d4370803cc751ea477427/board/.work/views/pcb.svg'.\nDone.\n"
+      }
+    ],
+    "views": [
+      "board.svg",
+      "pcb.svg"
+    ],
+    "work_directory": "/validation/.work/recipient-example/2ca30c46a63d4370803cc751ea477427/board"
+  },
+  "ruleset_version": "0.7.1",
+  "schema_version": 1,
+  "unit_tests": {
+    "errors": 0,
+    "failures": 0,
+    "run": 128,
+    "skipped": [
+      {
+        "reason": "Windows sharing violation",
+        "test": "test_transient_windows_replace_lock_retries_staged_bytes (test_configuration.AdoptionTests.test_transient_windows_replace_lock_retries_staged_bytes)"
+      }
+    ]
+  }
+}

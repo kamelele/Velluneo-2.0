@@ -1,6 +1,18 @@
 # E27 workflow index
 
-## Toolkit and tools
+## Current redesign preparation — 17 November 2026
+
+The owner requested completion of the redesigned supply calculations and nativeKiCad model following the staged workflow. Current design direction is the r11 isolatedCCbase/simpleuser-replaceableLEDpanel reset, not the earlierD5circuit. [Specification decision proposal](specification-reset/finalization/decision-packet.md), [support-component study](specification-reset/finalization/support-study.md) and [driver investigations](specification-reset/driver-study/README.md) are the current preparation inputs. No productCAD stage is approved or active; historicalCAD below remains preserved.
+
+The exact reviewed exported preview0.7.1-preview.3/ruleset0.7.1 is now installed with [project launcher](../../../pcb-toolkit.py) and [immutable lock](../../../.pcb-toolkit/lock.json). Manifest05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822; archive15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4. Trust is owner-supplied source plus independent deterministic preview review, not an invented signed officialrelease. Exporteddependency licensing/notices are preserved; privatebuildcompanions/history are excluded. Reference sourcecheckout remains outside device sources; .pcb-toolkit is the installer-owned immutabledependency, never a board-source directory.
+
+GenuineUbuntu26.10 rootfs/exactKiCad10.0.6+matchingpcbnew now executes; [doctor](specification-reset/finalization/toolkit-doctor.json) passed. Disposable qualification ran128unit tests,127passed/oneWindows-specificskip,and101nativeCADscenariospassed. [Validation report](specification-reset/finalization/toolkit-validation.json) covers tool/examples only; no userERC/DRC,fullcontroller simulation or physicalmeasurement is claimed. Historical10.0.8CAD is not migrated by this setup.
+
+Fresh installed [specification preflight](specification-reset/finalization/requirements-preflight.json) returns incompleteness:eightfindings,not a pass. Proposed supply/optical/process/service/environment criteria await genuine owner decision and evidence synchronization. Independent physical-pin connectivity with a real intentdecision is also required before schematicgeneration. No currentPCB or schematic has been manufactured or measured. The latest request includes eventual measurements; actualhardware/instruments/personnel/test-readiness remain prerequisites to those tests.
+
+The older toolkit/task entries below are historical provenance and must not override the above current preparation state or reactivate earlier approvals for this redesign.
+
+## Historical toolkit and tools
 
 - Workflow reference [pcb-agent-toolkit 0.7.1 at commit 86614c3](https://github.com/wiktor426/pcb-agent-toolkit/tree/86614c3b9b43713031e0ea481edbe26b71cd1b8f). Use the toolkit checkout outside the Velluneo source tree. Start with the existing-project guide and the project instructions in that revision.
 - The toolkit's tree verification passed against the files archived from the exact Git commit. Manifest SHA-256 is `05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822`. It is a candidate. Installed launcher and archive lock are pending.
@@ -12,7 +24,7 @@
 - On 2026-11-11 the project owner selected one series string of eight LEDs. The Rev K and Rev H pair and its JLCPCB files are the historical 2×8 prototype reference. The existing valley-fill study remains historical evidence for that design family.
 - The owner accepted the 8S specification and process proposal for design planning on 2026-11-12. Codex owns the interface preparation task. CAD and library write ownership will be assigned after the interface and independent pin intent review.
 
-## Active task
+## Historical 8S task (superseded by owner reset direction)
 
 - [E27-8S-SPEC task contract](8s/task-contract.md) and [current specification packet](8s/stage-packet.md). The candidate uses one isolated current-regulated output and targets one power PCB.
 - [Owner decision](8s/process-decision.md) and [passing specification check](8s/requirements-approved-check.json). Board-specific material and assembly evidence remains due at the later gates.

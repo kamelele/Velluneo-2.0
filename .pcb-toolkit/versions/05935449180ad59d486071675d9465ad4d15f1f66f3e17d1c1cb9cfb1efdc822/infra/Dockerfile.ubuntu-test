@@ -1,0 +1,10 @@
+# Build without sending project sources as Docker context: docker build -f ... infra
+FROM ubuntu:26.10@sha256:262df65c0ec6bf8d9dcc87454f4330a05fae4b97825f45854af3b136666584c2
+ARG KICAD_PACKAGE_VERSION=10.0.6+dfsg-1
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+       kicad=${KICAD_PACKAGE_VERSION} python3 fonts-dejavu-core \
+    && rm -rf /var/lib/apt/lists/*
+ENV KICAD_CLI=/usr/bin/kicad-cli
+WORKDIR /workspace
+CMD ["python3", "scripts/validate_candidate.py"]

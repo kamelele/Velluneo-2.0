@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "product": "fictional-passive-adapter",
+  "revision": "tutorial-1",
+  "subsystems": [
+    {
+      "id": "ADAPTER",
+      "kind": "pcb",
+      "owner": "tutorial-author"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-SCOPE",
+      "revision": "1",
+      "owner": "tutorial-author",
+      "gate": "specification",
+      "basis": "Original fictional specification.md; no general safety/process recommendation",
+      "text": "Passive lab continuity demonstration only, <=5 V and <=10 mA.",
+      "acceptance": "Review scope and unqualified process status.",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "ADAPTER",
+          "object": "specification.md"
+        }
+      ],
+      "evidence_ids": [
+        "EV-TUTORIAL"
+      ]
+    },
+    {
+      "id": "REQ-PINS",
+      "revision": "1",
+      "owner": "tutorial-author",
+      "gate": "schematic",
+      "basis": "Original fictional specification.md; no general safety/process recommendation",
+      "text": "J1.1 connects only J2.1; J1.2 connects only J2.2.",
+      "acceptance": "Compare independent physical-pin intent with actual CAD.",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "ADAPTER",
+          "object": "J1/J2 physical pins"
+        }
+      ],
+      "evidence_ids": [
+        "EV-TUTORIAL"
+      ]
+    },
+    {
+      "id": "REQ-GEOMETRY",
+      "revision": "1",
+      "owner": "tutorial-author",
+      "gate": "routing",
+      "basis": "Original fictional specification.md; no general safety/process recommendation",
+      "text": "30 x 20 mm board, 15 mm long 0.5 mm tracks and 2.54 mm pad pitch.",
+      "acceptance": "Inspect board geometry and fresh CAD reports.",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "ADAPTER",
+          "object": "board.kicad_pcb"
+        }
+      ],
+      "evidence_ids": [
+        "EV-TUTORIAL"
+      ]
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [],
+  "evidence": [
+    {
+      "id": "EV-TUTORIAL",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "synthetic-tutorial-NOT-independent-review",
+      "artifact": "review-basis.md",
+      "sha256": "76e2812a3050686b5aa5b7387eff8a8b774d25af6cec98461ed1193e9d08ca7d",
+      "inputs": [],
+      "intent_digest": "58fd7c633755b4919073e2744c46cf3fb1e710bb3c39317fba23b8043579bfc8"
+    }
+  ]
+}

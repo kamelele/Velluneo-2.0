@@ -1,0 +1,25 @@
+name: Validate distributable
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  extracted-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Rebuild and extract the declared package
+        run: |
+          python3 scripts/package_toolkit.py build-candidate --output .work/ci/toolkit.zip
+          python3 scripts/package_toolkit.py verify .work/ci/toolkit.zip
+          python3 scripts/package_toolkit.py extract .work/ci/toolkit.zip .work/ci/extracted
+      - name: Build pinned KiCad test environment
+        run: docker build -f infra/Dockerfile.ubuntu-test -t pcb-toolkit-ci infra
+      - name: Validate extracted package without runtime networking
+        run: docker run --rm --network none --mount "type=bind,source=$PWD/.work/ci/extracted,target=/workspace" pcb-toolkit-ci

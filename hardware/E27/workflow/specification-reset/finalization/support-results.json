@@ -1,0 +1,315 @@
+{
+  "study": "SUPPORT-CANDIDATE-01",
+  "date": "2026-11-17",
+  "inputs_SHA256": {
+    "startup-candidate/results.json": "267db0de602050e9f014e332e578d9cda85d450a7c67bdc918f15cbf8788a8ed",
+    "clamp-candidate/results.json": "29827b4ef38f66a4f11dde07d7410c1170753ebc86767e94fa52af6624690bcc",
+    "component-candidate/results.json": "d87c14c11e44aced0eabebf0346bd7d4d648f0d8fbc59fa76ebcfd18f4d60186",
+    "native/CRCW.pdf": "773514dbb68319dd7a3b8d381a81798f8bb0a82cf65ecf440ec201dad810e7c5",
+    "native/UCC2871x.pdf": "762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248"
+  },
+  "resistor_temperature_screen_factor": [
+    0.979,
+    1.021
+  ],
+  "not_ageing_or_measured_limits": true,
+  "normal_cases": 256,
+  "normal_sense_temperature_bounds": {
+    "primary_peak_A": [
+      0.3049876641168376,
+      0.3491033216534568
+    ],
+    "primary_rms_A": [
+      0.05256602361332315,
+      0.08991804031407771
+    ],
+    "Rcs_loss_W": [
+      0.006686276616236943,
+      0.018759648827917925
+    ],
+    "CC_A": [
+      0.22340966290184605,
+      0.280877326816738
+    ],
+    "normal_flux_T": [
+      0.09245941817436759,
+      0.12935196760212297
+    ],
+    "f_Hz": [
+      32835.57908474316,
+      82897.15003184546
+    ],
+    "demag_duty": [
+      0.39259259259259255,
+      0.464769647696477
+    ],
+    "idle_s": [
+      3.821465729093008e-06,
+      1.602562636323116e-05
+    ]
+  },
+  "gate": {
+    "RG_ohm": 4.7,
+    "RGS_ohm": 47000,
+    "gate_supply_V_hypothesis": 16,
+    "RGS_current_max_A_proxy": 0.0003477278160519853,
+    "NTC_current_A_source_max": 0.000125,
+    "IGSS_abs_A_source_max": 1e-05,
+    "IGSS_test_conditions": "VDS0/VGS+-20V; does not guarantee off-state gate current with high drain bias or Miller injection",
+    "allocated_ancillary_total_A": 0.00048272781605198533,
+    "remaining_of0p55mA_A": 6.72721839480147e-05,
+    "gate_leakage_times_RGSmax_V": 0.47986999999999996,
+    "gate_path_entire_cycle_energy_to_RG_W_proxy": 0.027136,
+    "RG_external_only_peak_sink_A_proxy": 3.477278160519853,
+    "not_actual_gate_transient_or_sink_rating": true
+  },
+  "line_compensation_conditional_bounds": {
+    "equivalent_compensation_delay_s": [
+      9.149055061995119e-08,
+      1.511507683960245e-07
+    ],
+    "residual_peak_current_error_A": [
+      -0.007221252339425554,
+      0.010095702536932158
+    ]
+  },
+  "correlated_normal_linecomp_witness": {
+    "cases": 4096,
+    "fixed_dmag_ratio_VCCR_div_VCST_is_a_constructed_hypothesis_not_actual_IC_law": true,
+    "bounds": {
+      "corrected_peak_A": [
+        0.29864420913006956,
+        0.35852176738964414
+      ],
+      "normal_flux_T": [
+        0.09148742901155386,
+        0.1310981042246054
+      ],
+      "primary_RMS_A": [
+        0.05147270003385943,
+        0.0915452660893177
+      ],
+      "Rcs_loss_W": [
+        0.006411032643101909,
+        0.019444770447825416
+      ],
+      "MOS_conduction16ohm25C_W_proxy": [
+        0.04239102158041076,
+        0.13408857189382373
+      ],
+      "corrected_CC_A_proxy": [
+        0.21876295319202657,
+        0.2891944014593847
+      ],
+      "f_Hz": [
+        32398.231744753728,
+        83777.873562167
+      ],
+      "idle_s": [
+        3.794518385586964e-06,
+        1.624195807901249e-05
+      ],
+      "secondary_peak_A_proxy": [
+        1.1945768365202782,
+        1.4340870695585766
+      ],
+      "secondary_RMS_A_proxy": [
+        0.4527295488149282,
+        0.5387898966025363
+      ],
+      "all_current_aux_peak_A_proxy": [
+        1.6289684134367433,
+        1.9555732766707863
+      ]
+    },
+    "max_peak_case": {
+      "bus_V": 357.7960312803931,
+      "Vo_V": 18,
+      "Lp_H": 0.0020736,
+      "Rcs_ohm": 2.32023,
+      "RS1_ohm": 82292.59999999999,
+      "RLC_ohm": 1370.6,
+      "KLC": 28.6,
+      "delay_s_assumed": 1.5e-07,
+      "VCST_V": 0.81,
+      "VCCR_V": 0.318,
+      "transformer_efficiency_assumed": 0.85,
+      "Vd_V_assumed": 0.5,
+      "residual_peak_A": 0.009418445736187308,
+      "corrected_peak_A": 0.35852176738964414,
+      "normal_flux_T": 0.10868870421917633,
+      "primary_RMS_A": 0.05898261895257888,
+      "Rcs_loss_W": 0.008071962623679728,
+      "MOS_conduction16ohm25C_W_proxy": 0.05566318941608187,
+      "corrected_CC_A_proxy": 0.23928008327264394,
+      "f_Hz": 39078.088127738214,
+      "idle_s": 1.346562094113579e-05,
+      "secondary_peak_A_proxy": 1.4340870695585766,
+      "secondary_RMS_A_proxy": 0.5187832472117873,
+      "all_current_aux_peak_A_proxy": 1.9555732766707863
+    },
+    "max_flux_case": {
+      "bus_V": 357.7960312803931,
+      "Vo_V": 18,
+      "Lp_H": 0.0025344000000000005,
+      "Rcs_ohm": 2.32023,
+      "RS1_ohm": 82292.59999999999,
+      "RLC_ohm": 1370.6,
+      "KLC": 28.6,
+      "delay_s_assumed": 1.5e-07,
+      "VCST_V": 0.81,
+      "VCCR_V": 0.318,
+      "transformer_efficiency_assumed": 0.85,
+      "Vd_V_assumed": 0.5,
+      "residual_peak_A": 0.004712584634540722,
+      "corrected_peak_A": 0.35381590628799753,
+      "normal_flux_T": 0.1310981042246054,
+      "primary_RMS_A": 0.0582084288267656,
+      "Rcs_loss_W": 0.007861452443507966,
+      "MOS_conduction16ohm25C_W_proxy": 0.05421153898369018,
+      "corrected_CC_A_proxy": 0.23613935671517458,
+      "f_Hz": 32398.231744753728,
+      "idle_s": 1.624195807901249e-05,
+      "secondary_peak_A_proxy": 1.4152636251519901,
+      "secondary_RMS_A_proxy": 0.5119738366674433,
+      "all_current_aux_peak_A_proxy": 1.9299049433890774
+    },
+    "max_Rcs_heat_case": {
+      "bus_V": 240,
+      "Vo_V": 27,
+      "Lp_H": 0.0020736,
+      "Rcs_ohm": 2.32023,
+      "RS1_ohm": 82292.59999999999,
+      "RLC_ohm": 1370.6,
+      "KLC": 28.6,
+      "delay_s_assumed": 1.5e-07,
+      "VCST_V": 0.81,
+      "VCCR_V": 0.343,
+      "transformer_efficiency_assumed": 0.85,
+      "Vd_V_assumed": 1.2,
+      "residual_peak_A": 0.00631764127901556,
+      "corrected_peak_A": 0.3554209629324724,
+      "normal_flux_T": 0.10774867086794952,
+      "primary_RMS_A": 0.0915452660893177,
+      "Rcs_loss_W": 0.019444770447825416,
+      "MOS_conduction16ohm25C_W_proxy": 0.13408857189382373,
+      "corrected_CC_A_proxy": 0.2558592141801539,
+      "f_Hz": 64811.217136485066,
+      "idle_s": 5.824894751220416e-06,
+      "secondary_peak_A_proxy": 1.4216838517298895,
+      "secondary_RMS_A_proxy": 0.5341299783916329,
+      "all_current_aux_peak_A_proxy": 1.9386597978134859
+    }
+  },
+  "correlated_normal_directclamp_proxy": {
+    "cases": 40960,
+    "leakage_fraction_assumed": 0.01,
+    "inherited_plateau_not_guaranteed_hot_IV": true,
+    "plus50V_commutation_is_assumed": true,
+    "normal_only_not_fault_or_surge": true,
+    "bounds": {
+      "clamp_initial_current_A_proxy": [
+        0.29864420913006956,
+        0.35852176738964414
+      ],
+      "TVS_power_W_proxy": [
+        0.06364887065812644,
+        0.2385550505049757
+      ],
+      "TVS_pulse_energy_J_proxy": [
+        1.2622465489685492e-06,
+        4.408319896719066e-06
+      ],
+      "TVS_peak_power_W_proxy": [
+        52.29749878370491,
+        102.88570863134098
+      ],
+      "reset_s_proxy": [
+        2.9150239176000062e-08,
+        1.4229804192183327e-07
+      ],
+      "drain_endpoint_V_proxy": [
+        465.8164,
+        696.4680312803932
+      ]
+    }
+  },
+  "aux": {
+    "RAUX_ohm": 4.7,
+    "base_plus_gate_budget_A": 0.005196,
+    "reflected_primary_normal_peak_A_proxy": 1.9041999362915825,
+    "R_loss_bound_if_peak_and_average_bounds_valid_W": 0.04747940728133144,
+    "additional_voltage_reserve_V_assumed": 0.3,
+    "minimum_aux_conduction_fraction_required_by_average_current": 0.083113484,
+    "not_guaranteed_actual_conduction_window_or_bias_waveform": true,
+    "correlated_reflected_peak_A_proxy": 1.9555732766707863,
+    "correlated_peak_and_mean_heat_proxy_W": 0.04876035247242149
+  },
+  "output_bleed": {
+    "parallel_resistors_ohm": [
+      20000,
+      20000
+    ],
+    "R_normal_max_ohm": 10209.999999999998,
+    "R_after_one_open_max_ohm": 20419.999999999996,
+    "Cout_max_sensitivity_F": 2.0592e-05,
+    "dissipation_examples": [
+      {
+        "voltage_V_example": 27,
+        "each_20k_bleeder_P_W_atRmin": 0.03723186925434117,
+        "total_both_P_W_atRmin": 0.07446373850868233
+      },
+      {
+        "voltage_V_example": 37.861,
+        "each_20k_bleeder_P_W_atRmin": 0.0732101798263534,
+        "total_both_P_W_atRmin": 0.1464203596527068
+      },
+      {
+        "voltage_V_example": 40,
+        "each_20k_bleeder_P_W_atRmin": 0.08171603677221655,
+        "total_both_P_W_atRmin": 0.1634320735444331
+      },
+      {
+        "voltage_V_example": 63,
+        "each_20k_bleeder_P_W_atRmin": 0.20270684371807968,
+        "total_both_P_W_atRmin": 0.40541368743615935
+      }
+    ],
+    "discharge_after_all_energy_transfer_stops_s": {
+      "40": {
+        "both_to5V": 0.4371907729102286,
+        "one_open_to5V": 0.8743815458204572
+      },
+      "63": {
+        "both_to5V": 0.5326953637366467,
+        "one_open_to5V": 1.0653907274732934
+      }
+    },
+    "example5V_is_not_safe_access_acceptance": true,
+    "primary_bulk_can_continue_transferring_energy_after_unscrew": true,
+    "one_short_becomes_short_output_fault": true
+  },
+  "source_resistor_derated_power_at125C_W": {
+    "gate0805_conservative0p125W_at70C": 0.04411764705882353,
+    "sense1206_0p25W_at70C": 0.08823529411764706,
+    "2512_1W_at70C": 0.35294117647058826
+  },
+  "startup_cases": 128,
+  "aux_takeover_output_target_V_proxy": 16.272727272727273,
+  "main_min_first3_time_s_proxy": 0.0006892386877914328,
+  "stress_min_first3_time_s_proxy": 0.0004293480798836081,
+  "worst_VDD_takeover_if0p3ms_V": 10.50848882548275,
+  "worst_startup_case": {
+    "Cout_F": 2.0592e-05,
+    "ESR_ohm_assumed": 0,
+    "nLED": 7,
+    "LED_shift_V_assumed": -0.3,
+    "Qg_C_assumed": 1.6e-08,
+    "base_draw_A_assumed": 0.0035,
+    "ramp_time_s": 0.0015081689717598016,
+    "ramp_charge_C": 5.942570720407372e-06,
+    "max_first3_allrun_time_s_proxy": 0.0004293480798836081,
+    "VDD_takeover_if0p3ms_V": 10.50848882548275
+  },
+  "no_controller_model_physical_measurement_or_stage_approval": true
+}

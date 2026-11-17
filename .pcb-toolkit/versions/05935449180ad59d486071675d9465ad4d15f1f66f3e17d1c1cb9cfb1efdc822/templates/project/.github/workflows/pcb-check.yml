@@ -1,0 +1,47 @@
+name: Pinned PCB work check
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Project-relative board directory (dot for root-level CAD)
+        required: true
+        default: boards/main
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    env:
+      PCB_PROJECT: ${{ inputs.project }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify committed dependency and resolve tool context
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, re, subprocess, sys
+          result = subprocess.run([sys.executable, 'pcb-toolkit.py', 'status'], check=True, capture_output=True, text=True)
+          pin = json.loads(result.stdout)['pin']['manifest_sha256']
+          assert re.fullmatch('[0-9a-f]{64}', pin)
+          with pathlib.Path(os.environ['GITHUB_ENV']).open('a') as stream:
+              stream.write('TOOLKIT_DIR=.pcb-toolkit/versions/' + pin + '\n')
+          PY
+      - name: Build exact Ubuntu tool environment
+        run: docker build -f "$TOOLKIT_DIR/infra/Dockerfile.ubuntu-test" -t pcb-toolkit-ci "$TOOLKIT_DIR/infra"
+      - name: Check actual toolchain
+        run: docker run --rm --network none -v "$PWD:/workspace" -w /workspace pcb-toolkit-ci python3 pcb-toolkit.py doctor
+      - name: Run work check and print its report
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, subprocess, sys
+          project = os.environ['PCB_PROJECT']
+          root = pathlib.Path.cwd().resolve()
+          target = (root / project).resolve()
+          assert target.is_relative_to(root)
+          result = subprocess.run(['docker', 'run', '--rm', '--network', 'none', '-v', str(root) + ':/workspace', '-w', '/workspace', 'pcb-toolkit-ci', 'python3', 'pcb-toolkit.py', 'run', 'check', project, '--mode', 'work'])
+          report = target / '.work/check.json'
+          if report.is_file():
+              print(report.read_text(encoding='utf-8'))
+          sys.exit(result.returncode)
+          PY

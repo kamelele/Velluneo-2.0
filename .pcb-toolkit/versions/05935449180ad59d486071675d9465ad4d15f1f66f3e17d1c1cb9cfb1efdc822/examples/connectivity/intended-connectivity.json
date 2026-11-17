@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "revision": "1",
+  "basis": "Independent fictional pin specification",
+  "basis_sources": [
+    {
+      "path": "basis.md",
+      "sha256": "7972979fb4f817f145d241100c9efd5b6b454ac3d241a0e2b5cb79a49658a3d1"
+    }
+  ],
+  "components": [
+    {
+      "ref": "U1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "name": "B",
+          "pins": [
+            "3",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "id": "N1",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "1"
+        },
+        {
+          "ref": "J1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "2"
+        },
+        {
+          "ref": "J1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "3"
+        },
+        {
+          "ref": "J1",
+          "pin": "3"
+        }
+      ]
+    }
+  ],
+  "no_connects": [
+    {
+      "ref": "U1",
+      "pin": "4",
+      "reason": "Explicitly unused in fictional product"
+    },
+    {
+      "ref": "J1",
+      "pin": "4",
+      "reason": "Explicitly unused in fictional product"
+    }
+  ],
+  "barriers": [
+    {
+      "id": "SEP",
+      "side_a": [
+        "N1"
+      ],
+      "side_b": [
+        "N2"
+      ],
+      "basis": "Separate electrical nets, not insulation qualification"
+    }
+  ],
+  "approval": null
+}
