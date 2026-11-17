@@ -1,0 +1,2868 @@
+{
+  "scope": "Mathematical optical budget at accepted230Vac50Hz,25+/-1C complete-lamp baseup stabilized acceptance. Calculated85C LED reference and tau.87 remain unmeasured hypotheses, not the ambient condition or guaranteed actualjunction temperature.",
+  "inputs_SHA256": {
+    "curve": "3a7909f6873b1b8bda461e43fb587eaf12c797da32d71b9f6e20815f4ffb8553",
+    "prior_results": "9abe4bbc0c74cbdcbd254393943246aa7fea9c36488d6ec26eea03e29cbf4a22",
+    "requirements_and_plan": "a0c2867d511313741495cf9d2696590e756c0d6a335d7180df5409cc6532b34e",
+    "UCC_native": "762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248"
+  },
+  "source_current_law": "TI SLUSB86C Eq3/Eq14 includes etaXFMR, which accounts winding/core/leakage/bias transfer. Do not remove it or count the same explicitloss twice. It is not overallconverterefficiency.",
+  "panels": {
+    "2700": {
+      "count": 8,
+      "hot55_reference_lm": 27.2
+    },
+    "4000": {
+      "count": 7,
+      "hot55_reference_lm": 30.0
+    },
+    "6500": {
+      "count": 7,
+      "hot55_reference_lm": 29.9
+    }
+  },
+  "tau_assumed": 0.87,
+  "per_panel_typical_curve_currents": {
+    "2700": {
+      "current_for750lm_A": 0.2334954504105456,
+      "current_for800lm_A": 0.25065945561861275,
+      "current_for850lm_A": 0.267915457563466,
+      "nominal250mA_lm": 798.0799014333043
+    },
+    "4000": {
+      "current_for750lm_A": 0.2428095304026191,
+      "current_for800lm_A": 0.26062523680342814,
+      "current_for850lm_A": 0.2786673074078526,
+      "nominal250mA_lm": 770.2057872288323
+    },
+    "6500": {
+      "current_for750lm_A": 0.243702629652495,
+      "current_for800lm_A": 0.26158287378598766,
+      "current_for850lm_A": 0.2797034223531396,
+      "nominal250mA_lm": 767.6384346047361
+    }
+  },
+  "common_current_interval_for_unperturbed750to850_A": [
+    0.243702629652495,
+    0.267915457563466
+  ],
+  "minimax_nominal_family_current_A": 0.2560067013300516,
+  "nominal_family_lm_at_minimax_current": {
+    "2700": 815.5539939095808,
+    "4000": 787.06957132818,
+    "6500": 784.4460060904194
+  },
+  "nominal_family_ratio": 1.0396559961777354,
+  "recommended_proposed_budget_not_achieved": {
+    "proposed_current_fraction_budget": 0.01,
+    "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+    "illustrative_expanded_measurement_uncertainty_lm": 5,
+    "flux_bounds_lm": {
+      "2700": [
+        800.030349121313,
+        831.2158006128078
+      ],
+      "4000": [
+        772.0881126630319,
+        802.1843664002282
+      ],
+      "6500": [
+        769.5144856208218,
+        799.5104185122274
+      ]
+    },
+    "min_lm": 769.5144856208218,
+    "max_lm": 831.2158006128078,
+    "worst_family_ratio_including_independent_load_current_errors": 1.0801821358076285,
+    "flux_with_guardband": true,
+    "matching_ratio_within1p10": true,
+    "worst_family_ratio_with_independent_measurement_uncertainty": 1.0937867317631806,
+    "matching_with_uncertainty_within1p10": true,
+    "both_conditional_budgets_met": true
+  },
+  "alternative_budget_with10lm_uncertainty_not_achieved": {
+    "proposed_current_fraction_budget": 0.005,
+    "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+    "illustrative_expanded_measurement_uncertainty_lm": 10,
+    "flux_bounds_lm": {
+      "2700": [
+        803.7155875928935,
+        827.4641816619546
+      ],
+      "4000": [
+        775.644638761524,
+        798.5637782583202
+      ],
+      "6500": [
+        773.0591566323188,
+        795.901898997459
+      ]
+    },
+    "min_lm": 773.0591566323188,
+    "max_lm": 827.4641816619546,
+    "worst_family_ratio_including_independent_load_current_errors": 1.0703762765926488,
+    "flux_with_guardband": true,
+    "matching_ratio_within1p10": true,
+    "worst_family_ratio_with_independent_measurement_uncertainty": 1.09750885548378,
+    "matching_with_uncertainty_within1p10": true,
+    "both_conditional_budgets_met": true
+  },
+  "budget_cases": [
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          807.774757227201,
+          823.3678243269943
+        ],
+        "4000": [
+          779.5620359269863,
+          794.6104922273382
+        ],
+        "6500": [
+          776.9634958072296,
+          791.9617905865805
+        ]
+      },
+      "min_lm": 776.9634958072296,
+      "max_lm": 823.3678243269943,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0597252364753027,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0597252364753027,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          807.774757227201,
+          823.3678243269943
+        ],
+        "4000": [
+          779.5620359269863,
+          794.6104922273382
+        ],
+        "6500": [
+          776.9634958072296,
+          791.9617905865805
+        ]
+      },
+      "min_lm": 776.9634958072296,
+      "max_lm": 823.3678243269943,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0597252364753027,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0730660566543806,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          807.774757227201,
+          823.3678243269943
+        ],
+        "4000": [
+          779.5620359269863,
+          794.6104922273382
+        ],
+        "6500": [
+          776.9634958072296,
+          791.9617905865805
+        ]
+      },
+      "min_lm": 776.9634958072296,
+      "max_lm": 823.3678243269943,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0597252364753027,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0865808201860692,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          807.774757227201,
+          823.3678243269943
+        ],
+        "4000": [
+          779.5620359269863,
+          794.6104922273382
+        ],
+        "6500": [
+          776.9634958072296,
+          791.9617905865805
+        ]
+      },
+      "min_lm": 776.9634958072296,
+      "max_lm": 823.3678243269943,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0597252364753027,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.114145964763628,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          803.7155875928935,
+          827.4641816619546
+        ],
+        "4000": [
+          775.644638761524,
+          798.5637782583202
+        ],
+        "6500": [
+          773.0591566323188,
+          795.901898997459
+        ]
+      },
+      "min_lm": 773.0591566323188,
+      "max_lm": 827.4641816619546,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0703762765926488,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0703762765926488,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          803.7155875928935,
+          827.4641816619546
+        ],
+        "4000": [
+          775.644638761524,
+          798.5637782583202
+        ],
+        "6500": [
+          773.0591566323188,
+          795.901898997459
+        ]
+      },
+      "min_lm": 773.0591566323188,
+      "max_lm": 827.4641816619546,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0703762765926488,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.083854250643961,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          803.7155875928935,
+          827.4641816619546
+        ],
+        "4000": [
+          775.644638761524,
+          798.5637782583202
+        ],
+        "6500": [
+          773.0591566323188,
+          795.901898997459
+        ]
+      },
+      "min_lm": 773.0591566323188,
+      "max_lm": 827.4641816619546,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0703762765926488,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.09750885548378,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          803.7155875928935,
+          827.4641816619546
+        ],
+        "4000": [
+          775.644638761524,
+          798.5637782583202
+        ],
+        "6500": [
+          773.0591566323188,
+          795.901898997459
+        ]
+      },
+      "min_lm": 773.0591566323188,
+      "max_lm": 827.4641816619546,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0703762765926488,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.125362030589755,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          795.5972483242783,
+          835.6568963318749
+        ],
+        "4000": [
+          767.8098444305996,
+          806.4703503202837
+        ],
+        "6500": [
+          765.2504782824974,
+          803.7821158192161
+        ]
+      },
+      "min_lm": 765.2504782824974,
+      "max_lm": 835.6568963318749,
+      "worst_family_ratio_including_independent_load_current_errors": 1.09200440907583,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.09200440907583,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          795.5972483242783,
+          835.6568963318749
+        ],
+        "4000": [
+          767.8098444305996,
+          806.4703503202837
+        ],
+        "6500": [
+          765.2504782824974,
+          803.7821158192161
+        ]
+      },
+      "min_lm": 765.2504782824974,
+      "max_lm": 835.6568963318749,
+      "worst_family_ratio_including_independent_load_current_errors": 1.09200440907583,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.105763061446572,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          795.5972483242783,
+          835.6568963318749
+        ],
+        "4000": [
+          767.8098444305996,
+          806.4703503202837
+        ],
+        "6500": [
+          765.2504782824974,
+          803.7821158192161
+        ]
+      },
+      "min_lm": 765.2504782824974,
+      "max_lm": 835.6568963318749,
+      "worst_family_ratio_including_independent_load_current_errors": 1.09200440907583,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.119703887185837,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          795.5972483242783,
+          835.6568963318749
+        ],
+        "4000": [
+          767.8098444305996,
+          806.4703503202837
+        ],
+        "6500": [
+          765.2504782824974,
+          803.7821158192161
+        ]
+      },
+      "min_lm": 765.2504782824974,
+      "max_lm": 835.6568963318749,
+      "worst_family_ratio_including_independent_load_current_errors": 1.09200440907583,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1481467255194788,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          791.5380786899708,
+          839.753253666835
+        ],
+        "4000": [
+          763.8924472651373,
+          810.4236363512654
+        ],
+        "6500": [
+          761.3461391075867,
+          807.7222242300945
+        ]
+      },
+      "min_lm": 761.3461391075867,
+      "max_lm": 839.753253666835,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1029848455672913,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1029848455672913,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          791.5380786899708,
+          839.753253666835
+        ],
+        "4000": [
+          763.8924472651373,
+          810.4236363512654
+        ],
+        "6500": [
+          761.3461391075867,
+          807.7222242300945
+        ]
+      },
+      "min_lm": 761.3461391075867,
+      "max_lm": 839.753253666835,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1029848455672913,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1168871102635096,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          791.5380786899708,
+          839.753253666835
+        ],
+        "4000": [
+          763.8924472651373,
+          810.4236363512654
+        ],
+        "6500": [
+          761.3461391075867,
+          807.7222242300945
+        ]
+      },
+      "min_lm": 761.3461391075867,
+      "max_lm": 839.753253666835,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1029848455672913,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1309744063849607,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          791.5380786899708,
+          839.753253666835
+        ],
+        "4000": [
+          763.8924472651373,
+          810.4236363512654
+        ],
+        "6500": [
+          761.3461391075867,
+          807.7222242300945
+        ]
+      },
+      "min_lm": 761.3461391075867,
+      "max_lm": 839.753253666835,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1029848455672913,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1597190682098697,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          787.4789090556633,
+          843.8496110017953
+        ],
+        "4000": [
+          759.9750500996751,
+          814.3769223822474
+        ],
+        "6500": [
+          757.4417999326761,
+          811.6623326409731
+        ]
+      },
+      "min_lm": 757.4417999326761,
+      "max_lm": 843.8496110017953,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1140784824349534,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1140784824349534,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          787.4789090556633,
+          843.8496110017953
+        ],
+        "4000": [
+          759.9750500996751,
+          814.3769223822474
+        ],
+        "6500": [
+          757.4417999326761,
+          811.6623326409731
+        ]
+      },
+      "min_lm": 757.4417999326761,
+      "max_lm": 843.8496110017953,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1140784824349534,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.128126602054465,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          787.4789090556633,
+          843.8496110017953
+        ],
+        "4000": [
+          759.9750500996751,
+          814.3769223822474
+        ],
+        "6500": [
+          757.4417999326761,
+          811.6623326409731
+        ]
+      },
+      "min_lm": 757.4417999326761,
+      "max_lm": 843.8496110017953,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1140784824349534,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1423626710182702,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.005,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          787.4789090556633,
+          843.8496110017953
+        ],
+        "4000": [
+          759.9750500996751,
+          814.3769223822474
+        ],
+        "6500": [
+          757.4417999326761,
+          811.6623326409731
+        ]
+      },
+      "min_lm": 757.4417999326761,
+      "max_lm": 843.8496110017953,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1140784824349534,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1714139489796476,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          804.0709064401075,
+          827.1008709068037
+        ],
+        "4000": [
+          775.9875475754715,
+          798.2131566655735
+        ],
+        "6500": [
+          773.4009224168865,
+          795.5524461433549
+        ]
+      },
+      "min_lm": 773.4009224168865,
+      "max_lm": 827.1008709068037,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0694335200973182,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0694335200973182,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          804.0709064401075,
+          827.1008709068037
+        ],
+        "4000": [
+          775.9875475754715,
+          798.2131566655735
+        ],
+        "6500": [
+          773.4009224168865,
+          795.5524461433549
+        ]
+      },
+      "min_lm": 773.4009224168865,
+      "max_lm": 827.1008709068037,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0694335200973182,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0828993649429244,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          804.0709064401075,
+          827.1008709068037
+        ],
+        "4000": [
+          775.9875475754715,
+          798.2131566655735
+        ],
+        "6500": [
+          773.4009224168865,
+          795.5524461433549
+        ]
+      },
+      "min_lm": 773.4009224168865,
+      "max_lm": 827.1008709068037,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0694335200973182,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0965416026176482,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          804.0709064401075,
+          827.1008709068037
+        ],
+        "4000": [
+          775.9875475754715,
+          798.2131566655735
+        ],
+        "6500": [
+          773.4009224168865,
+          795.5524461433549
+        ]
+      },
+      "min_lm": 773.4009224168865,
+      "max_lm": 827.1008709068037,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0694335200973182,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1243693041804763,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          800.030349121313,
+          831.2158006128078
+        ],
+        "4000": [
+          772.0881126630319,
+          802.1843664002282
+        ],
+        "6500": [
+          769.5144856208218,
+          799.5104185122274
+        ]
+      },
+      "min_lm": 769.5144856208218,
+      "max_lm": 831.2158006128078,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0801821358076285,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0801821358076285,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          800.030349121313,
+          831.2158006128078
+        ],
+        "4000": [
+          772.0881126630319,
+          802.1843664002282
+        ],
+        "6500": [
+          769.5144856208218,
+          799.5104185122274
+        ]
+      },
+      "min_lm": 769.5144856208218,
+      "max_lm": 831.2158006128078,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0801821358076285,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0937867317631806,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          800.030349121313,
+          831.2158006128078
+        ],
+        "4000": [
+          772.0881126630319,
+          802.1843664002282
+        ],
+        "6500": [
+          769.5144856208218,
+          799.5104185122274
+        ]
+      },
+      "min_lm": 769.5144856208218,
+      "max_lm": 831.2158006128078,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0801821358076285,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1075704499897772,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          800.030349121313,
+          831.2158006128078
+        ],
+        "4000": [
+          772.0881126630319,
+          802.1843664002282
+        ],
+        "6500": [
+          769.5144856208218,
+          799.5104185122274
+        ]
+      },
+      "min_lm": 769.5144856208218,
+      "max_lm": 831.2158006128078,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0801821358076285,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1356895923202164,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          791.9492344837239,
+          839.4456600248159
+        ],
+        "4000": [
+          764.2892428381529,
+          810.1267858695373
+        ],
+        "6500": [
+          761.7416120286922,
+          807.4263632499723
+        ]
+      },
+      "min_lm": 761.7416120286922,
+      "max_lm": 839.4456600248159,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1020084064846871,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1020084064846871,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          791.9492344837239,
+          839.4456600248159
+        ],
+        "4000": [
+          764.2892428381529,
+          810.1267858695373
+        ],
+        "6500": [
+          761.7416120286922,
+          807.4263632499723
+        ]
+      },
+      "min_lm": 761.7416120286922,
+      "max_lm": 839.4456600248159,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1020084064846871,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1158969542602586,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          791.9492344837239,
+          839.4456600248159
+        ],
+        "4000": [
+          764.2892428381529,
+          810.1267858695373
+        ],
+        "6500": [
+          761.7416120286922,
+          807.4263632499723
+        ]
+      },
+      "min_lm": 761.7416120286922,
+      "max_lm": 839.4456600248159,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1020084064846871,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1299702536519882,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          791.9492344837239,
+          839.4456600248159
+        ],
+        "4000": [
+          764.2892428381529,
+          810.1267858695373
+        ],
+        "6500": [
+          761.7416120286922,
+          807.4263632499723
+        ]
+      },
+      "min_lm": 761.7416120286922,
+      "max_lm": 839.4456600248159,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1020084064846871,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.158686051971924,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          787.9086771649295,
+          843.5605897308197
+        ],
+        "4000": [
+          760.3898079257133,
+          814.0979956041919
+        ],
+        "6500": [
+          757.8551752326275,
+          811.3843356188446
+        ]
+      },
+      "min_lm": 757.8551752326275,
+      "max_lm": 843.5605897308197,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1130894362130397,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1130894362130397,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          787.9086771649295,
+          843.5605897308197
+        ],
+        "4000": [
+          760.3898079257133,
+          814.0979956041919
+        ],
+        "6500": [
+          757.8551752326275,
+          811.3843356188446
+        ]
+      },
+      "min_lm": 757.8551752326275,
+      "max_lm": 843.5605897308197,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1130894362130397,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1271232737008414,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          787.9086771649295,
+          843.5605897308197
+        ],
+        "4000": [
+          760.3898079257133,
+          814.0979956041919
+        ],
+        "6500": [
+          757.8551752326275,
+          811.3843356188446
+        ]
+      },
+      "min_lm": 757.8551752326275,
+      "max_lm": 843.5605897308197,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1130894362130397,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1413447656697857,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          787.9086771649295,
+          843.5605897308197
+        ],
+        "4000": [
+          760.3898079257133,
+          814.0979956041919
+        ],
+        "6500": [
+          757.8551752326275,
+          811.3843356188446
+        ]
+      },
+      "min_lm": 757.8551752326275,
+      "max_lm": 843.5605897308197,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1130894362130397,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1703659725074915,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          783.868119846135,
+          847.6755194368238
+        ],
+        "4000": [
+          756.4903730132737,
+          818.0692053388466
+        ],
+        "6500": [
+          753.9687384365627,
+          815.342307987717
+        ]
+      },
+      "min_lm": 753.9687384365627,
+      "max_lm": 847.6755194368238,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1242847033612726,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1242847033612726,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          783.868119846135,
+          847.6755194368238
+        ],
+        "4000": [
+          756.4903730132737,
+          818.0692053388466
+        ],
+        "6500": [
+          753.9687384365627,
+          815.342307987717
+        ]
+      },
+      "min_lm": 753.9687384365627,
+      "max_lm": 847.6755194368238,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1242847033612726,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.138466101024115,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          783.868119846135,
+          847.6755194368238
+        ],
+        "4000": [
+          756.4903730132737,
+          818.0692053388466
+        ],
+        "6500": [
+          753.9687384365627,
+          815.342307987717
+        ]
+      },
+      "min_lm": 753.9687384365627,
+      "max_lm": 847.6755194368238,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1242847033612726,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.152838116880037,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.01,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          783.868119846135,
+          847.6755194368238
+        ],
+        "4000": [
+          756.4903730132737,
+          818.0692053388466
+        ],
+        "6500": [
+          753.9687384365627,
+          815.342307987717
+        ]
+      },
+      "min_lm": 753.9687384365627,
+      "max_lm": 847.6755194368238,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1242847033612726,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1821695857034344,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          800.3651914111217,
+          830.8305954678204
+        ],
+        "4000": [
+          772.4112600934538,
+          801.8126151114075
+        ],
+        "6500": [
+          769.8365558931423,
+          799.1399063943695
+        ]
+      },
+      "min_lm": 769.8365558931423,
+      "max_lm": 830.8305954678204,
+      "worst_family_ratio_including_independent_load_current_errors": 1.079229856139937,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.079229856139937,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          800.3651914111217,
+          830.8305954678204
+        ],
+        "4000": [
+          772.4112600934538,
+          801.8126151114075
+        ],
+        "6500": [
+          769.8365558931423,
+          799.1399063943695
+        ]
+      },
+      "min_lm": 769.8365558931423,
+      "max_lm": 830.8305954678204,
+      "worst_family_ratio_including_independent_load_current_errors": 1.079229856139937,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0928224978626635,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          800.3651914111217,
+          830.8305954678204
+        ],
+        "4000": [
+          772.4112600934538,
+          801.8126151114075
+        ],
+        "6500": [
+          769.8365558931423,
+          799.1399063943695
+        ]
+      },
+      "min_lm": 769.8365558931423,
+      "max_lm": 830.8305954678204,
+      "worst_family_ratio_including_independent_load_current_errors": 1.079229856139937,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1065940286058946,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          800.3651914111217,
+          830.8305954678204
+        ],
+        "4000": [
+          772.4112600934538,
+          801.8126151114075
+        ],
+        "6500": [
+          769.8365558931423,
+          799.1399063943695
+        ]
+      },
+      "min_lm": 769.8365558931423,
+      "max_lm": 830.8305954678204,
+      "worst_family_ratio_including_independent_load_current_errors": 1.079229856139937,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.134688071394949,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          796.3432557758899,
+          834.9640810174117
+        ],
+        "4000": [
+          768.5297964748937,
+          805.801732599524
+        ],
+        "6500": [
+          765.9680304866441,
+          803.1157268241924
+        ]
+      },
+      "min_lm": 765.9680304866441,
+      "max_lm": 834.9640810174117,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0900769324366346,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0900769324366346,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          796.3432557758899,
+          834.9640810174117
+        ],
+        "4000": [
+          768.5297964748937,
+          805.801732599524
+        ],
+        "6500": [
+          765.9680304866441,
+          803.1157268241924
+        ]
+      },
+      "min_lm": 765.9680304866441,
+      "max_lm": 834.9640810174117,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0900769324366346,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1038099464970283,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          796.3432557758899,
+          834.9640810174117
+        ],
+        "4000": [
+          768.5297964748937,
+          805.801732599524
+        ],
+        "6500": [
+          765.9680304866441,
+          803.1157268241924
+        ]
+      },
+      "min_lm": 765.9680304866441,
+      "max_lm": 834.9640810174117,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0900769324366346,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1177246218646013,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          796.3432557758899,
+          834.9640810174117
+        ],
+        "4000": [
+          768.5297964748937,
+          805.801732599524
+        ],
+        "6500": [
+          765.9680304866441,
+          803.1157268241924
+        ]
+      },
+      "min_lm": 765.9680304866441,
+      "max_lm": 834.9640810174117,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0900769324366346,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1461135679764483,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          788.2993845054264,
+          843.2310521165939
+        ],
+        "4000": [
+          760.7668692377736,
+          813.7799675757569
+        ],
+        "6500": [
+          758.2309796736477,
+          811.0673676838378
+        ]
+      },
+      "min_lm": 758.2309796736477,
+      "max_lm": 843.2310521165939,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1121031383860513,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1121031383860513,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          788.2993845054264,
+          843.2310521165939
+        ],
+        "4000": [
+          760.7668692377736,
+          813.7799675757569
+        ],
+        "6500": [
+          758.2309796736477,
+          811.0673676838378
+        ]
+      },
+      "min_lm": 758.2309796736477,
+      "max_lm": 843.2310521165939,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1121031383860513,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1261234269521243,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          788.2993845054264,
+          843.2310521165939
+        ],
+        "4000": [
+          760.7668692377736,
+          813.7799675757569
+        ],
+        "6500": [
+          758.2309796736477,
+          811.0673676838378
+        ]
+      },
+      "min_lm": 758.2309796736477,
+      "max_lm": 843.2310521165939,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1121031383860513,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1403310946691136,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          788.2993845054264,
+          843.2310521165939
+        ],
+        "4000": [
+          760.7668692377736,
+          813.7799675757569
+        ],
+        "6500": [
+          758.2309796736477,
+          811.0673676838378
+        ]
+      },
+      "min_lm": 758.2309796736477,
+      "max_lm": 843.2310521165939,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1121031383860513,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1693237968666736,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          784.2774488701947,
+          847.364537666185
+        ],
+        "4000": [
+          756.8854056192135,
+          817.7690850638734
+        ],
+        "6500": [
+          754.3624542671495,
+          815.0431881136604
+        ]
+      },
+      "min_lm": 754.3624542671495,
+      "max_lm": 847.364537666185,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1232856737142167,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1232856737142167,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          784.2774488701947,
+          847.364537666185
+        ],
+        "4000": [
+          756.8854056192135,
+          817.7690850638734
+        ],
+        "6500": [
+          754.3624542671495,
+          815.0431881136604
+        ]
+      },
+      "min_lm": 754.3624542671495,
+      "max_lm": 847.364537666185,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1232856737142167,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1374529545916041,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          784.2774488701947,
+          847.364537666185
+        ],
+        "4000": [
+          756.8854056192135,
+          817.7690850638734
+        ],
+        "6500": [
+          754.3624542671495,
+          815.0431881136604
+        ]
+      },
+      "min_lm": 754.3624542671495,
+      "max_lm": 847.364537666185,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1232856737142167,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.151810563188991,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          784.2774488701947,
+          847.364537666185
+        ],
+        "4000": [
+          756.8854056192135,
+          817.7690850638734
+        ],
+        "6500": [
+          754.3624542671495,
+          815.0431881136604
+        ]
+      },
+      "min_lm": 754.3624542671495,
+      "max_lm": 847.364537666185,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1232856737142167,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1811123139890967,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          780.2555132349629,
+          851.4980232157762
+        ],
+        "4000": [
+          753.0039420006534,
+          821.7582025519899
+        ],
+        "6500": [
+          750.4939288606513,
+          819.0190085434833
+        ]
+      },
+      "min_lm": 750.4939288606513,
+      "max_lm": 851.4980232157762,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1345834929117449,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1345834929117449,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          780.2555132349629,
+          851.4980232157762
+        ],
+        "4000": [
+          753.0039420006534,
+          821.7582025519899
+        ],
+        "6500": [
+          750.4939288606513,
+          819.0190085434833
+        ]
+      },
+      "min_lm": 750.4939288606513,
+      "max_lm": 851.4980232157762,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1345834929117449,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1489000648533436,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          780.2555132349629,
+          851.4980232157762
+        ],
+        "4000": [
+          753.0039420006534,
+          821.7582025519899
+        ],
+        "6500": [
+          750.4939288606513,
+          819.0190085434833
+        ]
+      },
+      "min_lm": 750.4939288606513,
+      "max_lm": 851.4980232157762,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1345834929117449,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1634099749356566,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.015,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          780.2555132349629,
+          851.4980232157762
+        ],
+        "4000": [
+          753.0039420006534,
+          821.7582025519899
+        ],
+        "6500": [
+          750.4939288606513,
+          819.0190085434833
+        ]
+      },
+      "min_lm": 750.4939288606513,
+      "max_lm": 851.4980232157762,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1345834929117449,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1930256895838252,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          796.6578888630801,
+          834.5568351452295
+        ],
+        "4000": [
+          768.8334405388182,
+          805.4087103883188
+        ],
+        "6500": [
+          766.2706624036887,
+          802.7240146870245
+        ]
+      },
+      "min_lm": 766.2706624036887,
+      "max_lm": 834.5568351452295,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0891149512723561,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.0891149512723561,
+      "matching_with_uncertainty_within1p10": true,
+      "both_conditional_budgets_met": true
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          796.6578888630801,
+          834.5568351452295
+        ],
+        "4000": [
+          768.8334405388182,
+          805.4087103883188
+        ],
+        "6500": [
+          766.2706624036887,
+          802.7240146870245
+        ]
+      },
+      "min_lm": 766.2706624036887,
+      "max_lm": 834.5568351452295,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0891149512723561,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1028361877158837,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          796.6578888630801,
+          834.5568351452295
+        ],
+        "4000": [
+          768.8334405388182,
+          805.4087103883188
+        ],
+        "6500": [
+          766.2706624036887,
+          802.7240146870245
+        ]
+      },
+      "min_lm": 766.2706624036887,
+      "max_lm": 834.5568351452295,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0891149512723561,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1167388570395378,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          796.6578888630801,
+          834.5568351452295
+        ],
+        "4000": [
+          768.8334405388182,
+          805.4087103883188
+        ],
+        "6500": [
+          766.2706624036887,
+          802.7240146870245
+        ]
+      },
+      "min_lm": 766.2706624036887,
+      "max_lm": 834.5568351452295,
+      "worst_family_ratio_including_independent_load_current_errors": 1.0891149512723561,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": true,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.145103081491584,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          792.6545828888937,
+          838.7088592006785
+        ],
+        "4000": [
+          764.9699559129949,
+          809.4157188977135
+        ],
+        "6500": [
+          762.4200560599515,
+          806.7176665013878
+        ]
+      },
+      "min_lm": 762.4200560599515,
+      "max_lm": 838.7088592006785,
+      "worst_family_ratio_including_independent_load_current_errors": 1.100061380251424,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.100061380251424,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          792.6545828888937,
+          838.7088592006785
+        ],
+        "4000": [
+          764.9699559129949,
+          809.4157188977135
+        ],
+        "6500": [
+          762.4200560599515,
+          806.7176665013878
+        ]
+      },
+      "min_lm": 762.4200560599515,
+      "max_lm": 838.7088592006785,
+      "worst_family_ratio_including_independent_load_current_errors": 1.100061380251424,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1139246346203129,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          792.6545828888937,
+          838.7088592006785
+        ],
+        "4000": [
+          764.9699559129949,
+          809.4157188977135
+        ],
+        "6500": [
+          762.4200560599515,
+          806.7176665013878
+        ]
+      },
+      "min_lm": 762.4200560599515,
+      "max_lm": 838.7088592006785,
+      "worst_family_ratio_including_independent_load_current_errors": 1.100061380251424,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1279721378573337,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          792.6545828888937,
+          838.7088592006785
+        ],
+        "4000": [
+          764.9699559129949,
+          809.4157188977135
+        ],
+        "6500": [
+          762.4200560599515,
+          806.7176665013878
+        ]
+      },
+      "min_lm": 762.4200560599515,
+      "max_lm": 838.7088592006785,
+      "worst_family_ratio_including_independent_load_current_errors": 1.100061380251424,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.156634781336425,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          784.6479709405211,
+          847.0129073115763
+        ],
+        "4000": [
+          757.2429866613485,
+          817.4297359165029
+        ],
+        "6500": [
+          754.7188433724773,
+          814.7049701301145
+        ]
+      },
+      "min_lm": 754.7188433724773,
+      "max_lm": 847.0129073115763,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1222893329742252,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1222893329742252,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          784.6479709405211,
+          847.0129073115763
+        ],
+        "4000": [
+          757.2429866613485,
+          817.4297359165029
+        ],
+        "6500": [
+          754.7188433724773,
+          814.7049701301145
+        ]
+      },
+      "min_lm": 754.7188433724773,
+      "max_lm": 847.0129073115763,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1222893329742252,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1364432344783377,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          784.6479709405211,
+          847.0129073115763
+        ],
+        "4000": [
+          757.2429866613485,
+          817.4297359165029
+        ],
+        "6500": [
+          754.7188433724773,
+          814.7049701301145
+        ]
+      },
+      "min_lm": 754.7188433724773,
+      "max_lm": 847.0129073115763,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1222893329742252,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1507871929634177,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          784.6479709405211,
+          847.0129073115763
+        ],
+        "4000": [
+          757.2429866613485,
+          817.4297359165029
+        ],
+        "6500": [
+          754.7188433724773,
+          814.7049701301145
+        ]
+      },
+      "min_lm": 754.7188433724773,
+      "max_lm": 847.0129073115763,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1222893329742252,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1800608016691774,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          780.6446649663347,
+          851.1649313670251
+        ],
+        "4000": [
+          753.3795020355253,
+          821.4367444258974
+        ],
+        "6500": [
+          750.8682370287402,
+          818.6986219444776
+        ]
+      },
+      "min_lm": 750.8682370287402,
+      "max_lm": 851.1649313670251,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1335742935873394,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1335742935873394,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          780.6446649663347,
+          851.1649313670251
+        ],
+        "4000": [
+          753.3795020355253,
+          821.4367444258974
+        ],
+        "6500": [
+          750.8682370287402,
+          818.6986219444776
+        ]
+      },
+      "min_lm": 750.8682370287402,
+      "max_lm": 851.1649313670251,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1335742935873394,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.147876915603305,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          780.6446649663347,
+          851.1649313670251
+        ],
+        "4000": [
+          753.3795020355253,
+          821.4367444258974
+        ],
+        "6500": [
+          750.8682370287402,
+          818.6986219444776
+        ]
+      },
+      "min_lm": 750.8682370287402,
+      "max_lm": 851.1649313670251,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1335742935873394,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.162372589788349,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          780.6446649663347,
+          851.1649313670251
+        ],
+        "4000": [
+          753.3795020355253,
+          821.4367444258974
+        ],
+        "6500": [
+          750.8682370287402,
+          818.6986219444776
+        ]
+      },
+      "min_lm": 750.8682370287402,
+      "max_lm": 851.1649313670251,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1335742935873394,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1919589431176334,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          776.6413589921484,
+          855.316955422474
+        ],
+        "4000": [
+          749.516017409702,
+          825.4437529352921
+        ],
+        "6500": [
+          747.017630685003,
+          822.6922737588411
+        ]
+      },
+      "min_lm": 747.017630685003,
+      "max_lm": 855.316955422474,
+      "worst_family_ratio_including_independent_load_current_errors": 1.144975594000589,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.144975594000589,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          776.6413589921484,
+          855.316955422474
+        ],
+        "4000": [
+          749.516017409702,
+          825.4437529352921
+        ],
+        "6500": [
+          747.017630685003,
+          822.6922737588411
+        ]
+      },
+      "min_lm": 747.017630685003,
+      "max_lm": 855.316955422474,
+      "worst_family_ratio_including_independent_load_current_errors": 1.144975594000589,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1594292640031498,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          776.6413589921484,
+          855.316955422474
+        ],
+        "4000": [
+          749.516017409702,
+          825.4437529352921
+        ],
+        "6500": [
+          747.017630685003,
+          822.6922737588411
+        ]
+      },
+      "min_lm": 747.017630685003,
+      "max_lm": 855.316955422474,
+      "worst_family_ratio_including_independent_load_current_errors": 1.144975594000589,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1740790442397238,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.02,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          776.6413589921484,
+          855.316955422474
+        ],
+        "4000": [
+          749.516017409702,
+          825.4437529352921
+        ],
+        "6500": [
+          747.017630685003,
+          822.6922737588411
+        ]
+      },
+      "min_lm": 747.017630685003,
+      "max_lm": 855.316955422474,
+      "worst_family_ratio_including_independent_load_current_errors": 1.144975594000589,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.2039831201861528,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          789.240378281027,
+          841.9974964881603
+        ],
+        "4000": [
+          761.6749974219471,
+          812.5894956916989
+        ],
+        "6500": [
+          759.1360807638739,
+          809.8808640393931
+        ]
+      },
+      "min_lm": 759.1360807638739,
+      "max_lm": 841.9974964881603,
+      "worst_family_ratio_including_independent_load_current_errors": 1.10915225586552,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.10915225586552,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          789.240378281027,
+          841.9974964881603
+        ],
+        "4000": [
+          761.6749974219471,
+          812.5894956916989
+        ],
+        "6500": [
+          759.1360807638739,
+          809.8808640393931
+        ]
+      },
+      "min_lm": 759.1360807638739,
+      "max_lm": 841.9974964881603,
+      "worst_family_ratio_including_independent_load_current_errors": 1.10915225586552,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.123136152868095,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          789.240378281027,
+          841.9974964881603
+        ],
+        "4000": [
+          761.6749974219471,
+          812.5894956916989
+        ],
+        "6500": [
+          759.1360807638739,
+          809.8808640393931
+        ]
+      },
+      "min_lm": 759.1360807638739,
+      "max_lm": 841.9974964881603,
+      "worst_family_ratio_including_independent_load_current_errors": 1.10915225586552,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1373067168509643,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.005,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          789.240378281027,
+          841.9974964881603
+        ],
+        "4000": [
+          761.6749974219471,
+          812.5894956916989
+        ],
+        "6500": [
+          759.1360807638739,
+          809.8808640393931
+        ]
+      },
+      "min_lm": 759.1360807638739,
+      "max_lm": 841.9974964881603,
+      "worst_family_ratio_including_independent_load_current_errors": 1.10915225586552,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.166222998608474,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          785.2743462293636,
+          846.1865387592458
+        ],
+        "4000": [
+          757.8474848720881,
+          816.6322295011104
+        ],
+        "6500": [
+          755.321326589181,
+          813.9101220694399
+        ]
+      },
+      "min_lm": 755.321326589181,
+      "max_lm": 846.1865387592458,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1203000749103518,
+      "flux_with_guardband": true,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1203000749103518,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          785.2743462293636,
+          846.1865387592458
+        ],
+        "4000": [
+          757.8474848720881,
+          816.6322295011104
+        ],
+        "6500": [
+          755.321326589181,
+          813.9101220694399
+        ]
+      },
+      "min_lm": 755.321326589181,
+      "max_lm": 846.1865387592458,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1203000749103518,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1344293552584717,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          785.2743462293636,
+          846.1865387592458
+        ],
+        "4000": [
+          757.8474848720881,
+          816.6322295011104
+        ],
+        "6500": [
+          755.321326589181,
+          813.9101220694399
+        ]
+      },
+      "min_lm": 755.321326589181,
+      "max_lm": 846.1865387592458,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1203000749103518,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1487482086114695,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.01,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          785.2743462293636,
+          846.1865387592458
+        ],
+        "4000": [
+          757.8474848720881,
+          816.6322295011104
+        ],
+        "6500": [
+          755.321326589181,
+          813.9101220694399
+        ]
+      },
+      "min_lm": 755.321326589181,
+      "max_lm": 846.1865387592458,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1203000749103518,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1779701029168956,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          777.3422821260366,
+          854.5646233014165
+        ],
+        "4000": [
+          750.1924597723701,
+          824.7176971199332
+        ],
+        "6500": [
+          747.6918182397953,
+          821.9686381295335
+        ]
+      },
+      "min_lm": 747.6918182397953,
+      "max_lm": 854.5646233014165,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1429369727666936,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1429369727666936,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          777.3422821260366,
+          854.5646233014165
+        ],
+        "4000": [
+          750.1924597723701,
+          824.7176971199332
+        ],
+        "6500": [
+          747.6918182397953,
+          821.9686381295335
+        ]
+      },
+      "min_lm": 747.6918182397953,
+      "max_lm": 854.5646233014165,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1429369727666936,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1573637977305495,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          777.3422821260366,
+          854.5646233014165
+        ],
+        "4000": [
+          750.1924597723701,
+          824.7176971199332
+        ],
+        "6500": [
+          747.6918182397953,
+          821.9686381295335
+        ]
+      },
+      "min_lm": 747.6918182397953,
+      "max_lm": 854.5646233014165,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1429369727666936,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1719861897944754,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.02,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          777.3422821260366,
+          854.5646233014165
+        ],
+        "4000": [
+          750.1924597723701,
+          824.7176971199332
+        ],
+        "6500": [
+          747.6918182397953,
+          821.9686381295335
+        ]
+      },
+      "min_lm": 747.6918182397953,
+      "max_lm": 854.5646233014165,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1429369727666936,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.2018338002162645,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          773.3762500743732,
+          858.7536655725017
+        ],
+        "4000": [
+          746.364947222511,
+          828.7604309293446
+        ],
+        "6500": [
+          743.8770640651026,
+          825.99789615958
+        ]
+      },
+      "min_lm": 743.8770640651026,
+      "max_lm": 858.7536655725017,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1544295516783745,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1544295516783745,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          773.3762500743732,
+          858.7536655725017
+        ],
+        "4000": [
+          746.364947222511,
+          828.7604309293446
+        ],
+        "6500": [
+          743.8770640651026,
+          825.99789615958
+        ]
+      },
+      "min_lm": 743.8770640651026,
+      "max_lm": 858.7536655725017,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1544295516783745,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1690086315852894,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          773.3762500743732,
+          858.7536655725017
+        ],
+        "4000": [
+          746.364947222511,
+          828.7604309293446
+        ],
+        "6500": [
+          743.8770640651026,
+          825.99789615958
+        ]
+      },
+      "min_lm": 743.8770640651026,
+      "max_lm": 858.7536655725017,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1544295516783745,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1837863698318745,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.025,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          773.3762500743732,
+          858.7536655725017
+        ],
+        "4000": [
+          746.364947222511,
+          828.7604309293446
+        ],
+        "6500": [
+          743.8770640651026,
+          825.99789615958
+        ]
+      },
+      "min_lm": 743.8770640651026,
+      "max_lm": 858.7536655725017,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1544295516783745,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.2139542875383467,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 0,
+      "flux_bounds_lm": {
+        "2700": [
+          769.4102180227097,
+          862.9427078435873
+        ],
+        "4000": [
+          742.5374346726519,
+          832.8031647387561
+        ],
+        "6500": [
+          740.0623098904097,
+          830.0271541896269
+        ]
+      },
+      "min_lm": 740.0623098904097,
+      "max_lm": 862.9427078435873,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1660406107850216,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1660406107850216,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 5,
+      "flux_bounds_lm": {
+        "2700": [
+          769.4102180227097,
+          862.9427078435873
+        ],
+        "4000": [
+          742.5374346726519,
+          832.8031647387561
+        ],
+        "6500": [
+          740.0623098904097,
+          830.0271541896269
+        ]
+      },
+      "min_lm": 740.0623098904097,
+      "max_lm": 862.9427078435873,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1660406107850216,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1807743318698911,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 10,
+      "flux_bounds_lm": {
+        "2700": [
+          769.4102180227097,
+          862.9427078435873
+        ],
+        "4000": [
+          742.5374346726519,
+          832.8031647387561
+        ],
+        "6500": [
+          740.0623098904097,
+          830.0271541896269
+        ]
+      },
+      "min_lm": 740.0623098904097,
+      "max_lm": 862.9427078435873,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1660406107850216,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.1957098675243563,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    },
+    {
+      "proposed_current_fraction_budget": 0.03,
+      "proposed_stabilized_total_optical_gain_fraction_budget": 0.03,
+      "illustrative_expanded_measurement_uncertainty_lm": 20,
+      "flux_bounds_lm": {
+        "2700": [
+          769.4102180227097,
+          862.9427078435873
+        ],
+        "4000": [
+          742.5374346726519,
+          832.8031647387561
+        ],
+        "6500": [
+          740.0623098904097,
+          830.0271541896269
+        ]
+      },
+      "min_lm": 740.0623098904097,
+      "max_lm": 862.9427078435873,
+      "worst_family_ratio_including_independent_load_current_errors": 1.1660406107850216,
+      "flux_with_guardband": false,
+      "matching_ratio_within1p10": false,
+      "worst_family_ratio_with_independent_measurement_uncertainty": 1.226203198967555,
+      "matching_with_uncertainty_within1p10": false,
+      "both_conditional_budgets_met": false
+    }
+  ],
+  "nominal_sense_value_diagnostic_ohm": 2.3202517626060004,
+  "sense_value_diagnostics_not_ECO": [
+    {
+      "Rcs_ohm": 2.26,
+      "assumed_VCCR_V": 0.33,
+      "assumed_eta": 0.9,
+      "current_A": 0.26283185840707973,
+      "nominal_flux_lm": {
+        "2700": 835.3375538331208,
+        "4000": 806.1621613279198,
+        "6500": 803.4749541234934
+      }
+    },
+    {
+      "Rcs_ohm": 2.32,
+      "assumed_VCCR_V": 0.33,
+      "assumed_eta": 0.9,
+      "current_A": 0.25603448275862073,
+      "nominal_flux_lm": {
+        "2700": 815.6347039827485,
+        "4000": 787.1474624833511,
+        "6500": 784.5236376084065
+      }
+    },
+    {
+      "Rcs_ohm": 2.37,
+      "assumed_VCCR_V": 0.33,
+      "assumed_eta": 0.9,
+      "current_A": 0.25063291139240507,
+      "nominal_flux_lm": {
+        "2700": 799.922721257868,
+        "4000": 771.984243860994,
+        "6500": 769.4109630481239
+      }
+    },
+    {
+      "Rcs_ohm": 2.43,
+      "assumed_VCCR_V": 0.33,
+      "assumed_eta": 0.9,
+      "current_A": 0.24444444444444446,
+      "nominal_flux_lm": {
+        "2700": 781.9014017121001,
+        "4000": 754.5923454023025,
+        "6500": 752.0770375842948
+      }
+    }
+  ],
+  "existing_R9_unchanged_ohm": 2.37,
+  "old_current_fullscreen_A": [
+    0.21876295319202657,
+    0.2891944014593847
+  ],
+  "old_uncalibrated_counterexample_retained": true,
+  "no_measured_current_or_flux_or_CCT_CRI": true,
+  "no_new_approved_part_value_interface_or_optical_requirement": true,
+  "decision": "Retain CC-base architecture for initialprototype and existingR9 until actualmeasurements establish need. Prepare factory-only calibration/bin-selection/FCT at acceptednominalcondition; no useradjustment. This does not guarantee arbitrary futurepanel/base intermixing or all-line/temp/life behavior."
+}

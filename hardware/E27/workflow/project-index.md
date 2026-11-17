@@ -1,5 +1,11 @@
 # E27 workflow index
 
+## Current electrical refinement evidence — 17 November 2026
+
+[ELEC-REFINE-02 r2](specification-reset/electrical-refinement/README.md) adds64actual finite-R switched-load endpoint cases with200ns/100ns convergence/KCL/RMS/FFT,48finite-auxiliaryloss/charge scenarios,100optical/metrologicalbudgetcases and clamp/winding commutationfrontiers. WorstmodeledbulkRMS127.135mA vssevere152mAcomparison supports retaining15uFcandidates; updatedactive-R13/noVFoutminimum startupwitnessVDD11.2246V supports retainedRAUX4.7underdeclaredhypotheses. Factory-onlyopticalcalibration is analyzed at the accepted230V50Hz/25±1°Ccomplete-lamp condition; no measuredflux orchangedR92.37value.
+
+[Fouractualreviews/integration](specification-reset/electrical-refinement/integration-record.md) support boundedanalysisdelivery only. All66previousnativecaptureinputs are unchanged, so the currentECO-01KiCadZIP/PDF below remainscurrent. No CAD/approvedgraph/partvalue/requirements/profile change ornewECOapprovalquestion. Actualcontroller/parasitic/clamp/fault/thermal/interface/lifetime/process evidence and U05–U09/fullconfiguration remainopen; no finishedsupply/PCB/DRC/physicalmeasurement claim. The smallrawprefix is identifiedaspreview; fullgeneratedwaveformhash/spectrum/replay arepreserved withoutversioning34MBofintermediatedata.
+
 ## Current owner-approved ECO-01 native capture — 17 November 2026
 
 The owner accepted exactECO-01 graph5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8. [Current SCH-ECO01-02 packet](specification-reset/eco01-capture/README.md), [nativePDF](specification-reset/eco01-capture/Velluneo_driver_ECO01.pdf) and [editableKiCadZIP](specification-reset/eco01-capture/Velluneo_driver_ECO01_KiCad.zip) implement the four499k2512 dualbulkbleed/twoexistingpackagechanges, added1MVDDbleed and exactnumericreferencealiases.31positions/79physicalterminals/22nets/4NC now match the acceptedintent;18unchangedlocalfootprintdefinitions cover allpositions. Activeparts basis is electrical-integration/proposed-parts.json; old schematic-intent/parts.json is deliberately preserved as historicalhashboundbasis.

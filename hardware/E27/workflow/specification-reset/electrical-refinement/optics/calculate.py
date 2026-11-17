@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+"""Conditional optical design/calibration budget. No measured photometry."""
+from pathlib import Path
+import argparse,hashlib,json,itertools
+import numpy as np
+from scipy.optimize import brentq
+pa=argparse.ArgumentParser();pa.add_argument('--project',type=Path,default=Path(__file__).resolve().parents[2]);pa.add_argument('--output-dir',type=Path,default=Path(__file__).resolve().parent);args=pa.parse_args();P=args.project.resolve();D=args.output_dir.resolve();D.mkdir(exist_ok=True)
+path=P/'electrical-integration/native-typical-flux-curve.json';curve=json.loads(path.read_text());assert curve['source_sha256']=='74d4261952c25e6833212a82b0f72e759f8297478627a368f4acff22378c92c8';samples=np.array(curve['samples']);assert np.all(np.diff(samples[:,0])>=0)
+phi=lambda i:float(np.interp(i*1000,samples[:,0],samples[:,1]))
+def inv(f):return brentq(lambda i:phi(i)-f,.20,.32,xtol=1e-14)
+panels={'2700':{'count':8,'hot55_reference_lm':27.2},'4000':{'count':7,'hot55_reference_lm':30.},'6500':{'count':7,'hot55_reference_lm':29.9}}
+tau=.87
+K={c:p['count']*p['hot55_reference_lm']*tau for c,p in panels.items()}
+per={c:{'current_for750lm_A':inv(750/k),'current_for800lm_A':inv(800/k),'current_for850lm_A':inv(850/k),'nominal250mA_lm':k*phi(.25)} for c,k in K.items()}
+lo=max(x['current_for750lm_A'] for x in per.values());hi=min(x['current_for850lm_A'] for x in per.values());Istar=inv(1600/(min(K.values())+max(K.values())))
+nom={c:k*phi(Istar) for c,k in K.items()};nomratio=max(nom.values())/min(nom.values())
+rows=[]
+for ie,ge,u in itertools.product([.005,.01,.015,.02,.03],[.005,.01,.02,.025,.03],[0,5,10,20]):
+ bounds={c:[k*phi(Istar*(1-ie))*(1-ge),k*phi(Istar*(1+ie))*(1+ge)] for c,k in K.items()}
+ low=min(v[0] for v in bounds.values());high=max(v[1] for v in bounds.values());ratio=high/low
+ rows.append({'proposed_current_fraction_budget':ie,'proposed_stabilized_total_optical_gain_fraction_budget':ge,'illustrative_expanded_measurement_uncertainty_lm':u,'flux_bounds_lm':bounds,'min_lm':low,'max_lm':high,'worst_family_ratio_including_independent_load_current_errors':ratio,'flux_with_guardband':low>=750+u and high<=850-u,'matching_ratio_within1p10':ratio<=1.10,'worst_family_ratio_with_independent_measurement_uncertainty':(high+u)/(low-u),'matching_with_uncertainty_within1p10':(high+u)/(low-u)<=1.10,'both_conditional_budgets_met':low>=750+u and high<=850-u and (high+u)/(low-u)<=1.10})
+recommended=next(r for r in rows if r['proposed_current_fraction_budget']==.01 and r['proposed_stabilized_total_optical_gain_fraction_budget']==.01 and r['illustrative_expanded_measurement_uncertainty_lm']==5)
+# A calculation of resistor value at assumed eta/VCCR is diagnostic, NOT an ECO.
+Rnom=.330*4*.90/(2*Istar);Rdiag=[{'Rcs_ohm':r,'assumed_VCCR_V':.330,'assumed_eta':.9,'current_A':.330*4*.9/(2*r),'nominal_flux_lm':{c:k*phi(.330*4*.9/(2*r)) for c,k in K.items()}} for r in [2.26,2.32,2.37,2.43]]
+old=P/'electrical-integration/results.json';oldj=json.loads(old.read_text());s=oldj['optics'];assert abs(s['three_nominal_screens_lm']['4000']['nominal250mA_lm']-per['4000']['nominal250mA_lm'])<1e-9
+report={'scope':'Mathematical optical budget at accepted230Vac50Hz,25+/-1C complete-lamp baseup stabilized acceptance. Calculated85C LED reference and tau.87 remain unmeasured hypotheses, not the ambient condition or guaranteed actualjunction temperature.','inputs_SHA256':{'curve':hashlib.sha256(path.read_bytes()).hexdigest(),'prior_results':hashlib.sha256(old.read_bytes()).hexdigest(),'requirements_and_plan':hashlib.sha256((P/'requirements-and-plan.md').read_bytes()).hexdigest(),'UCC_native':'762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248'},'source_current_law':'TI SLUSB86C Eq3/Eq14 includes etaXFMR, which accounts winding/core/leakage/bias transfer. Do not remove it or count the same explicitloss twice. It is not overallconverterefficiency.','panels':panels,'tau_assumed':tau,'per_panel_typical_curve_currents':per,'common_current_interval_for_unperturbed750to850_A':[lo,hi],'minimax_nominal_family_current_A':Istar,'nominal_family_lm_at_minimax_current':nom,'nominal_family_ratio':nomratio,'recommended_proposed_budget_not_achieved':recommended,'alternative_budget_with10lm_uncertainty_not_achieved':next(r for r in rows if r['proposed_current_fraction_budget']==.005 and r['proposed_stabilized_total_optical_gain_fraction_budget']==.01 and r['illustrative_expanded_measurement_uncertainty_lm']==10),'budget_cases':rows,'nominal_sense_value_diagnostic_ohm':Rnom,'sense_value_diagnostics_not_ECO':Rdiag,'existing_R9_unchanged_ohm':2.37,'old_current_fullscreen_A':s['source_current_screen_A'],'old_uncalibrated_counterexample_retained':True,'no_measured_current_or_flux_or_CCT_CRI':True,'no_new_approved_part_value_interface_or_optical_requirement':True,'decision':'Retain CC-base architecture for initialprototype and existingR9 until actualmeasurements establish need. Prepare factory-only calibration/bin-selection/FCT at acceptednominalcondition; no useradjustment. This does not guarantee arbitrary futurepanel/base intermixing or all-line/temp/life behavior.'}
+(D/'results.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k in ['common_current_interval_for_unperturbed750to850_A','minimax_nominal_family_current_A','nominal_family_lm_at_minimax_current','recommended_proposed_budget_not_achieved','nominal_sense_value_diagnostic_ohm']},indent=2))
