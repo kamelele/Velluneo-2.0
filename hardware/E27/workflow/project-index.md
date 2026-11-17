@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current startup, protection, thermal and insulation development — 17 November 2026
+
+[PCB-READINESS-01](specification-reset/pcb-readiness-01/README.md) adds executed coupled startup/clamp/NTC/thermal/life/discharge calculations and a source-conditioned transformer material/build candidate. Current31-position CAD/graph/values stay unchanged. New20uH leakage,4W/8W heat-removal and material/process conditions are proposed design inputs, not actual assembly performance or accepted norms. [Exact PCB-entry contract](specification-reset/pcb-readiness-01/pcb-entry-contract.json) retains startup/controller/fault/SOA, complete transformer/insulation and actual enclosure/thermal closures. The owner has no full standards; a discovered expired member rendering is not used to bypass access or establish normative limits. No schematic/placement approval, PCB or physical test is claimed.
+
 ## Current library source confirmation — 17 November 2026
 
 [LIB-SOURCE-03](specification-reset/library-source-03/README.md) uses primary KEMET commercial C0G Table3 densityB lands for C2/C3 and confirms F1 copper directly against the downloaded official SCHURTER PDF/drawings. [Current KiCad draft ZIP](specification-reset/library-source-03/Velluneo_driver_LIB03_KiCad.zip) and [schematic PDF](specification-reset/library-source-03/Velluneo_driver_LIB03.pdf) supersede earlier native packages for the new assignment bytes. The owner-approved ECO-01 physical graph,31positions/79terminals/22nets/4NC, values, electrical types and rules are unchanged.19available modules include one retained historical KEMET pattern;18definitions are active.

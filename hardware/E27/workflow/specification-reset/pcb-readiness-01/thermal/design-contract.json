@@ -1,0 +1,37 @@
+{
+  "revision": "thermal-design-budget-1",
+  "status": "proposed engineering requirements for physical design, not demonstrated thermal performance",
+  "ambient_max_C": 40,
+  "driver_loss_budget_W": 4.0,
+  "light_compartment_heat_budget_W": 8.0,
+  "driver_to_ambient_required_max_K_per_W": 7.0,
+  "light_to_ambient_required_max_K_per_W": 3.5,
+  "local_air_screen_C": 70,
+  "component_heat_allocations_W": {
+    "R1_input_limiter": 0.50,
+    "Q1_channel_and_switching": 0.90,
+    "TVS1_and_clamp_diode": 0.40,
+    "T1_all_winding_core_termination": 0.50,
+    "D3_output_rectifier": 0.50,
+    "U1_bias_gate_system": 0.20,
+    "BR1": 0.10,
+    "R2_R3_R14_R15_bulk_bleeders": 0.27,
+    "R9_current_sense": 0.02,
+    "D2_R10_auxiliary_path": 0.03,
+    "F1": 0.08,
+    "C1_bulk_self_heating": 0.40,
+    "C4_output_self_heating": 0.05,
+    "other_parts_reserve": 0.05
+  },
+  "hotspot_targets_C": {"Q1":125,"TVS1":125,"T1":110,"D3":125,"R1":125,"U1":110},
+  "bulk_life_target_operating_hours": 21900,
+  "bulk_capacitor_local_air_target_max_C": 70,
+  "bulk_capacitor_core_rise_target_max_K": 10,
+  "normal_electrical_envelope_status": "All power allocations and required thermal paths must be established by the actual circuit/structure. They do not extend the earlier 11W capacitor/bridge model or bound fault power. No optical-efficiency credit is used in the 8W light-compartment heat budget. Gate heat can overlap conservatively between part allocations; this is a heat-removal budget, not a prediction of actual input power.",
+  "layout_inputs": [
+    "No heat-producing component or high-voltage copper under the projected footprint of C4 on either PCB face, per Panasonic source; vent and case isolation retained.",
+    "Keep C1/C4 outside R1/Q1/T1/TVS1 direct radiative hot spots; geometry is to be verified, not assigned an invented millimetre spacing.",
+    "Thermal sensor placement must bound hottest capacitor/core/junction minus sensor temperature including transient lag; no unspecified board location may inherit these budgets.",
+    "Any copper heat-spreading from primary switching nodes must respect independently approved insulation/EMI limits; external metal heat spreaders cannot be connected directly to primary nodes."
+  ]
+}

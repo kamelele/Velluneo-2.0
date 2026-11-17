@@ -1,0 +1,231 @@
+{
+  "scope": "Activepart nativeVishayRTtool formula/tolerance envelope and TI electrical threshold endpoints; not measured assembly trip or finished protection qualification",
+  "part": "NTCS0603E3104FXT",
+  "components_type": "SMD1",
+  "curve": "38.00",
+  "native_coefficients_R_over_R25_exponent": {
+    "less": [
+      -15.4313094,
+      5337.10027599,
+      -267728.6810132,
+      14375045.7126114
+    ],
+    "greater": [
+      -15.4313094,
+      5337.10027599,
+      -267728.6810132,
+      14375045.7126114
+    ]
+  },
+  "R25_ohm": 100000,
+  "R25_tolerance_percent": 1,
+  "native_B25_85_K": 4100,
+  "reconstructed_B25_85_K": 4099.9999999953325,
+  "native_tool_SMD1_tolerance_rule": "q=1+R25tol/100; d1=39.77*abs(1/(T+273.15)-1/298.15); T<25:q*(1+d1)^2-1;25<=T<85:q*(1+d1)-1;T>=85:q*(1+d1)*(1+39.77*abs(1/(T+273.15)-1/358.15))-1",
+  "source_table_display_rounding_not_applied": true,
+  "nominal_electrical_trip_C": 88.06017915343122,
+  "electrical_trip_interval_C": [
+    80.80023190877532,
+    96.57123530614084
+  ],
+  "engineering_outward_0p1C_screen": [
+    80.8,
+    96.6
+  ],
+  "resistance_threshold_endpoints_ohm": [
+    7200.0,
+    11111.111111111111
+  ],
+  "remaining_gradient_lag_budget_after_latest_trip_K": {
+    "85": -11.571235306140835,
+    "105": 8.428764693859165,
+    "110": 13.428764693859165,
+    "125": 28.428764693859165
+  },
+  "normal_sensor68C_margin_to_earliest_trip_K": 12.800231908775316,
+  "normal_sensor70C_margin_to_earliest_trip_K": 10.800231908775316,
+  "source_derived_RT_rows": [
+    {
+      "T_C": 10,
+      "Rnom_ohm": 203722.7943024712,
+      "Rmin_ohm": 198767.34521785524,
+      "Rmax_ohm": 208678.24338708713,
+      "fractional_tolerance": 0.02432447042356234
+    },
+    {
+      "T_C": 15,
+      "Rnom_ohm": 159521.65334035578,
+      "Rmin_ohm": 156431.31280763965,
+      "Rmax_ohm": 162611.99387307192,
+      "fractional_tolerance": 0.019372545783001405
+    },
+    {
+      "T_C": 20,
+      "Rnom_ohm": 125851.24111072226,
+      "Rmin_ohm": 124013.6954447433,
+      "Rmax_ohm": 127688.78677670122,
+      "fractional_tolerance": 0.014600934005587707
+    },
+    {
+      "T_C": 25,
+      "Rnom_ohm": 100000.0,
+      "Rmin_ohm": 99000.0,
+      "Rmax_ohm": 101000.0,
+      "fractional_tolerance": 0.010000000000000009
+    },
+    {
+      "T_C": 30,
+      "Rnom_ohm": 80002.54677829548,
+      "Rmin_ohm": 79024.751342091,
+      "Rmax_ohm": 80980.34221449996,
+      "fractional_tolerance": 0.012222053866787208
+    },
+    {
+      "T_C": 35,
+      "Rnom_ohm": 64422.07104393345,
+      "Rmin_ohm": 63496.197151901346,
+      "Rmax_ohm": 65347.944935965555,
+      "fractional_tolerance": 0.014371998245767292
+    },
+    {
+      "T_C": 40,
+      "Rnom_ohm": 52199.5403591496,
+      "Rmin_ohm": 51340.68632950083,
+      "Rmax_ohm": 53058.39438879837,
+      "fractional_tolerance": 0.016453287207886858
+    },
+    {
+      "T_C": 45,
+      "Rnom_ohm": 42548.2334538742,
+      "Rmin_ohm": 41762.40342081137,
+      "Rmax_ohm": 43334.063486937026,
+      "fractional_tolerance": 0.01846915768934876
+    },
+    {
+      "T_C": 50,
+      "Rnom_ohm": 34879.32264979244,
+      "Rmin_ohm": 34166.994580484235,
+      "Rmax_ohm": 35591.650719100646,
+      "fractional_tolerance": 0.020422646289905533
+    },
+    {
+      "T_C": 55,
+      "Rnom_ohm": 28748.919396135363,
+      "Rmin_ohm": 28107.341131151017,
+      "Rmax_ohm": 29390.49766111971,
+      "fractional_tolerance": 0.02231660453542439
+    },
+    {
+      "T_C": 60,
+      "Rnom_ohm": 23820.0865173944,
+      "Rmin_ohm": 23244.74298959033,
+      "Rmax_ohm": 24395.43004519847,
+      "fractional_tolerance": 0.02415371276606959
+    },
+    {
+      "T_C": 65,
+      "Rnom_ohm": 19835.374807739325,
+      "Rmin_ohm": 19320.91475200486,
+      "Rmax_ohm": 20349.83486347379,
+      "fractional_tolerance": 0.025936492792348664
+    },
+    {
+      "T_C": 70,
+      "Rnom_ohm": 16596.81984348126,
+      "Rmin_ohm": 16137.630327105502,
+      "Rmax_ohm": 17056.009359857013,
+      "fractional_tolerance": 0.027667319444701466
+    },
+    {
+      "T_C": 75,
+      "Rnom_ohm": 13951.267930043596,
+      "Rmin_ohm": 13541.820104052333,
+      "Rmax_ohm": 14360.715756034859,
+      "fractional_tolerance": 0.029348431127864005
+    },
+    {
+      "T_C": 80,
+      "Rnom_ohm": 11779.537175511257,
+      "Rmin_ohm": 11414.584267653152,
+      "Rmax_ohm": 12144.490083369363,
+      "fractional_tolerance": 0.03098193947864214
+    },
+    {
+      "T_C": 85,
+      "Rnom_ohm": 9988.358258118056,
+      "Rmin_ohm": 9663.039045620571,
+      "Rmax_ohm": 10313.677470615541,
+      "fractional_tolerance": 0.03256983821471171
+    },
+    {
+      "T_C": 90,
+      "Rnom_ohm": 8504.343771685519,
+      "Rmin_ohm": 8200.780780053099,
+      "Rmax_ohm": 8807.906763317938,
+      "fractional_tolerance": 0.03569505182082433
+    },
+    {
+      "T_C": 95,
+      "Rnom_ohm": 7269.447801237348,
+      "Rmin_ohm": 6987.83007072501,
+      "Rmax_ohm": 7551.065531749687,
+      "fractional_tolerance": 0.03873990682819173
+    },
+    {
+      "T_C": 100,
+      "Rnom_ohm": 6237.527233956842,
+      "Rmin_ohm": 5977.37585492333,
+      "Rmax_ohm": 6497.678612990354,
+      "fractional_tolerance": 0.04170745381555352
+    },
+    {
+      "T_C": 105,
+      "Rnom_ohm": 5371.722599064796,
+      "Rmin_ohm": 5132.140594320744,
+      "Rmax_ohm": 5611.304603808848,
+      "fractional_tolerance": 0.04460059139795547
+    },
+    {
+      "T_C": 110,
+      "Rnom_ohm": 4642.45213324293,
+      "Rmin_ohm": 4422.297417497737,
+      "Rmax_ohm": 4862.606848988124,
+      "fractional_tolerance": 0.04742207553821487
+    },
+    {
+      "T_C": 115,
+      "Rnom_ohm": 4025.8673291186965,
+      "Rmin_ohm": 3823.871335345633,
+      "Rmax_ohm": 4227.863322891761,
+      "fractional_tolerance": 0.050174528184783185
+    },
+    {
+      "T_C": 120,
+      "Rnom_ohm": 3502.6576931404347,
+      "Rmin_ohm": 3317.5056477758462,
+      "Rmax_ohm": 3687.8097385050232,
+      "fractional_tolerance": 0.052860445291924574
+    }
+  ],
+  "sources": [
+    {
+      "filename": "vishay-ntc-100k.json",
+      "url": "https://www.vishay.com/api/designtools/calculator-ntc-rt/ntc-calculator-type?type=ntcComponents&code=NTCS0603E3104FXT",
+      "bytes": 1251,
+      "sha256": "5a5e7db4f6afcb2626559791862c61e3d42e86bd110b649b8ada3e09749ea3c4"
+    },
+    {
+      "filename": "vishay-ntc-calculator.js",
+      "url": "https://www.vishay.com/static/js/min/calculator-ntc-rt.min.js?v=2",
+      "bytes": 24869,
+      "sha256": "0b9ed50f04ee756b1c907591ec51a099a9bafb01726f3100439e781928ffde08"
+    },
+    {
+      "filename": "vishay-ntc-calculator.html",
+      "url": "https://www.vishay.com/en/thermistors/ntc-rt-calculator/",
+      "bytes": 734606,
+      "sha256": "5a7afda6cf60d696b7dc7a887838d71a69a061f6c13cd4b3c41b676ac7ee4f75"
+    }
+  ],
+  "not_cold_pin_compliance_or_physical_sensor_lag_proof": true
+}

@@ -1,0 +1,1250 @@
+{
+  "scope": "Executed passive, ideal constant-voltage clamp and diode model; not UCC28711 switching, TVS dynamics, MOS SOA, parasitics or thermal validation.",
+  "runtime": {
+    "python": "3.12.10",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "input_contract_sha256": "a2e8ee4a2391f85456801f3a6cbadce0e8d2a188bcafce00fb9124d450e4f9c5",
+  "normal_thermal_target": {
+    "local_air_C_choice": 70,
+    "junction_C_choice": 125,
+    "actual_required_Rtheta_K_per_W_not_established": 100,
+    "TVS_average_power_allowance_W_at_Rtheta100": 0.55,
+    "normal_allocation_W_choice": 0.4,
+    "actual_required_Rtheta_K_per_W_at0p40W": 137.5
+  },
+  "analytic_sweep": {
+    "cases": 1536,
+    "normal_output_cases": 768,
+    "full_cases_canonical_sha256": "32ec9351f23197e4529b2c8715fb0138fe70487b5bb6f79377788f159792f988",
+    "min_TVS_power_W": 0.054156969916946504,
+    "max_TVS_power_W": 11.0,
+    "max_normal_output_TVS_case": {
+      "lambda_Llk_over_Lm": 0.05,
+      "Lm_H": 0.002194285714285714,
+      "Llk_H": 0.0001097142857142859,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "clamp_diode_V_sensitivity": 0.0,
+      "reflected_V_screen": 118.84775550595018,
+      "bus_V_screen": 240.0,
+      "regime": "split_to_secondary",
+      "turnon_s": 3.441808966940584e-06,
+      "clamp_s": 6.990564634329814e-07,
+      "off_s": 6.61938619786703e-06,
+      "frequency_Hz_constructed": 74286.37198837477,
+      "magnetic_energy_rate_W": 11.0,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 2.1944445381826043e-05,
+      "clamp_diode_energy_J": 0.0,
+      "secondary_delivered_energy_J": 0.00012613116667958157,
+      "TVS_power_W": 1.6301732327129022,
+      "clamp_diode_power_W": 0.0,
+      "required_Rtheta_JA_K_per_W": 33.73874561077787,
+      "TVS_target_met_if_thermal_contract_holds": false,
+      "output_V": 27.0,
+      "output_diode_V_sensitivity": 1.7,
+      "independent_secondary_IR_V_screen": 1.0119388764875439
+    },
+    "max_all_output_TVS_case": {
+      "lambda_Llk_over_Lm": 0.05,
+      "Lm_H": 0.002194285714285714,
+      "Llk_H": 0.0001097142857142859,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "clamp_diode_V_sensitivity": 0.0,
+      "reflected_V_screen": 166.8,
+      "bus_V_screen": 240.0,
+      "regime": "all_clamp_secondary_blocked",
+      "turnon_s": 3.441808966940584e-06,
+      "clamp_s": 4.71705763746708e-06,
+      "off_s": 4.71705763746708e-06,
+      "frequency_Hz_constructed": 74286.37198837477,
+      "magnetic_energy_rate_W": 11.0,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 0.00014807561206140761,
+      "clamp_diode_energy_J": 0.0,
+      "secondary_delivered_energy_J": 0,
+      "TVS_power_W": 11.0,
+      "clamp_diode_power_W": 0.0,
+      "required_Rtheta_JA_K_per_W": 5.0,
+      "TVS_target_met_if_thermal_contract_holds": false,
+      "output_V": 40.0,
+      "output_diode_V_sensitivity": 1.7,
+      "independent_secondary_IR_V_screen": 0
+    },
+    "cases_above_proposed0p55W_contract": 642,
+    "all_clamp_cases": 12,
+    "not_actual_correlated_controller_corners": true
+  },
+  "cold_proxy_leakage_frontiers": [
+    {
+      "Vo_V": 18.0,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 72.0,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.030335387182133647,
+        "maximum_Llk_H_at_fixed_Lp": 6.783493310735031e-05,
+        "Lm_H_at_limit": 0.00223616506689265,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.021881071376416244,
+        "maximum_Llk_H_at_fixed_Lp": 4.933449680534568e-05,
+        "Lm_H_at_limit": 0.0022546655031946547,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 18.0,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 76.04775550595018,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.02910993084725441,
+        "maximum_Llk_H_at_fixed_Lp": 6.517212463090002e-05,
+        "Lm_H_at_limit": 0.0022388278753690998,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.02100410568960336,
+        "maximum_Llk_H_at_fixed_Lp": 4.739790882247274e-05,
+        "Lm_H_at_limit": 0.0022566020911775272,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 18.0,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 78.8,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.02827835348534926,
+        "maximum_Llk_H_at_fixed_Lp": 6.336156567860008e-05,
+        "Lm_H_at_limit": 0.0022406384343214,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.020408677860244744,
+        "maximum_Llk_H_at_fixed_Lp": 4.6081138675345494e-05,
+        "Lm_H_at_limit": 0.002257918861324654,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 18.0,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 82.84775550595018,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.027057782541254308,
+        "maximum_Llk_H_at_fixed_Lp": 6.0698757202149764e-05,
+        "Lm_H_at_limit": 0.00224330124279785,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.019534236451273678,
+        "maximum_Llk_H_at_fixed_Lp": 4.414455069247256e-05,
+        "Lm_H_at_limit": 0.0022598554493075277,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 27.0,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 108.0,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.019537777527299918,
+        "maximum_Llk_H_at_fixed_Lp": 4.4152399661025466e-05,
+        "Lm_H_at_limit": 0.0022598476003389744,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.014133980049549922,
+        "maximum_Llk_H_at_fixed_Lp": 3.211083611710943e-05,
+        "Lm_H_at_limit": 0.002271889163882891,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 27.0,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 112.04775550595018,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.018337856490259305,
+        "maximum_Llk_H_at_fixed_Lp": 4.148959118457518e-05,
+        "Lm_H_at_limit": 0.0022625104088154252,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.01327025525569729,
+        "maximum_Llk_H_at_fixed_Lp": 3.017424813423649e-05,
+        "Lm_H_at_limit": 0.0022738257518657634,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 27.0,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 114.8,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.01752358998441493,
+        "maximum_Llk_H_at_fixed_Lp": 3.967903223227523e-05,
+        "Lm_H_at_limit": 0.002264320967767725,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.012683811105415112,
+        "maximum_Llk_H_at_fixed_Lp": 2.8857477987109252e-05,
+        "Lm_H_at_limit": 0.0022751425220128908,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 27.0,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 118.84775550595018,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.016328402586608518,
+        "maximum_Llk_H_at_fixed_Lp": 3.701622375582493e-05,
+        "Lm_H_at_limit": 0.002266983776244175,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.011822553676796231,
+        "maximum_Llk_H_at_fixed_Lp": 2.6920890004236308e-05,
+        "Lm_H_at_limit": 0.002277079109995764,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 37.4784,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 149.9136,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.007248171564256586,
+        "maximum_Llk_H_at_fixed_Lp": 1.6579615387250992e-05,
+        "Lm_H_at_limit": 0.0022874203846127493,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.005260997697483738,
+        "maximum_Llk_H_at_fixed_Lp": 1.2057902099818902e-05,
+        "Lm_H_at_limit": 0.002291942097900181,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 37.4784,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 153.96135550595017,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.006076987487964434,
+        "maximum_Llk_H_at_fixed_Lp": 1.3916806910800705e-05,
+        "Lm_H_at_limit": 0.002290083193089199,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.004412314469476687,
+        "maximum_Llk_H_at_fixed_Lp": 1.0121314116945967e-05,
+        "Lm_H_at_limit": 0.002293878685883054,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 37.4784,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 156.7136,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.005282202958892454,
+        "maximum_Llk_H_at_fixed_Lp": 1.2106247958500736e-05,
+        "Lm_H_at_limit": 0.0022918937520414995,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.0038360758978876874,
+        "maximum_Llk_H_at_fixed_Lp": 8.804543969818719e-06,
+        "Lm_H_at_limit": 0.0022951954560301814,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 37.4784,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 160.76135550595018,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.0041155836576627185,
+        "maximum_Llk_H_at_fixed_Lp": 9.44343948205045e-06,
+        "Lm_H_at_limit": 0.0022945565605179494,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.002989795908705173,
+        "maximum_Llk_H_at_fixed_Lp": 6.867955986945782e-06,
+        "Lm_H_at_limit": 0.0022971320440130544,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 40.0,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 160.0,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.004334810081498925,
+        "maximum_Llk_H_at_fixed_Lp": 9.944295794111803e-06,
+        "Lm_H_at_limit": 0.0022940557042058886,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.0031488664943015478,
+        "maximum_Llk_H_at_fixed_Lp": 7.2322151229904005e-06,
+        "Lm_H_at_limit": 0.0022967677848770096,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 40.0,
+      "VFout_sensitivity_V": 0.0,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 164.04775550595016,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.0031703873493654487,
+        "maximum_Llk_H_at_fixed_Lp": 7.281487317661516e-06,
+        "Lm_H_at_limit": 0.0022967185126823385,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.002303744319035261,
+        "maximum_Llk_H_at_fixed_Lp": 5.295627140117467e-06,
+        "Lm_H_at_limit": 0.0022987043728598827,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 40.0,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 0,
+      "Vr_V": 166.8,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.0023801867171820462,
+        "maximum_Llk_H_at_fixed_Lp": 5.4709283653615466e-06,
+        "Lm_H_at_limit": 0.0022985290716346384,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.0017299219205386622,
+        "maximum_Llk_H_at_fixed_Lp": 3.978856992990215e-06,
+        "Lm_H_at_limit": 0.0023000211430070096,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    },
+    {
+      "Vo_V": 40.0,
+      "VFout_sensitivity_V": 1.7,
+      "secondary_IR_screen_V": 1.0119388764875439,
+      "Vr_V": 170.84775550595018,
+      "0p55W_Rtheta100_frontier": {
+        "maximum_lambda": 0.0012202893262319781,
+        "maximum_Llk_H_at_fixed_Lp": 2.8081198889112592e-06,
+        "Lm_H_at_limit": 0.0023011918801110883,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      },
+      "0p40W_normal_allocation_frontier": {
+        "maximum_lambda": 0.0008871878847397722,
+        "maximum_Llk_H_at_fixed_Lp": 2.0422690101172793e-06,
+        "Lm_H_at_limit": 0.0023019577309898826,
+        "reason": "Derived DC thermal acceptance frontier in constant-voltage passive model; not measured leakage or guaranteed TVS curve."
+      }
+    }
+  ],
+  "proposed_finished_transformer_acceptance": {
+    "Llk_primary_secondary_H_choice": 2e-05,
+    "Lp_open_min_H": 0.0020736,
+    "lambda_at_Lp_min": 0.009738994935722634,
+    "normal_TVS_power_W_at_11W_and_cold_highref_proxy": 0.33018555060735816,
+    "not_a_measured_or_supplier_confirmed_part_parameter": true
+  },
+  "finite_R_demagnetization_cases": [
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.780290231861922e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 7.436465508379303e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 3.8046530925836746e-06,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00014078415556503302,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 3.449588584453293e-06,
+      "primary_copper_energy_J": 3.721482281500476e-08,
+      "energy_residual_J": -3.4773887328670705e-15,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 159
+    },
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.49713715192585e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 7.003753367959837e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 4.2310198280521266e-06,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00013224553716356297,
+      "output_diode_energy_J": 8.326570858446557e-06,
+      "secondary_copper_energy_J": 3.2311372386253225e-06,
+      "primary_copper_energy_J": 4.134697275744205e-08,
+      "energy_residual_J": -3.678155870157074e-17,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 159
+    },
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.780290231861922e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 7.435099649084409e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 2.345923707707464e-06,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00014219524561620496,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 3.5203678624219277e-06,
+      "primary_copper_energy_J": 1.4074891170975948e-08,
+      "energy_residual_J": -1.609774596608715e-14,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 159
+    },
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.49713715192585e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 7.002264874692207e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 2.438372342875486e-06,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00013388014574558155,
+      "output_diode_energy_J": 8.429490658055137e-06,
+      "secondary_copper_energy_J": 3.312975545752266e-06,
+      "primary_copper_energy_J": 1.4627777953984456e-08,
+      "energy_residual_J": -8.810796059757764e-15,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 159
+    },
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.226695906506797e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 5.054532230800856e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 1.6581213135964294e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00012939363302213457,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 1.943004108403413e-06,
+      "primary_copper_energy_J": 1.5776179489893026e-07,
+      "energy_residual_J": 6.396792817664476e-18,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 160
+    },
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.095151948687575e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 4.855815102163758e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 2.950463467346226e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00011203613335593266,
+      "output_diode_energy_J": 4.761535667627139e-06,
+      "secondary_copper_energy_J": 1.500101312760843e-06,
+      "primary_copper_energy_J": 2.732070516228045e-07,
+      "energy_residual_J": 1.9244588561617704e-18,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 160
+    },
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.226695906506797e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 5.04880228841206e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 3.303774366593045e-06,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00014238609573116482,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 2.3659451348318784e-06,
+      "primary_copper_energy_J": 1.9796828916804183e-08,
+      "energy_residual_J": -9.896055329361442e-17,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 160
+    },
+    {
+      "lambda": 0.01,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.095151948687575e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 4.845466690862673e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 3.490118453273745e-06,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00013649807733730933,
+      "output_diode_energy_J": 5.801168286835652e-06,
+      "secondary_copper_energy_J": 2.265339658104305e-06,
+      "primary_copper_energy_J": 2.0908338126410975e-08,
+      "energy_residual_J": -1.2241862254805391e-14,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 160
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.780290231861922e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 7.16159075355028e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 1.827441390663418e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.0001267229776211914,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 2.899409041669772e-06,
+      "primary_copper_energy_J": 1.788114919789693e-07,
+      "energy_residual_J": -6.670553866217066e-17,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 153
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.49713715192585e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 6.745767254812455e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 2.031383470460637e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00011751792589828956,
+      "output_diode_energy_J": 7.39927681581823e-06,
+      "secondary_copper_energy_J": 2.645969553628182e-06,
+      "primary_copper_energy_J": 1.986050890606275e-07,
+      "energy_residual_J": 4.662069341687669e-18,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 153
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.780290231861922e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 7.155027712983839e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 1.1280694094008403e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.0001335033547625413,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 3.223878996976063e-06,
+      "primary_copper_energy_J": 6.7684207870899e-08,
+      "energy_residual_J": 1.0950441942103595e-17,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 153
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 27,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 4.49713715192585e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 6.738618234911082e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 1.1724925525780744e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00012536871666593124,
+      "output_diode_energy_J": 7.893585864151225e-06,
+      "secondary_copper_energy_J": 3.0180424576293598e-06,
+      "primary_copper_energy_J": 7.034154803382147e-08,
+      "energy_residual_J": -1.18774347995787e-16,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 153
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.226695906506797e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 4.886018630537176e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 7.680731396942416e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 6.995439479458575e-05,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 5.750291866733902e-07,
+      "primary_copper_energy_J": 7.388741107243983e-07,
+      "energy_residual_J": -8.131516293641283e-20,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 154
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 175.1164,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.095151948687575e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 4.70818129514531e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 0.00012651282721507266,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 1.9479712541737864e-05,
+      "output_diode_energy_J": 8.278877830238598e-07,
+      "secondary_copper_energy_J": 4.1698829796334614e-08,
+      "primary_copper_energy_J": 1.2134856917768497e-06,
+      "energy_residual_J": 5.421010862427522e-20,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 155
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 0,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.226695906506797e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 4.859515342803002e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 1.5880968807378427e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00013004975924551943,
+      "output_diode_energy_J": 0.0,
+      "secondary_copper_energy_J": 2.049709022698647e-06,
+      "primary_copper_energy_J": 9.51749858057477e-08,
+      "energy_residual_J": 5.339695699491109e-18,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 153
+    },
+    {
+      "lambda": 0.05,
+      "Ipk_A": 0.35852176738964414,
+      "TVS_V_proxy": 286.972,
+      "Vdiode_V_sensitivity": 0,
+      "output_V": 40,
+      "output_diode_V_sensitivity": 1.7,
+      "Rp_ohm": 7.225860141499999,
+      "Rs_ohm": 0.7056328015000001,
+      "max_step_s": 3.095151948687575e-08,
+      "steps_parameter": 160,
+      "phases": [
+        "secondary_and_clamp",
+        "secondary_only"
+      ],
+      "demag_s": 4.6639693965285885e-06,
+      "stored_energy_J": 0.00014807561206140761,
+      "TVS_energy_J": 1.6775219839299693e-05,
+      "clamp_diode_energy_J": 0.0,
+      "output_energy_J": 0.00012398937640220175,
+      "output_diode_energy_J": 5.269548497093578e-06,
+      "secondary_copper_energy_J": 1.94095528792694e-06,
+      "primary_copper_energy_J": 1.0051203488377504e-07,
+      "energy_residual_J": 1.870248747537495e-18,
+      "max_KCL_residual_A": 0.0,
+      "solver_points": 154
+    }
+  ],
+  "convergence_80_to160": {
+    "cases": 16,
+    "max_delta_TVS_energy_J": 4.813981312645939e-15,
+    "max_delta_demag_s": 2.1187936252503245e-16,
+    "details": [
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 27,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 2.1525224772099907e-17,
+        "delta_demag_s": 1.4399560103323106e-20
+      },
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 27,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 7.65412852456876e-17,
+        "delta_demag_s": 1.0050215325761724e-16
+      },
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 27,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 2.8948621521836596e-17,
+        "delta_demag_s": 1.2747930559471946e-16
+      },
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 27,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 4.800262767032208e-17,
+        "delta_demag_s": 1.3078019299016946e-16
+      },
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 40,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 1.868463202084683e-15,
+        "delta_demag_s": 8.283982224147057e-19
+      },
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 40,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 2.0274716150750494e-15,
+        "delta_demag_s": 7.98328552787178e-18
+      },
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 40,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 8.513909317679237e-17,
+        "delta_demag_s": 4.387630666777276e-17
+      },
+      {
+        "case": {
+          "lambda": 0.01,
+          "output_V": 40,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 4.314399162772984e-15,
+        "delta_demag_s": 1.9739255802814215e-17
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 27,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 4.982552727610806e-16,
+        "delta_demag_s": 7.848353179374171e-17
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 27,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 6.399909898910372e-16,
+        "delta_demag_s": 4.9018643690553615e-17
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 27,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 4.813981312645939e-15,
+        "delta_demag_s": 1.001192943654583e-18
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 27,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 3.154669179963182e-15,
+        "delta_demag_s": 2.6068285984698347e-17
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 40,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 7.521652571618187e-18,
+        "delta_demag_s": 1.2705494208814505e-20
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 40,
+          "TVS_V_proxy": 175.1164,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 2.7647155398380363e-18,
+        "delta_demag_s": 9.417905230636389e-17
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 40,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 0
+        },
+        "delta_TVS_J": 3.5693968397296216e-17,
+        "delta_demag_s": 2.1187936252503245e-16
+      },
+      {
+        "case": {
+          "lambda": 0.05,
+          "output_V": 40,
+          "TVS_V_proxy": 286.972,
+          "output_diode_V_sensitivity": 1.7
+        },
+        "delta_TVS_J": 3.5116630740447685e-16,
+        "delta_demag_s": 7.055784450628322e-19
+      }
+    ]
+  },
+  "analytic_vs_independent_zero_R_ODE": [
+    {
+      "lambda": 0.005,
+      "Vr_V": 108.0,
+      "analytic_regime": "split_to_secondary",
+      "TVS_energy_difference_J": 8.470329472543003e-22,
+      "off_time_difference_s": 5.929230630780102e-21
+    },
+    {
+      "lambda": 0.005,
+      "Vr_V": 173.38257425742574,
+      "analytic_regime": "split_to_secondary",
+      "TVS_energy_difference_J": 1.8973538018496328e-19,
+      "off_time_difference_s": 1.5246593050577406e-20
+    },
+    {
+      "lambda": 0.005,
+      "Vr_V": 180.0,
+      "analytic_regime": "all_clamp_secondary_blocked",
+      "TVS_energy_difference_J": 5.421010862427522e-19,
+      "off_time_difference_s": 1.1011428314305904e-20
+    },
+    {
+      "lambda": 0.01,
+      "Vr_V": 108.0,
+      "analytic_regime": "split_to_secondary",
+      "TVS_energy_difference_J": 0.0,
+      "off_time_difference_s": 1.7787691892340307e-20
+    },
+    {
+      "lambda": 0.01,
+      "Vr_V": 173.38257425742574,
+      "analytic_regime": "all_clamp_secondary_blocked",
+      "TVS_energy_difference_J": 3.7947076036992655e-19,
+      "off_time_difference_s": 5.082197683525802e-21
+    },
+    {
+      "lambda": 0.01,
+      "Vr_V": 180.0,
+      "analytic_regime": "all_clamp_secondary_blocked",
+      "TVS_energy_difference_J": 5.421010862427522e-19,
+      "off_time_difference_s": 1.1011428314305904e-20
+    },
+    {
+      "lambda": 0.05,
+      "Vr_V": 108.0,
+      "analytic_regime": "split_to_secondary",
+      "TVS_energy_difference_J": 3.3881317890172014e-21,
+      "off_time_difference_s": 3.3034284942917713e-20
+    },
+    {
+      "lambda": 0.05,
+      "Vr_V": 173.38257425742574,
+      "analytic_regime": "all_clamp_secondary_blocked",
+      "TVS_energy_difference_J": 3.7947076036992655e-19,
+      "off_time_difference_s": 5.082197683525802e-21
+    },
+    {
+      "lambda": 0.05,
+      "Vr_V": 180.0,
+      "analytic_regime": "all_clamp_secondary_blocked",
+      "TVS_energy_difference_J": 5.421010862427522e-19,
+      "off_time_difference_s": 1.1011428314305904e-20
+    }
+  ],
+  "fault_train_sensitivities": [
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 1,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.00014807561206140761,
+      "allocated_N_period_window_s_sensitivity": 0.0013245033112582781,
+      "energy_rate_W_during_train": 0.11179708710636276,
+      "minimum_repeat_period_s_for0p55W_average": 0.00026922838556619566,
+      "minimum_repeat_period_s_for0p40W_average": 0.000370189030153519,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 1,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.00014807561206140761,
+      "allocated_N_period_window_s_sensitivity": 9.433962264150944e-06,
+      "energy_rate_W_during_train": 15.696014878509207,
+      "minimum_repeat_period_s_for0p55W_average": 0.00026922838556619566,
+      "minimum_repeat_period_s_for0p40W_average": 0.000370189030153519,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 3,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0004442268361842228,
+      "allocated_N_period_window_s_sensitivity": 0.003973509933774834,
+      "energy_rate_W_during_train": 0.11179708710636276,
+      "minimum_repeat_period_s_for0p55W_average": 0.0008076851566985869,
+      "minimum_repeat_period_s_for0p40W_average": 0.001110567090460557,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 3,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0004442268361842228,
+      "allocated_N_period_window_s_sensitivity": 2.830188679245283e-05,
+      "energy_rate_W_during_train": 15.696014878509207,
+      "minimum_repeat_period_s_for0p55W_average": 0.0008076851566985869,
+      "minimum_repeat_period_s_for0p40W_average": 0.001110567090460557,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 9,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0013326805085526684,
+      "allocated_N_period_window_s_sensitivity": 0.011920529801324504,
+      "energy_rate_W_during_train": 0.11179708710636276,
+      "minimum_repeat_period_s_for0p55W_average": 0.0024230554700957604,
+      "minimum_repeat_period_s_for0p40W_average": 0.003331701271381671,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 9,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0013326805085526684,
+      "allocated_N_period_window_s_sensitivity": 8.49056603773585e-05,
+      "energy_rate_W_during_train": 15.696014878509207,
+      "minimum_repeat_period_s_for0p55W_average": 0.0024230554700957604,
+      "minimum_repeat_period_s_for0p40W_average": 0.003331701271381671,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 100,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.014807561206140761,
+      "allocated_N_period_window_s_sensitivity": 0.13245033112582782,
+      "energy_rate_W_during_train": 0.11179708710636276,
+      "minimum_repeat_period_s_for0p55W_average": 0.026922838556619564,
+      "minimum_repeat_period_s_for0p40W_average": 0.0370189030153519,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.35852176738964414,
+      "current_basis": "normal current proxy",
+      "pulses": 100,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.014807561206140761,
+      "allocated_N_period_window_s_sensitivity": 0.0009433962264150943,
+      "energy_rate_W_during_train": 15.696014878509207,
+      "minimum_repeat_period_s_for0p55W_average": 0.026922838556619564,
+      "minimum_repeat_period_s_for0p40W_average": 0.0370189030153519,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 1,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0005478105208889959,
+      "allocated_N_period_window_s_sensitivity": 0.0013245033112582781,
+      "energy_rate_W_during_train": 0.4135969432711919,
+      "minimum_repeat_period_s_for0p55W_average": 0.0009960191288890833,
+      "minimum_repeat_period_s_for0p40W_average": 0.0013695263022224897,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 1,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0005478105208889959,
+      "allocated_N_period_window_s_sensitivity": 9.433962264150944e-06,
+      "energy_rate_W_during_train": 58.067915214233565,
+      "minimum_repeat_period_s_for0p55W_average": 0.0009960191288890833,
+      "minimum_repeat_period_s_for0p40W_average": 0.0013695263022224897,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 3,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0016434315626669878,
+      "allocated_N_period_window_s_sensitivity": 0.003973509933774834,
+      "energy_rate_W_during_train": 0.4135969432711919,
+      "minimum_repeat_period_s_for0p55W_average": 0.0029880573866672504,
+      "minimum_repeat_period_s_for0p40W_average": 0.004108578906667469,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 3,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0016434315626669878,
+      "allocated_N_period_window_s_sensitivity": 2.830188679245283e-05,
+      "energy_rate_W_during_train": 58.067915214233565,
+      "minimum_repeat_period_s_for0p55W_average": 0.0029880573866672504,
+      "minimum_repeat_period_s_for0p40W_average": 0.004108578906667469,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 9,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0049302946880009635,
+      "allocated_N_period_window_s_sensitivity": 0.011920529801324504,
+      "energy_rate_W_during_train": 0.4135969432711919,
+      "minimum_repeat_period_s_for0p55W_average": 0.00896417216000175,
+      "minimum_repeat_period_s_for0p40W_average": 0.012325736720002409,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 9,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.0049302946880009635,
+      "allocated_N_period_window_s_sensitivity": 8.49056603773585e-05,
+      "energy_rate_W_during_train": 58.067915214233565,
+      "minimum_repeat_period_s_for0p55W_average": 0.00896417216000175,
+      "minimum_repeat_period_s_for0p40W_average": 0.012325736720002409,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 100,
+      "within_burst_rate_Hz_sensitivity": 755,
+      "all_diverted_energy_J_upper_within_passive_model": 0.05478105208889959,
+      "allocated_N_period_window_s_sensitivity": 0.13245033112582782,
+      "energy_rate_W_during_train": 0.4135969432711919,
+      "minimum_repeat_period_s_for0p55W_average": 0.09960191288890834,
+      "minimum_repeat_period_s_for0p40W_average": 0.13695263022224896,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    },
+    {
+      "Ipk_A_sensitivity": 0.6895868082043591,
+      "current_basis": "1.6V/Rsense sensitivity, NOT a guaranteed maximum fault current",
+      "pulses": 100,
+      "within_burst_rate_Hz_sensitivity": 106000,
+      "all_diverted_energy_J_upper_within_passive_model": 0.05478105208889959,
+      "allocated_N_period_window_s_sensitivity": 0.0009433962264150943,
+      "energy_rate_W_during_train": 58.067915214233565,
+      "minimum_repeat_period_s_for0p55W_average": 0.09960191288890834,
+      "minimum_repeat_period_s_for0p40W_average": 0.13695263022224896,
+      "not_a_native_fault_latency_or_SOA_acceptance": true
+    }
+  ],
+  "voltage_budget_retained": {
+    "normal_line_crest_V": 357.7960312803931,
+    "TVS_hot_plateau_proxy_V": 286.972,
+    "clamp_diode_V_sensitivity": 1.7,
+    "drain_before_commutation_V_proxy": 646.4680312803932,
+    "additional_to700V_engineering_screen_V_proxy": 53.531968719606766,
+    "additional_to800V_absolute_rating_V_proxy": 153.53196871960677,
+    "not_a_guaranteed_waveform_bound": true
+  },
+  "source_hashes_verified": true,
+  "actual_physical_measurement": false,
+  "graph_CAD_values_changed": false
+}

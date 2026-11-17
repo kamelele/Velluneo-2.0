@@ -1,0 +1,127 @@
+{
+  "scope": "Calculated candidate budgets, not finished-transformer/EIS/normative/PCB acceptance",
+  "sources_checked": [
+    {
+      "filename": "tex.pdf",
+      "sha256": "555d1d7ad971071b09ec2c6b4ae72e9c951c6c7c7eb22d37676d2d6e434ba713",
+      "bytes": 732829
+    },
+    {
+      "filename": "processing.pdf",
+      "sha256": "df69893b3d147b83bc0e09b75ae35ba9c22b852d719ddc821fe7079bf26f27af",
+      "bytes": 1157750
+    },
+    {
+      "filename": "ul-fis-b3.html",
+      "sha256": "4f9cdd521236fb71e63708094b7d2042af0678854d9ebcc882dff81022ed4f0e",
+      "bytes": 142971
+    },
+    {
+      "filename": "ul-polysol.html",
+      "sha256": "0a99dcb8725da8481523dfdb0cf9d5c39de7cc0b0134a671c548758a79965fa4",
+      "bytes": 7259
+    },
+    {
+      "filename": "ul-tape.html",
+      "sha256": "93407e8fd608f330d211b0b6ac0b635c6583d9098adc1fe057db91093890a141",
+      "bytes": 9757
+    },
+    {
+      "filename": "ul-pm9630.html",
+      "sha256": "ed6839ec2f28117d5a0157babf04b134c4b478582c96b72d74d9e381e16943cd",
+      "bytes": 11384
+    }
+  ],
+  "candidate": "T1-ISOL-C1",
+  "winding_graph_preserved": true,
+  "pad_pair_distances": [
+    {
+      "primary": "1",
+      "secondary": "6",
+      "copper_edge_distance_mm": 27.210033438910276
+    },
+    {
+      "primary": "1",
+      "secondary": "10",
+      "copper_edge_distance_mm": 20.1
+    },
+    {
+      "primary": "2",
+      "secondary": "6",
+      "copper_edge_distance_mm": 24.64163456597992
+    },
+    {
+      "primary": "2",
+      "secondary": "10",
+      "copper_edge_distance_mm": 20.64886114323222
+    },
+    {
+      "primary": "4",
+      "secondary": "6",
+      "copper_edge_distance_mm": 20.64886114323222
+    },
+    {
+      "primary": "4",
+      "secondary": "10",
+      "copper_edge_distance_mm": 24.64163456597992
+    },
+    {
+      "primary": "5",
+      "secondary": "6",
+      "copper_edge_distance_mm": 20.1
+    },
+    {
+      "primary": "5",
+      "secondary": "10",
+      "copper_edge_distance_mm": 27.70398644698074
+    }
+  ],
+  "minimum_P_S_copper_gap_mm": 20.1,
+  "gap_after_chosen_per_side_budget_mm": 19.400000000000002,
+  "engineering_P_S_reservation_mm": 8.0,
+  "remaining_total_planar_pad_gap_budget_mm": 11.400000000000002,
+  "pad_gap_does_not_measure_core_yoke_or_leadout_distance": true,
+  "wire_layers_radial_mm": 1.9080000000000001,
+  "tape_total_wraps": 4,
+  "regular_radial_mm": 2.216,
+  "one_seam_radial_mm": 2.293,
+  "unchanged_prior_nominal_STEP_envelope": true,
+  "retained_prior_nominal_STEP_intersection_mm3": {
+    "bobbin": 0.0,
+    "core": 0.0
+  },
+  "native_side_dimension_only_available_mm": 2.499999999999999,
+  "side_budget_before_new_allocations_mm": 0.20699999999999896,
+  "chosen_extra_build_mm": 0.05,
+  "chosen_decenter_mm": 0.05,
+  "residual_side_budget_mm": 0.10699999999999897,
+  "layer_spans_mm": {
+    "P": 9.6,
+    "A": 5.279999999999999,
+    "S": 8.25
+  },
+  "minimum_wire_to_band_end_per_side_mm": {
+    "P": 0.4500000000000002,
+    "A": 2.6100000000000003,
+    "S": 1.125
+  },
+  "nominal_band_to_straight_barrel_end_per_side_mm": 2.8499999999999996,
+  "FIS_B3_required_P_A_tape_wraps": 2,
+  "proposed_P_A_wraps": 2,
+  "bobbin_entry_required_wall_mm": 0.3,
+  "bobbin_wall_all_path_verified": false,
+  "wide_P60_60_arithmetic_only": {
+    "band_mm": 14.5,
+    "P_pitch_mm": 0.24,
+    "P_layer_span_mm": 14.399999999999999,
+    "radial_one_seam_mm": 2.076,
+    "side_dimension_only_margin_mm": 0.42399999999999904,
+    "straight_barrel_end_reserve_per_side_mm": 0.8499999999999996,
+    "not_selected": "Reduces radial build but sacrifices axial exit reserve; no new STEP/all-path tolerance check, winding-process or leakage evidence"
+  },
+  "thermal_class_ceiling_C": 130,
+  "class_ceiling_not_normal_operating_target_or_lifetime": true,
+  "UL_EIS_adoption_above105C_required_in_source": true,
+  "full_product_normative_insulation_limits_established": false,
+  "physical_measurements": false
+}
