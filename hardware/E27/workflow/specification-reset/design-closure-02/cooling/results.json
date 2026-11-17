@@ -1,0 +1,320 @@
+{
+  "scope": "Executed commercial-curve/interfacing/geometry/thermal sensitivities; no measured temperatures, qualified insulation, all-orientation guarantee or user wait.",
+  "inputs_sha256": {
+    "construction.json": "fbcd538996bf2f0a3076f1145cdfafe0abe8fb22817254583f59a16f4d34f4fe",
+    "sources.json": "862349177e7e7467425b8b7ed45f842587b703aebfb6f224c5934f92cf419af5"
+  },
+  "normal12W_40C_gamma1p25_ri0p85": [
+    {
+      "cooler": "Nano7050",
+      "sink_C": 78.25,
+      "primary_plate_C": 81.65,
+      "LED_board_C": 80.25,
+      "driver_interface_heat_W": 4,
+      "sink_to_air_heat_W": 12,
+      "power_balance_residual_W": 0.0,
+      "gamma_max_for_plate68": 0.803921568627451
+    },
+    {
+      "cooler": "Micro8650",
+      "sink_C": 68.5,
+      "primary_plate_C": 71.9,
+      "LED_board_C": 70.5,
+      "driver_interface_heat_W": 4,
+      "sink_to_air_heat_W": 12,
+      "power_balance_residual_W": 0.0,
+      "gamma_max_for_plate68": 1.0789473684210527
+    },
+    {
+      "cooler": "Micro8680",
+      "sink_C": 64.25,
+      "primary_plate_C": 67.65,
+      "LED_board_C": 66.25,
+      "driver_interface_heat_W": 4,
+      "sink_to_air_heat_W": 12,
+      "power_balance_residual_W": 0.0,
+      "gamma_max_for_plate68": 1.2680412371134022
+    }
+  ],
+  "interface_screen": {
+    "two_30x30mm_TIM_interfaces_K_per_W": 0.19068062222222223,
+    "AM997_ceramic_2mm_20WmK_30x30contact_K_per_W": 0.11111111111111112,
+    "primary_6063_plate_2mm_through_K_per_W": 0.014814814814814814,
+    "adapter_3mm_radial_annulus_screen_K_per_W": 0.23316044566367958,
+    "adapter_to_fin_end_TIM_450mm2_K_per_W": 0.19068062222222223,
+    "additional_contact_spreading_reserve_K_per_W": 0.1,
+    "sum_screen_K_per_W": 0.8404476160340499
+  },
+  "geometric_budgets": {
+    "ceramic_square_diagonal_mm": 82.02438661763952,
+    "driver_board_allocation_diagonal_mm": 81.41252974819048,
+    "housing_inner_diameter_mm": 84,
+    "ceramic_radial_fit_remaining_mm": 0.9878066911802392,
+    "board_radial_fit_remaining_mm": 1.2937351259047603,
+    "ceramic_primary_plate_overhang_each_side_mm": 14.0,
+    "TIM_force_30x30_at10psi_N": 62.05284,
+    "fin_end_TIM_force_450mm2_at10psi_N": 31.02642,
+    "no_component_packing_or_normative_separation_proof": true
+  },
+  "smooth60mm_shell_sensitivities": [
+    {
+      "h_assumed_W_per_m2K": 3,
+      "emissivity_assumed": 0.5,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 1.841480617809971
+    },
+    {
+      "h_assumed_W_per_m2K": 3,
+      "emissivity_assumed": 0.85,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 2.576340106183711
+    },
+    {
+      "h_assumed_W_per_m2K": 5,
+      "emissivity_assumed": 0.5,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 2.3692681836130562
+    },
+    {
+      "h_assumed_W_per_m2K": 5,
+      "emissivity_assumed": 0.85,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 3.104127671986796
+    },
+    {
+      "h_assumed_W_per_m2K": 8,
+      "emissivity_assumed": 0.5,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 3.160949532317684
+    },
+    {
+      "h_assumed_W_per_m2K": 8,
+      "emissivity_assumed": 0.85,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 3.8958090206914244
+    },
+    {
+      "h_assumed_W_per_m2K": 12,
+      "emissivity_assumed": 0.5,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 4.216524663923854
+    },
+    {
+      "h_assumed_W_per_m2K": 12,
+      "emissivity_assumed": 0.85,
+      "area_m2": 0.00942477796076938,
+      "heat_at68C_40Cambient_W": 4.951384152297595
+    }
+  ],
+  "steady_sweep_count": 324,
+  "steady_sweep_definitions": {
+    "driver_W": [
+      2,
+      4,
+      6
+    ],
+    "light_heat_W": [
+      0,
+      4,
+      8
+    ],
+    "multiplier": [
+      1,
+      1.1,
+      1.25,
+      1.5
+    ],
+    "interface_K_per_W": [
+      0.5,
+      0.85,
+      1.2
+    ]
+  },
+  "steady_sweep_sha256": "8880656afd762c355e560abb9728a0360ae6a86bd8c60eaf64e8615b614f7e92",
+  "steady_sweep_summary": [
+    {
+      "cooler": "Nano7050",
+      "multiplier": 1,
+      "cases": 27,
+      "primary_plate_min_C": 48.68719637748116,
+      "primary_plate_max_C": 81.4,
+      "cases_plate_le68": 16
+    },
+    {
+      "cooler": "Nano7050",
+      "multiplier": 1.1,
+      "cases": 27,
+      "primary_plate_min_C": 49.45591601522928,
+      "primary_plate_max_C": 84.82000000000001,
+      "cases_plate_le68": 13
+    },
+    {
+      "cooler": "Nano7050",
+      "multiplier": 1.25,
+      "cases": 27,
+      "primary_plate_min_C": 50.60899547185145,
+      "primary_plate_max_C": 89.95,
+      "cases_plate_le68": 11
+    },
+    {
+      "cooler": "Nano7050",
+      "multiplier": 1.5,
+      "cases": 27,
+      "primary_plate_min_C": 52.53079456622174,
+      "primary_plate_max_C": 98.50000000000001,
+      "cases_plate_le68": 6
+    },
+    {
+      "cooler": "Micro8650",
+      "multiplier": 1,
+      "cases": 27,
+      "primary_plate_min_C": 46.76539728311087,
+      "primary_plate_max_C": 72.8,
+      "cases_plate_le68": 24
+    },
+    {
+      "cooler": "Micro8650",
+      "multiplier": 1.1,
+      "cases": 27,
+      "primary_plate_min_C": 47.341937011421955,
+      "primary_plate_max_C": 75.36,
+      "cases_plate_le68": 21
+    },
+    {
+      "cooler": "Micro8650",
+      "multiplier": 1.25,
+      "cases": 27,
+      "primary_plate_min_C": 48.20674660388859,
+      "primary_plate_max_C": 79.2,
+      "cases_plate_le68": 19
+    },
+    {
+      "cooler": "Micro8650",
+      "multiplier": 1.5,
+      "cases": 27,
+      "primary_plate_min_C": 49.64809592466631,
+      "primary_plate_max_C": 85.60000000000001,
+      "cases_plate_le68": 13
+    },
+    {
+      "cooler": "Micro8680",
+      "multiplier": 1,
+      "cases": 27,
+      "primary_plate_min_C": 45.80449773592572,
+      "primary_plate_max_C": 69.0,
+      "cases_plate_le68": 26
+    },
+    {
+      "cooler": "Micro8680",
+      "multiplier": 1.1,
+      "cases": 27,
+      "primary_plate_min_C": 46.2849475095183,
+      "primary_plate_max_C": 71.18,
+      "cases_plate_le68": 25
+    },
+    {
+      "cooler": "Micro8680",
+      "multiplier": 1.25,
+      "cases": 27,
+      "primary_plate_min_C": 47.005622169907156,
+      "primary_plate_max_C": 74.45,
+      "cases_plate_le68": 22
+    },
+    {
+      "cooler": "Micro8680",
+      "multiplier": 1.5,
+      "cases": 27,
+      "primary_plate_min_C": 48.20674660388859,
+      "primary_plate_max_C": 79.9,
+      "cases_plate_le68": 18
+    }
+  ],
+  "fault_heat_frontiers": [
+    {
+      "plate_target_C": 80,
+      "maximum_continuous_driver_only_heat_W_for_declared_screen": 14.361702127659578
+    },
+    {
+      "plate_target_C": 88.6,
+      "maximum_continuous_driver_only_heat_W_for_declared_screen": 18.380952380952376
+    },
+    {
+      "plate_target_C": 95,
+      "maximum_continuous_driver_only_heat_W_for_declared_screen": 21.276595744680858
+    },
+    {
+      "plate_target_C": 105,
+      "maximum_continuous_driver_only_heat_W_for_declared_screen": 25.595238095238102
+    },
+    {
+      "plate_target_C": 110,
+      "maximum_continuous_driver_only_heat_W_for_declared_screen": 27.976190476190478
+    }
+  ],
+  "cooling_sensitivities": [
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 837.5,
+      "energy_balance_residual_J": 4.774847184307873e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 837.5,
+      "energy_balance_residual_J": -6.821210263296962e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 1567.5,
+      "energy_balance_residual_J": 4.547473508864641e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 1567.25,
+      "energy_balance_residual_J": -6.366462912410498e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 1174.5,
+      "energy_balance_residual_J": -2.1373125491663814e-11
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 1174.25,
+      "energy_balance_residual_J": 1.5120349416974932e-11
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 1894.5,
+      "energy_balance_residual_J": -6.821210263296962e-13
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 1894.25,
+      "energy_balance_residual_J": 6.207301339600235e-11
+    }
+  ],
+  "limits": [
+    "gamma1.25 is a stress hypothesis inspired by another manufacturer orientation example; it is not a MechaTronix all-orientation bound. Adapter/end-cover/fixture effects are included only by that unproven multiplier.",
+    "Material thermal conductivities and TIM impedance are source-conditioned typical values plus chosen screening deratings; no guaranteed hot minimum, pressure retention or actual total interface resistance is established.",
+    "Annular radial spreading is a designed continuous-sheet surrogate; real distributed fin contacts are not a continuous annulus. Extra reserve does not validate this approximation.",
+    "C1air/core rise, individual hotspot-to-plate paths and sensor gradients/lag still require a full design/model; primary plate temperature alone does not determine them.",
+    "Source-off cooldown extrapolates low-temperature heat rejection and assumes lumped capacities and1.866J residual energy. It does not select a complete-assembly service waiting time.",
+    "All mechanical dimensions are proposed design allocations; no approved spatial intent, supplier confirmation or component placement is created."
+  ]
+}

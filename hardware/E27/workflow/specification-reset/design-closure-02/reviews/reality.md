@@ -1,0 +1,57 @@
+# Reality review — DESIGN-CLOSURE-02
+
+- Task/stage: DESIGN-CLOSURE-02-r1, bounded schematic-development proposals and calculations; complete schematic and PCB entry remain blocked.
+- Role/actual actor: Reality Checker, /root/c2_reality. This actor did not implement the controller, transformer, cooling or integration files and remained read-only in the product repository. Independent scratch work is outside it.
+- Base: ea3b23fced193861c94637524d482b7c0e96d33e.
+- Final inspected body: **d02eab969d03e53213033b2cd71d3c3f079b050bcfc2633e2053bbbe1e19c526**, all86 members verified. The original assigned089fd74f body was superseded by the coordinator's disclosed UTF8 presentation correction and refreshed retained-failure work report; I rechecked the final body and affected README/report scope. No numerical/model/CAD change is carried forward silently.
+- Recommendation: **ready_for_human_review for this bounded design-input packet only**. This is not permission to apply ECO-03, approve an enclosure/transformer, enter PCB placement, energize hardware or release manufacturing.
+
+## Actual evidence inspected and independent checks
+
+Read AGENTS.md, the exact supplied toolkit Reality role and review-report template, task/acceptance contracts, current requirement scope, controller source/probe/fault/ECO files, transformer source/geometry/air-energy/DC/flux files, cooling construction/source/interface/steady/transient/housing files, combined cross-check and fresh tool reports. Checked13 fresh-source instances against their actual native bytes and separately checked all6 retained transformer material files and9 repository dependencies. Inspected native TMP708/TPS7A16 pin and limit information, the UCC2871x protection/absolute-limit text, the actual MechaTronix thermal table image, and the UL FIS-B3 PIT-S listing. No expired-standard machine text or access bypass was used. Web-only material/coating interpretations were not upgraded to independently confirmed native files.
+
+Executed independent scratch `work/closure-reviews/reality-check.py` successfully with the external scientific libraries. It verifies the final body/source hashes and uses independently formulated arithmetic/integration, plus explicitly identified author-function numerical replay:
+
+- Direct SciPy quadrature of the proposed piecewise winding MMF energy, with the rounded-barrel perimeter, gives **14.061521386uH** primary-referred PS air-energy inductance. This agrees with the saved analytic polynomial integral. It confirms the declared1D sheet calculation, not physical leakage or omitted3D/fringing/end-wire fields.
+- An independently rearranged Micro8650 source-curve equation plus housing radiation/convection solve gives **3.526792275W** housing heat and **65.346415450C** primary plate in the declared h3/emissivity0.85/viewfactor1/multiplier1.25/interface0.85K/W scenario. A separate algebraic frontier gives **emissivity-times-viewfactor0.652243548** for the68C plate target with zero housing-convection credit. This verifies the model, not those boundary properties.
+- Independent passive RC arithmetic gives **1.530404880s** for35V to7.7V with maximum stated CDD/R13 and no continuing injection. The stated7.541626uA injection frontier follows directly from7.7V/R13max.
+- Replayed only the source-pinned pure trajectory functions at **640** demagnetization subdivisions for the saved combined-proposal worst case. Minimum VDD is **11.5144635237V**, about35.7nV below the saved320-step result. This is numerical consistency of the behavioral trajectory, not independent derivation or validation of the actual TI controller law.
+
+The scratch execution did not run original top-level writers, change source evidence or energize hardware. I inspected, rather than reran, the pinned native CAD checks. Their doctor/connectivity/capture/ERC success remains limited to native source consistency; requirements exit1 and full work-check exit2 remain failures.
+
+## Controller, faults and proposed backup
+
+The encrypted libraries' visible identity and missing NTC interface, together with the actual ngspice diagnostics/no-circuit result, support the packet's refusal to claim a native UCC28711 simulation. A zero API return is correctly not called a functional pass. A compatible vendor runtime may still be useful for common-control behavior; it cannot supply missing NTC/CBC model coverage by inference. The owner has no TINA-TI and no runtime access or export declaration is fabricated.
+
+The RC reset solution is valid under the stated stopped-switching, intact-shunt and bounded-injection conditions. It does not set an actual retry period or bound continuous short-circuit power: fault initiation can occur near UVLO, R13 can fail, and ongoing bias/real source-current laws are not established. The static OVP and pulse-energy tables correctly identify assumed current, pulse number, diode drop and25C threshold conditions; none bounds propagation delay, saturation, parasitics or real fault clearing.
+
+TMP708's pin map and TPS7A16 fixed-version DNC/EN/IN/PowerPAD treatment agree with the inspected source pages. The nominal setpoint and resistor/device-error screen are mathematically consistent; source temperature-error conditions cover the indicated trip region. OT absolute limits, sink capability, regulated bias and minimum-load bleed support a plausible candidate interface only. Actual NTC-node voltage, powered/unpowered output behavior, full-temperature leakage, LDO current outside the quoted conditions and charging waveform are not established merely by comparing absolute maxima. The packet correctly keeps the85uA and charge-port results as sensitivities and leaves the seven-position ECO unapplied.
+
+No guaranteed restart band follows from nominal10C hysteresis. The backup can address RT1-open only when its own supply, placement and interfaces work; shared controller input/ground/trace failures remain common causes. Exact capacitor effective-C/ESR/native footprints, CDD sharing, startup/source conditions and sensor gradient/lag must be qualified before application.
+
+## Transformer and affected evidence
+
+The interleaved P60/A22/S15/S15/P60 sequence conserves the intended turn/pin graph and produces the expected lower balanced-sheet field energy. PSD/current-coordinate checks, analytic-versus-midpoint agreement and the independent quadrature are useful implementation checks. The previous74.25uH sheet result identifies an unsupported low-leakage assumption; it does not prove a manufactured baseline failure. The selected14.06uH does not guarantee20uH because common sheet widths, round-wire occupancy, axial/leadout/gap fields, core/yokes and actual three-winding equivalent parameters remain unqualified.
+
+The2.230mm build,0.170mm side and1.20mm end-pocket budgets follow the proposed layers/allowances. They are not supplier tolerances, bending/clearance results or a fresh STEP collision check. The continuous primary bridge, sleeve size, crossover, stripped ends and all primary/core-to-secondary paths require a real3D construction and process assessment. FIS-B3 material-list membership does not recognize the finished build or replace applicable end-product insulation clauses.
+
+DC copper and flux screens are appropriately separated from total loss and safe operating flux. A100mA is an auxiliary-current sensitivity; separate RMS witnesses and isolated-wire skin calculations do not establish actual proximity/fringing/core/termination loss or fault temperatures. Changing winding distribution also changes DCR/leakage/capacitance/EMI; the combined256-case diagnostic advances only its declared ideal-coupled/DCR/bias domain. It cannot make all previous winding-dependent evidence current.
+
+## Cooling, mechanics and service
+
+Commercial source power/rise points, rather than the50K catalogue headline resistance, are used consistently. The explicit stack/interface calculations and added housing branch are concrete improvements over inverse requirements alone. However, the0.84045K/W path screen is not a proven0.85K/W assembly; TIM pressure/retention, hot material properties, discrete fin-end spreading and contact area remain actual acceptance inputs. The illustrated62N interface load needs a real supported carrier, not PCB/component loading. A ceramic material value, thermal pad dielectric figure or anodized finish does not establish complete reinforced insulation.
+
+The source's different-manufacturer25% orientation example is correctly used only as a multiplier sensitivity. Neither it nor chosen h/emissivity/view factor establishes the required all-orientation/fixture envelope. C3's0.35K conditional node reserve is very small. C2b improves the selected model but also reduces the board allocation to66x32mm; all31-component packing, solder/lead/service access and actual primary-cover/metal/ceramic paths remain open. Nominal diagonals and a2D allocation are not safe clearances or saved placement.
+
+Primary-plate temperature cannot establish C1 local air/core rise, LED junction, T1 hot winding/core or Q1/TVS junction temperatures. Individual paths, actual correlated losses/ripple, sensor gradients/lag and fault-power evidence remain mandatory. The14–32min cooldowns are explicitly hypothetical capacities/low-temperature extrapolation; they are not selected user instructions or measured complete-lamp service waits.
+
+## Retained findings, owners and observable closure
+
+No new blocker/major against the honesty or internal mathematical scope of this bounded packet was found. Existing product majors remain and prevent full schematic/PCB acceptance:
+
+1. ENTRY-START/PROT, RC-BIAS-001/RC-MODEL/CTRL/RC-PROT-001; coordinator/controller owner: establish source-valid AC startup and actual normal/open/short/OVP/feedback/NTC fault/recovery trains with voltage/current/energy bounds. Close the exact ECO qualification conditions before any graph/CAD application.
+2. ENTRY-T1/ISOL, T1-C2-01–04/ELEC-MAG-001/CLAMP-01; coordinator/winding and safety owners: complete builder/material/process adoption and actual3D exits/yokes/barriers, verify effective three-winding parameters and total waveform-specific loss. Obtain legitimate applicable normative limits; no8mm planning reserve or ceramic overhang closes them.
+3. ENTRY-THERM/SOA, R-THERMAL/R-BASE-LIFE/RC-COMP-002/RC-INPUT-001; coordinator/thermal/power-stage owners: establish actual heat/contact/finish/orientation/fixture and component paths, hot dynamic clamp/MOS/diode/surge/fuse behavior, pulse temperatures and fault clearing. Nominal geometry and source typicals are insufficient.
+4. ENTRY-MECH-PROCESS/SERVICE/STAGE, U05–U11/R-OFFLINE/R-REPLACE; coordinator, owner and relevant supplier/test owners: freeze real housing/interfaces/packing/process and independently reviewed spatial intent; establish complete storage/access/cooling conditions and later authorized matched-hardware plan/personnel/instruments/stop limits. Preserve actual requirements/configuration failures and obtain real affected-stage decisions.
+
+The new proposals invalidate earlier winding/thermal/ECO-specific assumptions where their physical inputs change; they do not invalidate the unchanged active31-position intent by an applied circuit edit, because none occurred. All four final role reports, frozen-member consistency and guarded publication are coordinator obligations still separate from this review. This recommendation must not be transferred to changed sources without affected re-review.

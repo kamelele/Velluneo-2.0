@@ -1,0 +1,212 @@
+{
+  "revision": "COOL-C2-candidates",
+  "status": "dimensioned engineering proposals; owner has NOT selected an envelope; no productPCB or measured assembly",
+  "heat_W": {
+    "driver": 4,
+    "light_compartment_no_optical_credit": 8
+  },
+  "ambient_C": 40,
+  "cooler_rise_points_W_K": {
+    "Nano7050": [
+      [
+        5,
+        16
+      ],
+      [
+        10,
+        27
+      ],
+      [
+        15,
+        36
+      ],
+      [
+        20,
+        46
+      ]
+    ],
+    "Micro8650": [
+      [
+        5,
+        12
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        15,
+        27
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        25,
+        40
+      ],
+      [
+        30,
+        46
+      ],
+      [
+        35,
+        52
+      ],
+      [
+        40,
+        58
+      ]
+    ],
+    "Micro8680": [
+      [
+        5,
+        10
+      ],
+      [
+        10,
+        17
+      ],
+      [
+        15,
+        23
+      ],
+      [
+        20,
+        28
+      ],
+      [
+        25,
+        34
+      ],
+      [
+        30,
+        39
+      ],
+      [
+        35,
+        44
+      ],
+      [
+        40,
+        48
+      ],
+      [
+        45,
+        53
+      ]
+    ]
+  },
+  "envelopes_mm": [
+    {
+      "id": "C0",
+      "diameter": 60,
+      "height": 120,
+      "status": "conventional-scale comparison; no selected cooler or verified packing"
+    },
+    {
+      "id": "C1",
+      "diameter": 76,
+      "height": 155,
+      "cooler": "Nano7050",
+      "driver_chamber_height": 32,
+      "status": "intermediate; shared12W thermal screen fails proposed68C node target"
+    },
+    {
+      "id": "C2",
+      "diameter": 90,
+      "height": 165,
+      "cooler": "Micro8650",
+      "driver_chamber_height": 37,
+      "status": "intermediate; shared12W stress screen fails68C; may need lower loss/heat or different thermal layout"
+    },
+    {
+      "id": "C3",
+      "diameter": 90,
+      "height": 195,
+      "cooler": "Micro8680",
+      "driver_chamber_height": 37,
+      "status": "largest study; conditional node screen fits68C, actual orientation/mounting/contact/component evidence missing"
+    }
+  ],
+  "primary_thermal_island_mm": [
+    30,
+    30,
+    2
+  ],
+  "ceramic_barrier_mm": [
+    58,
+    58,
+    2
+  ],
+  "ceramic_material": "Ferrotec AM997 (99.7% alumina) proposed grade; electrical safety/material approval NOT inferred",
+  "ceramic_thermal_k_screen_WmK": 20,
+  "ceramic_source_typical_WmK": 33,
+  "secondary_adapter_mm": [
+    58,
+    58,
+    3
+  ],
+  "adapter_material": "EN AW6063-T6; machined source stock/process to confirm",
+  "adapter_thermal_k_screen_WmK": 150,
+  "adapter_source_typical20C_WmK": 201,
+  "TIM": "Laird Tflex HD7.5 1mm at10psi source comparison; procurement/tolerances/pressure-retention/material compatibility not confirmed",
+  "TIM_impedance_screen_C_in2_per_W": 0.133,
+  "TIM_source_typical_1mm_10psi_C_in2_per_W": 0.119,
+  "primary_30x30_contact_area_mm2": 900,
+  "minimum_effective_adapter_fin_contact_area_mm2_required": 450,
+  "interface_K_per_W_design_acceptance": 0.85,
+  "LED_board_to_sink_K_per_W_design_acceptance": 0.25,
+  "housing_C2_C3_mm": {
+    "outer_diameter": 90,
+    "inner_diameter": 84,
+    "unqualified_insulating_wall": 3,
+    "reserved_driver_board_box": [
+      72,
+      38,
+      23
+    ]
+  },
+  "insulation_design": "No conductive through-bolt crosses the ceramic. Primary plate remains inside a separate primary cover. Ceramic overhang14mm is a design dimension, NOT a certified creepage/clearance minimum. Insulating carrier/clamps, lead feedthroughs, all3D edge paths, impact/cracking, CTI/solid insulation and applicable standards remain open. Thermal pad dielectric breakdown is not reinforced-insulation acceptance.",
+  "cooler_contact_design": "Commercial radial extrusion does NOT provide a solid58mm plate. Designed58x58x3 adapter and die-cut fin-end TIM require verified actual contact map>=450mm2, flatness and controlled pressure. End covering can change convection; vendor bare-cooler data do not validate assembled geometry.",
+  "nominal_axial_stack_mm": {
+    "C1": {
+      "cap": 28,
+      "driver_including_primary_plate": 32,
+      "barrier_TIM_adapter_finTIM": 8,
+      "cooler": 50,
+      "LEDboard": 3,
+      "diffuser": 34,
+      "total": 155
+    },
+    "C2": {
+      "cap": 28,
+      "driver_including_primary_plate": 37,
+      "barrier_TIM_adapter_finTIM": 8,
+      "cooler": 50,
+      "LEDboard": 3,
+      "diffuser": 39,
+      "total": 165
+    },
+    "C3": {
+      "cap": 28,
+      "driver_including_primary_plate": 37,
+      "barrier_TIM_adapter_finTIM": 8,
+      "cooler": 80,
+      "LEDboard": 3,
+      "diffuser": 39,
+      "total": 195
+    },
+    "C2b": {
+      "cap": 28,
+      "driver_including_primary_plate": 45,
+      "barrier_TIM_adapter_finTIM": 8,
+      "cooler": 50,
+      "LEDboard": 3,
+      "diffuser": 39,
+      "total": 173
+    },
+    "status": "Nominal allocated dimensions; cap/diffuser/interfaces and manufacturing tolerances unqualified. Primary2mm plate is inside driver volume.8mm stack countsTIM1+ceramic2+TIM1+adapter3+finTIM1; no hidden missing4mm."
+  }
+}

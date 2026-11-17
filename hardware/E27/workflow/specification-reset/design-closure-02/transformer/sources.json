@@ -1,0 +1,154 @@
+{
+  "retrieved_or_inspected": "2026-11-17",
+  "scope": "Retained source-pinned geometry/material data and accessible primary web references; originals not redistributed",
+  "repository_inputs": [
+    {
+      "path": "pcb-readiness-01/isolation/construction-candidate.json",
+      "sha256": "b15afd5a4a996b7e28bc81a2b0fe381154a8af2445977240b32c811a37a550cc",
+      "bytes": 3488
+    },
+    {
+      "path": "pcb-readiness-01/isolation/sources.json",
+      "sha256": "a87bb10fcb8e3c63db8c6a8d9714cae908c66731e321b091a4e207a019dc2698",
+      "bytes": 4852
+    },
+    {
+      "path": "electrical-integration/magnetics/winding-results.json",
+      "sha256": "b4964267013eddb58fa4407792a57809e94894bf56bba8b1fd7a04c83bd78079",
+      "bytes": 10634
+    },
+    {
+      "path": "electrical-integration/magnetics/window-results.json",
+      "sha256": "0e495f2bc4aa05baf09bcbad38f53a334d642f8ffdaf18956a97bf8eb7981935",
+      "bytes": 2117
+    },
+    {
+      "path": "transformer-footprint/source-step-faces.json",
+      "sha256": "fb4872226bbccab48e8622123bcab8856e4d342a4b3c8fec575714f74500fef4",
+      "bytes": 166486
+    },
+    {
+      "path": "transformer-footprint/source-step-findings.json",
+      "sha256": "a169c159ee7c9185201e590d104430db13f1179642cad6bc5b203d2a2e176eb7",
+      "bytes": 6312
+    },
+    {
+      "path": "transformer-footprint/geometry-contract.json",
+      "sha256": "109a8d8be457b0f5bb0128eada3f6cb42bd6905a9f9853e92570b89c567cba79",
+      "bytes": 3264
+    },
+    {
+      "path": "schematic-intent/intended-connectivity.json",
+      "sha256": "6f0c7df9dbc6b34c3ed041149779f99b6504b9e1a835082542bf89bb9044c0ca",
+      "bytes": 15121
+    },
+    {
+      "path": "electrical-integration/proposed-parts.json",
+      "sha256": "142919c3a4e7eff9e5dc176639d2e9aff4432bf53173a2ee26e2552cd0cab5ae",
+      "bytes": 5140
+    }
+  ],
+  "retained_material_bytes": [
+    {
+      "filename": "tex.pdf",
+      "url": "https://www.furukawaelectric.com/en/product/catalogue/pdf/tex_m028_e.pdf",
+      "bytes": 732829,
+      "sha256": "555d1d7ad971071b09ec2c6b4ae72e9c951c6c7c7eb22d37676d2d6e434ba713",
+      "pages": [
+        1,
+        2
+      ],
+      "inspection_scope": "Relevant manufacturer technical pages visually rendered and inspected"
+    },
+    {
+      "filename": "processing.pdf",
+      "url": "https://www.tdk-electronics.tdk.com/download/531538/67fa2f237fae90fab6f31f4a10f42772/pdf-processingnotes.pdf",
+      "bytes": 1157750,
+      "sha256": "df69893b3d147b83bc0e09b75ae35ba9c22b852d719ddc821fe7079bf26f27af",
+      "pages": [
+        7,
+        17
+      ],
+      "inspection_scope": "Relevant manufacturer technical pages visually rendered and inspected"
+    },
+    {
+      "filename": "ul-fis-b3.html",
+      "url": "https://iq.ul.com/systems/list.aspx?ULID=103091579",
+      "bytes": 142971,
+      "sha256": "4f9cdd521236fb71e63708094b7d2042af0678854d9ebcc882dff81022ed4f0e",
+      "pages": [],
+      "inspection_scope": "FIS-B3 TableI, filament/enamel/Ground-Interwinding/optionalTapes; actualfunctions matter"
+    },
+    {
+      "filename": "ul-polysol.html",
+      "url": "https://iq.ul.com/ul/cert.aspx?ULID=101732414",
+      "bytes": 7259,
+      "sha256": "0a99dcb8725da8481523dfdb0cf9d5c39de7cc0b0134a671c548758a79965fa4",
+      "pages": [],
+      "inspection_scope": "Polysol180 MW82-C/180C manufacturing-site entry"
+    },
+    {
+      "filename": "ul-tape.html",
+      "url": "https://iq.ul.com/ul/cert.aspx?ULID=101796084",
+      "bytes": 9757,
+      "sha256": "93407e8fd608f330d211b0b6ac0b635c6583d9098adc1fe057db91093890a141",
+      "pages": [],
+      "inspection_scope": "1350F-1(b) exactgrade,130C,conditionedCTImarking"
+    },
+    {
+      "filename": "ul-pm9630.html",
+      "url": "https://iq.ul.com/ul/cert.aspx?ULID=232751",
+      "bytes": 11384,
+      "sha256": "ed6839ec2f28117d5a0157babf04b134c4b478582c96b72d74d9e381e16943cd",
+      "pages": [],
+      "inspection_scope": "PM-9630 black,thicknessconditionedRTI/CTIperformancelevel3"
+    }
+  ],
+  "primary_web_only": [
+    {
+      "url": "https://www.ti.com/lit/ml/slup105/slup105.pdf",
+      "pages": "3",
+      "basis": "Air-energy/current-sheet leakage approximation and caveat on window/fringing geometry; own integration derived separately"
+    },
+    {
+      "url": "https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/slup338.pdf",
+      "pages": "18, Figure22",
+      "basis": "Interleaving reduces transition leakage but changes capacitance; spreading windings over useful breadth is a design tradeoff"
+    },
+    {
+      "url": "https://www.tdk-electronics.tdk.com/inf/80/db/fer/efd_25_13_9.pdf",
+      "pages": "2-3",
+      "basis": "October2022 exact-part core/bobbin data read via public primary web renderer; native localbyte refreshHTTP403; retained geometry is earlier sourcepinned result"
+    },
+    {
+      "url": "https://www.tdk-electronics.tdk.com/download/528882/990c299b916e9f3eb7e44ad563b7f0b9/pdf-n87.pdf",
+      "pages": "2,5",
+      "basis": "June2025 native public web rendering: N87 typical sine test conditions/Bs only; no actual flyback loss curve fit or fresh localbyte claim"
+    }
+  ],
+  "prior_native_STEP_identity": {
+    "bobbin": "f6acdbbccb291fd39ac8028c163d7bdb47fa6849c8c7d94dce01076f05dfb2f0",
+    "core": "062a59009fed08ba69f30db6acdb0448a2e1f085f2e5882620ddc56f0536783f",
+    "current_task_imported_or_collided_STEP": false
+  },
+  "new_retrieval_attempts": [
+    {
+      "folder": "closure-transformer-sources",
+      "file": "bobbin.step",
+      "url": "https://product.tdk.com/system/files/dam/doc/product/ferrite/ferrite/ferrite-acc/3doutline_step/c61036-a0162-b202_efd25_sw.step",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "folder": "closure-transformer-sources",
+      "file": "core.step",
+      "url": "https://product.tdk.com/system/files/dam/doc/product/ferrite/ferrite/ferrite-core/3doutline_step/c61036-a0162-c001_efd25.step",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "folder": "closure-transformer-sources",
+      "file": "n87.pdf",
+      "url": "https://www.tdk-electronics.tdk.com/download/528882/990c299b916e9f3eb7e44ad563b7f0b9/pdf-n87.pdf",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

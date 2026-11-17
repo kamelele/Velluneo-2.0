@@ -1,0 +1,152 @@
+{
+  "revision": "DESIGN-CLOSURE-02-r1",
+  "decision": "blocked_for_PCB_entry; specific design proposals and checked analyses",
+  "graph_changes": false,
+  "physical_measurements": false,
+  "criteria": [
+    {
+      "id": "ENTRY-START",
+      "gate": "schematic",
+      "owner": "Coordinator/controller analyst",
+      "retained_requirement_or_finding_ids": [
+        "RC-BIAS-001",
+        "RC-MODEL",
+        "RC-CTRL",
+        "U05",
+        "R-SUPPLY"
+      ],
+      "remaining_acceptance": "Source-conditioned native-controller startup from AC insertion incl first3 pulses, VS load, HV source,gate/CS/VS parasitics, cold/high/low line and <=1s requirement; VDD trough/crest and recovery must stay within exact source limits. Existing diagnostic is not this proof.",
+      "previous_packet_advance": "64 coupled diagnostic corners advance auxiliary takeover; retain4.7ohm.",
+      "advance": "Obtained actualTI encrypted28710 libraries and executed unsupported runtime probe.256 proposedDCR/bias diagnostics and sourcecharge/reset sensitivity now available; native28711 and AC-start gap retained.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-PROT",
+      "gate": "schematic",
+      "owner": "Coordinator/protection analyst",
+      "retained_requirement_or_finding_ids": [
+        "RC-PROT-001",
+        "R-FAULT",
+        "R-EMPTY",
+        "U06"
+      ],
+      "remaining_acceptance": "Establish no-load/CV/OVP/short/NTCopen/NTCshort/unplug/reinsert pulse trains, energy and recovery. Prove passive safety with NTCopen or propose separately reviewed backup ECO. Do not assume11W fault cap,40V accepted OVP or controller typical overtemperature as fallback.",
+      "previous_packet_advance": "Exact fault state/test contract and NTC native tolerance interval now explicit.",
+      "advance": "Exact seven-position ECO03 backup channel proposed, additional85uA and6.10uF startup screens executed. Source reset upper1.530405s only when no injection;7.541626uA continuing-injection criterion explicit. Candidate is not applied or fully qualified.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-T1",
+      "gate": "placement",
+      "owner": "Coordinator + winding manufacturer",
+      "retained_requirement_or_finding_ids": [
+        "ELEC-MAG-001",
+        "ISOL-02",
+        "ISOL-03",
+        "ISOL-04",
+        "CLAMP-01",
+        "U07"
+      ],
+      "remaining_acceptance": "Dimension finished <=30x30x18mm candidate incl core/yoke/leadouts/crossovers and insulation wall; confirm recognized materials/process and0.05mm build +0.05mm decenter allocations. Establish Lp2.304mH +/-10%,120:22:30 ratio/polarity, hotDCR and relevant three-winding leakage model <=20uH in declared normal screen. Revise candidate if infeasible; no supplier capability assumed.",
+      "previous_packet_advance": "FIS-B3 material lead, exact layer recipe, geometry budget and proposed20uH effective leakage criterion.",
+      "advance": "Dimensioned interleaved120:22:30 construction and leadout pockets,14.0615uH slab versus74.2467uH oldrecipe,2.230mm build and cutlength/DCR criteria; not a measuredleakage or full3Dpass.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-ISOL",
+      "gate": "schematic/placement",
+      "owner": "Coordinator + qualified safety reviewer",
+      "retained_requirement_or_finding_ids": [
+        "ISOL-01",
+        "U06",
+        "U07",
+        "R-ENV",
+        "R-REPLACE"
+      ],
+      "remaining_acceptance": "Obtain authorized applicable60598/61347 and referenced transformer clauses; classify product, working RMS/peak/impulse voltages across each barrier, pollution/material/altitude/frequency. Bind clearance/creepage/solid insulation/test requirements to approved actual3D paths. Expired member rendering and arbitrary8mm reserve cannot close this.",
+      "previous_packet_advance": "Manufacturer/EIS materials and all-path geometry obligations are documented.",
+      "advance": "Previous obligation retained; no new closure claimed by this packet.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-THERM",
+      "gate": "schematic/placement",
+      "owner": "Coordinator + enclosure/thermal implementer",
+      "retained_requirement_or_finding_ids": [
+        "R-THERMAL",
+        "R-BASE-LIFE",
+        "U07",
+        "U08",
+        "U10",
+        "CLAMP-04"
+      ],
+      "remaining_acceptance": "Provide actual enclosure/material/interface design or validated model establishing <=7/3.5K/W paths at40C, each component allocation/hotspot, C1air<=70C/core-rise<=10K and RT1 gradients/lag. Verify actual power/ripple spectrum; no extension of inherited11W model by assumption. Layout must respect C4 underside/vent and TVS copper/commutation requirements.",
+      "previous_packet_advance": "Inverse4W/8W heat contract and lifetime screen now reproducible.",
+      "advance": "Identified sourcecurves, explicit6063/AM997/TIM adapter, fourenvelopeviews and90x173secondaryhousingbranch. Achieved onlyconditionalnetwork solves, notactualcomponent/enclosure temperatures.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-SOA",
+      "gate": "schematic/routing",
+      "owner": "Coordinator/power-stage analyst",
+      "retained_requirement_or_finding_ids": [
+        "RC-COMP-002",
+        "CLAMP-02",
+        "CLAMP-03",
+        "RC-INPUT-001"
+      ],
+      "remaining_acceptance": "Source-conditioned hot dynamic TVS/diode and MOS model, actual effective leakage/gate/recovery/layout/surge; establish drain and VDD crest, repeated pulse temperatures/SOA, fuse/inrush coordination and fault clearing without assuming avalanche or typical curves are guarantees.",
+      "previous_packet_advance": "Piecewise clamp model conserves energy and bounds only declared scenarios.",
+      "advance": "Recomputed normalclamp screen at proposed14.0615/20uH andLpendpoints; hotdynamicparasitic/SOA/faulttrain gap remains.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-SERVICE",
+      "gate": "schematic/release",
+      "owner": "Coordinator + integration/test owner",
+      "retained_requirement_or_finding_ids": [
+        "R-OFFLINE",
+        "R-REPLACE",
+        "U06"
+      ],
+      "remaining_acceptance": "Verify complete storage/decay/backfeed assumptions and required fault set; actual electrical discharge and cooling with uncertainty determine user wait.100s is not an approved user instruction. Physical tests require their own approved plan/personnel/setup.",
+      "previous_packet_advance": "Conditional total-energy proof includes arbitrary passive redistribution and onebulkbranchopen.",
+      "advance": "Previous obligation retained; no new closure claimed by this packet.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-STAGE",
+      "gate": "before placement",
+      "owner": "Coordinator + owner",
+      "retained_requirement_or_finding_ids": [
+        "U05",
+        "U06",
+        "U07",
+        "U08",
+        "U09",
+        "SCH-LIB-001"
+      ],
+      "remaining_acceptance": "Complete affected schematic requirements/remaining library and interface acceptance, managed configuration preview and actual spatial intent; four independent reviews and actual owner decision against exact stage packet before placement. No dummyPCB or waived failures.",
+      "previous_packet_advance": "No product CAD changed; current31-position libraries remain baseline.",
+      "advance": "Previous obligation retained; no new closure claimed by this packet.",
+      "status": "open; partial design/source evidence only"
+    },
+    {
+      "id": "ENTRY-MECH-PROCESS",
+      "gate": "placement/routing",
+      "owner": "Coordinator + owner/workshop + selected PCB/assembly supplier",
+      "retained_requirement_or_finding_ids": [
+        "U09",
+        "U10",
+        "U11",
+        "R-SIZE",
+        "R-BUILD"
+      ],
+      "remaining_acceptance": "Freeze actual panel/base interface, complete housing/envelope/fastening/service covers and heat paths before placement. Confirm selected fabrication/assembly service, exact laminate/material group/stackup/copper/finish and process capability at the required stage; source-backed provisional design inputs may guide studies but cannot be labeled supplier confirmation. Bind actual spatial contract/barriers to these interfaces and revisit affected thermal/insulation budgets.",
+      "previous_packet_advance": "Existing libraries and proposed finished transformer/thermal criteria are explicit; actual enclosure/process selection is absent.",
+      "advance": "Dimensioned candidateenvelopes and thermalinterface geometry, withownerquestion/response accurately retained ascomparison, notchoice. Supplier/material/completepacking/cover/stackup confirmation absent.",
+      "status": "open; partial design/source evidence only"
+    }
+  ],
+  "active_CAD_graph_changes": false
+}

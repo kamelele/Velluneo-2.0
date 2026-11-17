@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current controller, transformer and cooling proposals — 17 November 2026
+
+[DESIGN-CLOSURE-02](specification-reset/design-closure-02/README.md) obtains actual TI encrypted28710/noNTC model limitations, executes fault/reset/charge and256combinedbias/DCRcases, and proposes an unapplied seven-position electronic thermalbackup. A dimensioned interleaved transformer reduces the1Dslab leakage estimate74.25to14.06uH; no actual20uH guarantee or qualified build is inferred. Cooling now uses real supplier curves, dimensioned interface/envelope proposals and a90x173mm secondary-housing heat path; actual conditions/fit/material/insulation remain unverified. Active31-position CAD/graph/values/requirements stay unchanged. [Acceptance ledger](specification-reset/design-closure-02/acceptance-ledger.json) retains PCB blockers and exact owners; no stage, enclosure, ECO, measurement or manufacturing approval is fabricated.
+
 ## Current startup, protection, thermal and insulation development — 17 November 2026
 
 [PCB-READINESS-01](specification-reset/pcb-readiness-01/README.md) adds executed coupled startup/clamp/NTC/thermal/life/discharge calculations and a source-conditioned transformer material/build candidate. Current31-position CAD/graph/values stay unchanged. New20uH leakage,4W/8W heat-removal and material/process conditions are proposed design inputs, not actual assembly performance or accepted norms. [Exact PCB-entry contract](specification-reset/pcb-readiness-01/pcb-entry-contract.json) retains startup/controller/fault/SOA, complete transformer/insulation and actual enclosure/thermal closures. The owner has no full standards; a discovered expired member rendering is not used to bypass access or establish normative limits. No schematic/placement approval, PCB or physical test is claimed.

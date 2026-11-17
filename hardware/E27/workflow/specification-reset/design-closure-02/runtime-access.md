@@ -1,0 +1,9 @@
+# Compatible native-model runtime: current access boundary
+
+The official TI tool page https://www.ti.com/tool/TINA-TI (read17November2026) offers TINA-TI English through an account/export-approval download. TI's own introductory installation video also describes login. No authenticated account, export declaration or local compatible TINA runtime has been provided for this task. No download restriction, encryption, certificate check or licensing condition is bypassed. The coordinator asked the owner for an existing local TINA-TI path; no path is inferred from the question or elapsed time.
+
+The public official SLUM538/SLUM464/SLUM539 model/reference downloads did succeed. The retained byte/member hashes identify encrypted UCC28710 models. Their visible notes exclude modeled CBC and do not provide UCC28711NTC behavior. The actual bundledngspice46 probe cannot load the encrypted circuit; API return0 is explicitly not a successful simulation. Compatible vendor-runtime reference validation and common-control open/short/recovery simulation remain useful next work if that environment is supplied. It would still need a justified model/domain for the absentNTC/CBC function and exact project conversion/parasitics; a reference simulation alone cannot certify the product.
+
+In the meantime, the source-bound reset/charge/energy and behavioral startup diagnostics in this packet are separately useful and honestly limited. No claim that no compatible simulator exists, that the IC cannot work, or that the unqualified backup is approved follows from the present access/runtime limitation.
+
+Owner response in the current conversation: no TINA-TI is installed. This is recorded as an actual missing runtime, not inferred consent to register, download through export controls or claim a native simulation.
