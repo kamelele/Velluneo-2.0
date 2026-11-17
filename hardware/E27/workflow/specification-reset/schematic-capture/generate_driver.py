@@ -5,16 +5,16 @@ Does not create/approve expected intent, fabricate footprints, or generate a PCB
 from pathlib import Path
 import json,uuid,csv,hashlib
 P=Path(__file__).resolve().parent.parent
-D=P/'schematic-capture';L=P/'libraries';L.mkdir(exist_ok=True)
+D=P/'eco01-capture';D.mkdir(exist_ok=True);L=P/'libraries';L.mkdir(exist_ok=True)
 NAME='Velluneo_specification_reset'
-parts=json.loads((P/'schematic-intent/parts.json').read_text())
+parts=json.loads((P/'electrical-integration/proposed-parts.json').read_text())
 assignment_path=P/'footprint-study/assignments.json'
 footprints=json.loads(assignment_path.read_text()) if assignment_path.exists() else {}
 for a in parts:
  if a['ref'] in footprints:assert footprints[a['ref']]['mpn']==a['mpn']
 intent=json.loads((P/'schematic-intent/intended-connectivity.json').read_text())
 digest=hashlib.sha256(json.dumps({k:v for k,v in intent.items() if k!='approval'},sort_keys=True,ensure_ascii=False,separators=(',',':'),allow_nan=False).encode()).hexdigest()
-assert intent['approval']['intent_digest']==digest=='b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57'
+assert intent['approval']['intent_digest']==digest=='5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8'
 def uid(s):return str(uuid.uuid5(uuid.NAMESPACE_URL,'velluneo-driver-sch-r1/'+s))
 def q(s):return json.dumps(str(s),ensure_ascii=False)
 def fmt(n):return f'{n:.4f}'.rstrip('0').rstrip('.') if n else '0'
@@ -66,6 +66,17 @@ vals={'RIN':'47R / AC05','RB1':'499k','RB2':'499k','RVS1':'80.6k','RVS2':'17.4k'
 suppressed={('J1','1'),('J1','2'),('F1','1'),('F1','2'),('RIN','1'),('RIN','2'),('BR1','2'),('BR1','4'),('RB1','2'),('RB2','1'),('Q1','2'),('Q1','4'),('DCL','1'),('DCL','2'),('TVS1','1'),('DAUX','1'),('RAUX','1'),('CV1','1'),('CV2','1'),('CV2','2')}
 for rr in ['J2','RBO1','RBO2']:suppressed.update((rr,n) for n in ['1','2'])
 suppressed.add(('COUT','1'))
+# Apply the exact accepted reference-only map after defining inherited graphics.
+# Historical schematic-intent/parts.json remains immutable because it is a hashed
+# independent basis input of the accepted ECO. Active parts are proposed-parts.json.
+alias=json.loads((P/'electrical-integration/reference-aliases.json').read_text())['existing_to_proposed']
+positions={alias.get(r,r):v for r,v in positions.items()}
+styles={alias.get(r,r):v for r,v in styles.items()}
+vals={alias.get(r,r):v for r,v in vals.items()}
+suppressed={(alias.get(r,r),n) for r,n in suppressed}
+for ref,position,value in [('R13',(381,231.14),'1M'),('R14',(45.72,106.68),'499k'),('R15',(152.4,106.68),'499k')]:
+ positions[ref]=position;styles[ref]='R';vals[ref]=value
+suppressed.update({('R14','2'),('R15','1')})
 rootuid=uid('root');items=[]
 def text(s,x,y,size=1.2):items.append(f'(text {q(s)} (at {x} {y} 0) {effects(size,False,"left")} (uuid {q(uid("text/"+s))}))')
 def wire(x,y,xx,yy,key):items.append(f'(wire (pts (xy {fmt(x)} {fmt(y)}) (xy {fmt(xx)} {fmt(yy)})) (stroke (width 0) (type default)) (uuid {q(uid("wire/"+key))}))')
@@ -120,6 +131,8 @@ paths=[
  [(309.88,231.14),(309.88,218.44)],
  [(248.92,231.14),(271.78,231.14),(271.78,246.38),(355.6,246.38),(355.6,231.14),(325.12,231.14)],
 ]
+paths.append([(53.34,106.68),(144.78,106.68)])
+label('BLEED_MID_B',104.14,106.68,0,'R14-R15-mid')
 for i,pts in enumerate(paths):
  for j,(a,b) in enumerate(zip(pts,pts[1:])):wire(*a,*b,f'local/{i}/{j}')
 # Only actual same-net branch points have junction markers.
@@ -131,11 +144,11 @@ text('3  ISOLATED LED OUTPUT',302.26,25.4,1.5)
 text('4  PRIMARY-SIDE CONTROL / SENSING',16.51,118.11,1.5)
 text('5  AUXILIARY BIAS / DECOUPLING',205.74,176.53,1.5)
 text('PRIMARY GND IS NOT OUTPUT NEGATIVE. Labels join identical named nets only.',17.78,262.89,1.05)
-text('DRAFT: NOT FOR MANUFACTURE. Footprints, startup, clamp/SOA, insulation and thermal qualification remain open.',17.78,269.24,1.05)
+text('DRAFT: NOT FOR MANUFACTURE. Startup, clamp/SOA, footprint/process, insulation and thermal qualification remain open.',17.78,269.24,1.05)
 text('T1 dots: 1 / 2 / 6. Pins 3 / 7 / 8 / 9 are unwound raw-bobbin terminals.',196.85,166.37,.95)
 text('J2 is internal wiring, not the final tool-free panel dock.',302.26,141.0,.95)
-text('Kelvin sense: RCS top -> RLC; RCS bottom -> U1 GND.',17.78,251.46,.95)
-header=f'(kicad_sch (version 20250114) (generator "velluneo_capture") (uuid {q(rootuid)}) (paper "A3") (title_block (title "Velluneo E27 - isolated LED driver") (date "2026-11-17") (rev "SCH-DRAFT-01") (company "Velluneo") (comment 1 "Approved physical-pin intent b6d09476; electrical qualification pending"))'
+text('Kelvin sense: R9 top -> R6; R9 bottom -> U1 GND.',17.78,251.46,.95)
+header=f'(kicad_sch (version 20250114) (generator "velluneo_capture") (uuid {q(rootuid)}) (paper "A3") (title_block (title "Velluneo E27 - isolated LED driver") (date "2026-11-17") (rev "SCH-ECO01-02") (company "Velluneo") (comment 1 "Owner-approved ECO-01 intent 5c2b5fdd; electrical qualification pending"))'
 schematic=header+'\n(lib_symbols\n'+'\n'.join(library_symbol(k,True) for k in syms)+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
 (P/(NAME+'.kicad_sch')).write_text(schematic)
 pro=P/(NAME+'.kicad_pro')

@@ -27,11 +27,11 @@ for name,pads in expected.items():
   for key in ['at','size','type']:assert a[key]==p[key],(name,key,a,p)
   if p['type']=='thru_hole':assert a['drill']==p['drill']
  path=L/(name+'.kicad_mod');results.append({'name':name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'pads':list(actual.values()),'result':'pass'})
-assign=json.loads((P/'footprint-study/assignments.json').read_text());parts=json.loads((P/'schematic-intent/parts.json').read_text());count=0
+assign=json.loads((P/'footprint-study/assignments.json').read_text());parts=json.loads((P/'electrical-integration/proposed-parts.json').read_text());count=0
 for a in parts:
  if a['ref'] not in assign:assert a['ref']=='T1';continue
  ass=assign[a['ref']];assert ass['mpn']==a['mpn'];name=ass['footprint'].split(':',1)[1]
  assert {p['number'] for p in expected[name]}==set(a['pins']);count+=len(a['pins'])
-assert (len(assign),count) in [(27,63),(28,73)]
+assert (len(assign),count)==(31,79)
 report={'result':'pass','native_pcbnew':pcbnew.Version(),'unique_modules':len(expected),'assigned_components':len(assign),'mapped_physical_terminals':count,'unassigned_components':[a['ref'] for a in parts if a['ref'] not in assign],'scope':'Native parse, exact numbered copper coordinates/sizes/layers/drills and symbol-terminal coverage. Does not qualify source completeness, forming, assembly, process, insulation, board geometry, or function.','modules':results}
 (Path(sys.argv[1]) if len(sys.argv)>1 else D/'native-library-check.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k!='modules'}))

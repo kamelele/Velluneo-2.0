@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": "driver-pin-intent-draft-1",
-  "basis": "Independent pre-CAD architecture and exact native pin inventories; draft for four-role and owner review; no CAD netlist used.",
+  "revision": "driver-pin-intent-eco01-proposal-2",
+  "basis": "Independent pre-CAD delta from accepted physical-pin intent and ECO-01 native-source passive contract; not a CAD-derived expected netlist.",
   "basis_sources": [
     {
       "path": "schematic-intent/pin-basis-primary.md",
@@ -30,6 +30,18 @@
     {
       "path": "schematic-intent/parts.json",
       "sha256": "808295707d760d62e198794e6f406f1879cdff322e48412e9bd4d2df784bc221"
+    },
+    {
+      "path": "electrical-integration/ECO-01.md",
+      "sha256": "80f70508070eea487f7d51cb8e78af6680239d5e1ec849e5ec6c2cfa3f252d6d"
+    },
+    {
+      "path": "electrical-integration/reference-aliases.json",
+      "sha256": "41fe29a6b6555dce76e3b8e944aca90750bc14d1abf0b2b2bb5694ad3e3f0320"
+    },
+    {
+      "path": "electrical-integration/proposed-parts.json",
+      "sha256": "142919c3a4e7eff9e5dc176639d2e9aff4432bf53173a2ee26e2552cd0cab5ae"
     }
   ],
   "components": [
@@ -58,7 +70,7 @@
       ]
     },
     {
-      "ref": "RIN",
+      "ref": "R1",
       "units": [
         {
           "name": "A",
@@ -84,7 +96,7 @@
       ]
     },
     {
-      "ref": "CBULK",
+      "ref": "C1",
       "units": [
         {
           "name": "A",
@@ -96,7 +108,7 @@
       ]
     },
     {
-      "ref": "RB1",
+      "ref": "R2",
       "units": [
         {
           "name": "A",
@@ -108,7 +120,7 @@
       ]
     },
     {
-      "ref": "RB2",
+      "ref": "R3",
       "units": [
         {
           "name": "A",
@@ -171,7 +183,7 @@
       ]
     },
     {
-      "ref": "DCL",
+      "ref": "D1",
       "units": [
         {
           "name": "A",
@@ -195,7 +207,7 @@
       ]
     },
     {
-      "ref": "CV1",
+      "ref": "C2",
       "units": [
         {
           "name": "A",
@@ -207,7 +219,7 @@
       ]
     },
     {
-      "ref": "CV2",
+      "ref": "C3",
       "units": [
         {
           "name": "A",
@@ -219,7 +231,7 @@
       ]
     },
     {
-      "ref": "RVS1",
+      "ref": "R4",
       "units": [
         {
           "name": "A",
@@ -231,7 +243,7 @@
       ]
     },
     {
-      "ref": "RVS2",
+      "ref": "R5",
       "units": [
         {
           "name": "A",
@@ -243,7 +255,7 @@
       ]
     },
     {
-      "ref": "RLC",
+      "ref": "R6",
       "units": [
         {
           "name": "A",
@@ -255,7 +267,7 @@
       ]
     },
     {
-      "ref": "RG",
+      "ref": "R7",
       "units": [
         {
           "name": "A",
@@ -267,7 +279,7 @@
       ]
     },
     {
-      "ref": "RGS",
+      "ref": "R8",
       "units": [
         {
           "name": "A",
@@ -279,7 +291,7 @@
       ]
     },
     {
-      "ref": "RCS",
+      "ref": "R9",
       "units": [
         {
           "name": "A",
@@ -291,7 +303,7 @@
       ]
     },
     {
-      "ref": "DAUX",
+      "ref": "D2",
       "units": [
         {
           "name": "A",
@@ -303,7 +315,7 @@
       ]
     },
     {
-      "ref": "RAUX",
+      "ref": "R10",
       "units": [
         {
           "name": "A",
@@ -315,7 +327,7 @@
       ]
     },
     {
-      "ref": "DOUT",
+      "ref": "D3",
       "units": [
         {
           "name": "A",
@@ -327,7 +339,7 @@
       ]
     },
     {
-      "ref": "COUT",
+      "ref": "C4",
       "units": [
         {
           "name": "A",
@@ -339,7 +351,7 @@
       ]
     },
     {
-      "ref": "RBO1",
+      "ref": "R11",
       "units": [
         {
           "name": "A",
@@ -351,7 +363,7 @@
       ]
     },
     {
-      "ref": "RBO2",
+      "ref": "R12",
       "units": [
         {
           "name": "A",
@@ -376,6 +388,42 @@
     },
     {
       "ref": "J2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R13",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R14",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R15",
       "units": [
         {
           "name": "A",
@@ -422,7 +470,7 @@
           "pin": "2"
         },
         {
-          "ref": "RIN",
+          "ref": "R1",
           "pin": "1"
         }
       ]
@@ -431,7 +479,7 @@
       "id": "AC_LIMITED",
       "pins": [
         {
-          "ref": "RIN",
+          "ref": "R1",
           "pin": "2"
         },
         {
@@ -448,11 +496,11 @@
           "pin": "1"
         },
         {
-          "ref": "CBULK",
+          "ref": "C1",
           "pin": "1"
         },
         {
-          "ref": "RB1",
+          "ref": "R2",
           "pin": "1"
         },
         {
@@ -466,6 +514,10 @@
         {
           "ref": "TVS1",
           "pin": "2"
+        },
+        {
+          "ref": "R14",
+          "pin": "1"
         }
       ]
     },
@@ -477,11 +529,11 @@
           "pin": "3"
         },
         {
-          "ref": "CBULK",
+          "ref": "C1",
           "pin": "2"
         },
         {
-          "ref": "RB2",
+          "ref": "R3",
           "pin": "2"
         },
         {
@@ -493,23 +545,31 @@
           "pin": "2"
         },
         {
-          "ref": "CV1",
+          "ref": "C2",
           "pin": "2"
         },
         {
-          "ref": "CV2",
+          "ref": "C3",
           "pin": "2"
         },
         {
-          "ref": "RVS2",
+          "ref": "R5",
           "pin": "2"
         },
         {
-          "ref": "RCS",
+          "ref": "R9",
           "pin": "2"
         },
         {
           "ref": "RT1",
+          "pin": "2"
+        },
+        {
+          "ref": "R13",
+          "pin": "2"
+        },
+        {
+          "ref": "R15",
           "pin": "2"
         }
       ]
@@ -518,11 +578,11 @@
       "id": "BLEED_MID",
       "pins": [
         {
-          "ref": "RB1",
+          "ref": "R2",
           "pin": "2"
         },
         {
-          "ref": "RB2",
+          "ref": "R3",
           "pin": "1"
         }
       ]
@@ -535,16 +595,20 @@
           "pin": "1"
         },
         {
-          "ref": "CV1",
+          "ref": "C2",
           "pin": "1"
         },
         {
-          "ref": "CV2",
+          "ref": "C3",
           "pin": "1"
         },
         {
-          "ref": "RAUX",
+          "ref": "R10",
           "pin": "2"
+        },
+        {
+          "ref": "R13",
+          "pin": "1"
         }
       ]
     },
@@ -556,11 +620,11 @@
           "pin": "2"
         },
         {
-          "ref": "RVS1",
+          "ref": "R4",
           "pin": "2"
         },
         {
-          "ref": "RVS2",
+          "ref": "R5",
           "pin": "1"
         }
       ]
@@ -586,7 +650,7 @@
           "pin": "5"
         },
         {
-          "ref": "RLC",
+          "ref": "R6",
           "pin": "2"
         }
       ]
@@ -599,7 +663,7 @@
           "pin": "6"
         },
         {
-          "ref": "RG",
+          "ref": "R7",
           "pin": "1"
         }
       ]
@@ -612,11 +676,11 @@
           "pin": "1"
         },
         {
-          "ref": "RG",
+          "ref": "R7",
           "pin": "2"
         },
         {
-          "ref": "RGS",
+          "ref": "R8",
           "pin": "1"
         }
       ]
@@ -637,7 +701,7 @@
           "pin": "5"
         },
         {
-          "ref": "DCL",
+          "ref": "D1",
           "pin": "2"
         }
       ]
@@ -650,15 +714,15 @@
           "pin": "3"
         },
         {
-          "ref": "RLC",
+          "ref": "R6",
           "pin": "1"
         },
         {
-          "ref": "RGS",
+          "ref": "R8",
           "pin": "2"
         },
         {
-          "ref": "RCS",
+          "ref": "R9",
           "pin": "1"
         }
       ]
@@ -671,11 +735,11 @@
           "pin": "4"
         },
         {
-          "ref": "RVS1",
+          "ref": "R4",
           "pin": "1"
         },
         {
-          "ref": "DAUX",
+          "ref": "D2",
           "pin": "2"
         }
       ]
@@ -688,15 +752,15 @@
           "pin": "6"
         },
         {
-          "ref": "COUT",
+          "ref": "C4",
           "pin": "2"
         },
         {
-          "ref": "RBO1",
+          "ref": "R11",
           "pin": "2"
         },
         {
-          "ref": "RBO2",
+          "ref": "R12",
           "pin": "2"
         },
         {
@@ -713,7 +777,7 @@
           "pin": "10"
         },
         {
-          "ref": "DOUT",
+          "ref": "D3",
           "pin": "2"
         }
       ]
@@ -722,7 +786,7 @@
       "id": "CLAMP",
       "pins": [
         {
-          "ref": "DCL",
+          "ref": "D1",
           "pin": "1"
         },
         {
@@ -735,11 +799,11 @@
       "id": "AUX_RECT",
       "pins": [
         {
-          "ref": "DAUX",
+          "ref": "D2",
           "pin": "1"
         },
         {
-          "ref": "RAUX",
+          "ref": "R10",
           "pin": "1"
         }
       ]
@@ -748,23 +812,36 @@
       "id": "OUTPUT_POS",
       "pins": [
         {
-          "ref": "DOUT",
+          "ref": "D3",
           "pin": "1"
         },
         {
-          "ref": "COUT",
+          "ref": "C4",
           "pin": "1"
         },
         {
-          "ref": "RBO1",
+          "ref": "R11",
           "pin": "1"
         },
         {
-          "ref": "RBO2",
+          "ref": "R12",
           "pin": "1"
         },
         {
           "ref": "J2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "BLEED_MID_B",
+      "pins": [
+        {
+          "ref": "R14",
+          "pin": "2"
+        },
+        {
+          "ref": "R15",
           "pin": "1"
         }
       ]
@@ -813,7 +890,8 @@
         "SENSE",
         "AUX_RAW",
         "CLAMP",
-        "AUX_RECT"
+        "AUX_RECT",
+        "BLEED_MID_B"
       ],
       "side_b": [
         "OUTPUT_NEG",
@@ -826,7 +904,7 @@
   "empty_design_reason": null,
   "approval": {
     "approved_by": "Kamil Stępak",
-    "evidence": "schematic-capture/owner-intent-approval.md; actual conversation decision 2026-11-17: zatwierdzam działaj; responds to exact commit0b79ac05d025fdcde1de0418874043a2d5f530b2 graph review",
-    "intent_digest": "b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57"
+    "evidence": "eco01-capture/owner-intent-approval.md; actual current conversation2026-11-17: zatwiercam eco-01; exact reviewed packet commit4d8dcfc671b4963a55b342409b8d75fd0bf1439b",
+    "intent_digest": "5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8"
   }
 }
