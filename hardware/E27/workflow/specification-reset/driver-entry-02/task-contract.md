@@ -1,0 +1,9 @@
+# DRIVER-ENTRY-02 — driver-only electrical preparation
+
+Owner request: focus on the rectangular power driver, advance all design conditions needed before PCB, and show the driver preview in the conversation. Whole-lamp housing, LED-panel and radiator changes are outside this task. Base f0216041fc47fef993e24939c6f31727fe409a14; current graph 5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8.
+
+Root owns driver-entry-02/**, additive source inventory and workflow index only. Three separately assigned read-only implementers inspect protection, magnetic construction, and electrical topology respectively. No active schematic, graph, value, library, requirement, rule, profile, process confirmation or approval changes are leased. No product PCB placement/routing or manufacturing is authorized by this task before the schematic gate. Earlier approved ECO intent is retained without requesting it again.
+
+Acceptance: source-valid actionable driver findings; a reproducible all31-position/79-pad preparation view from actual footprint geometry; independently checked physical assignment and critical net membership; fresh native graph/ERC and toolkit requirements/work reports; explicit status of every schematic/placement blocker and exact external dependency. Unresolved mandatory conditions must remain blocked rather than be reclassified as later tests. A model/sample shortage or missing normative source is never an invented pass. Four distinct read-only review roles inspect the same frozen packet after integration.
+
+Dependencies include U05–U09, R-SUPPLY, R-FAULT, R-EMPTY, R-THERMAL, R-BASE-LIFE, R-SIZE, R-BOARD-FORM, R-BUILD and retained electrical/magnetic/insulation findings. Calculated, proposed, simulated and measured evidence remain distinct. No TINA installation/full-standard question is repeated; user has neither. No orders, supplier contacts, physical tests or release are included.

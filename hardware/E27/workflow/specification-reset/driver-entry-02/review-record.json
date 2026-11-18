@@ -1,0 +1,73 @@
+{
+  "packet": "DRIVER-ENTRY-02-r1",
+  "base": "f0216041fc47fef993e24939c6f31727fe409a14",
+  "body_sha256": "8b4c7b90db6bc572f9bc5cc4250d4fdb8cc462e8a3ffd1549c114ae8912aed27",
+  "reviewed_members": 77,
+  "actual_final_reviews": [
+    {
+      "role": "reality",
+      "actor": "/root/c2_reality",
+      "report": "reviews/reality.md",
+      "sha256": "470319405ef7bd9d20df6ece8c9af05e6cb64959b7fffaa44e71750474fa06ce",
+      "scope": "Actual separate read-only inspection of frozen driver-only preparation; parent PCB entry remains blocked",
+      "recommendation": "ready_for_human_review_bounded_preparation_only"
+    },
+    {
+      "role": "change",
+      "actor": "/root/c2_change",
+      "report": "reviews/change.md",
+      "sha256": "8f798598722daf9357917cd8d08bd8f18f772e91017f38d66fc3591ea97980e4",
+      "scope": "Actual separate read-only inspection of frozen driver-only preparation; parent PCB entry remains blocked",
+      "recommendation": "ready_for_human_review_bounded_preparation_only"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c2_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "e0bef21a92bc813e582b2e77914919de1f8e89759ce7c13e8d046ef9eb27548b",
+      "scope": "Actual separate read-only inspection of frozen driver-only preparation; parent PCB entry remains blocked",
+      "recommendation": "blocked_against_parent_objective"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/c2_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "dd064eac2381bc696377d052910c9dbe1490b1a657e5259e81e7c11ad660c1e0",
+      "scope": "Actual separate read-only inspection of frozen driver-only preparation; parent PCB entry remains blocked",
+      "recommendation": "ready_for_human_review_bounded_preparation_only"
+    }
+  ],
+  "coordinator": "/root",
+  "PCB_entry_ready": false,
+  "human_stage_approval": false,
+  "parent_request_complete": false,
+  "decision": "Integrate bounded preparation evidence on existing review branch; do not advance schematic/placement stages. No approval question for an incomplete analysis.",
+  "finding_resolution": [
+    {
+      "id": "CH-01",
+      "original_severity": "Medium, retained functional-spacing blocker",
+      "canonical_gate_severity": "major",
+      "status": "open",
+      "owner": "Power/layout designer and coordinator",
+      "resolution": "Accept explicit primary-domain functional-spacing assessment as required, independent of P/S geometric reserve. No normative fail or waiver is invented. See exact four pad/net gaps in actual Change report."
+    },
+    {
+      "id": "CH-02",
+      "original_severity": "Medium, retained topology and integration qualification",
+      "canonical_gate_severity": "major",
+      "status": "open",
+      "owner": "Power/layout designer and coordinator",
+      "resolution": "Actual vias, return topology, remaining sensitive routing and dependent assembly/thermal recheck required before accepting placement."
+    }
+  ],
+  "retained_open_finding_ids": [
+    "R-DE02-01",
+    "R-DE02-02",
+    "R-DE02-03",
+    "R-DE02-04",
+    "C-DE02-01",
+    "C-DE02-02",
+    "C-DE02-03"
+  ],
+  "different_recommendation_scope": "Completeness reports overall blocked, other roles ready only for bounded evidence review. All agree parent PCB entry is blocked; no conflict is decided by vote."
+}

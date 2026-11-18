@@ -1,0 +1,1668 @@
+{
+  "scope": "Unapplied analytical pre-CAD study, no routed conductor/copper or adopted spatial intent. Pad-centre distances are geometric lower bounds, not trace lengths or qualified loops. Weights/9.35mm projected domain reserve/0.5mm edge/0.4mm joint are planning allocations, not supplier or IEC acceptance.",
+  "base": "f0216041fc47fef993e24939c6f31727fe409a14",
+  "inputs": {
+    "assembly-fit-01\\packing-diagnostic.json": "d862e41be08ff0e13a7ce1342a35c09dd5baff79c3d5fcb43db075edfeb78b65",
+    "compact-60\\mechanics\\native-inventory.json": "7974490c09ee54194bfa0b3799050ddd28964f9118073da76168242ab1738631",
+    "electrical-integration\\proposed-parts.json": "142919c3a4e7eff9e5dc176639d2e9aff4432bf53173a2ee26e2552cd0cab5ae"
+  },
+  "board_study_rectangle_mm": [
+    32.0,
+    60.0
+  ],
+  "placed_count": 31,
+  "total_count": 31,
+  "selected_product_PCB": false,
+  "PCB_entry_ready": false,
+  "fixed_during_search_refs": [
+    "C1",
+    "C4",
+    "F1",
+    "J1",
+    "J2",
+    "R1",
+    "T1"
+  ],
+  "final_local_bias_moves": {
+    "U1": [
+      -12,
+      12,
+      90,
+      "F"
+    ],
+    "C2": [
+      -12,
+      13.5,
+      0,
+      "B"
+    ],
+    "C1": [
+      -2.7,
+      12.2,
+      90,
+      "B"
+    ],
+    "Q1": [
+      4.5,
+      12.5,
+      0,
+      "F"
+    ],
+    "BR1": [
+      12.2,
+      12.5,
+      0,
+      "F"
+    ],
+    "D1": [
+      -2,
+      23.9,
+      0,
+      "B"
+    ],
+    "R3": [
+      10,
+      -5,
+      0,
+      "B"
+    ],
+    "R9": [
+      -5.5,
+      12.5,
+      90,
+      "F"
+    ]
+  },
+  "final_manual_override_of_search_anchor": [
+    "C1"
+  ],
+  "iterations": 24000,
+  "seed": 20261118,
+  "accepted_moves": 2063,
+  "baseline": {
+    "weighted_search_score": 4492.4194788535915,
+    "semiconductors_projected_under_T1": [
+      "BR1",
+      "D1",
+      "D3",
+      "TVS1",
+      "U1"
+    ],
+    "links": [
+      {
+        "a": "U1.1",
+        "b": "C2.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 17.28081378292122,
+        "search_weight": 6
+      },
+      {
+        "a": "U1.4",
+        "b": "C2.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 21.50712730701151,
+        "search_weight": 6
+      },
+      {
+        "a": "U1.1",
+        "b": "C3.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 24.155124197569343,
+        "search_weight": 3
+      },
+      {
+        "a": "U1.4",
+        "b": "C3.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 23.371350517246537,
+        "search_weight": 3
+      },
+      {
+        "a": "U1.2",
+        "b": "R4.2",
+        "net": "VS",
+        "pad_centres_distance_mm": 11.494002784060912,
+        "search_weight": 8
+      },
+      {
+        "a": "U1.2",
+        "b": "R5.1",
+        "net": "VS",
+        "pad_centres_distance_mm": 19.189205298813185,
+        "search_weight": 8
+      },
+      {
+        "a": "R5.2",
+        "b": "U1.4",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 19.70900555583665,
+        "search_weight": 4
+      },
+      {
+        "a": "T1.4",
+        "b": "R4.1",
+        "net": "AUX_RAW",
+        "pad_centres_distance_mm": 5.8801041657440045,
+        "search_weight": 1
+      },
+      {
+        "a": "U1.5",
+        "b": "R6.2",
+        "net": "CS",
+        "pad_centres_distance_mm": 25.778654445102443,
+        "search_weight": 8
+      },
+      {
+        "a": "R6.1",
+        "b": "R9.1",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 12.003150628064283,
+        "search_weight": 5
+      },
+      {
+        "a": "Q1.3",
+        "b": "R9.1",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 8.575874590967384,
+        "search_weight": 6
+      },
+      {
+        "a": "R9.2",
+        "b": "C1.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 7.074646634284995,
+        "search_weight": 3
+      },
+      {
+        "a": "U1.4",
+        "b": "R9.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 16.032370379953175,
+        "search_weight": 2
+      },
+      {
+        "a": "U1.6",
+        "b": "R7.1",
+        "net": "DRV",
+        "pad_centres_distance_mm": 14.767662306539922,
+        "search_weight": 5
+      },
+      {
+        "a": "R7.2",
+        "b": "Q1.1",
+        "net": "GATE",
+        "pad_centres_distance_mm": 23.670564526432404,
+        "search_weight": 6
+      },
+      {
+        "a": "R8.1",
+        "b": "Q1.1",
+        "net": "GATE",
+        "pad_centres_distance_mm": 18.18357775576633,
+        "search_weight": 2
+      },
+      {
+        "a": "R8.2",
+        "b": "Q1.3",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 15.111005922836506,
+        "search_weight": 2
+      },
+      {
+        "a": "T1.5",
+        "b": "Q1.2",
+        "net": "DRAIN",
+        "pad_centres_distance_mm": 22.663903017794617,
+        "search_weight": 5
+      },
+      {
+        "a": "T1.5",
+        "b": "D1.2",
+        "net": "DRAIN",
+        "pad_centres_distance_mm": 23.607467039053553,
+        "search_weight": 5
+      },
+      {
+        "a": "D1.1",
+        "b": "TVS1.1",
+        "net": "CLAMP",
+        "pad_centres_distance_mm": 13.925308793703643,
+        "search_weight": 5
+      },
+      {
+        "a": "TVS1.2",
+        "b": "T1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 12.662611302571046,
+        "search_weight": 5
+      },
+      {
+        "a": "C1.1",
+        "b": "T1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 11.377719455145657,
+        "search_weight": 3
+      },
+      {
+        "a": "Q1.3",
+        "b": "R6.1",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 14.91953417503375,
+        "search_weight": 2
+      },
+      {
+        "a": "T1.4",
+        "b": "D2.2",
+        "net": "AUX_RAW",
+        "pad_centres_distance_mm": 16.31250210727956,
+        "search_weight": 2
+      },
+      {
+        "a": "D2.1",
+        "b": "R10.1",
+        "net": "AUX_RECT",
+        "pad_centres_distance_mm": 10.465047778199581,
+        "search_weight": 2
+      },
+      {
+        "a": "R10.2",
+        "b": "C2.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 32.921307689701514,
+        "search_weight": 2
+      },
+      {
+        "a": "U1.3",
+        "b": "RT1.1",
+        "net": "NTC",
+        "pad_centres_distance_mm": 12.06023320670044,
+        "search_weight": 2
+      },
+      {
+        "a": "RT1.2",
+        "b": "U1.4",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 11.88743138781461,
+        "search_weight": 2
+      },
+      {
+        "a": "R13.1",
+        "b": "C2.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 11.282065413744062,
+        "search_weight": 1
+      },
+      {
+        "a": "R13.2",
+        "b": "C2.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 11.52757563410451,
+        "search_weight": 1
+      },
+      {
+        "a": "T1.10",
+        "b": "D3.2",
+        "net": "SECONDARY_RAW",
+        "pad_centres_distance_mm": 18.147664450281198,
+        "search_weight": 5
+      },
+      {
+        "a": "D3.1",
+        "b": "C4.1",
+        "net": "OUTPUT_POS",
+        "pad_centres_distance_mm": 14.792404300856571,
+        "search_weight": 5
+      },
+      {
+        "a": "C4.2",
+        "b": "T1.6",
+        "net": "OUTPUT_NEG",
+        "pad_centres_distance_mm": 17.778146697561027,
+        "search_weight": 5
+      },
+      {
+        "a": "C4.1",
+        "b": "J2.1",
+        "net": "OUTPUT_POS",
+        "pad_centres_distance_mm": 15.721835134614533,
+        "search_weight": 2
+      },
+      {
+        "a": "C4.2",
+        "b": "J2.2",
+        "net": "OUTPUT_NEG",
+        "pad_centres_distance_mm": 18.337287149412262,
+        "search_weight": 2
+      },
+      {
+        "a": "C1.1",
+        "b": "BR1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 19.88675752856659,
+        "search_weight": 1
+      },
+      {
+        "a": "C1.2",
+        "b": "BR1.3",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 14.317231750586425,
+        "search_weight": 1
+      },
+      {
+        "a": "BR1.4",
+        "b": "R1.2",
+        "net": "AC_LIMITED",
+        "pad_centres_distance_mm": 24.331936318345072,
+        "search_weight": 1
+      },
+      {
+        "a": "F1.2",
+        "b": "R1.1",
+        "net": "AC_FUSED",
+        "pad_centres_distance_mm": 22.534875748492603,
+        "search_weight": 1
+      },
+      {
+        "a": "J1.1",
+        "b": "F1.1",
+        "net": "AC_CAP_A",
+        "pad_centres_distance_mm": 10.97687227765724,
+        "search_weight": 1
+      },
+      {
+        "a": "J1.2",
+        "b": "BR1.2",
+        "net": "AC_CAP_B",
+        "pad_centres_distance_mm": 29.75479331133053,
+        "search_weight": 1
+      },
+      {
+        "a": "R2.2",
+        "b": "R3.1",
+        "net": "BLEED_MID",
+        "pad_centres_distance_mm": 28.43448610402516,
+        "search_weight": 1
+      },
+      {
+        "a": "R14.2",
+        "b": "R15.1",
+        "net": "BLEED_MID_B",
+        "pad_centres_distance_mm": 24.647920804806233,
+        "search_weight": 1
+      },
+      {
+        "a": "R2.1",
+        "b": "C1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 20.9093280618962,
+        "search_weight": 0.3
+      },
+      {
+        "a": "R3.2",
+        "b": "C1.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 8.039900496896712,
+        "search_weight": 0.3
+      },
+      {
+        "a": "R14.1",
+        "b": "C1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 10.696261028976435,
+        "search_weight": 0.3
+      },
+      {
+        "a": "R15.2",
+        "b": "C1.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 22.1054291973714,
+        "search_weight": 0.3
+      }
+    ]
+  },
+  "candidate": {
+    "weighted_search_score": 1697.6498085053806,
+    "semiconductors_projected_under_T1": [],
+    "links": [
+      {
+        "a": "U1.1",
+        "b": "C2.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 1.412453539058896,
+        "search_weight": 6
+      },
+      {
+        "a": "U1.4",
+        "b": "C2.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 1.412453539058896,
+        "search_weight": 6
+      },
+      {
+        "a": "U1.1",
+        "b": "C3.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 26.4050473394766,
+        "search_weight": 3
+      },
+      {
+        "a": "U1.4",
+        "b": "C3.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 23.219744292304338,
+        "search_weight": 3
+      },
+      {
+        "a": "U1.2",
+        "b": "R4.2",
+        "net": "VS",
+        "pad_centres_distance_mm": 7.200840228751086,
+        "search_weight": 8
+      },
+      {
+        "a": "U1.2",
+        "b": "R5.1",
+        "net": "VS",
+        "pad_centres_distance_mm": 10.582797361756485,
+        "search_weight": 8
+      },
+      {
+        "a": "R5.2",
+        "b": "U1.4",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 10.076452748859591,
+        "search_weight": 4
+      },
+      {
+        "a": "T1.4",
+        "b": "R4.1",
+        "net": "AUX_RAW",
+        "pad_centres_distance_mm": 19.744318803139297,
+        "search_weight": 1
+      },
+      {
+        "a": "U1.5",
+        "b": "R6.2",
+        "net": "CS",
+        "pad_centres_distance_mm": 14.433867291893744,
+        "search_weight": 8
+      },
+      {
+        "a": "R6.1",
+        "b": "R9.1",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 12.825779703394254,
+        "search_weight": 5
+      },
+      {
+        "a": "Q1.3",
+        "b": "R9.1",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 12.44972389252067,
+        "search_weight": 6
+      },
+      {
+        "a": "R9.2",
+        "b": "C1.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 3.188357727733825,
+        "search_weight": 3
+      },
+      {
+        "a": "U1.4",
+        "b": "R9.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 5.76104591198508,
+        "search_weight": 2
+      },
+      {
+        "a": "U1.6",
+        "b": "R7.1",
+        "net": "DRV",
+        "pad_centres_distance_mm": 21.513300537109597,
+        "search_weight": 5
+      },
+      {
+        "a": "R7.2",
+        "b": "Q1.1",
+        "net": "GATE",
+        "pad_centres_distance_mm": 13.085894123062435,
+        "search_weight": 6
+      },
+      {
+        "a": "R8.1",
+        "b": "Q1.1",
+        "net": "GATE",
+        "pad_centres_distance_mm": 4.603531253288067,
+        "search_weight": 2
+      },
+      {
+        "a": "R8.2",
+        "b": "Q1.3",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 6.114940719254767,
+        "search_weight": 2
+      },
+      {
+        "a": "T1.5",
+        "b": "Q1.2",
+        "net": "DRAIN",
+        "pad_centres_distance_mm": 12.702460391593434,
+        "search_weight": 5
+      },
+      {
+        "a": "T1.5",
+        "b": "D1.2",
+        "net": "DRAIN",
+        "pad_centres_distance_mm": 22.048185866415402,
+        "search_weight": 5
+      },
+      {
+        "a": "D1.1",
+        "b": "TVS1.1",
+        "net": "CLAMP",
+        "pad_centres_distance_mm": 4.602306486969333,
+        "search_weight": 5
+      },
+      {
+        "a": "TVS1.2",
+        "b": "T1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 14.890742929753372,
+        "search_weight": 5
+      },
+      {
+        "a": "C1.1",
+        "b": "T1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 12.747254606384859,
+        "search_weight": 3
+      },
+      {
+        "a": "Q1.3",
+        "b": "R6.1",
+        "net": "SENSE",
+        "pad_centres_distance_mm": 12.700098424815454,
+        "search_weight": 2
+      },
+      {
+        "a": "T1.4",
+        "b": "D2.2",
+        "net": "AUX_RAW",
+        "pad_centres_distance_mm": 16.31250210727956,
+        "search_weight": 2
+      },
+      {
+        "a": "D2.1",
+        "b": "R10.1",
+        "net": "AUX_RECT",
+        "pad_centres_distance_mm": 25.558505922686486,
+        "search_weight": 2
+      },
+      {
+        "a": "R10.2",
+        "b": "C2.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 17.86232067789625,
+        "search_weight": 2
+      },
+      {
+        "a": "U1.3",
+        "b": "RT1.1",
+        "net": "NTC",
+        "pad_centres_distance_mm": 4.763320795411538,
+        "search_weight": 2
+      },
+      {
+        "a": "RT1.2",
+        "b": "U1.4",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 4.531117411853283,
+        "search_weight": 2
+      },
+      {
+        "a": "R13.1",
+        "b": "C2.1",
+        "net": "VDD",
+        "pad_centres_distance_mm": 26.817624801611345,
+        "search_weight": 1
+      },
+      {
+        "a": "R13.2",
+        "b": "C2.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 24.412804017564227,
+        "search_weight": 1
+      },
+      {
+        "a": "T1.10",
+        "b": "D3.2",
+        "net": "SECONDARY_RAW",
+        "pad_centres_distance_mm": 6.492512995751337,
+        "search_weight": 5
+      },
+      {
+        "a": "D3.1",
+        "b": "C4.1",
+        "net": "OUTPUT_POS",
+        "pad_centres_distance_mm": 2.0000562492090066,
+        "search_weight": 5
+      },
+      {
+        "a": "C4.2",
+        "b": "T1.6",
+        "net": "OUTPUT_NEG",
+        "pad_centres_distance_mm": 17.778146697561027,
+        "search_weight": 5
+      },
+      {
+        "a": "C4.1",
+        "b": "J2.1",
+        "net": "OUTPUT_POS",
+        "pad_centres_distance_mm": 15.721835134614533,
+        "search_weight": 2
+      },
+      {
+        "a": "C4.2",
+        "b": "J2.2",
+        "net": "OUTPUT_NEG",
+        "pad_centres_distance_mm": 18.337287149412262,
+        "search_weight": 2
+      },
+      {
+        "a": "C1.1",
+        "b": "BR1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 16.869739920935352,
+        "search_weight": 1
+      },
+      {
+        "a": "C1.2",
+        "b": "BR1.3",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 13.650572332323652,
+        "search_weight": 1
+      },
+      {
+        "a": "BR1.4",
+        "b": "R1.2",
+        "net": "AC_LIMITED",
+        "pad_centres_distance_mm": 6.755599529279395,
+        "search_weight": 1
+      },
+      {
+        "a": "F1.2",
+        "b": "R1.1",
+        "net": "AC_FUSED",
+        "pad_centres_distance_mm": 22.534875748492603,
+        "search_weight": 1
+      },
+      {
+        "a": "J1.1",
+        "b": "F1.1",
+        "net": "AC_CAP_A",
+        "pad_centres_distance_mm": 10.97687227765724,
+        "search_weight": 1
+      },
+      {
+        "a": "J1.2",
+        "b": "BR1.2",
+        "net": "AC_CAP_B",
+        "pad_centres_distance_mm": 15.884590803668818,
+        "search_weight": 1
+      },
+      {
+        "a": "R2.2",
+        "b": "R3.1",
+        "net": "BLEED_MID",
+        "pad_centres_distance_mm": 6.001666435249463,
+        "search_weight": 1
+      },
+      {
+        "a": "R14.2",
+        "b": "R15.1",
+        "net": "BLEED_MID_B",
+        "pad_centres_distance_mm": 8.440379138403678,
+        "search_weight": 1
+      },
+      {
+        "a": "R2.1",
+        "b": "C1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 15.06154042586614,
+        "search_weight": 0.3
+      },
+      {
+        "a": "R3.2",
+        "b": "C1.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 21.58077848456816,
+        "search_weight": 0.3
+      },
+      {
+        "a": "R14.1",
+        "b": "C1.1",
+        "net": "BULK_POS",
+        "pad_centres_distance_mm": 20.08606482116395,
+        "search_weight": 0.3
+      },
+      {
+        "a": "R15.2",
+        "b": "C1.2",
+        "net": "PRIMARY_GND",
+        "pad_centres_distance_mm": 16.17188919081503,
+        "search_weight": 0.3
+      }
+    ]
+  },
+  "positions": {
+    "U1": {
+      "x_mm": -12,
+      "y_mm": 12,
+      "angle_deg": 90,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        -14.75,
+        8.25,
+        -9.25,
+        15.75
+      ],
+      "pads": [
+        [
+          -14.205,
+          13.924999999999999,
+          -13.604999999999999,
+          15.475
+        ],
+        [
+          -12.935,
+          13.924999999999999,
+          -12.334999999999999,
+          15.475
+        ],
+        [
+          -11.665000000000001,
+          13.924999999999999,
+          -11.065,
+          15.475
+        ],
+        [
+          -10.395000000000001,
+          13.924999999999999,
+          -9.795,
+          15.475
+        ],
+        [
+          -10.395000000000001,
+          8.525,
+          -9.795,
+          10.075000000000001
+        ],
+        [
+          -11.665000000000001,
+          8.525,
+          -11.065,
+          10.075000000000001
+        ],
+        [
+          -14.205,
+          8.525,
+          -13.604999999999999,
+          10.075000000000001
+        ]
+      ]
+    },
+    "BR1": {
+      "x_mm": 12.2,
+      "y_mm": 12.5,
+      "angle_deg": 0,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        9.45,
+        8.5,
+        14.95,
+        16.5
+      ],
+      "pads": [
+        [
+          12.95,
+          8.75,
+          13.95,
+          10.899999999999999
+        ],
+        [
+          12.95,
+          14.100000000000001,
+          13.95,
+          16.25
+        ],
+        [
+          10.45,
+          8.75,
+          11.45,
+          10.899999999999999
+        ],
+        [
+          10.45,
+          14.100000000000001,
+          11.45,
+          16.25
+        ]
+      ]
+    },
+    "Q1": {
+      "x_mm": 4.5,
+      "y_mm": 12.5,
+      "angle_deg": 0,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        0.8999999999999999,
+        8.3,
+        8.1,
+        16.7
+      ],
+      "pads": [
+        [
+          1.6,
+          14.95,
+          2.8000000000000003,
+          16.45
+        ],
+        [
+          3.9,
+          14.95,
+          5.1,
+          16.45
+        ],
+        [
+          6.2,
+          14.95,
+          7.3999999999999995,
+          16.45
+        ],
+        [
+          2.85,
+          8.55,
+          6.15,
+          10.05
+        ]
+      ]
+    },
+    "R6": {
+      "x_mm": 2.5,
+      "y_mm": 3.0,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        1.75,
+        1.6,
+        3.25,
+        4.4
+      ],
+      "pads": [
+        [
+          2.0,
+          3.375,
+          3.0,
+          4.125
+        ],
+        [
+          2.0,
+          1.875,
+          3.0,
+          2.625
+        ]
+      ]
+    },
+    "R8": {
+      "x_mm": 1.5,
+      "y_mm": 19.5,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        0.75,
+        18.1,
+        2.25,
+        20.9
+      ],
+      "pads": [
+        [
+          1.0,
+          19.875,
+          2.0,
+          20.625
+        ],
+        [
+          1.0,
+          18.375,
+          2.0,
+          19.125
+        ]
+      ]
+    },
+    "R4": {
+      "x_mm": -13.5,
+      "y_mm": 7.5,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -15.2,
+        6.5,
+        -11.8,
+        8.5
+      ],
+      "pads": [
+        [
+          -14.95,
+          6.775,
+          -14.0,
+          8.225
+        ],
+        [
+          -13.0,
+          6.775,
+          -12.05,
+          8.225
+        ]
+      ]
+    },
+    "R5": {
+      "x_mm": -2.5,
+      "y_mm": 20.0,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -4.2,
+        19.0,
+        -0.8,
+        21.0
+      ],
+      "pads": [
+        [
+          -3.95,
+          19.275,
+          -3.0,
+          20.725
+        ],
+        [
+          -2.0,
+          19.275,
+          -1.0499999999999998,
+          20.725
+        ]
+      ]
+    },
+    "R7": {
+      "x_mm": 11.0,
+      "y_mm": 7.0,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        9.3,
+        6.0,
+        12.7,
+        8.0
+      ],
+      "pads": [
+        [
+          9.55,
+          6.275,
+          10.5,
+          7.725
+        ],
+        [
+          11.5,
+          6.275,
+          12.45,
+          7.725
+        ]
+      ]
+    },
+    "R2": {
+      "x_mm": 1.0,
+      "y_mm": -3.0,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -1.0,
+        -7.1,
+        3.0,
+        1.0999999999999996
+      ],
+      "pads": [
+        [
+          -0.75,
+          -0.6249999999999999,
+          2.75,
+          0.8250000000000001
+        ],
+        [
+          -0.75,
+          -6.824999999999999,
+          2.75,
+          -5.375
+        ]
+      ]
+    },
+    "R3": {
+      "x_mm": 10,
+      "y_mm": -5,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        5.9,
+        -7.0,
+        14.1,
+        -3.0
+      ],
+      "pads": [
+        [
+          6.175000000000001,
+          -6.75,
+          7.625,
+          -3.25
+        ],
+        [
+          12.375,
+          -6.75,
+          13.825,
+          -3.25
+        ]
+      ]
+    },
+    "R9": {
+      "x_mm": -5.5,
+      "y_mm": 12.5,
+      "angle_deg": 90,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        -6.65,
+        10.45,
+        -4.35,
+        14.55
+      ],
+      "pads": [
+        [
+          -6.4,
+          13.25,
+          -4.6,
+          14.3
+        ],
+        [
+          -6.4,
+          10.7,
+          -4.6,
+          11.75
+        ]
+      ]
+    },
+    "R10": {
+      "x_mm": -5.5,
+      "y_mm": 0.5,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -9.6,
+        -1.5,
+        -1.4000000000000004,
+        2.5
+      ],
+      "pads": [
+        [
+          -9.325,
+          -1.25,
+          -7.875,
+          2.25
+        ],
+        [
+          -3.125,
+          -1.25,
+          -1.6749999999999998,
+          2.25
+        ]
+      ]
+    },
+    "R11": {
+      "x_mm": -1.5,
+      "y_mm": -25.0,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -3.5,
+        -29.1,
+        0.5,
+        -20.9
+      ],
+      "pads": [
+        [
+          -3.25,
+          -22.625,
+          0.25,
+          -21.174999999999997
+        ],
+        [
+          -3.25,
+          -28.825000000000003,
+          0.25,
+          -27.375
+        ]
+      ]
+    },
+    "R12": {
+      "x_mm": 7.5,
+      "y_mm": -23.0,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        3.4000000000000004,
+        -25.0,
+        11.6,
+        -21.0
+      ],
+      "pads": [
+        [
+          3.6750000000000003,
+          -24.75,
+          5.125,
+          -21.25
+        ],
+        [
+          9.875,
+          -24.75,
+          11.325,
+          -21.25
+        ]
+      ]
+    },
+    "RT1": {
+      "x_mm": -14.0,
+      "y_mm": 18.0,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -15.5,
+        17.25,
+        -12.5,
+        18.75
+      ],
+      "pads": [
+        [
+          -15.200000000000001,
+          17.5,
+          -14.4,
+          18.5
+        ],
+        [
+          -13.6,
+          17.5,
+          -12.799999999999999,
+          18.5
+        ]
+      ]
+    },
+    "C2": {
+      "x_mm": -12,
+      "y_mm": 13.5,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -15.65,
+        10.55,
+        -8.35,
+        16.45
+      ],
+      "pads": [
+        [
+          -15.4,
+          10.8,
+          -13.9,
+          16.2
+        ],
+        [
+          -10.1,
+          10.8,
+          -8.6,
+          16.2
+        ]
+      ]
+    },
+    "C3": {
+      "x_mm": 12.5,
+      "y_mm": 12.0,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        9.55,
+        8.35,
+        15.45,
+        15.65
+      ],
+      "pads": [
+        [
+          9.8,
+          13.9,
+          15.2,
+          15.4
+        ],
+        [
+          9.8,
+          8.6,
+          15.2,
+          10.1
+        ]
+      ]
+    },
+    "D2": {
+      "x_mm": 12.5,
+      "y_mm": 17.5,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        9.5,
+        15.8,
+        15.5,
+        19.2
+      ],
+      "pads": [
+        [
+          9.785,
+          16.68,
+          11.184999999999999,
+          18.32
+        ],
+        [
+          13.815000000000001,
+          16.68,
+          15.215,
+          18.32
+        ]
+      ]
+    },
+    "D3": {
+      "x_mm": -9.0,
+      "y_mm": -24.0,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -12.0,
+        -25.7,
+        -6.0,
+        -22.3
+      ],
+      "pads": [
+        [
+          -11.715,
+          -24.82,
+          -10.315000000000001,
+          -23.18
+        ],
+        [
+          -7.685,
+          -24.82,
+          -6.284999999999999,
+          -23.18
+        ]
+      ]
+    },
+    "D1": {
+      "x_mm": -2,
+      "y_mm": 23.9,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -5.5,
+        22.15,
+        1.5,
+        25.65
+      ],
+      "pads": [
+        [
+          -5.25,
+          23.049999999999997,
+          -2.75,
+          24.75
+        ],
+        [
+          -1.25,
+          23.049999999999997,
+          1.25,
+          24.75
+        ]
+      ]
+    },
+    "TVS1": {
+      "x_mm": -8.5,
+      "y_mm": 21.0,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -10.75,
+        17.95,
+        -6.25,
+        24.05
+      ],
+      "pads": [
+        [
+          -9.6,
+          22.075,
+          -7.4,
+          23.794999999999998
+        ],
+        [
+          -9.6,
+          18.205000000000002,
+          -7.4,
+          19.925
+        ]
+      ]
+    },
+    "C4": {
+      "x_mm": -8.5,
+      "y_mm": -26.0,
+      "angle_deg": 0,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        -12.85,
+        -29.65,
+        -4.15,
+        -22.35
+      ],
+      "pads": [
+        [
+          -12.6,
+          -26.8,
+          -9.4,
+          -25.2
+        ],
+        [
+          -7.6,
+          -26.8,
+          -4.4,
+          -25.2
+        ]
+      ]
+    },
+    "F1": {
+      "x_mm": 6.0,
+      "y_mm": 16.0,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        2.95,
+        7.0,
+        9.05,
+        25.0
+      ],
+      "pads": [
+        [
+          3.2,
+          21.0,
+          8.8,
+          24.75
+        ],
+        [
+          3.2,
+          7.25,
+          8.8,
+          11.0
+        ]
+      ]
+    },
+    "C1": {
+      "x_mm": -2.7,
+      "y_mm": 12.2,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -8.2,
+        6.699999999999999,
+        2.8,
+        17.7
+      ],
+      "pads": [
+        [
+          -3.7,
+          13.7,
+          -1.7000000000000002,
+          15.7
+        ],
+        [
+          -3.7,
+          8.7,
+          -1.7000000000000002,
+          10.7
+        ]
+      ]
+    },
+    "R1": {
+      "x_mm": 0.0,
+      "y_mm": 21.7,
+      "angle_deg": 0,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        -14.05,
+        17.7,
+        14.05,
+        25.7
+      ],
+      "pads": [
+        [
+          -13.799999999999999,
+          20.599999999999998,
+          -11.6,
+          22.8
+        ],
+        [
+          11.6,
+          20.599999999999998,
+          13.799999999999999,
+          22.8
+        ]
+      ]
+    },
+    "J1": {
+      "x_mm": 0.0,
+      "y_mm": 27.8,
+      "angle_deg": 0,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        -5.7,
+        25.95,
+        5.7,
+        29.650000000000002
+      ],
+      "pads": [
+        [
+          -5.41,
+          26.2,
+          -2.21,
+          29.400000000000002
+        ],
+        [
+          2.21,
+          26.2,
+          5.41,
+          29.400000000000002
+        ]
+      ]
+    },
+    "J2": {
+      "x_mm": 8.5,
+      "y_mm": -27.0,
+      "angle_deg": 0,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        2.8,
+        -28.85,
+        14.2,
+        -25.15
+      ],
+      "pads": [
+        [
+          3.0899999999999994,
+          -28.6,
+          6.289999999999999,
+          -25.4
+        ],
+        [
+          10.71,
+          -28.6,
+          13.91,
+          -25.4
+        ]
+      ]
+    },
+    "T1": {
+      "x_mm": 0.0,
+      "y_mm": -7.0,
+      "angle_deg": 0,
+      "side": "F",
+      "courtyard_bbox_mm": [
+        -15.0,
+        -22.0,
+        15.0,
+        8.0
+      ],
+      "pads": [
+        [
+          -11.2,
+          -19.45,
+          -8.8,
+          -17.05
+        ],
+        [
+          -6.2,
+          -19.45,
+          -3.8,
+          -17.05
+        ],
+        [
+          -1.2,
+          -19.45,
+          1.2,
+          -17.05
+        ],
+        [
+          3.8,
+          -19.45,
+          6.2,
+          -17.05
+        ],
+        [
+          8.8,
+          -19.45,
+          11.2,
+          -17.05
+        ],
+        [
+          -11.2,
+          3.05,
+          -8.8,
+          5.45
+        ],
+        [
+          -6.2,
+          3.05,
+          -3.8,
+          5.45
+        ],
+        [
+          -1.2,
+          3.05,
+          1.2,
+          5.45
+        ],
+        [
+          3.8,
+          3.05,
+          6.2,
+          5.45
+        ],
+        [
+          8.8,
+          3.05,
+          11.2,
+          5.45
+        ]
+      ]
+    },
+    "R14": {
+      "x_mm": -5.5,
+      "y_mm": -4.5,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        -9.6,
+        -6.5,
+        -1.4000000000000004,
+        -2.5
+      ],
+      "pads": [
+        [
+          -9.325,
+          -6.25,
+          -7.875,
+          -2.75
+        ],
+        [
+          -3.125,
+          -6.25,
+          -1.6749999999999998,
+          -2.75
+        ]
+      ]
+    },
+    "R15": {
+      "x_mm": 7.5,
+      "y_mm": 0.5,
+      "angle_deg": 0,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        3.4000000000000004,
+        -1.5,
+        11.6,
+        2.5
+      ],
+      "pads": [
+        [
+          3.6750000000000003,
+          -1.25,
+          5.125,
+          2.25
+        ],
+        [
+          9.875,
+          -1.25,
+          11.325,
+          2.25
+        ]
+      ]
+    },
+    "R13": {
+      "x_mm": 5.0,
+      "y_mm": -5.5,
+      "angle_deg": 90,
+      "side": "B",
+      "courtyard_bbox_mm": [
+        4.25,
+        -6.9,
+        5.75,
+        -4.1
+      ],
+      "pads": [
+        [
+          4.5,
+          -5.125,
+          5.5,
+          -4.375
+        ],
+        [
+          4.5,
+          -6.625,
+          5.5,
+          -5.875
+        ]
+      ]
+    }
+  }
+}

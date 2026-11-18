@@ -1,0 +1,11 @@
+* Constructed C2 three-port sensitivity surrogate, not a validated transformer or UCC28711 model.
+* Nominal Lp maintained; P/A slab energy embedded with a zero S leakage gauge.
+* No core saturation, winding DCR/capacitance, frequency dependence or temperature model.
+.subckt T1_C2_SURROGATE P1 P5 A2 A4 S6 S10
+LP P1 P5 0.002304
+LA A2 A4 7.7918050608849e-05
+LS S6 S10 0.00014312115491337
+KPA LP LA 0.99495088619936
+KPS LP LS 0.9969437843332
+KAS LA LS 0.99388080447507
+.ends T1_C2_SURROGATE

@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current driver-only preparation — 18 November 2026
+
+[DRIVER-ENTRY-02](specification-reset/driver-entry-02/README.md) addresses the owner request to focus on the rectangular supply only. It adds a topology-aware all31-position proposal with semiconductors clear of the finished-transformer allocation, finite three-port magnetic sensitivity model, source-bound safety-fusible input-resistor candidate and fresh graph/ERC/requirements checks. No native productPCB, trace, circuit/MPN/library/requirements/rule/profile/approval change or whole-lamp cooling redesign is included. Actual electrical, magnetic, insulation, thermal/interface/process and U05–U09 gates remain blocked; see exact acceptance ledger and independently reviewed packet.
+
 ## Current complete assembly envelope proposal — 18 November 2026
 
 [ASSEMBLY-FIT-01](specification-reset/assembly-fit-01/README.md) adds a computed whole-lamp cutaway and all31installed-height envelopes for the rectangular32x60longitudinaldriver and round48mmLEDinsert. Source audit corrects C1bodymax22mm, C2/C3thickness1.85 andC4height6.1. A newunapplied positionproposal reserves full-faceC1ventspace and removes direct opposedR1/C1bodyprojection. Conditional design budget is118.5mm nominal/119.8mm with requiredtolerances, maximumallocatedOD59.7mm. Customannularfins surround theuppercup; no oldstockcoolerthermalresult is inherited. FinishedT1/F1/datums/mount/material/connector/vent-sourceconflict/thermal/process conditions remainunqualified; no fullproductPCB, route or stageapproval. Older correctedboardform remains binding; earlier disc study stayssuperseded.
