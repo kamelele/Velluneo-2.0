@@ -1,0 +1,30 @@
+[
+  {
+    "name": "requirements-placement",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--stage",
+      "placement"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "check-work-placement",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "placement"
+    ],
+    "exit_code": 2
+  }
+]

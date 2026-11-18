@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current side-channel clamp alternate — 18 November2026
+
+[PCB-CLAMP-03](specification-reset/pcb-clamp-03/README.md) adds a checked40x60mm native alternate(+8mmwidth, old32mmtrial retained; Ø60x120lamptarget unchanged). D1/TVS1 move beside T1 on the samefrontface;29otherpositions/controlmetrics remain. T1clamp endpoint sum49.600→39.110mm/Qfeedshorter, butTVS-to-C1bulkreturn13.624→25.901mm andactualloop/parasitics remainopen. A namedlocalR9silk-onlyvariant eliminateslastartworkcollision withoutchanginglands. NativeDRC8packageclearance/0silk/53unconnected/0parity; rulesunrelaxed. Nominalradialscreen49.27mm isnotfinishedhousingfit. PortablematchedCAD/localdependencies/nativeviewsandfourreviewsare supplied. No electrical/insulation/thermal/placement/routing acceptance ormanufacturing/powertestapproval.
+
 ## Current improved native PCB placement — 18 November 2026
 
 [PCB-PLACEMENT-02](specification-reset/pcb-placement-02/README.md) continues the actual rectangular 32x60 mm KiCad workspace. All 29 intercomponent clearance-screen findings are removed without changing rules or lands; 8 package-internal findings, 1 artwork overlap and 53 unrouted items remain. All 79 saved pad transforms/net memberships match; native schematic parity is zero. Sensitive pad-centre links improve, but clamp external-leg lower bound worsens 19.4% and remains open. Portable matched project and native views are included. Active circuit/libraries/requirements/approvals stay unchanged; no schematic/placement/routing, thermal, transformer, insulation or manufacturing acceptance is claimed.
