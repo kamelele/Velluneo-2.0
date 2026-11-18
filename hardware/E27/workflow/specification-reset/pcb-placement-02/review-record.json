@@ -1,0 +1,49 @@
+{
+  "packet": "PCB-PLACEMENT-02-r1",
+  "base": "cd5071af73a4fe66ed8bfd93a77f7445b3aa030f",
+  "body_sha256": "4c08fe985d4856fae9da6139641ee090bc0ba5ebddc69e860f8c378eed90a671",
+  "reviewed_members": 141,
+  "coordinator": "/root",
+  "actual_final_reviews": [
+    {
+      "role": "reality",
+      "actor": "/root/pl_reality",
+      "report": "reviews/reality.md",
+      "sha256": "76290a9690aa7a6832c2a8d85e6adcffaa79aa640e8c66505601833528e4ffe4",
+      "recommendation": "ready_for_human_review_for_bounded_engineering_publication; product_acceptance_blocked"
+    },
+    {
+      "role": "change",
+      "actor": "/root/pl_change",
+      "report": "reviews/change.md",
+      "sha256": "72bd2c276437c4c4bdbf8ce3813ee454aeabb910b601a78fb7eec7f041b5f253",
+      "recommendation": "ready_for_human_review_for_bounded_engineering_publication; product_acceptance_blocked"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/pl_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "01e591e7654264ace82145238415f7b8b085ee261422a51bba0df1f6398f0096",
+      "recommendation": "ready_for_human_review_for_bounded_engineering_publication; product_acceptance_blocked"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/pl_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "7b03c2a0913a6673d3b757cda2a52be5bc3cfbdd5d76fcd0af5f32e9cc8ecad0",
+      "recommendation": "ready_for_human_review_for_bounded_engineering_publication; product_acceptance_blocked"
+    }
+  ],
+  "bounded_placement_improvement_complete": true,
+  "full_driver_qualification_complete": false,
+  "human_schematic_placement_routing_approval": false,
+  "manufacturing_or_power_authorized": false,
+  "findings_retained": [
+    "clamp endpoint regression",
+    "package/cross-face spacing and finishedT1 construction",
+    "startup/fault/NTC/thermal and U05\u2013U09",
+    "R9/RT1 artwork overlap",
+    "native defaults serialization provenance"
+  ],
+  "integration_decision": "Publish accurately labelled reversible engineering improvement on existing review branch; preserve every unresolved product-stage condition."
+}

@@ -1,0 +1,9 @@
+# PCB-PLACEMENT-02 — improve the actual native working board
+
+Basecd5071af73a4fe66ed8bfd93a77f7445b3aa030f. Owner continuation follows the published native31-component/79-pad workspace. Root continues reversible PCB engineering, preserving the actual approved graph and all existing product-stage acceptance conditions. No manufacturing, powered test or automatic product-stage approval is included.
+
+Root is sole writer of pcb-placement-02/** and additive source-inventory/workflow-header integration. Active schematic, graph, MPNs/values, libraries, requirements, profiles, approvals and pcb-draft-01 history stay unchanged. Three bounded read-only implementers audit intercomponent spacing/placement, control topology and source-specific functional-spacing interpretation. Final Reality, Change, Completeness and Simplicity roles inspect the same frozen result independently.
+
+Acceptance: correct movable native silkscreen/placement defects, improve applicable cross-component clearance and sensitive connections where feasible without relaxing the existing10mmP/S or3mmHV/quiet screen; preserve all79physicalmemberships/4NCsingletons and31parts; save/reload nativePCB, freshDRC/parity/geometry checks, portableZIP/nativeviews. Classify fixed package-internal screen conflicts explicitly, retaining any unresolved rule-basis or physical finding. Do not hide errors by changing severity, adding exclusions, deleting fields/copper/pads, or calling unverified rules normative.
+
+The board remains an engineering draft until genuine stage criteria/decisions close. Unchanged dimensions32x60mm are the current study, not an unconditional final-housing guarantee. There is no new circuit/footprint substitution, routing release, supplier confirmation or measured electrical/thermal result. The implementation may report a constrained or failed geometric search truthfully instead of claiming all targets achieved.

@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current improved native PCB placement — 18 November 2026
+
+[PCB-PLACEMENT-02](specification-reset/pcb-placement-02/README.md) continues the actual rectangular 32x60 mm KiCad workspace. All 29 intercomponent clearance-screen findings are removed without changing rules or lands; 8 package-internal findings, 1 artwork overlap and 53 unrouted items remain. All 79 saved pad transforms/net memberships match; native schematic parity is zero. Sensitive pad-centre links improve, but clamp external-leg lower bound worsens 19.4% and remains open. Portable matched project and native views are included. Active circuit/libraries/requirements/approvals stay unchanged; no schematic/placement/routing, thermal, transformer, insulation or manufacturing acceptance is claimed.
+
 ## Current native PCB engineering draft — 18 November 2026
 
 [PCB-DRAFT-01](specification-reset/pcb-draft-01/README.md) starts actual nativeKiCadPCBauthoring at the owner explicitrequest. Editable32x60board,31footprints/79pads,22functionalnets/4NCsingletons, real two-sided copper keepout, scoped provisional rules, native saved-board parity and actualKiCadSVG/3Dviews are supplied in a portableZIP. Native schematic/PCB parity is zero; DRC is openly failing with unrouted connections/functional-clearance/silkscreen findings. Current31graph/activeCAD/libraries/requirements/profile/approval remain unchanged. Earlier broad claims that supplier/physical/fullqualification evidence prevents anydraftauthoring are corrected; genuine schematic/placement/routing acceptance and fault/T1/insulation/thermal/process conditions remain open. No routed/qualified/manufacturing or powered-test approval is claimed.

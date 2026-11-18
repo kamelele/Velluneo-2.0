@@ -1,0 +1,5 @@
+# Actual bounded handoffs
+
+Root is the only CAD writer. /root/compact_led_heat supplied the full read-only V4 31-position constrained result; /root/closure_controller independently examined control-group constraints; /root/compact_driver_closure audited source-specific functional spacing. Their recommendations were engineering inputs, not stage approval. Native and independent scalar checks in this packet test the integrated result. The final 3 mm screen and all footprint lands remain unchanged; no source-based exemption was adopted. Final role reviews are separate actual actors.
+
+V4 respected same-side courtyards, opposite-side through-hole joints, transformer allocation, domain projected copper and unchanged functional screen. Root rejected V4-R1 and V4-R2 coordinator experiments after full scalar checks found courtyard conflicts, restored V4 and independently verified the saved board against it. The final R9/RT1 silkscreen graphic overlap remains reported rather than moving components into a physical conflict. Control improvements and the 19.4% clamp-leg lower-bound penalty are both disclosed. Final exact inputs are byte-bound in frozen-files.json.
