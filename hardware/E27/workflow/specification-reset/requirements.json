@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo E27 repairable LED lamp",
-  "revision": "specification-contract-owner-compact-5",
+  "revision": "specification-contract-rectangular-driver-6",
   "subsystems": [
     {
       "id": "BASE",
@@ -539,6 +539,29 @@
       "evidence_ids": [
         "E-SPEC-SCOPE-REVIEW"
       ]
+    },
+    {
+      "id": "R-BOARD-FORM",
+      "revision": "owner-correction-2026-11-18",
+      "owner": "Owner (form decision); coordinator (verified dimensional implementation)",
+      "text": "BASE power-driver PCB rectangular; only PANEL LED insert round. Retain overall lamp target diameter60mm/fullheight120mm.",
+      "basis": "rectangular-driver-01/owner-form-decision.md; actual latest owner correction",
+      "acceptance": "Before placement show rectangular BASE and round PANEL in a coherent tolerance-aware assembly within R-SIZE. Choose and verify actual driver dimensions/orientation;32x60mm longitudinal trial and48mm panel are proposals, not owner-fixed dimensions or demonstrated fit.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Rectangular driver PCB",
+          "path": "rectangular-driver-01/owner-form-decision.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Round LED insert",
+          "path": "rectangular-driver-01/owner-form-decision.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
     }
   ],
   "interfaces": [],
@@ -730,10 +753,10 @@
       "id": "E-SPEC-SCOPE-REVIEW",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Coordinator actual scope-only delta review; earlier separate role reviews apply to their earlier digest only",
-      "artifact": "compact-60/scope-delta-review.md",
-      "sha256": "cdf1b2115ff2d5181a2b543268b8fa9604df08baa5fc10ff9fdeb95db311d86a",
-      "intent_digest": "fa7de07f04f44a297515073678922a89826fa0990d6e9af7d48581082294f82b",
+      "verified_by": "Coordinator actual scope-only delta review for owner board-form correction; earlier reviews retain their old digest",
+      "artifact": "rectangular-driver-01/scope-delta-review.md",
+      "sha256": "66ff480896b66d809d5cb486ff3f2e92f9b4f317ba1dc2862a415027726e0da9",
+      "intent_digest": "768a28e8d82a226fa9f74b071090a379c8236591bfbed90e4328cdad1d761587",
       "inputs": [
         {
           "path": "requirements-and-plan.md",
@@ -770,6 +793,10 @@
         {
           "path": "compact-60/owner-size-decision.md",
           "sha256": "217f83108249427b8f3012c3a9d5a2de35722207bbeacbc078778620512ff5d0"
+        },
+        {
+          "path": "rectangular-driver-01/owner-form-decision.md",
+          "sha256": "76a2f88288eef7272579e43f2662adc110680982ee5c8d20a94ea1edd2f481a6"
         }
       ]
     }

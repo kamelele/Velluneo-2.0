@@ -1,0 +1,41 @@
+{
+  "packet": "RECT-01-r1",
+  "body_sha256": "126241f8ec38ce6ccb375298aeaa01dee1b8c5e67b4f10a5acb67b1c11110ae7",
+  "reviewed_members": 46,
+  "reports": [
+    {
+      "role": "reality",
+      "actor": "/root/c2_reality",
+      "report": "reviews/reality.md",
+      "sha256": "4cacab37c51c929fd5f6ad26f9cf0c8fcc056fd733f00b10bd50c7c61e20674e",
+      "reviewed_body_sha256": "126241f8ec38ce6ccb375298aeaa01dee1b8c5e67b4f10a5acb67b1c11110ae7",
+      "recommendation": "ready_for_human_review for bounded owner form correction only; no actual PCB readiness or stage approval"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c2_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "b7c183817c5049dc23cf30cf4952c20f54302985e474e1aeda111f65da6bf39c",
+      "reviewed_body_sha256": "126241f8ec38ce6ccb375298aeaa01dee1b8c5e67b4f10a5acb67b1c11110ae7",
+      "recommendation": "ready_for_human_review for bounded owner form correction only; no actual PCB readiness or stage approval"
+    },
+    {
+      "role": "change",
+      "actor": "/root/c2_change",
+      "report": "reviews/change.md",
+      "sha256": "8339cbeb769524956a2aaff0438414fe412b185fbe267c04e4302bb844cae1a2",
+      "reviewed_body_sha256": "126241f8ec38ce6ccb375298aeaa01dee1b8c5e67b4f10a5acb67b1c11110ae7",
+      "recommendation": "ready_for_human_review for bounded owner form correction only; no actual PCB readiness or stage approval"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/c2_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "4667bf3ded938de95116a5b283c23a8b0a543aead90d5a9d70398a78841b3fec",
+      "reviewed_body_sha256": "126241f8ec38ce6ccb375298aeaa01dee1b8c5e67b4f10a5acb67b1c11110ae7",
+      "recommendation": "ready_for_human_review for bounded owner form correction only; no actual PCB readiness or stage approval"
+    }
+  ],
+  "stage_approval": false,
+  "independence": "Four actual separate nonimplementer read-only contexts inspect same frozen correction; same underlying model is not asserted to prove independence."
+}

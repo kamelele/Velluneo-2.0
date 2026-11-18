@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current corrected board form — 18 November 2026
+
+[RECT-01](specification-reset/rectangular-driver-01/README.md) records the actual owner correction: rectangularBASEpowerPCB, onlyroundPANELLEDinsert, wholelamp targetØ60x120mm unchanged. Root incorrectly assumed a rounddriver; the previousØ51mm circularpacking and its circle-specificcourtyardproposals are superseded as currentgeometry. A32x60mm longitudinalrectangulartrial assignsall31positions/79pads using unchangednativefootprints. Actualbody/joint/height/3Dfit, functionalrouting, thermal andallremainingelectrical/insulation/process closures stayopen. No productPCB/route/stageadvance; dimensionaltrial isnotowner-fixedsize or120mmfitproof.
+
 ## Current owner-constrained compact direction — 18 November 2026
 
 [COMPACT-60](specification-reset/compact-60/README.md) implements the actual owner targetØ60x120mm and rejects the approximately170mm alternative. Typical LEDheat2.636–3.398W and driver scenario losses1.336–2.156W replace oversized working budgets for feasibility, not guaranteed heat bounds. Raw bobbin height12.9mm and invalid2mm spacer are established. A120mm conditional stack/cooler frontier and actual31part79pad inventory are supplied; the51mm circular packing diagnostic assigns31/31 with projected metal/edge checks, while fixed-anchor courtyard, height and complete3Dfit conditions remain open. R-SIZE and genuine coordinator scope-delta evidence change; electrical CAD/approved graph/library/rules do not. [Closure ledger](specification-reset/compact-60/closure-ledger.json) retains exact magnetic/fault/thermal/insulation/mechanical/process blockers. No PCB-entry approval or physical qualification is claimed. Previous larger-envelope proposals below are historical and superseded as the selected size direction.
