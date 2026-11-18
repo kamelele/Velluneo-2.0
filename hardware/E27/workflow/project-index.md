@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current complete assembly envelope proposal — 18 November 2026
+
+[ASSEMBLY-FIT-01](specification-reset/assembly-fit-01/README.md) adds a computed whole-lamp cutaway and all31installed-height envelopes for the rectangular32x60longitudinaldriver and round48mmLEDinsert. Source audit corrects C1bodymax22mm, C2/C3thickness1.85 andC4height6.1. A newunapplied positionproposal reserves full-faceC1ventspace and removes direct opposedR1/C1bodyprojection. Conditional design budget is118.5mm nominal/119.8mm with requiredtolerances, maximumallocatedOD59.7mm. Customannularfins surround theuppercup; no oldstockcoolerthermalresult is inherited. FinishedT1/F1/datums/mount/material/connector/vent-sourceconflict/thermal/process conditions remainunqualified; no fullproductPCB, route or stageapproval. Older correctedboardform remains binding; earlier disc study stayssuperseded.
+
 ## Current corrected board form — 18 November 2026
 
 [RECT-01](specification-reset/rectangular-driver-01/README.md) records the actual owner correction: rectangularBASEpowerPCB, onlyroundPANELLEDinsert, wholelamp targetØ60x120mm unchanged. Root incorrectly assumed a rounddriver; the previousØ51mm circularpacking and its circle-specificcourtyardproposals are superseded as currentgeometry. A32x60mm longitudinalrectangulartrial assignsall31positions/79pads using unchangednativefootprints. Actualbody/joint/height/3Dfit, functionalrouting, thermal andallremainingelectrical/insulation/process closures stayopen. No productPCB/route/stageadvance; dimensionaltrial isnotowner-fixedsize or120mmfitproof.

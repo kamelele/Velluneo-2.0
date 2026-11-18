@@ -1,0 +1,143 @@
+[
+  {
+    "name": "packing",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\packing-proposal.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "native-body",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\extract_body_bounds.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "native-projection",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\native-projection-check.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "geometry",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\verify_geometry.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "assembly",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\calculate.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "assembly-path",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\check_assembly_path.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "render",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\render.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "archive",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\pack_artifacts.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "doctor",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "doctor"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "hardware/E27/workflow/specification-reset"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "erc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\assembly-fit-01\\checks\\erc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\Velluneo_specification_reset.kicad_sch"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "requirements",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1
+  },
+  {
+    "name": "work-check",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2
+  }
+]

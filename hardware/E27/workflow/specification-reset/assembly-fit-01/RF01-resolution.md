@@ -1,0 +1,9 @@
+# Accepted mechanical finding RF-01 and correction
+
+The initial62memberbody4b293ecbf1b3307a327e17b19fd6d6573b466222f43308107f61bb40117db462 had a real assembly defect. AtZ34 itsouterradius24.14mm could not pass T1 nominalcorner24.5226mm; final-position staticclearance didnot establishinsertion. Reality requestedchanges; anotherrole's bounded recommendationdidnot waive thisfinding. RootacceptsRF-01. Initialmanifestis retainedhistorically, not a currentpass.
+
+Correction: thefixeduppercupnow has a wide openbottom atZ40 with nominalinsideR28.1. A SEPARATE8mmjoinersleeve atZ34..42 is added AFTERpopulatedPCBloading, thenlowernoseandlid. SleeveouterRmax27.75 includingdeclaredtolerance/eccentricity fitsminimumcupmouthR27.9. NarrowringonlypasseslowerPCB/parts: C1lowesttoleranceZ42.95 andT1above52 do nottraverseit. LowernoseprofileisnondecreasinginlocalZ andclosesfrombelowover sleevewithdeclaredpositiveclearance. Upper2mmandlower6mmoverlapsarenotqualifiednormativeinsulationpaths.
+
+No integralobstructingsiderailsarepresentduringloading. Removableendcradlesareintegralwithnose/lid, fittedafterPCB. Lowercradleswere narrowed to the extremeboardcorners after the firstsweep detectedR10/packagepadinterference. The finalpathscreen checksall31expandedbodyenvelopes, PCB,3mmtrimmedtailreservations andallSMTmetal/solderenvelopes forcradleclosure. Dimensions/poseerrorsaredeclared andgroovefloatcorrelationsretained.
+
+Analyticalbounds: PCBloadingclearance0.425mm; lowerPCBthroughsleeve3.92175mm; sleeveintouppercupminimumradialgap0.15mm; noseoversleeveminimumradialgap0.15mm; zero modeledcradleobstacles. Thiscloses the originalnominalimpossibility only at the statedenvelope/process-inputscope. Actualselectedwirebends, contactmate, retentionforce/tooling/material/processcapability and electricalseam qualificationremainopen, andactual_assembly_qualifiedstaysfalse. Fourrolesmustreviewthecorrectedbodybeforeintegration; no oldrecommendationistransferred automatically.
