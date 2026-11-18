@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "errors": [],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\Velluneo_specification_reset.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "intent_digest": "5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8",
+  "intent_revision": "driver-pin-intent-eco01-proposal-2",
+  "physical_pins": 79,
+  "intended_nets": 22,
+  "no_connects": 4,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "6f0c7df9dbc6b34c3ed041149779f99b6504b9e1a835082542bf89bb9044c0ca",
+  "export_sha256": "f9c6f701f9da97174be2833bb3829fa84ae7a2794c6ab12ef29de540e91446ad",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}

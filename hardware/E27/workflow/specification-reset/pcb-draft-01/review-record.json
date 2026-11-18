@@ -1,0 +1,84 @@
+{
+  "packet": "PCB-DRAFT-01-r1",
+  "base": "7b75131667252634584552b4094c608cd88b9f2a",
+  "body_sha256": "4c6660ac66e2519c25a509f9848eb5e93ebf83126f40e06ff49bca7fc46c71a3",
+  "reviewed_members": 143,
+  "coordinator": "/root",
+  "actual_final_reviews": [
+    {
+      "role": "reality",
+      "actor": "/root/c2_reality",
+      "report": "reviews/reality.md",
+      "sha256": "14812e8dc7b0b33b471ea6c0f9702077b2f031b64e95d390cf2bc2b924cf53d2",
+      "actual_independent_read_only_inspection": true,
+      "recommendation": "bounded_editable_workspace_reviewable; product stages unresolved"
+    },
+    {
+      "role": "change",
+      "actor": "/root/c2_change",
+      "report": "reviews/change.md",
+      "sha256": "a276517725394e5f9094d82d0054aa395f23817a7043812957cec17fe6c686a2",
+      "actual_independent_read_only_inspection": true,
+      "recommendation": "bounded_editable_workspace_reviewable; product stages unresolved"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c2_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "5339d913669dd1b8953115527dfc630ef81e508944e235a272e4bbb0344e6d51",
+      "actual_independent_read_only_inspection": true,
+      "recommendation": "bounded_editable_workspace_reviewable; product stages unresolved"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/c2_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "6a66ad561b3a0187b5d551cd19e0287cffa64c45321984879bf34f05cc63c80f",
+      "actual_independent_read_only_inspection": true,
+      "recommendation": "bounded_editable_workspace_reviewable; product stages unresolved"
+    }
+  ],
+  "native_PCB_authoring_started": true,
+  "bounded_native_workspace_task_complete": true,
+  "full_driver_qualification_complete": false,
+  "human_schematic_stage_approval": false,
+  "human_placement_or_routing_stage_approval": false,
+  "manufacturing_or_power_test_authorization": false,
+  "integration_decision": "Publish the owner-requested reversible native PCB engineering workspace with all actual findings. Do not mark product-stage criteria accepted or request approval of a falsely completed driver.",
+  "open_findings": [
+    {
+      "id": "CH-PCB-01",
+      "also_tracked_as": [
+        "R-PD01-01",
+        "C-PD01-02"
+      ],
+      "severity": "blocker_for_placement_routing_acceptance",
+      "owner": "Power/layout designer and coordinator",
+      "status": "open",
+      "closure": "Justified object-/voltage-/waveform-specific spacing, corrected layout and actual native DRC; no blanket relaxation or suppression."
+    },
+    {
+      "id": "CH-PCB-02",
+      "also_tracked_as": [
+        "R-PD01-02",
+        "R-PD01-03",
+        "R-PD01-04",
+        "C-PD01-01"
+      ],
+      "severity": "blocker_for_affected_product_acceptance",
+      "owner": "Power, magnetic, insulation and thermal designers with coordinator",
+      "status": "open",
+      "closure": "Source-valid startup/fault/input coordination, finishedT1/insulation and actual thermal/interface/process evidence at the relevant gates."
+    },
+    {
+      "id": "CH-PCB-03",
+      "also_tracked_as": [
+        "C-PD01-03"
+      ],
+      "severity": "note_scope_and_authority",
+      "owner": "Coordinator",
+      "status": "retained",
+      "closure": "Keep draft authoring separate from genuine stage decisions, release confirmation and physical-test authorization."
+    }
+  ]
+}
