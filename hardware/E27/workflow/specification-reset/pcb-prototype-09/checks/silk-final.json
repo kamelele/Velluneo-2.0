@@ -1,0 +1,99 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T22:24:10",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Velluneo_driver.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Footprint 'CRCW_2512_NativeReflow' does not match copy in library 'Velluneo_Driver'",
+            "items": [
+                {
+                    "description": "Footprint R14",
+                    "pos": {
+                        "x": 89.25,
+                        "y": 98.6
+                    },
+                    "uuid": "48841847-4cce-45fd-aeed-33be4a8eaf50"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Silkscreen clearance (board setup constraints silk clearance 0,1500 mm; actual 0,0000 mm)",
+            "items": [
+                {
+                    "description": "Segment of R13 on F.Silkscreen",
+                    "pos": {
+                        "x": 102.375,
+                        "y": 127.65
+                    },
+                    "uuid": "3309a9cd-6ae8-4aa5-a742-3ae6accde330"
+                },
+                {
+                    "description": "Reference field of R13",
+                    "pos": {
+                        "x": 103.2,
+                        "y": 127.25
+                    },
+                    "uuid": "3650eb8b-d56a-42e7-a48e-201b35238990"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance (board setup constraints silk clearance 0,1500 mm; actual 0,0072 mm)",
+            "items": [
+                {
+                    "description": "Segment of C4 on F.Silkscreen",
+                    "pos": {
+                        "x": 88.1,
+                        "y": 70.35
+                    },
+                    "uuid": "24559097-6c26-45c9-8c89-f41ed648d1c5"
+                },
+                {
+                    "description": "Reference field of C4",
+                    "pos": {
+                        "x": 91.5,
+                        "y": 71.1
+                    },
+                    "uuid": "f0ca2869-7d4c-4177-a99a-b65d157edb84"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

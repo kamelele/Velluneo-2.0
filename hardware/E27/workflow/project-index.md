@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current prototype procurement preparation — PROTOTYPE09
+
+[PROTOTYPE09](specification-reset/pcb-prototype-09/README.md) prepares the selected four-layer45×60mm board for bare-board fabrication review. Same copper/pads/electrical basis as DRIVER08; corrected1mm/0.15mm silkscreen and same-land R14legend variant. Fresh native0/0/0/ERC0, independently parsed9CAMlayers/42PTH/0NPTH/45×60outline and explicit17filled-via map. Fabrication-review and separateengineeringZIPs/orderchecklist supplied. Files are prepared, but supplierDFM/process/productionfilm confirmation and formalrelease gates remain open; no order, PCBArelease or energizedqualification is claimed. Older entries below retain historical scope.
+
 ## Current selected routed driver — DRIVER08,19November2026
 
 [DRIVER08](specification-reset/pcb-driver-08/README.md) is the one selected four-layer45×60mm driver under the owner's delegated choice. All33parts/81pads are retained; actual native0DRC/0unconnected/0parity and0ERC. DRV is14.467mm, no vias. Power/return copper is strengthened and measurement branches preserved. The single portable project, actual preview, stackup and designated filled/capped via map are supplied. Routed CAD is complete; operating/fault/thermal/finished-transformer-insulation/fit/process confirmation and human product/stage acceptance remain unqualified. No order or powered tests are represented. Older packets below retain historical decisions and are superseded only to the explicit DRIVER08 CAD scope.

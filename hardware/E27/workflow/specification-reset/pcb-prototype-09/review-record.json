@@ -1,0 +1,85 @@
+{
+  "packet": "PROTOTYPE09",
+  "body_sha256": "a94b8caef8668d844d2bfac7b7316c9e4aed9345529be7057e58cdb43e9d3ff9",
+  "actual_roles": [
+    {
+      "role": "overengineering",
+      "actor": "/root/c8_simplicity",
+      "body_sha256": "a94b8caef8668d844d2bfac7b7316c9e4aed9345529be7057e58cdb43e9d3ff9",
+      "path": "reviews/overengineering.md",
+      "sha256": "0b74f545aebe1a4322392584f10a529f1e23a7f73034d464b4cc91efd923bd3d",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded prototype-file preparation/publication only",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "reality",
+      "actor": "/root/c8_reality",
+      "body_sha256": "a94b8caef8668d844d2bfac7b7316c9e4aed9345529be7057e58cdb43e9d3ff9",
+      "path": "reviews/reality.md",
+      "sha256": "5eedd068612670053975504ded506dc1761be4e8eab3d6017cd58f4e2f4bbd36",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded prototype-file preparation/publication only",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "change",
+      "actor": "/root/c8_change",
+      "body_sha256": "a94b8caef8668d844d2bfac7b7316c9e4aed9345529be7057e58cdb43e9d3ff9",
+      "path": "reviews/change.md",
+      "sha256": "adca1323cb73dcfea04cfa6173d598024ac6a134bf3fabfa76c9a77a6d1f0c15",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded prototype-file preparation/publication only",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c8_completeness",
+      "body_sha256": "a94b8caef8668d844d2bfac7b7316c9e4aed9345529be7057e58cdb43e9d3ff9",
+      "path": "reviews/completeness.md",
+      "sha256": "02dce2d73a6bd4853670503233dc510b597ce745385d625712b9bdde85e90350",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded prototype-file preparation/publication only",
+      "independent_of_implementation": true
+    }
+  ],
+  "publication_blockers_found": false,
+  "formal_release_pass": false,
+  "order_released": false,
+  "open_findings": [
+    {
+      "id": "C09-SIMP-01",
+      "links": [
+        "C08-SIMP-01"
+      ],
+      "gate": "procurement/release",
+      "owner": "Process/sourcing designer and buyer",
+      "closure": "Actual supplier quote/process/DFM/films confirmation for exact selected files"
+    },
+    {
+      "id": "C09-SIMP-02",
+      "links": [
+        "C05-CONFIG"
+      ],
+      "gate": "formal release",
+      "owner": "Coordinator and authorized technical reviewer",
+      "closure": "Controlled current-project adoption/mapping and required evidence/approvals then applicable passing release checks",
+      "requirements_errors": 31,
+      "managed_release_errors": 143
+    },
+    {
+      "id": "C09-SIMP-03",
+      "links": [
+        "C08-SIMP-02",
+        "C08-SIMP-03",
+        "C05-CTRL",
+        "C05-SENSE",
+        "C05-ISOL",
+        "C05-FIT"
+      ],
+      "gate": "physical assembly/energization/product",
+      "owner": "Mechanical/process/power/magnetic/insulation designers",
+      "closure": "Recorded physical construction, operating/fault/thermal/insulation/fit evidence and qualified review"
+    }
+  ]
+}

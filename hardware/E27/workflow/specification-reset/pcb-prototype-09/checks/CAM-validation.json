@@ -1,0 +1,68 @@
+{
+  "parser": "gerbonara1.5.0",
+  "source_board_sha256": "b961de597c3364cb3be78e13372a31eb6f4b7b531165d3ce87f1d36ef55195fa",
+  "layers": [
+    {
+      "layer": "top-copper",
+      "objects": 243,
+      "source_file": "Velluneo_driver-F_Cu.gtl"
+    },
+    {
+      "layer": "top-mask",
+      "objects": 53,
+      "source_file": "Velluneo_driver-F_Mask.gts"
+    },
+    {
+      "layer": "top-silk",
+      "objects": 456,
+      "source_file": "Velluneo_driver-F_Silkscreen.gto"
+    },
+    {
+      "layer": "bottom-copper",
+      "objects": 321,
+      "source_file": "Velluneo_driver-B_Cu.gbl"
+    },
+    {
+      "layer": "bottom-mask",
+      "objects": 53,
+      "source_file": "Velluneo_driver-B_Mask.gbs"
+    },
+    {
+      "layer": "bottom-silk",
+      "objects": 476,
+      "source_file": "Velluneo_driver-B_Silkscreen.gbo"
+    },
+    {
+      "layer": "inner_1-copper",
+      "objects": 179,
+      "source_file": "Velluneo_driver-In1_Cu.g1"
+    },
+    {
+      "layer": "inner_2-copper",
+      "objects": 128,
+      "source_file": "Velluneo_driver-In2_Cu.g2"
+    },
+    {
+      "layer": "mechanical-outline",
+      "objects": 4,
+      "source_file": "Velluneo_driver-Edge_Cuts.gm1"
+    }
+  ],
+  "drills": 42,
+  "plated": 42,
+  "nonplated": 0,
+  "drills_match_native_positions_within_export_quantization": true,
+  "drill_axis_quantization_tolerance_mm": 0.000501,
+  "drill_sizes_plating_exact": true,
+  "origin_and_outline_exact_mm": [
+    45,
+    60
+  ],
+  "outline_closed_four_segments": true,
+  "parser_warnings": [
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-prototype-09\\fabrication\\Velluneo_driver-NPTH.drl:10 \"G90\": G90 header statement found after end of header",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-prototype-09\\fabrication\\Velluneo_driver-PTH.drl:24 \"G90\": G90 header statement found after end of header"
+  ],
+  "warning_disposition": "Gerbonara warns on KiCad G90 placement after header; parsed coordinates checked within 3-decimal export rounding (0.0005mm per axis). Empty NPTH is explicitly classified using filename/plating, not heuristic output.",
+  "scope": "Independent manufacturing-file parse, drill/outline/layer reconciliation and CAM images; not full electrical net extraction, vendor DFM acceptance or physical qualification."
+}
