@@ -1,0 +1,58 @@
+{
+  "kind": "calculation",
+  "model": "Ideal DC buck at rectified sine peaks; ignores bus ripple, diode losses, tolerances and switching timing. Not a mains waveform or regulation simulation.",
+  "line_peak_v": {
+    "207_vac": 292.7422074112307,
+    "230_vac": 325.2691193458119,
+    "253_vac": 357.7960312803931
+  },
+  "voltage_comparison": [
+    {
+      "led_voltage_v": 24,
+      "led_power_w": 8,
+      "current_ma": 333.3333333333333,
+      "ideal_buck_duty_at_low_line_peak": 0.08198339492017942,
+      "ideal_buck_duty_at_high_line_peak": 0.06707732311651043
+    },
+    {
+      "led_voltage_v": 60,
+      "led_power_w": 8,
+      "current_ma": 133.33333333333334,
+      "ideal_buck_duty_at_low_line_peak": 0.20495848730044852,
+      "ideal_buck_duty_at_high_line_peak": 0.16769330779127606
+    },
+    {
+      "led_voltage_v": 72,
+      "led_power_w": 8,
+      "current_ma": 111.11111111111111,
+      "ideal_buck_duty_at_low_line_peak": 0.24595018476053823,
+      "ideal_buck_duty_at_high_line_peak": 0.20123196934953128
+    },
+    {
+      "led_voltage_v": 90,
+      "led_power_w": 8,
+      "current_ma": 88.88888888888889,
+      "ideal_buck_duty_at_low_line_peak": 0.3074377309506728,
+      "ideal_buck_duty_at_high_line_peak": 0.2515399616869141
+    },
+    {
+      "led_voltage_v": 108,
+      "led_power_w": 8,
+      "current_ma": 74.07407407407408,
+      "ideal_buck_duty_at_low_line_peak": 0.36892527714080736,
+      "ideal_buck_duty_at_high_line_peak": 0.3018479540242969
+    }
+  ],
+  "power_budget": {
+    "led_power_w": 8,
+    "assumed_driver_efficiency": 0.9,
+    "input_power_w": 8.88888888888889,
+    "driver_loss_w": 0.8888888888888893
+  },
+  "caveats": [
+    "90% is a screening assumption, not a measured or guaranteed efficiency.",
+    "No optical conversion from watts to lumens is claimed.",
+    "Higher LED voltage reduces current but does not establish optimum BOM or board size.",
+    "No switching frequency, L, C, sense resistor or final IC is selected."
+  ]
+}

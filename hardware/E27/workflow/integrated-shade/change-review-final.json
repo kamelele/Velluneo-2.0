@@ -1,0 +1,29 @@
+{
+  "actor": "/root/review_change",
+  "role": "Change Reviewer",
+  "manifest": "f847fe676df47340d9db14cc0fbb9152f0499d8d52aeb1f1c6b44885876a9170",
+  "recommendation": "ready_for_human_review for draft only",
+  "verified": [
+    "All nine final hashes verified",
+    "Evidence scopes/inputs/hashes correct; no stage or human approval claimed",
+    "Final IS-1.1 checker digest correct and gate failed honestly",
+    "No tracked baseline changes"
+  ],
+  "findings": [
+    {
+      "id": "IS-CHG-01-N2",
+      "status": "independently_verified_closed",
+      "basis": "Fresh requirements-check-final.json"
+    },
+    {
+      "id": "IS-CHG-01-N1",
+      "status": "due_before_publication",
+      "closure": "Enforce publication-plan.json exact allowlist; exclude .work, toolkit, scratch."
+    },
+    {
+      "id": "IS-CHG-01-N3",
+      "status": "addressed_by_actual_rereviews_and_scope_retention",
+      "basis": "integration-record.json and actual IS-1.1 re-review messages"
+    }
+  ]
+}

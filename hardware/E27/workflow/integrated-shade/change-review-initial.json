@@ -1,0 +1,32 @@
+{
+  "actor": "/root/review_change",
+  "role": "Change Reviewer",
+  "input": "IS-1.1",
+  "manifest": "12d37c577194d2c818dfa8c0612eff6eec26dc352c20b6ce45e4409706def676",
+  "recommendation": "ready_for_human_review for incomplete specification draft only",
+  "verification": [
+    "Manifest and seven hashes verified",
+    "Base HEAD and local branch confirmed",
+    "Tracked baseline diff empty; new variant/toolkit/runtime only",
+    "Toolkit lock and doctor identity confirmed",
+    "No false CAD, measurements, MCP operations or transferred approvals"
+  ],
+  "findings": [
+    {
+      "id": "IS-CHG-01-N1",
+      "severity": "minor",
+      "gate": "before publication",
+      "closure": "Explicit publication allowlist excludes runtime/toolkit/scratch."
+    },
+    {
+      "id": "IS-CHG-01-N2",
+      "severity": "note",
+      "closure": "Fresh final requirements report; original remains historical."
+    },
+    {
+      "id": "IS-CHG-01-N3",
+      "severity": "note",
+      "closure": "Actual re-reviews and explicit retained scope; no inherited human approval."
+    }
+  ]
+}

@@ -1,0 +1,448 @@
+{
+  "schema_version": 1,
+  "stage": "specification",
+  "errors": [
+    {
+      "id": "OPEN-PROCESS",
+      "gate": "specification",
+      "message": "Unresolved: Confirm fabrication/assembly proposal after schematic shortlist and expected THT/SMT scope."
+    },
+    {
+      "id": "REQ-SCOPE",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-POWER",
+      "gate": "specification",
+      "message": "Required evidence kind absent: calculation"
+    },
+    {
+      "id": "REQ-PROCESS",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "matrix": [
+    {
+      "id": "REQ-SCOPE",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-POWER",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "screening.json",
+          "path": "screening.json"
+        }
+      ],
+      "required_kind": "calculation",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-LIGHT",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-MAINS",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-FAULT",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-SAFETY",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-PROCESS",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-PARTS",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-CONNECTIVITY",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-SIZE",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-EMC",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-COST",
+      "revision": "IS-1",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "OPEN-PROCESS",
+      "record_id": "REQ-PROCESS",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Confirm fabrication/assembly proposal after schematic shortlist and expected THT/SMT scope.",
+      "blocks_stage": "specification",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LINE",
+      "record_id": "REQ-MAINS",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Confirm EU/Poland 230V 50Hz only as the first target market.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-PART",
+      "record_id": "REQ-PARTS",
+      "field": "implementation",
+      "owner": "Codex-root",
+      "question": "Select documented HV9961-based implementation with external protection, or obtain full BP2863XJ data and sourcing before selecting integrated implementation. No IC selected yet.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LED",
+      "record_id": "REQ-POWER",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Select actual LED series/MPN/bins/CCT and cold/hot voltage/current/thermal envelope.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-STANDARDS",
+      "record_id": "REQ-SAFETY",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Establish classification, applicable EN editions and insulation working/fault voltage/test basis; full clauses not yet verified.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-FAULT",
+      "record_id": "REQ-FAULT",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Derive numeric startup/reconnect/open/short/thermal/energy acceptance limits from actual component and assembly limits.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-MECHANICS",
+      "record_id": "REQ-SIZE",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Approve exploratory driver outline/height/interface and later actual enclosure, thermal and accessibility contracts before formal placement.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LIGHT",
+      "record_id": "REQ-LIGHT",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Approve flux band/CCT/ambient and actual test setup before optical qualification.",
+      "blocks_stage": "release",
+      "status": "open"
+    }
+  ],
+  "passed": false,
+  "limitations": [
+    "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+    "Hashes establish freshness, not evidence truth or reviewer authority.",
+    "Electrical checks compare declared DC envelopes only, not complete operation."
+  ],
+  "intent_digest": "7ac6acc919b646dddfe0a88a8f65bf738b87782a8678f1ce4a1e065bbfc9e798",
+  "product": "Velluneo-integrated-shade-nonisolated",
+  "revision": "IS-1",
+  "document_sha256": "e6fd674142d4dedf3e7d09d559cd22b99a7a642fe31b11e09fe49f8729b449e0",
+  "blockers": [
+    {
+      "id": "OPEN-PROCESS",
+      "gate": "specification",
+      "message": "Unresolved: Confirm fabrication/assembly proposal after schematic shortlist and expected THT/SMT scope."
+    },
+    {
+      "id": "OPEN-LINE",
+      "gate": "schematic",
+      "message": "Unresolved: Confirm EU/Poland 230V 50Hz only as the first target market."
+    },
+    {
+      "id": "OPEN-PART",
+      "gate": "schematic",
+      "message": "Unresolved: Select documented HV9961-based implementation with external protection, or obtain full BP2863XJ data and sourcing before selecting integrated implementation. No IC selected yet."
+    },
+    {
+      "id": "OPEN-LED",
+      "gate": "schematic",
+      "message": "Unresolved: Select actual LED series/MPN/bins/CCT and cold/hot voltage/current/thermal envelope."
+    },
+    {
+      "id": "OPEN-STANDARDS",
+      "gate": "schematic",
+      "message": "Unresolved: Establish classification, applicable EN editions and insulation working/fault voltage/test basis; full clauses not yet verified."
+    },
+    {
+      "id": "OPEN-FAULT",
+      "gate": "schematic",
+      "message": "Unresolved: Derive numeric startup/reconnect/open/short/thermal/energy acceptance limits from actual component and assembly limits."
+    },
+    {
+      "id": "OPEN-MECHANICS",
+      "gate": "placement",
+      "message": "Unresolved: Approve exploratory driver outline/height/interface and later actual enclosure, thermal and accessibility contracts before formal placement."
+    },
+    {
+      "id": "OPEN-LIGHT",
+      "gate": "release",
+      "message": "Unresolved: Approve flux band/CCT/ambient and actual test setup before optical qualification."
+    },
+    {
+      "id": "REQ-SCOPE",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-POWER",
+      "gate": "specification",
+      "message": "Required evidence kind absent: calculation"
+    },
+    {
+      "id": "REQ-LIGHT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-MAINS",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-FAULT",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-SAFETY",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-PROCESS",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-PARTS",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-CONNECTIVITY",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-SIZE",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-EMC",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-COST",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "blocked_stages": [
+    "specification",
+    "schematic",
+    "placement",
+    "routing",
+    "release"
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}
