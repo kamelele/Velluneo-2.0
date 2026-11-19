@@ -1,6 +1,6 @@
 # SC07-C: targeted single PhotoMOS open-fault mitigation
 
-SC06 native sources remain unchanged. This packet specifies the new46-position/110-pin intent before new native capture. The earlierSC07-A comparator/SCR alternative was investigated but is not selected; it is retained as a labelled study. No new KiCad schematic, PCB, order or mains test has been produced.
+SC06 native sources remain unchanged. This packet includes the native 46-position/110-pin KiCad 10.0.6 working schematic after actual owner approval of SC07-C. The earlierSC07-A comparator/SCR alternative was investigated but is not selected; it is retained as a labelled study. SC07_protection.kicad_pro opens the native schematic with portable local symbol and footprint libraries. No PCB, order or mains test has been produced.
 
 ## Selected response
 
@@ -18,4 +18,6 @@ The original17 requirements remain, including physical release evidence. The str
 
 ## Stage boundary
 
-New exact pin-intent approval is required before nativeSC07capture; previousSC06approval is not rebound to this different graph. Schematic acceptance and PCB placement additionally require closure or an explicitly reviewed bounded prototype scope for the remaining current-stage issues. No complete electrical/safety acceptance is claimed.
+The actual owner approved SC07-C for schematic capture: owner-capture-approval.json. Fresh connectivity and ERC reports are in workflow/integrated-shade/schematic-07/capture-checks. Capture approval does not accept the schematic stage or PCB. Schematic acceptance and PCB placement additionally require closure or an explicitly reviewed bounded prototype scope for the remaining current-stage issues. No complete electrical/safety acceptance is claimed.
+
+Generic toolkit fabrication rules were adopted only after preview inspection (all additions, no conflicts). They do not specify mains insulation distances; product domains and engineering acceptance remain open. Footprint inventory checks pad numbers and readability, not thermal or assembly qualification.

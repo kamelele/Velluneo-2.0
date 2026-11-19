@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "errors": [],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC07_protection\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC07_protection\\SC07_protection.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "22:17:55: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n22:17:55: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\nFontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "intent_digest": "5d7ce049ca55b28653828ec783e1cf89808408d8e4dc466e86e17d982744b640",
+  "intent_revision": "SC07-C",
+  "physical_pins": 110,
+  "intended_nets": 29,
+  "no_connects": 1,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "c5cee811d70620d03d6aa469bad45c899b6732089a688d21bb0645b57d5c7181",
+  "export_sha256": "3f372ee0e7068cc6043e712843a1a4a4ce37de8669c87ae50092819e8cc408a3",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}

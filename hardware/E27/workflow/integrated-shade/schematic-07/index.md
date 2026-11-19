@@ -1,5 +1,5 @@
-# SC07-C workflow
+# SC07-C native working schematic
 
-Root owns all shared design/CAD/library writes. Kamil is the authorized human. Parent is37d9e57 on the existing concept branch. The task studies the board only; final enclosure fit is not a prerequisite.
+Actual owner capture approval is recorded in capture-owner-decision.json. Native CAD, local libraries and fresh checks are frozen in capture-review-inputs.json; four actual capture reviews are in capture-reviews.json. Earlier pre-capture records are historical and retained separately.
 
-The37-file frozen input is inreview-inputs.json; allfouractualadvisoryreviews and scopedcorrections are recorded inreviews.json. See stage-packet.json and electrical-closure-ledger.json for exact open gates. No new native schematic is generated before the new map decision. No production, orders, mains tests, schematicacceptance orPCBapproval is inferred. The previous SC06 native design remains unchanged.
+ERC0, connectivity110 pins/29 nets/1NC and46 pad inventories pass. Requirements14/work15 findings remain. Electrical acceptance and PCB are not approved; see stage-packet.json and electrical-closure-ledger.json. Root is sole shared CAD writer. SC06/main remain outside publication scope.

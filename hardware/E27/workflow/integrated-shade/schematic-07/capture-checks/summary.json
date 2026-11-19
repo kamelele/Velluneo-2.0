@@ -1,0 +1,33 @@
+{
+  "revision": "SC07-C native schematic draft",
+  "intent_digest": "5d7ce049ca55b28653828ec783e1cf89808408d8e4dc466e86e17d982744b640",
+  "ERC": {
+    "violations": 0,
+    "tool": "KiCad 10.0.6"
+  },
+  "connectivity": {
+    "passed": true,
+    "pins": 110,
+    "nets": 29,
+    "no_connects": 1
+  },
+  "footprint_inventory": {
+    "passed": true,
+    "components": 46,
+    "tool": "matching pcbnew 10.0.6"
+  },
+  "requirements": {
+    "passed": false,
+    "errors": 14,
+    "report": "requirements.json"
+  },
+  "work_check": {
+    "passed": false,
+    "errors": 15,
+    "report": "check.json",
+    "note": "Includes full requirements blockers and mandatory board-source inventory: no board has been created at this schematic stage. No fabricated placeholder board."
+  },
+  "native_capture_correction": "U3 TL431BQPK symbol and wiring use approved physical pins 1REF, 2ANODE/tab, 3CATHODE. Approved graph was not edited to match CAD.",
+  "visual_review": "A2 PDF exported from final native CAD and rendered/inspected at full page and detailed crops. Final D1 duplicate pin-name text suppressed without altering physical pins/nets.",
+  "acceptance": "No schematic-stage, placement, PCB, release or safety acceptance. Two actuator paths target single open-fault containment; current, surge, hot operation and listed engineering gates remain open."
+}
