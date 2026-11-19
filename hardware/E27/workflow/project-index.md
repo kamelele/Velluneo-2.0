@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current driver routing cleanup and current-project mapping — CLEANUP10
+
+[CLEANUP10](specification-reset/pcb-cleanup-10/README.md) smooths the selected45×60mm4layerdriver from647to304segments (-53.0%), with shorter totalcopper and unchanged33parts/81pads/placement.17via lands now0.7mm/0.3mmholes meet0.20mmannularpreference; oneVDDvia moves0.05mm. Native/portable0DRC/0unconnected/0parity/ERC0; measurementcopper/topology/projection andactualnegativecontrols checked. Current design/hardware.json replaces stalehistoricalroot mapping;55managedJSONconflicts resolved manually afterpreview; two original error severities retained as explicit stronger-policy conflicts. Five actual prototype criteria close and routingrequirements pass. Scoped3/10mmDRU remainsunchanged; pinnedtoolkit cannot compose it/four-layerbarrier, so automaticadoption/formalrelease remainblocked, with genuineapproval/vendor/physicalgates retained. Parentlamp31findings are preserved, not hidden by prototype scope. CurrentCAM/nativepreview and twoREVIEWarchives supplied; noorder/contact/poweredtest or mainmerge.
+
 ## Current prototype procurement preparation — PROTOTYPE09
 
 [PROTOTYPE09](specification-reset/pcb-prototype-09/README.md) prepares the selected four-layer45×60mm board for bare-board fabrication review. Same copper/pads/electrical basis as DRIVER08; corrected1mm/0.15mm silkscreen and same-land R14legend variant. Fresh native0/0/0/ERC0, independently parsed9CAMlayers/42PTH/0NPTH/45×60outline and explicit17filled-via map. Fabrication-review and separateengineeringZIPs/orderchecklist supplied. Files are prepared, but supplierDFM/process/productionfilm confirmation and formalrelease gates remain open; no order, PCBArelease or energizedqualification is claimed. Older entries below retain historical scope.

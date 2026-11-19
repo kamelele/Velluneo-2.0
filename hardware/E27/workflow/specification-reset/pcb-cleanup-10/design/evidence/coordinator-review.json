@@ -1,0 +1,102 @@
+{
+  "verified_by": "/root coordinator actual inspection, not an independent final role",
+  "selected_board": [
+    45,
+    60,
+    4
+  ],
+  "components": 33,
+  "pads": 81,
+  "source_board_sha256": "0fbffe49d4b29efa26f561f753768747991c9065e25aa79ae46c00dca54fa55f",
+  "native_geometry": {
+    "board_sha256": "0fbffe49d4b29efa26f561f753768747991c9065e25aa79ae46c00dca54fa55f",
+    "old_segments": 647,
+    "new_segments": 304,
+    "reduction_percent": 53.013910355486864,
+    "old_total_planar_mm": 730.7806696228952,
+    "new_total_planar_mm": 719.6698696780712,
+    "drv_planar_mm": 14.265748709834563,
+    "vias": 17,
+    "via_pad_mm": 0.7,
+    "via_hole_mm": 0.3,
+    "annular_ring_mm": 0.2,
+    "one_VDD_via_shift_mm": [
+      0,
+      0.05
+    ],
+    "pads_values_MPNs_positions_unchanged": true,
+    "SENSE_CS_copper_identical": true,
+    "scope": "Actual saved native planar lengths/counts. Some routes use straight non45-degree segments; no current/EMI/inductance or operating qualification inferred."
+  },
+  "CAM": {
+    "parser": "gerbonara1.5.0",
+    "source_board_sha256": "0fbffe49d4b29efa26f561f753768747991c9065e25aa79ae46c00dca54fa55f",
+    "layers": [
+      {
+        "layer": "top-copper",
+        "objects": 176,
+        "source_file": "Velluneo_driver-F_Cu.gtl"
+      },
+      {
+        "layer": "top-mask",
+        "objects": 53,
+        "source_file": "Velluneo_driver-F_Mask.gts"
+      },
+      {
+        "layer": "top-silk",
+        "objects": 456,
+        "source_file": "Velluneo_driver-F_Silkscreen.gto"
+      },
+      {
+        "layer": "bottom-copper",
+        "objects": 173,
+        "source_file": "Velluneo_driver-B_Cu.gbl"
+      },
+      {
+        "layer": "bottom-mask",
+        "objects": 53,
+        "source_file": "Velluneo_driver-B_Mask.gbs"
+      },
+      {
+        "layer": "bottom-silk",
+        "objects": 476,
+        "source_file": "Velluneo_driver-B_Silkscreen.gbo"
+      },
+      {
+        "layer": "inner_1-copper",
+        "objects": 96,
+        "source_file": "Velluneo_driver-In1_Cu.g1"
+      },
+      {
+        "layer": "inner_2-copper",
+        "objects": 83,
+        "source_file": "Velluneo_driver-In2_Cu.g2"
+      },
+      {
+        "layer": "mechanical-outline",
+        "objects": 4,
+        "source_file": "Velluneo_driver-Edge_Cuts.gm1"
+      }
+    ],
+    "drills": 42,
+    "plated": 42,
+    "nonplated": 0,
+    "drills_match_native_positions_within_export_quantization": true,
+    "drill_axis_quantization_tolerance_mm": 0.000501,
+    "drill_sizes_plating_exact": true,
+    "origin_and_outline_exact_mm": [
+      45,
+      60
+    ],
+    "outline_closed_four_segments": true,
+    "parser_warnings": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-cleanup-10\\fabrication\\Velluneo_driver-NPTH.drl:10 \"G90\": G90 header statement found after end of header",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-cleanup-10\\fabrication\\Velluneo_driver-PTH.drl:24 \"G90\": G90 header statement found after end of header"
+    ],
+    "warning_disposition": "Gerbonara warns on KiCad G90 placement after header; parsed coordinates checked within 3-decimal export rounding (0.0005mm per axis). Empty NPTH is explicitly classified using filename/plating, not heuristic output.",
+    "scope": "Independent manufacturing-file parse, drill/outline/layer reconciliation and CAM images; not full electrical net extraction, vendor DFM acceptance or physical qualification."
+  },
+  "current_project_mapping": "hardware.json adjacent to Velluneo_driver.*",
+  "visual_inspection": "Actual current Gerbonara inner2/back layers inspected; staircase reduction visible, widths retained. Native both-side views and final composite inspected before delivery.",
+  "scope": "Only demonstrated CAD/CAM/current-source mapping, not physical operating or vendor/human approval."
+}

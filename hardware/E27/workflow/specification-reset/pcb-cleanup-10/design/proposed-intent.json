@@ -1,0 +1,733 @@
+{
+  "schema_version": 1,
+  "revision": "ECO04-PROPOSED-r2",
+  "status": "proposed_unapproved",
+  "basis": "Source-bound pre-CAD proposed delta from accepted31-partmap; controller no-HV pinmap and two-resistor startup, formedbridge/MOSFETterminals, T1projectlands; not CAD-derived approval. R2 adds a source-independent passive ceiling for normal-line startup feed using804kohm/80.6kohm, with extraheat explicitly retained.",
+  "base": "4eb215d273262ec4ba995fdf69e9118f9537aff1",
+  "components": [
+    {
+      "ref": "J1",
+      "mpn": "PROJECT:INSULATED_INPUT_WIRE_PADS",
+      "pins": {
+        "1": "AC_CAP_A",
+        "2": "AC_CAP_B"
+      }
+    },
+    {
+      "ref": "F1",
+      "mpn": "3403.0268.23",
+      "pins": {
+        "1": "AC_CAP_A",
+        "2": "AC_FUSED"
+      }
+    },
+    {
+      "ref": "R1",
+      "mpn": "AC05000004709JAC00",
+      "pins": {
+        "1": "AC_FUSED",
+        "2": "AC_LIMITED"
+      }
+    },
+    {
+      "ref": "BR1",
+      "mpn": "W10G-E4/51",
+      "pins": {
+        "1": "BULK_POS",
+        "2": "AC_CAP_B",
+        "3": "PRIMARY_GND",
+        "4": "AC_LIMITED"
+      }
+    },
+    {
+      "ref": "C1",
+      "mpn": "450BXW15MEFR10X20",
+      "pins": {
+        "1": "BULK_POS",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "R2",
+      "mpn": "CRCW2512499KFKEG",
+      "pins": {
+        "1": "BULK_POS",
+        "2": "BLEED_MID"
+      }
+    },
+    {
+      "ref": "R3",
+      "mpn": "CRCW2512499KFKEG",
+      "pins": {
+        "1": "BLEED_MID",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "U1",
+      "mpn": "UCC28701DBVR",
+      "pins": {
+        "1": "NTC",
+        "2": "VDD",
+        "3": "DRV",
+        "4": "CS",
+        "5": "PRIMARY_GND",
+        "6": "VS"
+      }
+    },
+    {
+      "ref": "Q1",
+      "mpn": "STF2N80K5",
+      "pins": {
+        "1": "GATE",
+        "2": "DRAIN",
+        "3": "SENSE"
+      }
+    },
+    {
+      "ref": "T1",
+      "mpn": "CUSTOM:EFD25_120_30_22",
+      "pins": {
+        "1": "BULK_POS",
+        "2": "PRIMARY_GND",
+        "3": null,
+        "4": "AUX_RAW",
+        "5": "DRAIN",
+        "6": "OUTPUT_NEG",
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": "SECONDARY_RAW"
+      }
+    },
+    {
+      "ref": "D1",
+      "mpn": "US1M-13-F",
+      "pins": {
+        "1": "CLAMP",
+        "2": "DRAIN"
+      }
+    },
+    {
+      "ref": "TVS1",
+      "mpn": "SMBJ160A-E3/52",
+      "pins": {
+        "1": "CLAMP",
+        "2": "BULK_POS"
+      }
+    },
+    {
+      "ref": "C2",
+      "mpn": "C2220C474J5GACTU",
+      "pins": {
+        "1": "VDD",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "C3",
+      "mpn": "C2220C474J5GACTU",
+      "pins": {
+        "1": "VDD",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "R4",
+      "mpn": "CRCW080580K6FKEA",
+      "pins": {
+        "1": "AUX_RAW",
+        "2": "VS"
+      }
+    },
+    {
+      "ref": "R5",
+      "mpn": "CRCW080517K4FKEA",
+      "pins": {
+        "1": "VS",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "R6",
+      "mpn": "CRCW06031K40FKEA",
+      "pins": {
+        "1": "SENSE",
+        "2": "CS"
+      }
+    },
+    {
+      "ref": "R7",
+      "mpn": "CRCW08054R70FKEA",
+      "pins": {
+        "1": "DRV",
+        "2": "GATE"
+      }
+    },
+    {
+      "ref": "R8",
+      "mpn": "CRCW060347K0FKEA",
+      "pins": {
+        "1": "GATE",
+        "2": "SENSE"
+      }
+    },
+    {
+      "ref": "R9",
+      "mpn": "CRCW12062R32FKEA",
+      "pins": {
+        "1": "SENSE",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "D2",
+      "mpn": "STTH1R02A",
+      "pins": {
+        "1": "AUX_RECT",
+        "2": "AUX_RAW"
+      }
+    },
+    {
+      "ref": "R10",
+      "mpn": "CRCW25124R70FKEG",
+      "pins": {
+        "1": "AUX_RECT",
+        "2": "VDD"
+      }
+    },
+    {
+      "ref": "D3",
+      "mpn": "STTH2R02A",
+      "pins": {
+        "1": "OUTPUT_POS",
+        "2": "SECONDARY_RAW"
+      }
+    },
+    {
+      "ref": "C4",
+      "mpn": "EEHZA1J100P",
+      "pins": {
+        "1": "OUTPUT_POS",
+        "2": "OUTPUT_NEG"
+      }
+    },
+    {
+      "ref": "R11",
+      "mpn": "CRCW251220K0FKEG",
+      "pins": {
+        "1": "OUTPUT_POS",
+        "2": "OUTPUT_NEG"
+      }
+    },
+    {
+      "ref": "R12",
+      "mpn": "CRCW251220K0FKEG",
+      "pins": {
+        "1": "OUTPUT_POS",
+        "2": "OUTPUT_NEG"
+      }
+    },
+    {
+      "ref": "RT1",
+      "mpn": "NTCS0603E3104FXT",
+      "pins": {
+        "1": "NTC",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "J2",
+      "mpn": "PROJECT:INSULATED_OUTPUT_WIRE_PADS",
+      "pins": {
+        "1": "OUTPUT_POS",
+        "2": "OUTPUT_NEG"
+      }
+    },
+    {
+      "ref": "R13",
+      "mpn": "CRCW060380K6FKEA",
+      "pins": {
+        "1": "VDD",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "R14",
+      "mpn": "CRCW2512499KFKEG",
+      "pins": {
+        "1": "BULK_POS",
+        "2": "BLEED_MID_B"
+      }
+    },
+    {
+      "ref": "R15",
+      "mpn": "CRCW2512499KFKEG",
+      "pins": {
+        "1": "BLEED_MID_B",
+        "2": "PRIMARY_GND"
+      }
+    },
+    {
+      "ref": "R16",
+      "mpn": "CRCW2512402KFKEG",
+      "pins": {
+        "1": "BULK_POS",
+        "2": "STARTUP_MID"
+      }
+    },
+    {
+      "ref": "R17",
+      "mpn": "CRCW2512402KFKEG",
+      "pins": {
+        "1": "STARTUP_MID",
+        "2": "VDD"
+      }
+    }
+  ],
+  "nets": [
+    {
+      "name": "AC_CAP_A",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "1"
+        },
+        {
+          "ref": "F1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "AC_CAP_B",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "2"
+        },
+        {
+          "ref": "BR1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "AC_FUSED",
+      "pins": [
+        {
+          "ref": "F1",
+          "pin": "2"
+        },
+        {
+          "ref": "R1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "AC_LIMITED",
+      "pins": [
+        {
+          "ref": "R1",
+          "pin": "2"
+        },
+        {
+          "ref": "BR1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "AUX_RAW",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "4"
+        },
+        {
+          "ref": "R4",
+          "pin": "1"
+        },
+        {
+          "ref": "D2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "AUX_RECT",
+      "pins": [
+        {
+          "ref": "D2",
+          "pin": "1"
+        },
+        {
+          "ref": "R10",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "BLEED_MID",
+      "pins": [
+        {
+          "ref": "R2",
+          "pin": "2"
+        },
+        {
+          "ref": "R3",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "BLEED_MID_B",
+      "pins": [
+        {
+          "ref": "R14",
+          "pin": "2"
+        },
+        {
+          "ref": "R15",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "BULK_POS",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "1"
+        },
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "R2",
+          "pin": "1"
+        },
+        {
+          "ref": "T1",
+          "pin": "1"
+        },
+        {
+          "ref": "TVS1",
+          "pin": "2"
+        },
+        {
+          "ref": "R14",
+          "pin": "1"
+        },
+        {
+          "ref": "R16",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "CLAMP",
+      "pins": [
+        {
+          "ref": "D1",
+          "pin": "1"
+        },
+        {
+          "ref": "TVS1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "CS",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "4"
+        },
+        {
+          "ref": "R6",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "DRAIN",
+      "pins": [
+        {
+          "ref": "Q1",
+          "pin": "2"
+        },
+        {
+          "ref": "T1",
+          "pin": "5"
+        },
+        {
+          "ref": "D1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "DRV",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "3"
+        },
+        {
+          "ref": "R7",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "GATE",
+      "pins": [
+        {
+          "ref": "Q1",
+          "pin": "1"
+        },
+        {
+          "ref": "R7",
+          "pin": "2"
+        },
+        {
+          "ref": "R8",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "NTC",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "1"
+        },
+        {
+          "ref": "RT1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "OUTPUT_NEG",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "6"
+        },
+        {
+          "ref": "C4",
+          "pin": "2"
+        },
+        {
+          "ref": "R11",
+          "pin": "2"
+        },
+        {
+          "ref": "R12",
+          "pin": "2"
+        },
+        {
+          "ref": "J2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "OUTPUT_POS",
+      "pins": [
+        {
+          "ref": "D3",
+          "pin": "1"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "R11",
+          "pin": "1"
+        },
+        {
+          "ref": "R12",
+          "pin": "1"
+        },
+        {
+          "ref": "J2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "PRIMARY_GND",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "3"
+        },
+        {
+          "ref": "C1",
+          "pin": "2"
+        },
+        {
+          "ref": "R3",
+          "pin": "2"
+        },
+        {
+          "ref": "U1",
+          "pin": "5"
+        },
+        {
+          "ref": "T1",
+          "pin": "2"
+        },
+        {
+          "ref": "C2",
+          "pin": "2"
+        },
+        {
+          "ref": "C3",
+          "pin": "2"
+        },
+        {
+          "ref": "R5",
+          "pin": "2"
+        },
+        {
+          "ref": "R9",
+          "pin": "2"
+        },
+        {
+          "ref": "RT1",
+          "pin": "2"
+        },
+        {
+          "ref": "R13",
+          "pin": "2"
+        },
+        {
+          "ref": "R15",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SECONDARY_RAW",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "10"
+        },
+        {
+          "ref": "D3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SENSE",
+      "pins": [
+        {
+          "ref": "Q1",
+          "pin": "3"
+        },
+        {
+          "ref": "R6",
+          "pin": "1"
+        },
+        {
+          "ref": "R8",
+          "pin": "2"
+        },
+        {
+          "ref": "R9",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "STARTUP_MID",
+      "pins": [
+        {
+          "ref": "R16",
+          "pin": "2"
+        },
+        {
+          "ref": "R17",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "VDD",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "2"
+        },
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R10",
+          "pin": "2"
+        },
+        {
+          "ref": "R13",
+          "pin": "1"
+        },
+        {
+          "ref": "R17",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "VS",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "6"
+        },
+        {
+          "ref": "R4",
+          "pin": "2"
+        },
+        {
+          "ref": "R5",
+          "pin": "1"
+        }
+      ]
+    }
+  ],
+  "no_connect": [
+    {
+      "ref": "T1",
+      "pin": "3"
+    },
+    {
+      "ref": "T1",
+      "pin": "7"
+    },
+    {
+      "ref": "T1",
+      "pin": "8"
+    },
+    {
+      "ref": "T1",
+      "pin": "9"
+    }
+  ],
+  "approval": null,
+  "proposal_digest": "87b164503d5c5894dfe592608a172bd858c960b3a40b1b141f3588bfeffd716b"
+}
