@@ -1,0 +1,145 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T15:02:33",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "T1_oval_process_study.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Clearance violation (rule 'T1_STUDY_FUNCTIONAL_3mm' clearance 3,0000 mm; actual 2,9000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of T1",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 61.25
+                    },
+                    "uuid": "e8fe1a40-f9f9-43e0-96a4-bef4d1915e87"
+                },
+                {
+                    "description": "PTH pad 2 [/PRIMARY_GND] of T1",
+                    "pos": {
+                        "x": 45.0,
+                        "y": 61.25
+                    },
+                    "uuid": "0218ee13-0cf5-4540-aa4b-4337bc74c624"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'T1_STUDY_FUNCTIONAL_3mm' clearance 3,0000 mm; actual 2,9000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of T1",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 61.25
+                    },
+                    "uuid": "e8fe1a40-f9f9-43e0-96a4-bef4d1915e87"
+                },
+                {
+                    "description": "PTH pad 2 [/PRIMARY_GND] of T1",
+                    "pos": {
+                        "x": 45.0,
+                        "y": 61.25
+                    },
+                    "uuid": "0218ee13-0cf5-4540-aa4b-4337bc74c624"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'T1_STUDY_FUNCTIONAL_3mm' clearance 3,0000 mm; actual 2,9000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 4 [/AUX_RAW] of T1",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 61.25
+                    },
+                    "uuid": "b86dadeb-2d83-448d-9e2b-c27d99e04ad5"
+                },
+                {
+                    "description": "PTH pad 5 [/DRAIN] of T1",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 61.25
+                    },
+                    "uuid": "fcdf58c3-c9d3-405a-8a6a-83a5773486ab"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'T1_STUDY_FUNCTIONAL_3mm' clearance 3,0000 mm; actual 2,9000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 4 [/AUX_RAW] of T1",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 61.25
+                    },
+                    "uuid": "b86dadeb-2d83-448d-9e2b-c27d99e04ad5"
+                },
+                {
+                    "description": "PTH pad 5 [/DRAIN] of T1",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 61.25
+                    },
+                    "uuid": "fcdf58c3-c9d3-405a-8a6a-83a5773486ab"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Footprint 'TDK_EFD25_PlatedOval_STUDY' does not match copy in library 'Velluneo_T1Study'",
+            "items": [
+                {
+                    "description": "Footprint T1",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 50.0
+                    },
+                    "uuid": "6ba1b4b3-822f-4d19-ad8f-ea7d195bd415"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        }
+    ]
+}

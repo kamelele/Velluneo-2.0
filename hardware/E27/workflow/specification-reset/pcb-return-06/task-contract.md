@@ -1,0 +1,3 @@
+# PCB-RETURN-06
+
+Base6db74f48b18576c6cf396e54242a6d1191671c1f. Continue the real owner-selected33-part basis: develop IC/bulk/sense/gate returns and actual exploratory tracks, quantify coupling/error sensitivities and fault conditions, dimension transformer terminal insulation. Root alone owns new packet CAD/libraries/evidence and additive index/inventory. Children perform bounded read-only source/topology work. Preserve33MPNs/pinmap,3/10mm rules and strict project settings; no hidden exception or manufactured approval. Review four independent roles on a frozen result. Native checks and actual calculations cannot substitute for finished insulation/process/operating evidence. No fabrication/suppliercontact/order/poweredtest.

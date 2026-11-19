@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current return-path development — 19 November2026
+
+[PCB-RETURN-06](specification-reset/pcb-return-06/README.md) extends the actual33-part exploratory study with bulk/IC/localground, gate/pulldown/VS branches and real layer transition. Explicit same-net powerstrap exclusion guards the C1junction; longreturn/coupling, oppositefaceDRV/VDD/NTC, faults, finishedT1/Qforming/material/process/fit remainopen. Numericalrules unchanged; see fresh native counts and actualreviews. No accepted routing/manufacturing/powertesting.
+
 ## Current owner-selected33 basis and current-path development — 19 November2026
 
 [PCB-CONTROL-05](specification-reset/pcb-control-05/README.md) records the owner's genuine approval of exactr3/33as the basis for further work. Keeps33MPNs/values/81pins/23nets+4NC; six coupled moves eliminate prior3cross-facepadapproaches and namedQ1landrefinement improves conditionalannulus. Main41x60native0violations/54unconnected/0parity/ERC0. Separate real8-segment3-branchsense-study0violations/51unconnected, SENSE24.420mm/CS1.931mm/return2.7mm; driver/star/powerloops/coupling stilluncompleted, including2segmentapproaches tooneoppositeCLAMPpad. R6correctlytreatedasRLCcompensation;128conditionalcorners/newCV/UVLO/NTC/faultassessment andinsulation/tolerance study areexecuted. IsolatedovalT1couponunadopted; sourcepinfit/process/finishedinsulation/10.7tolerancebudget/thermal/fit and genuine technicalstageacceptance remainopen. Nativepositive/negativecontrols, portableZIP/preview/fourreviews supplied. No manufacturing/power-test authorization or assumed stage approval.

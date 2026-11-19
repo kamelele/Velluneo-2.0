@@ -1,0 +1,18 @@
+"""Explicit proposed fabrication/assembly tolerance budgets; not confirmed process limits."""
+from pathlib import Path
+import math,json
+D=Path(__file__).resolve().parent
+def annulus(land,hole,landtol=.025,holetol=.05,registration=.025):return(land-landtol-hole-holetol)/2-registration
+def gap(pitch,land,landtol=.025,pitchloss=.05,fillet=.05):return pitch-pitchloss-land-landtol-2*fillet
+oval_ann_x=annulus(1.85,1.10);oval_ann_y=annulus(2.15,1.35)
+pin_assumed_max=.65;positionbudget=.025+.025;slotmin=1.10-.05;pin_radius=pin_assumed_max/math.sqrt(2);insertion=slotmin/2-pin_radius-positionbudget
+br=dict(proposed_pitch_mm=5.5,land_mm=2.,hole_mm=1.2,minimum_annulus_under_declared_budget_mm=annulus(2.,1.2),finished_gap_under_declared_budget_mm=gap(5.5,2.),raw_lead_diameter_max_source_mm=.81,insertion_radial_clearance_before_position_error_mm=(1.2-.05-.81)/2,process_confirmed=False)
+t1=dict(main_round_land_mm=2.,main_hole_mm=1.35,main_nominal_gap_mm=3.,main_min_annulus_under_declared_budget_mm=annulus(2.,1.35),rejected_1p95_land_min_annulus_mm=annulus(1.95,1.35),round_land_needed_for_p3_finished_annulus_mm=1.35+.05+.025+2*(.3+.025),oval_study_only=dict(slot_mm=[1.1,1.35],land_mm=[1.85,2.15],nominal_row_gap_mm=5-1.85,minimum_annulus_mm=min(oval_ann_x,oval_ann_y),minimum_gap_under_declared_budget_mm=gap(5,1.85,fillet=.025),assumed_pin_max_mm=pin_assumed_max,source_pin_nominal_mm=.6,assumed_total_pin_hole_position_error_mm=positionbudget,insertion_radial_remainder_mm=insertion,manufacturer_recommended_round_hole_mm=[1.3,1.4],manufacturer_does_not_confirm_narrow_oval=True,qualified=False))
+# A geometric centreline development; availability of actual free lead is unproven.
+shift=5.08;thickness=.7;inside_radius=.7;midradius=inside_radius+thickness/2;root=4.;development=root+math.pi*midradius+(shift-2*midradius)+.5+1.6+.5
+q=dict(baseline_land_mm=2.2,control05_main_land_mm=2.25,hole_mm=1.5,baseline_min_annulus_under_declared_budget_mm=annulus(2.2,1.5),control05_min_annulus_under_declared_budget_mm=annulus(2.25,1.5),nominal_stagger_distance_mm=math.hypot(2.54,5.08),conditional_finished_gap_for2p25_mm=math.hypot(2.54,5.08)-.10-2.25-.025-.1,diagonal_relative_position_loss_assumed_mm=.10,proposed_middle_lead_development_mm=development,source_free_lead_length_confirmed=False,source_lead_section_max_mm=[1.,.7],qualified=False)
+PS=10.071370313914587
+out=dict(status='Engineering tolerance study; no supplier/assembly capability confirmation',budgets=dict(finished_hole_size_plus_minus_mm=.05,copper_land_size_plus_minus_mm=.025,relative_hole_registration_max_mm=.025,adjacent_pitch_loss_max_mm=.05,fillet_outgrowth_per_side_mm=.05,oval_fillets_per_side_mm=.025),BR1=br,T1=t1,Q1=q,PS=dict(actual_projected_copper_min_mm=PS,proposed_finished_metal_growth_per_domain_mm=.35,remaining_under_proposed_budget_mm=PS-.7,nominal_needed_for_finished10_mm=10.7,full_valid10p7_candidate_found=False),scope='These tolerances are proposed acceptance controls, not manufacturer/provider guarantees or lighting-standard minima. Native3/10mm rule screens unchanged. Main T1 remains round-hole source proposal; oval coupon is isolated and unadopted. A PCB slot between pins does not enlarge their direct air gap. Core/yokes treated primary-domain metal; no soldermask/enamel/unknown resin credited as reinforced insulation.')
+assert abs(br['minimum_annulus_under_declared_budget_mm']-.3375)<1e-9 and abs(t1['oval_study_only']['minimum_annulus_mm']-.3125)<1e-9
+assert out['T1']['oval_study_only']['minimum_gap_under_declared_budget_mm']>=3
+(D/'insulation-results.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n');print(json.dumps(out,indent=2))
