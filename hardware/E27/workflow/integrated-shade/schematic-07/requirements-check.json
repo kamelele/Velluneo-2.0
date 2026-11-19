@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "stage": "schematic",
+  "errors": [
+    {
+      "id": "OPEN-PART",
+      "gate": "schematic",
+      "message": "Unresolved: SC07-C exact46-positionBOM selected. FulltemperatureLYTcurrentlimits, hotclamp and nonlinear magnetics data remain unqualified."
+    },
+    {
+      "id": "OPEN-LED",
+      "gate": "schematic",
+      "message": "Unresolved: Proposed 30S Cree JB2835BG, D8 flux/AC voltage bins, 2700 K CRI80, 50-60.5 mA. Confirm reel bins and cold/hot/current envelope; about 800 lm remains unmeasured."
+    },
+    {
+      "id": "OPEN-STANDARDS",
+      "gate": "schematic",
+      "message": "Unresolved: Establish classification, applicable EN editions and insulation working/fault voltage/test basis; full clauses not yet verified."
+    },
+    {
+      "id": "OPEN-FAULT",
+      "gate": "schematic",
+      "message": "Unresolved: Dualactuator openfaultdesignresponse and conditionalcalculations supplied. Validate survivingpathhotdrive/delay, actualcurrent/chargewindow, input/surge and thermal envelopes before schematicacceptance."
+    },
+    {
+      "id": "OPEN-ENV",
+      "gate": "schematic",
+      "message": "Unresolved: Agree ambient range, fixture/orientations, thermal boundary and lifetime targets before circuit acceptance."
+    },
+    {
+      "id": "OPEN-OPTICAL-INPUT",
+      "gate": "schematic",
+      "message": "Unresolved: Agree initial CCT/CRI and optical design band/loss/temperature assumptions needed for LED selection; 2700K/CRI80 is only the proposal."
+    },
+    {
+      "id": "REQ-MAINS",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-FAULT",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-SAFETY",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-PARTS",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-CONNECTIVITY",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-ENV",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-OPTICAL-INPUT",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-INTERFACE",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "matrix": [
+    {
+      "id": "REQ-SCOPE",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-RETAINED-SCOPE"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "REQ-POWER",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "electrical-checks.json",
+          "path": "electrical-checks.json"
+        }
+      ],
+      "required_kind": "calculation",
+      "evidence_ids": [
+        "EV-SCENARIO-CALC"
+      ],
+      "observed_levels": [
+        "calculated"
+      ],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-LIGHT",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-MAINS",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-FAULT",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "electrical-checks.json",
+          "path": "electrical-checks.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-SAFETY",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-PROCESS",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-OWNER-CHOICES"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "REQ-PARTS",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-CONNECTIVITY",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "intended-connectivity.json",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-SIZE",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-EMC",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-COST",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-ENV",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-SAFETY-TEST",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-FAULT-TEST",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "REQ-OPTICAL-INPUT",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "REQ-INTERFACE",
+      "revision": "SC07-C",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "IFC-DRIVER-LED",
+      "revision": "SC07-C",
+      "owner": "Kamil and Codex electrical design",
+      "type": "electrical-interface",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "J2",
+          "path": "driver-led-interface.json"
+        },
+        {
+          "subsystem": "LED_MODULE",
+          "object": "30S LED proposal"
+        }
+      ],
+      "required_kind": "design",
+      "evidence_ids": [
+        "EV-IFC-DESIGN"
+      ],
+      "observed_levels": [
+        "designed"
+      ],
+      "status": "verified"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "OPEN-PART",
+      "record_id": "REQ-PARTS",
+      "field": "implementation",
+      "owner": "Codex-root",
+      "question": "SC07-C exact46-positionBOM selected. FulltemperatureLYTcurrentlimits, hotclamp and nonlinear magnetics data remain unqualified.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LED",
+      "record_id": "REQ-POWER",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Proposed 30S Cree JB2835BG, D8 flux/AC voltage bins, 2700 K CRI80, 50-60.5 mA. Confirm reel bins and cold/hot/current envelope; about 800 lm remains unmeasured.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-STANDARDS",
+      "record_id": "REQ-SAFETY",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Establish classification, applicable EN editions and insulation working/fault voltage/test basis; full clauses not yet verified.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-FAULT",
+      "record_id": "REQ-FAULT",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Dualactuator openfaultdesignresponse and conditionalcalculations supplied. Validate survivingpathhotdrive/delay, actualcurrent/chargewindow, input/surge and thermal envelopes before schematicacceptance.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-MECHANICS",
+      "record_id": "REQ-SIZE",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Approve exploratory driver outline/height/interface and later actual enclosure, thermal and accessibility contracts before formal placement.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LIGHT",
+      "record_id": "REQ-LIGHT",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Approve flux band/CCT/ambient and actual test setup before optical qualification.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-ENV",
+      "record_id": "REQ-ENV",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Agree ambient range, fixture/orientations, thermal boundary and lifetime targets before circuit acceptance.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-OPTICAL-INPUT",
+      "record_id": "REQ-OPTICAL-INPUT",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Agree initial CCT/CRI and optical design band/loss/temperature assumptions needed for LED selection; 2700K/CRI80 is only the proposal.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    }
+  ],
+  "passed": false,
+  "limitations": [
+    "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+    "Hashes establish freshness, not evidence truth or reviewer authority.",
+    "Electrical checks compare declared DC envelopes only, not complete operation."
+  ],
+  "intent_digest": "155ed08562ea962afea6a8df97c0fa9ba2e200646aa100aacef4c4039cc963a5",
+  "product": "Velluneo_SC07",
+  "revision": "SC07-C",
+  "document_sha256": "c27f8209f27b0eff137f8462e9d6f1050accae0b837cebcd118d95fd3330a3d2",
+  "blockers": [
+    {
+      "id": "OPEN-PART",
+      "gate": "schematic",
+      "message": "Unresolved: SC07-C exact46-positionBOM selected. FulltemperatureLYTcurrentlimits, hotclamp and nonlinear magnetics data remain unqualified."
+    },
+    {
+      "id": "OPEN-LED",
+      "gate": "schematic",
+      "message": "Unresolved: Proposed 30S Cree JB2835BG, D8 flux/AC voltage bins, 2700 K CRI80, 50-60.5 mA. Confirm reel bins and cold/hot/current envelope; about 800 lm remains unmeasured."
+    },
+    {
+      "id": "OPEN-STANDARDS",
+      "gate": "schematic",
+      "message": "Unresolved: Establish classification, applicable EN editions and insulation working/fault voltage/test basis; full clauses not yet verified."
+    },
+    {
+      "id": "OPEN-FAULT",
+      "gate": "schematic",
+      "message": "Unresolved: Dualactuator openfaultdesignresponse and conditionalcalculations supplied. Validate survivingpathhotdrive/delay, actualcurrent/chargewindow, input/surge and thermal envelopes before schematicacceptance."
+    },
+    {
+      "id": "OPEN-MECHANICS",
+      "gate": "placement",
+      "message": "Unresolved: Approve exploratory driver outline/height/interface and later actual enclosure, thermal and accessibility contracts before formal placement."
+    },
+    {
+      "id": "OPEN-LIGHT",
+      "gate": "release",
+      "message": "Unresolved: Approve flux band/CCT/ambient and actual test setup before optical qualification."
+    },
+    {
+      "id": "OPEN-ENV",
+      "gate": "schematic",
+      "message": "Unresolved: Agree ambient range, fixture/orientations, thermal boundary and lifetime targets before circuit acceptance."
+    },
+    {
+      "id": "OPEN-OPTICAL-INPUT",
+      "gate": "schematic",
+      "message": "Unresolved: Agree initial CCT/CRI and optical design band/loss/temperature assumptions needed for LED selection; 2700K/CRI80 is only the proposal."
+    },
+    {
+      "id": "REQ-LIGHT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-MAINS",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-FAULT",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-SAFETY",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-PARTS",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-CONNECTIVITY",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-SIZE",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-EMC",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-COST",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-ENV",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-SAFETY-TEST",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-FAULT-TEST",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "REQ-OPTICAL-INPUT",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "REQ-INTERFACE",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "blocked_stages": [
+    "schematic",
+    "placement",
+    "routing",
+    "release"
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}

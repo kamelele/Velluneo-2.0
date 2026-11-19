@@ -1,0 +1,90 @@
+{
+  "id": "IFC-DRIVER-LED",
+  "revision": "SC07-C",
+  "owner": "Kamil and Codex electrical design",
+  "kind": "electrical",
+  "gate": "schematic",
+  "requirements": [
+    "REQ-INTERFACE",
+    "REQ-POWER",
+    "REQ-FAULT",
+    "REQ-MAINS"
+  ],
+  "basis": "Actual two-wire replaceable diffuser+LED module; board-only owner scope. All conductors mains referenced, not SELV.",
+  "acceptance": "Explicit pin mapping and healthy/fault envelopes specified for review. Qualified operation and bins are separate open evidence.",
+  "method": "design",
+  "evidence_ids": [],
+  "implementation": [
+    {
+      "subsystem": "DRIVER",
+      "object": "J2",
+      "path": "driver-led-interface.json"
+    },
+    {
+      "subsystem": "LED_MODULE",
+      "object": "30S LED proposal"
+    }
+  ],
+  "endpoints": [
+    {
+      "subsystem": "DRIVER",
+      "connector": "J2",
+      "pins": [
+        {
+          "pin": "1",
+          "role": "power",
+          "signal": "LED_PLUS",
+          "direction": "source",
+          "voltage_min_v": 72,
+          "voltage_max_v": 84.5,
+          "current_ma": 60.5
+        },
+        {
+          "pin": "2",
+          "role": "ground",
+          "signal": "LED_RETURN"
+        }
+      ]
+    },
+    {
+      "subsystem": "LED_MODULE",
+      "connector": "LED_IN",
+      "pins": [
+        {
+          "pin": "1",
+          "role": "power",
+          "signal": "LED_PLUS",
+          "direction": "sink",
+          "voltage_min_v": 72,
+          "voltage_max_v": 84.5,
+          "current_ma": 50
+        },
+        {
+          "pin": "2",
+          "role": "ground",
+          "signal": "LED_RETURN"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "a": "1",
+      "b": "1"
+    },
+    {
+      "a": "2",
+      "b": "2"
+    }
+  ],
+  "startup_behavior": "Current regulated nominal55mA target. No bulkcapacitor on LED side bypassingR7. COUT150uF stays inbase. Remove mains before replacement; instructions do not constitute a contact-accessibility safety barrier.",
+  "fault_behavior": "COUT123V normal/135Vfault are conditional acceptance limits. AbsentmoduleLED_PLUSmayreachCOUT. R7limits capacitor-driven reconnectcurrent; LEDpulsecapability still unqualified. Either healthy PhotoMOS can stop switching on overvoltage. Automaticretry retained; no guaranteed latchedACreset.",
+  "transient_requirements": {
+    "max_COUT_fault_V": 135,
+    "COUT_max_F": 0.00018,
+    "stored_energy_J": 1.64025,
+    "conditional_healthy60V_initial_LED_A": 0.17316816938155874,
+    "discharge_one_bleeder_open_to5V_s_max": 40,
+    "status": "Proposed limits/calculation only, not qualifiedLEDpulse/touchsafeclaim."
+  }
+}

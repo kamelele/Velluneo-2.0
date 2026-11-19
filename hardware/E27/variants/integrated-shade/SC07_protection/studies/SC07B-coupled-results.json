@@ -1,0 +1,1173 @@
+{
+  "kind": "Own coupled per-cycle ideal-source analytical simulation, not PIXls/SPICE",
+  "equations": [
+    "Iled=max(0,(Vout-84.5)/Rled)",
+    "Iaux=max(0,(Vout-12.075)/5322)+2*Vout/56000+Vout/321000+Ileak",
+    "Cout*dVout/dt=Iinductor-Iled-Iaux",
+    "For each piecewise affine load region: Vnext=Veq+(Vold-Veq)*exp(-g*T/Cout), Veq=(Qdriver/T-constant)/g"
+  ],
+  "scope": "SC07-B dualPhotoMOS normal steady load only; OVP not modeled; crossing threshold indicates design conflict, not qualified clamping",
+  "limitations": [
+    "Ideal rectified source minus1.6V; actual pi filter, bridge switching, DCR,ESR,losses,nonlinear L,reverse-current startup,frequency jitter,50ms/800ms auto-restart and BP/OVP shutdown omitted. Fixed69%maximumduty, not a swept device duty envelope.",
+    "Frozen Vout during each switching cycle and analytic CFB ramp integration; output region uses beginning-of-cycle branch state and average driver charge.",
+    "All controller corner values remain illustrative25C/sensitivity inputs, not full-temperature/all-slope guaranteed bounds.",
+    "LED constant84.5V is worst-Vf load assumption, not actual diode IV or finalbin guarantee. Startup peak separated from steady last half; no safety acceptance."
+  ],
+  "cases": [
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.7,
+        "L": 0.003,
+        "f": 66000.0,
+        "ilim": 0.375,
+        "vth": 1.65,
+        "Cfb": 2.2e-05,
+        "tmin": 5e-07,
+        "Cout": 0.00012,
+        "Rled": 470.0,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 108.84868257495786,
+        "Vmax": 111.02316846064811,
+        "ripple": 2.1744858856902454,
+        "LEDavg": 0.05435127045926808,
+        "driveravg": 0.07849835358996878,
+        "loadavg": 0.0784827834120303,
+        "model_Ipk": 0.37500000000000006,
+        "longest_zero_charge_gap_s": 0.0024848484848484886,
+        "longest_disabled_gap_s": 0.0024848484848484886,
+        "min_10ms_charge_c": 0.0007801656827275671,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 5.728483991687423e-14,
+        "last_voltage": 109.94460576845782,
+        "start_voltage": 109.87973002752128
+      },
+      "startup": {
+        "peak_first_half_v": 110.99876832617493
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.987,
+        "L": 0.0024,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 105.3244211039096,
+        "Vmax": 107.06490895710184,
+        "ripple": 1.740487853192235,
+        "LEDavg": 0.050309237210898194,
+        "driveravg": 0.07358922440006738,
+        "loadavg": 0.07358917594078516,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0023870967741935404,
+        "longest_disabled_gap_s": 0.0023870967741935404,
+        "min_10ms_charge_c": 0.000735892100661963,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 2.932501086898864e-16,
+        "last_voltage": 106.17671561124429,
+        "start_voltage": 106.17651369757269
+      },
+      "startup": {
+        "peak_first_half_v": 107.06469832198
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.987,
+        "L": 0.0033,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 104.95208948031052,
+        "Vmax": 106.88582493928358,
+        "ripple": 1.9337354589730609,
+        "LEDavg": 0.049677598305779655,
+        "driveravg": 0.07290192530339783,
+        "loadavg": 0.07289551174203701,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0023870967741935404,
+        "longest_disabled_gap_s": 0.0023870967741935404,
+        "min_10ms_charge_c": 0.0007239482631449608,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 3.0847930699244965e-14,
+        "last_voltage": 105.87552826236467,
+        "start_voltage": 105.84880509028604
+      },
+      "startup": {
+        "peak_first_half_v": 106.80748454998651
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.413,
+        "L": 0.0024,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 110.02895049638198,
+        "Vmax": 112.2617557241743,
+        "ripple": 2.232805227792312,
+        "LEDavg": 0.06184950471803123,
+        "driveravg": 0.08626434528317839,
+        "loadavg": 0.0862626676285241,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.0025142857142857068,
+        "longest_disabled_gap_s": 0.0025142857142857068,
+        "min_10ms_charge_c": 0.0008623705638618054,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 6.229505504647646e-15,
+        "last_voltage": 111.11460504689353,
+        "start_voltage": 111.10761481922292
+      },
+      "startup": {
+        "peak_first_half_v": 112.24358345777857
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.413,
+        "L": 0.0033,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 109.39673110153994,
+        "Vmax": 111.66256766949301,
+        "ripple": 2.265836567953073,
+        "LEDavg": 0.06044214922374371,
+        "driveravg": 0.08471734547552243,
+        "loadavg": 0.0847171134940537,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.0024999999999999927,
+        "longest_disabled_gap_s": 0.0024999999999999927,
+        "min_10ms_charge_c": 0.0008471723042314749,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 7.703253259135957e-16,
+        "last_voltage": 110.50595266857408,
+        "start_voltage": 110.5049860791292
+      },
+      "startup": {
+        "peak_first_half_v": 111.66155000590457
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.987,
+        "L": 0.0024,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 108.76188521105594,
+        "Vmax": 110.57514396725126,
+        "ripple": 1.8132587561953244,
+        "LEDavg": 0.04970246243846968,
+        "driveravg": 0.07377367163505982,
+        "loadavg": 0.07377024487499614,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.002483870967741927,
+        "longest_disabled_gap_s": 0.002483870967741927,
+        "min_10ms_charge_c": 0.0007377168341613059,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 1.253808365250385e-14,
+        "last_voltage": 109.65842027720268,
+        "start_voltage": 109.64414211037268
+      },
+      "startup": {
+        "peak_first_half_v": 110.56030528674
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.987,
+        "L": 0.0033,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 108.22614475116501,
+        "Vmax": 110.07685432681907,
+        "ripple": 1.850709575654065,
+        "LEDavg": 0.048696872023992845,
+        "driveravg": 0.07264898316484862,
+        "loadavg": 0.0726487627785441,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.002483870967741927,
+        "longest_disabled_gap_s": 0.002483870967741927,
+        "min_10ms_charge_c": 0.0007263341437933326,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 6.126496795610646e-16,
+        "last_voltage": 109.13200446198859,
+        "start_voltage": 109.1310861857256
+      },
+      "startup": {
+        "peak_first_half_v": 110.07588137999637
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.413,
+        "L": 0.0024,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 114.11643615563264,
+        "Vmax": 116.45606584753637,
+        "ripple": 2.339629691903724,
+        "LEDavg": 0.06085471854490721,
+        "driveravg": 0.08621416174021272,
+        "loadavg": 0.08620776951559933,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.0026142857142857053,
+        "longest_disabled_gap_s": 0.0026142857142857053,
+        "min_10ms_charge_c": 0.0008608832140571238,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 1.834434627516631e-14,
+        "last_voltage": 115.26035515686762,
+        "start_voltage": 115.23372088779865
+      },
+      "startup": {
+        "peak_first_half_v": 116.40702487528893
+      }
+    },
+    {
+      "inputs": {
+        "vac": 207.0,
+        "Rs": 28.413,
+        "L": 0.0033,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 113.34789823305864,
+        "Vmax": 115.68465870674022,
+        "ripple": 2.3367604736815792,
+        "LEDavg": 0.059327751361568704,
+        "driveravg": 0.08450476271194864,
+        "loadavg": 0.0845048233326116,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.002599999999999991,
+        "longest_disabled_gap_s": 0.002599999999999991,
+        "min_10ms_charge_c": 0.0008450433230013447,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -2.1167048287675056e-16,
+        "last_voltage": 114.49299511226565,
+        "start_voltage": 114.49324769835737
+      },
+      "startup": {
+        "peak_first_half_v": 115.68965838234382
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.7,
+        "L": 0.003,
+        "f": 66000.0,
+        "ilim": 0.375,
+        "vth": 1.65,
+        "Cfb": 2.2e-05,
+        "tmin": 5e-07,
+        "Cout": 0.00012,
+        "Rled": 470.0,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 109.08157495520658,
+        "Vmax": 110.99037136514647,
+        "ripple": 1.908796409939896,
+        "LEDavg": 0.05455992213937707,
+        "driveravg": 0.07870624033443088,
+        "loadavg": 0.07871366954789101,
+        "model_Ipk": 0.37500000000000006,
+        "longest_zero_charge_gap_s": 0.0022424242424242432,
+        "longest_disabled_gap_s": 0.0022424242424242432,
+        "min_10ms_charge_c": 0.0007833180053632172,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -2.7226197811286868e-14,
+        "last_voltage": 109.98102271569356,
+        "start_voltage": 110.01197777154863
+      },
+      "startup": {
+        "peak_first_half_v": 110.96869460098578
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.987,
+        "L": 0.0024,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 105.32624580059695,
+        "Vmax": 106.87688640827292,
+        "ripple": 1.5506406076759731,
+        "LEDavg": 0.050116453911870584,
+        "driveravg": 0.07337645108764364,
+        "loadavg": 0.07337746182443233,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0021612903225806386,
+        "longest_disabled_gap_s": 0.0021612903225806386,
+        "min_10ms_charge_c": 0.0007335887254540181,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -4.476246512565192e-15,
+        "last_voltage": 106.08731384006151,
+        "start_voltage": 106.09152524331323
+      },
+      "startup": {
+        "peak_first_half_v": 106.87919036801657
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.987,
+        "L": 0.0033,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 104.92175964634025,
+        "Vmax": 106.51483345373133,
+        "ripple": 1.5930738073910788,
+        "LEDavg": 0.04926442558469694,
+        "driveravg": 0.0724417504879157,
+        "loadavg": 0.07244176653699803,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0021290322580645098,
+        "longest_disabled_gap_s": 0.0021290322580645098,
+        "min_10ms_charge_c": 0.0007244164056901908,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -1.8820249705025553e-16,
+        "last_voltage": 105.7033705418735,
+        "start_voltage": 105.70343741304828
+      },
+      "startup": {
+        "peak_first_half_v": 106.52421981126301
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.413,
+        "L": 0.0024,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 110.2481090679982,
+        "Vmax": 112.23527787003988,
+        "ripple": 1.9871688020416798,
+        "LEDavg": 0.0620961615811166,
+        "driveravg": 0.0865327969517177,
+        "loadavg": 0.08653354555246523,
+        "model_Ipk": 0.504,
+        "longest_zero_charge_gap_s": 0.0022571428571428534,
+        "longest_disabled_gap_s": 0.0022571428571428534,
+        "min_10ms_charge_c": 0.0008652872845650819,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -2.9128158625336617e-15,
+        "last_voltage": 111.21903009693844,
+        "start_voltage": 111.22214926669464
+      },
+      "startup": {
+        "peak_first_half_v": 112.2463947274887
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.413,
+        "L": 0.0033,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 109.78662700916487,
+        "Vmax": 111.87743154408545,
+        "ripple": 2.0908045349205793,
+        "LEDavg": 0.06114952399956954,
+        "driveravg": 0.08550424681362508,
+        "loadavg": 0.08549395062854978,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.0022571428571428534,
+        "longest_disabled_gap_s": 0.0022571428571428534,
+        "min_10ms_charge_c": 0.0008509360346504973,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 3.9046484991980216e-14,
+        "last_voltage": 110.84379364624886,
+        "start_voltage": 110.80089287542324
+      },
+      "startup": {
+        "peak_first_half_v": 111.85641750602593
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.987,
+        "L": 0.0024,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 108.75285423078034,
+        "Vmax": 110.52091597453963,
+        "ripple": 1.76806174375929,
+        "LEDavg": 0.0497242893791103,
+        "driveravg": 0.07383070846530065,
+        "loadavg": 0.07379458731382144,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0022258064516128963,
+        "longest_disabled_gap_s": 0.0022258064516128963,
+        "min_10ms_charge_c": 0.0007359838363813358,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 1.307218459726308e-13,
+        "last_voltage": 109.69072627199996,
+        "start_voltage": 109.54022147525964
+      },
+      "startup": {
+        "peak_first_half_v": 110.35218995770578
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.987,
+        "L": 0.0033,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 108.27822518847489,
+        "Vmax": 109.95154987043047,
+        "ripple": 1.6733246819555774,
+        "LEDavg": 0.0486473416606887,
+        "driveravg": 0.07258754560998995,
+        "loadavg": 0.07259352416958673,
+        "model_Ipk": 0.3500000000000001,
+        "longest_zero_charge_gap_s": 0.002209677419354832,
+        "longest_disabled_gap_s": 0.002209677419354832,
+        "min_10ms_charge_c": 0.0007244106381662055,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -2.1640713479293295e-14,
+        "last_voltage": 109.08588572955055,
+        "start_voltage": 109.11079639435725
+      },
+      "startup": {
+        "peak_first_half_v": 109.95153592493809
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.413,
+        "L": 0.0024,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 114.51135353633052,
+        "Vmax": 116.62838724821253,
+        "ripple": 2.1170337118820157,
+        "LEDavg": 0.06141011605295208,
+        "driveravg": 0.08683484194465481,
+        "loadavg": 0.08682717514309818,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.002342857142857138,
+        "longest_disabled_gap_s": 0.002342857142857138,
+        "min_10ms_charge_c": 0.0008654870377658008,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 2.193210297754414e-14,
+        "last_voltage": 115.57402014011873,
+        "start_voltage": 115.54207513381844
+      },
+      "startup": {
+        "peak_first_half_v": 116.6192388896608
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.413,
+        "L": 0.0033,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 113.55957489313681,
+        "Vmax": 115.68389624620455,
+        "ripple": 2.1243213530677423,
+        "LEDavg": 0.059567166620570676,
+        "driveravg": 0.08476343594111979,
+        "loadavg": 0.08477183057803002,
+        "model_Ipk": 0.504,
+        "longest_zero_charge_gap_s": 0.0023285714285714238,
+        "longest_disabled_gap_s": 0.0023285714285714238,
+        "min_10ms_charge_c": 0.0008451711364009018,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -2.3825142840593408e-14,
+        "last_voltage": 114.58750449694854,
+        "start_voltage": 114.62248215053864
+      },
+      "startup": {
+        "peak_first_half_v": 115.68649800542214
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.7,
+        "L": 0.003,
+        "f": 66000.0,
+        "ilim": 0.375,
+        "vth": 1.65,
+        "Cfb": 2.2e-05,
+        "tmin": 5e-07,
+        "Cout": 0.00012,
+        "Rled": 470.0,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 109.03062056323225,
+        "Vmax": 110.67618525341183,
+        "ripple": 1.645564690179583,
+        "LEDavg": 0.05421126331837475,
+        "driveravg": 0.0783301608267152,
+        "loadavg": 0.07832785675274333,
+        "model_Ipk": 0.37500000000000006,
+        "longest_zero_charge_gap_s": 0.002015151515151513,
+        "longest_disabled_gap_s": 0.002015151515151513,
+        "min_10ms_charge_c": 0.0007819379016032802,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 8.386276063846354e-15,
+        "last_voltage": 109.8391486935935,
+        "start_voltage": 109.8295483854462
+      },
+      "startup": {
+        "peak_first_half_v": 110.67651364583278
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.987,
+        "L": 0.0024,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 105.26439775742229,
+        "Vmax": 106.67678023713692,
+        "ripple": 1.412382479714637,
+        "LEDavg": 0.049844515568261756,
+        "driveravg": 0.0730833169850515,
+        "loadavg": 0.07307881984449642,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0019354838709677367,
+        "longest_disabled_gap_s": 0.0019354838709677367,
+        "min_10ms_charge_c": 0.0007303153604996905,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 2.168061211924076e-14,
+        "last_voltage": 105.96915069627202,
+        "start_voltage": 105.95041261080848
+      },
+      "startup": {
+        "peak_first_half_v": 106.65587184027737
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.987,
+        "L": 0.0033,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 104.98792328905175,
+        "Vmax": 106.4920823136048,
+        "ripple": 1.5041590245530472,
+        "LEDavg": 0.04929462528599619,
+        "driveravg": 0.0724858373683763,
+        "loadavg": 0.07247493177022606,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0019354838709677367,
+        "longest_disabled_gap_s": 0.0019354838709677367,
+        "min_10ms_charge_c": 0.0007221621677724747,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 5.2733209271948415e-14,
+        "last_voltage": 105.76182997540127,
+        "start_voltage": 105.71638998354862
+      },
+      "startup": {
+        "peak_first_half_v": 106.49102418807752
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.413,
+        "L": 0.0024,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 110.20735351898462,
+        "Vmax": 111.99062938068846,
+        "ripple": 1.7832758617038422,
+        "LEDavg": 0.06180484488240981,
+        "driveravg": 0.08621367053595667,
+        "loadavg": 0.08621362231348685,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.002028571428571428,
+        "longest_disabled_gap_s": 0.002028571428571428,
+        "min_10ms_charge_c": 0.0008621365306184587,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 3.3695544374248934e-16,
+        "last_voltage": 111.08275831163364,
+        "start_voltage": 111.08255738467238
+      },
+      "startup": {
+        "peak_first_half_v": 111.99042060136496
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.413,
+        "L": 0.0033,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 433.10499999999996,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 109.81069747537526,
+        "Vmax": 111.75823187814267,
+        "ripple": 1.9475344027674026,
+        "LEDavg": 0.0610545159542515,
+        "driveravg": 0.08538961569386949,
+        "loadavg": 0.08538961304089297,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.002028571428571428,
+        "longest_disabled_gap_s": 0.002028571428571428,
+        "min_10ms_charge_c": 0.000848939391625951,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -1.2284546792733822e-16,
+        "last_voltage": 110.72060905836614,
+        "start_voltage": 110.7205980042954
+      },
+      "startup": {
+        "peak_first_half_v": 111.7582096022645
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.987,
+        "L": 0.0024,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 108.72938027496667,
+        "Vmax": 110.22202691951593,
+        "ripple": 1.4926466445492537,
+        "LEDavg": 0.04936645161697581,
+        "driveravg": 0.073407752388225,
+        "loadavg": 0.07339550967953708,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0019999999999999944,
+        "longest_disabled_gap_s": 0.0019999999999999944,
+        "min_10ms_charge_c": 0.0007340423036306845,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 4.439551414751712e-14,
+        "last_voltage": 109.49137035857026,
+        "start_voltage": 109.44035907274105
+      },
+      "startup": {
+        "peak_first_half_v": 110.16943390552555
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.987,
+        "L": 0.0033,
+        "f": 62000.0,
+        "ilim": 0.35,
+        "vth": 1.54,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 108.25078833349576,
+        "Vmax": 109.79124112262015,
+        "ripple": 1.5404527891243873,
+        "LEDavg": 0.04851845774821655,
+        "driveravg": 0.07246344708804006,
+        "loadavg": 0.07244978672114093,
+        "model_Ipk": 0.35000000000000003,
+        "longest_zero_charge_gap_s": 0.0019999999999999944,
+        "longest_disabled_gap_s": 0.0019999999999999944,
+        "min_10ms_charge_c": 0.0007244832875163684,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 4.957614637687629e-14,
+        "last_voltage": 109.03642617396847,
+        "start_voltage": 108.97950797897013
+      },
+      "startup": {
+        "peak_first_half_v": 109.73121297658233
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.413,
+        "L": 0.0024,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 114.39790085479763,
+        "Vmax": 116.24617833700978,
+        "ripple": 1.8482774822121542,
+        "LEDavg": 0.06096158128948416,
+        "driveravg": 0.08632684258623748,
+        "loadavg": 0.08632694791377844,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.0021142857142857126,
+        "longest_disabled_gap_s": 0.0021142857142857126,
+        "min_10ms_charge_c": 0.0008632589174342257,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -2.626751541308195e-16,
+        "last_voltage": 115.30645272881162,
+        "start_voltage": 115.30689159356513
+      },
+      "startup": {
+        "peak_first_half_v": 116.26008471873924
+      }
+    },
+    {
+      "inputs": {
+        "vac": 253.0,
+        "Rs": 28.413,
+        "L": 0.0033,
+        "f": 70000.0,
+        "ilim": 0.504,
+        "vth": 1.76,
+        "Cfb": 2.2e-05,
+        "tmin": 6.75e-07,
+        "Cout": 0.00012,
+        "Rled": 508.305,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 113.68781549920074,
+        "Vmax": 115.60706782046911,
+        "ripple": 1.9192523212683739,
+        "LEDavg": 0.05963658839522939,
+        "driveravg": 0.0848486441274027,
+        "loadavg": 0.08484925303180609,
+        "model_Ipk": 0.5040000000000001,
+        "longest_zero_charge_gap_s": 0.0021142857142857126,
+        "longest_disabled_gap_s": 0.0021142857142857126,
+        "min_10ms_charge_c": 0.0008464619333609436,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -1.6696317997769519e-15,
+        "last_voltage": 114.62935596954227,
+        "start_voltage": 114.63189307121176
+      },
+      "startup": {
+        "peak_first_half_v": 115.59923890627162
+      }
+    }
+  ],
+  "convergence": [
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.7,
+        "L": 0.003,
+        "f": 66000.0,
+        "ilim": 0.375,
+        "vth": 1.65,
+        "Cfb": 2.2e-05,
+        "tmin": 5e-07,
+        "Cout": 0.00012,
+        "Rled": 470.0,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 2.0,
+        "method": "exact"
+      },
+      "steady": {
+        "Vmin": 109.09475563373843,
+        "Vmax": 110.96623551968396,
+        "ripple": 1.8714798859455328,
+        "LEDavg": 0.054559267944650026,
+        "driveravg": 0.078720686013945,
+        "loadavg": 0.07871294564050323,
+        "model_Ipk": 0.3750000000000001,
+        "longest_zero_charge_gap_s": 0.0022424242424242432,
+        "longest_disabled_gap_s": 0.0022424242424242432,
+        "min_10ms_charge_c": 0.0007833793128889324,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": 5.715106800351435e-14,
+        "last_voltage": 110.04552582723102,
+        "start_voltage": 109.98102271569356
+      },
+      "startup": {
+        "peak_first_half_v": 110.99037136514647
+      }
+    },
+    {
+      "inputs": {
+        "vac": 230.0,
+        "Rs": 28.7,
+        "L": 0.003,
+        "f": 66000.0,
+        "ilim": 0.375,
+        "vth": 1.65,
+        "Cfb": 2.2e-05,
+        "tmin": 5e-07,
+        "Cout": 0.00012,
+        "Rled": 470.0,
+        "Vled": 84.5,
+        "leak": 0.00145,
+        "duration": 1.0,
+        "method": "euler"
+      },
+      "steady": {
+        "Vmin": 109.00176481271359,
+        "Vmax": 110.9905858673368,
+        "ripple": 1.988821054623216,
+        "LEDavg": 0.054494174724383275,
+        "driveravg": 0.07864152077236135,
+        "loadavg": 0.07864091592049166,
+        "model_Ipk": 0.3750000000000001,
+        "longest_zero_charge_gap_s": 0.0022424242424242432,
+        "longest_disabled_gap_s": 0.0022424242424242432,
+        "min_10ms_charge_c": 0.0007823582572139842,
+        "missing_10ms_charge_bins": 0,
+        "missing20ms_steady_burst": false,
+        "charge_balance_residual_c": -4.4957793748620095e-11,
+        "last_voltage": 110.01011324748966,
+        "start_voltage": 110.00759265671809
+      },
+      "startup": {
+        "peak_first_half_v": 110.96198566977593
+      }
+    }
+  ],
+  "leak_free": {
+    "inputs": {
+      "vac": 230.0,
+      "Rs": 28.7,
+      "L": 0.003,
+      "f": 66000.0,
+      "ilim": 0.375,
+      "vth": 1.65,
+      "Cfb": 2.2e-05,
+      "tmin": 5e-07,
+      "Cout": 0.00012,
+      "Rled": 470.0,
+      "Vled": 84.5,
+      "leak": 0.0,
+      "duration": 1.0,
+      "method": "exact"
+    },
+    "steady": {
+      "Vmin": 109.69631822611703,
+      "Vmax": 111.57148578168028,
+      "ripple": 1.8751675555632517,
+      "LEDavg": 0.055876372142010106,
+      "driveravg": 0.07873221761252702,
+      "loadavg": 0.07872040382390234,
+      "model_Ipk": 0.3750000000000001,
+      "longest_zero_charge_gap_s": 0.0022424242424242432,
+      "longest_disabled_gap_s": 0.0022424242424242432,
+      "min_10ms_charge_c": 0.0007871121193920474,
+      "missing_10ms_charge_bins": 0,
+      "missing20ms_steady_burst": false,
+      "charge_balance_residual_c": 4.341558257787157e-14,
+      "last_voltage": 110.6357601626419,
+      "start_voltage": 110.58653604373254
+    },
+    "startup": {
+      "peak_first_half_v": 111.51903806506884
+    }
+  },
+  "summary": {
+    "cases": 27,
+    "max_v": 116.62838724821253,
+    "min_v": 104.92175964634025,
+    "LEDavg_range": [
+      0.04851845774821655,
+      0.0620961615811166
+    ],
+    "max_chargegap_s": 0.0026142857142857053,
+    "missing20ms_any": false,
+    "normal123V_exceedances": 0,
+    "lowest_OVP126V_exceedances": 0
+  }
+}

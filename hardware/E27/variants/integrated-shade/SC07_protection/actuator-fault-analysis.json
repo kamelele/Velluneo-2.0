@@ -1,0 +1,94 @@
+{
+  "baseline": "SC06 single U4 output-open removes soleBP/SOURCE clamp; reproduced from independently specified graph.",
+  "SC07": "Two independently resistor-fed LEDs and two separate100ohmoutputbranches. No seriesLEDs, no current-sharing credit.",
+  "fault_cases": [
+    {
+      "fault_component": "U4",
+      "fault": "LED_open",
+      "surviving_path": "U5",
+      "LED_feed": "R26",
+      "BP_series": "R27",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    },
+    {
+      "fault_component": "U4",
+      "fault": "output_open",
+      "surviving_path": "U5",
+      "LED_feed": "R26",
+      "BP_series": "R27",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    },
+    {
+      "fault_component": "U4",
+      "fault": "LED_short",
+      "surviving_path": "U5",
+      "LED_feed": "R26",
+      "BP_series": "R27",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    },
+    {
+      "fault_component": "U4",
+      "fault": "output_terminal_short",
+      "surviving_path": "U5",
+      "LED_feed": "R26",
+      "BP_series": "R27",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    },
+    {
+      "fault_component": "U5",
+      "fault": "LED_open",
+      "surviving_path": "U4",
+      "LED_feed": "R21",
+      "BP_series": "R6",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    },
+    {
+      "fault_component": "U5",
+      "fault": "output_open",
+      "surviving_path": "U4",
+      "LED_feed": "R21",
+      "BP_series": "R6",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    },
+    {
+      "fault_component": "U5",
+      "fault": "LED_short",
+      "surviving_path": "U4",
+      "LED_feed": "R21",
+      "BP_series": "R6",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    },
+    {
+      "fault_component": "U5",
+      "fault": "output_terminal_short",
+      "surviving_path": "U4",
+      "LED_feed": "R21",
+      "BP_series": "R6",
+      "structural_response": "Surviving package remains separately fed and its own100ohmBP/SOURCE path remains; output terminal short additionally forces shutdown.",
+      "passed_structural_single_open_mitigation": true,
+      "conditions": "Shared detector/rail/driver operational and surviving package meets drive/Ron/timing envelope. Not a physical fault test or arbitrary package-failure guarantee."
+    }
+  ],
+  "design_response_to_exact_open_finding": "Specified. Actual engineering closure requires independent review and current pin-intent approval; physical operation still unqualified.",
+  "common_failures_NOT_closed": [
+    "U2/U3/Q2",
+    "VCC_OV feed or return/sense/OPTO_DRIVE trace open",
+    "Driver internal MOSFETshort or loss of current control",
+    "Packageinput-outputinsulationbreakdown",
+    "General product single-fault/thermal compliance"
+  ]
+}

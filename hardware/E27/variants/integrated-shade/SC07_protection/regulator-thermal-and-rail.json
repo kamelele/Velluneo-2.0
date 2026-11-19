@@ -1,0 +1,60 @@
+{
+  "revision": "SC07-C",
+  "finding_history": [
+    "SC07-RC-001: preliminary individualfeedpower understated by using all6low. Corrected mixedcorner formula.",
+    "Root identified U3ATL431DBZ331.8K/W shunt heating fromhigherfeed; replacedwithTL431BQPK52K/W thermalreference. Packagepinmap changed deliberately."
+  ],
+  "U3": {
+    "part": "TL431BQPK",
+    "pins": {
+      "1": "REF",
+      "2": "ANODE,includingtab",
+      "3": "CATHODE"
+    },
+    "thermal_metric_theta_JA_K_per_W": 52,
+    "basis": "TI SLVS543S Table6.3 andPKpinfunctions. JEDEC reference, not actual layout measured thermal resistance.",
+    "power_max135V_all6low_W": 0.32014311356103586,
+    "power_max135V_onefeedshort_W": 0.384171736273243,
+    "ambient_design_max_C": 85,
+    "predicted_Tj_at85C_and_onefeedshort_using52": 104.97693028620864,
+    "PCB_required_effective_theta_JA_max_K_per_W": 100,
+    "Tj_budget_at85C_and_theta100_C": 123.4171736273243,
+    "Tj_target_C": 125,
+    "limit": "Boththermalcalculations conditional on layout. No actualPCBtemperaturemeasured. NOT simply reuseATL431pinout/35uA/currentaccuracy."
+  },
+  "feed_resistors": {
+    "part": "CRCW2512845RFKEGHP",
+    "count": 6,
+    "each_nominal_ohm": 845,
+    "own_high_others_low135V_W": 0.5497822436787417,
+    "oneotherfeedshort_ownhigh_remaining4low135V_W": 0.7873675113063036,
+    "proposed_localambient_max_C": 100,
+    "each_HP_allowance_at100C_W": 0.9705882352941176,
+    "correction": "Worstindividual resistor uses ownhigh(+1%,+3%) andotherslow(-1%,-3%), not allsixlow."
+  },
+  "rail_budget": {
+    "part": "TL431BQPK",
+    "proposed_V": [
+      11.55,
+      12.75
+    ],
+    "computed_static_reference_corners_with50mV_engineering_currentreserve": [
+      11.569142805181865,
+      12.641214807187659
+    ],
+    "Vref25C_V": [
+      2.483,
+      2.507
+    ],
+    "fulltemperature_dev_reserve_V": 0.034,
+    "cathodevoltage_ratio_reserve_V": 0.03,
+    "max_Iref_with_fulltemp_deviation_A": 6.5e-06,
+    "divider_R_errors": 0.0035,
+    "current_shift_engineering_reserve_output_V": 0.05,
+    "precision_test_current_A": 0.01,
+    "minimum_design_shunt_A": 0.001,
+    "qualification": "10mAprecisiontest is NOT1mAguaranteedprecision.50mVcurrentreserve is an engineeringbudget informed by0.5ohm25Cdynamicimpedance andfeedbackgain; fulltemperature/static/currentinteraction remains a qualification condition. No missing semiconductor guarantee fabricated."
+  },
+  "primary_source": "https://www.ti.com/lit/ds/symlink/tl431.pdf",
+  "source_sha256": "ed2e90697de4e2c553195514adf1ee59cda42863716b6ef702b8304a5b921d22"
+}

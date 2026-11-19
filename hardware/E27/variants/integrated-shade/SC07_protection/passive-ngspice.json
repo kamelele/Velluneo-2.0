@@ -1,0 +1,25 @@
+{
+  "engine": "ngspice46 shared library bundled with pinnedKiCad10.0.6",
+  "dll_sha256": "3238d82f02b6d08d8703a28ea894bcfdf59906dd4a59ad2e93eeec532a0454a3",
+  "netlist_sha256": "d2a71d3ddd7f48b210ae405a6e215c47091bf08c1a96a4d549371e20b677972d",
+  "commands": [
+    "run",
+    "meas tran ilpk MAX i(L1)",
+    "meas tran v1pk MAX v(cin)",
+    "meas tran v2pk MAX v(cout)",
+    "meas tran rfpeak MAX v(irf)",
+    "meas tran erf INTEG v(prf) from=0 to=2m"
+  ],
+  "actual_results": {
+    "ilpk": 1.05245,
+    "v1pk": 359.485,
+    "v2pk": 357.851,
+    "rfpeak": 1.62631,
+    "erf": 0.0269663
+  },
+  "interpretation": "Linear L1 peak exceeds0.29A catalogue10%drop reference: linear model is not a real inrush guarantee. No damage assertion. This independent execution agrees with prior RK4 screen. RF energy has been integrated, not inferred from DRAIN RMS.",
+  "limitations": [
+    "No saturation/coreloss/L(I,T), DCR, bridge, TVS/parasitics, converter, hotdevice or surgewaveform model.",
+    "TVS hotclamp below700V remains OPEN; this is not a surge compliance test."
+  ]
+}

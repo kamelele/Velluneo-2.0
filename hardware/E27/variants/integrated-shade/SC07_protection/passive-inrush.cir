@@ -1,0 +1,11 @@
+SC07 passive pi filter actual topology, linear-inductance no-load screen only
+V1 src 0 PULSE(0 357.79603128 0 1n 1n 10m 20m)
+RF src cin 220
+C1 cin 0 100n
+L1 cin cout 10m
+RD cin cout 4700
+C2 cout 0 330n
+BPRF prf 0 V=V(src,cin)*V(src,cin)/220
+BIRF irf 0 V=V(src,cin)/220
+.tran 50n 2m 0 50n uic
+.end

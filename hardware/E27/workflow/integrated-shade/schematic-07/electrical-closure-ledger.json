@@ -1,0 +1,54 @@
+{
+  "revision": "SC07-C",
+  "design_response_specified": [
+    "One PhotoMOSinputopen/outputopen has a complete surviving actuator path; structuredefined beforeCAD.",
+    "Recomputed feed/inputshortpower,basecurrent,hysteresis/retry and loadheadroom instead of reusingSC06numbers.",
+    "InputfilterSPICE actuallyexecuted; structured driver/LEDinterface supplied."
+  ],
+  "calculated_not_qualified": [
+    "Primarythresholds/hotcomponentbudgets",
+    "90mAand10msdeliverygap",
+    "0.7Apeak/0.6mslatency",
+    "Ceff/saturation/source/clamp envelopes"
+  ],
+  "still_blocks_complete_schematic_acceptance": [
+    {
+      "id": "SC07-I",
+      "owner": "Electrical design/manufacturer data or qualified prototype validation",
+      "detail": "LYT fulltemperature/current slope bounds not guaranteed by25Ctables. Ownmodeldoesnotclose90mA."
+    },
+    {
+      "id": "SC07-INRUSH",
+      "owner": "Electrical design/magnetics supplier",
+      "detail": "NonlinearL and reverseDRAINcurrent/windingconditions; linear1.05245A screen is not validactualIsat operation."
+    },
+    {
+      "id": "SC07-SURGE",
+      "owner": "Electrical design/manufacturer data",
+      "detail": "HotTVS+parasitic clamp below700V not established."
+    },
+    {
+      "id": "SC07-ACTUATOR",
+      "owner": "Qualified human engineer",
+      "detail": "Surviving PhotoMOS hotRon/turnoff/PNPsaturation/startup measured correlation absent."
+    },
+    {
+      "id": "SC07-C4",
+      "owner": "Electrical design/component data",
+      "detail": "C4 effectivecapacitance afterbias/aging and85C localboundary not established."
+    },
+    {
+      "id": "SC07-STD",
+      "owner": "Product electrical/safety review",
+      "detail": "Standards/classification and working/fault insulation domain matrix unresolved."
+    }
+  ],
+  "physical_release_tests": [
+    "Optical800lm",
+    "EMC/PF/flicker",
+    "Insulation/accessibility/fire",
+    "Actual full fault/reconnect/thermal tests"
+  ],
+  "not_an_enclosure_stop": "No final enclosure fit is being demanded for a board-only investigation.",
+  "not_marked_ready_for_PCB": true
+}

@@ -1,0 +1,126 @@
+{
+  "actual_reviews": [
+    {
+      "role": "Reality Checker",
+      "actor": "/root/driver_research",
+      "overlap": "Earlier driver research; separate frozen implementation/calculation review, not independent source research.",
+      "coverage": [
+        "37finalsourcehashes+4outputs",
+        "46/110/29/1BOM/CSV/independentgraph",
+        "CorrectTL431PK1REF2ANODE3K/tabA",
+        "Independentauxiliary/mixedtolerance/thermal/rail calculations",
+        "Actual27coupledcases reproducedinmemory",
+        "PriorfullSC07B/Ccoverage retained; finalcacheandREADMEclosure"
+      ],
+      "findings": [
+        {
+          "id": "SC07-RC-001",
+          "severity": "P2",
+          "status": "CLOSED independently",
+          "detail": "IndividualfeedmaximumcorrectedfromallsameRcorner toownhigh/otherslow; final0.549782Wnormal/0.787368Woneotherfeedshort against0.970588Wat100Clocalambient."
+        },
+        {
+          "id": "SC07-RC-002",
+          "severity": "P3",
+          "status": "CLOSED independently",
+          "detail": "READMEauxiliaryincreasecorrectedto1.26W."
+        }
+      ],
+      "recommendation": "Boundedproposalpublication/humannewmapreview only; no schematicorPCBacceptance",
+      "manifest_sha256": "1ef195281f55173b97c0d7fa555b54b6c77322be5ebaa6defc3f1ef82521855a",
+      "read_only": true,
+      "stage_approval": false
+    },
+    {
+      "role": "Overengineering Reviewer",
+      "actor": "/root/review_simplicity",
+      "overlap": "Earlier OVP/component research; separate frozen inspection.",
+      "coverage": [
+        "37finalsourcehashes+4outputs",
+        "Actual46positiondualactuator vslabelled58SCRalternative",
+        "Thermalregulator/package/railgradechanges",
+        "Narrowopenfaultcoverage and sharedfailurelimits",
+        "NewCcoupledresults15of27currentwindowmisses",
+        "Conditionalmarginsandrealauxiliaryheat"
+      ],
+      "findings": [
+        {
+          "id": "OE-SC07-01",
+          "severity": "major",
+          "status": "OPEN acceptance",
+          "detail": "Structuralresponse exists foronePhotoMOSopen;hotdrive/timing/saturation/physicalfaultqualification andsharedfailuresremain."
+        },
+        {
+          "id": "OE-SC07-02",
+          "severity": "major",
+          "status": "OPEN acceptance",
+          "detail": "Currentseed andillustrativecasesdo notprovefulltemperaturecurrent orphysical10msdeliverygap."
+        },
+        {
+          "id": "OE-SC07-03",
+          "severity": "medium",
+          "status": "OPEN thermal/placement",
+          "detail": "Added1.258Wauxiliaryheat,largerregulator andHPgradesneedactuallayout/temperature/sourcingchecks."
+        },
+        {
+          "id": "OE-SC07-04",
+          "severity": "major",
+          "status": "OPEN acceptance",
+          "detail": "Nonlinearinrush/hotclamp/C4effectiveC/fullsinglefaultqualificationremain."
+        }
+      ],
+      "recommendation": "Publishfornewexactmapreview,notPCBready",
+      "manifest_sha256": "1ef195281f55173b97c0d7fa555b54b6c77322be5ebaa6defc3f1ef82521855a",
+      "read_only": true,
+      "stage_approval": false
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actor": "/root/review_completeness",
+      "overlap": "Authored earlierBcoupledmodel; independently checked integration and rootexecuted modifiedCresults, not secondvalidation ofphysics.",
+      "coverage": [
+        "37finalsources+4outputs",
+        "46components110pins29nets1NCbijection",
+        "Exactindependentintentdigest",
+        "17originalacceptancecriteria/gatespreserved",
+        "Actualdisposable rerun reproducedelectricalJSON/coupledJSON/trace byteforbyte",
+        "Structuredinterface/scopedprocess/evidencebindings",
+        "UpdatedlegiblePNGplan",
+        "14requirementsfindings truthfullyretained"
+      ],
+      "findings": [],
+      "recommendation": "Readyforboundedpublication/newmapdecisiononly; no nativeorPCBacceptance",
+      "manifest_sha256": "1ef195281f55173b97c0d7fa555b54b6c77322be5ebaa6defc3f1ef82521855a",
+      "read_only": true,
+      "stage_approval": false
+    },
+    {
+      "role": "Change Reviewer",
+      "actor": "/root/review_change",
+      "overlap": "Earlierinputcapacitorresearch; independent scope/nativeintent/preservation review.",
+      "coverage": [
+        "37finalsources+4outputs",
+        "Digest/BOM/CSV/independentphysicalmap",
+        "Recalculatednumericalprefix matchedJSON and10conditionalchecks",
+        "All55priorSC06frozeninputsunchanged",
+        "Remote37d9branch/main377fcverified",
+        "Cacheexclusionexplicitandfinalproducerdontwritebytecode",
+        "ActualSC07approvalnull;priorSC06historical"
+      ],
+      "findings": [
+        {
+          "id": "CHG-SC07-01",
+          "severity": "minor",
+          "status": "CLOSED independently",
+          "detail": "GeneratedPythoncache excludedfromsourceinventory,finalmanifestandpublicationfilter."
+        }
+      ],
+      "recommendation": "Boundedproposalpublication/newmapdecision; rootmustverifyall978parentrawblobsandnewrawblobs beforebranchleaseupdate",
+      "manifest_sha256": "1ef195281f55173b97c0d7fa555b54b6c77322be5ebaa6defc3f1ef82521855a",
+      "read_only": true,
+      "stage_approval": false
+    }
+  ],
+  "source": "Actual separate-agent reports and final targeted closures in this chat, transcribed by root2026-11-19.",
+  "limits": "No human new-map approval or schematic/PCB/safety acceptance recorded."
+}

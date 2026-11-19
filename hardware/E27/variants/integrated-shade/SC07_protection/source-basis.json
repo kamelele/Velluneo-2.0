@@ -1,0 +1,46 @@
+{
+  "revision": "SC07-C",
+  "basis": "Independent physical pin intent before new CAD; retains SC06 exact datasheets/pin assignments and corrected flat-lead footprint.",
+  "parent_commit": "37d9e57fa80aa7691f7595682ed2c3ba21162628",
+  "baseline_intent_digest": "38430110659351233c9d8b33fe0acdcc1f70ba43eaae69d7a2e33001ea95feec",
+  "baseline_files": [
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC06_driver/bom-design.json",
+      "sha256": "21dc39df32f427ac13ef7327f406fbb62a08ce837eb7d055a9b7ddafc2347209"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC06_driver/intended-connectivity.json",
+      "sha256": "b26b4d2c02cea48546cc3310955dca82c3b6c66282378e33a06c16c505b0954b"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC06_driver/requirements.json",
+      "sha256": "5b7c97ca73ed74050763f6a8fbe2f986d13e87209c790f1c23b1be315a17409d"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC06_driver/source-basis.json",
+      "sha256": "34b64bff57c1bc6c894e57f9cdfb751a985b82297a3a72db478298929b819a74"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC06_driver/U4-geometry-evidence.json",
+      "sha256": "4ad3f284c20bac1fbf7bedbc0bbd293d1c6addb7a4b1baa74de255b866bd0a64"
+    }
+  ],
+  "new_primary_data": [
+    {
+      "source": "https://www.ti.com/lit/ds/symlink/tl431.pdf",
+      "sha256": "ed2e90697de4e2c553195514adf1ee59cda42863716b6ef702b8304a5b921d22",
+      "basis": "TL431BQPK SOT89,1REF2A3K,thermalmetric52K/W,reference10mAconditions,currentshiftreservesnotfullqualification."
+    },
+    {
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "sha256": "f9a11dbae93c89e59defcd4d4afaceaf224ed03e9b6b4d37532b9b8bec91f0d0",
+      "basis": "CRCW2512HP1.5W70C/155C derating;E96code845R;CRCW0805HP0.5W;100ppm/K,F1%,correct packaging suffix."
+    },
+    {
+      "source": "https://mediap.industry.panasonic.eu/assets/download-files/import/semi_eng_rf1a_aqy22_v_cr10.pdf",
+      "sha256": "e8211c216862db8c6b29eec207c1dd14a9bbde14fa61a5b014a5a2b5258affc9",
+      "basis": "SameAQY221R2VY1A2K3/4output, recommended5..30mA, operating-40..85C, correct flat-lead geometry."
+    }
+  ],
+  "claim_scope": "One actuator LED-open or output-open with shared U2/U3/Q2/supply/divider operational; not independent redundant OVP or full single-fault product qualification."
+}

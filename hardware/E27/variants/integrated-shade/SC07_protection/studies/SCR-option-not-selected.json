@@ -1,0 +1,1466 @@
+{
+  "status": "Investigated and NOT selected. Earlier SC07-A candidate, no native capture or approval.",
+  "reason": "46-position actuator-open mitigation is simpler than58-position independent comparator/SCR; avoids startup latch and sustained R7 crowbar stress. Neither is proof of complete single-fault safety.",
+  "proposed_BOM": {
+    "revision": "SC07-A",
+    "status": "Independent protection working proposal; unapproved pin intent; no new native CAD",
+    "components": [
+      {
+        "ref": "J1",
+        "kind": "terminal",
+        "value": "AC input230V50Hz",
+        "mpn": "PCB wire pads, not purchased connector",
+        "pins": {
+          "1": "AC_L",
+          "2": "AC_N"
+        },
+        "pin_types": {},
+        "source": "Ownerboardonlyscope;electricalinterfaceproposal",
+        "footprint": "E27SC06:WirePads_2_P7p5",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Direct soldered insulated leads; wire strain relief/accessibility are laterintegrationconditions."
+      },
+      {
+        "ref": "RF1",
+        "kind": "R",
+        "value": "220R2Wfusible",
+        "mpn": "FWFU2W220RJ",
+        "pins": {
+          "1": "AC_L",
+          "2": "AC_FUSED"
+        },
+        "pin_types": {},
+        "source": "https://www.te.com/en/product-6-2176792-5.html",
+        "footprint": "E27SC06:RF_16x5p5_P22",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Replace10R/100R;220Rlimitsdeclaredsurgesourcecurrent. NormalRMS/pulse/fusingqualificationrequired."
+      },
+      {
+        "ref": "BR1",
+        "kind": "bridge",
+        "value": "1000V0.8A",
+        "mpn": "MB10S-13",
+        "pins": {
+          "1": "RECT_PLUS",
+          "2": "AC_FUSED",
+          "3": "DC_RETURN",
+          "4": "AC_N"
+        },
+        "pin_types": {},
+        "source": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+        "footprint": "E27SC06:MB10S_Diodes",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "ExactDiodespinmap;notgenericnumbering."
+      },
+      {
+        "ref": "C1",
+        "kind": "C",
+        "value": "100nF2kV",
+        "mpn": "R76UR31004030J",
+        "pins": {
+          "1": "RECT_PLUS",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://search.kemet.com/download/specsheet/R76UR31004030J",
+        "footprint": "E27SC06:Film_32x14_P27p5",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Postbridgeonly,notX2;2kV85Cderatesto1500V105C. Longleadsformed/cutforassembly."
+      },
+      {
+        "ref": "L1",
+        "kind": "L",
+        "value": "10mH",
+        "mpn": "RFC1010B-106KE",
+        "pins": {
+          "1": "RECT_PLUS",
+          "2": "BUS_PLUS"
+        },
+        "pin_types": {},
+        "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+        "footprint": "E27SC06:RFC1010B_P6",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "0.29A10%Ldrop25C,0.15AIrms20Crise;inrush/insulationqualificationrequired."
+      },
+      {
+        "ref": "R1",
+        "kind": "R",
+        "value": "4k7",
+        "mpn": "RC1206FR-074K7L",
+        "pins": {
+          "1": "RECT_PLUS",
+          "2": "BUS_PLUS"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "ParallelL1damping;notanFBseriesresistor. Surgepulsequalificationopen."
+      },
+      {
+        "ref": "C2",
+        "kind": "C",
+        "value": "330nF1kV",
+        "mpn": "R76QR3330SE30J",
+        "pins": {
+          "1": "BUS_PLUS",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://search.kemet.com/download/specsheet/R76QR3330SE30J",
+        "footprint": "E27SC06:Film_32x14_P27p5",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Postbridge;1000V85Cderatesto750V105C,notanX2cap."
+      },
+      {
+        "ref": "D3",
+        "kind": "Z",
+        "value": "400VTVS5kW",
+        "mpn": "5KP400A",
+        "pins": {
+          "1": "BUS_PLUS",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://protekdevices.com/wp-content/uploads/datasheets/5kp.pdf",
+        "footprint": "E27SC06:TVS_5KP_axial",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "ProTekmanufacturer;pin1assignedbandedcathode.648V@7.7A25C10/1000,notahotclampguarantee. MOVomitted;TVS/RFfaultcoordinationrequiresqualification."
+      },
+      {
+        "ref": "U1",
+        "kind": "driver",
+        "value": "LYT0006D-TL",
+        "mpn": "LYT0006D-TL",
+        "pins": {
+          "1": "BP",
+          "2": "SENSE_FB",
+          "4": "BUS_PLUS",
+          "5": "SOURCE",
+          "6": "SOURCE",
+          "7": "SOURCE",
+          "8": "SOURCE"
+        },
+        "pin_types": {
+          "1": "power_out",
+          "2": "input",
+          "4": "passive",
+          "5": "passive",
+          "6": "passive",
+          "7": "passive",
+          "8": "passive"
+        },
+        "source": "https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf",
+        "footprint": "E27SC06:LYT_SO8C_no3",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "SO8Cpin3physicallyabsent."
+      },
+      {
+        "ref": "C3",
+        "kind": "C",
+        "value": "100nF50V",
+        "mpn": "GRM21BR71H104KA01L",
+        "pins": {
+          "1": "BP",
+          "2": "SOURCE"
+        },
+        "pin_types": {},
+        "source": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23",
+        "footprint": "E27SC06:C_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R2",
+        "kind": "R",
+        "value": "30.1ohm current seed",
+        "mpn": "RC1206FR-0730R1L",
+        "pins": {
+          "1": "SOURCE",
+          "2": "SENSE_FB"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "SC07 numerical seed compensating new approximately5.8mA detector supply; actual full-temperature current envelope remains unqualified."
+      },
+      {
+        "ref": "C4",
+        "kind": "C",
+        "value": "22uF16V",
+        "mpn": "CL21A226MOCLRNC",
+        "pins": {
+          "1": "SENSE_FB",
+          "2": "SOURCE"
+        },
+        "pin_types": {},
+        "source": "https://product.samsungsem.com/mlcc/CL21A226MOCLRNC.do",
+        "footprint": "E27SC06:C_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "NonpolarMLCC;SENSE_FB/SOURCEsamplehold;effectivecapacitancecheckrequired."
+      },
+      {
+        "ref": "D1",
+        "kind": "Dcase",
+        "value": "1200V2ASiC",
+        "mpn": "C4D02120E",
+        "pins": {
+          "1": "SENSE_FB",
+          "2": "DC_RETURN",
+          "CASE": "SENSE_FB"
+        },
+        "pin_types": {},
+        "source": "https://assets.wolfspeed.com/uploads/2023/10/Wolfspeed_C4D02120E_data_sheet.pdf",
+        "footprint": "E27SC06:C4D02120E_TO252",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Rev14Sept2026visualpins1K,2A,CASEK;custompadmapmandatory."
+      },
+      {
+        "ref": "L2",
+        "kind": "L",
+        "value": "1.5mH",
+        "mpn": "RFC1010B-155KE",
+        "pins": {
+          "1": "SOURCE",
+          "2": "L2_MID"
+        },
+        "pin_types": {},
+        "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+        "footprint": "E27SC06:RFC1010B_P6",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I)."
+      },
+      {
+        "ref": "C5",
+        "kind": "CP",
+        "value": "150uF160V",
+        "mpn": "EEUED2C151",
+        "pins": {
+          "1": "COUT_PLUS",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C151",
+        "footprint": "E27SC06:CP_16x25_P7p5",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Base150uF+/-20%,-25..105C;leakageup1.45mAincluded;630mA120Hz,100kHzcatalogratingnotinterchangeable."
+      },
+      {
+        "ref": "R7",
+        "kind": "R",
+        "value": "470R5W",
+        "mpn": "AC05000004700JAC00",
+        "pins": {
+          "1": "COUT_PLUS",
+          "2": "LED_PLUS"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+        "footprint": "E27SC06:AC05_18x7p5_P25p4",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "PermanentLEDreconnectlimiter;noalternatebulk-capacitorpath."
+      },
+      {
+        "ref": "J2",
+        "kind": "terminal",
+        "value": "LED panel55mA",
+        "mpn": "PCB wire pads, not purchased connector",
+        "pins": {
+          "1": "LED_PLUS",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "SC06electricalloadinterface",
+        "footprint": "E27SC06:WirePads_2_P7p5",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Mainsreferencedoutput;notSELV. Mechanicalconnectornotselected."
+      },
+      {
+        "ref": "R8",
+        "kind": "R",
+        "value": "56k1W",
+        "mpn": "CRCW251256K0FKEG",
+        "pins": {
+          "1": "COUT_PLUS",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/doc?20035",
+        "footprint": "E27SC06:R_2512",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification."
+      },
+      {
+        "ref": "R9",
+        "kind": "R",
+        "value": "56k1W",
+        "mpn": "CRCW251256K0FKEG",
+        "pins": {
+          "1": "COUT_PLUS",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/doc?20035",
+        "footprint": "E27SC06:R_2512",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification."
+      },
+      {
+        "ref": "R6",
+        "kind": "R",
+        "value": "100RBPclamp",
+        "mpn": "RC0805FR-07100RL",
+        "pins": {
+          "1": "BP",
+          "2": "BP_RELAY"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "PositiveBP–SOURCEshuntthroughPhotoMOS;limitsCBPpulse~61.6mA. NoBP-to-groundcrowbar."
+      },
+      {
+        "ref": "R10",
+        "kind": "R",
+        "value": "2k1W",
+        "mpn": "CRCW25122K00FKEG",
+        "pins": {
+          "1": "COUT_PLUS",
+          "2": "AUX_FEED1"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/doc?20035",
+        "footprint": "E27SC06:R_2512",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R11",
+        "kind": "R",
+        "value": "2k1W",
+        "mpn": "CRCW25122K00FKEG",
+        "pins": {
+          "1": "AUX_FEED1",
+          "2": "AUX_FEED2"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/doc?20035",
+        "footprint": "E27SC06:R_2512",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R12",
+        "kind": "R",
+        "value": "2k1W",
+        "mpn": "CRCW25122K00FKEG",
+        "pins": {
+          "1": "AUX_FEED2",
+          "2": "AUX_FEED3"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/doc?20035",
+        "footprint": "E27SC06:R_2512",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "U3",
+        "kind": "shunt",
+        "value": "ATL431BQDBZR",
+        "mpn": "ATL431BQDBZR",
+        "pins": {
+          "1": "VCC_OV",
+          "2": "RAIL_REF",
+          "3": "DC_RETURN"
+        },
+        "pin_types": {
+          "1": "passive",
+          "2": "input",
+          "3": "passive"
+        },
+        "source": "https://www.ti.com/lit/ds/symlink/atl431.pdf",
+        "footprint": "E27SC06:SOT23",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Alwaysbiased12Vregulator,notOVcomparator."
+      },
+      {
+        "ref": "R16",
+        "kind": "R",
+        "value": "38k3 0.1%",
+        "mpn": "TNPW120638K3BEEA",
+        "pins": {
+          "1": "VCC_OV",
+          "2": "RAIL_REF"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "25ppm/K"
+      },
+      {
+        "ref": "R17",
+        "kind": "R",
+        "value": "10k 0.1%",
+        "mpn": "TNPW120610K0BEEA",
+        "pins": {
+          "1": "RAIL_REF",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "25ppm/K"
+      },
+      {
+        "ref": "R18",
+        "kind": "R",
+        "value": "100R",
+        "mpn": "RC0805FR-07100RL",
+        "pins": {
+          "1": "VCC_OV",
+          "2": "VDD_COMP"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Isolatescapacitivecomparatorloadfromshuntcathode."
+      },
+      {
+        "ref": "C9",
+        "kind": "C",
+        "value": "100nF50V",
+        "mpn": "GRM21BR71H104KA01L",
+        "pins": {
+          "1": "VDD_COMP",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.murata.com/en-us/products",
+        "footprint": "E27SC06:C_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "U2",
+        "kind": "comparator",
+        "value": "TLV6700DDCR",
+        "mpn": "TLV6700DDCR",
+        "pins": {
+          "1": null,
+          "2": "DC_RETURN",
+          "3": "DC_RETURN",
+          "4": "OV_SENSE",
+          "5": "VDD_COMP",
+          "6": "OV_LOW"
+        },
+        "pin_types": {
+          "1": "open_collector",
+          "2": "power_in",
+          "3": "input",
+          "4": "input",
+          "5": "power_in",
+          "6": "open_collector"
+        },
+        "source": "https://www.ti.com/lit/ds/symlink/tlv6700.pdf",
+        "footprint": "E27SC06:SOT23_6",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+      },
+      {
+        "ref": "R13",
+        "kind": "R",
+        "value": "160k0.1%10ppm",
+        "mpn": "TNPW1206160KBYEA",
+        "pins": {
+          "1": "COUT_PLUS",
+          "2": "OV_MID"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R14",
+        "kind": "R",
+        "value": "160k0.1%10ppm",
+        "mpn": "TNPW1206160KBYEA",
+        "pins": {
+          "1": "OV_MID",
+          "2": "OV_SENSE"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R15",
+        "kind": "R",
+        "value": "1k0.1%10ppm",
+        "mpn": "TNPW12061K00BYEA",
+        "pins": {
+          "1": "OV_SENSE",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R19",
+        "kind": "R",
+        "value": "22k",
+        "mpn": "RC0805FR-0722KL",
+        "pins": {
+          "1": "PNP_BASE",
+          "2": "OV_LOW"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R20",
+        "kind": "R",
+        "value": "10k",
+        "mpn": "RC0805FR-0710KL",
+        "pins": {
+          "1": "VCC_OV",
+          "2": "PNP_BASE"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "Q2",
+        "kind": "PNP",
+        "value": "BC857B,215",
+        "mpn": "BC857B,215",
+        "pins": {
+          "1": "PNP_BASE",
+          "2": "VCC_OV",
+          "3": "OPTO_DRIVE"
+        },
+        "pin_types": {
+          "1": "input",
+          "2": "passive",
+          "3": "passive"
+        },
+        "source": "https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf",
+        "footprint": "E27SC06:SOT23",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R21",
+        "kind": "R",
+        "value": "1k87",
+        "mpn": "RC0805FR-071K87L",
+        "pins": {
+          "1": "OPTO_DRIVE",
+          "2": "OPTO_A"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "PhotoMOSLEDcurrentnominal~5.6mA;selectedfor≥5mAconditionalrail/dropbounds."
+      },
+      {
+        "ref": "L3",
+        "kind": "L",
+        "value": "1.5mH",
+        "mpn": "RFC1010B-155KE",
+        "pins": {
+          "1": "L2_MID",
+          "2": "COUT_PLUS"
+        },
+        "pin_types": {},
+        "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+        "footprint": "E27SC06:RFC1010B_P6",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I)."
+      },
+      {
+        "ref": "R24",
+        "kind": "R",
+        "value": "2k1W",
+        "mpn": "CRCW25122K00FKEG",
+        "pins": {
+          "1": "AUX_FEED3",
+          "2": "AUX_FEED4"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/doc?20035",
+        "footprint": "E27SC06:R_2512",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R25",
+        "kind": "R",
+        "value": "2k1W",
+        "mpn": "CRCW25122K00FKEG",
+        "pins": {
+          "1": "AUX_FEED4",
+          "2": "VCC_OV"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/doc?20035",
+        "footprint": "E27SC06:R_2512",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": ""
+      },
+      {
+        "ref": "R22",
+        "kind": "R",
+        "value": "330k0.1%10ppm",
+        "mpn": "TNPW1206330KBYEA",
+        "pins": {
+          "1": "OPTO_DRIVE",
+          "2": "OV_SENSE"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+        "footprint": "E27SC06:R_1206",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "Externalhysteresis;noassumedminimuminternalTLVhysteresis."
+      },
+      {
+        "ref": "R23",
+        "kind": "R",
+        "value": "47k",
+        "mpn": "RC0805FR-0747KL",
+        "pins": {
+          "1": "OPTO_DRIVE",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "E27SC06:R_0805",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "DefinesOFFhysteresisnodewithR22."
+      },
+      {
+        "ref": "U4",
+        "kind": "photomos",
+        "value": "AQY221R2VY",
+        "mpn": "AQY221R2VY",
+        "pins": {
+          "1": "OPTO_A",
+          "2": "DC_RETURN",
+          "3": "BP_RELAY",
+          "4": "SOURCE"
+        },
+        "pin_types": {
+          "1": "passive",
+          "2": "passive",
+          "3": "passive",
+          "4": "passive"
+        },
+        "source": "https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy",
+        "footprint": "E27SC06:Panasonic_SSOP4",
+        "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+        "notes": "LED1A2K;bidirectionaloutput3/4;0.5msmaxturnon25Ctest;localambient≤85C;1.25ohmmax25C. OutputneverwiredtoDC_RETURN. ActualVpackageisSSOP~4.45x2.65x1.8mm,notgenericVSSOP."
+      },
+      {
+        "ref": "U5",
+        "kind": "comparator",
+        "value": "independent OVP",
+        "mpn": "TLV6700DDCR",
+        "pins": {
+          "1": null,
+          "2": "DC_RETURN",
+          "3": "DC_RETURN",
+          "4": "OV2_SENSE",
+          "5": "OV2_RAIL",
+          "6": "OV2_LOW"
+        },
+        "pin_types": {
+          "1": "open_collector",
+          "2": "power_in",
+          "3": "input",
+          "4": "input",
+          "5": "power_in",
+          "6": "open_collector"
+        },
+        "source": "https://www.ti.com/lit/ds/symlink/tlv6700.pdf",
+        "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": "Channel B senses LED_PLUS after R7; channel A input defined low, output NC. No shared primary supply/divider/reference."
+      },
+      {
+        "ref": "U6",
+        "kind": "reference",
+        "value": "2.5V independent shunt",
+        "mpn": "LM4040C25QDBZR",
+        "pins": {
+          "1": "OV2_RAIL",
+          "2": "DC_RETURN",
+          "3": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.ti.com/lit/ds/symlink/lm4040.pdf",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": "DBZ1=CATHODE,2=ANODE,3=* must float or connect anode; connected to anode per TI EMI guidance. NOT ATL431 pin numbering."
+      },
+      {
+        "ref": "Q3",
+        "kind": "PNP",
+        "value": "PNP gate source",
+        "mpn": "BC857B,215",
+        "pins": {
+          "1": "OV2_BASE",
+          "2": "OV2_RAIL",
+          "3": "OV2_DRIVE"
+        },
+        "pin_types": {},
+        "source": "https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": "1B,2E,3C; full-temperature saturation/drop qualification remains open."
+      },
+      {
+        "ref": "Q4",
+        "kind": "SCR",
+        "value": "600V sensitive SCR",
+        "mpn": "X0205MA1BA2",
+        "pins": {
+          "1": "DC_RETURN",
+          "2": "SCR_GATE",
+          "3": "LED_PLUS"
+        },
+        "pin_types": {},
+        "source": "https://www.st.com/resource/en/datasheet/x02.pdf",
+        "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": "TO-92 K/G/A physical pin interpretation requires independent package drawing review. A after R7, never directly across C5. IGT50uA table is25C, not universal cold/hot guarantee."
+      },
+      {
+        "ref": "R26",
+        "kind": "R",
+        "value": "6.8k 1W",
+        "mpn": "CRCW25126K80FKEG",
+        "pins": {
+          "1": "COUT_PLUS",
+          "2": "OV2_FEED1"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+        "footprint": "Resistor_SMD:R_2512_6332Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R27",
+        "kind": "R",
+        "value": "6.8k 1W",
+        "mpn": "CRCW25126K80FKEG",
+        "pins": {
+          "1": "OV2_FEED1",
+          "2": "OV2_FEED2"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+        "footprint": "Resistor_SMD:R_2512_6332Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R28",
+        "kind": "R",
+        "value": "6.8k 1W",
+        "mpn": "CRCW25126K80FKEG",
+        "pins": {
+          "1": "OV2_FEED2",
+          "2": "OV2_RAIL"
+        },
+        "pin_types": {},
+        "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+        "footprint": "Resistor_SMD:R_2512_6332Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R29",
+        "kind": "R",
+        "value": "150k 1%",
+        "mpn": "RC1206FR-07150KL",
+        "pins": {
+          "1": "LED_PLUS",
+          "2": "OV2_DIV"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "Resistor_SMD:R_1206_3216Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R30",
+        "kind": "R",
+        "value": "150k 1%",
+        "mpn": "RC1206FR-07150KL",
+        "pins": {
+          "1": "OV2_DIV",
+          "2": "OV2_SENSE"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "Resistor_SMD:R_1206_3216Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R31",
+        "kind": "R",
+        "value": "1.10k 1%",
+        "mpn": "RC0805FR-071K1L",
+        "pins": {
+          "1": "OV2_SENSE",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R32",
+        "kind": "R",
+        "value": "4.7k",
+        "mpn": "RC0805FR-074K7L",
+        "pins": {
+          "1": "OV2_BASE",
+          "2": "OV2_LOW"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R33",
+        "kind": "R",
+        "value": "10k",
+        "mpn": "RC0805FR-0710KL",
+        "pins": {
+          "1": "OV2_RAIL",
+          "2": "OV2_BASE"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R34",
+        "kind": "R",
+        "value": "680ohm",
+        "mpn": "RC0805FR-07680RL",
+        "pins": {
+          "1": "OV2_DRIVE",
+          "2": "SCR_GATE"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "R35",
+        "kind": "R",
+        "value": "1k",
+        "mpn": "RC0805FR-071KL",
+        "pins": {
+          "1": "SCR_GATE",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.yageo.com/en/Product/Index/rchip",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "C10",
+        "kind": "C",
+        "value": "100nF50V",
+        "mpn": "GRM21BR71H104KA01L",
+        "pins": {
+          "1": "OV2_RAIL",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      },
+      {
+        "ref": "C11",
+        "kind": "C",
+        "value": "10nF50V",
+        "mpn": "GRM21BR71H103KA01L",
+        "pins": {
+          "1": "SCR_GATE",
+          "2": "DC_RETURN"
+        },
+        "pin_types": {},
+        "source": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "qualification": "SC07 engineering selection, not accepted for production",
+        "notes": ""
+      }
+    ]
+  },
+  "calculated_screen": {
+    "revision": "SC07-A",
+    "evidence_kind": "Calculation and explicitly limited sensitivity/simulation; no measurements",
+    "detector": {
+      "senses": "LED_PLUS after R7, not COUT",
+      "top_R": [
+        150000,
+        150000
+      ],
+      "bottom_R": 1100,
+      "resistance_budget_each": 0.03,
+      "budget_basis": "1%initial +1%100ppm/K*100K +1%engineeringagingreserve, not a manufacturer lifetime guarantee.",
+      "threshold_positive_fulltemp_mV": [
+        396,
+        404
+      ],
+      "input_bias_A": [
+        -1.5e-08,
+        1.5e-08
+      ],
+      "nominal_trip_V": 109.4909090909091,
+      "trip_min_V": 102.10010286407768,
+      "trip_max_V": 117.40582337863167,
+      "healthy_LED_Vmax_proposal": 84.5,
+      "healthy_margin_V": 17.600102864077684,
+      "primary_priority": "Not guaranteed secondary-after-primary; open module may invoke the SCR first. Fault latching/retriggering permitted; no AC-reset-only promise."
+    },
+    "reference_and_drive": {
+      "rail_V": [
+        2.4510000000000005,
+        2.5489999999999995
+      ],
+      "rail_basis": "LM4040C25Q full-temperature +/-38mV, additional9mV current range allowance and2mV engineeringreserve. VDD remains>1.8V.",
+      "feed_ohm": 20400,
+      "feed_parts": 3,
+      "feed_min_at_trip_min_A": 0.004737821381309617,
+      "drive_load_upper_A": 0.004436577151852185,
+      "remaining_shunt_A": 0.0003012442294574322,
+      "minimum_required_shunt_A": 8e-05,
+      "PNP_drop_budget_V": 0.3,
+      "SCR_gate_voltage_budget_V": 0.8,
+      "net_gate_current_lower_conditional_A": 0.0011041555046600775,
+      "IGTmax25C_A": 5e-05,
+      "gate_margin25C": 22.083110093201547,
+      "normal120V_new_rail_input_W": 0.6911764705882353,
+      "each_feed135V_power_W": 0.29595777577319593,
+      "each_feed_power_allowance125C_W": 0.35294117647058826,
+      "limits": [
+        "PNP and SCR drop/gate/latch data at25C are not relabelled full-temperature maxima.",
+        "TLV outputs cannot be guaranteed belowPOR; startup can spuriously latch a dark lamp. Startup closure remains OPEN; no successful test invented.",
+        "450us TLVstartup max is used only when its supply conditions are met; typical18us propagation is not a max delay."
+      ]
+    },
+    "capacitor_and_R7": {
+      "Rmin_ohm": 433.10499999999996,
+      "Rmax_ohm": 508.305,
+      "C_F": [
+        0.00012,
+        0.00018
+      ],
+      "at135V_stored_J": 1.6402500000000002,
+      "initial_peak_A_conservative": 0.3117027048868058,
+      "initial_peak_W_conservative": 42.07986515971878,
+      "capacitor_only_I2t_A2s": 0.0037871878643746908,
+      "RC_fast_s": 0.051972599999999994,
+      "RC_slow_s": 0.0914949,
+      "sustained_comparison": [
+        {
+          "current_A": 0.06,
+          "P_R7_DC_W": 1.829898,
+          "Vcap_equilibrium_without_SCR_drop_V": 30.4983,
+          "extra_R7_energy_above_continuous_baseline_J": 2.1302191882197,
+          "note": "Constant healthy current-source comparison, no claim of real buck waveform or fault bound."
+        },
+        {
+          "current_A": 0.075,
+          "P_R7_DC_W": 2.859215625,
+          "Vcap_equilibrium_without_SCR_drop_V": 38.122875,
+          "extra_R7_energy_above_continuous_baseline_J": 2.174230390968282,
+          "note": "Constant healthy current-source comparison, no claim of real buck waveform or fault bound."
+        },
+        {
+          "current_A": 0.085,
+          "P_R7_DC_W": 3.672503625000001,
+          "Vcap_equilibrium_without_SCR_drop_V": 43.205925,
+          "extra_R7_energy_above_continuous_baseline_J": 2.1861309496214814,
+          "note": "Constant healthy current-source comparison, no claim of real buck waveform or fault bound."
+        },
+        {
+          "current_A": 0.09,
+          "P_R7_DC_W": 4.1172705,
+          "Vcap_equilibrium_without_SCR_drop_V": 45.74745,
+          "extra_R7_energy_above_continuous_baseline_J": 2.186849155994325,
+          "note": "Constant healthy current-source comparison, no claim of real buck waveform or fault bound."
+        },
+        {
+          "current_A": 0.1,
+          "P_R7_DC_W": 5.083050000000001,
+          "Vcap_equilibrium_without_SCR_drop_V": 50.8305,
+          "extra_R7_energy_above_continuous_baseline_J": 2.1778214228325,
+          "note": "Constant healthy current-source comparison, no claim of real buck waveform or fault bound."
+        }
+      ],
+      "RMS_guard": {
+        "assumption": "Driver delivered positive charge <=85mA*20ms in EVERY20ms window; healthy regulating controller. No diode reverse current or separate source. This is a proposed testable envelope, NOT proven manufacturer data.",
+        "line_window_s": 0.02,
+        "mean_current_A": 0.085,
+        "impulse_charge_RMS_squared_multiplier": 1.0089431517247598,
+        "P_R7_upper_under_envelope_W": 3.705347382128106,
+        "V_R7_peak_under_envelope_V": 50.67565547601691,
+        "derivation": "Concentrate each20ms charge at one instant into first-orderC||R discharge, a conservative impulse-burst bound; x*coth(x),x=T/(2RC). Does not infer RMS from long-termmean."
+      },
+      "rating_note": "AC05 P40=5W,P70=4.7W. Pulse chart adiabatic <=10ms does NOT apply directly to this~80ms discharge. Room-temperature50W5s overload is a comparison only; hot/repetitive qualification remains open.",
+      "continued_energy_included": true
+    },
+    "dynamic_conditional_budget": {
+      "starting_COUT_at_upper_trip_plus_divider_drop_V": 117.60402320278469,
+      "imposed_peak_source_A": 0.7,
+      "imposed_response_s": 0.001,
+      "extra_dv_V": 5.833333333333333,
+      "peak_with_full3mH_residual_energy_V": 123.48696687758071,
+      "acceptance_ceiling_V": 135,
+      "not_proven": [
+        "0.7A full-temperature/source limit",
+        "1ms complete sense/gate/latch response",
+        "R7 current-dependent voltage peak and actual nonlinear devices"
+      ]
+    },
+    "normal_headroom_conditional": {
+      "peak_V": 122.33578583333333,
+      "limit_V": 123,
+      "I_driver_20ms_required_max_A": 0.085,
+      "LED_current_acceptance_A": [
+        0.05,
+        0.0605
+      ],
+      "note": "85mA replaces80mA only as a PROPOSED engineering guard to include additional detector load; no owner approval or silicon-bound claim."
+    },
+    "current_model": {
+      "nominal_at110V": {
+        "Iout": 0.0752234509582931,
+        "Iinavg": 0.035920182216277845,
+        "ILrms": 0.13447150594918292,
+        "Ipeak": 0.3750000000000001
+      },
+      "operating_point_healthy_LED84p5": [
+        {
+          "line_Vrms": 207.0,
+          "LED_A": 0.055572509765625,
+          "COUT_V": 110.61907958984375,
+          "driver_A_own_model": 0.07516784394151833,
+          "assumptions": "25C model/noactualpi/ripple/losses/fulltemperature. Not guaranteed output or optical flux."
+        },
+        {
+          "line_Vrms": 230.0,
+          "LED_A": 0.05582885742187499,
+          "COUT_V": 110.73956298828125,
+          "driver_A_own_model": 0.07642494875959918,
+          "assumptions": "25C model/noactualpi/ripple/losses/fulltemperature. Not guaranteed output or optical flux."
+        },
+        {
+          "line_Vrms": 253.0,
+          "LED_A": 0.05566040039062499,
+          "COUT_V": 110.66038818359374,
+          "driver_A_own_model": 0.0750174836152413,
+          "assumptions": "25C model/noactualpi/ripple/losses/fulltemperature. Not guaranteed output or optical flux."
+        }
+      ],
+      "sensitivity_cases": [
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0024,
+            "f": 62000.0,
+            "ilim": 0.35,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07153071141315423,
+            "Iinavg": 0.03516818585150912,
+            "ILrms": 0.1261223225943888,
+            "Ipeak": 0.35000000000000003
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0024,
+            "f": 62000.0,
+            "ilim": 0.35,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.08076340348740513,
+            "Iinavg": 0.03919591157952025,
+            "ILrms": 0.13440032773745264,
+            "Ipeak": 0.35000000000000003
+          }
+        },
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0024,
+            "f": 62000.0,
+            "ilim": 0.504,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07349174095119565,
+            "Iinavg": 0.0363831723367301,
+            "ILrms": 0.15084749894267926,
+            "Ipeak": 0.504
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0024,
+            "f": 62000.0,
+            "ilim": 0.504,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.0841642191318136,
+            "Iinavg": 0.041304873168636284,
+            "ILrms": 0.1626327316441607,
+            "Ipeak": 0.504
+          }
+        },
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0024,
+            "f": 70000.0,
+            "ilim": 0.35,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07091284219399595,
+            "Iinavg": 0.03463843884403251,
+            "ILrms": 0.12558393364664538,
+            "Ipeak": 0.35000000000000003
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0024,
+            "f": 70000.0,
+            "ilim": 0.35,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.0804353384631162,
+            "Iinavg": 0.038839961665270345,
+            "ILrms": 0.13416701613193455,
+            "Ipeak": 0.35000000000000003
+          }
+        },
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0024,
+            "f": 70000.0,
+            "ilim": 0.504,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07330480334767739,
+            "Iinavg": 0.03613700001478131,
+            "ILrms": 0.15031070715111347,
+            "Ipeak": 0.5040000000000001
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0024,
+            "f": 70000.0,
+            "ilim": 0.504,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.08329652417019438,
+            "Iinavg": 0.04063234366729953,
+            "ILrms": 0.16172904609910507,
+            "Ipeak": 0.5040000000000001
+          }
+        },
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0033,
+            "f": 62000.0,
+            "ilim": 0.35,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07036585292064461,
+            "Iinavg": 0.03419777668790964,
+            "ILrms": 0.12495251148455506,
+            "Ipeak": 0.35000000000000003
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0033,
+            "f": 62000.0,
+            "ilim": 0.35,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07983834236642,
+            "Iinavg": 0.03829248640229287,
+            "ILrms": 0.1341554365321407,
+            "Ipeak": 0.35000000000000003
+          }
+        },
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0033,
+            "f": 62000.0,
+            "ilim": 0.504,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07233222620814853,
+            "Iinavg": 0.03523552562534082,
+            "ILrms": 0.14802415959802517,
+            "Ipeak": 0.504
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0033,
+            "f": 62000.0,
+            "ilim": 0.504,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.08230560818004545,
+            "Iinavg": 0.03977836417784859,
+            "ILrms": 0.16009912238449545,
+            "Ipeak": 0.504
+          }
+        },
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0033,
+            "f": 70000.0,
+            "ilim": 0.35,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.06983612885545781,
+            "Iinavg": 0.033687737715275855,
+            "ILrms": 0.1247719258923138,
+            "Ipeak": 0.35000000000000003
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0033,
+            "f": 70000.0,
+            "ilim": 0.35,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.07988272032752365,
+            "Iinavg": 0.03823758502079945,
+            "ILrms": 0.13443833336773084,
+            "Ipeak": 0.3500000000000001
+          }
+        },
+        {
+          "inputs": {
+            "R": 30.401000000000003,
+            "L": 0.0033,
+            "f": 70000.0,
+            "ilim": 0.504,
+            "vth": 1.54,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.0716224609781442,
+            "Iinavg": 0.03470687959420664,
+            "ILrms": 0.14663515673043243,
+            "Ipeak": 0.5040000000000001
+          }
+        },
+        {
+          "inputs": {
+            "R": 29.799,
+            "L": 0.0033,
+            "f": 70000.0,
+            "ilim": 0.504,
+            "vth": 1.76,
+            "vout": 123.0,
+            "vac": 253.0,
+            "tmin": 6.75e-07
+          },
+          "results": {
+            "Iout": 0.08195161534942134,
+            "Iinavg": 0.0394536406756217,
+            "ILrms": 0.15876887193571093,
+            "Ipeak": 0.504
+          }
+        }
+      ],
+      "sensitivity_case_count": 16,
+      "sensitivity_Imin_A": 0.06983612885545781,
+      "sensitivity_Imax_A": 0.0841642191318136,
+      "critical_limits": [
+        "LYT0006 ILIMIT tables specified25C at selectedslopes; typicaltemperaturecurves cannot prove fulltemperaturepeak or85mAaverage bound.",
+        "Ideal rectifiedsource/fixedVout/noactualpi, nonlinearL, reverse draincurrent,startup,ESR,DCR,jitter or switching losses.",
+        "R2=30.1 is a new mathematical seed, not production current setting."
+      ]
+    },
+    "samplehold": {
+      "R2_min_ohm": 29.799,
+      "Ceff_required_F": 1.082521712679252e-05,
+      "Cnom_tol_temp_F": 1.496e-05,
+      "additional_effective_C_fraction_min": 0.7236107705075213,
+      "part": "CL21A226MOCLRNC",
+      "local_component_temperature_limit_C": 85,
+      "status": "Local85C ceiling specified; DCbias/aging Ceff requirement still OPEN. Actual local temperature not measured."
+    },
+    "RF_temperature_correction": {
+      "TCR_abs_per_K": 0.0004,
+      "Rmin_at100C_ohm": 202.73,
+      "Rmin_at125C_ohm": 200.64,
+      "Rmin_at155C_ohm": 198.13199999999998,
+      "scope": "Correct corner equations, not an achieved temperature or approved150Coperatingpoint."
+    },
+    "initial_inrush_energy_bound": {
+      "assumptions": "Initially discharged100nF+330nF,cap+5%,idealDCstep253sqrt2,passivenetwork, no continuingconverterload.",
+      "source_V": 357.7960312803931,
+      "total_passive_dissipation_upper_J": 0.02890006350000001,
+      "source_RF_peak_upper_A_with_RF155C_min": 1.8058467651888293,
+      "limitation": "Energy bound does not qualify magnetic core/wire/insulation, RF peakvoltage or repeatedpulse capacity."
+    },
+    "scoped_results": [
+      {
+        "id": "SC07-CALC-STATIC-OVP",
+        "status": "calculated_pass",
+        "meaning": "Wide static output-detector window under statedfulltemperaturecomparator/resistorbudget; completeactuator qualificationnotclosed."
+      },
+      {
+        "id": "SC07-CALC-RAIL",
+        "status": "calculated_pass",
+        "meaning": "Independent referencehas supply/current margin under explicit load bounds."
+      },
+      {
+        "id": "SC07-CALC-PULSE",
+        "status": "calculated_only",
+        "meaning": "Capacitor pulse and continued-current energy recorded; not resistor hot-pulse qualification."
+      },
+      {
+        "id": "SC07-CALC-RMS",
+        "status": "conditional_pass",
+        "meaning": "3W-class resistor stress only under explicit20ms chargeenvelope; not fromaveragecurrentalone."
+      },
+      {
+        "id": "SC07-CURRENT",
+        "status": "OPEN",
+        "meaning": "Manufacturer/fulltemperaturecurrentlimits absent. Simulated sensitivity doesnotclose."
+      },
+      {
+        "id": "SC07-SURGE",
+        "status": "OPEN",
+        "meaning": "No hot TVS+loop bound<700V; no fabricated surge test."
+      },
+      {
+        "id": "SC07-START",
+        "status": "OPEN",
+        "meaning": "False latch/dynamic SCR/holding/startup unvalidated."
+      }
+    ]
+  }
+}
