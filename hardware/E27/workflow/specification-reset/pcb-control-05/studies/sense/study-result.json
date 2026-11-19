@@ -1,0 +1,95 @@
+{
+  "scope": "Isolated exploratory current/sense branches; NOT product routing acceptance or complete Kelvin/driver-return/loop proof.",
+  "algorithm": "Bounded0.2mm A* with conservative padboxes, explicit3/10mm/edge limits and nativeDRCrequired. MainproductPCBunmodified.",
+  "basis_board_sha256": "8c005518fea1d73db66cd6d8b0c395c662acc477f174937f61a50f6d5554e2b7",
+  "routes": [
+    {
+      "label": "short_shunt_bulk_return",
+      "start": "R9.2",
+      "end": "C1.2",
+      "routed": true,
+      "width_mm": 1.0,
+      "layer": "F.Cu",
+      "points_relative_mm": [
+        [
+          -14.49,
+          21.55
+        ],
+        [
+          -14.49,
+          24.25
+        ]
+      ],
+      "length_mm": 2.6999999999999993,
+      "endpoint_mm": 2.6999999999999993,
+      "topology": "Dedicated endpoint branch, not full operating-loop/return qualification"
+    },
+    {
+      "label": "local_CS_RLC",
+      "start": "R6.2",
+      "end": "U1.4",
+      "routed": true,
+      "width_mm": 0.4,
+      "layer": "F.Cu",
+      "points_relative_mm": [
+        [
+          2.1,
+          23.85
+        ],
+        [
+          2.8,
+          22.05
+        ]
+      ],
+      "length_mm": 1.9313207915827972,
+      "endpoint_mm": 1.9313207915827972,
+      "topology": "Dedicated endpoint branch, not full operating-loop/return qualification"
+    },
+    {
+      "label": "dedicated_SENSE_branch",
+      "start": "R9.1",
+      "end": "R6.1",
+      "routed": true,
+      "width_mm": 0.4,
+      "layer": "F.Cu",
+      "points_relative_mm": [
+        [
+          -17.04,
+          21.55
+        ],
+        [
+          -15.8,
+          25.8
+        ],
+        [
+          -11.200000000000001,
+          28.6
+        ],
+        [
+          -5.6000000000000005,
+          28.400000000000002
+        ],
+        [
+          -2.2,
+          25.200000000000003
+        ],
+        [
+          1.8,
+          25.200000000000003
+        ],
+        [
+          2.1,
+          25.35
+        ]
+      ],
+      "length_mm": 24.420392324249843,
+      "endpoint_mm": 19.5135747622008,
+      "topology": "Dedicated endpoint branch, not full operating-loop/return qualification"
+    }
+  ],
+  "tracks_and_vias": 8,
+  "vias": 0,
+  "stage_approved": false,
+  "main_product_tracks": 0,
+  "via_assembly_qualification": "Via proximity to opposite bodies and tenting/assembly process require review; no qualified via-in-pad process inferred."
+}

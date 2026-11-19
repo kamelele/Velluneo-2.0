@@ -1,0 +1,109 @@
+{
+  "actual_commands": [
+    {
+      "name": "portable-capture",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\generate_schematic.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "portable-netlist",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\checks\\proposed-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\Velluneo_specification_reset.kicad_sch"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "portable-build",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\build_full_board.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "portable-pre-reference-drc",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\checks\\before-reference-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\Velluneo_specification_reset.kicad_pcb"
+      ],
+      "exit_code": 5
+    },
+    {
+      "name": "portable-refs",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\place_full_references.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "portable-rebuilt-drc",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\design\\checks\\portable-rebuilt-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\Velluneo_specification_reset.kicad_pcb"
+      ],
+      "exit_code": 5
+    },
+    {
+      "name": "portable-rebuilt-parity",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\reproduce\\design\\verify_full_board.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "portable-sense-drc",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\design\\checks\\portable-sense-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\.work\\portable\\studies\\sense\\Velluneo_sense_exploration.kicad_pcb"
+      ],
+      "exit_code": 5
+    }
+  ],
+  "rebuilt_main_violations": 0,
+  "rebuilt_main_unconnected": 54,
+  "rebuilt_main_parity": 0,
+  "shipped_study_violations": 0,
+  "shipped_study_unconnected": 51,
+  "shipped_study_parity": 0,
+  "depends_on_prior_repo_packet_files": false,
+  "scope": "Executed regeneration in a disposable copy using includedmodels/settings/libraries; no operating/process/stage approval."
+}

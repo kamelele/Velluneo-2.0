@@ -1,0 +1,77 @@
+{
+  "status": "Engineering tolerance study; no supplier/assembly capability confirmation",
+  "budgets": {
+    "finished_hole_size_plus_minus_mm": 0.05,
+    "copper_land_size_plus_minus_mm": 0.025,
+    "relative_hole_registration_max_mm": 0.025,
+    "adjacent_pitch_loss_max_mm": 0.05,
+    "fillet_outgrowth_per_side_mm": 0.05,
+    "oval_fillets_per_side_mm": 0.025
+  },
+  "BR1": {
+    "proposed_pitch_mm": 5.5,
+    "land_mm": 2.0,
+    "hole_mm": 1.2,
+    "minimum_annulus_under_declared_budget_mm": 0.3375,
+    "finished_gap_under_declared_budget_mm": 3.325,
+    "raw_lead_diameter_max_source_mm": 0.81,
+    "insertion_radial_clearance_before_position_error_mm": 0.16999999999999993,
+    "process_confirmed": false
+  },
+  "T1": {
+    "main_round_land_mm": 2.0,
+    "main_hole_mm": 1.35,
+    "main_nominal_gap_mm": 3.0,
+    "main_min_annulus_under_declared_budget_mm": 0.26249999999999996,
+    "rejected_1p95_land_min_annulus_mm": 0.23749999999999996,
+    "round_land_needed_for_p3_finished_annulus_mm": 2.075,
+    "oval_study_only": {
+      "slot_mm": [
+        1.1,
+        1.35
+      ],
+      "land_mm": [
+        1.85,
+        2.15
+      ],
+      "nominal_row_gap_mm": 3.15,
+      "minimum_annulus_mm": 0.3125,
+      "minimum_gap_under_declared_budget_mm": 3.0250000000000004,
+      "assumed_pin_max_mm": 0.65,
+      "source_pin_nominal_mm": 0.6,
+      "assumed_total_pin_hole_position_error_mm": 0.05,
+      "insertion_radial_remainder_mm": 0.015380592228744147,
+      "manufacturer_recommended_round_hole_mm": [
+        1.3,
+        1.4
+      ],
+      "manufacturer_does_not_confirm_narrow_oval": true,
+      "qualified": false
+    }
+  },
+  "Q1": {
+    "baseline_land_mm": 2.2,
+    "control05_main_land_mm": 2.25,
+    "hole_mm": 1.5,
+    "baseline_min_annulus_under_declared_budget_mm": 0.2875000000000001,
+    "control05_min_annulus_under_declared_budget_mm": 0.3125,
+    "nominal_stagger_distance_mm": 5.679612662849466,
+    "conditional_finished_gap_for2p25_mm": 3.204612662849466,
+    "diagonal_relative_position_loss_assumed_mm": 0.1,
+    "proposed_middle_lead_development_mm": 12.878672286269282,
+    "source_free_lead_length_confirmed": false,
+    "source_lead_section_max_mm": [
+      1.0,
+      0.7
+    ],
+    "qualified": false
+  },
+  "PS": {
+    "actual_projected_copper_min_mm": 10.071370313914587,
+    "proposed_finished_metal_growth_per_domain_mm": 0.35,
+    "remaining_under_proposed_budget_mm": 9.371370313914587,
+    "nominal_needed_for_finished10_mm": 10.7,
+    "full_valid10p7_candidate_found": false
+  },
+  "scope": "These tolerances are proposed acceptance controls, not manufacturer/provider guarantees or lighting-standard minima. Native3/10mm rule screens unchanged. Main T1 remains round-hole source proposal; oval coupon is isolated and unadopted. A PCB slot between pins does not enlarge their direct air gap. Core/yokes treated primary-domain metal; no soldermask/enamel/unknown resin credited as reinforced insulation."
+}

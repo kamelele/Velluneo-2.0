@@ -1,0 +1,740 @@
+{
+  "status": "Owner-selected33 basis; first-order engineering screens, not qualified operating proof",
+  "basis_parts_sha256": "7ff4c0e0598c7e37ccea2f22dbe2a82eef50275825533e9162ea66ad2dadfea2",
+  "R6_function": "RLC line-compensation resistor. No explicit external CS capacitor in the graph.",
+  "R6_retained_ohm": 1400.0,
+  "R6_equivalent_delay_ns": 126.49952939163173,
+  "RLC_source_equation": "RLC=KLC*Rupper*RCS*TD*(NP/NA)/LP",
+  "delay_sensitivity": [
+    {
+      "assumed_total_delay_ns": 50,
+      "RLC_ideal_ohm": 553.3617424242424,
+      "first_order_peak_current_residual_A": -0.011879873268725527
+    },
+    {
+      "assumed_total_delay_ns": 69,
+      "RLC_ideal_ohm": 763.6392045454546,
+      "first_order_peak_current_residual_A": -0.008929298357993118
+    },
+    {
+      "assumed_total_delay_ns": 101,
+      "RLC_ideal_ohm": 1117.7907196969697,
+      "first_order_peak_current_residual_A": -0.003959909034654326
+    },
+    {
+      "assumed_total_delay_ns": 126.49952939163173,
+      "RLC_ideal_ohm": 1399.9999999999998,
+      "first_order_peak_current_residual_A": 0.0
+    },
+    {
+      "assumed_total_delay_ns": 150,
+      "RLC_ideal_ohm": 1660.0852272727273,
+      "first_order_peak_current_residual_A": 0.0036494683667082015
+    },
+    {
+      "assumed_total_delay_ns": 200,
+      "RLC_ideal_ohm": 2213.4469696969695,
+      "first_order_peak_current_residual_A": 0.011414139184425066
+    }
+  ],
+  "conditional_current_corner_count": 128,
+  "conditional_peak_current_range_A": [
+    0.28709878832190544,
+    0.35854792299867755
+  ],
+  "conditional_max_first_order_flux_T": 0.1305265804405211,
+  "static_OCP_peak_A": 0.7044485928639358,
+  "static_OCP_flux_T": 0.26101674177695305,
+  "single_pulse_OCP_stored_energy_J": 0.0006288452374887673,
+  "nominal_CV_boundary_V": 30.305015673981185,
+  "ideal_auxiliary_cases": [
+    {
+      "assumed_output_V": 20,
+      "ideal_aux_VDD_V": 14.453333333333333,
+      "below_nominal_CV_boundary": true
+    },
+    {
+      "assumed_output_V": 26,
+      "ideal_aux_VDD_V": 18.85333333333333,
+      "below_nominal_CV_boundary": true
+    },
+    {
+      "assumed_output_V": 32,
+      "ideal_aux_VDD_V": 23.25333333333333,
+      "below_nominal_CV_boundary": false
+    }
+  ],
+  "NTC_nominal_trip_C": 88.12171352539474,
+  "NTC_guaranteed_trip_window_available": false,
+  "NTC_open_guaranteed_shutdown": false,
+  "fault_sink_needed_at8p45_A": 0.0003411480484421363,
+  "minimum_guaranteed_fault_sink_available": false,
+  "R13_max_dissipation_at35_W": 0.01552452621680603,
+  "conditional_gate_charge_time_at20mA_s": 2.5e-07,
+  "conditional_Miller_time_at20mA_s": 1.85e-07,
+  "declared_worst_budget_hold_up_19_to8p45_s": 0.0028923044875339564,
+  "hold_up_load_budget_A": 0.0032573161092152797,
+  "powered_test_performed": false,
+  "IC_native_simulation_performed": false,
+  "assumptions": [
+    "TotalTD50-200ns is an engineering sensitivity interval, not guaranteed ST or TI timing.",
+    "ST Qg5nC/Qgd3.7nC/Rg18ohm are typical at source test conditions, not maximum bounds.",
+    "LP\u00b110%,R4/R6/R9\u00b12.1%,KLC23/28,VCS.715/.775 are independently swept; no correlated IC behavioral model.",
+    "Normal32V CC operation is not established:32V exceeds the conditional nominalCV30.305V. Prior32V energy cases are envelope diagnostics, not proof of CC capability.",
+    "Flux assumes zero residual flux and A_min57mm2; no saturation/remanence/reset-fault qualification.",
+    "OCP screen is one pulse; energy*140kHz is not a realizable fault-power claim.",
+    "NTC beta/current/threshold nominal calculation does not establish a guaranteed protection window or open-sensor fail-safe.",
+    "Startup-feed ceiling excludes auxiliary/surge/commutation injection; no minimum fault draw is guaranteed.",
+    "Hold-up uses a declared conservative additive current budget, no complete start-up or UVLO/handoff model.",
+    "TI SLUSB41A p5/p6 footnote(1): EMI modulation means the quoted CS thresholds and switching-frequency limits are average levels. The conditional range is not an individual-cycle peak-current bound, and140kHz is not a proven individual-cycle frequency ceiling."
+  ],
+  "startup_case_count": 64,
+  "startup_cases": [
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 26.350367334552555,
+      "conditional_time_to23_s": 0.13208508506300914
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 25.894794194150112,
+      "conditional_time_to23_s": 0.14032855129920638
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 25.131165047417127,
+      "conditional_time_to23_s": 0.15802466972618162
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 24.675591907014685,
+      "conditional_time_to23_s": 0.17225576589128241
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 26.350367334552555,
+      "conditional_time_to23_s": 0.14598877822753642
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 25.894794194150112,
+      "conditional_time_to23_s": 0.15509997775175444
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 25.131165047417127,
+      "conditional_time_to23_s": 0.17465884548683233
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 24.675591907014685,
+      "conditional_time_to23_s": 0.1903879517745753
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 27.373820753523994,
+      "conditional_time_to23_s": 0.12201538158392168
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 26.900553063280302,
+      "conditional_time_to23_s": 0.12847414417162675
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 26.107264411192897,
+      "conditional_time_to23_s": 0.14161027422404657
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 25.63399672094921,
+      "conditional_time_to23_s": 0.15138682152528657
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 27.373820753523994,
+      "conditional_time_to23_s": 0.1348591059611766
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 26.900553063280302,
+      "conditional_time_to23_s": 0.14199773829495588
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 26.107264411192897,
+      "conditional_time_to23_s": 0.15651661887920937
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 25.63399672094921,
+      "conditional_time_to23_s": 0.16732227642268516
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 25.348146534234207,
+      "conditional_time_to23_s": 0.1529389359834023
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 24.90967046077985,
+      "conditional_time_to23_s": 0.16510460757822892
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 24.124357357757084,
+      "conditional_time_to23_s": 0.1970982486696316
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 23.685881284302727,
+      "conditional_time_to23_s": 0.22769269775200163
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 25.348146534234207,
+      "conditional_time_to23_s": 0.16903777135007625
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 24.90967046077985,
+      "conditional_time_to23_s": 0.18248403995488466
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 24.124357357757084,
+      "conditional_time_to23_s": 0.21784543274011917
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 23.685881284302727,
+      "conditional_time_to23_s": 0.2516603501469492
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 26.33652192012796,
+      "conditional_time_to23_s": 0.13799314108557242
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 25.88094877972552,
+      "conditional_time_to23_s": 0.1466332748990564
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 25.06501473405516,
+      "conditional_time_to23_s": 0.1667340656296596
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 24.609441593652722,
+      "conditional_time_to23_s": 0.18215671050008067
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 26.33652192012796,
+      "conditional_time_to23_s": 0.1525187348840537
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 25.88094877972552,
+      "conditional_time_to23_s": 0.1620683564673781
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 25.06501473405516,
+      "conditional_time_to23_s": 0.18428501990646584
+    },
+    {
+      "Vac": 207,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 24.609441593652722,
+      "conditional_time_to23_s": 0.2013311010790365
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 32.27772230160488,
+      "conditional_time_to23_s": 0.07984754840124444
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 31.82214916120244,
+      "conditional_time_to23_s": 0.08216183184054152
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 31.058520014469455,
+      "conditional_time_to23_s": 0.08640450184211107
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 30.602946874067012,
+      "conditional_time_to23_s": 0.08918510824002973
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 32.27772230160488,
+      "conditional_time_to23_s": 0.08825255349611229
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 31.82214916120244,
+      "conditional_time_to23_s": 0.09081044571849327
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 31.058520014469455,
+      "conditional_time_to23_s": 0.09549971256233329
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 30.602946874067012,
+      "conditional_time_to23_s": 0.09857301437055918
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 33.53139534633965,
+      "conditional_time_to23_s": 0.07705150354983041
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 33.05812765609596,
+      "conditional_time_to23_s": 0.07916488074186537
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 32.26483900400856,
+      "conditional_time_to23_s": 0.08301473379122869
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 31.791571313764866,
+      "conditional_time_to23_s": 0.08552005345304313
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 33.53139534633965,
+      "conditional_time_to23_s": 0.08516218813402308
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 33.05812765609596,
+      "conditional_time_to23_s": 0.08749802608311436
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 32.26483900400856,
+      "conditional_time_to23_s": 0.09175312682188434
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 787116.0,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 31.791571313764866,
+      "conditional_time_to23_s": 0.09452216434283714
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 31.053055584902555,
+      "conditional_time_to23_s": 0.08676186802035998
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 30.6145795114482,
+      "conditional_time_to23_s": 0.08944679009056425
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 29.829266408425433,
+      "conditional_time_to23_s": 0.09477351369053641
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 29.390790334971076,
+      "conditional_time_to23_s": 0.09808744546263291
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 31.053055584902555,
+      "conditional_time_to23_s": 0.09589469623302947
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 30.6145795114482,
+      "conditional_time_to23_s": 0.09886224167904471
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 29.829266408425433,
+      "conditional_time_to23_s": 0.10474967302638237
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 78907.4,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 29.390790334971076,
+      "conditional_time_to23_s": 0.10841243972185745
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 32.26387688718029,
+      "conditional_time_to23_s": 0.08334417487786012
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 31.80830374677785,
+      "conditional_time_to23_s": 0.08576248794254206
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 30.99236970110749,
+      "conditional_time_to23_s": 0.09051946318735372
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 8.93e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 30.53679656070505,
+      "conditional_time_to23_s": 0.09345037094949796
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 32.26387688718029,
+      "conditional_time_to23_s": 0.09211724591763487
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 3e-06,
+      "equilibrium_V": 31.80830374677785,
+      "conditional_time_to23_s": 0.09479011825228333
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 0,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 30.99236970110749,
+      "conditional_time_to23_s": 0.10004782773339096
+    },
+    {
+      "Vac": 253,
+      "assumed_bulk_drop_V": 5,
+      "Rstartup_ohm": 820883.9999999999,
+      "Rbleed_ohm": 82292.59999999999,
+      "Ctotal_F": 9.87e-07,
+      "assumed_D2_leak_A": 2e-05,
+      "equilibrium_V": 30.53679656070505,
+      "conditional_time_to23_s": 0.10328725210207669
+    }
+  ],
+  "conditional_worst_time_to23_s": 0.2516603501469492,
+  "conditional_min_startup_equilibrium_V": 23.685881284302727,
+  "normal_line_startup_feed_only_zero_draw_ceiling_V": 33.86666026048612,
+  "startup_datum_caveat": "1.5uA specified at18V; DC charging law/leakage assumptions are not a guaranteed IC transient model.",
+  "source_CS_threshold_and_frequency_limits_are_average_levels": true,
+  "individual_cycle_peak_current_or_frequency_bound_proven": false
+}

@@ -1,0 +1,86 @@
+{
+  "actual_results": [
+    {
+      "name": "sense-native-drc",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\design\\checks\\sense-native-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\studies\\sense\\Velluneo_sense_exploration.kicad_pcb"
+      ],
+      "exit_code": 5,
+      "violations_by_type": {},
+      "unconnected_items": 51
+    },
+    {
+      "name": "sense-negative-drc",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\design\\checks\\sense-negative-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\studies\\.work\\sense-negative\\Velluneo_sense_exploration.kicad_pcb"
+      ],
+      "exit_code": 5,
+      "violations_by_type": {
+        "shorting_items": 1,
+        "solder_mask_bridge": 1
+      },
+      "unconnected_items": 51
+    },
+    {
+      "name": "t1-oval-native-drc",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\design\\checks\\t1-oval-native-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\studies\\t1-oval\\T1_oval_process_study.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "violations_by_type": {},
+      "unconnected_items": 0
+    },
+    {
+      "name": "t1-negative-drc",
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\design\\checks\\t1-negative-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-control-05\\studies\\.work\\t1-negative\\T1_oval_process_study.kicad_pcb"
+      ],
+      "exit_code": 5,
+      "violations_by_type": {
+        "clearance": 4,
+        "lib_footprint_mismatch": 1
+      },
+      "unconnected_items": 0
+    }
+  ],
+  "no_product_rule_relaxation": true,
+  "product_tracks": 0,
+  "study_is_accepted_routing": false
+}
