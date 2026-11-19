@@ -1,0 +1,246 @@
+[
+  {
+    "name": "build-negative-controls",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\build_negative_controls.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "four-layer-drc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\design\\checks\\four-layer-drc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "route07-native-drc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\design\\checks\\route07-native-drc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\sense\\Velluneo_route07.kicad_pcb"
+    ],
+    "exit_code": 5
+  },
+  {
+    "name": "negative-inner-drc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\design\\checks\\negative-inner-drc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\.work\\negative-four\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 5
+  },
+  {
+    "name": "negative-drc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\design\\checks\\negative-drc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\.work\\negative\\Velluneo_route07.kicad_pcb"
+    ],
+    "exit_code": 5
+  },
+  {
+    "name": "analysis-two",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\analyze_native_routes.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "analysis-four",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\analyze_native_routes.py",
+      "--four"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "negative-topology",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\analyze_native_routes.py",
+      "--four",
+      "--board",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\.work\\negative-topology\\Velluneo_four_layer_COMPARISON.kicad_pcb",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\design\\checks\\negative-topology.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "saved-geometry",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\verify_saved_geometry.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "four-svg-front",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--layers",
+      "F.Cu,F.SilkS,Edge.Cuts,Dwgs.User",
+      "--mode-single",
+      "--page-size-mode",
+      "2",
+      "--exclude-drawing-sheet",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\route-front.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "four-svg-inner1",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--layers",
+      "In1.Cu,Edge.Cuts",
+      "--mode-single",
+      "--page-size-mode",
+      "2",
+      "--exclude-drawing-sheet",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\route-inner1.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "four-svg-inner2",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--layers",
+      "In2.Cu,Edge.Cuts",
+      "--mode-single",
+      "--page-size-mode",
+      "2",
+      "--exclude-drawing-sheet",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\route-inner2.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "four-svg-back",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--layers",
+      "B.Cu,B.SilkS,Edge.Cuts,Dwgs.User",
+      "--mode-single",
+      "--page-size-mode",
+      "2",
+      "--exclude-drawing-sheet",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\route-back.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "four-render-top",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "render",
+      "--width",
+      "1400",
+      "--height",
+      "1100",
+      "--side",
+      "top",
+      "--rotate",
+      "325,0,30",
+      "--perspective",
+      "--zoom",
+      ".68",
+      "--background",
+      "opaque",
+      "--quality",
+      "basic",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\.work\\native-top.png",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "four-render-bottom",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "render",
+      "--width",
+      "1400",
+      "--height",
+      "1100",
+      "--side",
+      "bottom",
+      "--rotate",
+      "325,0,30",
+      "--perspective",
+      "--zoom",
+      ".68",
+      "--background",
+      "opaque",
+      "--quality",
+      "basic",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\.work\\native-bottom.png",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-route-07\\studies\\four-layer-comparison\\Velluneo_four_layer_COMPARISON.kicad_pcb"
+    ],
+    "exit_code": 0
+  }
+]

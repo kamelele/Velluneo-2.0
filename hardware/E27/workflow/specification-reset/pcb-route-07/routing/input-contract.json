@@ -1,0 +1,71 @@
+{
+  "native_source_sha256": "ba21d669e1df3d86ad06bfe3e06493843386cc7911c719a3d5c6ba143a3c8bbb",
+  "raw_dsn_sha256": "ac6b901ea154bf71d5620c73e770b2e5c61170bf7682a323cca6a72c94c5b49d",
+  "scoped_dsn_sha256": "40418b32049c349a5bf772bf17d6f0dd254510ceb97296c896cd229c74e6126a",
+  "classes": {
+    "HV": [
+      "Net-(F1-Pad1)",
+      "Net-(BR1-AC-Pad2)",
+      "Net-(F1-Pad2)",
+      "Net-(BR1-AC-Pad4)",
+      "/BULK_POS",
+      "/DRAIN",
+      "Net-(D1-K)",
+      "/STARTUP_MID"
+    ],
+    "QUIET": [
+      "/VDD",
+      "/VS",
+      "/NTC",
+      "/CS",
+      "/DRV",
+      "/GATE",
+      "/SENSE",
+      "/PRIMARY_GND",
+      "/AUX_RAW",
+      "Net-(D2-K)"
+    ],
+    "PRIMARY_OTHER": [
+      "/BLEED_MID_B",
+      "Net-(R2-Pad2)",
+      "unconnected-(T1-Pad3)"
+    ],
+    "SECONDARY": [
+      "/OUTPUT_POS",
+      "/OUTPUT_NEG",
+      "/SECONDARY_RAW",
+      "unconnected-(T1-Pad7)",
+      "unconnected-(T1-Pad8)",
+      "unconnected-(T1-Pad9)"
+    ]
+  },
+  "clearance_pairs_um": [
+    [
+      "HV",
+      "QUIET",
+      3000
+    ],
+    [
+      "HV",
+      "SECONDARY",
+      10000
+    ],
+    [
+      "QUIET",
+      "SECONDARY",
+      10000
+    ],
+    [
+      "PRIMARY_OTHER",
+      "SECONDARY",
+      10000
+    ]
+  ],
+  "minimum_width_um": 300,
+  "minimum_other_clearance_um": 250,
+  "copper_edge_um": 500,
+  "protected_input_wires": 255,
+  "all_keepouts_preserved": true,
+  "native_KiCad_rules_modified": false,
+  "scope": "Experimental DSN translation; actual importer preservation, negative controls/native DRC/topology are mandatory. No qualified toolkit adapter/config migration."
+}

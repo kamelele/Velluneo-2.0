@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current routing development and unadopted process comparison — 19 November 2026
+
+[PCB-ROUTE-07](specification-reset/pcb-route-07/README.md) preserves the approved 33-part basis. The 43 x 60 mm two-layer trial has zero native violations, five unconnected items and zero parity findings. A separately named UNADOPTED four-layer comparison has complete geometric connectivity and native0/0/0; it is not an approved stackup/process. Protected measurement/local bypass, separate return trees, all-layer measurement projection screen and positive/negative native controls are checked. The approximately43.1mm DRV and operating/current/EMI, process, finished insulation, thermal, fit and stage gates remain open. No manufacturing or powered testing is authorized.
+
 ## Current return-path development — 19 November2026
 
 [PCB-RETURN-06](specification-reset/pcb-return-06/README.md) extends the actual33-part exploratory study with bulk/IC/localground, gate/pulldown/VS branches and real layer transition. Explicit same-net powerstrap exclusion guards the C1junction; longreturn/coupling, oppositefaceDRV/VDD/NTC, faults, finishedT1/Qforming/material/process/fit remainopen. Numericalrules unchanged; see fresh native counts and actualreviews. No accepted routing/manufacturing/powertesting.
