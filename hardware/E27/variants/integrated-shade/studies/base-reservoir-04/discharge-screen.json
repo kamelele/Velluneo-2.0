@@ -1,0 +1,88 @@
+{
+  "kind": "Ideal passive seriesRLC calculation AFTER an assumed successful SCRtrip, not complete circuit simulation",
+  "source_basis": "AN60Fig8 discharge path visually checked in CS03. L2=1.5mH,R6=100ohm; semiconductor drops omitted.",
+  "equations": {
+    "roots": "r1,r2=(-R +/- sqrt(R^2-4L/C))/(2L)",
+    "coefficients": "A=-r2*V0/(r1-r2); B=r1*V0/(r1-r2)",
+    "voltage": "V=A*exp(r1*t)+B*exp(r2*t)",
+    "current": "I=-C*(r1*A*exp(r1*t)+r2*B*exp(r2*t))",
+    "peak_time": "ln((r2^2*B)/(-r1^2*A))/(r1-r2)",
+    "target_times": "Bisection0..0.2s,80iterations",
+    "resistor_energy": "0.5*C*V0^2 for ideal complete discharge, with zero initial inductor current and no other dissipation"
+  },
+  "cases": [
+    {
+      "capacitance_uf": 68.0,
+      "initial_voltage_v": 85.0,
+      "initial_current_a": 0,
+      "resistance_ohm": 100.0,
+      "inductance_mh": 1.5,
+      "energy_j": 0.24564999999999998,
+      "peak_current_a": 0.8403990884044773,
+      "peak_time_s": 9.20901993078401e-05,
+      "peak_R_power_w": 70.62706277910765,
+      "ideal_total_R_energy_j": 0.24564999999999998,
+      "time_to_target_s": {
+        "30.0": 0.007081279841960119,
+        "5.0": 0.01923830829150552
+      }
+    },
+    {
+      "capacitance_uf": 68.0,
+      "initial_voltage_v": 110.0,
+      "initial_current_a": 0,
+      "resistance_ohm": 100.0,
+      "inductance_mh": 1.5,
+      "energy_j": 0.4114,
+      "peak_current_a": 1.0875752908763825,
+      "peak_time_s": 9.20901993078401e-05,
+      "peak_R_power_w": 118.28200133248481,
+      "ideal_total_R_energy_j": 0.4114,
+      "time_to_target_s": {
+        "30.0": 0.008830641779618521,
+        "5.0": 0.02098767022916392
+      }
+    },
+    {
+      "capacitance_uf": 81.60000000000001,
+      "initial_voltage_v": 85.0,
+      "initial_current_a": 0,
+      "resistance_ohm": 100.0,
+      "inductance_mh": 1.5,
+      "energy_j": 0.29478,
+      "peak_current_a": 0.841716525623316,
+      "peak_time_s": 9.477803049783503e-05,
+      "peak_R_power_w": 70.84867095073864,
+      "ideal_total_R_energy_j": 0.29478,
+      "time_to_target_s": {
+        "30.0": 0.008497654543516015,
+        "5.0": 0.023091485832770604
+      }
+    },
+    {
+      "capacitance_uf": 81.60000000000001,
+      "initial_voltage_v": 110.0,
+      "initial_current_a": 0,
+      "resistance_ohm": 100.0,
+      "inductance_mh": 1.5,
+      "energy_j": 0.49368000000000006,
+      "peak_current_a": 1.0892802096301737,
+      "peak_time_s": 9.477803049783503e-05,
+      "peak_R_power_w": 118.6531375091955,
+      "ideal_total_R_energy_j": 0.49368000000000006,
+      "time_to_target_s": {
+        "30.0": 0.010597665503265383,
+        "5.0": 0.02519149679251997
+      }
+    }
+  ],
+  "limitations": [
+    "SCR alreadyon assumed; trigger delay, gate/hold/reset, diode behavior and active converter feed not modeled.",
+    "Initial inductor current zero; real disconnect may have switching current and different diode conduction states.",
+    "110V remains a screening voltage, not proven OVPmaximum.",
+    "No hotplug permission: reconnect before trip/discharge and contactbounce remain separate blockers.",
+    "Resistor pulse rating, repetitive fault energy, SCR/diode SOA, thermal and component tolerances must be qualified.",
+    "Passive44kohm bleed still takes roughly11.1s from110Vto5V at+20%C; fast modeledSCRpath is separate.",
+    "Specific L2 RFB1010-152L has0.50A Isat at10%typical inductance reduction25C; modeled0.84\u20131.09A peaks exceed this. Constant1.5mH timing is NOT established for the selected part. Qualify pulse current/heating and actual L(I,T)/DCR, or change magnetic part and size budget. This is not proof that the pulse itself is impermissible."
+  ]
+}
