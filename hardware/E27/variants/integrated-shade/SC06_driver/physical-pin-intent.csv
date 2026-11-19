@@ -1,0 +1,101 @@
+Ref,MPN,Physical pin,Intended net,Basis/reason
+J1,"PCB wire pads, not purchased connector",1,AC_L,Direct soldered insulated leads; wire strain relief/accessibility are laterintegrationconditions.
+J1,"PCB wire pads, not purchased connector",2,AC_N,Direct soldered insulated leads; wire strain relief/accessibility are laterintegrationconditions.
+RF1,FWFU2W220RJ,1,AC_L,Replace10R/100R;220Rlimitsdeclaredsurgesourcecurrent. NormalRMS/pulse/fusingqualificationrequired.
+RF1,FWFU2W220RJ,2,AC_FUSED,Replace10R/100R;220Rlimitsdeclaredsurgesourcecurrent. NormalRMS/pulse/fusingqualificationrequired.
+BR1,MB10S-13,1,RECT_PLUS,ExactDiodespinmap;notgenericnumbering.
+BR1,MB10S-13,2,AC_FUSED,ExactDiodespinmap;notgenericnumbering.
+BR1,MB10S-13,3,DC_RETURN,ExactDiodespinmap;notgenericnumbering.
+BR1,MB10S-13,4,AC_N,ExactDiodespinmap;notgenericnumbering.
+C1,R76UR31004030J,1,RECT_PLUS,"Postbridgeonly,notX2;2kV85Cderatesto1500V105C. Longleadsformed/cutforassembly."
+C1,R76UR31004030J,2,DC_RETURN,"Postbridgeonly,notX2;2kV85Cderatesto1500V105C. Longleadsformed/cutforassembly."
+L1,RFC1010B-106KE,1,RECT_PLUS,"0.29A10%Ldrop25C,0.15AIrms20Crise;inrush/insulationqualificationrequired."
+L1,RFC1010B-106KE,2,BUS_PLUS,"0.29A10%Ldrop25C,0.15AIrms20Crise;inrush/insulationqualificationrequired."
+R1,RC1206FR-074K7L,1,RECT_PLUS,ParallelL1damping;notanFBseriesresistor. Surgepulsequalificationopen.
+R1,RC1206FR-074K7L,2,BUS_PLUS,ParallelL1damping;notanFBseriesresistor. Surgepulsequalificationopen.
+C2,R76QR3330SE30J,1,BUS_PLUS,"Postbridge;1000V85Cderatesto750V105C,notanX2cap."
+C2,R76QR3330SE30J,2,DC_RETURN,"Postbridge;1000V85Cderatesto750V105C,notanX2cap."
+D3,5KP400A,1,BUS_PLUS,"ProTekmanufacturer;pin1assignedbandedcathode.648V@7.7A25C10/1000,notahotclampguarantee. MOVomitted;TVS/RFfaultcoordinationrequiresqualification."
+D3,5KP400A,2,DC_RETURN,"ProTekmanufacturer;pin1assignedbandedcathode.648V@7.7A25C10/1000,notahotclampguarantee. MOVomitted;TVS/RFfaultcoordinationrequiresqualification."
+U1,LYT0006D-TL,1,BP,SO8Cpin3physicallyabsent.
+U1,LYT0006D-TL,2,SENSE_FB,SO8Cpin3physicallyabsent.
+U1,LYT0006D-TL,4,BUS_PLUS,SO8Cpin3physicallyabsent.
+U1,LYT0006D-TL,5,SOURCE,SO8Cpin3physicallyabsent.
+U1,LYT0006D-TL,6,SOURCE,SO8Cpin3physicallyabsent.
+U1,LYT0006D-TL,7,SOURCE,SO8Cpin3physicallyabsent.
+U1,LYT0006D-TL,8,SOURCE,SO8Cpin3physicallyabsent.
+C3,GRM21BR71H104KA01L,1,BP,
+C3,GRM21BR71H104KA01L,2,SOURCE,
+R2,RC1206FR-0733R2L,1,SOURCE,SC06-B3mH/~70mAtotalnumericalseed;benchcorrelationrequired.
+R2,RC1206FR-0733R2L,2,SENSE_FB,SC06-B3mH/~70mAtotalnumericalseed;benchcorrelationrequired.
+C4,CL21A226MOCLRNC,1,SENSE_FB,NonpolarMLCC;SENSE_FB/SOURCEsamplehold;effectivecapacitancecheckrequired.
+C4,CL21A226MOCLRNC,2,SOURCE,NonpolarMLCC;SENSE_FB/SOURCEsamplehold;effectivecapacitancecheckrequired.
+D1,C4D02120E,1,SENSE_FB,"Rev14Sept2026visualpins1K,2A,CASEK;custompadmapmandatory."
+D1,C4D02120E,2,DC_RETURN,"Rev14Sept2026visualpins1K,2A,CASEK;custompadmapmandatory."
+D1,C4D02120E,CASE,SENSE_FB,"Rev14Sept2026visualpins1K,2A,CASEK;custompadmapmandatory."
+L2,RFC1010B-155KE,1,SOURCE,Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I).
+L2,RFC1010B-155KE,2,L2_MID,Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I).
+C5,EEUED2C151,1,COUT_PLUS,"Base150uF+/-20%,-25..105C;leakageup1.45mAincluded;630mA120Hz,100kHzcatalogratingnotinterchangeable."
+C5,EEUED2C151,2,DC_RETURN,"Base150uF+/-20%,-25..105C;leakageup1.45mAincluded;630mA120Hz,100kHzcatalogratingnotinterchangeable."
+R7,AC05000004700JAC00,1,COUT_PLUS,PermanentLEDreconnectlimiter;noalternatebulk-capacitorpath.
+R7,AC05000004700JAC00,2,LED_PLUS,PermanentLEDreconnectlimiter;noalternatebulk-capacitorpath.
+J2,"PCB wire pads, not purchased connector",1,LED_PLUS,Mainsreferencedoutput;notSELV. Mechanicalconnectornotselected.
+J2,"PCB wire pads, not purchased connector",2,DC_RETURN,Mainsreferencedoutput;notSELV. Mechanicalconnectornotselected.
+R8,CRCW251256K0FKEG,1,COUT_PLUS,Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification.
+R8,CRCW251256K0FKEG,2,DC_RETURN,Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification.
+R9,CRCW251256K0FKEG,1,COUT_PLUS,Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification.
+R9,CRCW251256K0FKEG,2,DC_RETURN,Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification.
+R6,RC0805FR-07100RL,1,BP,PositiveBP–SOURCEshuntthroughPhotoMOS;limitsCBPpulse~61.6mA. NoBP-to-groundcrowbar.
+R6,RC0805FR-07100RL,2,BP_RELAY,PositiveBP–SOURCEshuntthroughPhotoMOS;limitsCBPpulse~61.6mA. NoBP-to-groundcrowbar.
+R10,CRCW25122K00FKEG,1,COUT_PLUS,
+R10,CRCW25122K00FKEG,2,AUX_FEED1,
+R11,CRCW25122K00FKEG,1,AUX_FEED1,
+R11,CRCW25122K00FKEG,2,AUX_FEED2,
+R12,CRCW25122K00FKEG,1,AUX_FEED2,
+R12,CRCW25122K00FKEG,2,AUX_FEED3,
+U3,ATL431BQDBZR,1,VCC_OV,"Alwaysbiased12Vregulator,notOVcomparator."
+U3,ATL431BQDBZR,2,RAIL_REF,"Alwaysbiased12Vregulator,notOVcomparator."
+U3,ATL431BQDBZR,3,DC_RETURN,"Alwaysbiased12Vregulator,notOVcomparator."
+R16,TNPW120638K3BEEA,1,VCC_OV,25ppm/K
+R16,TNPW120638K3BEEA,2,RAIL_REF,25ppm/K
+R17,TNPW120610K0BEEA,1,RAIL_REF,25ppm/K
+R17,TNPW120610K0BEEA,2,DC_RETURN,25ppm/K
+R18,RC0805FR-07100RL,1,VCC_OV,Isolatescapacitivecomparatorloadfromshuntcathode.
+R18,RC0805FR-07100RL,2,VDD_COMP,Isolatescapacitivecomparatorloadfromshuntcathode.
+C9,GRM21BR71H104KA01L,1,VDD_COMP,
+C9,GRM21BR71H104KA01L,2,DC_RETURN,
+U2,TLV6700DDCR,1,NC,"1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+U2,TLV6700DDCR,2,DC_RETURN,"1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+U2,TLV6700DDCR,3,DC_RETURN,"1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+U2,TLV6700DDCR,4,OV_SENSE,"1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+U2,TLV6700DDCR,5,VDD_COMP,"1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+U2,TLV6700DDCR,6,OV_LOW,"1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+R13,TNPW1206160KBYEA,1,COUT_PLUS,
+R13,TNPW1206160KBYEA,2,OV_MID,
+R14,TNPW1206160KBYEA,1,OV_MID,
+R14,TNPW1206160KBYEA,2,OV_SENSE,
+R15,TNPW12061K00BYEA,1,OV_SENSE,
+R15,TNPW12061K00BYEA,2,DC_RETURN,
+R19,RC0805FR-0722KL,1,PNP_BASE,
+R19,RC0805FR-0722KL,2,OV_LOW,
+R20,RC0805FR-0710KL,1,VCC_OV,
+R20,RC0805FR-0710KL,2,PNP_BASE,
+Q2,"BC857B,215",1,PNP_BASE,
+Q2,"BC857B,215",2,VCC_OV,
+Q2,"BC857B,215",3,OPTO_DRIVE,
+R21,RC0805FR-071K87L,1,OPTO_DRIVE,PhotoMOSLEDcurrentnominal~5.6mA;selectedfor≥5mAconditionalrail/dropbounds.
+R21,RC0805FR-071K87L,2,OPTO_A,PhotoMOSLEDcurrentnominal~5.6mA;selectedfor≥5mAconditionalrail/dropbounds.
+L3,RFC1010B-155KE,1,L2_MID,Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I).
+L3,RFC1010B-155KE,2,COUT_PLUS,Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I).
+R24,CRCW25122K00FKEG,1,AUX_FEED3,
+R24,CRCW25122K00FKEG,2,AUX_FEED4,
+R25,CRCW25122K00FKEG,1,AUX_FEED4,
+R25,CRCW25122K00FKEG,2,VCC_OV,
+R22,TNPW1206330KBYEA,1,OPTO_DRIVE,Externalhysteresis;noassumedminimuminternalTLVhysteresis.
+R22,TNPW1206330KBYEA,2,OV_SENSE,Externalhysteresis;noassumedminimuminternalTLVhysteresis.
+R23,RC0805FR-0747KL,1,OPTO_DRIVE,DefinesOFFhysteresisnodewithR22.
+R23,RC0805FR-0747KL,2,DC_RETURN,DefinesOFFhysteresisnodewithR22.
+U4,AQY221R2VY,1,OPTO_A,LED1A2K;bidirectionaloutput3/4;0.5msmaxturnon25Ctest;localambient≤85C;1.25ohmmax25C. OutputneverwiredtoDC_RETURN.
+U4,AQY221R2VY,2,DC_RETURN,LED1A2K;bidirectionaloutput3/4;0.5msmaxturnon25Ctest;localambient≤85C;1.25ohmmax25C. OutputneverwiredtoDC_RETURN.
+U4,AQY221R2VY,3,BP_RELAY,LED1A2K;bidirectionaloutput3/4;0.5msmaxturnon25Ctest;localambient≤85C;1.25ohmmax25C. OutputneverwiredtoDC_RETURN.
+U4,AQY221R2VY,4,SOURCE,LED1A2K;bidirectionaloutput3/4;0.5msmaxturnon25Ctest;localambient≤85C;1.25ohmmax25C. OutputneverwiredtoDC_RETURN.

@@ -1,0 +1,680 @@
+{
+  "revision": "SC06-B",
+  "status": "ConcreteengineeringBOMforthisrevision;supersedesPR05SCR/BPdischargearchitecture;notreleasedforproduction",
+  "components": [
+    {
+      "ref": "J1",
+      "kind": "terminal",
+      "value": "AC input230V50Hz",
+      "mpn": "PCB wire pads, not purchased connector",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_N"
+      },
+      "pin_types": {},
+      "source": "Ownerboardonlyscope;electricalinterfaceproposal",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Direct soldered insulated leads; wire strain relief/accessibility are laterintegrationconditions."
+    },
+    {
+      "ref": "RF1",
+      "kind": "R",
+      "value": "220R2Wfusible",
+      "mpn": "FWFU2W220RJ",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_FUSED"
+      },
+      "pin_types": {},
+      "source": "https://www.te.com/en/product-6-2176792-5.html",
+      "footprint": "E27SC06:RF_16x5p5_P22",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Replace10R/100R;220Rlimitsdeclaredsurgesourcecurrent. NormalRMS/pulse/fusingqualificationrequired."
+    },
+    {
+      "ref": "BR1",
+      "kind": "bridge",
+      "value": "1000V0.8A",
+      "mpn": "MB10S-13",
+      "pins": {
+        "1": "RECT_PLUS",
+        "2": "AC_FUSED",
+        "3": "DC_RETURN",
+        "4": "AC_N"
+      },
+      "pin_types": {},
+      "source": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+      "footprint": "E27SC06:MB10S_Diodes",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "ExactDiodespinmap;notgenericnumbering."
+    },
+    {
+      "ref": "C1",
+      "kind": "C",
+      "value": "100nF2kV",
+      "mpn": "R76UR31004030J",
+      "pins": {
+        "1": "RECT_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://search.kemet.com/download/specsheet/R76UR31004030J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Postbridgeonly,notX2;2kV85Cderatesto1500V105C. Longleadsformed/cutforassembly."
+    },
+    {
+      "ref": "L1",
+      "kind": "L",
+      "value": "10mH",
+      "mpn": "RFC1010B-106KE",
+      "pins": {
+        "1": "RECT_PLUS",
+        "2": "BUS_PLUS"
+      },
+      "pin_types": {},
+      "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "0.29A10%Ldrop25C,0.15AIrms20Crise;inrush/insulationqualificationrequired."
+    },
+    {
+      "ref": "R1",
+      "kind": "R",
+      "value": "4k7",
+      "mpn": "RC1206FR-074K7L",
+      "pins": {
+        "1": "RECT_PLUS",
+        "2": "BUS_PLUS"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "ParallelL1damping;notanFBseriesresistor. Surgepulsequalificationopen."
+    },
+    {
+      "ref": "C2",
+      "kind": "C",
+      "value": "330nF1kV",
+      "mpn": "R76QR3330SE30J",
+      "pins": {
+        "1": "BUS_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://search.kemet.com/download/specsheet/R76QR3330SE30J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Postbridge;1000V85Cderatesto750V105C,notanX2cap."
+    },
+    {
+      "ref": "D3",
+      "kind": "Z",
+      "value": "400VTVS5kW",
+      "mpn": "5KP400A",
+      "pins": {
+        "1": "BUS_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://protekdevices.com/wp-content/uploads/datasheets/5kp.pdf",
+      "footprint": "E27SC06:TVS_5KP_axial",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "ProTekmanufacturer;pin1assignedbandedcathode.648V@7.7A25C10/1000,notahotclampguarantee. MOVomitted;TVS/RFfaultcoordinationrequiresqualification."
+    },
+    {
+      "ref": "U1",
+      "kind": "driver",
+      "value": "LYT0006D-TL",
+      "mpn": "LYT0006D-TL",
+      "pins": {
+        "1": "BP",
+        "2": "SENSE_FB",
+        "4": "BUS_PLUS",
+        "5": "SOURCE",
+        "6": "SOURCE",
+        "7": "SOURCE",
+        "8": "SOURCE"
+      },
+      "pin_types": {
+        "1": "power_out",
+        "2": "input",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      },
+      "source": "https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf",
+      "footprint": "E27SC06:LYT_SO8C_no3",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "SO8Cpin3physicallyabsent."
+    },
+    {
+      "ref": "C3",
+      "kind": "C",
+      "value": "100nF50V",
+      "mpn": "GRM21BR71H104KA01L",
+      "pins": {
+        "1": "BP",
+        "2": "SOURCE"
+      },
+      "pin_types": {},
+      "source": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23",
+      "footprint": "E27SC06:C_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R2",
+      "kind": "R",
+      "value": "33R2",
+      "mpn": "RC1206FR-0733R2L",
+      "pins": {
+        "1": "SOURCE",
+        "2": "SENSE_FB"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "SC06-B3mH/~70mAtotalnumericalseed;benchcorrelationrequired."
+    },
+    {
+      "ref": "C4",
+      "kind": "C",
+      "value": "22uF16V",
+      "mpn": "CL21A226MOCLRNC",
+      "pins": {
+        "1": "SENSE_FB",
+        "2": "SOURCE"
+      },
+      "pin_types": {},
+      "source": "https://product.samsungsem.com/mlcc/CL21A226MOCLRNC.do",
+      "footprint": "E27SC06:C_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "NonpolarMLCC;SENSE_FB/SOURCEsamplehold;effectivecapacitancecheckrequired."
+    },
+    {
+      "ref": "D1",
+      "kind": "Dcase",
+      "value": "1200V2ASiC",
+      "mpn": "C4D02120E",
+      "pins": {
+        "1": "SENSE_FB",
+        "2": "DC_RETURN",
+        "CASE": "SENSE_FB"
+      },
+      "pin_types": {},
+      "source": "https://assets.wolfspeed.com/uploads/2023/10/Wolfspeed_C4D02120E_data_sheet.pdf",
+      "footprint": "E27SC06:C4D02120E_TO252",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Rev14Sept2026visualpins1K,2A,CASEK;custompadmapmandatory."
+    },
+    {
+      "ref": "L2",
+      "kind": "L",
+      "value": "1.5mH",
+      "mpn": "RFC1010B-155KE",
+      "pins": {
+        "1": "SOURCE",
+        "2": "L2_MID"
+      },
+      "pin_types": {},
+      "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I)."
+    },
+    {
+      "ref": "C5",
+      "kind": "CP",
+      "value": "150uF160V",
+      "mpn": "EEUED2C151",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C151",
+      "footprint": "E27SC06:CP_16x25_P7p5",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Base150uF+/-20%,-25..105C;leakageup1.45mAincluded;630mA120Hz,100kHzcatalogratingnotinterchangeable."
+    },
+    {
+      "ref": "R7",
+      "kind": "R",
+      "value": "470R5W",
+      "mpn": "AC05000004700JAC00",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "LED_PLUS"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+      "footprint": "E27SC06:AC05_18x7p5_P25p4",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "PermanentLEDreconnectlimiter;noalternatebulk-capacitorpath."
+    },
+    {
+      "ref": "J2",
+      "kind": "terminal",
+      "value": "LED panel55mA",
+      "mpn": "PCB wire pads, not purchased connector",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "SC06electricalloadinterface",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Mainsreferencedoutput;notSELV. Mechanicalconnectornotselected."
+    },
+    {
+      "ref": "R8",
+      "kind": "R",
+      "value": "56k1W",
+      "mpn": "CRCW251256K0FKEG",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification."
+    },
+    {
+      "ref": "R9",
+      "kind": "R",
+      "value": "56k1W",
+      "mpn": "CRCW251256K0FKEG",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification."
+    },
+    {
+      "ref": "R6",
+      "kind": "R",
+      "value": "100RBPclamp",
+      "mpn": "RC0805FR-07100RL",
+      "pins": {
+        "1": "BP",
+        "2": "BP_RELAY"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "PositiveBP–SOURCEshuntthroughPhotoMOS;limitsCBPpulse~61.6mA. NoBP-to-groundcrowbar."
+    },
+    {
+      "ref": "R10",
+      "kind": "R",
+      "value": "2k1W",
+      "mpn": "CRCW25122K00FKEG",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "AUX_FEED1"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R11",
+      "kind": "R",
+      "value": "2k1W",
+      "mpn": "CRCW25122K00FKEG",
+      "pins": {
+        "1": "AUX_FEED1",
+        "2": "AUX_FEED2"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R12",
+      "kind": "R",
+      "value": "2k1W",
+      "mpn": "CRCW25122K00FKEG",
+      "pins": {
+        "1": "AUX_FEED2",
+        "2": "AUX_FEED3"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "U3",
+      "kind": "shunt",
+      "value": "ATL431BQDBZR",
+      "mpn": "ATL431BQDBZR",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "RAIL_REF",
+        "3": "DC_RETURN"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "input",
+        "3": "passive"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/atl431.pdf",
+      "footprint": "E27SC06:SOT23",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Alwaysbiased12Vregulator,notOVcomparator."
+    },
+    {
+      "ref": "R16",
+      "kind": "R",
+      "value": "38k3 0.1%",
+      "mpn": "TNPW120638K3BEEA",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "RAIL_REF"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "25ppm/K"
+    },
+    {
+      "ref": "R17",
+      "kind": "R",
+      "value": "10k 0.1%",
+      "mpn": "TNPW120610K0BEEA",
+      "pins": {
+        "1": "RAIL_REF",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "25ppm/K"
+    },
+    {
+      "ref": "R18",
+      "kind": "R",
+      "value": "100R",
+      "mpn": "RC0805FR-07100RL",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "VDD_COMP"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Isolatescapacitivecomparatorloadfromshuntcathode."
+    },
+    {
+      "ref": "C9",
+      "kind": "C",
+      "value": "100nF50V",
+      "mpn": "GRM21BR71H104KA01L",
+      "pins": {
+        "1": "VDD_COMP",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.murata.com/en-us/products",
+      "footprint": "E27SC06:C_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "U2",
+      "kind": "comparator",
+      "value": "TLV6700DDCR",
+      "mpn": "TLV6700DDCR",
+      "pins": {
+        "1": null,
+        "2": "DC_RETURN",
+        "3": "DC_RETURN",
+        "4": "OV_SENSE",
+        "5": "VDD_COMP",
+        "6": "OV_LOW"
+      },
+      "pin_types": {
+        "1": "open_collector",
+        "2": "power_in",
+        "3": "input",
+        "4": "input",
+        "5": "power_in",
+        "6": "open_collector"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/tlv6700.pdf",
+      "footprint": "E27SC06:SOT23_6",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+    },
+    {
+      "ref": "R13",
+      "kind": "R",
+      "value": "160k0.1%10ppm",
+      "mpn": "TNPW1206160KBYEA",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "OV_MID"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R14",
+      "kind": "R",
+      "value": "160k0.1%10ppm",
+      "mpn": "TNPW1206160KBYEA",
+      "pins": {
+        "1": "OV_MID",
+        "2": "OV_SENSE"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R15",
+      "kind": "R",
+      "value": "1k0.1%10ppm",
+      "mpn": "TNPW12061K00BYEA",
+      "pins": {
+        "1": "OV_SENSE",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R19",
+      "kind": "R",
+      "value": "22k",
+      "mpn": "RC0805FR-0722KL",
+      "pins": {
+        "1": "PNP_BASE",
+        "2": "OV_LOW"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R20",
+      "kind": "R",
+      "value": "10k",
+      "mpn": "RC0805FR-0710KL",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "PNP_BASE"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "Q2",
+      "kind": "PNP",
+      "value": "BC857B,215",
+      "mpn": "BC857B,215",
+      "pins": {
+        "1": "PNP_BASE",
+        "2": "VCC_OV",
+        "3": "OPTO_DRIVE"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      },
+      "source": "https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf",
+      "footprint": "E27SC06:SOT23",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R21",
+      "kind": "R",
+      "value": "1k87",
+      "mpn": "RC0805FR-071K87L",
+      "pins": {
+        "1": "OPTO_DRIVE",
+        "2": "OPTO_A"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "PhotoMOSLEDcurrentnominal~5.6mA;selectedfor≥5mAconditionalrail/dropbounds."
+    },
+    {
+      "ref": "L3",
+      "kind": "L",
+      "value": "1.5mH",
+      "mpn": "RFC1010B-155KE",
+      "pins": {
+        "1": "L2_MID",
+        "2": "COUT_PLUS"
+      },
+      "pin_types": {},
+      "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I)."
+    },
+    {
+      "ref": "R24",
+      "kind": "R",
+      "value": "2k1W",
+      "mpn": "CRCW25122K00FKEG",
+      "pins": {
+        "1": "AUX_FEED3",
+        "2": "AUX_FEED4"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R25",
+      "kind": "R",
+      "value": "2k1W",
+      "mpn": "CRCW25122K00FKEG",
+      "pins": {
+        "1": "AUX_FEED4",
+        "2": "VCC_OV"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": ""
+    },
+    {
+      "ref": "R22",
+      "kind": "R",
+      "value": "330k0.1%10ppm",
+      "mpn": "TNPW1206330KBYEA",
+      "pins": {
+        "1": "OPTO_DRIVE",
+        "2": "OV_SENSE"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "Externalhysteresis;noassumedminimuminternalTLVhysteresis."
+    },
+    {
+      "ref": "R23",
+      "kind": "R",
+      "value": "47k",
+      "mpn": "RC0805FR-0747KL",
+      "pins": {
+        "1": "OPTO_DRIVE",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "DefinesOFFhysteresisnodewithR22."
+    },
+    {
+      "ref": "U4",
+      "kind": "photomos",
+      "value": "AQY221R2VY",
+      "mpn": "AQY221R2VY",
+      "pins": {
+        "1": "OPTO_A",
+        "2": "DC_RETURN",
+        "3": "BP_RELAY",
+        "4": "SOURCE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive"
+      },
+      "source": "https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy",
+      "footprint": "E27SC06:Panasonic_SSOP4",
+      "qualification": "selected_for_SC06_engineering_revision_not_production_qualified",
+      "notes": "LED1A2K;bidirectionaloutput3/4;0.5msmaxturnon25Ctest;localambient≤85C;1.25ohmmax25C. OutputneverwiredtoDC_RETURN. ActualVpackageisSSOP~4.45x2.65x1.8mm,notgenericVSSOP."
+    }
+  ]
+}

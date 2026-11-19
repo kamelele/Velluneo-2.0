@@ -1,0 +1,118 @@
+{
+  "actual_reviews": [
+    {
+      "role": "Reality Checker",
+      "actor": "/root/driver_research",
+      "overlap": "Priorpower-blockresearchcontributor;finalinspectionseparatefromrootimplementation",
+      "coverage": [
+        "All19finalhashes",
+        "42components100pins26netsoneNC",
+        "Independentpowerpinmap",
+        "Fullsavedarithmeticreproducedinmemorywithoutwrites",
+        "RC001targetedclosure"
+      ],
+      "findings": [
+        {
+          "id": "SC06-RC-001",
+          "severity": "P2",
+          "status": "Independentlyverifiedclosed",
+          "detail": "RF0.65Whistoricalestimateupdated0.8Wcurrent3mH/33.2source-modelscreen;notthermalqualification"
+        },
+        {
+          "id": "SC06-RC-002",
+          "severity": "P1",
+          "status": "OPENsafetyacceptance",
+          "detail": "FailedopenPhotoMOSdefeatssoleactiveOVP;independentcontainmentorsafetyargumentneeded"
+        },
+        {
+          "id": "SC06-RC-003",
+          "severity": "P1",
+          "status": "OPENengineeringqualification",
+          "detail": "ActualCCwindow,BPshutdown/temperature/timing,dynamic135V,surge700Vandhotpulsesunverified"
+        }
+      ],
+      "initial_manifest_sha256": "9f19d960a9ec73ead9387a70248bce098e74d5b792602c9e96582184c0301a6c",
+      "final_manifest_sha256": "ba86e692ee2d9939ba409402e043f36fdaa27ca8ce17fc936f3b2062040ef5c8",
+      "read_only": true,
+      "recommendation": "ready_for_human_review_of_exact_pre_capture_pin_map_and_bounded_publication_only",
+      "stage_approval": false
+    },
+    {
+      "role": "Overengineering Reviewer",
+      "actor": "/root/review_simplicity",
+      "overlap": "PriorOVP/componentresearchcontributor;actualfinalreadonlyinspection",
+      "coverage": [
+        "All19finalhashes",
+        "ActualBOMandpinintent",
+        "Thermal/sourcing/assemblycosttradeoffs",
+        "5feed/2bleed/PhotoMOS/hysteresisfunctionreasons",
+        "FinalRFcorrectionretainsotherscope"
+      ],
+      "findings": [
+        {
+          "id": "OE-SC06-01",
+          "severity": "minor",
+          "status": "OPENschematicacceptance",
+          "detail": "IncludeRINS1.42Wplusaux/bleed/current/optical/thermalcosts;currentsettingrequirescorrelation"
+        },
+        {
+          "id": "OE-SC06-02",
+          "severity": "minor",
+          "status": "OPENprocurement/release",
+          "detail": "SiC/highvoltagefilms/twoseriesinductors/PhotoMOSrequiresfullprotectedBOMquote;simpledoesnotmeancheap"
+        },
+        {
+          "id": "OE-SC06-03",
+          "severity": "major",
+          "status": "OPENsafetyacceptance",
+          "detail": "FailedopenPhotoMOScontainment;humanmapreviewdoesnotgrantfaultcompliance"
+        }
+      ],
+      "initial_manifest_sha256": "9f19d960a9ec73ead9387a70248bce098e74d5b792602c9e96582184c0301a6c",
+      "final_manifest_sha256": "ba86e692ee2d9939ba409402e043f36fdaa27ca8ce17fc936f3b2062040ef5c8",
+      "read_only": true,
+      "recommendation": "ready_for_human_review_of_exact_pre_capture_pin_map_and_bounded_publication_only",
+      "stage_approval": false
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actor": "/root/review_completeness",
+      "overlap": "PriorLEDloadresearchcontributor;independentmathandgraphinspection",
+      "coverage": [
+        "All19finalhashes",
+        "BOMCSVgraphbijection42/100/26andoneNC",
+        "Intentbasisanddigest",
+        "IndependentKCLandallconditionalnumbers",
+        "FinalRFcorrectionconsistencyonly,notindependentsource-currentmodelvalidation"
+      ],
+      "findings": [],
+      "initial_manifest_sha256": "9f19d960a9ec73ead9387a70248bce098e74d5b792602c9e96582184c0301a6c",
+      "final_manifest_sha256": "ba86e692ee2d9939ba409402e043f36fdaa27ca8ce17fc936f3b2062040ef5c8",
+      "read_only": true,
+      "recommendation": "ready_for_human_review_of_exact_pre_capture_pin_map_and_bounded_publication_only",
+      "stage_approval": false
+    },
+    {
+      "role": "Change Reviewer",
+      "actor": "/root/review_change",
+      "overlap": "Priorinputcapacitorresearchcontributor;independentscopeandpreservationreview",
+      "coverage": [
+        "All19finalhashes",
+        "ExactlytwofileschangedforRC001",
+        "BOMCSVgraphmatches",
+        "Calculationprefixmatcheswithoutwrites",
+        "All97priorvariant/workflowfilesmatchparent",
+        "Mainunchanged",
+        "Humanapprovalnull"
+      ],
+      "findings": [],
+      "initial_manifest_sha256": "9f19d960a9ec73ead9387a70248bce098e74d5b792602c9e96582184c0301a6c",
+      "final_manifest_sha256": "ba86e692ee2d9939ba409402e043f36fdaa27ca8ce17fc936f3b2062040ef5c8",
+      "read_only": true,
+      "recommendation": "ready_for_human_review_of_exact_pre_capture_pin_map_and_bounded_publication_only",
+      "stage_approval": false
+    }
+  ],
+  "source": "Roottranscriptionofactualcurrentchatagentreportsandtargetedfinalbyteclosures2026-11-19",
+  "limits": "Noneoftheseactorsgrantscaptureorhardwarestageapproval.Physicalqualificationandfailedrequirementsremaincontrolling."
+}

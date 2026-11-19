@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo_SC06",
+  "revision": "SC06-B",
+  "subsystems": [
+    {
+      "id": "DRIVER",
+      "kind": "pcb",
+      "owner": "Codex-root"
+    },
+    {
+      "id": "LED_MODULE",
+      "kind": "pcb",
+      "owner": "Kamil"
+    },
+    {
+      "id": "ENCLOSURE",
+      "kind": "enclosure",
+      "owner": "Kamil"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-SCOPE",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Separate non-isolated driver study for integrated diffuser-plus-LED module; most electronics in base; no dimming.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Candidate documents all owner constraints and preserves historical isolated designs.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-POWER",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Choose a regulated LED operating point without inheriting the 8S/24V limit.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Calculate 60/72/90/108V operating scenarios at 8W; exact current, LED count and voltage envelope remain unapproved.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "electrical-calculations.json",
+          "path": "electrical-calculations.json"
+        }
+      ],
+      "method": "calculation",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-LIGHT",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Approximately 800 lm after diffuser.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Before release agree an optical acceptance band around 800lm and demonstrate it with selected LED bins/CCT, stabilized temperatures, diffuser and calibrated measurements.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-MAINS",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Propose 230VAC/50Hz and 207–253VAC design screening.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Confirm target market/rated supply before schematic and establish complete startup/continuous/fault voltage range.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-FAULT",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Bound startup, open/short/reconnect, component faults and thermal behavior.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Before schematic acceptance document numeric limits and current corner calculations; release requires physical fault verification.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "electrical-calculations.json",
+          "path": "electrical-calculations.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-SAFETY",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "All driver/output/LED conductors treated as mains-referenced.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Before schematic accept insulation architecture and applicable standards/test matrix; before placement accept assembly interfaces/accessibility; release requires complete-product safety evidence.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-PROCESS",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Choose actual fabrication and assembly process.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Owner confirms proposed service/stackup/finish/assembly scope or a documented alternative. No supplier capability or quote is inferred from example geometry.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-PARTS",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Use exact verified and obtainable parts.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Full datasheet/package/pinout, exact orderable suffix and credible procurement route exist before capture; do not substitute product briefs for missing limits.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-CONNECTIVITY",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Approve independently derived pin-level intent before capture.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Every physical pin and NC reason comes from requirements and exact datasheets; record real human acceptance; compare actual exported netlist after capture.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "intended-connectivity.json",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-SIZE",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Measure achievable board size rather than inventing an enclosure.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Before placement approve actual outline, height, connector location, insulation/thermal assumptions and assembly access; 40x25mm is only an exploratory goal.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-EMC",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Meet applicable complete-product EMC/light-quality requirements.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Determine actual applicable EN editions and limits; retain conducted/radiated emissions, immunity, harmonics/DF/PF and PstLM/SVM measurement results before release.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-COST",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Keep BOM and assembly simple with reasonable cost.",
+      "basis": "Owner interview in current chat, 2026-11-19; proposals explicitly identified in README.md",
+      "acceptance": "Compare complete priced BOM/process at a named quantity/date before purchasing; no unverified price or fit claims.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-ENV",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Define environmental, thermal and service-life design conditions.",
+      "basis": "Owner requires usable compliant driver; independent draft review identified missing explicit verification gates.",
+      "acceptance": "Before schematic acceptance record rated/minimum ambient, intended fixture/orientations, thermal path, capacitor case/lifetime target, LED junction limit and corresponding evidence plan. No inherited numeric limit silently becomes approved.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-SAFETY-TEST",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Verify complete-product electrical safety physically.",
+      "basis": "Owner requires usable compliant driver; independent draft review identified missing explicit verification gates.",
+      "acceptance": "Before release retain actual tests against the approved standards/classification: insulation, accessibility during removal/replacement, abnormal operation, residual energy and relevant thermal/fire requirements. CAD review alone cannot satisfy this requirement.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-FAULT-TEST",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Verify startup and fault response physically.",
+      "basis": "Owner requires usable compliant driver; independent draft review identified missing explicit verification gates.",
+      "acceptance": "Before release record measured normal/corner and fault matrices for startup, open LED/removal, short LED/output, component faults, contact bounce/reconnection, brownout, thermal response, surge/inrush and discharge against numeric limits approved before schematic acceptance.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-OPTICAL-INPUT",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Define LED/optical selection criteria before driver selection.",
+      "basis": "Owner requires usable compliant driver; independent draft review identified missing explicit verification gates.",
+      "acceptance": "Before schematic acceptance agree first CCT/CRI, target flux band around 800lm, intended diffuser loss range, operating-temperature/bin assumptions and cold/hot electrical LED envelope. Final physical verification remains REQ-LIGHT.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "REQ-INTERFACE",
+      "revision": "SC06-B",
+      "owner": "Codex-root",
+      "text": "Define the driver-to-LED electrical interface.",
+      "basis": "Owner requires usable compliant driver; independent draft review identified missing explicit verification gates.",
+      "acceptance": "Before schematic acceptance create a structured two-endpoint interface contract with selected voltage/current envelopes, physical connector/pin identities, startup/fault behavior and owner; no pin identity or numeric bound may be inferred from an unapproved CAD draft.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [
+    {
+      "id": "OPEN-PROCESS",
+      "record_id": "REQ-PROCESS",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Confirm fabrication/assembly proposal after schematic shortlist and expected THT/SMT scope.",
+      "blocks_stage": "specification",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LINE",
+      "record_id": "REQ-MAINS",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Confirm EU/Poland 230V 50Hz only as the first target market.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-PART",
+      "record_id": "REQ-PARTS",
+      "field": "implementation",
+      "owner": "Codex-root",
+      "question": "Select documented HV9961-based implementation with external protection, or obtain full BP2863XJ data and sourcing before selecting integrated implementation. No IC selected yet.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LED",
+      "record_id": "REQ-POWER",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Select actual LED series/MPN/bins/CCT and cold/hot voltage/current/thermal envelope.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-STANDARDS",
+      "record_id": "REQ-SAFETY",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Establish classification, applicable EN editions and insulation working/fault voltage/test basis; full clauses not yet verified.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-FAULT",
+      "record_id": "REQ-FAULT",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "Derive numeric startup/reconnect/open/short/thermal/energy acceptance limits from actual component and assembly limits.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-MECHANICS",
+      "record_id": "REQ-SIZE",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Approve exploratory driver outline/height/interface and later actual enclosure, thermal and accessibility contracts before formal placement.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-LIGHT",
+      "record_id": "REQ-LIGHT",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Approve flux band/CCT/ambient and actual test setup before optical qualification.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-ENV",
+      "record_id": "REQ-ENV",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Agree ambient range, fixture/orientations, thermal boundary and lifetime targets before circuit acceptance.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-INTERFACE",
+      "record_id": "REQ-INTERFACE",
+      "field": "implementation",
+      "owner": "Codex-root",
+      "question": "Create structured driver-to-LED interface after MPN/current/voltage selection; interfaces[] is deliberately empty, not evidence of no interface.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "OPEN-OPTICAL-INPUT",
+      "record_id": "REQ-OPTICAL-INPUT",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Agree initial CCT/CRI and optical design band/loss/temperature assumptions needed for LED selection; 2700K/CRI80 is only the proposal.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    }
+  ],
+  "evidence": []
+}

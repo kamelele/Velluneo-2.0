@@ -1,0 +1,123 @@
+{
+  "revision": "SC06-B",
+  "kind": "Calculatedengineeringacceptanceproposal,notSPICE/measurement/certification",
+  "OVP": {
+    "rising_v": [
+      126.25232005273878,
+      130.86094363619338
+    ],
+    "falling_v": [
+      111.85182109506634,
+      118.55694351461658
+    ],
+    "independent_window_min_v": 7.695376538122204,
+    "resistor_error_each": 0.003,
+    "basis": "TLV6700rise396..404mV,fall387..400mV;inputbias+/-15nA;OFFcollector0..0.5V/ON11.35..12.38Vareproposedverifiedlimits;agingreserve.1%isengineeringbudget",
+    "rail_v": [
+      11.65,
+      12.38
+    ],
+    "rail_precision_requires_ika_min_ma": 1,
+    "startup_and_temperature": "Relay/BJTtiminganddropsnotguaranteedfulltemperature;qualifylocalPhotoMOSambient<=85C"
+  },
+  "auxiliary": {
+    "feed_each_ohm": 2000,
+    "count": 5,
+    "feed_each_max_w": 0.3168847755909611,
+    "each_allowed125c_w": 0.35294117647058826,
+    "at112v_min_feed_ma": 9.57608382197443,
+    "upper_load_ma_screen": 8.05,
+    "remaining_shunt_bias_ma": 1.5260838219744297,
+    "nominal_120v_feed_ma": 10.7925,
+    "nominal_output_current_for55led_120v_ma": 70.45204606141523,
+    "capacitor_leakage_max_ma": 1.45,
+    "note": "ThefeedalreadyincludesLEDdrive/shunt/lowvoltageloadpower;donotaddthemagaintototaloutputpower."
+  },
+  "normal_headroom": {
+    "healthy_load_vmax": 84.5,
+    "LED_average_max_ma": 60.5,
+    "total_load_max_ma_requirement": 80,
+    "Cmin_f": 0.00011999999999999999,
+    "full10ms_droop_v": 6.666666666666668,
+    "peak_requirement_screen_v": 121.91911916666668,
+    "basis": "Loadvoltage/currentupperlimitsareacceptanceinputsrequiringqualification;full10msdroopisaconservativereserve,notapredictedwaveform."
+  },
+  "output_energy": {
+    "Cmax_f": 0.00017999999999999998,
+    "Vmax_requirement": 135,
+    "energy_j": 1.6402499999999998,
+    "RINS_min_ohm": 433.10499999999996,
+    "healthy60v_peak_a": 0.17316816938155877,
+    "one_short58v_peak_a": 0.17778598723173367,
+    "entire_short_peak_a": 0.3117027048868058,
+    "entire_short_peak_w": 42.07986515971878,
+    "RINS_nominal55mA_w": 1.4217499999999998,
+    "RINS_max60p5mA_w": 1.86052337625,
+    "pulse_qualification": "AC05roomtemperature50W5stestonlycomparisonscreen;hot/repetitivepulseandcontinueddriverenergyremainqualification."
+  },
+  "passive_discharge": {
+    "bleeders_parallel_ohm_nominal": 28000,
+    "each_max135v_w": 0.3389007899317178,
+    "normal135_to5_s": 17.28044182218969,
+    "one_open135_to5_s": 34.56088364437938,
+    "target_one_open_s": 40,
+    "assumptions": "ACremoved,nootherenergysource;remainingbleedercontinuous;notcertifiedaccessiblecontactlimit;capleakage/auxdrainignoredtoconservativelylengthentime."
+  },
+  "BP_shutdown": {
+    "series_ohm_min": 96.03,
+    "CBP_max_assumed_f": 1.2e-07,
+    "BP_initial_max_v": 6.1,
+    "initial_current_bound_a": 0.06352181609913568,
+    "CBP_energy_j": 2.2325999999999996e-06,
+    "BP_charge_current_max25c_a": 0.0075,
+    "steady_BP_positive_bound_v": 0.7896,
+    "UV_boundary_min_derived_v": 4.35,
+    "note": "RemovedD2/SCRBP-to-groundpath,positiveBPclamp. HotrelayRonandBPchargingcurrentaretestinputs,notrelabeled25Cguarantees."
+  },
+  "open_load_retry": {
+    "off_drain_max_a": 0.020950685511387433,
+    "off_interval_min_s": 0.04407708683674048,
+    "frequency_upper_hz": 22.687524783658105,
+    "frequency_target_hz": 25,
+    "conditions": "SuccessfulBPshutdown,Cmin120uF,noviableLEDload;includesCmaxleakageinIoff. InternalTLVminimumhysteresisnotassumed."
+  },
+  "dynamic_acceptance_screen": {
+    "trip_max_v": 130.86094363619338,
+    "current_peak_required_bound_a": 0.7,
+    "shutdown_required_latency_s": 0.0006,
+    "delta_v_constantcurrent": 3.5,
+    "residualL_energy_j": 0.0007349999999999999,
+    "peak_energy_bound_v": 134.40652206946035,
+    "requirement_v": 135,
+    "status": "Conditionalengineeringbudget;requiresactualdelay/currentvalidation. Relay.5msis25Ctest,notfulltemperaturereleaseproof."
+  },
+  "input": {
+    "Vac_max": 253,
+    "normal_peak_v": 357.7960312803931,
+    "RF220_min_ohm": 202.73,
+    "declared_surge_source_peak_v": 1357.796031280393,
+    "TVS_min_breakdown25c_v": 447,
+    "TVS_upper_clamp25c_v": 648,
+    "source_current_upper_screen_a": 4.492655410054718,
+    "TVS_characterized_current_a": 7.7,
+    "RFrough_model_w": 0.8,
+    "not_proven": [
+      "TVShotclamp/parasiticringingbelow700V",
+      "RFimpulse/fusingandRMS/temperature",
+      "Inductorinsulationandinrush",
+      "EMC/PF/wholeproductstandards"
+    ],
+    "C1rated_at100c_v": 1625.0,
+    "C2rated_at100c_v": 812.5,
+    "RFrough_model_basis": "Ownlimited220ohm/lumped430nFsource,3mH/Rsense33.2ohm,110–123Voutput/207–253VAC:0.75–0.79W;round0.8W.Notactualpifilterthermalqualification."
+  },
+  "checks": {
+    "normal_screen_below123": true,
+    "each_aux_below125c_derating": true,
+    "shunt_bias_at112_ge1ma": true,
+    "bleeder_one_open_below40s": true,
+    "bleeder_each_below125c_derating": true,
+    "conditional_retry_below25hz": true,
+    "conditional_dynamic_below135": true
+  }
+}
