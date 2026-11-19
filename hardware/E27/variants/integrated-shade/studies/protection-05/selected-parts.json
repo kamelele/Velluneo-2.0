@@ -1,0 +1,64 @@
+{
+  "revision": "PR05-1",
+  "status": "Concrete engineering candidates, conditional qualification; not production BOM",
+  "parts": [
+    {
+      "ref": "RINS",
+      "mpn": "AC05000004700JAC00",
+      "value": "470ohm +/-5%, AC05 5W axial",
+      "purpose": "Permanent current-limiting resistor between base reservoir and LED+ interface",
+      "envelope_mm": [
+        28,
+        10,
+        9
+      ],
+      "source": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+      "design_qualified": false,
+      "procurement_verified": false
+    },
+    {
+      "ref": "R6",
+      "mpn": "AC05000004700JAC00",
+      "value": "470ohm +/-5%, AC05 5W axial",
+      "purpose": "Replace provisional100ohm pulse-unqualified R6 in AN60Fig8 SOURCE/D2/BP/SCR path",
+      "envelope_mm": [
+        28,
+        10,
+        9
+      ],
+      "source": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+      "design_qualified": false,
+      "procurement_verified": false
+    },
+    {
+      "ref": "RB1,RB2",
+      "mpn": "CRCW201022K0FKEF",
+      "value": "2x22kohm1%,0.75W/P70,400V; series44kohm",
+      "purpose": "Passive base reservoir bleeder; upgrade1206 thermal margin",
+      "quantity": 2,
+      "envelope_mm": [
+        6.4,
+        2.8,
+        0.7
+      ],
+      "source": "https://www.vishay.com/doc?20035",
+      "design_qualified": false,
+      "procurement_verified": false
+    },
+    {
+      "ref": "COUT",
+      "mpn": "EEUED2C680",
+      "value": "68uF +/-20%,160V,105C",
+      "purpose": "Retain base reservoir;63V substitute rejected for this voltage domain",
+      "envelope_mm": [
+        13.5,
+        13.5,
+        20
+      ],
+      "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C680",
+      "design_qualified": false,
+      "procurement_verified": false
+    }
+  ],
+  "ordering_note": "AC05 neutral axial leads need forming;25.4mm pitch/28x10mm envelope are our reservations. Body maximum18x7.5mm, not28x10mm. Height9mm includes provisional stand-off; final thermal spacing pending."
+}

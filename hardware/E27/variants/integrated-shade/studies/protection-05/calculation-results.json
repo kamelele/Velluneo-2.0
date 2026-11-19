@@ -1,0 +1,77 @@
+{
+  "revision": "PR05-1",
+  "design_envelope": {
+    "reservoir_max_v": 135.0,
+    "max_is_acceptance_requirement_not_proven_trip": true,
+    "reservoir_capacitance_max_f": 8.159999999999999e-05,
+    "led_current_nominal_a": 0.055,
+    "led_current_screen_max_a": 0.0605,
+    "healthy_string_min_v_assumed": 64,
+    "one_led_short_string_min_v_assumed": 62,
+    "normal_string_max_v_assumed": 90,
+    "temperature_note": "No approved ambient/solder/junction envelope exists; no device derating graph is converted into a measured temperature claim."
+  },
+  "tolerance_only": {
+    "r_min_ohm": 446.5,
+    "r_max_ohm": 493.5,
+    "healthy_reconnect_a": 0.1590145576707727,
+    "one_led_short_reconnect_a": 0.16349384098544234,
+    "full_short_a": 0.3023516237402016,
+    "full_short_peak_w": 40.817469204927214,
+    "stored_energy_j": 0.7435799999999999,
+    "nominal_series_loss_w": 1.4217499999999998,
+    "series_loss_at_rmax_w": 1.4928375,
+    "normal_voltage_drop_v": 25.85,
+    "rc_time_to_5v_s": 0.13272203225924792
+  },
+  "additional_3pct_resistance_budget": {
+    "r_min_ohm": 433.10499999999996,
+    "r_max_ohm": 508.305,
+    "healthy_reconnect_a": 0.16393253368120897,
+    "one_led_short_reconnect_a": 0.16855035153138387,
+    "full_short_a": 0.3117027048868058,
+    "full_short_peak_w": 42.07986515971878,
+    "series_loss_max_w": 1.86052337625,
+    "normal_reservoir_max_v": 120.7524525,
+    "rc_time_to_5v_s": 0.13670369322702536
+  },
+  "posttrip_rlc_ideal": {
+    "minimum_resistance": {
+      "peak_a": 0.3114513223628725,
+      "peak_time_s": 3.197440415609703e-05,
+      "time_to_5v_s": 0.11647143162247987,
+      "peak_resistor_w": 42.01201924753613,
+      "energy_j": 0.7435799999999999
+    },
+    "maximum_resistance": {
+      "peak_a": 0.265427016768228,
+      "peak_time_s": 2.8187768653049386e-05,
+      "time_to_5v_s": 0.13669691787173538,
+      "peak_resistor_w": 35.81085033295974,
+      "energy_j": 0.7435799999999999
+    },
+    "assumptions": [
+      "SCR already conducting, converter delivers no further energy",
+      "I(L2) initially zero; actual trip may carry pre-existing current",
+      "Fixed L1.5mH, no diode/SCR drop, no ESR; physics screen only",
+      "L2Isat0.50A25C screen now exceeds modeled incremental peak; verify pre-existing current plus peak and L(I,T)",
+      "SCR may stop conducting before5V; calculated5V time is not actual touchsafe or reset timing"
+    ]
+  },
+  "passive_bleeder": {
+    "series_ohm": 44000,
+    "each_power_nom_w": 0.20710227272727272,
+    "each_unequal_1pct_worst_w": 0.20917329545454547,
+    "single_short_remaining_power_w": 0.8367768595041323,
+    "t135_to5_worst_s": 11.951706410538963,
+    "per_resistor_allowed_at125c_w": 0.2647058823529412,
+    "single_short_status": "Fails0.75W rating; not a single-fault-tolerant safety discharge mechanism"
+  },
+  "checks": {
+    "full_short_peak_below_roomtemp50w_comparison": true,
+    "modeled_increment_below_0_50a": true,
+    "bleeder_nominal_below125c_derating": true,
+    "normal_reservoir_max_below125v_trip_lower_target": true
+  },
+  "qualification": "Checks screen a conditional envelope only. Hot resistor pulse/repetition, sustained converter power, verified135V maximum, LEDVf/thermal limits, SCR latch/reset and driver current remain mandatory."
+}

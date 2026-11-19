@@ -1,0 +1,37 @@
+{
+  "status": "NOT_READY_FOR_PCB_PLACEMENT",
+  "original_requirements_sha256": "5c527241b48384ebc7e86cd9873ae48d0f49482048c02786c042ce2142e7f660",
+  "original_requirements_count": 17,
+  "items": [
+    {
+      "id": "PR05-G1",
+      "owner": "Codex engineering",
+      "before": "specification/schematic capture",
+      "need": "FreezeLEDstringVf/current/CCT/bin using actual datasheet ranges and optical800lm budget; redoLYT0006/L/sense for~60mAtotal includingbleeder.64/62/90V and55mA are provisional. IncludeOVPauxfeedanddividercurrentaswellasbleeder:55mALEDat120Vneeds~61.19mAtotal."
+    },
+    {
+      "id": "PR05-G2",
+      "owner": "Codex engineering",
+      "before": "schematic acceptance",
+      "need": "ExactprecisionOVP detectorstatic125–133V anddynamic135Vceiling; proveSCRgate/BPclamp/holding/reset with470ohmR6. Old100VZenernotretainedasqualifieddetector."
+    },
+    {
+      "id": "PR05-G3",
+      "owner": "Codex engineering then qualified test engineer",
+      "before": "schematic calculation / physical qualification",
+      "need": "Boundcontinueddriverenergy, initialLcurrent,componentfaults; qualifyAC05hotandrepetitivepulse withnormal1.4–1.9Wselfheat,LEDhotthermal and actualreservoirripple/life."
+    },
+    {
+      "id": "PR05-G4",
+      "owner": "Kamil / Codex proposal",
+      "before": "schematic capture / placement",
+      "need": "ChooseEconomic/Standardafterexactpart/servicecostcomparison; no newprocessapproval inferred. Approve exactspecificationandindependentpinintentpacketbeforecapture, schematicandspatialbeforeplacement."
+    },
+    {
+      "id": "PR05-G5",
+      "owner": "Codex engineering / qualified safety reviewer",
+      "before": "schematic acceptance and release",
+      "need": "RetaininputMOV700Vswitchcoordination,applicablestandards/insulationfaultmatrix, interfaceaccessibility,actualclearancesandcompleteproducttests."
+    }
+  ]
+}

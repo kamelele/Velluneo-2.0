@@ -1,0 +1,141 @@
+{
+  "revision": "PR05-1",
+  "status": "Explicit circuit candidate; not a qualified/approved detector",
+  "ground": "bridgeDC-; all nodes mains-referenced",
+  "components": [
+    {
+      "ref": "UOV",
+      "mpn": "ATL431BQDBZR",
+      "pins": {
+        "1": "KOV",
+        "2": "OV_SENSE",
+        "3": "bridgeDC-"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/atl431.pdf"
+    },
+    {
+      "ref": "QOV",
+      "mpn": "BC857B,215",
+      "pins": {
+        "1": "PNP_BASE",
+        "2": "VCC_OV",
+        "3": "GATE_FEED"
+      },
+      "source": "https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf"
+    },
+    {
+      "ref": "DZOV",
+      "mpn": "BZX58550-B12,115",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "bridgeDC-"
+      },
+      "source": "https://assets.nexperia.com/documents/data-sheet/BZX58550_SER.pdf"
+    },
+    {
+      "ref": "RFOV1",
+      "mpn": "CRCW201018K0FKEF",
+      "ohm": 18000,
+      "pins": {
+        "1": "COUT+",
+        "2": "VFEEDMID"
+      }
+    },
+    {
+      "ref": "RFOV2",
+      "mpn": "CRCW201018K0FKEF",
+      "ohm": 18000,
+      "pins": {
+        "1": "VFEEDMID",
+        "2": "VCC_OV"
+      }
+    },
+    {
+      "ref": "RTOP1",
+      "mpn": "TNPW1206127KBEEN",
+      "ohm": 127000,
+      "tolerance": 0.001,
+      "pins": {
+        "1": "COUT+",
+        "2": "OV_TOPMID"
+      }
+    },
+    {
+      "ref": "RTOP2",
+      "mpn": "TNPW1206127KBEEN",
+      "ohm": 127000,
+      "tolerance": 0.001,
+      "pins": {
+        "1": "OV_TOPMID",
+        "2": "OV_SENSE"
+      }
+    },
+    {
+      "ref": "RBOT",
+      "mpn": "TNPW12064K99BEEN",
+      "ohm": 4990,
+      "tolerance": 0.001,
+      "pins": {
+        "1": "OV_SENSE",
+        "2": "bridgeDC-"
+      }
+    },
+    {
+      "ref": "RBOV",
+      "mpn": "RC0805FR-0722KL",
+      "ohm": 22000,
+      "pins": {
+        "1": "PNP_BASE",
+        "2": "KOV"
+      }
+    },
+    {
+      "ref": "RBE",
+      "mpn": "RC0805FR-0710KL",
+      "ohm": 10000,
+      "pins": {
+        "1": "VCC_OV",
+        "2": "PNP_BASE"
+      }
+    },
+    {
+      "ref": "RGOV",
+      "mpn": "RC0805FR-074K3L",
+      "ohm": 4300,
+      "pins": {
+        "1": "GATE_FEED",
+        "2": "SCR_GATE"
+      }
+    },
+    {
+      "ref": "R4",
+      "mpn": "RC0805FR-071KL",
+      "ohm": 1000,
+      "pins": {
+        "1": "SCR_GATE",
+        "2": "bridgeDC-"
+      }
+    },
+    {
+      "ref": "C8",
+      "mpn": "GRM21BR71H104KA01L",
+      "farad": 1e-07,
+      "pins": {
+        "1": "SCR_GATE",
+        "2": "bridgeDC-"
+      }
+    }
+  ],
+  "removed_from_candidate": [
+    "VR1 original100VZener",
+    "R5 originalZenergate feed"
+  ],
+  "operation": "Below threshold ATL431 is off and RBE holds PNP off. Above threshold ATL431 sinks through RBOV, enabling PNP to feed SCRgate through RGOV. SCR latches BP low viaR6 asAN60Fig8. The22k base-series resistor is essential to prevent emitter-base current collapsing VCC. Keep1kSCRgate-cathode to retain datasheet test conditions, without claiming guaranteed wholecircuit performance.",
+  "powerup_and_dropouts": "No automatic restart guarantee. Need slowramp, brownout, noise, latch/reset and reversepolaritytests. The new detector is not safetyisolation.",
+  "limits": [
+    "VCC9–14V is an acceptance envelope, not established from a12Vnominal label",
+    "ATL431 precision characterized atIKA1mA; actual trip is submA, so calculatedreference envelope is not a guaranteed trip",
+    "No added cathode capacitor without checking ATL431 stability boundary",
+    "SCR exactX0202NN5BA4 physicalpin/packagevisual confirmation remains open; no full approvedpinintent exists"
+  ]
+}

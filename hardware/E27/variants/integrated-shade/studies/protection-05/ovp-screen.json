@@ -1,0 +1,27 @@
+{
+  "reference_part": "ATL431BQDBZR RevE,NOTLI",
+  "reference_conditions": "Accuracy tables characterized at1mA; circuit initialtripbelow1mA unqualified",
+  "r_top_ohm": 254000.0,
+  "r_bottom_ohm": 4990.0,
+  "nominal_v": 129.76212901803606,
+  "tolerance_and_reference_only_static_v": [
+    125.60229660169493,
+    132.45229421937125
+  ],
+  "with_independent25ppm165c_divider_drift_screen_v": [
+    124.59025650761902,
+    133.52824883466099
+  ],
+  "reference_low_screen_v": 2.4247500000000004,
+  "reference_high_screen_v": 2.546,
+  "bias_max_a": 2e-07,
+  "gate_min_if_vcc9_qsat0_3_vgt0_8_v": 0.0010109383031326386,
+  "feed_each_max_w_135v_vcc9": 0.22272727272727272,
+  "divider_each_max_approx_w": 0.0358759842519685,
+  "gate_qualification": "Cold/hotIGT remainsunclosed;1kbleederretained. Gatecurrentbound assumesVCC9VandQsat.3,notprovenrail/corner.",
+  "critical_findings": [
+    "Staticenvelope is not125–133 guaranteed; exactdetector qualification stillrequired",
+    "Dynamic135Vovershootceiling unproven",
+    "RINS healthyLED bounds validonly ifCOUTmax135 andLEDmin64/62 established"
+  ]
+}

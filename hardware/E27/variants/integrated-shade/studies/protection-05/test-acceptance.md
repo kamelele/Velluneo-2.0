@@ -1,0 +1,10 @@
+# Unexecuted verification plan
+
+No measurements or mains work were performed. A qualified engineer must define a protected setup before physical tests. Simulation results cannot stand in for these tests.
+
+1. Establish the selected LEDstring healthy/one-short voltage minima at all permitted temperatures and currents; establish maximum current from the actual thermal path. Record CCT/bin/diffuser optical budget for~800lm. Freeze the CC regulation window including bleeder current.
+2. Qualify the ATL431/PNP detector using an isolated/current-limited DC source: ramp and step across startup/trip/dropout at cold/hot, supply loadline, gate current and noise. Record a worst-case static window and response bound. Do not expose the160Vreservoir to unsafe or unknown voltages while experimenting.
+3. After full primarydriver qualification, verify reservoir never exceeds135V during open load, reconnect, brownout and component fault envelope; inspect SCRgate,BP,SOURCE,L2current. Verify470ohmR6 does not prevent latching or cause uncontrolled restarting. Establish maximum continued energy into R6 before shutdown.
+4. Repeat reconnect at maximum reservoir voltage, maximum local resistor temperature and realistic contact bounce. Measure LEDpeak current/time and connector-side stored energy; record RINS temperature/resistance changes. Test healthy and one-short LED; entirestring short has no workingLED toprotect but imposes resistor/converter load. Include repeatedfault thermal accumulation.
+5. Qualify passive discharge and component faults. If one bleeder shorts, the other is overloaded; resolve by documented containment or another network before accepting singlefault protection. Do not label5V as an accessible-contact safety approval in a mains-referenced circuit.
+6. Validate thermal separation of the permanentlyhotRINS, reservoircan, magnetics and enclosure. Recalculate capripple/life at measured temperature. Actual enclosure/accessibility/EMCandproduct safety tests follow separately.

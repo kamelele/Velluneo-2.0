@@ -1,0 +1,42 @@
+{
+  "revision": "PR05-1",
+  "kind": "Independent functional intent drafted before CAD; incomplete physical pin contract, NOT approved connectivity",
+  "paths": {
+    "lighting": [
+      "COUT+",
+      "RINS.1",
+      "RINS.2",
+      "JLED+",
+      "seriesLEDs",
+      "JLED-",
+      "bridgeDC-"
+    ],
+    "passive_discharge": [
+      "COUT+",
+      "RB1.1",
+      "RB1.2/RB2.1",
+      "RB2.2",
+      "bridgeDC-"
+    ],
+    "SCR_discharge": [
+      "COUT+",
+      "L2",
+      "SOURCE",
+      "D2(anodeSOURCE,cathodeBP)",
+      "BP",
+      "R6.1",
+      "R6.2",
+      "SCRanode",
+      "SCRcathode=bridgeDC-"
+    ]
+  },
+  "critical_rules": [
+    "No reservoir or bulk capacitor on connector side of RINS",
+    "Any connector-side capacitance requires its own stored-energy accounting",
+    "Feedback hold and bypass caps referenceLYTSOURCE perAN60, not arbitraryglobalground",
+    "R6 polarity irrelevant; SCR physicalpins require exactSTpackage verification",
+    "Do not connectmains-referencedLED return toPE or accessiblemetal",
+    "Functionallabels are not verified physicalpin membership or schematicexport"
+  ],
+  "unresolved": "FullU1/SCR/precisiondetector pinmap and independent review before schematic generation."
+}
