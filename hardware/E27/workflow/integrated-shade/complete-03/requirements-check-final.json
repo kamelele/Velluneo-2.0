@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "stage": "specification",
+  "errors": [
+    {
+      "id": "CS03-OPEN-PROCESS",
+      "gate": "specification",
+      "message": "Unresolved: Actual process decision remains absent; Economic is conditional proposal."
+    },
+    {
+      "id": "CS03-COMPARE",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "CS03-PARTS",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "CS03-SIZE",
+      "gate": "specification",
+      "message": "Required evidence kind absent: calculation"
+    },
+    {
+      "id": "CS03-PROCESS",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "matrix": [
+    {
+      "id": "CS03-COMPARE",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "CS03-PARTS",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "candidate-bom.json",
+          "path": "candidate-bom.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "CS03-SIZE",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "fit-study.json",
+          "path": "fit-study.json"
+        }
+      ],
+      "required_kind": "calculation",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "CS03-PROCESS",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "CS03-OPEN-PROCESS",
+      "record_id": "CS03-PROCESS",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Actual process decision remains absent; Economic is conditional proposal.",
+      "blocks_stage": "specification",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-OVP",
+      "record_id": "CS03-COMPARE",
+      "field": "acceptance",
+      "owner": "/root",
+      "question": "Prove repeatable latch trip/hold/reset and reconnect energy after reservoir relocation.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-SURGE",
+      "record_id": "CS03-COMPARE",
+      "field": "acceptance",
+      "owner": "/root",
+      "question": "Coordinate MOV/fusible resistor and transient limits below driver/device operating limits.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-QUALIFY",
+      "record_id": "CS03-PARTS",
+      "field": "acceptance",
+      "owner": "/root",
+      "question": "Resolve exact procurement/package/threshold/magnetics/thermal/LED and component limits.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-SPATIAL",
+      "record_id": "CS03-SIZE",
+      "field": "acceptance",
+      "owner": "Kamil + /root",
+      "question": "Approved enclosure/interface/spatial assumptions and actual footprint/padmaps required before placement.",
+      "blocks_stage": "placement",
+      "status": "open"
+    }
+  ],
+  "passed": false,
+  "limitations": [
+    "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+    "Hashes establish freshness, not evidence truth or reviewer authority.",
+    "Electrical checks compare declared DC envelopes only, not complete operation."
+  ],
+  "intent_digest": "05ce8674a834b51d23daf469eedb4ab4efc28be80453c2a0fcff646e4d91c040",
+  "product": "Velluneo_COMPLETE03_feasibility",
+  "revision": "CS03-1",
+  "document_sha256": "25c5bfdcf50a28b4d9f234b0d0dd37cdf4be086a540f6fc039ebe6336ac5269f",
+  "blockers": [
+    {
+      "id": "CS03-OPEN-PROCESS",
+      "gate": "specification",
+      "message": "Unresolved: Actual process decision remains absent; Economic is conditional proposal."
+    },
+    {
+      "id": "CS03-OPEN-OVP",
+      "gate": "schematic",
+      "message": "Unresolved: Prove repeatable latch trip/hold/reset and reconnect energy after reservoir relocation."
+    },
+    {
+      "id": "CS03-OPEN-SURGE",
+      "gate": "schematic",
+      "message": "Unresolved: Coordinate MOV/fusible resistor and transient limits below driver/device operating limits."
+    },
+    {
+      "id": "CS03-OPEN-QUALIFY",
+      "gate": "schematic",
+      "message": "Unresolved: Resolve exact procurement/package/threshold/magnetics/thermal/LED and component limits."
+    },
+    {
+      "id": "CS03-OPEN-SPATIAL",
+      "gate": "placement",
+      "message": "Unresolved: Approved enclosure/interface/spatial assumptions and actual footprint/padmaps required before placement."
+    },
+    {
+      "id": "CS03-COMPARE",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "CS03-PARTS",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "CS03-SIZE",
+      "gate": "specification",
+      "message": "Required evidence kind absent: calculation"
+    },
+    {
+      "id": "CS03-PROCESS",
+      "gate": "specification",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "blocked_stages": [
+    "specification",
+    "schematic",
+    "placement",
+    "routing",
+    "release"
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}

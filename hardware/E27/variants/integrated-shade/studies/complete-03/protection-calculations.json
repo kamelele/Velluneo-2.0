@@ -1,0 +1,38 @@
+{
+  "kind": "Screening calculations, not protection qualification",
+  "assumptions": {
+    "vled_nominal_v": 85,
+    "total_current_ma": 95,
+    "c_module_uf": 68,
+    "c_max_uf": 81.6,
+    "c_base_nf": 100,
+    "bleeder_series_ohm": [
+      22000,
+      22000
+    ],
+    "v_screen_v": 110,
+    "l_nominal_mh": 1.5,
+    "i_peak_screen_a": 0.401
+  },
+  "results": {
+    "output_power_nominal_w": 8.075,
+    "module_bleeder_current_ma": 1.9318181818181819,
+    "estimated_LED_current_after_bleeder_ma": 93.06818181818181,
+    "base_C_energy_mj": 0.605,
+    "module_C_energy_j": 0.4114,
+    "module_C_max_energy_j": 0.49368,
+    "inductor_energy_screen_mj": 0.12060075000000003,
+    "bleeder_total_power_110v_w": 0.275,
+    "bleeder_each_power_110v_w": 0.1375,
+    "decay_110_to5_s_nominal": 9.248399020448081,
+    "decay_110_to5_s_Cplus20": 11.0980788245377
+  },
+  "limits": [
+    "110V is a screening voltage, NOT a proven OVP maximum.",
+    "C tolerance excludes DCbias/aging/temperature, resistors tolerance and open faults.",
+    "Pulse peak cannot be inferred from energy alone.",
+    "Internal switching continuation, CFB, paths and latch/hold/reset must be modeled with actual circuit.",
+    "2s AC reset from AN60 is distinct from roughly11s module discharge.",
+    "Research handoff had an erroneous69mW perbleeder estimate; independent arithmetic gives137.5mW perresistor at110V."
+  ]
+}

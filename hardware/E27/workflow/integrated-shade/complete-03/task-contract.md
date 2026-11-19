@@ -1,0 +1,8 @@
+# IS-COMPLETE-03 bounded task
+
+Parent branch commit9250843d4986a98ede05def6f2926aabf9e54042. Stage: continued specification feasibility, no formal schematic or placement.
+Owner request: compare complete protected solutions, select simplest, specific parts and show attainable board dimensions. Coordinator/writer /root; source electrical research /root/driver_research and component/process research /root/review_simplicity are read-only. Reviewer roles inspect frozen source inputs independently, overlaps disclosed.
+Write scope: hardware/E27/variants/integrated-shade/studies/complete-03/** and hardware/E27/workflow/integrated-shade/complete-03/** only. All old44 branch files and baseline CAD/rules/approvals preserved. Exact Toolkit0.7.1-preview.3 and KiCad10.0.6 pins unchanged.
+Deliverables: architecture tradeoff, exact candidate BOM/limits, source provenance, energy/bleeder screens, explicit unqualified protections, two singleface envelope diagrams, geometry checks and real reviews. No claimed optimum, safe copper/routing, actual footprint pin graph, process selection or product qualification.
+Acceptance: all functions accounted for, unresolved circuit/procurement/thermal/mechanical inputs owned; arithmetic and reservation bounds independently reviewed; source-byte manifest and exact allowed publication scope; no skipped stage approvals, CAD generation, order, supplier message or mains test.
+No user budget/deadline assigned. Schematic/placement remain blocked by unresolved prerequisite evidence and actual human decisions. The figure and circuit remain an engineering candidate until those close.

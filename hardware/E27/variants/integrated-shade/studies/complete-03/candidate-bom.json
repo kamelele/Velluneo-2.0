@@ -1,0 +1,355 @@
+{
+  "revision": "IS-COMPLETE-03-1",
+  "selection": "LYT0006D-TL high-side buck with SCR latch OVP requiring AC reset; reservoir-on-module is preferred sizing variant, pending electrical qualification",
+  "estimated_total_driver_output_w": 8,
+  "illustrative_led_voltage_v": 85,
+  "illustrative_total_output_current_ma": 95,
+  "parts": [
+    {
+      "ref": "U1",
+      "mpn": "LYT0006D-TL",
+      "role": "700V integrated driver",
+      "quantity": 1,
+      "envelope_mm": [
+        8,
+        7,
+        1.75
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf",
+      "design_qualified": false,
+      "notes": "Selected for prototype investigation. SO8C seven leads; exact package/padmap still due. C567677 base MPN has zero stock; -TL/C394206 procurement unconfirmed."
+    },
+    {
+      "ref": "BR1",
+      "mpn": "MB10S-13",
+      "role": "1000V bridge",
+      "quantity": 1,
+      "envelope_mm": [
+        8.5,
+        6,
+        2.7
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+      "design_qualified": false,
+      "notes": "Exact Diodes MPN; C460887 identified, stock unconfirmed/unavailable."
+    },
+    {
+      "ref": "RF1",
+      "mpn": "FWFU2W10RJ / TE 3-2176792-3",
+      "role": "10ohm2W fusible input resistor",
+      "quantity": 1,
+      "envelope_mm": [
+        24,
+        7,
+        6.5
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.te.com/en/product-3-2176792-3.html",
+      "design_qualified": false,
+      "notes": "16x5.5mm body;24x7mm reservation includes proposed22mm forming pitch. Pulse/fusing verification due."
+    },
+    {
+      "ref": "RV1",
+      "mpn": "V275LA4P",
+      "role": "275VAC MOV",
+      "quantity": 1,
+      "envelope_mm": [
+        10,
+        6.6,
+        12
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.littelfuse.com/assetdocs/littelfuse_varistor_la_datasheet.pdf?assetguid=f7c547ce-c2fa-4789-86cc-ec39a5060afb",
+      "design_qualified": false,
+      "notes": "9mm maximum disc, not nominal7mm.710V@10A clamp does NOT establish700V switch protection; surge coordination remains blocking."
+    },
+    {
+      "ref": "C1",
+      "mpn": "ECWFD2W104JQ",
+      "role": "100nF450V postbridge film",
+      "quantity": 1,
+      "envelope_mm": [
+        13.6,
+        5.5,
+        13.9
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://industrial.panasonic.com/ww/products/pt/film-cap-electroequip/models/ECWFD2W104JQ",
+      "design_qualified": false,
+      "notes": "DC postbridge only, not X2 across-line. ModelQ leadheight retained."
+    },
+    {
+      "ref": "C2",
+      "mpn": "ECWFD2W334JQ",
+      "role": "330nF450V postbridge film",
+      "quantity": 1,
+      "envelope_mm": [
+        13.6,
+        6.6,
+        15.4
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://industrial.panasonic.com/ww/products/pt/film-cap-electroequip/models/ECWFD2W334JQ",
+      "design_qualified": false,
+      "notes": ""
+    },
+    {
+      "ref": "L1",
+      "mpn": "RFB1010-103L",
+      "role": "10mH differential input-filter candidate",
+      "quantity": 1,
+      "envelope_mm": [
+        12,
+        12,
+        11.5
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.coilcraft.com/getmedia/aee5a84a-474c-4ccb-9d99-e17757a0098a/rfb.pdf",
+      "design_qualified": false,
+      "notes": "Isat0.19A; input pulse/RMS waveform must qualify this value; otherwise larger part and new sizing needed."
+    },
+    {
+      "ref": "L2",
+      "mpn": "RFB1010-152L",
+      "role": "1.5mH power inductor starting candidate",
+      "quantity": 1,
+      "envelope_mm": [
+        12,
+        12,
+        11.5
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.coilcraft.com/getmedia/aee5a84a-474c-4ccb-9d99-e17757a0098a/rfb.pdf",
+      "design_qualified": false,
+      "notes": "Isat0.50A at10%typLdrop25C,Irms0.44A+20C. Worst currentlimit/temp/saturation/loss check due;1.5mH inherited starting point, not solved8Wmagnetics."
+    },
+    {
+      "ref": "D1",
+      "mpn": "STTH1R06A",
+      "role": "600V1A ultrafast freewheel diode",
+      "quantity": 1,
+      "envelope_mm": [
+        6.5,
+        4,
+        2.6
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.st.com/resource/en/datasheet/stth1r06.pdf",
+      "design_qualified": false,
+      "notes": "Chosen over US1J75ns because AN60 recommends faster diode. Verify actual pulse/thermal/recovery limit at temperature."
+    },
+    {
+      "ref": "C3,C8",
+      "mpn": "GRM21BR71H104KA01L",
+      "role": "100nF50V X7R bypass/gate RC",
+      "quantity": 2,
+      "envelope_mm": [
+        3,
+        2.3,
+        1.5
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23",
+      "design_qualified": false,
+      "notes": "0805 reservation; exact supplier suffix/landpattern to verify."
+    },
+    {
+      "ref": "C4",
+      "mpn": "CL21A226MOCLRNC",
+      "role": "22uF16V feedback hold capacitor",
+      "quantity": 1,
+      "envelope_mm": [
+        3,
+        2.3,
+        1.5
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://product.samsungsem.com/mlcc/CL21A226MOCLRNC.do",
+      "design_qualified": false,
+      "notes": "0805 candidate; DC bias/effective capacitance/reflow verification due."
+    },
+    {
+      "ref": "R1",
+      "mpn": "RC1206FR-074K7L",
+      "role": "4.7kohm input choke damping",
+      "quantity": 1,
+      "envelope_mm": [
+        4.2,
+        2.6,
+        1
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "design_qualified": false,
+      "notes": "Exact family/value candidate; pulse and power verification due."
+    },
+    {
+      "ref": "R2,R3",
+      "mpn": "RC1206FR-0746R4L",
+      "role": "46.4ohm1% sense resistors",
+      "quantity": 2,
+      "envelope_mm": [
+        4.2,
+        2.6,
+        1
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "design_qualified": false,
+      "notes": "Parallel23.2ohm starting estimate scales82mA/26.8ohm reference toward94.7mA; not a proven current setting."
+    },
+    {
+      "ref": "Q1",
+      "mpn": "X0202NN5BA4",
+      "role": "800V sensitive-gate SCR latch",
+      "quantity": 1,
+      "envelope_mm": [
+        8,
+        8,
+        1.8
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.st.com/resource/en/datasheet/x02.pdf",
+      "design_qualified": false,
+      "notes": "ST active family.200uA gate,5mA holding/6mA latching25C specifiedconditions; fullcorner verification due."
+    },
+    {
+      "ref": "D2",
+      "mpn": "DL4005-13-F",
+      "role": "SCR latch source/BP diode",
+      "quantity": 1,
+      "envelope_mm": [
+        6,
+        3.5,
+        2.7
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.diodes.com/datasheet/download/DL4001.pdf",
+      "design_qualified": false,
+      "notes": "Use AN60Fig8 topology; not substituted with freewheel diode."
+    },
+    {
+      "ref": "R6",
+      "mpn": "CRCW2010100RFKEF",
+      "role": "100ohm latch discharge resistor",
+      "quantity": 1,
+      "envelope_mm": [
+        6.2,
+        3.5,
+        1
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "design_qualified": false,
+      "notes": "2010 reservation for pulse margin; pulse energy/continuous fault power still unresolved."
+    },
+    {
+      "ref": "R4,R5",
+      "mpn": "RC0805FR-071KL",
+      "role": "1kohm SCR gate network",
+      "quantity": 2,
+      "envelope_mm": [
+        3,
+        2.3,
+        1
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "design_qualified": false,
+      "notes": ""
+    },
+    {
+      "ref": "VR1",
+      "mpn": "1N4764A",
+      "role": "100V detector Zener",
+      "quantity": 1,
+      "envelope_mm": [
+        13,
+        4,
+        3.2
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://services.taiwansemi.com/storage/resources/datasheet/1N4740A%20SERIES_O2104.pdf",
+      "design_qualified": false,
+      "notes": "95–105V at2.5mA only; actual~1mA triggerwindow NOT established.13mm includes axial forming, not body only."
+    },
+    {
+      "ref": "CB",
+      "mpn": "GRM31CR72E104KW03L",
+      "role": "100nF250V base output candidate",
+      "quantity": 1,
+      "envelope_mm": [
+        4.2,
+        3.5,
+        2
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.murata.com/en-us/products/productdetail?partno=GRM31CR72E104KW03%23",
+      "design_qualified": false,
+      "notes": "Only for reservoir-on-module option; effectiveC/OVP transient behavior unqualified."
+    },
+    {
+      "ref": "RB1,RB2",
+      "mpn": "RC1206FR-0722KL",
+      "role": "22kohm1% module/base reservoir discharge",
+      "quantity": 2,
+      "envelope_mm": [
+        4.2,
+        2.6,
+        1
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "design_qualified": false,
+      "notes": "Series44kohm;two resistors. Single-open fault defeats discharge; not certified accessible-contact protection."
+    },
+    {
+      "ref": "COUT",
+      "mpn": "EEUED2C680",
+      "role": "68uF160V output reservoir",
+      "quantity": 1,
+      "envelope_mm": [
+        13.5,
+        13.5,
+        20
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C680",
+      "design_qualified": false,
+      "notes": "ActualbodyØ12.5x20mm,5mmpitch.160V qualification envelope/overshoot still due. Ripple/endurance source discrepancy unresolved."
+    },
+    {
+      "ref": "JAC",
+      "mpn": "Unspecified: solder-pad reservation",
+      "role": "mains wire interface space only",
+      "quantity": 1,
+      "envelope_mm": [
+        10,
+        6,
+        2
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "Owner mechanical interface deferred",
+      "design_qualified": false,
+      "notes": "Not a selected connector; access/insulation/padintent approval still required."
+    },
+    {
+      "ref": "JLED",
+      "mpn": "Unspecified: solder-pad reservation",
+      "role": "LED-module interface space only",
+      "quantity": 1,
+      "envelope_mm": [
+        10,
+        6,
+        2
+      ],
+      "dimension_kind": "Conservative body/pad/lead-forming reservation; not a verified KiCad footprint",
+      "source": "Owner mechanical interface deferred",
+      "design_qualified": false,
+      "notes": "Not a selected touchsafe connector; physical mating/mechanics must be defined."
+    }
+  ],
+  "qualification": "All are engineering selections for review, not an approved/procurement-ready productionBOM. Interfaces deliberately unidentified. Not a complete physical-pin contract."
+}

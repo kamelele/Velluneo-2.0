@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo_COMPLETE03_feasibility",
+  "revision": "CS03-1",
+  "subsystems": [
+    {
+      "id": "DRIVER",
+      "kind": "pcb",
+      "owner": "/root"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "CS03-COMPARE",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "text": "Compare protected solutions and select simplest engineering candidate.",
+      "basis": "Owner request in current chat2026-11-19",
+      "acceptance": "Functional comparison includes input,switching,open-load,reconnect,thermal,discharge and interfaces; no missing protection is silently accepted.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "CS03-PARTS",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "text": "Name exact candidate MPNs and dimensional reservations.",
+      "basis": "Owner request in current chat2026-11-19",
+      "acceptance": "Actual primary-source limits are identified; incomplete procurement,interface,footprint and threshold qualification remains explicit.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "candidate-bom.json",
+          "path": "candidate-bom.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "CS03-SIZE",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "text": "Produce honest initial size budget.",
+      "basis": "Owner request in current chat2026-11-19",
+      "acceptance": "Bounding rectangles nonoverlapping and inside tested outline; no routing/safety/thermal/fit/optimality claim from packing.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "fit-study.json",
+          "path": "fit-study.json"
+        }
+      ],
+      "method": "calculation",
+      "evidence_ids": []
+    },
+    {
+      "id": "CS03-PROCESS",
+      "revision": "CS03-1",
+      "owner": "/root",
+      "text": "Obtain actual process selection before advancing specification.",
+      "basis": "Owner request in current chat2026-11-19",
+      "acceptance": "User confirms exact planning process after comparison and evidence is recorded. Permission to continue investigation is not process approval.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [
+    {
+      "id": "CS03-OPEN-PROCESS",
+      "record_id": "CS03-PROCESS",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Actual process decision remains absent; Economic is conditional proposal.",
+      "blocks_stage": "specification",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-OVP",
+      "record_id": "CS03-COMPARE",
+      "field": "acceptance",
+      "owner": "/root",
+      "question": "Prove repeatable latch trip/hold/reset and reconnect energy after reservoir relocation.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-SURGE",
+      "record_id": "CS03-COMPARE",
+      "field": "acceptance",
+      "owner": "/root",
+      "question": "Coordinate MOV/fusible resistor and transient limits below driver/device operating limits.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-QUALIFY",
+      "record_id": "CS03-PARTS",
+      "field": "acceptance",
+      "owner": "/root",
+      "question": "Resolve exact procurement/package/threshold/magnetics/thermal/LED and component limits.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "CS03-OPEN-SPATIAL",
+      "record_id": "CS03-SIZE",
+      "field": "acceptance",
+      "owner": "Kamil + /root",
+      "question": "Approved enclosure/interface/spatial assumptions and actual footprint/padmaps required before placement.",
+      "blocks_stage": "placement",
+      "status": "open"
+    }
+  ],
+  "evidence": []
+}

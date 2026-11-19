@@ -1,0 +1,42 @@
+# IS-COMPLETE-03 — protected architecture selection and size budget
+
+Engineering decision for prototype investigation: prefer LYT0006D-TL high-side buck with the AN-60 Fig8 SCR-latch overvoltage architecture and reset by removing AC. This is a selected engineering candidate with a concrete MPN shortlist, not a verified complete schematic, procurement-ready BOM or manufactured PCB. Inputs remain the owner-confirmed EU230V50Hz range207–253VAC, approximately800lm and no dimming. Most electronics remain in the base. The proposed85V/95mA operating point is8.075W total; actual LED voltage/bins/CCT/temperature and optical acceptance are not selected or proven.
+
+## Complete functional comparison
+
+1. **Selected LYT/SCR, reservoir on module.** Common input protection/rectification/filter, integrated controller/MOSFET, freewheel diode and power inductor, current-setting/bypass/hold parts, seven-part SCR detector/latch, base noise capacitor, interface space, and module reservoir/discharge are explicitly in candidate-bom.json. The integrated switching/bias/thermal functions and documented latch block make this the simplest supported complete-function direction found. Reconnection under power is not a supported feature. Any abnormal live reconnection still needs energy/current and safety verification.
+2. **LYT with reservoir in base.** Same protected driver, larger base; the large charged capacitor remains connected to the outgoing interface. The published latch also creates a discharge path output-positive → L2 → SOURCE → D2 → R6 → SCR → DCnegative. The unresolved risk is reconnection BEFORE the latch trips or discharge completes, contact bounce and reset sequencing; the capacitor is not assumed to stay charged indefinitely after successful trip. An independent output-disconnect/inrush mechanism or an accepted physical/power sequence is therefore additional unresolved work. It is not an equivalent safe substitute just because its rectangles fit.
+3. **LYT CV/hotplug alternative (AN-60 Fig9).** Provides voltage limiting with additional detector/feedback and continuous no-load power. Residual voltage and stored energy still require reconnect-current control. More functions than needed for owner-requested power-off replacement; not selected.
+4. **HV9961 protected solution.** The common bridge/filter/energy/discharge/interface functions remain; add external MOSFET/gate/timing/bias components, a floating-output-compatible detector and external thermal shutdown. Earlier model also requires large L at low current under the40%pp scenario. It remains a documented fallback, but cannot win a simplicity comparison by omitting those required functions. No invented complete HV9961 pin graph, MPN count or manufactured size is claimed.
+5. **BP2863XJ integrated alternative.** Potentially fewer ICs; still lacks full electrical/package data and a confirmed procurement path. It cannot be selected over a documented solution on parts-count marketing alone.
+
+## Protection coverage and remaining design work
+
+RF1 and MOV address input faults/surge only after actual coordination; the MOV's710V clamp at10A does not alone protect a700V switch. BR1/film/L1 form input conversion/filtering. U1 has current limit, autorestart and thermal functions; D1/L2 carry switching energy. These are design provisions, not measured EMC/surge/thermal qualification.
+
+The full English AN-60 RevB was downloaded and page10 Fig8 visually inspected. In the published topology, SCR cathode is at rectified DCnegative; its anode reaches BP through100ohm R6; D2 anode is SOURCE and cathode is BP. The gate detector uses output-positive → Zener → R5 → gate, with R4/C8 to DCnegative. This functional node description is not a complete physical-pin contract. Full symbols, pinout, source hashes and intended connectivity still need independent review and real owner approval before schematic capture.
+
+For85V nominal LEDs, a100V1N4764A detector is selected as a starting candidate. Its95–105V range is specified at2.5mA; the original gate network operates near1mA. Therefore no guaranteed100–110V trip window is established. Cold/hot Zener knee, SCR gate/shunt current, latch/hold and dV/dt, overshoot, reset and resistor-pulse limits are blockers for a working circuit claim. Changing the output reservoir location changes the published latch transient conditions.
+
+Preferred space variant moves68uF/160V COUT and two22kohm bleeders into the integrated LED module, leaving only a100nF output capacitor in the base. This is three passive components on the module, including a physically substantial Ø12.5x20mm capacitor. It reduces the base's dominant stored-energy dump path; it does not prove safe hotplug, eliminate base/switching energy or establish module contact safety. The module then retains energy, so complete assembly accessibility and discharge fault analysis remain essential. Each22k resistor dissipates137.5mW at110V, not69mW. See protection-calculations.json for energy/decay assumptions.
+
+## Concrete parts and dimensions
+
+The BOM names actual manufacturer order codes and conservative dimensional reservations. Key parts: LYT0006D-TL; Diodes MB10S-13; Coilcraft RFB1010-152L and RFB1010-103L; ST STTH1R06A; ST X0202NN5BA4; Panasonic ECWFD2W104JQ/ECWFD2W334JQ and EEUED2C680; TE3-2176792-3; Littelfuse V275LA4P. Small control parts and proposed values are listed separately. Interface connectors remain expressly unidentified, with reserved space rather than invented mechanics. Stock, precise suffix matching and Economic assembly eligibility are not confirmed; U1's inspected JLC listing was zero-stock/preorder.
+
+fit-study.json and fit-preview.png show a single-face rectangle-reservation experiment, not formal KiCad placement. With the selected conservative envelopes,1mm added to each width/depth,1mm edge margin, three tooling reservations and at most70% envelope occupancy, this particular greedy packing finds:
+
+- Reservoir on module: **56x40mm**, tallest base component15.4mm, proposed PCB1.6mm additional. Module needs its own Ø12.5x20mm capacitor space.
+- Reservoir in base: **64x40mm**, tallest component20mm, proposed PCB1.6mm additional. Additional reconnect protection is NOT yet sized.
+
+The result is not an optimum or a proven lower bound; another algorithm, smaller qualified parts, changed lead forming or two-sided assembly may change it. These numbers demonstrate only nonoverlapping component reservations under stated assumptions. Copper, switching loops, safe spacing, thermal copper, actual pad maps, complete connector/outline constraints, approved process and enclosure fit are absent. The board may grow. A40x25mm usable board is not demonstrated with this candidate set. A56x40mm rectangle cannot be assumed to fit the narrow E27 screw-base shank; complete lamp shoulder/base geometry must establish fit.
+
+## Verification stage
+
+This remains a specification/feasibility study. Native schematic, PCB, ERC/DRC, spatial conformance, routed topology, optical/thermal/EMC/safety measurements and release files do not exist for this variant. Toolkit doctor/requirements are retained as current stage evidence; earlier check gaps are not relabelled passed. The user authorized comparison/selection/size study on the branch, not manufacturing or a fabricated stage approval. Before actual capture/placement, close the declared specification/protection/parts/interface inputs and obtain the actual approvals required by the pinned Toolkit.
+
+## Requirement authority and review corrections
+
+The four CS03 requirements are a study-specific checklist, not a replacement product specification. The authoritative parent requirements remain ../../requirements.json (IS-1.1 at parent branch9250843d4986a98ede05def6f2926aabf9e54042), together with genuine later owner decisions recorded under workflow/integrated-shade/screening-02. All original LED/optical, electrical safety, fault, environment, EMC, interface, physical measurement and human stage gates remain controlling. No passing study-level rectangle or calculation check can close those product requirements. The parent matrix itself remains historical and unmodified; confirmed line/market is recorded separately pending the next deliberate requirements revision.
+
+The Reality review clarified the existing SCR discharge path and its reconnection timing race. The Completeness review requested this explicit parent-requirement binding. These documentation corrections do not change BOM, geometry, calculations, selected prototype direction or any approval.
