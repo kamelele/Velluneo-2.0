@@ -1,0 +1,52 @@
+{
+  "revision": "SC08-B",
+  "base_commit": "a6c7ed424a6aa882ef7e5b46899955d3d928f09d",
+  "basis": "Independently prepared from approvedSC07map and primarydatasheets before CAD; proposedexperimentalchange, not approved",
+  "baseline_files": [
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC07_protection/bom-design.json",
+      "sha256": "09152efcde88e830ea494ef6056fdc92561da024d543c0e010fd54cf3be0376c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC07_protection/intended-connectivity.json",
+      "sha256": "c5cee811d70620d03d6aa469bad45c899b6732089a688d21bb0645b57d5c7181"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC07_protection/requirements.json",
+      "sha256": "a756d49fc27eb2a9d3fc0d1d61732b10e61cd32d61a8ba8dfda01d6364055879"
+    }
+  ],
+  "scope_input": {
+    "path": "owner-prototype-scope.json",
+    "sha256": "6491988d16217c36ca1519eb1b358ec1b201469389301840d973146a850343ac"
+  },
+  "calculation_inputs": [
+    {
+      "path": "calculated-control.json",
+      "sha256": "0b18efb312f90e4f6f21dc6669285e74ff8f56c9832c3f8b1c3ea02e08fe9db6"
+    },
+    {
+      "path": "input-results.json",
+      "sha256": "31ca34dd2232ff5cac7c62dcc969e760270a12c08a7febfd4072a0e171aab46c"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf",
+      "part": "PMV65XP,215"
+    },
+    {
+      "url": "https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do",
+      "part": "CL32B226KAJNNNE"
+    },
+    {
+      "url": "https://www.vishay.com/docs/88301/15ke.pdf",
+      "part": "1.5KE440A-E3/54"
+    },
+    {
+      "url": "https://www.st.com/resource/en/datasheet/stth110.pdf",
+      "part": "STTH110A"
+    }
+  ],
+  "changed_fields_invalidate_SC07_capture_approval": true
+}

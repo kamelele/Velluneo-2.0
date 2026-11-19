@@ -1,0 +1,35 @@
+{
+  "kind": "AnalyticalscalarRCopenTVSandTheveninenergybound",
+  "source_envelope": "1100V3usplateauthen60ushalfvaluetail,superimposedon357.796Vnormalpeak; singlepositivepulse only",
+  "Rmin_ohm": 396.26399999999995,
+  "Cmin_F": 3.87e-07,
+  "Cmax_F": 4.7300000000000007e-07,
+  "inrush_max_A": 0.9029233825944146,
+  "RF_inrush_total_E_J": 0.03027625700000001,
+  "cases": [
+    {
+      "excess_V": 1100,
+      "bus_max_V": 663.946917023952,
+      "time_after_front_s": 0.00011071132569549557,
+      "whole_pulse_extra_E_J": 0.07980692020207031,
+      "Cout_bound_V": 141.84595738737457
+    },
+    {
+      "excess_V": 2200,
+      "bus_max_V": 970.0978027675108,
+      "time_after_front_s": 0.00011071132569549557,
+      "whole_pulse_extra_E_J": 0.23027358994519073,
+      "Cout_bound_V": 150.42623925430325
+    }
+  ],
+  "conditional_inputs": [
+    "Noinductiveinputfilter; noinputenergybackfeed dueD4",
+    "EffectiveCin387..473nFandRFpair>=396.264ohm",
+    "OVPinitialCout<=132V, Cmin120uF, complete response<=.6ms",
+    "ResidualLout<=3.3mHandimposedI<=1.4A;absratingisnotalimiter",
+    "Actualgenerator/probe/layout/thermalverificationstillrequired; notIECqualification"
+  ],
+  "VDS_proposed_acceptance_max_V": 680,
+  "source_negative_budget_V": 5,
+  "layout_overshoot_budget_V": 11
+}

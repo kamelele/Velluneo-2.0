@@ -1,0 +1,33 @@
+# SC08-B experimental power-board proposal
+
+This is a new independently specified change map, not a new native schematic or an orderable board. SC07-C remains intact at commit a6c7ed424a6aa882ef7e5b46899955d3d928f09d. The actual owner selected a laboratory prototype, ambient 0..40C, with component temperatures measured on the prototype. That scope is not new-map, schematic, placement or release approval.
+
+## Selected corrections
+
+Remove input L1/R1. Keep the existing film capacitors in parallel (430nF); use two TE FWFU2W220RJ series input resistors. Add STTH110A (pin1cathode to U1DRAIN, pin2anode to BUS_PLUS). Replace D3 by Vishay1.5KE440A-E3/54. Replace Q2 by PMV65XP,215 (1G2S3D). Replace C4 by CL32B226KAJNNNE22uF25VX7R1210 and add parallel C10 of the same part. Change R22 to TNPW1206210KBYEA210k and R23 to RC0805FR-074K3L4.3k for the recalculated hysteresis. Six auxiliary feed resistors change from845ohm to715ohm (CRCW2512715RFKEGHP). Their localambient condition is90C maximum; U3 effective thermal resistance must not exceed85K/W. R23limits100uAhotleakage plus5uAreserve toanOFFnode below0.5V, conditional on gateOFFstate. Other SC07 functionality, both separately fed PhotoMOS paths, base150uF160V reservoir and470ohm5W reconnect resistor remain.
+
+The new map contains47positions112physicalpins30nets andoneNC. Review complete physical-pin-intent.csv. New part identities and footprint geometry must be checked at capture; generic library identifiers are proposals, not a claim of completed native pad verification.
+
+## What is actually calculated
+
+Q2 has a manufacturer hot RDSon maximum at150C, eliminating reliance on a PNP saturation assumption. Recalculation gives5.019..6.401V gate drive, at least5.345mA to each PhotoMOS under stated rail/LED/resistor bounds,1.299mA minimum shunt current, and conditional retry below25Hz. Auxiliary-feed and local80C/85K/W U3 thermal budgets are explicit, not achieved temperatures.
+
+Removing L1 eliminates its saturation/resonance mechanism. Peak-line connection current is bounded0.903A in the scalarRC network, total resistor energy30.28mJ. The chosen positive1kV engineering test envelope is bounded by1100V3us then60us half-value tail. With Cin>=387nF and RFpair>=396.264ohm, analytical BUS<=663.947V even with TVSopen. A700V switch still needs actual SOURCE/loop/probe margins; proposed measured VDS target is680V. The2.2kV version gives970.098V and FAILS. No general2kV or IECsurge compliance is claimed.
+
+Whole-pulse source-energy inequality p=vs*i-R*i²<=vs²/(4R) gives COUT<=141.846V for the explicit1kV envelope, starting132V (rounded above recalculated131.086V maximum trip),120uF,shutdown.6ms and imposed1.4A residual-current bound. This does not prove a current limiter or response time. Proposed experimental fault acceptance ceiling145V replaces the earlier135V criterion only if the owner approves this packet. It stays below160V capacitor rating but requires updated pulse/discharge/fault review.
+
+The actual own RC/samplehold21-case screen with CFB18/44/52.8uF gives averageLED43.890..58.808mA, maximumCOUT113.233V, and input-resistor pair loss up to2.681W. It is a sensitivity model, not manufacturer SPICE/PIXls or a guaranteed full-temperature envelope. Exact55mA is a calibration target; initialR2=28.7ohm, with candidate unpowered substitution menu22.1..31.6ohm to be evaluated under an engineering change. The earlier trim study is explicitly historical SC07 ideal-source evidence and is not a SC08 result.
+
+## Prototype acceptance and physical evidence
+
+The proposed prototype criteria in prototype-validation.json name quantities, corners and stop limits. They are plans and conditions, not completed tests. No mains, thermal, surge, optical or fault measurements occurred. Currentaccuracy, single surviving actuator attemperature, Ceff and continuous/repeated-fault resistorheat remain to be verified. In particular, the energy bound protects neither R7 against indefinite overload nor a LED module against arbitrary simultaneous faults.
+
+Local heat is a real cost: inputresistors roughly2..2.7Wpair, auxiliaryfeed about2W, R7 about1.42W at55mA, plus IC/inductor losses. No small bulb-base size, efficiency or800lm is yet demonstrated. Placement must separate heat sources, provide solder/test access and allow qualified thermal measurements. A futureLYT5 design could reduce auxiliary loss, but requires different sensing, custom bias-wound magnetics and an actual design-tool run; it is not selected as a ready replacement.
+
+All17 original product requirements remain controlling for the finishedlamp; original-requirements-impact.json records what this experimental scope does and does not address. Neither a prototype scope nor ERC authorizes marking physical qualification complete. No broad waivers or relaxed global rules are introduced. The standard0.2mm fabrication minimum is not a mains insulation rule. Allinput/output nets are hazardous mains-referenced; prototype testfixture/accessibility/insulation and standards assessment remain separate gates.
+
+## Next controlled step
+
+Actual owner approval of this exact new map and the explicit experimental145V/test-envelope proposal is needed before native capture. Then regenerate/check the schematic, present its stage packet, and obtain actual schematic acceptance before placement. The toolkit requires independent spatial intent before PCB placement and routing/release reviews before manufacturing files. No Gerbers, purchase or energized tests are authorized by this packet.
+
+Primary sources: Nexperia PMV65XP product data12Feb2013; Samsung CL32B226KAJNNN official product page; ST STTH110 DS3067; Vishay88301Rev09Aug2022; TE6-2176792-5; PowerIntegrations LYT0RevB/AN60. Exact URLs are retained in the BOM and research records. Research actors and evidence limits are disclosed in workflow/schematic-08 review records.

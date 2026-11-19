@@ -1,0 +1,85 @@
+{
+  "scope": "SC08 bounded prototype control design; research recommendation, no CAD edit or qualification claim",
+  "basis": "SC07-C branch a6c7ed424a6aa882ef7e5b46899955d3d928f09d; original input-capacitor researcher, source-overlap disclosed",
+  "parts": {
+    "Q2": {
+      "replace": "BC857B,215",
+      "with": "PMV65XP",
+      "pins": {
+        "1": "G -> old PNP_BASE net (rename desirable)",
+        "2": "S -> VCC_OV",
+        "3": "D -> OPTO_DRIVE"
+      },
+      "keep_R19_ohm": 11000,
+      "keep_R20_ohm": 10000,
+      "manufacturer_hot_Ron_max_ohm": 0.105,
+      "manufacturer_condition": "VGS=-4.5V,ID=-2.8A,Tj=150C;Table7. Not a gate switching-delay guarantee.",
+      "source": "https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf",
+      "prototype_drop_budget_V": 0.003,
+      "prototype_turn_on_allowance_s": 0.00005
+    },
+    "C4": {
+      "replace": "one CL21A226MOCLRNC 22uF16V X5R0805",
+      "with": "two CL32B226KAJNNNE 22uF25V X7R1210 in parallel, nonpolar",
+      "primary_identity_source": "https://product.samsungsem.com/resources/file/support/software_library/Samsung_SIMPLIS_Simple_Intr_list_V1.pdf",
+      "manufacturer_bias_curve_retrieved": false,
+      "retention_budgets": {
+        "tolerance": 0.9,
+        "temperature": 0.85,
+        "aging_engineering": 0.8,
+        "DCbias_engineering": 0.7
+      },
+      "combined_Ceff_required_prototype_uF": 18,
+      "minimum_theory_SC07_uF": 11.35327649883118,
+      "qualification": "Supplier DC-bias/aging envelope not established as guarantee. 70%/80% are explicit engineering reserve. Evaluate at 0..2V, -20..85C, after aging; startup time/current loop changes must be recalculated. Do not substitute polarized tantalum without reverse-voltage proof."
+    },
+    "actuators": {
+      "keep": "two separately fed AQY221R2VY + own100ohm branches",
+      "source": "https://mediap.industry.panasonic.eu/assets/download-files/import/semi_eng_rf1a_aqy22_v_cr10.pdf",
+      "manufacturer_limit": "0.5ms and1.25ohm limits are25C-only. Ambient rating85C does not extend these guarantees.",
+      "prototype_package_temperature_max_C": 70,
+      "per_path_input_current_min_A": 0.0053,
+      "per_path_hot_Ron_acceptance_max_ohm": 50,
+      "per_path_turn_on_acceptance_max_s": 0.0005,
+      "driver_BP_hot_charge_acceptance_max_A": 0.02,
+      "complete_detector_to_shutdown_acceptance_max_s": 0.0006,
+      "warning": "These are chosen prototype acceptance limits, not achieved measurements. Each branch evaluated alone. Preserve input/output-open structural test; no shared-logic redundancy claimed."
+    },
+    "rail": {
+      "keep": "TL431BQPK SOT89",
+      "source": "https://www.ti.com/lit/ds/symlink/tl431.pdf",
+      "prototype_rail_acceptance_V": [
+        11.4,
+        12.9
+      ],
+      "old_declared_V": [
+        11.55,
+        12.75
+      ],
+      "precision": "10mA precision test is not1mA accuracy. Keep1mA operating regulation floor and explicitly broaden/recompute rail; use200mV current/interaction engineering reserve instead50mV. No new manufacturer guarantee.",
+      "max_U3_power_existing_one_feed_short_W": 0.384171736273243,
+      "layout_theta_JA_required_max_K_W": 100,
+      "ambient_max_C": 85,
+      "old_estimated_Tj_using100_C": 123.4171736273243,
+      "prototype_U3_Tj_design_max_C": 125,
+      "board_condition": "SOT89 anode/tab copper must be designed for effective theta<=100K/W;52K/W JEDEC is not actual board. Recalculate with new rail/current before release."
+    }
+  },
+  "calculations": {
+    "q2_vgs_min_oldrail": 5.087518946323106,
+    "q2_vgs_min_broadrail": 5.019076987403962,
+    "q2_vgs_max": 6.400685862550855,
+    "q2_drop_at20mA": 0.0021,
+    "C4_stack_budget_uF": 18.849600000000002,
+    "LED_min_11p4": 0.005344720137989582,
+    "relayBPmax_at20mA50ohm": 3.0806
+  },
+  "mandatory_root_recalculations": [
+    "All OVP rising/falling corners with new OPTO_DRIVE and11.4..12.9 rail",
+    "Minimum aux current at new falling threshold, PMOS gate-divider load, both LED short and one feed short",
+    "Retry/discharge/hysteresis; total delay budget with new PMOS",
+    "Samplehold startup and current dynamics with >=18uF and high Ceff corner",
+    "Thermal U3 including new rail max, no repeated old .384W without recalculation"
+  ],
+  "stage": "Suitable for bounded prototype PCB design proposal/human approval with explicit later acceptance checks; not full electrical acceptance and not permission for energized mains tests"
+}

@@ -1,0 +1,13 @@
+{
+  "SC08-ROOT-01": {
+    "finding": "New237khysteresisgivesmaxtrip131.0156V; earlier131Vinitialenergyinputwasroundeddown",
+    "correction": "ControllingRCenergysource uses132Vinitialceiling; originalresearch131Vretainedashistoricalconditionalstudy",
+    "graph_changed": false,
+    "requires_fresh_review": true
+  },
+  "SC08-RC-001": {
+    "finding": "PMOS100uAhotleakageand47kpulldowndonotsupportOFFnode<=.5V",
+    "correction": "SC08-B:R23=4.3k,feed6x715R,R22=210k. RecomputedOFFnodeincluding5uAreserve,auxmargin,retry,power. Feedlocalambient<=90C,U3theta<=85K/Wandlocalambient<=80C. ActualOFFVGSandtimingremainprototypechecks.",
+    "requires_independent_closure": true
+  }
+}

@@ -1,0 +1,765 @@
+{
+  "revision": "SC08-A",
+  "status": "Independent proposed change map; no new CAD, no owner approval",
+  "components": [
+    {
+      "ref": "J1",
+      "kind": "terminal",
+      "value": "AC input230V50Hz",
+      "mpn": "PCB wire pads, not purchased connector",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_N"
+      },
+      "pin_types": {},
+      "source": "Ownerboardonlyscope;electricalinterfaceproposal",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Direct soldered insulated leads; wire strain relief/accessibility are laterintegrationconditions."
+    },
+    {
+      "ref": "RF1",
+      "kind": "R",
+      "value": "220R2Wfusible",
+      "mpn": "FWFU2W220RJ",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_MID"
+      },
+      "pin_types": {},
+      "source": "https://www.te.com/en/product-6-2176792-5.html",
+      "footprint": "E27SC06:RF_16x5p5_P22",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of two series220ohm2W fusible resistors; total440ohm. Input dissipation penalty is explicit."
+    },
+    {
+      "ref": "BR1",
+      "kind": "bridge",
+      "value": "1000V0.8A",
+      "mpn": "MB10S-13",
+      "pins": {
+        "1": "BUS_PLUS",
+        "2": "AC_FUSED",
+        "3": "DC_RETURN",
+        "4": "AC_N"
+      },
+      "pin_types": {},
+      "source": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+      "footprint": "E27SC06:MB10S_Diodes",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "ExactDiodespinmap;notgenericnumbering."
+    },
+    {
+      "ref": "C1",
+      "kind": "C",
+      "value": "100nF2kV",
+      "mpn": "R76UR31004030J",
+      "pins": {
+        "1": "BUS_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://search.kemet.com/download/specsheet/R76UR31004030J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Postbridgeonly,notX2;2kV85Cderatesto1500V105C. Longleadsformed/cutforassembly."
+    },
+    {
+      "ref": "C2",
+      "kind": "C",
+      "value": "330nF1kV",
+      "mpn": "R76QR3330SE30J",
+      "pins": {
+        "1": "BUS_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://search.kemet.com/download/specsheet/R76QR3330SE30J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Postbridge;1000V85Cderatesto750V105C,notanX2cap."
+    },
+    {
+      "ref": "D3",
+      "kind": "Z",
+      "value": "376Vstandoff TVS",
+      "mpn": "1.5KE440A-E3/54",
+      "pins": {
+        "1": "BUS_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/88301/15ke.pdf",
+      "footprint": "Diode_THT:D_DO-201AD_P15.24mm_Horizontal",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Cathode BUS_PLUS/anodeDC_RETURN. Secondary clamp only; conditionalhotTVSmodel is not guaranteedVc. Independent scalarRCsurge bound assumesTVSopen. Exact footprint geometry review due."
+    },
+    {
+      "ref": "U1",
+      "kind": "driver",
+      "value": "LYT0006D-TL",
+      "mpn": "LYT0006D-TL",
+      "pins": {
+        "1": "BP",
+        "2": "SENSE_FB",
+        "4": "DRAIN_BLOCKED",
+        "5": "SOURCE",
+        "6": "SOURCE",
+        "7": "SOURCE",
+        "8": "SOURCE"
+      },
+      "pin_types": {
+        "1": "power_out",
+        "2": "input",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      },
+      "source": "https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf",
+      "footprint": "E27SC06:LYT_SO8C_no3",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "SO8Cpin3physicallyabsent."
+    },
+    {
+      "ref": "C3",
+      "kind": "C",
+      "value": "100nF50V",
+      "mpn": "GRM21BR71H104KA01L",
+      "pins": {
+        "1": "BP",
+        "2": "SOURCE"
+      },
+      "pin_types": {},
+      "source": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23",
+      "footprint": "E27SC06:C_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": ""
+    },
+    {
+      "ref": "R2",
+      "kind": "R",
+      "value": "28.7ohm 0.75W HP current seed",
+      "mpn": "CRCW120628R7FKEAHP",
+      "pins": {
+        "1": "SOURCE",
+        "2": "SENSE_FB"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "28.7ohm initial population only. CandidateE96trim25.5..31.6ohm requires unpowered replacement and controlled engineering change; calibrate55mA then verifyline/temperature. No fulltempaccuracy claim."
+    },
+    {
+      "ref": "C4",
+      "kind": "C",
+      "value": "22uF25VX7R",
+      "mpn": "CL32B226KAJNNNE",
+      "pins": {
+        "1": "SENSE_FB",
+        "2": "SOURCE"
+      },
+      "pin_types": {},
+      "source": "https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of two parallel nonpolar22uF25VX7R1210. CombinedCeff≥18uF proposed acceptance; supplierbias/agingmin not guaranteed by an invented reserve."
+    },
+    {
+      "ref": "D1",
+      "kind": "Dcase",
+      "value": "1200V2ASiC",
+      "mpn": "C4D02120E",
+      "pins": {
+        "1": "SENSE_FB",
+        "2": "DC_RETURN",
+        "CASE": "SENSE_FB"
+      },
+      "pin_types": {},
+      "source": "https://assets.wolfspeed.com/uploads/2023/10/Wolfspeed_C4D02120E_data_sheet.pdf",
+      "footprint": "E27SC06:C4D02120E_TO252",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Rev14Sept2026visualpins1K,2A,CASEK;custompadmapmandatory."
+    },
+    {
+      "ref": "L2",
+      "kind": "L",
+      "value": "1.5mH",
+      "mpn": "RFC1010B-155KE",
+      "pins": {
+        "1": "SOURCE",
+        "2": "L2_MID"
+      },
+      "pin_types": {},
+      "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I)."
+    },
+    {
+      "ref": "C5",
+      "kind": "CP",
+      "value": "150uF160V",
+      "mpn": "EEUED2C151",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C151",
+      "footprint": "E27SC06:CP_16x25_P7p5",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Base150uF+/-20%,-25..105C;leakageup1.45mAincluded;630mA120Hz,100kHzcatalogratingnotinterchangeable."
+    },
+    {
+      "ref": "R7",
+      "kind": "R",
+      "value": "470R5W",
+      "mpn": "AC05000004700JAC00",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "LED_PLUS"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+      "footprint": "E27SC06:AC05_18x7p5_P25p4",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "PermanentLEDreconnectlimiter;noalternatebulk-capacitorpath."
+    },
+    {
+      "ref": "J2",
+      "kind": "terminal",
+      "value": "LED panel55mA",
+      "mpn": "PCB wire pads, not purchased connector",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "SC06electricalloadinterface",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Mainsreferencedoutput;notSELV. Mechanicalconnectornotselected."
+    },
+    {
+      "ref": "R8",
+      "kind": "R",
+      "value": "56k1W",
+      "mpn": "CRCW251256K0FKEG",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification."
+    },
+    {
+      "ref": "R9",
+      "kind": "R",
+      "value": "56k1W",
+      "mpn": "CRCW251256K0FKEG",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/doc?20035",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Independentparallelbleeder;oneopenstilldischarges≤40sconditionaltarget;notaccessible-contactcertification."
+    },
+    {
+      "ref": "R6",
+      "kind": "R",
+      "value": "100RBPclamp",
+      "mpn": "RC0805FR-07100RL",
+      "pins": {
+        "1": "BP",
+        "2": "BP_RELAY"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "PositiveBP–SOURCEshuntthroughPhotoMOS;limitsCBPpulse~61.6mA. NoBP-to-groundcrowbar."
+    },
+    {
+      "ref": "R10",
+      "kind": "R",
+      "value": "845ohm1.5WHP",
+      "mpn": "CRCW2512845RFKEGHP",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "AUX_FEED1"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of six independent series feed resistors;1.5W HP grade not1W ordinaryCRCW. Local ambient limit100C is a proposed design boundary, not a measured result."
+    },
+    {
+      "ref": "R11",
+      "kind": "R",
+      "value": "845ohm1.5WHP",
+      "mpn": "CRCW2512845RFKEGHP",
+      "pins": {
+        "1": "AUX_FEED1",
+        "2": "AUX_FEED2"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of six independent series feed resistors;1.5W HP grade not1W ordinaryCRCW. Local ambient limit100C is a proposed design boundary, not a measured result."
+    },
+    {
+      "ref": "R12",
+      "kind": "R",
+      "value": "845ohm1.5WHP",
+      "mpn": "CRCW2512845RFKEGHP",
+      "pins": {
+        "1": "AUX_FEED2",
+        "2": "AUX_FEED3"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of six independent series feed resistors;1.5W HP grade not1W ordinaryCRCW. Local ambient limit100C is a proposed design boundary, not a measured result."
+    },
+    {
+      "ref": "U3",
+      "kind": "shunt",
+      "value": "TL431BQPK SOT89",
+      "mpn": "TL431BQPK",
+      "pins": {
+        "1": "RAIL_REF",
+        "2": "DC_RETURN",
+        "3": "VCC_OV"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/tl431.pdf",
+      "footprint": "Package_TO_SOT_SMD:SOT-89-3",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "PK1REF2ANODE3CATHODE, tabANODE; notATL431DBZmap. Largerthermalpackage for doubledactuatorauxload. Reference10mAtest/currentshift and stability must be budgeted explicitly."
+    },
+    {
+      "ref": "R16",
+      "kind": "R",
+      "value": "38k3 0.1%",
+      "mpn": "TNPW120638K3BEEA",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "RAIL_REF"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "25ppm/K"
+    },
+    {
+      "ref": "R17",
+      "kind": "R",
+      "value": "10k 0.1%",
+      "mpn": "TNPW120610K0BEEA",
+      "pins": {
+        "1": "RAIL_REF",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "25ppm/K"
+    },
+    {
+      "ref": "R18",
+      "kind": "R",
+      "value": "100R",
+      "mpn": "RC0805FR-07100RL",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "VDD_COMP"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Isolatescapacitivecomparatorloadfromshuntcathode."
+    },
+    {
+      "ref": "C9",
+      "kind": "C",
+      "value": "100nF50V",
+      "mpn": "GRM21BR71H104KA01L",
+      "pins": {
+        "1": "VDD_COMP",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.murata.com/en-us/products",
+      "footprint": "E27SC06:C_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": ""
+    },
+    {
+      "ref": "U2",
+      "kind": "comparator",
+      "value": "TLV6700DDCR",
+      "mpn": "TLV6700DDCR",
+      "pins": {
+        "1": null,
+        "2": "DC_RETURN",
+        "3": "DC_RETURN",
+        "4": "OV_SENSE",
+        "5": "VDD_COMP",
+        "6": "OV_LOW"
+      },
+      "pin_types": {
+        "1": "open_collector",
+        "2": "power_in",
+        "3": "input",
+        "4": "input",
+        "5": "power_in",
+        "6": "open_collector"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/tlv6700.pdf",
+      "footprint": "E27SC06:SOT23_6",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "1OUTAunusedNC,2GND,3INA+grounddefinesunusedchannel,4INB-,5VDD,6OUTB;OUTBlowonovervoltage."
+    },
+    {
+      "ref": "R13",
+      "kind": "R",
+      "value": "160k0.1%10ppm",
+      "mpn": "TNPW1206160KBYEA",
+      "pins": {
+        "1": "COUT_PLUS",
+        "2": "OV_MID"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": ""
+    },
+    {
+      "ref": "R14",
+      "kind": "R",
+      "value": "160k0.1%10ppm",
+      "mpn": "TNPW1206160KBYEA",
+      "pins": {
+        "1": "OV_MID",
+        "2": "OV_SENSE"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": ""
+    },
+    {
+      "ref": "R15",
+      "kind": "R",
+      "value": "1k0.1%10ppm",
+      "mpn": "TNPW12061K00BYEA",
+      "pins": {
+        "1": "OV_SENSE",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": ""
+    },
+    {
+      "ref": "R19",
+      "kind": "R",
+      "value": "11k",
+      "mpn": "RC0805FR-0711KL",
+      "pins": {
+        "1": "MOS_GATE",
+        "2": "OV_LOW"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Increased conditional PNP base-current reserve for two independent LED branches. Subtract R20 current from base feed. Actual hot saturation still requires qualification."
+    },
+    {
+      "ref": "R20",
+      "kind": "R",
+      "value": "10k",
+      "mpn": "RC0805FR-0710KL",
+      "pins": {
+        "1": "VCC_OV",
+        "2": "MOS_GATE"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": ""
+    },
+    {
+      "ref": "Q2",
+      "kind": "PMOS",
+      "value": "P-MOS20V",
+      "mpn": "PMV65XP,215",
+      "pins": {
+        "1": "MOS_GATE",
+        "2": "VCC_OV",
+        "3": "OPTO_DRIVE"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      },
+      "source": "https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf",
+      "footprint": "E27SC06:SOT23",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Physical1G2S3D; maxRDSon105mohm atVGS−4.5V,Tj150C removesPNPsaturation budget. Hot switching time still requires correlation."
+    },
+    {
+      "ref": "R21",
+      "kind": "R",
+      "value": "1k78 0.5W HP",
+      "mpn": "CRCW08051K78FKEAHP",
+      "pins": {
+        "1": "OPTO_DRIVE",
+        "2": "OPTO_A"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Own input resistor for U4. HP0.5W grade includes input-short power at proposed125C local ambient; do not substitute ordinary0.125W0805."
+    },
+    {
+      "ref": "L3",
+      "kind": "L",
+      "value": "1.5mH",
+      "mpn": "RFC1010B-155KE",
+      "pins": {
+        "1": "L2_MID",
+        "2": "COUT_PLUS"
+      },
+      "pin_types": {},
+      "source": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Two1.5mHpartsseries3mH;each0.70A10%Ldrop25C. VerifyhotL(I)."
+    },
+    {
+      "ref": "R24",
+      "kind": "R",
+      "value": "845ohm1.5WHP",
+      "mpn": "CRCW2512845RFKEGHP",
+      "pins": {
+        "1": "AUX_FEED3",
+        "2": "AUX_FEED4"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of six independent series feed resistors;1.5W HP grade not1W ordinaryCRCW. Local ambient limit100C is a proposed design boundary, not a measured result."
+    },
+    {
+      "ref": "R25",
+      "kind": "R",
+      "value": "845ohm1.5WHP",
+      "mpn": "CRCW2512845RFKEGHP",
+      "pins": {
+        "1": "AUX_FEED4",
+        "2": "AUX_FEED5"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of six independent series feed resistors;1.5W HP grade not1W ordinaryCRCW. Local ambient limit100C is a proposed design boundary, not a measured result."
+    },
+    {
+      "ref": "R22",
+      "kind": "R",
+      "value": "237k0.1%10ppm",
+      "mpn": "TNPW1206237KBYEA",
+      "pins": {
+        "1": "OPTO_DRIVE",
+        "2": "OV_SENSE"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "footprint": "E27SC06:R_1206",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Recomputedhysteresis forPMOSrail; preserveconditionalretrybelow25Hz."
+    },
+    {
+      "ref": "R23",
+      "kind": "R",
+      "value": "47k",
+      "mpn": "RC0805FR-0747KL",
+      "pins": {
+        "1": "OPTO_DRIVE",
+        "2": "DC_RETURN"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "DefinesOFFhysteresisnodewithR22."
+    },
+    {
+      "ref": "U4",
+      "kind": "photomos",
+      "value": "AQY221R2VY",
+      "mpn": "AQY221R2VY",
+      "pins": {
+        "1": "OPTO_A",
+        "2": "DC_RETURN",
+        "3": "BP_RELAY",
+        "4": "SOURCE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive"
+      },
+      "source": "https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy",
+      "footprint": "E27SC06:Panasonic_SSOP4",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "LED1A2K;bidirectionaloutput3/4;0.5msmaxturnon25Ctest;localambient≤85C;1.25ohmmax25C. OutputneverwiredtoDC_RETURN. ActualVpackageisSSOP~4.45x2.65x1.8mm,notgenericVSSOP."
+    },
+    {
+      "ref": "U5",
+      "kind": "photomos",
+      "value": "AQY221R2VY",
+      "mpn": "AQY221R2VY",
+      "pins": {
+        "1": "OPTO2_A",
+        "2": "DC_RETURN",
+        "3": "BP2_RELAY",
+        "4": "SOURCE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive"
+      },
+      "source": "https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy",
+      "footprint": "E27SC06:Panasonic_SSOP4",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Second complete PhotoMOS package. Its LED has its own1.78kHP R26; output has its own100ohmR27. No series LEDs or shared output resistor. Same corrected Panasonic flat-lead pattern as SC06 U4."
+    },
+    {
+      "ref": "R26",
+      "kind": "R",
+      "value": "1k78 0.5W HP",
+      "mpn": "CRCW08051K78FKEAHP",
+      "pins": {
+        "1": "OPTO_DRIVE",
+        "2": "OPTO2_A"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "SC07-C added part; actual production procurement/thermal qualification not asserted."
+    },
+    {
+      "ref": "R27",
+      "kind": "R",
+      "value": "100ohmBPclamp2",
+      "mpn": "RC0805FR-07100RL",
+      "pins": {
+        "1": "BP",
+        "2": "BP2_RELAY"
+      },
+      "pin_types": {},
+      "source": "https://www.yageo.com/en/Product/Index/rchip",
+      "footprint": "E27SC06:R_0805",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "SC07-C added part; actual production procurement/thermal qualification not asserted."
+    },
+    {
+      "ref": "R28",
+      "kind": "R",
+      "value": "845ohm1.5WHP",
+      "mpn": "CRCW2512845RFKEGHP",
+      "pins": {
+        "1": "AUX_FEED5",
+        "2": "VCC_OV"
+      },
+      "pin_types": {},
+      "source": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "footprint": "E27SC06:R_2512",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "SC07-C added part; actual production procurement/thermal qualification not asserted."
+    },
+    {
+      "ref": "RF2",
+      "kind": "R",
+      "value": "220R2Wfusible",
+      "mpn": "FWFU2W220RJ",
+      "pins": {
+        "1": "AC_MID",
+        "2": "AC_FUSED"
+      },
+      "pin_types": {},
+      "source": "https://www.te.com/en/product-6-2176792-5.html",
+      "footprint": "E27SC06:RF_16x5p5_P22",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "Second series fusible220ohm2W; both pulse and continuous heat must be qualified. No saturated input coil."
+    },
+    {
+      "ref": "D4",
+      "kind": "D",
+      "value": "1000V1A blocking",
+      "mpn": "STTH110A",
+      "pins": {
+        "1": "DRAIN_BLOCKED",
+        "2": "BUS_PLUS"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "source": "https://www.st.com/resource/en/datasheet/stth110.pdf",
+      "footprint": "Diode_SMD:D_SMA",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "ST SMA pin1cathode toU1DRAIN; pin2anode toBUS_PLUS. Blocks reverse drain current into input. New exact geometry/pin verification due before native capture."
+    },
+    {
+      "ref": "C10",
+      "kind": "C",
+      "value": "22uF25VX7R",
+      "mpn": "CL32B226KAJNNNE",
+      "pins": {
+        "1": "SENSE_FB",
+        "2": "SOURCE"
+      },
+      "pin_types": {},
+      "source": "https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "qualification": "SC08-A proposed experimental prototype; no capture/stage/release acceptance",
+      "notes": "One of two parallel nonpolar22uF25VX7R1210. CombinedCeff≥18uF proposed acceptance; supplierbias/agingmin not guaranteed by an invented reserve."
+    }
+  ]
+}

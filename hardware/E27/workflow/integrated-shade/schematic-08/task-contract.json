@@ -1,0 +1,24 @@
+{
+  "task": "SC08 bounded prototype electrical corrections",
+  "base_commit": "a6c7ed424a6aa882ef7e5b46899955d3d928f09d",
+  "writer": "/root",
+  "authorized_human": "Kamil",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "scope": "Prepare exact reviewed component/map corrections and explicit laboratoryprototypevalidation criteria. Do not promote conditional calculations to qualification.",
+  "allowed_paths": [
+    "hardware/E27/variants/integrated-shade/SC08_prototype/**",
+    "hardware/E27/workflow/integrated-shade/schematic-08/**"
+  ],
+  "actual_owner_scope": "owner-prototype-scope.json:Laboratoryprototype0..40Cambient;localhotspotlimitsseparate",
+  "requirements_affected": [
+    "REQ-POWER",
+    "REQ-FAULT",
+    "REQ-PARTS",
+    "REQ-MAINS",
+    "REQ-ENV",
+    "REQ-SAFETY",
+    "REQ-INTERFACE"
+  ],
+  "main_and_SC07_unchanged": true,
+  "no_new_CAD_before_actual_new_map_approval": true
+}

@@ -1,0 +1,55 @@
+{
+  "scope": "PROPOSED laboratoryprototype qualification plan; no test performed/authorized",
+  "owner_scope": "owner-prototype-scope.json",
+  "ambient_C": [
+    0,
+    40
+  ],
+  "line_Vac": [
+    207,
+    230,
+    253
+  ],
+  "line_Hz": 50,
+  "initial_assembly": "Manual FR4 2L1oz1.6mmleadfreeHASL retained owner process; no order",
+  "tests": [
+    {
+      "id": "VAL-CURRENT",
+      "criteria": "Calibrate55mA at230V/roomtemperature afterstabilization; thenmeasureactual207/230/253V cold/hot and ripple/startup. Target50..60.5mA remains unproven; reject/revise if not met.",
+      "not_closed": "No fulltemp accuracy claim fromtypicalcurves; no powered adjustment."
+    },
+    {
+      "id": "VAL-INPUT",
+      "criteria": "Cin387..473nF, inputRFpairmin396.264ohm; captureallenergizationphase/bridgecurrent/RFtemperatures; pulse/fusingdataorqualifiedtest required.",
+      "stop": "Missing RF pulse/continuous/fuse characterization blocks unrestricted energized qualification."
+    },
+    {
+      "id": "VAL-SURGE",
+      "criteria": "Qualified laboratory engineer must define actualgeneratorwaveform/source/polarity/phase/repetition. Proposed positive1kVenvelope1100V3usthen60ushalfvaluetail; VDSincludingmeasurementuncertainty<=680V.",
+      "not_closed": "No2kV/complianceclaim;negativepolarity/commonmode/oneRFshort needseparateassessment."
+    },
+    {
+      "id": "VAL-HOT-OVP",
+      "criteria": "Each PhotoMOSbranchalone: package<=70C, IF>=5.3mA,Ron<=50ohm,turnon<=.5ms; overallcomplete shutdown<=.6ms; BP<=3.081V under20mAchargebudget. Rail11.4..12.9V, U3Tjdesign<=125C withlocalambient<=80C andtheta<=85K/W.",
+      "not_closed": "Alltiming/charge/thermalacceptanceinputs unmeasured."
+    },
+    {
+      "id": "VAL-CFB",
+      "criteria": "CombinednonpolarC4+C10effective>=18uF at0..2V overacceptedlocaltemperatureandaging; suppliercurveorqualifiedmeasurement.",
+      "not_closed": "Engineeringaging/DCbiasreserves notmanufacturerlimits."
+    },
+    {
+      "id": "VAL-OUTPUT",
+      "criteria": "NormalCOUT<=123V; proposedfault<=145V, capacitor160V. Verifyloadremoval/reconnection,singleactuatoropen,input/outputshort andR7pulse/continuous/repeatedretryheat.",
+      "stop": "Do nottreat.7Apeak or1.4Aabsrating asguaranteedlimiter. Noindefinitefaultpasswithouttemperature/current/containmentdata."
+    },
+    {
+      "id": "VAL-THERMAL",
+      "criteria": "MeasureRF1/RF2,R7,auxfeed,U3,U1,inductors,C5andrelaybodies at0..40Cambient; satisfyexactpartderatingandlifetimeconditions.",
+      "not_closed": "PCB/enclosurethermalresistance notmeasured. Layoutmustsupportthesechecks."
+    }
+  ],
+  "physical_test_owner": "Qualified human electrical test engineer to be named before bringup",
+  "mains_tests_authorized": false,
+  "order_authorized": false
+}

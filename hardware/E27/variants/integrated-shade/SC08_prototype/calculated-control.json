@@ -1,0 +1,104 @@
+{
+  "revision": "SC08-B",
+  "evidence_kind": "Calculated proposal; not physical measurements or manufacturerfulltempguarantee",
+  "OVP": {
+    "rise_V": [
+      126.19469234711106,
+      131.08615231851743
+    ],
+    "fall_V": [
+      104.41396828121351,
+      112.41779199946504
+    ],
+    "window_min_V": 13.77690034764602,
+    "rail_acceptance_V": [
+      11.4,
+      12.9
+    ],
+    "off_drive_budget_V": [
+      0,
+      0.5
+    ],
+    "on_drive_budget_V": [
+      11.397,
+      12.9
+    ]
+  },
+  "auxiliary": {
+    "loads_upper_A": {
+      "two_LED_zeroVF_A": 0.015093597857411134,
+      "gate_divider_A": 0.0006396810520521861,
+      "OPTO_pulldown_A": 0.003124023742580444,
+      "hysteresis_A": 6.161341166356212e-05,
+      "rail_divider_A": 0.0002680188111807475,
+      "U2_reference_reserve_A": 1.95e-05
+    },
+    "feed_min_A": 0.020505553530979725,
+    "remaining_U3_A": 0.0012991186560916516,
+    "required_min_A": 0.001,
+    "feed_each_145V_mixed_normal_W": 0.7609780048832482,
+    "feed_each_one_feed_short_W": 1.0898303187359328,
+    "allowed_each_90C_W": 1.1470588235294117,
+    "U3_one_feed_short_power_upper_W": 0.5020109537447869,
+    "U3_Tj_at_local80C_theta85_C": 122.67093106830688,
+    "local_ambient_design_condition_C": 80
+  },
+  "Q2": {
+    "VGS_magnitude_V": [
+      5.019076987403962,
+      6.400685862550856
+    ],
+    "RDSon_hot_max_ohm": 0.105,
+    "Vdrop_20mA_V": 0.0021,
+    "drop_budget_V": 0.003,
+    "max_gate_rating_V": 12,
+    "off_node_max_V_at_VGS0": 0.47832710286335195,
+    "off_leakage_basis": "ManufacturerIDSS100uAat150C,VGS0;5uAreserve;actualgateoffstatevalidationstillrequired",
+    "min_LED_A": 0.005344720137989582,
+    "max_LED_short_resistor_W": 0.09735370618030181,
+    "allowed_LED_R125C_W": 0.17647058823529413
+  },
+  "retry": {
+    "discharge_current_upper_A": 0.03972538082004219,
+    "minimum_off_s": 0.041616417705514816,
+    "frequency_upper_Hz": 24.028978348789607,
+    "conditional_on": "Actualshutdown andspecifiedrail/thresholdbounds"
+  },
+  "samplehold": {
+    "combined_nominal_F": 4.4e-05,
+    "combined_budget_F": 1.88496e-05,
+    "prototype_Ceff_required_F": 1.8e-05,
+    "required_at_trim_min_F": 1.474384776092556e-05,
+    "manufacturer_DC_bias_min_verified": false,
+    "note": "0.8agingand0.7biasareengineeringreserves,notmanufacturerlimits; effectivecapmeasurementneeded"
+  },
+  "reconnection": {
+    "Cout_fault_V": 145,
+    "Cmax_F": 0.00018,
+    "stored_energy_J": 1.8922500000000002,
+    "R7min_ohm": 433.10499999999996,
+    "healthy60V_initial_A": 0.19625725863243326,
+    "one_LED_short58V_initial_A": 0.20087507648260816,
+    "zeroV_current_upper_A": 0.3347917941376803,
+    "R7_normal55mA_W": 1.4217499999999998,
+    "R7_at90mA_Rmax_W": 4.1172705,
+    "warning": "145Vand60/58Vfloorsconditional. NeitherR7pulse/continuousfaultheatnorLEDThermalratingclosedbythiscalculation."
+  },
+  "closure": {
+    "genuinely_addressed": [
+      "PMOS hotonresistance replaces unsupportedPNPsaturationassumption",
+      "InputL1andR1removed so their resonance/saturationmechanismdoesnotexist",
+      "Addedblockingdiodeaddressesreversecurrentpath",
+      "ExplicitinputRC/surgeandoutputenergybounds calculated",
+      "Largerhotter-ratednonpolarCFBproposal"
+    ],
+    "not_closed": [
+      "Hotactuator timing andcomplete.6msshutdown requiremeasurement",
+      "Ceff≥18uF supplierorbenchcorrelation",
+      "Peakcurrent≤.7A andtemperature/line/currenttrim qualification",
+      "RF/R7pulseandcontinuousfaultheat, thermalboard design",
+      "Actualsurge/EMC/optics/safetyanddomainqualification"
+    ],
+    "no_PCB_or_order_approval": true
+  }
+}

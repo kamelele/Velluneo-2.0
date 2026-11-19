@@ -1,0 +1,108 @@
+{
+  "kind": "Actually executed own SC07-C ideal-source numerical sensitivity; not SC08 input-RC simulation or measurement",
+  "source_path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC07_protection\\studies\\coupled_output.py",
+  "source_sha256": "f364fabc8c75c5547e22d09057c856f5eed29e9dbd3b79fe6a0dd8767bb6345d",
+  "method": "Each fixed illustrative unit individually trimmed at230VAC,seven bisection iterations on23..33ohm;2s runs,final1s reporting;fixedR then checked207/230/253VAC",
+  "conditions": "Existing SC07 model: ideal rectified source, fixed84.5VLED,120uF output,22uF feedback,5070ohm auxiliary,12.15V rail; no actual input pi/RC,OVP,relay,loss/nonlinear/hot model",
+  "limitation": "Different controller values are illustrative fixed units, not a guaranteed hot envelope. Continuous trim is a study, not actual E96 population or calibration measurements. Numerical discontinuities do not justify precise physical trim resistance.",
+  "cases": [
+    {
+      "Rled": 433.10499999999996,
+      "high": false,
+      "L": 0.0024,
+      "trim_R": 26.1640625,
+      "LED_mA": [
+        55.32451933681896,
+        55.104886505012345,
+        54.8474786253045
+      ]
+    },
+    {
+      "Rled": 433.10499999999996,
+      "high": false,
+      "L": 0.0033,
+      "trim_R": 25.7734375,
+      "LED_mA": [
+        55.00889646976162,
+        55.334108015835646,
+        55.32195248401142
+      ]
+    },
+    {
+      "Rled": 433.10499999999996,
+      "high": true,
+      "L": 0.0024,
+      "trim_R": 31.3984375,
+      "LED_mA": [
+        55.17022909333457,
+        55.14983690207547,
+        54.919062046610414
+      ]
+    },
+    {
+      "Rled": 433.10499999999996,
+      "high": true,
+      "L": 0.0033,
+      "trim_R": 30.7734375,
+      "LED_mA": [
+        54.782449275926375,
+        55.19997773079818,
+        55.20019237276464
+      ]
+    },
+    {
+      "Rled": 508.305,
+      "high": false,
+      "L": 0.0024,
+      "trim_R": 25.8515625,
+      "LED_mA": [
+        54.918286690077345,
+        55.18979806747656,
+        54.76406384315508
+      ]
+    },
+    {
+      "Rled": 508.305,
+      "high": false,
+      "L": 0.0033,
+      "trim_R": 25.4609375,
+      "LED_mA": [
+        54.94323894523359,
+        55.282258228339536,
+        55.173407837664385
+      ]
+    },
+    {
+      "Rled": 508.305,
+      "high": true,
+      "L": 0.0024,
+      "trim_R": 31.0078125,
+      "LED_mA": [
+        55.06529028090959,
+        55.00277844627292,
+        54.86098103276005
+      ]
+    },
+    {
+      "Rled": 508.305,
+      "high": true,
+      "L": 0.0033,
+      "trim_R": 30.3828125,
+      "LED_mA": [
+        54.42837743094065,
+        54.77227502056208,
+        55.030077298846855
+      ]
+    }
+  ],
+  "summary": {
+    "trim_ohm_range": [
+      25.4609375,
+      31.3984375
+    ],
+    "post_trim_LED_mA_range": [
+      54.42837743094065,
+      55.334108015835646
+    ]
+  }
+}
