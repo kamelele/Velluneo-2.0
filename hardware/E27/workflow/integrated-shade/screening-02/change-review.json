@@ -1,0 +1,39 @@
+{
+  "actor": "/root/review_change",
+  "role": "Change Reviewer",
+  "recommendation": "ready_for_human_review for research supplement only",
+  "reviewed_ten_file_manifest": "b9203b721bcb984bf8af620769ff0ecace907c316794442c1cc4062f4792ca2a",
+  "additional_controller_note_sha256": "1e7b961413a588a14767e5d046998b8f6007669132ea34c1d4f457c2cc6875fd",
+  "verified": [
+    "All ten source hashes match",
+    "All26 original remote Git blobs independently match raw local bytes",
+    "Remote main unchanged",
+    "Owner process comparison decision correctly scoped",
+    "Additional reviews, reflow check and progress notes inspected",
+    "No new CAD, process/controller/stage approval or physical result claimed"
+  ],
+  "findings": [
+    {
+      "id": "IS-CHG-02-N1",
+      "severity": "note",
+      "status": "addressed_by_supplement_attachments_manifest",
+      "closure": "All follow-up notes/reports included with hashes."
+    },
+    {
+      "id": "IS-CHG-02-N2",
+      "severity": "note",
+      "status": "open",
+      "closure": "Use actual LYT ON/OFF mostly-DCM model; generic CRM is not its control model."
+    },
+    {
+      "id": "IS-CHG-02-N3",
+      "severity": "note",
+      "status": "controlled_by_publication_plan",
+      "closure": "Parent a29be169 and base tree e92cbb4; no use of older local HEAD as replacement."
+    }
+  ],
+  "limits": [
+    "AN-60 not retrieved by change reviewer; no particular replacement OVP circuit validated.",
+    "No schematic, process or product approval."
+  ]
+}

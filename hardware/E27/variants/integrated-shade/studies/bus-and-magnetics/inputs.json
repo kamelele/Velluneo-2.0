@@ -1,0 +1,56 @@
+{
+  "revision": "IS-SCREEN-02-1",
+  "mains_vrms": [
+    207,
+    230,
+    253
+  ],
+  "line_hz": 50,
+  "bridge_drop_v": 1.6,
+  "led_power_w": 8,
+  "assumed_efficiency": 0.9,
+  "capacitor_nominal_uf": [
+    2.2,
+    3.3,
+    4.7,
+    10,
+    15,
+    22
+  ],
+  "capacitance_multiplier": 0.8,
+  "led_voltage_v": [
+    60,
+    72,
+    90,
+    108
+  ],
+  "steps_s": [
+    2e-05,
+    1e-05
+  ],
+  "simulation_duration_s": 0.3,
+  "analysis_duration_s": 0.1,
+  "hv9961": {
+    "off_time_typ_us": 10,
+    "off_time_min_us": 8,
+    "off_time_max_us": 12,
+    "rt_table_ohm": 226000,
+    "max_ideal_duty": 0.75,
+    "min_on_boundary_us": 1,
+    "ripple_pp_fraction": 0.4,
+    "inductance_multiplier": 0.9,
+    "illustrative_mosfet_gate_charge_nc": 6,
+    "illustrative_vdd_v": 7.5,
+    "approximate_bias_current_ma": 1
+  },
+  "assumptions": [
+    "Owner confirmed EU/Poland230V50Hz207–253VAC in current chat.",
+    "8W,90%efficiency,bridge1.6V,-20%C and -10%L are scenario assumptions, not selected component limits or approved ratings.",
+    "Initialize at line peak and discard0.2s; no cold-start simulation.",
+    "Ideal zero-impedance sine source and ideal bridge clamp; no credible inrush/charging-current/PF/THD/EMC result is produced.",
+    "Sink demands constant input power even below driver headroom; failing cases are invalid as regulated-output predictions.",
+    "No output light waveform, PstLM or SVM prediction.",
+    "Timer8/10/12us from RevB test point at226k at25C, not full-temperature guarantee.",
+    "LED voltage fixed per scenario; actual bin/cold/hot spread and path drops are absent."
+  ]
+}
