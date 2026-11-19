@@ -336,7 +336,7 @@
   "interfaces": [
     {
       "id": "IFC-DRIVER-LED",
-      "revision": "SC07-C",
+      "revision": "SC08-B",
       "owner": "Kamil and Codex electrical design",
       "kind": "electrical",
       "gate": "schematic",
@@ -416,14 +416,14 @@
         }
       ],
       "startup_behavior": "Current regulated nominal55mA target. No bulkcapacitor on LED side bypassingR7. COUT150uF stays inbase. Remove mains before replacement; instructions do not constitute a contact-accessibility safety barrier.",
-      "fault_behavior": "COUT123V normal/135Vfault are conditional acceptance limits. AbsentmoduleLED_PLUSmayreachCOUT. R7limits capacitor-driven reconnectcurrent; LEDpulsecapability still unqualified. Either healthy PhotoMOS can stop switching on overvoltage. Automaticretry retained; no guaranteed latchedACreset.",
+      "fault_behavior": "Owner-approved experimental COUT145V ceiling and limited1kV envelope; actualcharge/current/shutdowntime/thermalverification remainsunperformed. RetaineddualPhotoMOSpathisnotindependentsharedlogicprotection.",
       "transient_requirements": {
-        "max_COUT_fault_V": 135,
+        "max_COUT_fault_V": 145,
         "COUT_max_F": 0.00018,
-        "stored_energy_J": 1.64025,
-        "conditional_healthy60V_initial_LED_A": 0.17316816938155874,
+        "stored_energy_J": 1.8922500000000002,
+        "conditional_healthy60V_initial_LED_A": 0.19625725863243326,
         "discharge_one_bleeder_open_to5V_s_max": 40,
-        "status": "Proposed limits/calculation only, not qualifiedLEDpulse/touchsafeclaim."
+        "status": "Owner-approvedexperimentaldesigncriteria;notmeasuredqualificationorSELV"
       }
     }
   ],
@@ -546,7 +546,7 @@
       "kind": "review",
       "result": "pass",
       "verified_by": "Kamil actual retained line/manual-process replies",
-      "intent_digest": "fcdfe25d5c80cdd28169582e511308b5812b37f147c668b7deb1f58d0e84122f",
+      "intent_digest": "9c62c45e2b5a314186960fba927bc547c926313c7976827285c5eede4b690b24",
       "artifact": "reference/SC07/owner-process-line-decision.json",
       "sha256": "35f0462ddaf81b8c60d203754702dead166d01aed3183c5b2a0037f8640b48f3",
       "inputs": [
@@ -562,13 +562,13 @@
       "kind": "review",
       "result": "pass",
       "verified_by": "Actual fourSC06rolecontexts, scope retained by root",
-      "intent_digest": "fcdfe25d5c80cdd28169582e511308b5812b37f147c668b7deb1f58d0e84122f",
+      "intent_digest": "9c62c45e2b5a314186960fba927bc547c926313c7976827285c5eede4b690b24",
       "artifact": "reference/SC07/SC06-retained-scope-reviews.json",
       "sha256": "85c50613a7b91132c7f17559a2df5153e9009f204b13e3ecea204507fd3133d4",
       "inputs": [
         {
           "path": "README.md",
-          "sha256": "8fb15d94d539b558920b26493a864003e6c8bf42c1e98415c6ab247029160af7"
+          "sha256": "2459ab3c211c29d7c171cb070f8c676a64f749e775b27e26f9bdd5ee5ec2008a"
         }
       ],
       "scope": "Retained evidence scope only; no SC08 electrical or stage acceptance. Ownerboardonly/nonisolated/replaceablemodule/nodimming constraints unchanged. NOT review or approval of newSC07electricalgraph."
@@ -578,7 +578,7 @@
       "kind": "calculation",
       "result": "pass",
       "verified_by": "Codex root calculated arithmetic and limited model",
-      "intent_digest": "fcdfe25d5c80cdd28169582e511308b5812b37f147c668b7deb1f58d0e84122f",
+      "intent_digest": "9c62c45e2b5a314186960fba927bc547c926313c7976827285c5eede4b690b24",
       "artifact": "reference/SC07/historical-operating-scenarios.json",
       "sha256": "322a4b065a9a47ea9e4f4d02c238cd5404d86f79f71b4eab5eb66fd1f1f8f851",
       "inputs": [
@@ -602,7 +602,7 @@
       "kind": "design",
       "result": "pass",
       "verified_by": "Codex root interface author",
-      "intent_digest": "fcdfe25d5c80cdd28169582e511308b5812b37f147c668b7deb1f58d0e84122f",
+      "intent_digest": "9c62c45e2b5a314186960fba927bc547c926313c7976827285c5eede4b690b24",
       "artifact": "driver-led-interface.json",
       "sha256": "33ff5e05780a94562e493bbd1bc361e488836bb36bbbdee58d83582f761cc532",
       "inputs": [

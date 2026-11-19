@@ -1,0 +1,64 @@
+{
+  "revision": "PCB08-BOUNDS-1",
+  "scope": "BareunpoweredlaboratoryPCBfabricationcontractproposal,notassembledpowersupplyrelease",
+  "actual_accepted_native_commit": "910870c38028a6aabff9f38baeabf7d6ae916b8b",
+  "proposed_outline_mm": [
+    140,
+    100
+  ],
+  "stackup": "FR4,2L,1oz,1.6mm,leadfreeHASL,manualassemblylater",
+  "mounting": "NoPCBmountingholes/newparts. Nonconductiveexternalcornerclamps;12x12mmcopper-freecorners. Guardedfixtureacceptancebeforeenergizing.",
+  "thermal_allocation_W": [
+    8,
+    10
+  ],
+  "air_boundary": "Verticalopenboard;25mmclearairbeyondoutercomponent/solderenvelopebothfaces;noenclosure/fanratinginferred. Guard/fixtureapprovalandactualtemperatureverificationbeforeenergizing.",
+  "max_height_mm": {
+    "C5": 27,
+    "C1_C2": 28.1,
+    "C5_free_vent_overhead_proposal": 5,
+    "overall_fixture_reservation": 35,
+    "L2_L3": 11.5,
+    "U4_U5_reserve": 2,
+    "C4_C10": 2.7,
+    "raised_RF_R7_standoff_proposal": 5
+  },
+  "U3_target": {
+    "copper_each_face_mm": [
+      20,
+      20
+    ],
+    "via_array_proposal": {
+      "count": 9,
+      "finished_drill_mm": 0.3,
+      "pad_mm": 0.8,
+      "reason": "Pinnedannularminimum.20;nominalannulus.25providesmargin,.6/.3wouldfail."
+    },
+    "net": "DC_RETURN",
+    "effective_theta_JA_max_K_W": 85,
+    "local_ambient_max_C": 80,
+    "Tj_design_max_C": 125,
+    "actual_thermal_pass": false,
+    "reserved_backside_region_mm": [
+      68,
+      62,
+      88,
+      82
+    ],
+    "reserved_backside_allowed_intent_nets": [
+      "DC_RETURN"
+    ],
+    "enforcement": "Additionalrouting/geometryconstraintboundbyspatialbasis;notclaimednativeDRCnet-exceptionarea"
+  },
+  "SOURCE_copper": "Fastswitchednode:initialF.Cuisland<=20x15mmwithinpowercore;reserveenlargementupto25x25mmonlyafterthermal/return/capacitivecouplingreview. NoblanketB.CuSOURCEplaneandnooverlapunderquietcontrol. Geometrydoesnotprove1Wthermalallocation.",
+  "thermal_separation": "Aim20mmbodydistancefromhotRF/R7/feedtoC5/PhotoMOS/reference;10mmminimumplanningfloorrequiresreview. Noopposite-sideheaterunderC5. Localdecoupling/Kelvinloopsremaincompact.",
+  "temperature_limits_reference": "thermal-assumptions.md,alltargetsnotmeasured",
+  "remaining_before_energized_testing": [
+    "Namedqualifiedhumanownerandacceptedguardedenergy-limitedfixture",
+    "Instrumentratings/probetechniqueandthermal/current/timecutoff",
+    "Ceff/current/hotshutdown/faultheat/surgequalifiedmeasurements"
+  ],
+  "original17product_requirements": "Retainedunchangedacceptancecriteria/gatesinrequirements.json;notclosedbybareboardfabricationorbyLABscopeapproval",
+  "procurement": "C5EEUED2C151legacyseriesnewdesignrecommendationEE;exactstock/EOLrowassociationunconfirmed. NoMPNsubstitution. BarePCBgeometrydecisionisnotassemblypurchaseapproval.",
+  "approval": null
+}

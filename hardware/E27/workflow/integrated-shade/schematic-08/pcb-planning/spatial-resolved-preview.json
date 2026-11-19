@@ -1,0 +1,407 @@
+{
+  "constraints": {
+    "areas": [
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "EDGE_TOP",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          0,
+          0,
+          140,
+          4
+        ]
+      },
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "EDGE_BOTTOM",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          0,
+          96,
+          140,
+          100
+        ]
+      },
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "EDGE_LEFT",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          0,
+          4,
+          4,
+          96
+        ]
+      },
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "EDGE_RIGHT",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          136,
+          4,
+          140,
+          96
+        ]
+      },
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "CLAMP_TL",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          0,
+          0,
+          12,
+          12
+        ]
+      },
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "CLAMP_TR",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          128,
+          0,
+          140,
+          12
+        ]
+      },
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "CLAMP_BL",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          0,
+          88,
+          12,
+          100
+        ]
+      },
+      {
+        "basis": "Independentlabboardedge/clampreservation;notaccessible-surfaceinsulationqualification",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "CLAMP_BR",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          128,
+          88,
+          140,
+          100
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "basis": "ApprovedSC08-BschematicandAN60;functionalhighsidebuckloop.",
+        "id": "BUCK_CORE",
+        "kelvin_connections": {
+          "objects": [
+            "R2.2-SENSE_FB-U1.2",
+            "R2.1-SOURCE",
+            "C4-C10-across-R2"
+          ],
+          "rationale": "Dedicatedsensetaps/quietreturnwhereapplicable;emptymeansnosensetaprequiredinthisblock."
+        },
+        "loops": {
+          "objects": [
+            "U1.4-U1.SOURCE-L2-L3-C5-D1-R2",
+            "U1.1-C3-U1.SOURCE"
+          ],
+          "rationale": "Geometricloopminimizationreviewafteractualplacementandrouting."
+        },
+        "requirement_id": "LAB_NETLIST",
+        "return_paths": {
+          "objects": [
+            "DC_RETURN",
+            "SOURCE"
+          ],
+          "rationale": "Returnpathidentitymustremainexplicit;noSOURCE/DC_RETURNshortorhiddenplane."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "SENSE_FB",
+            "BP"
+          ],
+          "rationale": "Keepmeasurement/referencepathsawayfromhighdvdtandhotresistors;exactnetobjectsfromapprovedintent."
+        },
+        "switching_nodes": {
+          "objects": [
+            "SOURCE",
+            "DRAIN_BLOCKED",
+            "L2_MID"
+          ],
+          "rationale": "Explicitfastnodeskeptcompact;emptymeansthisblockhasnoswitchingfunction."
+        }
+      },
+      {
+        "basis": "Dualactuatordetectionandreturnrouting;functionallevelshift,notuserisolation.",
+        "id": "OVP_CONTROL",
+        "kelvin_connections": {
+          "objects": [
+            "R15.2-DC_RETURN",
+            "R17.2-U3.2"
+          ],
+          "rationale": "Dedicatedsensetaps/quietreturnwhereapplicable;emptymeansnosensetaprequiredinthisblock."
+        },
+        "loops": {
+          "objects": [
+            "U3-R18-C9-U2",
+            "U2-Q2-R21-U4-R6-U1.BP",
+            "U2-Q2-R26-U5-R27-U1.BP"
+          ],
+          "rationale": "Geometricloopminimizationreviewafteractualplacementandrouting."
+        },
+        "requirement_id": "LAB_INTERFACE",
+        "return_paths": {
+          "objects": [
+            "DC_RETURN"
+          ],
+          "rationale": "Returnpathidentitymustremainexplicit;noSOURCE/DC_RETURNshortorhiddenplane."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "OV_SENSE",
+            "RAIL_REF",
+            "MOS_GATE"
+          ],
+          "rationale": "Keepmeasurement/referencepathsawayfromhighdvdtandhotresistors;exactnetobjectsfromapprovedintent."
+        },
+        "switching_nodes": {
+          "objects": [],
+          "rationale": "Explicitfastnodeskeptcompact;emptymeansthisblockhasnoswitchingfunction."
+        }
+      },
+      {
+        "basis": "Separateheatreservationsand8..10Wplanningbudget;notthermalqualification.",
+        "id": "THERMAL",
+        "kelvin_connections": {
+          "objects": [
+            "U3.2-R17.2"
+          ],
+          "rationale": "Dedicatedsensetaps/quietreturnwhereapplicable;emptymeansnosensetaprequiredinthisblock."
+        },
+        "loops": {
+          "objects": [
+            "U3.2-thermalisland-vias",
+            "U1.SOURCE-localthermalisland"
+          ],
+          "rationale": "Geometricloopminimizationreviewafteractualplacementandrouting."
+        },
+        "requirement_id": "LAB_THERMAL",
+        "return_paths": {
+          "objects": [
+            "DC_RETURN"
+          ],
+          "rationale": "Returnpathidentitymustremainexplicit;noSOURCE/DC_RETURNshortorhiddenplane."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "RAIL_REF"
+          ],
+          "rationale": "Keepmeasurement/referencepathsawayfromhighdvdtandhotresistors;exactnetobjectsfromapprovedintent."
+        },
+        "switching_nodes": {
+          "objects": [
+            "SOURCE"
+          ],
+          "rationale": "Explicitfastnodeskeptcompact;emptymeansthisblockhasnoswitchingfunction."
+        }
+      },
+      {
+        "basis": "Mains-referencedinput/outputdomains,explicitvoltagepairmatrixandpackageexceptions;noSELVbarrierclaim.",
+        "id": "INPUT_OUTPUT",
+        "kelvin_connections": {
+          "objects": [],
+          "rationale": "Dedicatedsensetaps/quietreturnwhereapplicable;emptymeansnosensetaprequiredinthisblock."
+        },
+        "loops": {
+          "objects": [
+            "J1-RF1-RF2-BR1-C1-C2-D3",
+            "C5-R7-J2-R8-R9"
+          ],
+          "rationale": "Geometricloopminimizationreviewafteractualplacementandrouting."
+        },
+        "requirement_id": "LAB_DOMAINS",
+        "return_paths": {
+          "objects": [
+            "DC_RETURN"
+          ],
+          "rationale": "Returnpathidentitymustremainexplicit;noSOURCE/DC_RETURNshortorhiddenplane."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "LED_PLUS"
+          ],
+          "rationale": "Keepmeasurement/referencepathsawayfromhighdvdtandhotresistors;exactnetobjectsfromapprovedintent."
+        },
+        "switching_nodes": {
+          "objects": [
+            "DRAIN_BLOCKED"
+          ],
+          "rationale": "Explicitfastnodeskeptcompact;emptymeansthisblockhasnoswitchingfunction."
+        }
+      }
+    ],
+    "intent_digest": "bbb49d0ae8de340b0e57a38008914b29f94b30277270c1ab14a22e457b74ea30",
+    "kicad_version": "10.0.6",
+    "minimums_mm": {
+      "annular_width": 0.2,
+      "clearance": 0.3,
+      "edge_clearance": 4.0,
+      "hole_size": 0.3,
+      "track_width": 0.3
+    },
+    "net_settings": {
+      "classes": [
+        {
+          "bus_width": 12,
+          "clearance": 0.3,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "Default",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        },
+        {
+          "bus_width": 12,
+          "clearance": 1.5,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "AC_BUS",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.6,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        }
+      ],
+      "meta": {
+        "version": 3
+      },
+      "netclass_patterns": [
+        {
+          "netclass": "AC_BUS",
+          "pattern": "Net-(J1-L)"
+        },
+        {
+          "netclass": "AC_BUS",
+          "pattern": "Net-(RF1-Pad2)"
+        },
+        {
+          "netclass": "AC_BUS",
+          "pattern": "Net-(BR1-AC-Pad2)"
+        },
+        {
+          "netclass": "AC_BUS",
+          "pattern": "Net-(J1-N)"
+        },
+        {
+          "netclass": "AC_BUS",
+          "pattern": "Net-(BR1-+)"
+        },
+        {
+          "netclass": "AC_BUS",
+          "pattern": "/DRAIN_BLOCKED"
+        }
+      ]
+    },
+    "outline_mm": [
+      0,
+      0,
+      140,
+      100
+    ],
+    "schema_version": 1
+  },
+  "constraints_digest": "437547f182ba76936b5d5c5c120e5fd94d8ed04d9dff2a5e5d5920442059be8e",
+  "intent_digest": "bbb49d0ae8de340b0e57a38008914b29f94b30277270c1ab14a22e457b74ea30"
+}

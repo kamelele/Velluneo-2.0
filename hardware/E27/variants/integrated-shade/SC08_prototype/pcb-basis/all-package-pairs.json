@@ -1,0 +1,2226 @@
+{
+  "status": "candidate package escape inventory, not approvals or actual component-surface creepage",
+  "algorithm": "Exact planar distance for unrotated/orthogonal rect, roundrect, oval and circle pads using rounded-rectangle Minkowski sums; SOT89 custom pad handled as union of its rectangular anchor and filled rectangular primitive. No fillet/lead/routing geometry. No pad pairs skipped. Same-net pairs retained. U2.1 NC treated as local comparator output for this provisional inventory.",
+  "component_count": 47,
+  "numbered_pad_count": 112,
+  "pair_count": 102,
+  "different_net_pair_count": 94,
+  "candidate_refs": [
+    "BR1",
+    "D1",
+    "D4",
+    "L2",
+    "L3",
+    "R13",
+    "R14",
+    "U1",
+    "U4",
+    "U5"
+  ],
+  "components": [
+    {
+      "ref": "J1",
+      "mpn": "PCB wire pads, not purchased connector",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "source_sha256": "13c91fe30bf9aaa3b5635f142fcf7344d094347b4d3444a43623e1005fbe9b45",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "J1",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AC_L",
+            "AC_N"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "RF1",
+      "mpn": "FWFU2W220RJ",
+      "footprint": "E27SC06:RF_16x5p5_P22",
+      "source_sha256": "8ee8c8703a9bf5063114147179ee083cf6dce514e5d8c3128fc51d44223f86be",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "RF1",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AC_L",
+            "AC_MID"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 19.5,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "BR1",
+      "mpn": "MB10S-13",
+      "footprint": "E27SC06:MB10S_Diodes",
+      "source_sha256": "f6967bd4cf1ef8b498625792703cfc9b26523e9ad8e4c94a3eab5dc614e336c7",
+      "numbered_copper_pads": 4,
+      "pair_count": 6,
+      "pairs": [
+        {
+          "ref": "BR1",
+          "pins": [
+            "3",
+            "4"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "AC_N"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 1.74,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "BR1",
+          "pins": [
+            "3",
+            "2"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "AC_FUSED"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 5.548285467,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "BR1",
+          "pins": [
+            "3",
+            "1"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 5.15,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "BR1",
+          "pins": [
+            "4",
+            "2"
+          ],
+          "nets": [
+            "AC_N",
+            "AC_FUSED"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 5.15,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "BR1",
+          "pins": [
+            "4",
+            "1"
+          ],
+          "nets": [
+            "AC_N",
+            "BUS_PLUS"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 5.548285467,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "BR1",
+          "pins": [
+            "2",
+            "1"
+          ],
+          "nets": [
+            "AC_FUSED",
+            "BUS_PLUS"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 1.74,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "mpn": "R76UR31004030J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "source_sha256": "c8183714ddaeb8149c3c915578e49af97c30dbea9aaf48703857bcf036f4fb2d",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "C1",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 25.1,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "mpn": "R76QR3330SE30J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "source_sha256": "c8183714ddaeb8149c3c915578e49af97c30dbea9aaf48703857bcf036f4fb2d",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "C2",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 25.1,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "D3",
+      "mpn": "1.5KE440A-E3/54",
+      "footprint": "Diode_THT:D_DO-201AD_P15.24mm_Horizontal",
+      "source_sha256": "74ee663f3c238aea0760efd4c83cec08c077a4cee1bc9d6c3c7fa45c6cd4f335",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "D3",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 12.04,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "mpn": "LYT0006D-TL",
+      "footprint": "E27SC06:LYT_SO8C_no3",
+      "source_sha256": "9f658fc6c06bcddba56668a64d14a20abc9742e7a79b75bf594da384ace9ef07",
+      "numbered_copper_pads": 7,
+      "pair_count": 21,
+      "pairs": [
+        {
+          "ref": "U1",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "BP",
+            "SENSE_FB"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.67,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "1",
+            "4"
+          ],
+          "nets": [
+            "BP",
+            "DRAIN_BLOCKED"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.21,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "1",
+            "5"
+          ],
+          "nets": [
+            "BP",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 4.517686167,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "1",
+            "6"
+          ],
+          "nets": [
+            "BP",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 3.688433276,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "1",
+            "7"
+          ],
+          "nets": [
+            "BP",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 3.139607536,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "1",
+            "8"
+          ],
+          "nets": [
+            "BP",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 3.0,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "2",
+            "4"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "DRAIN_BLOCKED"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 1.94,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "2",
+            "5"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 3.688433276,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "2",
+            "6"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 3.139607536,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "2",
+            "7"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 3.0,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "2",
+            "8"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 3.139607536,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "4",
+            "5"
+          ],
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.0,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "4",
+            "6"
+          ],
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.139607536,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "4",
+            "7"
+          ],
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.688433276,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "4",
+            "8"
+          ],
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 4.517686167,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "5",
+            "6"
+          ],
+          "nets": [
+            "SOURCE",
+            "SOURCE"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 0.67,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "5",
+            "7"
+          ],
+          "nets": [
+            "SOURCE",
+            "SOURCE"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 1.94,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "5",
+            "8"
+          ],
+          "nets": [
+            "SOURCE",
+            "SOURCE"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 3.21,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "6",
+            "7"
+          ],
+          "nets": [
+            "SOURCE",
+            "SOURCE"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 0.67,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "6",
+            "8"
+          ],
+          "nets": [
+            "SOURCE",
+            "SOURCE"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 1.94,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U1",
+          "pins": [
+            "7",
+            "8"
+          ],
+          "nets": [
+            "SOURCE",
+            "SOURCE"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 0.67,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "mpn": "GRM21BR71H104KA01L",
+      "footprint": "E27SC06:C_0805",
+      "source_sha256": "6a008925a9c97150f234cf4b2a8900a15ff7603eacf9ce677cebb6ddf3bdd022",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "C3",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "BP",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.9,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "mpn": "CRCW120628R7FKEAHP",
+      "footprint": "E27SC06:R_1206",
+      "source_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R2",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "SOURCE",
+            "SENSE_FB"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "mpn": "CL32B226KAJNNNE",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "source_sha256": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "C4",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "mpn": "C4D02120E",
+      "footprint": "E27SC06:C4D02120E_TO252",
+      "source_sha256": "02d70933c317844ebcffa874519241beb771ec1bfbd101898b0a67aae86fbc93",
+      "numbered_copper_pads": 3,
+      "pair_count": 3,
+      "pairs": [
+        {
+          "ref": "D1",
+          "pins": [
+            "1",
+            "CASE"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "SENSE_FB"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 2.0,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "D1",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "DC_RETURN"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.36,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "D1",
+          "pins": [
+            "CASE",
+            "2"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "DC_RETURN"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 2.0,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        }
+      ]
+    },
+    {
+      "ref": "L2",
+      "mpn": "RFC1010B-155KE",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "source_sha256": "dfddc71d0c2d0c946b40f65e60d4b056bee0cd60a7e7102e6c21c9d9f73dfcb5",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "L2",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "SOURCE",
+            "L2_MID"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.5,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "mpn": "EEUED2C151",
+      "footprint": "E27SC06:CP_16x25_P7p5",
+      "source_sha256": "97f9e3894020054734216ada706eda79b37cc816c626bcf99885706d9262c3b7",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "C5",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "COUT_PLUS",
+            "DC_RETURN"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 5.1,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R7",
+      "mpn": "AC05000004700JAC00",
+      "footprint": "E27SC06:AC05_18x7p5_P25p4",
+      "source_sha256": "2f6eabf8bad2d9ea439f76b2ac4a030676757f4d50e25dd9bc7a5b31beef012a",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R7",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "COUT_PLUS",
+            "LED_PLUS"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 22.9,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "mpn": "PCB wire pads, not purchased connector",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "source_sha256": "13c91fe30bf9aaa3b5635f142fcf7344d094347b4d3444a43623e1005fbe9b45",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "J2",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "LED_PLUS",
+            "DC_RETURN"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R8",
+      "mpn": "CRCW251256K0FKEG",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R8",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "COUT_PLUS",
+            "DC_RETURN"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R9",
+      "mpn": "CRCW251256K0FKEG",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R9",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "COUT_PLUS",
+            "DC_RETURN"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "mpn": "RC0805FR-07100RL",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R6",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "BP",
+            "BP_RELAY"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R10",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R10",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "COUT_PLUS",
+            "AUX_FEED1"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R11",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R11",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AUX_FEED1",
+            "AUX_FEED2"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R12",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R12",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AUX_FEED2",
+            "AUX_FEED3"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "U3",
+      "mpn": "TL431BQPK",
+      "footprint": "Package_TO_SOT_SMD:SOT-89-3",
+      "source_sha256": "394a62a5d34a1f392310bac3de8e96553e8761a10971db596cd23b3fef3e8bd4",
+      "numbered_copper_pads": 3,
+      "pair_count": 3,
+      "pairs": [
+        {
+          "ref": "U3",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "RAIL_REF",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.346727426,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U3",
+          "pins": [
+            "1",
+            "3"
+          ],
+          "nets": [
+            "RAIL_REF",
+            "VCC_OV"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 2.1,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U3",
+          "pins": [
+            "2",
+            "3"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "VCC_OV"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.346727426,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R16",
+      "mpn": "TNPW120638K3BEEA",
+      "footprint": "E27SC06:R_1206",
+      "source_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R16",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "VCC_OV",
+            "RAIL_REF"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R17",
+      "mpn": "TNPW120610K0BEEA",
+      "footprint": "E27SC06:R_1206",
+      "source_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R17",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "RAIL_REF",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R18",
+      "mpn": "RC0805FR-07100RL",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R18",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "VCC_OV",
+            "VDD_COMP"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "C9",
+      "mpn": "GRM21BR71H104KA01L",
+      "footprint": "E27SC06:C_0805",
+      "source_sha256": "6a008925a9c97150f234cf4b2a8900a15ff7603eacf9ce677cebb6ddf3bdd022",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "C9",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "VDD_COMP",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.9,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "mpn": "TLV6700DDCR",
+      "footprint": "E27SC06:SOT23_6",
+      "source_sha256": "f13a8cbb65f1ca2f9b34766f0cbaef7d846d29e823b15896a4543b8d650d7e08",
+      "numbered_copper_pads": 6,
+      "pair_count": 15,
+      "pairs": [
+        {
+          "ref": "U2",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "NC_U2_1",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.35,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "1",
+            "3"
+          ],
+          "nets": [
+            "NC_U2_1",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.3,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "1",
+            "4"
+          ],
+          "nets": [
+            "NC_U2_1",
+            "OV_SENSE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.73039405,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "1",
+            "5"
+          ],
+          "nets": [
+            "NC_U2_1",
+            "VDD_COMP"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.10890028,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "1",
+            "6"
+          ],
+          "nets": [
+            "NC_U2_1",
+            "OV_LOW"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.95,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "2",
+            "3"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "DC_RETURN"
+          ],
+          "rule": "SAME_NET",
+          "copper_gap_mm": 0.35,
+          "target_clearance_mm": 0,
+          "target_surface_reservation_mm": 0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "2",
+            "4"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "OV_SENSE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.10890028,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "2",
+            "5"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "VDD_COMP"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.95,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "2",
+            "6"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "OV_LOW"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.10890028,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "3",
+            "4"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "OV_SENSE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.95,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "3",
+            "5"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "VDD_COMP"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.10890028,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "3",
+            "6"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "OV_LOW"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.73039405,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "4",
+            "5"
+          ],
+          "nets": [
+            "OV_SENSE",
+            "VDD_COMP"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.35,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "4",
+            "6"
+          ],
+          "nets": [
+            "OV_SENSE",
+            "OV_LOW"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.3,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U2",
+          "pins": [
+            "5",
+            "6"
+          ],
+          "nets": [
+            "VDD_COMP",
+            "OV_LOW"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.35,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R13",
+      "mpn": "TNPW1206160KBYEA",
+      "footprint": "E27SC06:R_1206",
+      "source_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R13",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "COUT_PLUS",
+            "OV_MID"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        }
+      ]
+    },
+    {
+      "ref": "R14",
+      "mpn": "TNPW1206160KBYEA",
+      "footprint": "E27SC06:R_1206",
+      "source_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R14",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OV_MID",
+            "OV_SENSE"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        }
+      ]
+    },
+    {
+      "ref": "R15",
+      "mpn": "TNPW12061K00BYEA",
+      "footprint": "E27SC06:R_1206",
+      "source_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R15",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OV_SENSE",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R19",
+      "mpn": "RC0805FR-0711KL",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R19",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "MOS_GATE",
+            "OV_LOW"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R20",
+      "mpn": "RC0805FR-0710KL",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R20",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "VCC_OV",
+            "MOS_GATE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "Q2",
+      "mpn": "PMV65XP,215",
+      "footprint": "E27SC06:SOT23",
+      "source_sha256": "5a4e8f6fef1af118ea1ba916569bca37025f6cb9835e6b7b9627c7a7748c7615",
+      "numbered_copper_pads": 3,
+      "pair_count": 3,
+      "pairs": [
+        {
+          "ref": "Q2",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "MOS_GATE",
+            "VCC_OV"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.3,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "Q2",
+          "pins": [
+            "1",
+            "3"
+          ],
+          "nets": [
+            "MOS_GATE",
+            "OPTO_DRIVE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.655248659,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "Q2",
+          "pins": [
+            "2",
+            "3"
+          ],
+          "nets": [
+            "VCC_OV",
+            "OPTO_DRIVE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.655248659,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R21",
+      "mpn": "CRCW08051K78FKEAHP",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R21",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OPTO_DRIVE",
+            "OPTO_A"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "L3",
+      "mpn": "RFC1010B-155KE",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "source_sha256": "dfddc71d0c2d0c946b40f65e60d4b056bee0cd60a7e7102e6c21c9d9f73dfcb5",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "L3",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "L2_MID",
+            "COUT_PLUS"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.5,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        }
+      ]
+    },
+    {
+      "ref": "R24",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R24",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AUX_FEED3",
+            "AUX_FEED4"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R25",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R25",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AUX_FEED4",
+            "AUX_FEED5"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R22",
+      "mpn": "TNPW1206210KBYEA",
+      "footprint": "E27SC06:R_1206",
+      "source_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R22",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OPTO_DRIVE",
+            "OV_SENSE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R23",
+      "mpn": "RC0805FR-074K3L",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R23",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OPTO_DRIVE",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "U4",
+      "mpn": "AQY221R2VY",
+      "footprint": "E27SC06:Panasonic_SSOP4",
+      "source_sha256": "fe244b3e5f4d22021d6e03956d8656c49d31d3b7e88342f998b45931253d4b4c",
+      "numbered_copper_pads": 4,
+      "pair_count": 6,
+      "pairs": [
+        {
+          "ref": "U4",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OPTO_A",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.57,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U4",
+          "pins": [
+            "1",
+            "3"
+          ],
+          "nets": [
+            "OPTO_A",
+            "BP_RELAY"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.496769938,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U4",
+          "pins": [
+            "1",
+            "4"
+          ],
+          "nets": [
+            "OPTO_A",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.45,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U4",
+          "pins": [
+            "2",
+            "3"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "BP_RELAY"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.45,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U4",
+          "pins": [
+            "2",
+            "4"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.496769938,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U4",
+          "pins": [
+            "3",
+            "4"
+          ],
+          "nets": [
+            "BP_RELAY",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.57,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "U5",
+      "mpn": "AQY221R2VY",
+      "footprint": "E27SC06:Panasonic_SSOP4",
+      "source_sha256": "fe244b3e5f4d22021d6e03956d8656c49d31d3b7e88342f998b45931253d4b4c",
+      "numbered_copper_pads": 4,
+      "pair_count": 6,
+      "pairs": [
+        {
+          "ref": "U5",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OPTO2_A",
+            "DC_RETURN"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.57,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        },
+        {
+          "ref": "U5",
+          "pins": [
+            "1",
+            "3"
+          ],
+          "nets": [
+            "OPTO2_A",
+            "BP2_RELAY"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.496769938,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U5",
+          "pins": [
+            "1",
+            "4"
+          ],
+          "nets": [
+            "OPTO2_A",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.45,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U5",
+          "pins": [
+            "2",
+            "3"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "BP2_RELAY"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.45,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U5",
+          "pins": [
+            "2",
+            "4"
+          ],
+          "nets": [
+            "DC_RETURN",
+            "SOURCE"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 3.496769938,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": true
+        },
+        {
+          "ref": "U5",
+          "pins": [
+            "3",
+            "4"
+          ],
+          "nets": [
+            "BP2_RELAY",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.57,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R26",
+      "mpn": "CRCW08051K78FKEAHP",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R26",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "OPTO_DRIVE",
+            "OPTO2_A"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R27",
+      "mpn": "RC0805FR-07100RL",
+      "footprint": "E27SC06:R_0805",
+      "source_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R27",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "BP",
+            "BP2_RELAY"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 0.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "R28",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "source_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "R28",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AUX_FEED5",
+            "VCC_OV"
+          ],
+          "rule": "OUTPUT_CROSS",
+          "copper_gap_mm": 4.7,
+          "target_clearance_mm": 2,
+          "target_surface_reservation_mm": 2,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "RF2",
+      "mpn": "FWFU2W220RJ",
+      "footprint": "E27SC06:RF_16x5p5_P22",
+      "source_sha256": "8ee8c8703a9bf5063114147179ee083cf6dce514e5d8c3128fc51d44223f86be",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "RF2",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "AC_MID",
+            "AC_FUSED"
+          ],
+          "rule": "HV_CROSS",
+          "copper_gap_mm": 19.5,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    },
+    {
+      "ref": "D4",
+      "mpn": "STTH110A",
+      "footprint": "Diode_SMD:D_SMA",
+      "source_sha256": "100ce14ad3b13de1950fcaa532cec8a4a71aff64d2128006551329c789a262eb",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "D4",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "DRAIN_BLOCKED",
+            "BUS_PLUS"
+          ],
+          "rule": "D4_UNRESOLVED",
+          "copper_gap_mm": 2.63,
+          "target_clearance_mm": 3.2,
+          "target_surface_reservation_mm": 4.0,
+          "below_clearance_target": true,
+          "below_surface_reservation": true
+        }
+      ]
+    },
+    {
+      "ref": "C10",
+      "mpn": "CL32B226KAJNNNE",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "source_sha256": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c",
+      "numbered_copper_pads": 2,
+      "pair_count": 1,
+      "pairs": [
+        {
+          "ref": "C10",
+          "pins": [
+            "1",
+            "2"
+          ],
+          "nets": [
+            "SENSE_FB",
+            "SOURCE"
+          ],
+          "rule": "LOCAL_FUNCTIONAL",
+          "copper_gap_mm": 1.8,
+          "target_clearance_mm": 0.3,
+          "target_surface_reservation_mm": 0.3,
+          "below_clearance_target": false,
+          "below_surface_reservation": false
+        }
+      ]
+    }
+  ]
+}

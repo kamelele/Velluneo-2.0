@@ -1,0 +1,1324 @@
+{
+  "basis": {
+    "base_commit": "910870c38028a6aabff9f38baeabf7d6ae916b8b",
+    "bom_sha256": "1a6d626be01d2b6b09bdfbf23ecea11346ae4a6b954c18047f4d06d2e60aba82",
+    "intent_sha256": "4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809",
+    "native_sha256": "824f61643e8026518b8bdd07ab2df40c6d71d79bf3391c722699126a648f0395",
+    "source": "Actual47localfootprints, no PCB source opened/generated",
+    "not_run": [
+      "PCBplacement",
+      "routing",
+      "DRC",
+      "spatialparity",
+      "thermal simulation",
+      "physicaltests"
+    ]
+  },
+  "count": 47,
+  "unique_patterns": 20,
+  "courtyard_sum_mm2": 3051.996,
+  "inventory": [
+    {
+      "ref": "J1",
+      "mpn": "PCB wire pads, not purchased connector",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "courtyard": {
+        "xmin": -2,
+        "xmax": 9.5,
+        "ymin": -2,
+        "ymax": 2,
+        "w": 11.5,
+        "h": 4
+      },
+      "fab": null,
+      "description": "TwoPCBwireterminationholes1.4mm,pitch7.5,copper2.8;insulatedwirestrainreliefnotdesignedhere;notapurchasedconnector",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": null,
+      "height_basis": "Wire termination, cable/strain relief height unspecified",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "13c91fe30bf9aaa3b5635f142fcf7344d094347b4d3444a43623e1005fbe9b45"
+    },
+    {
+      "ref": "RF1",
+      "mpn": "FWFU2W220RJ",
+      "footprint": "E27SC06:RF_16x5p5_P22",
+      "courtyard": {
+        "xmin": -12.5,
+        "xmax": 12.5,
+        "ymin": -3.5,
+        "ymax": 3.5,
+        "w": 25,
+        "h": 7
+      },
+      "fab": {
+        "xmin": -8,
+        "xmax": 8,
+        "ymin": -2.75,
+        "ymax": 2.75,
+        "w": 16,
+        "h": 5.5
+      },
+      "description": "TEFWFU2Wbody16x5.5;proposed22mmpitch;manualleadforming/thermalqualificationrequired",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 8.5,
+      "height_basis": "body16x5.5; proposed3mm stand-off adds to5.5 height; lead-forming approval needed",
+      "manufacturer_body_max_xy_mm": [
+        16,
+        5.5
+      ],
+      "footprint_sha256": "8ee8c8703a9bf5063114147179ee083cf6dce514e5d8c3128fc51d44223f86be"
+    },
+    {
+      "ref": "BR1",
+      "mpn": "MB10S-13",
+      "footprint": "E27SC06:MB10S_Diodes",
+      "courtyard": {
+        "xmin": -3.82,
+        "xmax": 3.83,
+        "ymin": -2.65,
+        "ymax": 2.65,
+        "w": 7.65,
+        "h": 5.3
+      },
+      "fab": {
+        "xmin": -2.05,
+        "xmax": 2.05,
+        "ymin": -2.4,
+        "ymax": 2.4,
+        "w": 4.1,
+        "h": 4.8
+      },
+      "description": "SMD package TO-269AA (e.g. diode bridge), see http://www.vishay.com/docs/88854/padlayouts.pdf",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "f6967bd4cf1ef8b498625792703cfc9b26523e9ad8e4c94a3eab5dc614e336c7"
+    },
+    {
+      "ref": "C1",
+      "mpn": "R76UR31004030J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "courtyard": {
+        "xmin": -16.65,
+        "xmax": 16.65,
+        "ymin": -7.6,
+        "ymax": 7.6,
+        "w": 33.3,
+        "h": 15.2
+      },
+      "fab": {
+        "xmin": -16.15,
+        "xmax": 16.15,
+        "ymin": -7.1,
+        "ymax": 7.1,
+        "w": 32.3,
+        "h": 14.2
+      },
+      "description": "KEMETR76UR31004030J/R76QR3330SE30J,maxbody32.3x14.2;pitch27.5;lead0.8+/-0.05mm;finishedhole1.1mmproposed;maxheight28.1mm",
+      "height_max_verified_mm": 28.1,
+      "height_reserve_proposal_mm": 28.1,
+      "height_basis": "manufacturer max from exact KEMET part sheet",
+      "manufacturer_body_max_xy_mm": [
+        32.3,
+        14.2
+      ],
+      "footprint_sha256": "c8183714ddaeb8149c3c915578e49af97c30dbea9aaf48703857bcf036f4fb2d"
+    },
+    {
+      "ref": "C2",
+      "mpn": "R76QR3330SE30J",
+      "footprint": "E27SC06:Film_32x14_P27p5",
+      "courtyard": {
+        "xmin": -16.65,
+        "xmax": 16.65,
+        "ymin": -7.6,
+        "ymax": 7.6,
+        "w": 33.3,
+        "h": 15.2
+      },
+      "fab": {
+        "xmin": -16.15,
+        "xmax": 16.15,
+        "ymin": -7.1,
+        "ymax": 7.1,
+        "w": 32.3,
+        "h": 14.2
+      },
+      "description": "KEMETR76UR31004030J/R76QR3330SE30J,maxbody32.3x14.2;pitch27.5;lead0.8+/-0.05mm;finishedhole1.1mmproposed;maxheight28.1mm",
+      "height_max_verified_mm": 28.1,
+      "height_reserve_proposal_mm": 28.1,
+      "height_basis": "manufacturer max from exact KEMET part sheet",
+      "manufacturer_body_max_xy_mm": [
+        32.3,
+        14.2
+      ],
+      "footprint_sha256": "c8183714ddaeb8149c3c915578e49af97c30dbea9aaf48703857bcf036f4fb2d"
+    },
+    {
+      "ref": "D3",
+      "mpn": "1.5KE440A-E3/54",
+      "footprint": "Diode_THT:D_DO-201AD_P15.24mm_Horizontal",
+      "courtyard": {
+        "xmin": -1.85,
+        "xmax": 17.09,
+        "ymin": -2.9,
+        "ymax": 2.9,
+        "w": 18.94,
+        "h": 5.8
+      },
+      "fab": {
+        "xmin": 0,
+        "xmax": 15.24,
+        "ymin": -2.6,
+        "ymax": 2.6,
+        "w": 15.24,
+        "h": 5.2
+      },
+      "description": "Diode, DO-201AD series, Axial, Horizontal, pin pitch=15.24mm, length*diameter=9.5*5.2mm^2, http://www.diodes.com/_files/packages/DO-201AD.pdf",
+      "height_max_verified_mm": 5.3,
+      "height_reserve_proposal_mm": 5.3,
+      "height_basis": "Vishay maximum cylinder diameter; add any mounting stand-off",
+      "manufacturer_body_max_xy_mm": [
+        9.5,
+        5.3
+      ],
+      "footprint_sha256": "74ee663f3c238aea0760efd4c83cec08c077a4cee1bc9d6c3c7fa45c6cd4f335"
+    },
+    {
+      "ref": "U1",
+      "mpn": "LYT0006D-TL",
+      "footprint": "E27SC06:LYT_SO8C_no3",
+      "courtyard": {
+        "xmin": -3.7,
+        "xmax": 3.7,
+        "ymin": -2.7,
+        "ymax": 2.7,
+        "w": 7.4,
+        "h": 5.4
+      },
+      "fab": {
+        "xmin": -1.95,
+        "xmax": 1.95,
+        "ymin": -2.45,
+        "ymax": 2.45,
+        "w": 3.9,
+        "h": 4.9
+      },
+      "description": "SOIC, 8 Pin (JEDEC MS-012AA, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_8.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "9f658fc6c06bcddba56668a64d14a20abc9742e7a79b75bf594da384ace9ef07"
+    },
+    {
+      "ref": "C3",
+      "mpn": "GRM21BR71H104KA01L",
+      "footprint": "E27SC06:C_0805",
+      "courtyard": {
+        "xmin": -1.7,
+        "xmax": 1.7,
+        "ymin": -0.98,
+        "ymax": 0.98,
+        "w": 3.4,
+        "h": 1.96
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6a008925a9c97150f234cf4b2a8900a15ff7603eacf9ce677cebb6ddf3bdd022"
+    },
+    {
+      "ref": "R2",
+      "mpn": "CRCW120628R7FKEAHP",
+      "footprint": "E27SC06:R_1206",
+      "courtyard": {
+        "xmin": -2.28,
+        "xmax": 2.28,
+        "ymin": -1.13,
+        "ymax": 1.13,
+        "w": 4.56,
+        "h": 2.26
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -0.8,
+        "ymax": 0.8,
+        "w": 3.2,
+        "h": 1.6
+      },
+      "description": "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9"
+    },
+    {
+      "ref": "C4",
+      "mpn": "CL32B226KAJNNNE",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "courtyard": {
+        "xmin": -2.3,
+        "xmax": 2.3,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 4.6,
+        "h": 3.2
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -1.25,
+        "ymax": 1.25,
+        "w": 3.2,
+        "h": 2.5
+      },
+      "description": "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": 2.7,
+      "height_reserve_proposal_mm": 2.7,
+      "height_basis": "Samsung exact part maximum3.5x2.7x2.7",
+      "manufacturer_body_max_xy_mm": [
+        3.5,
+        2.7
+      ],
+      "footprint_sha256": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c"
+    },
+    {
+      "ref": "D1",
+      "mpn": "C4D02120E",
+      "footprint": "E27SC06:C4D02120E_TO252",
+      "courtyard": {
+        "xmin": -6.39,
+        "xmax": 4.71,
+        "ymin": -3.5,
+        "ymax": 3.5,
+        "w": 11.1,
+        "h": 7
+      },
+      "fab": {
+        "xmin": -5.81,
+        "xmax": 4.11,
+        "ymin": -3.25,
+        "ymax": 3.25,
+        "w": 9.92,
+        "h": 6.5
+      },
+      "description": "TO-252/DPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-1/",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "02d70933c317844ebcffa874519241beb771ec1bfbd101898b0a67aae86fbc93"
+    },
+    {
+      "ref": "L2",
+      "mpn": "RFC1010B-155KE",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "courtyard": {
+        "xmin": -6,
+        "xmax": 6,
+        "ymin": -6,
+        "ymax": 6,
+        "w": 12,
+        "h": 12
+      },
+      "fab": {
+        "xmin": -5.5,
+        "xmax": 5.5,
+        "ymin": -5.5,
+        "ymax": 5.5,
+        "w": 11,
+        "h": 11
+      },
+      "description": "CoilcraftRFC1010B11mmmaxbody/6mmpitch;hole1.2mmproposed;lead/pulseinsulationqualificationrequired",
+      "height_max_verified_mm": 11.5,
+      "height_reserve_proposal_mm": 11.5,
+      "height_basis": "Coilcraft1125-1 max diameter11 maxheight11.5",
+      "manufacturer_body_max_xy_mm": [
+        11,
+        11
+      ],
+      "footprint_sha256": "dfddc71d0c2d0c946b40f65e60d4b056bee0cd60a7e7102e6c21c9d9f73dfcb5"
+    },
+    {
+      "ref": "C5",
+      "mpn": "EEUED2C151",
+      "footprint": "E27SC06:CP_16x25_P7p5",
+      "courtyard": {
+        "xmin": -4.5,
+        "xmax": 12,
+        "ymin": -8.25,
+        "ymax": 8.25,
+        "w": 16.5,
+        "h": 16.5
+      },
+      "fab": {
+        "xmin": -4.25,
+        "xmax": 11.75,
+        "ymin": -8,
+        "ymax": 8,
+        "w": 16,
+        "h": 16
+      },
+      "description": "CP, Radial series, Radial, pin pitch=7.50mm, diameter=16mm, height=25mm, Electrolytic Capacitor",
+      "height_max_verified_mm": 27,
+      "height_reserve_proposal_mm": 27,
+      "height_basis": "Panasonic ED drawing L25±2; diameter16±0.5",
+      "manufacturer_body_max_xy_mm": [
+        16.5,
+        16.5
+      ],
+      "footprint_sha256": "cfe70b6696c663336b42c6e4e895dee85b2000f8079e2e05bebb0a00115b29de"
+    },
+    {
+      "ref": "R7",
+      "mpn": "AC05000004700JAC00",
+      "footprint": "E27SC06:AC05_18x7p5_P25p4",
+      "courtyard": {
+        "xmin": -14.2,
+        "xmax": 14.2,
+        "ymin": -4.4,
+        "ymax": 4.4,
+        "w": 28.4,
+        "h": 8.8
+      },
+      "fab": {
+        "xmin": -9,
+        "xmax": 9,
+        "ymin": -3.75,
+        "ymax": 3.75,
+        "w": 18,
+        "h": 7.5
+      },
+      "description": "VishayAC05body18x7.5max,0.8mmlead;proposed25.4mmpitchandstand-off;actualleadforming/thermalspacingmustbereviewed",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 10.5,
+      "height_basis": "body18x7.5; proposed3mm stand-off adds to7.5 height; lead-forming approval needed",
+      "manufacturer_body_max_xy_mm": [
+        18,
+        7.5
+      ],
+      "footprint_sha256": "2f6eabf8bad2d9ea439f76b2ac4a030676757f4d50e25dd9bc7a5b31beef012a"
+    },
+    {
+      "ref": "J2",
+      "mpn": "PCB wire pads, not purchased connector",
+      "footprint": "E27SC06:WirePads_2_P7p5",
+      "courtyard": {
+        "xmin": -2,
+        "xmax": 9.5,
+        "ymin": -2,
+        "ymax": 2,
+        "w": 11.5,
+        "h": 4
+      },
+      "fab": null,
+      "description": "TwoPCBwireterminationholes1.4mm,pitch7.5,copper2.8;insulatedwirestrainreliefnotdesignedhere;notapurchasedconnector",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": null,
+      "height_basis": "Wire termination, cable/strain relief height unspecified",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "13c91fe30bf9aaa3b5635f142fcf7344d094347b4d3444a43623e1005fbe9b45"
+    },
+    {
+      "ref": "R8",
+      "mpn": "CRCW251256K0FKEG",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "R9",
+      "mpn": "CRCW251256K0FKEG",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "R6",
+      "mpn": "RC0805FR-07100RL",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "R10",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "R11",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "R12",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "U3",
+      "mpn": "TL431BQPK",
+      "footprint": "Package_TO_SOT_SMD:SOT-89-3",
+      "courtyard": {
+        "xmin": -2.85,
+        "xmax": 2.25,
+        "ymin": -2.5,
+        "ymax": 2.5,
+        "w": 5.1,
+        "h": 5
+      },
+      "fab": {
+        "xmin": -1.25,
+        "xmax": 1.25,
+        "ymin": -2.25,
+        "ymax": 2.25,
+        "w": 2.5,
+        "h": 4.5
+      },
+      "description": "SOT-89-3, http://ww1.microchip.com/downloads/en/DeviceDoc/3L_SOT-89_MB_C04-029C.pdf",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "394a62a5d34a1f392310bac3de8e96553e8761a10971db596cd23b3fef3e8bd4"
+    },
+    {
+      "ref": "R16",
+      "mpn": "TNPW120638K3BEEA",
+      "footprint": "E27SC06:R_1206",
+      "courtyard": {
+        "xmin": -2.28,
+        "xmax": 2.28,
+        "ymin": -1.13,
+        "ymax": 1.13,
+        "w": 4.56,
+        "h": 2.26
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -0.8,
+        "ymax": 0.8,
+        "w": 3.2,
+        "h": 1.6
+      },
+      "description": "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9"
+    },
+    {
+      "ref": "R17",
+      "mpn": "TNPW120610K0BEEA",
+      "footprint": "E27SC06:R_1206",
+      "courtyard": {
+        "xmin": -2.28,
+        "xmax": 2.28,
+        "ymin": -1.13,
+        "ymax": 1.13,
+        "w": 4.56,
+        "h": 2.26
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -0.8,
+        "ymax": 0.8,
+        "w": 3.2,
+        "h": 1.6
+      },
+      "description": "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9"
+    },
+    {
+      "ref": "R18",
+      "mpn": "RC0805FR-07100RL",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "C9",
+      "mpn": "GRM21BR71H104KA01L",
+      "footprint": "E27SC06:C_0805",
+      "courtyard": {
+        "xmin": -1.7,
+        "xmax": 1.7,
+        "ymin": -0.98,
+        "ymax": 0.98,
+        "w": 3.4,
+        "h": 1.96
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6a008925a9c97150f234cf4b2a8900a15ff7603eacf9ce677cebb6ddf3bdd022"
+    },
+    {
+      "ref": "U2",
+      "mpn": "TLV6700DDCR",
+      "footprint": "E27SC06:SOT23_6",
+      "courtyard": {
+        "xmin": -2.05,
+        "xmax": 2.05,
+        "ymin": -1.7,
+        "ymax": 1.7,
+        "w": 4.1,
+        "h": 3.4
+      },
+      "fab": {
+        "xmin": -0.8,
+        "xmax": 0.8,
+        "ymin": -1.45,
+        "ymax": 1.45,
+        "w": 1.6,
+        "h": 2.9
+      },
+      "description": "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "f13a8cbb65f1ca2f9b34766f0cbaef7d846d29e823b15896a4543b8d650d7e08"
+    },
+    {
+      "ref": "R13",
+      "mpn": "TNPW1206160KBYEA",
+      "footprint": "E27SC06:R_1206",
+      "courtyard": {
+        "xmin": -2.28,
+        "xmax": 2.28,
+        "ymin": -1.13,
+        "ymax": 1.13,
+        "w": 4.56,
+        "h": 2.26
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -0.8,
+        "ymax": 0.8,
+        "w": 3.2,
+        "h": 1.6
+      },
+      "description": "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9"
+    },
+    {
+      "ref": "R14",
+      "mpn": "TNPW1206160KBYEA",
+      "footprint": "E27SC06:R_1206",
+      "courtyard": {
+        "xmin": -2.28,
+        "xmax": 2.28,
+        "ymin": -1.13,
+        "ymax": 1.13,
+        "w": 4.56,
+        "h": 2.26
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -0.8,
+        "ymax": 0.8,
+        "w": 3.2,
+        "h": 1.6
+      },
+      "description": "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9"
+    },
+    {
+      "ref": "R15",
+      "mpn": "TNPW12061K00BYEA",
+      "footprint": "E27SC06:R_1206",
+      "courtyard": {
+        "xmin": -2.28,
+        "xmax": 2.28,
+        "ymin": -1.13,
+        "ymax": 1.13,
+        "w": 4.56,
+        "h": 2.26
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -0.8,
+        "ymax": 0.8,
+        "w": 3.2,
+        "h": 1.6
+      },
+      "description": "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9"
+    },
+    {
+      "ref": "R19",
+      "mpn": "RC0805FR-0711KL",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "R20",
+      "mpn": "RC0805FR-0710KL",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "Q2",
+      "mpn": "PMV65XP,215",
+      "footprint": "E27SC06:SOT23",
+      "courtyard": {
+        "xmin": -1.93,
+        "xmax": 1.93,
+        "ymin": -1.7,
+        "ymax": 1.7,
+        "w": 3.86,
+        "h": 3.4
+      },
+      "fab": {
+        "xmin": -0.65,
+        "xmax": 0.65,
+        "ymin": -1.45,
+        "ymax": 1.45,
+        "w": 1.3,
+        "h": 2.9
+      },
+      "description": "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)",
+      "height_max_verified_mm": 1.1,
+      "height_reserve_proposal_mm": 1.1,
+      "height_basis": "Nexperia SOT23 max",
+      "manufacturer_body_max_xy_mm": [
+        3,
+        1.4
+      ],
+      "footprint_sha256": "5a4e8f6fef1af118ea1ba916569bca37025f6cb9835e6b7b9627c7a7748c7615"
+    },
+    {
+      "ref": "R21",
+      "mpn": "CRCW08051K78FKEAHP",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "L3",
+      "mpn": "RFC1010B-155KE",
+      "footprint": "E27SC06:RFC1010B_P6",
+      "courtyard": {
+        "xmin": -6,
+        "xmax": 6,
+        "ymin": -6,
+        "ymax": 6,
+        "w": 12,
+        "h": 12
+      },
+      "fab": {
+        "xmin": -5.5,
+        "xmax": 5.5,
+        "ymin": -5.5,
+        "ymax": 5.5,
+        "w": 11,
+        "h": 11
+      },
+      "description": "CoilcraftRFC1010B11mmmaxbody/6mmpitch;hole1.2mmproposed;lead/pulseinsulationqualificationrequired",
+      "height_max_verified_mm": 11.5,
+      "height_reserve_proposal_mm": 11.5,
+      "height_basis": "Coilcraft1125-1 max diameter11 maxheight11.5",
+      "manufacturer_body_max_xy_mm": [
+        11,
+        11
+      ],
+      "footprint_sha256": "dfddc71d0c2d0c946b40f65e60d4b056bee0cd60a7e7102e6c21c9d9f73dfcb5"
+    },
+    {
+      "ref": "R24",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "R25",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "R22",
+      "mpn": "TNPW1206210KBYEA",
+      "footprint": "E27SC06:R_1206",
+      "courtyard": {
+        "xmin": -2.28,
+        "xmax": 2.28,
+        "ymin": -1.13,
+        "ymax": 1.13,
+        "w": 4.56,
+        "h": 2.26
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -0.8,
+        "ymax": 0.8,
+        "w": 3.2,
+        "h": 1.6
+      },
+      "description": "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9"
+    },
+    {
+      "ref": "R23",
+      "mpn": "RC0805FR-074K3L",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "U4",
+      "mpn": "AQY221R2VY",
+      "footprint": "E27SC06:Panasonic_SSOP4",
+      "courtyard": {
+        "xmin": -2.975,
+        "xmax": 2.975,
+        "ymin": -1.675,
+        "ymax": 1.675,
+        "w": 5.95,
+        "h": 3.35
+      },
+      "fab": {
+        "xmin": -2.225,
+        "xmax": 2.225,
+        "ymin": -1.325,
+        "ymax": 1.325,
+        "w": 4.45,
+        "h": 2.65
+      },
+      "description": "Panasonic AQY221R2V flat-lead SSOP, ASCTB32E recommended pads; see U4-geometry-evidence.json",
+      "height_max_verified_mm": 1.9,
+      "height_reserve_proposal_mm": 1.9,
+      "height_basis": "Panasonic drawing1.80 and general±.1 tolerance; verify latest delivery drawing",
+      "manufacturer_body_max_xy_mm": [
+        4.55,
+        2.75
+      ],
+      "footprint_sha256": "fe244b3e5f4d22021d6e03956d8656c49d31d3b7e88342f998b45931253d4b4c"
+    },
+    {
+      "ref": "U5",
+      "mpn": "AQY221R2VY",
+      "footprint": "E27SC06:Panasonic_SSOP4",
+      "courtyard": {
+        "xmin": -2.975,
+        "xmax": 2.975,
+        "ymin": -1.675,
+        "ymax": 1.675,
+        "w": 5.95,
+        "h": 3.35
+      },
+      "fab": {
+        "xmin": -2.225,
+        "xmax": 2.225,
+        "ymin": -1.325,
+        "ymax": 1.325,
+        "w": 4.45,
+        "h": 2.65
+      },
+      "description": "Panasonic AQY221R2V flat-lead SSOP, ASCTB32E recommended pads; see U4-geometry-evidence.json",
+      "height_max_verified_mm": 1.9,
+      "height_reserve_proposal_mm": 1.9,
+      "height_basis": "Panasonic drawing1.80 and general±.1 tolerance; verify latest delivery drawing",
+      "manufacturer_body_max_xy_mm": [
+        4.55,
+        2.75
+      ],
+      "footprint_sha256": "fe244b3e5f4d22021d6e03956d8656c49d31d3b7e88342f998b45931253d4b4c"
+    },
+    {
+      "ref": "R26",
+      "mpn": "CRCW08051K78FKEAHP",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "R27",
+      "mpn": "RC0805FR-07100RL",
+      "footprint": "E27SC06:R_0805",
+      "courtyard": {
+        "xmin": -1.68,
+        "xmax": 1.68,
+        "ymin": -0.95,
+        "ymax": 0.95,
+        "w": 3.36,
+        "h": 1.9
+      },
+      "fab": {
+        "xmin": -1,
+        "xmax": 1,
+        "ymin": -0.625,
+        "ymax": 0.625,
+        "w": 2,
+        "h": 1.25
+      },
+      "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd"
+    },
+    {
+      "ref": "R28",
+      "mpn": "CRCW2512715RFKEGHP",
+      "footprint": "E27SC06:R_2512",
+      "courtyard": {
+        "xmin": -3.83,
+        "xmax": 3.83,
+        "ymin": -1.93,
+        "ymax": 1.93,
+        "w": 7.66,
+        "h": 3.86
+      },
+      "fab": {
+        "xmin": -3.15,
+        "xmax": 3.15,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 6.3,
+        "h": 3.2
+      },
+      "description": "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 3,
+      "height_basis": "Exact manufacturer maximum not verified in this preflight; reserve3mm provisionally, not a certified maximum",
+      "manufacturer_body_max_xy_mm": null,
+      "footprint_sha256": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c"
+    },
+    {
+      "ref": "RF2",
+      "mpn": "FWFU2W220RJ",
+      "footprint": "E27SC06:RF_16x5p5_P22",
+      "courtyard": {
+        "xmin": -12.5,
+        "xmax": 12.5,
+        "ymin": -3.5,
+        "ymax": 3.5,
+        "w": 25,
+        "h": 7
+      },
+      "fab": {
+        "xmin": -8,
+        "xmax": 8,
+        "ymin": -2.75,
+        "ymax": 2.75,
+        "w": 16,
+        "h": 5.5
+      },
+      "description": "TEFWFU2Wbody16x5.5;proposed22mmpitch;manualleadforming/thermalqualificationrequired",
+      "height_max_verified_mm": null,
+      "height_reserve_proposal_mm": 8.5,
+      "height_basis": "body16x5.5; proposed3mm stand-off adds to5.5 height; lead-forming approval needed",
+      "manufacturer_body_max_xy_mm": [
+        16,
+        5.5
+      ],
+      "footprint_sha256": "8ee8c8703a9bf5063114147179ee083cf6dce514e5d8c3128fc51d44223f86be"
+    },
+    {
+      "ref": "D4",
+      "mpn": "STTH110A",
+      "footprint": "Diode_SMD:D_SMA",
+      "courtyard": {
+        "xmin": -3.5,
+        "xmax": 3.5,
+        "ymin": -1.75,
+        "ymax": 1.75,
+        "w": 7,
+        "h": 3.5
+      },
+      "fab": {
+        "xmin": -2.3,
+        "xmax": 2.3,
+        "ymin": -1.5,
+        "ymax": 1.5,
+        "w": 4.6,
+        "h": 3
+      },
+      "description": "Diode SMA (DO-214AC)",
+      "height_max_verified_mm": 2.45,
+      "height_reserve_proposal_mm": 2.45,
+      "height_basis": "ST DS3067 package max",
+      "manufacturer_body_max_xy_mm": [
+        4.6,
+        2.9
+      ],
+      "footprint_sha256": "100ce14ad3b13de1950fcaa532cec8a4a71aff64d2128006551329c789a262eb"
+    },
+    {
+      "ref": "C10",
+      "mpn": "CL32B226KAJNNNE",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "courtyard": {
+        "xmin": -2.3,
+        "xmax": 2.3,
+        "ymin": -1.6,
+        "ymax": 1.6,
+        "w": 4.6,
+        "h": 3.2
+      },
+      "fab": {
+        "xmin": -1.6,
+        "xmax": 1.6,
+        "ymin": -1.25,
+        "ymax": 1.25,
+        "w": 3.2,
+        "h": 2.5
+      },
+      "description": "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "height_max_verified_mm": 2.7,
+      "height_reserve_proposal_mm": 2.7,
+      "height_basis": "Samsung exact part maximum3.5x2.7x2.7",
+      "manufacturer_body_max_xy_mm": [
+        3.5,
+        2.7
+      ],
+      "footprint_sha256": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c"
+    }
+  ],
+  "status": "ARCHIVAL_MEASURED_PREFLIGHT_BEFORE_C5_CORRECTION",
+  "operative_geometry": "C5-geometry-correction.json and currentlibrary governC5court17/height27;lab-board-boundaries governs5mmaxialstand-off;oldheightreservationsnotoperative."
+}

@@ -28,8 +28,10 @@ All17 original product requirements remain controlling for the finishedlamp; ori
 
 ## Next controlled step
 
-Actual owner approval of this exact new map and the experimental145V/test-envelope proposal is recorded in owner-capture-approval.json. Native capture is completed and checked; schematic-stage acceptance and approved spatial/insulation intent are still required before placement. The toolkit requires independent spatial intent before PCB placement and routing/release reviews before manufacturing files. No Gerbers, purchase or energized tests are authorized by this packet.
+Actual owner approval of this exact new map and the experimental145V/test-envelope proposal is recorded in owner-capture-approval.json. Native capture is completed and checked; The owner subsequently accepted commit910870c as the experimental laboratory schematic; independent spatial/LAB-fabrication-scope and insulation decisions are still required before placement. The toolkit requires independent spatial intent before PCB placement and routing/release reviews before manufacturing files. No Gerbers, purchase or energized tests are authorized by this packet.
 
 Primary sources: Nexperia PMV65XP product data12Feb2013; Samsung CL32B226KAJNNN official product page; ST STTH110 DS3067; Vishay88301Rev09Aug2022; TE6-2176792-5; PowerIntegrations LYT0RevB/AN60. Exact URLs are retained in the BOM and research records. Research actors and evidence limits are disclosed in workflow/schematic-08 review records.
 
 Native capture checks are retained in workflow/integrated-shade/schematic-08/capture-checks. Requirements retain all17 original obligations; imported historical evidence is isolated under reference/SC07 and is not SC08 qualification. No PCB or physical test has been created/performed. Generic fabrication rules are not mains insulation rules.
+
+Current PCB preparation is defined by pcb-basis/DESIGN_AUTHORITY.md and the proposed LAB fabrication crosswalk. This is a bare unpowered test-board scope proposal; original17product obligations remain in requirements.json. The actual schematic-stage prototype decision is recorded under workflow/schematic-08/pcb-planning/owner-schematic-prototype-decision.json. No PCB placement, routing or purchase acceptance follows from that decision.

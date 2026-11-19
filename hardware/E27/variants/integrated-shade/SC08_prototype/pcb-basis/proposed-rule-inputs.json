@@ -1,0 +1,156 @@
+{
+  "status": "ARCHIVAL_RESEARCH_SUPERSEDED_NOT_OPERATIVE",
+  "board": {
+    "layers": 2,
+    "copper_oz": 1,
+    "nominal_thickness_mm": 1.6,
+    "finish": "HASL",
+    "material": "FR4 exact grade and CTI unknown",
+    "ambient_C": [
+      0,
+      40
+    ]
+  },
+  "proposed_environment": {
+    "pollution_degree": 2,
+    "altitude_max_m": 2000,
+    "condensation": false,
+    "approval": null,
+    "coating_credit": false,
+    "solder_mask_insulation_credit": false
+  },
+  "rules": {
+    "HV_CROSS": {
+      "clearance_mm": 3.2,
+      "creepage_mm": 4.0,
+      "basis": "Own experimental routing default; TI SLUP419 400V/PD2/groupIII 4mm creepage and 4kV/PD2 3mm clearance examples as context. HF and exact product-standard assessment open."
+    },
+    "OUTPUT_CROSS": {
+      "clearance_mm": 2.0,
+      "creepage_mm": 2.0,
+      "basis": "Own engineering target for conditional 145V output; no standard clause asserted."
+    },
+    "LOCAL_FUNCTIONAL": {
+      "clearance_mm": 0.3,
+      "creepage_mm": 0.3,
+      "reviewed_package_escape_floor_mm": 0.25,
+      "basis": "Local <=15V differential only, manufacturing/assembly proposal. No safety insulation credit."
+    },
+    "EDGE_SETBACK": {
+      "copper_to_edge_mm": 4.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "basis": "Own fixture/handling reservation; not human touch protection."
+    },
+    "EXTERNAL_BOUNDARY_RESERVATION": {
+      "clearance_mm": 6.4,
+      "creepage_mm": 8.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "basis": "Own space reservation only. Basic/reinforced protection and actual fixture boundary not qualified."
+    }
+  },
+  "exceptions_open": [
+    {
+      "refs": [
+        "U1"
+      ],
+      "pairs": [
+        [
+          "4",
+          "2"
+        ],
+        [
+          "4",
+          "5"
+        ]
+      ],
+      "pad_envelope_gap_mm": [
+        1.94,
+        3.0
+      ],
+      "closure": "Exact differential/package evidence plus local route review or geometry/package change."
+    },
+    {
+      "refs": [
+        "BR1"
+      ],
+      "pairs": [
+        [
+          "3",
+          "4"
+        ],
+        [
+          "1",
+          "2"
+        ]
+      ],
+      "pad_envelope_gap_mm": [
+        1.74,
+        1.74
+      ],
+      "closure": "Component-contained insulation and PCB escape assessment; no blanket waiver."
+    },
+    {
+      "refs": [
+        "D1"
+      ],
+      "pairs": [
+        [
+          "2",
+          "CASE"
+        ]
+      ],
+      "pad_envelope_gap_mm": [
+        2.0
+      ],
+      "closure": "Exact repetitive/impulse stress and component/package/PCB review."
+    },
+    {
+      "refs": [
+        "U4",
+        "U5"
+      ],
+      "pairs": [
+        [
+          "input_row",
+          "output_row"
+        ]
+      ],
+      "pad_envelope_gap_mm": [
+        3.45
+      ],
+      "closure": "Input-output package surface/PCB assessment; isolation test rating alone insufficient."
+    }
+  ],
+  "barrier_record_example": {
+    "id": "EXTERNAL-BOUNDARY-PENDING",
+    "side_a": "all hazardous PCB conductors",
+    "side_b": "defined fixture metal/access region, geometry pending",
+    "working_voltage": 400,
+    "transient_voltage": null,
+    "pollution_degree": 2,
+    "cti": null,
+    "altitude_m": 2000,
+    "clearance_mm": 6.4,
+    "creepage_mm": 8.0,
+    "standard_clause": null,
+    "evidence": "README.md source context plus future exact geometry assessment",
+    "approved_by": null,
+    "warning": "Incomplete proposal intentionally cannot be used as a passing approved barrier record."
+  },
+  "manual_geometry_checks": [
+    "All copper layers, vias, pads, fillets and zone edges counted",
+    "Surface paths around board edges, holes and slots inspected",
+    "Solid dielectric paths not equated with surface creepage",
+    "No low-voltage inference from a net name or small local differential",
+    "Rule precedence and every local package exception checked against actual PCB"
+  ],
+  "stage_acceptance": false,
+  "operative_authority": "routing-and-isolation-proposal.json",
+  "warning": "Historicaldimensions/assignmentsnotapprovedplacementinputs;coordinatedcurrentrecordsgovern."
+}

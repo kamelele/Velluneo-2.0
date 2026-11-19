@@ -1,0 +1,34 @@
+{
+  "status": "ARCHIVAL_RESEARCH_FINDINGS",
+  "original_findings": [
+    {
+      "id": "PCB-PREFLIGHT-01",
+      "severity": "major for spatial/height acceptance",
+      "object": "C5localcourtyard/height",
+      "evidence": "Actualcourt16.5diam, nominalFab16diam/25height. PanasonicEDdeliverydrawingD±.5,L±2 gives16.5diam/27height.",
+      "closure": "Root enlargecourt to>=17.0diam with.25mechanicalmargin and record27max; add >=5mm provisional freeventspace overhead; reconcilelatestdeliveryspec. No existingPCB affected."
+    },
+    {
+      "id": "PCB-PREFLIGHT-02",
+      "severity": "major placement prerequisite",
+      "object": "Thermal and electrical domains",
+      "evidence": "~7–9Wheat; U3theta85K/W,feedlocal90C,relays70Cconditions unvalidated. Productspacing/domains not approved bygenericfabrication0.2mm.",
+      "closure": "Approveindependentspatial/workingvoltage/spacingcontract andreviewcopper/heatregions beforeplacement; actualthermalpass remainslatermeasurement."
+    },
+    {
+      "id": "PCB-PREFLIGHT-03",
+      "severity": "minor geometry metadata",
+      "object": "U4/U5height",
+      "evidence": "Panasonicdimension1.80 withgeneral±.1 drawingtolerance",
+      "closure": "Use>=1.9mm max (2.0mm reservation recommended), not1.8 nominal as max; latestdeliverydrawing governs."
+    },
+    {
+      "id": "PCB-PREFLIGHT-04",
+      "severity": "minor historical metadata",
+      "object": "R19BOMnotes",
+      "evidence": "Approved basis still describesPNPbasecurrent althoughQ2isPMOS; electricalmapandcalculationcorrect.",
+      "closure": "Clarifyinlifecycle/spatialrecord; donotmutateapprovedbasiswithoutnewreview."
+    }
+  ],
+  "current_closure": "pcb-planning/proposal-reviews.json afteractualindependentreview;noopen/closedstatusinferredfromthisarchive"
+}

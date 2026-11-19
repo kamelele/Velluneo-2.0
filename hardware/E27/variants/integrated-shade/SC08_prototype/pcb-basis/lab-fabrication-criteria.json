@@ -1,0 +1,222 @@
+{
+  "scope": "Immutabletechnicalcriteriaseparatefromfutureapproval/evidence/statusmetadata",
+  "requirements": [
+    {
+      "id": "LAB_SCOPE",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Kamil",
+      "text": "Fabrication scope is bare unpowered experimental PCB,0..40C laboratory test vehicle.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Actualowneraccepts thisLAB-fabricationcontract andoriginal17criterioncrosswalk;noassembledsupply/finishedlamp/testresults released.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SCOPE",
+          "path": "pcb-basis/lab-board-boundaries.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_NETLIST",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Retain approved SC08-B circuit exactly.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Actualapprovedintent8be47... andfreshnativeERC0/112pins30nets1NC/47partsremainunchanged;documentonlygeometry/interfacecorrections separately.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_NETLIST",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_DOMAINS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Declare allhazardousdomains andconditionalvoltagematrix.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "All30netscoveredonce;incomingACsourceup1458Vbucket,separateBUS664/VDS680/COUT145conditions,explicitlocal15Vpairs,noSELVorcomplianceclaim.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DOMAINS",
+          "path": "pcb-basis/domain-matrix.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_THERMAL",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Numericallybudgetheatanddesignmeasurementaccess.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Reproduce21caseRF/R7/ripplelosses;allocate8..10W,definepartlocalambient/junction/bodyconditions,U3theta85targetwithoutclaimingachievedtemperature.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_THERMAL",
+          "path": "pcb-basis/thermal-budget-results.json"
+        }
+      ],
+      "method": "calculation",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_PARTS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Document exactpart/pad/bodygeometryforbareboardlayout.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "47verifiednumberedpadsets;C5court>=17height27,C4height2.7,STFig9SMAcorrect;knownlegacyC5procurementriskdoesnotbecomeunapprovedMPNswap.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARTS",
+          "path": "capture-geometry-evidence.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_INTERFACE",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Synchronize experimental output contract.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "EmbeddedandseparateIFC-DRIVER-LEDbothSC08-B145V/1.89225Jwithidenticalpins;actualhealthy/faultoperationstillunperformed.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_INTERFACE",
+          "path": "driver-led-interface.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_SPACING",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Useacceptedexperimentalfunctionalspacingwithscopedpackageexceptions.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Ownerapprovesexactmatrix/exceptioninventory;actualalllayercoppercheckedagainsttargetsanddeclaredescapes. NativeDRCflooraloneisnotcompleteclearance/creepagequalification.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPACING",
+          "path": "pcb-basis/routing-and-isolation-proposal.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_SPATIAL",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Agree independentoutline,regions,height,edge/clampaccess.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Actualowneraccepts independent140x100spatialintentdigest;nativegeometrystaysinsideit,47courtyardsnonoverlap,hot/coolreservationsandheight/accesscheckspass.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPATIAL",
+          "path": "spatial-constraints.proposed.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_DFM",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Savedroutedboardmeetsdeclaredmanufacturinggeometry.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "FreshKiCad10.0.6DRCwithzonesrefilled,zeroerrors/unconnected;allscopedextradistancechecksandcourtyard/thermalaccessreviewscompleted,nohiddenexclusions.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DFM",
+          "path": "SC08_prototype.kicad_pro"
+        }
+      ],
+      "method": "DRC",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_PARITY",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "PCBimplementssameapprovedcircuit.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "All47references/MPNs/values/footprints and112pin-netmembersagreewithfreshschematicexport;noextraelectricalpads/shorts/missingconnections.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARITY",
+          "path": "SC08_prototype.kicad_sch"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_ARTIFACTS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Manufacturingfilesboundtoexactfinalsourceandprocess.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "ReviewedGerbercopper/mask/silk/outlineanddrills,completeBOM/manualassemblydrawing/positions/hashes,FR42L1oz1.6leadfreeHASL;separateactualhumanreleaseapprovalneeded.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_ARTIFACTS",
+          "path": "hardware.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_TEST_BOUNDARY",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Unpoweredfabricationreleasecannotgrantenergizedtestpermission.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Bringupgatepreservesnamedqualifiedhuman/setup/instrument/energy/time/temperaturelimitsandall17originalproductobligationsasOPEN;noCE/optical/EMC/current/thermalqualificationclaim.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_TEST_BOUNDARY",
+          "path": "prototype-validation.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    }
+  ],
+  "original17preserved": "requirements.jsonretainsalloriginalacceptancecriteriaandgates;notclaimedcompletebyLABfabricationrelease"
+}

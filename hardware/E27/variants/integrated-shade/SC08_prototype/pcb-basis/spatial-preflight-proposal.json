@@ -1,0 +1,491 @@
+{
+  "basis": {
+    "base_commit": "910870c38028a6aabff9f38baeabf7d6ae916b8b",
+    "bom_sha256": "1a6d626be01d2b6b09bdfbf23ecea11346ae4a6b954c18047f4d06d2e60aba82",
+    "intent_sha256": "4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809",
+    "native_sha256": "824f61643e8026518b8bdd07ab2df40c6d71d79bf3391c722699126a648f0395",
+    "source": "Actual47localfootprints, no PCB source opened/generated",
+    "not_run": [
+      "PCBplacement",
+      "routing",
+      "DRC",
+      "spatialparity",
+      "thermal simulation",
+      "physicaltests"
+    ]
+  },
+  "scope": "Independent block-level spatial proposal, no saved PCB exists or was used to derive expected positions. Owner schematic acceptance reported byroot; spatial acceptance still required.",
+  "recommended_outline_mm": [
+    140,
+    100
+  ],
+  "outline_comparison": [
+    {
+      "outline": [
+        100,
+        70
+      ],
+      "usable_5mm_edge_margin": [
+        90,
+        60
+      ],
+      "court_area_fraction_usable": 0.5651844444444445,
+      "assessment": "Not demonstrated. Short area count alone cannot accommodate hot/cool separation and working-voltage/testaccess channels."
+    },
+    {
+      "outline": [
+        120,
+        80
+      ],
+      "usable_5mm_edge_margin": [
+        110,
+        70
+      ],
+      "court_area_fraction_usable": 0.3963631168831169,
+      "assessment": "Courtyard-only count plausible, but compact block fit and cooling/measurement clearance not demonstrated; retain as shrink-study after140x100 prototype."
+    },
+    {
+      "outline": [
+        140,
+        100
+      ],
+      "usable_5mm_edge_margin": [
+        130,
+        90
+      ],
+      "court_area_fraction_usable": 0.260854358974359,
+      "assessment": "Recommended initial lab envelope; listed nonoverlapping blockregions independently contain all47references. Packing feasibility ofindividualparts/actualroutes and thermalperformance still unproved."
+    }
+  ],
+  "coordinate_system": "Top view, mm, origin upperleft; rectangles[xmin,ymin,xmax,ymax]. Rectanglesarefunctionalreservations, not exact component placements or validated clearance barriers.",
+  "regions": [
+    {
+      "id": "INPUT_RF",
+      "rect": [
+        24,
+        5,
+        84,
+        20
+      ],
+      "parts": [
+        "RF1",
+        "RF2"
+      ],
+      "reason": "Two25x7courts with10mm longitudinalgap; raised hot bodies, isolated from cool capacitor/control regions"
+    },
+    {
+      "id": "AUX_FEED_HOT",
+      "rect": [
+        95,
+        7,
+        133,
+        26
+      ],
+      "parts": [
+        "R10",
+        "R11",
+        "R12",
+        "R24",
+        "R25",
+        "R28"
+      ],
+      "reason": "Three-by-two2512grid,5mmnominal court gaps; local90C ceiling and proper copper reviewed independently"
+    },
+    {
+      "id": "INPUT_TERMINATION",
+      "rect": [
+        6,
+        17,
+        20,
+        24
+      ],
+      "parts": [
+        "J1"
+      ],
+      "reason": "Edge access; wiring restraint outside electrical pads; corner-mount exclusions win"
+    },
+    {
+      "id": "RECTIFIER_CLAMP",
+      "rect": [
+        28,
+        23,
+        79,
+        31
+      ],
+      "parts": [
+        "BR1",
+        "D3"
+      ],
+      "reason": "Bridge and TVS by filmreturn, TVSloopmustnotcrosssensitivefeedback"
+    },
+    {
+      "id": "FILM_BANK",
+      "rect": [
+        6,
+        34,
+        77,
+        52
+      ],
+      "parts": [
+        "C1",
+        "C2"
+      ],
+      "reason": "Two33.3x15.2courts inrow with4.4mmgap; height28.1; nohousinglimit"
+    },
+    {
+      "id": "POWER_CORE",
+      "rect": [
+        85,
+        33,
+        133,
+        64
+      ],
+      "parts": [
+        "D4",
+        "U1",
+        "D1",
+        "R2",
+        "C3",
+        "C4",
+        "C10",
+        "L2",
+        "L3"
+      ],
+      "reason": "Compactcommutation/sensecell; inductors adjacent towardoutput; exactrelativeplacementrequiresnative preview"
+    },
+    {
+      "id": "QUIET_CONTROL",
+      "rect": [
+        6,
+        64,
+        63,
+        88
+      ],
+      "parts": [
+        "U2",
+        "Q2",
+        "U4",
+        "U5",
+        "R6",
+        "R13",
+        "R14",
+        "R15",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R26",
+        "R27",
+        "C9"
+      ],
+      "reason": "Comparator/divider nearquietDCreturn, relays atSOURCEboundary; neverSELV"
+    },
+    {
+      "id": "SHUNT_THERMAL",
+      "rect": [
+        68,
+        65,
+        100,
+        84
+      ],
+      "parts": [
+        "U3",
+        "R16",
+        "R17"
+      ],
+      "reason": "Reserve608mm2top-levelregion forcontiguousanodeDC_RETURNcopper/oppositeface andthermalvias; not a thermalresistanceproof"
+    },
+    {
+      "id": "R7_HOT",
+      "rect": [
+        69,
+        86,
+        100,
+        95
+      ],
+      "parts": [
+        "R7"
+      ],
+      "reason": "Raised axialbody, distant fromC5andfilms; probeandsolderaccessaroundleads"
+    },
+    {
+      "id": "COUT_COOL",
+      "rect": [
+        111,
+        66,
+        134,
+        88
+      ],
+      "parts": [
+        "C5"
+      ],
+      "reason": "C5corrected17mmcourt,27mmmaxheight; keep bothfaces undercan freeofheaters; topventkeepfree"
+    },
+    {
+      "id": "OUTPUT_TERMINATION",
+      "rect": [
+        116,
+        90,
+        130,
+        95
+      ],
+      "parts": [
+        "J2"
+      ],
+      "reason": "Hazardousoutput atedge, capacitorvoltageprobeaccess separatefromLEDconnector"
+    },
+    {
+      "id": "BLEEDERS",
+      "rect": [
+        104,
+        67,
+        109,
+        87
+      ],
+      "parts": [
+        "R8",
+        "R9"
+      ],
+      "reason": "Two2512courtsrotated90deg fit3.86x7.66each with2mmbetween; separatefromC5canregion, thermal/voltageclearancestillrequiresacceptedcontract."
+    }
+  ],
+  "edge_guard": "Proposed5mmmechanicalcomponentguard exceptapprovedwiredgeaccess; not an electricalclearanceclaim. Mount-hole circles override blockregions.",
+  "mounting_proposal": {
+    "holes_mm": [
+      [
+        6,
+        6
+      ],
+      [
+        134,
+        6
+      ],
+      [
+        6,
+        94
+      ],
+      [
+        134,
+        94
+      ]
+    ],
+    "diameter_mm": 3.2,
+    "all_layer_no_copper_diameter_mm": 10,
+    "fixture": "Insulatingstandoffs, noPE/caseclaim; holecentres/fixturemustbehumanapproved; no actualholescreated."
+  },
+  "height": {
+    "board_top_component_reservation_mm": 30,
+    "C1_C2_verified_max_mm": 28.1,
+    "C5_verified_max_mm": 27,
+    "C5_vent_free_above_mm": 5,
+    "board_bottom_solder_lead_proposal_mm": 3,
+    "standoffs_proposal_mm": 10,
+    "not_enclosure_height": "30mmcomponentreserve isnot a lidheight or ventclearance. AboveC5needs27+5=32mm clear volume. Probe wires/clamps mustnotcrossvent."
+  },
+  "critical_electrical_constraints": [
+    {
+      "id": "PC-BP",
+      "parts": [
+        "U1",
+        "C3",
+        "R6",
+        "R27",
+        "U4",
+        "U5"
+      ],
+      "intent": "C3directBPpin1toSOURCEpins5..8, shortestloop. Goal<=5mm connectionpath; twoindependent100Ractuatorbranchesretainseparatetraces toBP/SOURCEstar. Do notrouteclampthroughDC_RETURN."
+    },
+    {
+      "id": "PC-FB",
+      "parts": [
+        "R2",
+        "D1",
+        "C4",
+        "C10",
+        "U1"
+      ],
+      "intent": "FBpin2 Kelvin toR2SENSE_FBpad/D1cathodestar;SOURCEsensefromR2SOURCEpad. C4/C10directacrosssamestar, avoidinductor/highpulseloopcurrentinmeasurementtrace. D1CASEiscathodeSENSE_FB, notDC_RETURN orSOURCE."
+    },
+    {
+      "id": "PC-COMMUTATE",
+      "parts": [
+        "D4",
+        "U1",
+        "D1",
+        "R2",
+        "L2",
+        "L3",
+        "C5",
+        "C2"
+      ],
+      "intent": "OnloopC2BUS→D4→U1DRAIN→SOURCE→L2/L3→C5→DC_RETURN→C2. OffloopDC_RETURN→D1→R2→SOURCE→L2/L3→C5→DC_RETURN. KeepD4/U1/D1/R2/C2returncompact; separatepowerreturnandanalogKelvinuntilstar. MinimizeSOURCE/SENSE_FBhighdvdtcopper; do notspreadD1thermalcopperundersense/actuatorinput."
+    },
+    {
+      "id": "PC-U3",
+      "parts": [
+        "U3",
+        "R16",
+        "R17",
+        "R18",
+        "C9",
+        "U2"
+      ],
+      "intent": "U3pin2andtabDC_RETURNthermalisland;R16/R17referenceKelvinlocally;R18andC9supplycomparatoratpin5/2. KeepauxfeedheatcurrentsoutofREF/OV_SENSEreturns. 600mm2reservedcopperdoesnotestablishtheta85."
+    },
+    {
+      "id": "PC-DOMAINS",
+      "parts": [
+        "U4",
+        "U5"
+      ],
+      "intent": "PhotoMOSopticalbarrierisfunctionallevelshiftbetweenSOURCEreferencedBPandDC_RETURNreferencedcontrol. EntirePCB/J2hazardousmainsreferenced. Do notlabelinputcontrolsideSELV orclaimuserisolation. RespectbothIOpackagespacingandseparateworking/faultdomaincontract; noarbitrarycourtyardchannelcertifiesmainsclearance."
+    }
+  ],
+  "thermal_rules_proposal": [
+    {
+      "rule": ">=10mm body-edge target fromRF1/RF2/R7/auxfeedhotresistors toC5can, C4/C10 andrelaybodies wherepractical; exactacceptedlocationsneedthermalevidence",
+      "status": "Engineeringgeometrytarget, notguaranteedthermalisolation"
+    },
+    {
+      "rule": "NoheatingcomponentonoppositesideofthePCBunderC5; keepC5ventandcanaccessunobstructed",
+      "source": "PanasonicDMF0000COL69"
+    },
+    {
+      "rule": "RF1/RF2andR7raised3mmproposal, approvedleadformingandappropriateholepitch; noPVCwireoverhotbodies"
+    },
+    {
+      "rule": "AvoidoppositefaceheatstackingbeneathC5/PhotoMOS/senseMLCC. Localtemperatureceilingsmustbemeasured; databoardreferencepowernotthermalproof."
+    }
+  ],
+  "test_access": {
+    "markers_only_no_new_parts": true,
+    "pairs": [
+      [
+        "BUS_PLUS",
+        "DC_RETURN"
+      ],
+      [
+        "DRAIN_BLOCKED",
+        "SOURCE"
+      ],
+      [
+        "SENSE_FB",
+        "SOURCE"
+      ],
+      [
+        "BP",
+        "SOURCE"
+      ],
+      [
+        "COUT_PLUS",
+        "DC_RETURN"
+      ],
+      [
+        "VCC_OV",
+        "DC_RETURN"
+      ],
+      [
+        "OPTO_DRIVE",
+        "DC_RETURN"
+      ]
+    ],
+    "rules": [
+      "Reserve>=5mmmechanicalprobeworkspace around accessiblemeasurementpads; actualHVpadclearanceandprobevoltage/workrulesrequirequalifiedreview.",
+      "PlaceVDSprobeconnectionatU1pins4/SOURCEstarwithshortmatchedloop; notlonggroundlead.",
+      "Do notshortSOURCEtoDC_RETURNwithscopeground; instrument/proceduremustbequalifiedseparately.",
+      "Addingdedicatedelectricaltestpointfootprintschangesphysicalinventory; rootmustupdatetestpointintent/BOMandobtainrequiredapproval. Thisartifactcreatesnoelectricalpads.",
+      "RecordtemperatureaccessforRF1/RF2,R7,feedresistors,U3,U1,L2/L3,C5,U4/U5."
+    ]
+  },
+  "danger_labels": [
+    "LAB PROTOTYPE — HAZARDOUS MAINS REFERENCED",
+    "J2 NOT SELV",
+    "DISCONNECT AND VERIFY C5 VOLTAGE BEFORE HANDLING",
+    "HOT RF1/RF2/R7/AUX RESISTORS"
+  ],
+  "findings": [
+    {
+      "id": "PCB-PREFLIGHT-01",
+      "severity": "major for spatial/height acceptance",
+      "object": "C5localcourtyard/height",
+      "evidence": "Actualcourt16.5diam, nominalFab16diam/25height. PanasonicEDdeliverydrawingD±.5,L±2 gives16.5diam/27height.",
+      "closure": "Root enlargecourt to>=17.0diam with.25mechanicalmargin and record27max; add >=5mm provisional freeventspace overhead; reconcilelatestdeliveryspec. No existingPCB affected."
+    },
+    {
+      "id": "PCB-PREFLIGHT-02",
+      "severity": "major placement prerequisite",
+      "object": "Thermal and electrical domains",
+      "evidence": "~7–9Wheat; U3theta85K/W,feedlocal90C,relays70Cconditions unvalidated. Productspacing/domains not approved bygenericfabrication0.2mm.",
+      "closure": "Approveindependentspatial/workingvoltage/spacingcontract andreviewcopper/heatregions beforeplacement; actualthermalpass remainslatermeasurement."
+    },
+    {
+      "id": "PCB-PREFLIGHT-03",
+      "severity": "minor geometry metadata",
+      "object": "U4/U5height",
+      "evidence": "Panasonicdimension1.80 withgeneral±.1 drawingtolerance",
+      "closure": "Use>=1.9mm max (2.0mm reservation recommended), not1.8 nominal as max; latestdeliverydrawing governs."
+    },
+    {
+      "id": "PCB-PREFLIGHT-04",
+      "severity": "minor historical metadata",
+      "object": "R19BOMnotes",
+      "evidence": "Approved basis still describesPNPbasecurrent althoughQ2isPMOS; electricalmapandcalculationcorrect.",
+      "closure": "Clarifyinlifecycle/spatialrecord; donotmutateapprovedbasiswithoutnewreview."
+    }
+  ],
+  "not_claimed": [
+    "DRCpass",
+    "routedfeasibility",
+    "thermalpass",
+    "standardscompliance",
+    "manufacturingrelease",
+    "human spatial approval"
+  ],
+  "block_rectangle_overlap_check": {
+    "overlaps": [],
+    "interpretation": "Onlyblockreservationrectangleoverlapcheck; not componentpacking, electricalclearance, DRC, mounting-holeclearance orsavedPCBvalidation."
+  },
+  "sources": [
+    {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1258.pdf",
+      "scope": "C5nominalD16L25andgeneraldrawingD±.5/L±2"
+    },
+    {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/DMF0000COL69.pdf",
+      "scope": "No heating component on back of capacitor; keep pressure-relief path free. Our5mmoverheadisproposedreservation, notquotedfactoryminimum."
+    },
+    {
+      "url": "https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf",
+      "scope": "L2/L3diam11height11.5pitch6±.5lead.8±.1"
+    },
+    {
+      "url": "https://mediap.industry.panasonic.eu/assets/download-files/import/semi_eng_rf1a_aqy22_v_cr10.pdf",
+      "scope": "U4/U5flatleadpackage4.45x2.65x1.8generaltolerance±.1"
+    },
+    {
+      "url": "https://search.kemet.com/download/specsheet/R76UR31004030J",
+      "scope": "C1exactmaxbody32.3x14.2height28.1"
+    },
+    {
+      "url": "https://search.kemet.com/download/specsheet/R76QR3330SE30J",
+      "scope": "C2exactmaxbody32.3x14.2height28.1"
+    },
+    {
+      "url": "https://www.st.com/resource/en/datasheet/stth110.pdf",
+      "scope": "D4actualSMAheight2.45manufacturerlands"
+    },
+    {
+      "url": "https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf",
+      "scope": "Q2pinmapandmaxpackageenvelope"
+    },
+    {
+      "url": "https://www.vishay.com/docs/88301/15ke.pdf",
+      "scope": "D3maximum5.3diameter"
+    }
+  ],
+  "status": "ARCHIVAL_RESEARCH_SUPERSEDED_NOT_OPERATIVE",
+  "operative_authority": "layout-reservations.json",
+  "warning": "Historicaldimensions/assignmentsnotapprovedplacementinputs;coordinatedcurrentrecordsgovern."
+}

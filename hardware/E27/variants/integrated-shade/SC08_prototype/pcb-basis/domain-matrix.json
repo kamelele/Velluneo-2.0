@@ -1,0 +1,28 @@
+{
+  "revision": "SC08-insulation-research-1",
+  "status": "proposal_not_approved_not_a_toolkit_contract",
+  "basis_commit": "910870c38028a6aabff9f38baeabf7d6ae916b8b",
+  "all_nets_hazardous_mains_referenced": true,
+  "SELV_domains": [],
+  "domains": [
+    {"id":"AC_FRONT","nets":["AC_L","AC_MID","AC_FUSED","AC_N"],"normal_bucket_Vrms":400,"source_envelope_peak_V":1457.8,"note":"Resistors do not establish upstream insulation protection; conservative full incoming-source bound retained for all four nets pending specific pair analysis."},
+    {"id":"BUS_DRAIN","nets":["BUS_PLUS","DRAIN_BLOCKED"],"normal_bucket_Vrms":400,"BUS_conditional_peak_V":664,"VDS_prototype_target_V":680,"note":"VDS is a pair constraint, not every node-to-earth voltage."},
+    {"id":"SWITCH_FLOAT","nets":["SOURCE","SENSE_FB","BP","BP_RELAY","BP2_RELAY","L2_MID"],"normal_cross_domain_bucket_Vrms":400,"cross_domain_peak_routing_bucket_V":690,"note":"690 is a proposed margin bucket, not a verified maximum. Local SOURCE-referenced subcircuits can use low-differential rules only for explicitly listed pairs; L2_MID is excluded from that concession."},
+    {"id":"OUTPUT_AUX","nets":["COUT_PLUS","LED_PLUS","AUX_FEED1","AUX_FEED2","AUX_FEED3","AUX_FEED4","AUX_FEED5","OV_MID"],"normal_COUT_design_limit_V":123,"conditional_fault_peak_V":145,"note":"OV_MID is around half COUT; not a 12 V control node. Aux ladder fault/pair stresses require analysis before granting adjacent-node exceptions."},
+    {"id":"CONTROL_RETURN","nets":["DC_RETURN","MOS_GATE","OPTO2_A","OPTO_A","OPTO_DRIVE","OV_LOW","OV_SENSE","RAIL_REF","VCC_OV","VDD_COMP"],"normal_local_differential_bucket_V":15,"note":"Local differential only. No safety-low-voltage status and no general single-fault overvoltage qualification inferred."}
+  ],
+  "pair_rules": [
+    {"sides":["AC_FRONT","any_other_domain"],"normal_working_bucket_Vrms":400,"conservative_source_plus_output_peak_V":1605,"rule":"HV_CROSS","exception_required_for_package_pads":true},
+    {"sides":["BUS_DRAIN","SWITCH_FLOAT or OUTPUT_AUX or CONTROL_RETURN"],"normal_working_bucket_Vrms":400,"conditional_routing_peak_bucket_V":690,"rule":"HV_CROSS"},
+    {"sides":["SWITCH_FLOAT","OUTPUT_AUX or CONTROL_RETURN"],"normal_working_bucket_Vrms":400,"conditional_routing_peak_bucket_V":690,"rule":"HV_CROSS"},
+    {"sides":["OUTPUT_AUX","CONTROL_RETURN"],"conditional_peak_V":145,"rule":"OUTPUT_CROSS"},
+    {"sides":["OUTPUT_AUX","OUTPUT_AUX"],"conditional_peak_V":145,"rule":"OUTPUT_CROSS","note":"May be narrowed only by actual pair/component analysis."},
+    {"sides":["CONTROL_RETURN","CONTROL_RETURN"],"normal_differential_bucket_V":15,"rule":"LOCAL_FUNCTIONAL"},
+    {"explicit_nets":["SOURCE","SENSE_FB","BP","BP_RELAY","BP2_RELAY"],"normal_differential_bucket_V":15,"rule":"LOCAL_FUNCTIONAL","note":"Does not include drain, L2_MID, control return or PhotoMOS input side; fault and package analysis still required."},
+    {"sides":["BUS_PLUS","DRAIN_BLOCKED"],"rule":"UNRESOLVED_D4_PAIR","owner":"design engineer","due":"before fabrication acceptance","note":"Require reverse-drain blocking differential analysis, not automatic low-differential waiver."},
+    {"sides":["any_net","ordinary_board_edge"],"rule":"EDGE_SETBACK"},
+    {"sides":["any_net","conductive_hardware_or_external_access_boundary"],"rule":"EXTERNAL_BOUNDARY_RESERVATION"}
+  ],
+  "standard_claim": false,
+  "approval": null
+}

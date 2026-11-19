@@ -1,0 +1,52 @@
+# SC08 laboratory PCB insulation inputs — proposed, not approved
+
+Read-only research against native SC08 at 910870c38028a6aabff9f38baeabf7d6ae916b8b. No board, schematic, requirement or acceptance record was changed. Earlier SC08 input-model contributions overlap this research; this is not a fresh independent certification. Intended use is an unpowered, hand-assembled experimental board, followed by separately authorized laboratory qualification at 0–40 °C. All 30 nets, including DC_RETURN, LED output and comparator supply, are hazardous mains-referenced conductors. PhotoMOS level shifting does not create a SELV output.
+
+## Stage boundary
+
+A separate owner-approved LAB fabrication contract is legitimate. Insulation geometry, electrical design bounds, package exceptions, thermal placement, manufacturing checks and an executable test plan can be required before ordering a bare board. Actual energized waveforms, temperature, surge response and fault performance necessarily follow assembly. Retain the original 17 finished-lamp criteria and findings as outstanding energized/system-release obligations. Do not convert absent measurements into passed calculations or silently change their original acceptance. The owner’s schematic approval is neither PCB placement approval nor authorization to claim compliance.
+
+Before placement, record exact board outline, mounting/test access, both-side keepouts and component height/thermal separation. These are board/fixture inputs; an enclosure design is not required for this bounded board task. Before fabrication, review the actual PCB clearances, surface paths, pad exceptions, routing, manufacturing output and scope crosswalk. Before energizing, accept the fixture, instruments, stop limits and fault-test sequence. A successful bare-board gate does not close that later gate.
+
+## Source basis and limits
+
+* [IEC 60664-1:2020](https://webstore.iec.ch/en/publication/59671) covers insulation coordination, normally through 30 kHz and 2,000 m; the catalogue also identifies its 2025 amendment. Select the exact applicable edition with the product standard.
+* [IEC 60664-4:2005](https://webstore.iec.ch/en/publication/2804) addresses periodic stresses above 30 kHz through 10 MHz, used with Part 1 or Part 5. LYT switching around 66 kHz therefore needs a high-frequency assessment; low-frequency table lookups alone do not establish its insulation adequacy.
+* [TI SLUP419, March 2024](https://www.ti.com/lit/ml/slup419/slup419.pdf), pages 3, 7–11, explains working-voltage creepage versus impulse/altitude clearance. Its examples give PD2/group-III, 400 V creepage of 4 mm and PD2 4 kV clearance of 3 mm below 2,000 m. Material CTI and contamination matter. Solder mask is not assumed to qualify as protective coating. These are secondary explanations from the manufacturer, not a substitute for the controlling standard or evidence of compliance of this board.
+* [IEC 61347-2-13:2024](https://webstore.iec.ch/en/publication/64713), together with Part 1, is the relevant LED controlgear safety family to investigate. A populated controlgear PCB and a complete lamp have different assessment boundaries.
+* [IEC 62560:2011](https://webstore.iec.ch/en/publication/7199) addresses self-ballasted general-lighting LED lamps, over 50 V through 250 V, up to 60 W, with specified caps. A replaceable diffuser/LED architecture requires finished-product classification; it cannot be certified by calling the driver PCB a compliant lamp. EN adoption, applicable editions and any EU harmonization must be checked separately before product release. No invented clause or harmonization claim is made here.
+
+## Proposed numerical routing inputs
+
+The JSON files separate a **design proposal** from standards claims. For a dry, controlled, noncondensing indoor laboratory at altitude ≤2,000 m, use provisional PD2 and conservatively unknown/group-III laminate. Specify actual laminate CTI and environmental suitability with the fabricator before claiming a material group. FR4, 1.6 mm, two layers, 1 oz and HASL alone establish neither CTI nor a reinforced solid-insulation rating.
+
+Suggested external routing defaults: HV cross-domain gaps 3.2 mm through air and 4.0 mm along an uncoated surface; 145 V output/auxiliary to low-control/return 2.0 mm for both; explicitly local ≤15 V differential circuitry 0.30 mm (0.25 mm only where reviewed assembly geometry requires it). These are conservative experiment-layout targets with package exceptions still OPEN. They are not derived mandatory IEC values, not validated for all high-frequency stresses and not an order approval. Do not set a global 0.2 mm clearance and describe it as mains insulation.
+
+The incoming AC source envelope is 357.8 + 1,100 = 1,457.8 V peak; 664 V is the conditional downstream BUS result, not the upstream conductor stress. The matrix uses 1,605 V as a conservative triangle bound between an incoming-source node and an independently ±145 V referenced node. Those bounds apply only to the declared waveform/model and do not replace a rated impulse-category assessment. Normal 400 V RMS routing buckets conservatively cover the unmeasured ≤357.8 V DC/rectified upper envelope plus small bias offsets; exact RMS waveforms remain a test/design obligation.
+
+## Package escape exceptions must be resolved explicitly
+
+Existing footprint copper makes a universal 3.2/4 mm rule impossible. Independent bounding-box distances in the native local footprints are: U1 pad 4→2 1.94 mm, U1 pad 4→5 3.00 mm; BR1 pads 3→4 and 1→2 1.74 mm; D1 anode 2→CASE 2.00 mm; U4/U5 input row→output row 3.45 mm. These are pad-copper distances, not measured component-surface creepage or a dielectric test. Rectangular envelope calculation is conservative for rounded-pad corners and exact on aligned straight edges used here. Component voltage or isolation-test ratings do not alone approve the surrounding PCB route.
+
+For each affected pin pair: identify actual maximum repetitive/impulse differential, obtain the exact manufacturer package insulation basis, examine routing away from pads, pad/lead solder fillets and package surface, then either approve a tightly scoped component escape rule or change footprint/package/topology. Do not grant a board-wide waiver. The PhotoMOS input and output are both hazardous; its input–output withstand specification is not evidence of a reinforced user-access barrier. D4’s two terminals require a specific reverse-differential analysis; do not assign 680 V merely because one terminal is named DRAIN_BLOCKED.
+
+## Physical boundaries
+
+Reserve 4.0 mm copper setback from ordinary board edges on **both layers**, including zones, vias, exposed pads and solder fillets. This is a board handling/fixture layout target, not touch protection. A populated exposed board remains live across its surface. Do not credit 1.6 mm thickness or solder mask as a human-protection barrier.
+
+For conductive mounting hardware, external fixture metal, instrument-ground contacts or a proposed protective/user-access boundary: reserve 6.4 mm air / 8.0 mm surface provisionally and prohibit copper on both layers in the corridor. These larger dimensions reserve space only; they do not prove reinforced insulation, and a separate boundary assessment may require more. Prefer no conductive mounting holes on this prototype. If holes are necessary, specify exact material, screw/washer maximum envelope and both-side keepout; NPTH alone does not guarantee an insulating boundary. Surface paths around the board edge, hole walls, slots and opposite-layer copper require manual examination.
+
+Test pads are hazardous, labelled by net/domain and placed inboard with room for mechanically retained insulated probe contacts; no exposed perimeter probe comb. Define a qualified differential-probe voltage/transient rating for the actual switching stress and source environment; no ordinary earth-referenced scope return connection to DC_RETURN or SOURCE. Instrument isolation and a guarded/interlocked laboratory fixture are test-system responsibilities and do not create product isolation. A fixed safe discharge verification point and procedure are required because C5 can hold 1.89225 J at 145 V/Cmax.
+
+Toolkit net classes express routing minima, not every pair-specific barrier or surface path. Use explicit exact-net memberships, higher-priority pair/area constraints and both-side keepouts; check actual rule precedence. The barrier schema requires source evidence and real approval. Leave standard_clause/approved_by unset until actually established. Do not fabricate a clause or import this research JSON as a passing contract. The spatial generator does not by itself prove creepage around slots/holes or through package surfaces; validate those separately.
+
+## Open inputs and responsible closure
+
+* INS-01 — design engineer: actual cross-pair stress table, D4 reverse stress, package escape decisions and 66 kHz assessment; due before PCB fabrication acceptance, with placement space reserved now.
+* INS-02 — fabricator/design engineer: laminate identity, CTI evidence, solder-mask/coating policy, stackup and fabrication tolerances; due before fabrication contract approval. Until then no coating credit and no specific CTI certification.
+* INS-03 — Kamil/laboratory responsible person: confirm noncondensing PD2-like site, altitude ≤2,000 m, guarded fixture and operator access; due before final fixture/layout acceptance and energization respectively. These conditions are proposals, not inferred approvals.
+* INS-04 — PCB designer: exact outline, hole/hardware envelopes, probe anchors, solder clearances, opposite-layer paths and local exceptions; due before placement approval/final DRC as applicable.
+* INS-05 — test engineer, assignee not yet recorded: write executable startup/OVP/retry/thermal/surge/insulation tests with instrumentation, loads, timing and stop limits; due before energization. Physical results remain later. Limited 1 kV source envelope, 680 V VDS target and 145 V COUT are conditional prototype bounds, not guarantees.
+* INS-06 — product compliance owner, assignee not yet recorded: finished-product classification, applicable standard editions, rated impulse/installation category and eventual accessible-part barriers; due before finished-product release, with any resulting PCB design impact reviewed before reuse.
+
+The stale embedded SC07 135 V interface was reported to the root writer; root is correcting it independently. This research does not edit it.

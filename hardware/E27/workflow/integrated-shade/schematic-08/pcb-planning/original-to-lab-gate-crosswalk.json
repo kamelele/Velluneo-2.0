@@ -1,0 +1,20 @@
+{
+  "status": "PROPOSED_requiresactualowneracceptancebeforecontrollingcontractchange",
+  "original_requirements_file": "requirements.json",
+  "original17criteria_and_gates_preserved": true,
+  "scope_difference": "BareunpoweredPCBtestvehiclecanbeorderedbeforeitsexperimentalenergizedperformanceismeasured. Thisdoesnotreleaseanassembledpowersupplyorfinishedlamp.",
+  "gates_now": [
+    "Approvednativepinmap+reviewedschematic",
+    "Independentacceptedthermal/insulation/spatialandlocalexceptions",
+    "Actualplaced/routedPCBparity+DRC+voltagepairchecks",
+    "Manufacturingfileintegrity+manualassemblydocuments+humanrelease"
+  ],
+  "gates_before_energized_operation": [
+    "Qualifiednamedhumanowner/setup/instruments/stops",
+    "Physicalcurrent/thermal/fault/surgeverificationoriginalrequirements"
+  ],
+  "gates_before_finished_lamp_release": [
+    "All17originalcriteriaandapplicablestandards/optical/EMC/safetyqualification"
+  ],
+  "no_measurement_pass_invented": true
+}
