@@ -1,0 +1,34 @@
+{
+  "scope": "Localnativepatterns verifiedagainstexactprimarydrawing;notPCB/assemblyqualification",
+  "root_writer": "/root",
+  "independent_geometry_actor": "/root/review_simplicity",
+  "actual_independent_check": "VerifiedSTFigure9axisandcentresbyactualread-onlyreview;PMOS/SMA/TVS/1210pinmappingchecked.",
+  "changes": [
+    {
+      "file": "Diode_SMD.pretty/D_SMA.kicad_mod",
+      "before": "e2d049a54ef961e231eb8e7e769078a3c44feb8475a7bdafba01c6646a5144f3",
+      "after": "100ce14ad3b13de1950fcaa532cec8a4a71aff64d2128006551329c789a262eb",
+      "source": "https://www.st.com/resource/en/datasheet/stth110.pdf",
+      "change": "STFigure9lands1.4x1.64,gap2.63,centresX+-2.015;pad1Kleft2Aright. Package height2.45/body4.6x2.9/terminalspan5.35;notgenericlandclaim."
+    },
+    {
+      "file": "Diode_THT.pretty/D_DO-201AD_P15.24mm_Horizontal.kicad_mod",
+      "before": "bdb233d4a0aa686960651824b80dc5ec725843b6749938797734293976825d3b",
+      "after": "74ee663f3c238aea0760efd4c83cec08c077a4cee1bc9d6c3c7fa45c6cd4f335",
+      "source": "https://www.vishay.com/docs/88301/15ke.pdf",
+      "change": "Courtyardwidth5.8mmaccommodatesmaximum5.3mmbodyplus.25mmperedge;15.24pitch,1.6holes,pad1cathodeunchanged. NominalFab/3Dbodyisnotmaxenvelope."
+    }
+  ],
+  "retained_SOT23": "InheritedgenericmanualprototypeSOT23fitsPMV65XPmaxenvelope;differsfrommanufacturerrecommendedlands,assemblyverificationremainsexplicit. 1G2S3D.",
+  "C4_C10": "CL32B226KAJNNNEmaximum3.5x2.7x2.7mm;recordheight2.7mm,notthin1210model.",
+  "D3_height_max_mm": 5.3,
+  "D4_height_max_mm": 2.45,
+  "Q2_height_max_mm": 1.1,
+  "intent_changed": false,
+  "geometry_does_not_qualify": [
+    "thermal",
+    "assembly",
+    "insulation",
+    "physicalfaultbehavior"
+  ]
+}

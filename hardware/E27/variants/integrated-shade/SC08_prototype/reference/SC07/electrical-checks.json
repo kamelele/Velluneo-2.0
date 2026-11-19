@@ -1,0 +1,483 @@
+{
+  "revision": "SC07-C",
+  "kind": "Calculated targeted design response with explicit conditional budgets, NOT measurement or full safety acceptance",
+  "actuator_fault_response": {
+    "LED_open_U4": "R26/U5 and R27 remain a complete driven SOURCE-referenced BP shunt",
+    "output_open_U4": "R27/U5 retains same single-path function; do not credit current sharing",
+    "LED_open_U5": "R21/U4 and R6 remain complete shunt",
+    "output_open_U5": "R6/U4 retains same single-path function",
+    "one_LED_short": "Own1.78k resistor prevents shared drive hardshort; load upper bound deliberately assumes bothVFzero",
+    "one_output_terminal_short": "Commands persistent driver shutdown through its own100ohm; dark failure, no direct C5 dump",
+    "not_covered": [
+      "SharedU2/U3/Q2/divider/feed/trace failures",
+      "PhotoMOS interterminal insulation failure or arbitrary partialinternalshort",
+      "LYT power switch failedshort or loss ofcurrentregulation",
+      "Productwide singlefault qualification"
+    ]
+  },
+  "OVP": {
+    "rising_V": [
+      126.21621380507696,
+      131.00204660690875
+    ],
+    "falling_V": [
+      107.20090302548158,
+      115.3479648389712
+    ],
+    "independent_window_min_V": 10.868248966105767,
+    "external_hysteresis_R_ohm": 243000,
+    "VOPTO_on_budget_V": [
+      10.9,
+      12.75
+    ],
+    "meaning": "Recomputed using full-temp comparator thresholds and0.3%perprecisionarm budgets. PNP/rail bounds remain required design conditions."
+  },
+  "auxiliary": {
+    "feed_parts": 6,
+    "each_ohm": 845,
+    "total_ohm": 5070,
+    "exact_grade": "CRCW2512845RFKEGHP1.5W",
+    "min_feed_at_worst_falling_threshold_A": 0.017907689544394735,
+    "max_load_breakdown": {
+      "two_LED_paths_A": 0.014918090905580772,
+      "base_drive_total_A": 0.001207009173269717,
+      "OPTO_pulldown_A": 0.0002824915086375933,
+      "hysteresis_A": 5.262701685302822e-05,
+      "rail_divider_A": 0.0002649023133763202,
+      "reference_input_extra_conservative_A": 6.5e-06,
+      "comparator_A": 1.3e-05
+    },
+    "max_load_A": 0.01674462091771743,
+    "remaining_shunt_A": 0.0011630686266773035,
+    "required_operating_shunt_A": 0.001,
+    "normal120V_feed_A": 0.021272189349112423,
+    "previous_normal120V_feed_A": 0.0107925,
+    "normal120V_aux_input_W": 2.552662721893491,
+    "added_normal120V_aux_input_W": 1.2575627218934908,
+    "each_feed_max135V_W": 0.5497822436787417,
+    "each_feed_allowed100C_W": 0.9705882352941176,
+    "temperature_interpretation": "100C is local ambient for rated dissipation, not achieved resistor body or film temperature. Proper land/thermalboardconditions and actual temperature still need verification."
+  },
+  "input_branches": {
+    "each_R_ohm": 1780,
+    "grade": "CRCW08051K78FKEAHP0.5W",
+    "LED_min_A": 0.0050763230571993605,
+    "LED_max_conservative_zeroVF_A": 0.007459045452790386,
+    "short_fault_each_W": 0.09510282952307741,
+    "HP0805_allowed125C_W": 0.17647058823529413,
+    "original_ordinary0805_allowed125C_W": 0.04411764705882353,
+    "reason_for_HP_change": "Ordinary0805can exceed its hot derated power in an LED-short fault. HPgrade deliberately selected.",
+    "PNP_VCE_budget_V": 0.65,
+    "LED_VFmax_budget_V": 1.5,
+    "qualification_limits": "VFmax, PhotoMOSRon/timing andPNP saturation test conditions are not relabelled fulltemperature guarantees."
+  },
+  "Q2_drive": {
+    "R19_ohm": 11000,
+    "R20_ohm": 10000,
+    "base_feed_min_A": 0.0008957206400251677,
+    "R20_current_subtracted_base_min_A": 0.0008019999277477543,
+    "collector_max_A": 0.015253209431071394,
+    "worst_forced_beta": 19.01896609131472,
+    "allowed_budget_VCE_V": 0.65,
+    "note": "SubtractR20current; 10mA/0.5mAand100mA/5mA25Ctestpoints do not prove a full-temperature saturation bound at new condition. Qualification remains OPEN."
+  },
+  "open_load_retry_conditional": {
+    "max_drain_A": 0.03224831377967391,
+    "off_interval_min_s": 0.04044211070517188,
+    "frequency_upper_Hz": 24.72670151392757,
+    "target_Hz": 25,
+    "old330k_hysteresis_not_reused": true,
+    "conditions": "Successful surviving-actuator shutdown and statedrail/dropbounds. Includes capacitor leakage. No AC-reset-only behavior is added."
+  },
+  "normal_headroom_conditional": {
+    "load_max_derived_A": 0.08979981599712941,
+    "proposed_driver_charge_window_max_A": 0.09,
+    "delivery_window_s": 0.01,
+    "Cmin_F": 0.00012,
+    "full10ms_droop_V": 7.5,
+    "peak_requirement_V": 122.7524525,
+    "peak_limit_V": 123,
+    "critical_note": "Full10ms deliverygap is a steadyhealthy-operation ASSUMPTION requiring actualmodel/benchcorrelation.90mAover20msdoesNOTgive thisdroopbound;20msgapwouldrequire130.25VandFAIL. No changeofsiliconlimit silentlyinferred."
+  },
+  "current_seed_and_sensitivity": {
+    "R2_ohm": 28.7,
+    "part": "CRCW120628R7FKEAHP",
+    "grade_W70C": 0.75,
+    "nominal_fixed110V": {
+      "Iout": 0.0783527042257699,
+      "Iinavg": 0.03733798701042949,
+      "ILrms": 0.13732059463728774,
+      "Ipeak": 0.37500000000000006
+    },
+    "cases": [
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0024,
+          "f": 62000.0,
+          "ilim": 0.35,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.0739377002384321,
+          "Iinavg": 0.03615243662303548,
+          "ILrms": 0.12838927864172195,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0024,
+          "f": 62000.0,
+          "ilim": 0.35,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08340425026900615,
+          "Iinavg": 0.0402495468471478,
+          "ILrms": 0.1366507741527162,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0024,
+          "f": 62000.0,
+          "ilim": 0.504,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.0763885187860925,
+          "Iinavg": 0.03765804892096215,
+          "ILrms": 0.15404325939802316,
+          "Ipeak": 0.504
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0024,
+          "f": 62000.0,
+          "ilim": 0.504,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08723447682559596,
+          "Iinavg": 0.04263650223878654,
+          "ILrms": 0.16581220883991515,
+          "Ipeak": 0.504
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0024,
+          "f": 70000.0,
+          "ilim": 0.35,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.07352543954744313,
+          "Iinavg": 0.035763581879037144,
+          "ILrms": 0.12796218747803584,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0024,
+          "f": 70000.0,
+          "ilim": 0.35,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08332759700051565,
+          "Iinavg": 0.04009178680693151,
+          "ILrms": 0.1367120327411495,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0024,
+          "f": 70000.0,
+          "ilim": 0.504,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.07597022531717158,
+          "Iinavg": 0.037269426838423964,
+          "ILrms": 0.1532338009243224,
+          "Ipeak": 0.504
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0024,
+          "f": 70000.0,
+          "ilim": 0.504,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08756478097281946,
+          "Iinavg": 0.04278070098305183,
+          "ILrms": 0.16606386886657595,
+          "Ipeak": 0.504
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0033,
+          "f": 62000.0,
+          "ilim": 0.35,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.07280195462030979,
+          "Iinavg": 0.03514634001373571,
+          "ILrms": 0.12749721150284135,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0033,
+          "f": 62000.0,
+          "ilim": 0.35,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08306035657754182,
+          "Iinavg": 0.039758654567799305,
+          "ILrms": 0.13687185431387788,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0033,
+          "f": 62000.0,
+          "ilim": 0.504,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.07522234953199075,
+          "Iinavg": 0.03659776191979451,
+          "ILrms": 0.15107196542174492,
+          "Ipeak": 0.504
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0033,
+          "f": 62000.0,
+          "ilim": 0.504,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08620879261116626,
+          "Iinavg": 0.04167843753593596,
+          "ILrms": 0.1646795487118603,
+          "Ipeak": 0.5040000000000001
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0033,
+          "f": 70000.0,
+          "ilim": 0.35,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.07365895943104271,
+          "Iinavg": 0.035658165733609325,
+          "ILrms": 0.12837454404576915,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0033,
+          "f": 70000.0,
+          "ilim": 0.35,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08271308192267081,
+          "Iinavg": 0.03940176149347239,
+          "ILrms": 0.13710594542906288,
+          "Ipeak": 0.35000000000000003
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.987,
+          "L": 0.0033,
+          "f": 70000.0,
+          "ilim": 0.504,
+          "vth": 1.54,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.07454471481913258,
+          "Iinavg": 0.03605559952620285,
+          "ILrms": 0.15011493551375296,
+          "Ipeak": 0.504
+        }
+      },
+      {
+        "inputs": {
+          "R": 28.413,
+          "L": 0.0033,
+          "f": 70000.0,
+          "ilim": 0.504,
+          "vth": 1.76,
+          "vout": 123.0,
+          "vac": 253.0,
+          "tmin": 6.75e-07
+        },
+        "results": {
+          "Iout": 0.08509837388350644,
+          "Iinavg": 0.040817774417315385,
+          "ILrms": 0.16286373211542657,
+          "Ipeak": 0.5040000000000001
+        }
+      }
+    ],
+    "case_count": 16,
+    "min_A": 0.07280195462030979,
+    "max_A": 0.08756478097281946,
+    "limits": "Ownfixed-output/idealsource/sampleholdmodel,16illustrative25Csensitivitycases; no actualpi,currentfulltempguarantees,reversecurrent,startup,ESR/DCR/nonlinearL,jitter orswitchingloss. NotPIXls. No guarantee90mA."
+  },
+  "samplehold": {
+    "part": "CL21A226MOCLRNC",
+    "required_Ceff_F": 1.135327649883118e-05,
+    "nominal_tol_temp_C_F": 1.496e-05,
+    "allowed_fraction_remaining_after_bias_and_aging_min": 0.758908856873742,
+    "local_temperature_limit_C": 85,
+    "status": "OPEN effectiveC/hot qualification. Localboundaryspecified, notmeasured."
+  },
+  "BP_each_surviving_path": {
+    "series_ohm_min": 96.03,
+    "CBP_max_assumed_f": 1.2e-07,
+    "BP_initial_max_v": 6.1,
+    "initial_current_bound_a": 0.06352181609913568,
+    "CBP_energy_j": 2.2325999999999996e-06,
+    "BP_charge_current_max25c_a": 0.0075,
+    "steady_BP_positive_bound_v": 0.7896,
+    "UV_boundary_min_derived_v": 4.35,
+    "note": "RemovedD2/SCRBP-to-groundpath,positiveBPclamp. HotrelayRonandBPchargingcurrentaretestinputs,notrelabeled25Cguarantees.",
+    "claim": "Each branch independently must satisfy the single-path limit. Two parallel paths are NOT credited for safety or responsebudget."
+  },
+  "passive_discharge_unchanged": {
+    "bleeders_parallel_ohm_nominal": 28000,
+    "each_max135v_w": 0.3389007899317178,
+    "normal135_to5_s": 17.28044182218969,
+    "one_open135_to5_s": 34.56088364437938,
+    "target_one_open_s": 40,
+    "assumptions": "ACremoved,nootherenergysource;remainingbleedercontinuous;notcertifiedaccessiblecontactlimit;capleakage/auxdrainignoredtoconservativelylengthentime."
+  },
+  "output_energy_and_R7_unchanged": {
+    "Cmax_f": 0.00017999999999999998,
+    "Vmax_requirement": 135,
+    "energy_j": 1.6402499999999998,
+    "RINS_min_ohm": 433.10499999999996,
+    "healthy60v_peak_a": 0.17316816938155877,
+    "one_short58v_peak_a": 0.17778598723173367,
+    "entire_short_peak_a": 0.3117027048868058,
+    "entire_short_peak_w": 42.07986515971878,
+    "RINS_nominal55mA_w": 1.4217499999999998,
+    "RINS_max60p5mA_w": 1.86052337625,
+    "pulse_qualification": "AC05roomtemperature50W5stestonlycomparisonscreen;hot/repetitivepulseandcontinueddriverenergyremainqualification."
+  },
+  "RF_temperature_correction": {
+    "TCR_abs_per_K": 0.0004,
+    "Rmin100C_ohm": 202.73,
+    "Rmin125C_ohm": 200.64,
+    "Rmin155C_ohm": 198.13199999999998,
+    "scope": "Explicittemperature-dependentcornerequations,notachievedtemperatures."
+  },
+  "dynamic135V_screen": {
+    "trip_max_V": 131.00204660690875,
+    "imposed_Ipeak_A": 0.7,
+    "imposed_latency_s": 0.0006,
+    "calculated_peak_V": 134.5475772410899,
+    "limit_V": 135,
+    "status": "Conditional only; fulltemperaturecurrent/delaybounds missing."
+  },
+  "checks": {
+    "at_least5mA_each_input_under_explicit_drop_budgets": true,
+    "reference_ge1mA_even_zero_VF_conservative_load": true,
+    "feed_each_below_HP100C_power_limit": true,
+    "LED_input_short_below_HP0805_125C_power_limit": true,
+    "min_independent_hysteresis_positive": true,
+    "conditional_retry_upper_below25Hz": true,
+    "proposed90mA_sufficient_for_total_load_budget": true,
+    "conditional_full10ms_droop_below123V": true,
+    "25C_sense_power_below_HP125C_rating": true,
+    "conditional_forced_beta_no_more20": true
+  },
+  "not_closed": [
+    "ActualLYTfulltemperatureIpeak/charge/currentlimit",
+    "InputnonlinearL/inrush/reversedrain and windinginsulation",
+    "HotTVS+loopovershoot below700V",
+    "PhotoMOShotoperation/delay/PNPsaturation/startup",
+    "C4effectivecapacitance and localtemperature",
+    "Standards/domainagreement and completephysicalfaultqualification"
+  ]
+}

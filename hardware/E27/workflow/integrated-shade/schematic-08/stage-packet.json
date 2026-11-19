@@ -1,41 +1,29 @@
 {
-  "revision": "SC08-B",
-  "status": "Reviewedengineeringproposal; awaitingactualnew-mapandboundedprototypescope technicaldecision",
-  "base_commit": "a6c7ed424a6aa882ef7e5b46899955d3d928f09d",
-  "frozen_input_manifest_sha256": "d2329a615ff73d1ba9ebce8e299653a06341cc40931b92ed94c8510919084429",
+  "revision": "SC08-Bnativeworkingcapture",
+  "status": "Nativecapturecompleteandreviewed;engineering/schematic-stageacceptance remainsopen",
+  "base_commit": "7d4a2b43dc7543141256cb1565ca6318f8441927",
+  "frozen_input_manifest": "capture-review-inputs.json",
+  "frozen_input_sha256": "b68350439795b64f05ffb2f1bdd412aaf22ebf0e9bd1b5da0431f3a20cea8133",
   "intent_digest": "8be47de3f17c30ea9a07f16a6a6a85a7a51511d35990cbc8c5f02e8aa143e574",
-  "actual_scope_approval": "SC08_prototype/owner-prototype-scope.json:labprototype0..40C only",
-  "actual_new_map_approval": null,
+  "actual_capture_approval": "capture-owner-decision.json;actualuserSC08-B+145V+limitedenvelopeapproval",
   "schematic_stage_approval": null,
   "PCB_approval": null,
-  "native_SC08_schematic": false,
+  "native_SC08_schematic": true,
   "PCB_created": false,
   "parts": 47,
   "pins": 112,
   "nets": 30,
   "NC": 1,
-  "review_reports": "reviews.json",
-  "closed_calculation_corrections": [
-    "SC08-RC-001:OFFnode.47833VunderexplicitVGS0/hotleak+5uAbudget;gateoffstillrequiresqualification",
-    "SC08-ROOT-01:132Venergyinitialceilingabove131.086Vtripmax"
-  ],
-  "conditional_analytical_results": [
-    "InputRCpeakconnection.903A",
-    "TVSopenBUS663.947Vforchosen1100V3us/60ustail",
-    "Outputenergy141.846Vforchosenpulse/.6ms/imposedcurrent",
-    "Shunt1.299mA,retry24.029Hz,U3Tj122.671at80C85K/W"
-  ],
+  "fresh_checks": "capture-checks/summary.json:ERC0,independentgraph112/30/1NCand47padinventoriesPASS",
+  "requirements": "FAIL14 originalqualification/review findings; capture-checks/requirements.json",
+  "work_check": "FAIL15 includesmissingPCBsource; noartificialboardplaceholder",
+  "actual_four_capture_reviews": "capture-reviews.json",
+  "geometry": "STFig9D4lands,D3courtyardcorrectedandindependentlyreviewed;C4/C10height2.7mm;genericSOT23manualprototypebasisexplicit",
   "not_closed": [
-    "ActualLEDcurrent/temperature/rippleandcalibration",
-    "Hotgate/PhotoMOStimingandshutdown,Ceff",
-    "Continuous/pulse/repeatedfaultRF/R7heat andsinglefaultcontainment",
-    "Actualsurgeallpolarities/commonmode/source/parasitics andEMC",
-    "Insulation/domain/spatialcontracts andfinishedlampqualification"
+    "ActualLEDcurrent/calibration/hotPhotoMOStiming/Ceff",
+    "Continuous/repeatedfaultheating andactualsurge/thermalqualification",
+    "Insulation/domain/spatialcontracts andfinishedproductobligations"
   ],
-  "new_technical_decisions_needed": [
-    "ExactSC08-Bmap",
-    "Experimental145Vfaultceilinginsteadof135V",
-    "Limitedspecified1kVengineeringtestenvelope,notgeneral2kVclaim"
-  ],
-  "next": "Actualnewmapdecision enablesnativecapture. Obtainexplicitreviewedboundedprototype schematicacceptanceandspatialintentbeforeplacement. Routing/releasechecks before manufacturingfiles; no order yet."
+  "scope": "Laboratoryprototype0..40C;145Vexperimentalceilingandlimited1kVenvelope approveddesigninputs,notphysicalresults",
+  "next": "Presentboundedprototype schematicstagepacketwithunresolvedconditions;obtainactualrequiredacceptanceandindependentapprovedspatial/insulationintentbeforePCBplacement. Noorderormainstests."
 }

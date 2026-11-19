@@ -1,12 +1,12 @@
 # SC08-B experimental power-board proposal
 
-This is a new independently specified change map, not a new native schematic or an orderable board. SC07-C remains intact at commit a6c7ed424a6aa882ef7e5b46899955d3d928f09d. The actual owner selected a laboratory prototype, ambient 0..40C, with component temperatures measured on the prototype. That scope is not new-map, schematic, placement or release approval.
+This is the owner-authorized SC08-B native working schematic, not an orderable board. Open SC08_prototype.kicad_pro; portable local libraries are included. SC07-C remains intact at commit a6c7ed424a6aa882ef7e5b46899955d3d928f09d. The actual owner selected a laboratory prototype, ambient 0..40C, with component temperatures measured on the prototype. That scope is not new-map, schematic, placement or release approval.
 
 ## Selected corrections
 
 Remove input L1/R1. Keep the existing film capacitors in parallel (430nF); use two TE FWFU2W220RJ series input resistors. Add STTH110A (pin1cathode to U1DRAIN, pin2anode to BUS_PLUS). Replace D3 by Vishay1.5KE440A-E3/54. Replace Q2 by PMV65XP,215 (1G2S3D). Replace C4 by CL32B226KAJNNNE22uF25VX7R1210 and add parallel C10 of the same part. Change R22 to TNPW1206210KBYEA210k and R23 to RC0805FR-074K3L4.3k for the recalculated hysteresis. Six auxiliary feed resistors change from845ohm to715ohm (CRCW2512715RFKEGHP). Their localambient condition is90C maximum; U3 effective thermal resistance must not exceed85K/W. R23limits100uAhotleakage plus5uAreserve toanOFFnode below0.5V, conditional on gateOFFstate. Other SC07 functionality, both separately fed PhotoMOS paths, base150uF160V reservoir and470ohm5W reconnect resistor remain.
 
-The new map contains47positions112physicalpins30nets andoneNC. Review complete physical-pin-intent.csv. New part identities and footprint geometry must be checked at capture; generic library identifiers are proposals, not a claim of completed native pad verification.
+The approved map contains47positions112physicalpins30nets andoneNC. Review complete physical-pin-intent.csv. New part identities and footprint geometry must be checked at capture; generic library identifiers are proposals, not a claim of completed native pad verification.
 
 ## What is actually calculated
 
@@ -28,6 +28,8 @@ All17 original product requirements remain controlling for the finishedlamp; ori
 
 ## Next controlled step
 
-Actual owner approval of this exact new map and the explicit experimental145V/test-envelope proposal is needed before native capture. Then regenerate/check the schematic, present its stage packet, and obtain actual schematic acceptance before placement. The toolkit requires independent spatial intent before PCB placement and routing/release reviews before manufacturing files. No Gerbers, purchase or energized tests are authorized by this packet.
+Actual owner approval of this exact new map and the experimental145V/test-envelope proposal is recorded in owner-capture-approval.json. Native capture is completed and checked; schematic-stage acceptance and approved spatial/insulation intent are still required before placement. The toolkit requires independent spatial intent before PCB placement and routing/release reviews before manufacturing files. No Gerbers, purchase or energized tests are authorized by this packet.
 
 Primary sources: Nexperia PMV65XP product data12Feb2013; Samsung CL32B226KAJNNN official product page; ST STTH110 DS3067; Vishay88301Rev09Aug2022; TE6-2176792-5; PowerIntegrations LYT0RevB/AN60. Exact URLs are retained in the BOM and research records. Research actors and evidence limits are disclosed in workflow/schematic-08 review records.
+
+Native capture checks are retained in workflow/integrated-shade/schematic-08/capture-checks. Requirements retain all17 original obligations; imported historical evidence is isolated under reference/SC07 and is not SC08 qualification. No PCB or physical test has been created/performed. Generic fabrication rules are not mains insulation rules.

@@ -1,3 +1,3 @@
-# SC08-B laboratory prototype correction proposal
+# SC08-B native working schematic
 
-Actual owner scope is a laboratory prototype at0..40C. The final47-position/112-pin map remains unapproved; noSC08CADorPCB exists. Read stage-packet.json, the frozen27-file review-inputs.json and allfouractualreports inreviews.json. Root owns shared design files; research actors have explicitly disclosed overlap. SC07/main remain untouched. Original17finishedproductrequirements remain retained and unmet qualification evidence is not relabelledpassed.
+Actual owner approved the exact SC08-B map, experimental145V ceiling and limited1kV envelope for laboratoryprototypecapture. NativeSC08_prototype.kicad_sch/project, local libraries and fresh checks are frozen in capture-review-inputs.json. Allfouractualnativecapture reviews are in capture-reviews.json; earlierproposal records are historical. ERC0,112pins/30nets/1NC and47padinventories pass. Fullrequirements14/work15 findings remain; noPCB/order/testapproval. Rootsolewriter,SC07andmainpreserved. Geometry corrections and maximumcomponentheights are explicit; no layout/thermalperformance inferred.
