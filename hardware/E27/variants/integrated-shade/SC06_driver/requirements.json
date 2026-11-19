@@ -336,7 +336,11 @@
       "owner": "Kamil",
       "question": "Confirm fabrication/assembly proposal after schematic shortlist and expected THT/SMT scope.",
       "blocks_stage": "specification",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "FR4, 2 layers, 1 oz, 1.6 mm, lead-free HASL, bare JLCPCB with manual prototype assembly. No order or PCBA service approval.",
+      "evidence_ids": [
+        "EV-OWNER-CHOICES"
+      ]
     },
     {
       "id": "OPEN-LINE",
@@ -345,14 +349,18 @@
       "owner": "Kamil",
       "question": "Confirm EU/Poland 230V 50Hz only as the first target market.",
       "blocks_stage": "schematic",
-      "status": "open"
+      "status": "resolved",
+      "resolution": "230 V / 50 Hz, Poland and EU, calculation range 207-253 V",
+      "evidence_ids": [
+        "EV-OWNER-CHOICES"
+      ]
     },
     {
       "id": "OPEN-PART",
       "record_id": "REQ-PARTS",
       "field": "implementation",
       "owner": "Codex-root",
-      "question": "Select documented HV9961-based implementation with external protection, or obtain full BP2863XJ data and sourcing before selecting integrated implementation. No IC selected yet.",
+      "question": "SC06-B selects LYT0006D-TL and exact 42-position BOM. Confirm procurement and operating/current/surge/thermal qualification; selection alone does not close acceptance.",
       "blocks_stage": "schematic",
       "status": "open"
     },
@@ -361,7 +369,7 @@
       "record_id": "REQ-POWER",
       "field": "acceptance",
       "owner": "Codex-root",
-      "question": "Select actual LED series/MPN/bins/CCT and cold/hot voltage/current/thermal envelope.",
+      "question": "Proposed 30S Cree JB2835BG, D8 flux/AC voltage bins, 2700 K CRI80, 50-60.5 mA. Confirm reel bins and cold/hot/current envelope; about 800 lm remains unmeasured.",
       "blocks_stage": "schematic",
       "status": "open"
     },
@@ -379,7 +387,7 @@
       "record_id": "REQ-FAULT",
       "field": "acceptance",
       "owner": "Codex-root",
-      "question": "Derive numeric startup/reconnect/open/short/thermal/energy acceptance limits from actual component and assembly limits.",
+      "question": "Numeric conditional screens are in electrical-calculations.json. Resolve failed-open PhotoMOS containment and establish validated current, BP timing, surge and thermal limits before schematic acceptance.",
       "blocks_stage": "schematic",
       "status": "open"
     },
@@ -429,5 +437,22 @@
       "status": "open"
     }
   ],
-  "evidence": []
+  "evidence": [
+    {
+      "id": "EV-OWNER-CHOICES",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Kamil via actual chat replies; transcribed by Codex root",
+      "intent_digest": "fb53021ce02b6b1e77d8b4a08fcb32d45d5f7edea15af2c46f6cdcd83c2a18dc",
+      "artifact": "owner-process-line-decision.json",
+      "sha256": "35f0462ddaf81b8c60d203754702dead166d01aed3183c5b2a0037f8640b48f3",
+      "inputs": [
+        {
+          "path": "owner-capture-approval.json",
+          "sha256": "778c3c96f1d17e08f1547deae1649d4e5e4187b21bc3a217f9744b9092e30da8"
+        }
+      ],
+      "scope": "Only resolution of OPEN-LINE and OPEN-PROCESS; not complete REQ-MAINS/REQ-PROCESS qualification."
+    }
+  ]
 }

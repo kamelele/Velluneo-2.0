@@ -1,13 +1,24 @@
 {
-  "revision": "SC06-B",
-  "intent_digest": "38430110659351233c9d8b33fe0acdcc1f70ba43eaae69d7a2e33001ea95feec",
-  "human_approval": null,
-  "current_step": "Exactindependentcaptureintentreadyforfourroleinspection;humanapprovalneededbeforegeneration",
-  "native_schematic_generated": false,
-  "ERC": "not_run_no_schematic_yet",
-  "PCB": "notgenerated",
-  "requirements_report": "requirements-check-pre-capture.json",
-  "unresolved_requirements_do_not_mean_enclosure_work_is_needed": true,
-  "planned_process": "JLCbarePCBFR4/2L/1oz/1.6mm/leadfreeHASL+manualprototypeassembly,unapprovedplanningproposal",
-  "all_original_17_requirements_controlling": true
+  "revision": "SC06-B native capture",
+  "frozen_input_manifest": "capture-review-inputs.json",
+  "frozen_input_sha256": "75c18befa5a936b2b2323e19605f0510b28d3dc47ced1364d2ba704f330e94f1",
+  "human_capture_approval": "owner-decision.json",
+  "schematic_stage_human_approval": null,
+  "current_step": "Native working schematic and libraries captured and reviewed; engineering acceptance BLOCKED, no PCB generated.",
+  "native_schematic_generated": true,
+  "ERC": "0 violations, capture-checks/erc.json",
+  "connectivity": "PASS 100 pins, 26 conducting nets, one NC",
+  "footprint_pad_inventory": "PASS 42 assignments, 18 unique patterns; does not certify geometry/assembly",
+  "requirements": "FAIL 18 errors; capture-checks/requirements.json",
+  "work_check": "FAIL 19 errors; capture-checks/check.json. Includes missing board source because no board exists at this stage.",
+  "actual_four_reviews": "capture-reviews.json",
+  "prototype_process": "Actual owner approved FR4 2L 1oz 1.6mm lead-free HASL, bare JLCPCB and manual prototype assembly; no order.",
+  "major_open_findings": [
+    "Failed-open PhotoMOS defeats sole active OVP; independent containment or reviewed safety argument required.",
+    "Current/startup/dynamic shutdown/surge/thermal/fault limits not physically qualified.",
+    "Standards/insulation domains and structured load interface unresolved."
+  ],
+  "all_original_17_requirements_controlling": true,
+  "next_scope": "Resolve engineering blockers and obtain actual schematic-stage decision before placement. Enclosure fit remains outside present board-only task.",
+  "approval_limitation": "Approval to capture is not acceptance of a safe or functioning product."
 }

@@ -1,0 +1,33 @@
+{
+  "revision": "SC06-B native schematic draft",
+  "intent_digest": "38430110659351233c9d8b33fe0acdcc1f70ba43eaae69d7a2e33001ea95feec",
+  "ERC": {
+    "violations": 0,
+    "tool": "KiCad 10.0.6"
+  },
+  "connectivity": {
+    "passed": true,
+    "pins": 100,
+    "nets": 26,
+    "no_connects": 1
+  },
+  "footprint_inventory": {
+    "passed": true,
+    "components": 42,
+    "tool": "matching pcbnew 10.0.6"
+  },
+  "requirements": {
+    "passed": false,
+    "errors": 18,
+    "report": "requirements.json"
+  },
+  "work_check": {
+    "passed": false,
+    "errors": 19,
+    "report": "check.json",
+    "note": "Includes full requirements blockers and mandatory board-source inventory: no board has been created at this schematic stage. No fabricated placeholder board."
+  },
+  "native_capture_correction": "First exported comparison found C4 swapped-side hardwire to SOURCE/SENSE_FB. Actual CAD orientation/wiring corrected to approved pin intent; final fresh comparison passes. Approved graph was not edited to match CAD.",
+  "visual_review": "A2 PDF exported from final native CAD and rendered/inspected at full page and detailed crops. Final D1 duplicate pin-name text suppressed without altering physical pins/nets.",
+  "acceptance": "No schematic-stage, placement, PCB, release or safety acceptance. Failed-open PhotoMOS containment and listed engineering gates remain open."
+}

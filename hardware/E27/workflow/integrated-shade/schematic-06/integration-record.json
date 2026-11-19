@@ -1,12 +1,17 @@
 {
   "writer": "/root",
-  "task": "SC06-B",
+  "task": "SC06-B native capture",
+  "parent_commit": "158c6f9b041a933c43ddd611a0d8a1dfaa34434b",
   "independent_physical_intent_digest": "38430110659351233c9d8b33fe0acdcc1f70ba43eaae69d7a2e33001ea95feec",
-  "exact_human_approval": null,
-  "human_question_status": "Askedcurrentchat:approveexactSC06-Bmapandprototypeprocess;awaitingreply",
-  "native_schematic_generated": false,
-  "why": "PinnedToolkittemplates/project/AGENTS.mdrequiresrealhumanexactintentdecisionbeforegeneration;notfabricatedfromgenericdesignauthorization",
-  "independent_work_done": "42-componentlibrarypreparedlocallyandparsed/exportedbyKiCad10.0.6;notyetcapturedorclaimedreviewedprojectCAD",
-  "machine_checks": "doctorpassed,7conditionalarithmeticscreenstrue,requirementsstagecheckFAILED20errors",
-  "acceptance": "Pre-captureengineeringdeliverableonly;noPCB/routing/manufacturing/mains-testacceptance"
+  "exact_human_approval": "Actual owner-decision.json, exact pin graph capture and manual prototype planning only",
+  "native_schematic_generated": true,
+  "source_manifest_sha256": "75c18befa5a936b2b2323e19605f0510b28d3dc47ced1364d2ba704f330e94f1",
+  "reviews": "capture-reviews.json",
+  "corrections": [
+    "C4 actual CAD hardwire/orientation corrected after independent exported comparison; approved expected graph unchanged.",
+    "U4 incompatible generic footprint replaced by manufacturer-recommended flat-lead geometry; independent closure recorded."
+  ],
+  "fresh_checks": "ERC0, graph100/26/1NC PASS, footprint inventory42 PASS. Requirements18/work19 FAIL retained.",
+  "acceptance": "Working-draft publication only. No engineering-stage/PCB/manufacturing/mains-test acceptance.",
+  "previous_record": "pre-capture-integration-record.json"
 }

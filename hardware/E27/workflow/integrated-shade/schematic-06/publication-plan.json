@@ -1,13 +1,14 @@
 {
   "branch": "concept/integrated-shade-nonisolated-buck",
-  "parent": "8955fa62b1a9f3d24c21bcc0c493ef750ad98420",
-  "base_tree": "cc7dee981ab666edda9d6175b309413c5c15c16d",
+  "parent": "158c6f9b041a933c43ddd611a0d8a1dfaa34434b",
+  "base_tree": "824082caaef48ab65e8e2e3e886c59f672bac653",
   "allowed_prefixes": [
     "hardware/E27/variants/integrated-shade/SC06_driver/",
     "hardware/E27/workflow/integrated-shade/schematic-06/"
   ],
-  "method": "Add-onlyGitHubtree;neverpublisholdlocalHEAD/indexwholesale;expected_shaonupdate",
+  "method": "Scoped tree additions/updates based on current remote tree, expected_sha ref lease; never publish old local HEAD/index.",
   "main_expected_unchanged": "377fc0a08e74043e255b732f7c2beb63134a3576",
-  "postchecks": "Everynewrawblobhash,parenttreepreservation,branchcommitandmainref",
-  "user_authorization": "Saveongoingdesignonexistingbranch;notstageapproval"
+  "source_manifest_sha256": "75c18befa5a936b2b2323e19605f0510b28d3dc47ced1364d2ba704f330e94f1",
+  "postchecks": "Exact raw Git blob SHA of every submitted file and preservation of every other current remote blob, then branch ancestry/ref and main checks.",
+  "user_authorization": "Publish continuing design on same branch; exact map captured after actual approval. No engineering-stage approval."
 }

@@ -1,0 +1,50 @@
+{
+  "finding": "SC06-CAP-RC001",
+  "status": "Implemented; independent closure pending",
+  "part": "AQY221R2VY",
+  "manufacturer": "Panasonic",
+  "exact_catalog": "ASCTB32E 202204, printed page 6 / PDF index 6",
+  "exact_catalog_manufacturer_authored_mirror": "https://datasheet.ersaelectronics.com/static/datasheets/panasonic/panasonic-aqy221r2v.pdf",
+  "exact_catalog_access": "Read through web PDF extraction, drawing page 6 requested via web screenshot. Shell mirror access returned 403, so no local exact-catalog PDF SHA is asserted.",
+  "official_product": "https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy",
+  "package_visual_crosscheck": {
+    "official_Panasonic_PDF": "https://mediap.industry.panasonic.eu/assets/custom-upload/Components/Relays/PhotoMOS/semi_eng_rf1a_aqy22_fv_cr10_discontinued.pdf",
+    "local_file_sha256": "378734fccce51507164590ed986a07371b1f7cd282d06568b29ba1ca14065f48",
+    "scope": "SSOP package drawing only, printed page 4. Different voltage-sensitive device; NO electrical specifications borrowed. Downloaded and visually inspected recommended pad drawing. Geometry agrees with exact ASCTB32E extracted dimensions."
+  },
+  "geometry": {
+    "body_mm": [
+      4.45,
+      2.65
+    ],
+    "height_mm": 1.8,
+    "pad_size_xy_mm": [
+      0.9,
+      0.7
+    ],
+    "pad_row_centres_mm": 4.35,
+    "pitch_mm": 1.27,
+    "overall_copper_width_mm": 5.25,
+    "pad_centres_mm": {
+      "1": [
+        -2.175,
+        -0.635
+      ],
+      "2": [
+        -2.175,
+        0.635
+      ],
+      "3": [
+        2.175,
+        0.635
+      ],
+      "4": [
+        2.175,
+        -0.635
+      ]
+    },
+    "orientation": "TOP VIEW: 1 upper left, 2 lower left, 3 lower right, 4 upper right. 4.35 is row-centre separation; overall copper = 4.35 + 0.9 = 5.25, not package lead span 4.85."
+  },
+  "removed": "Incorrect copied Vishay gull-wing SSOP pattern and its unrelated 3D model. Footprint library identifier preserved; BOM and approved electrical pin graph unchanged.",
+  "limitations": "Geometry transcription is not assembler validation, an accepted insulation barrier or evidence of safety under fault."
+}

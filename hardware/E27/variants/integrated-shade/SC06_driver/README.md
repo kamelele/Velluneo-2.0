@@ -22,4 +22,14 @@ Normalpeak123V andfault135V are acceptance requirements. Static detector calcula
 
 Prototype thermalproposal: localPhotoMOSambient≤85C, capacitorcan≤95C, inputfilm≤100C, U1SOURCE≤100C;−20C startup within the electrolytic rating. These are proposedboardtestboundaries, not accepted enclosure conditions or achieved temperatures. Electrical output is mainsreferenced, neverSELV.
 
-Before generating native schematic, obtain the Toolkit-required actual human decision on this exact independent pin-intentdigest. Then run fresh exported-netlist comparison,ERC and visualreview on the nativefile. Passing those checks will not constitute PCBstage or productionapproval. Processplanningproposal is FR4/2L/1oz/1.6mm/leadfreeHASL with barePCB and manualprototypeassembly; Economic/StandardPCBA remains a laterprocurementdecision after exactstock/quote review, not anassumedserviceapproval.
+## Native KiCad capture status
+
+Kamil approved the exact SC06-B pin intent on 2026-11-19 and approved the manual prototype process; see owner-capture-approval.json and owner-process-line-decision.json. Open SC06_driver.kicad_pro with KiCad 10.0.6. The native schematic and local symbol/footprint libraries are included. No board has been generated or routed.
+
+Fresh exported connectivity, ERC, footprint pad inventory, requirements and work-mode check reports are saved in the SC06 workflow capture-checks directory. These have different scopes: a passing ERC or netlist comparison is not a passing product/safety review. All original 17 requirements remain controlling; two actual owner choices are now recorded, while engineering/standards and evidence gates remain open.
+
+The applied toolkit configuration supplies the approved fabrication baseline and ERC policy only. Its generic 0.2 mm fabrication clearance is NOT a mains insulation requirement. Product insulation domains/creepage remain undefined and must be established before PCB acceptance. No safety spacing can be inferred from this baseline.
+
+Local land patterns are engineering proposals. Their physical pad inventory is checked with matching pcbnew, and manufacturer-specific pad remapping is documented in footprint-provenance.json. Geometry, lead forming, polarized orientation, thermal spacing and assembly qualification remain subject to review. Generic KiCad 3D references are not certified manufacturer models.
+
+Economic/Standard PCBA sourcing and quotation remain later procurement work. No purchase, production, mains test, schematic-stage acceptance or PCB-stage approval is implied by this capture package.
