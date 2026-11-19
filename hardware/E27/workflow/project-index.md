@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current complete proposed spacing redesign — 19 November2026
+
+[PCB-CLOSURE-04-r3](specification-reset/pcb-closure-04/README.md) now contains a complete proposed33-part/81-pad41x60mm PCB under eco/, matched native schematic/libraries/models and full-board nativeDRC0violations/0parity/54unconnected, ERC0. Numeric3/10mm rules retained. TVS/C1return4.472mm andQchain20.997mm improve, but19.906mm sense connection needs dedicated Kelvin routing/review. Old31-part40x60comparison with8packagefindings is retained separately. New controller/startup/forming/T1lands are unapproved ECO; operating/fault/NTC/140kHz/thermal/finishedinsulation/process/fit and genuine affected-stage decisions remain open. Nominal58.029mm radial allocation is tight to outerØ60, not finished fit. See exact frozen reviews, portableZIP and actual native previews. No routing/manufacturing/power-test acceptance.
+
 ## Current side-channel clamp alternate — 18 November2026
 
 [PCB-CLAMP-03](specification-reset/pcb-clamp-03/README.md) adds a checked40x60mm native alternate(+8mmwidth, old32mmtrial retained; Ø60x120lamptarget unchanged). D1/TVS1 move beside T1 on the samefrontface;29otherpositions/controlmetrics remain. T1clamp endpoint sum49.600→39.110mm/Qfeedshorter, butTVS-to-C1bulkreturn13.624→25.901mm andactualloop/parasitics remainopen. A namedlocalR9silk-onlyvariant eliminateslastartworkcollision withoutchanginglands. NativeDRC8packageclearance/0silk/53unconnected/0parity; rulesunrelaxed. Nominalradialscreen49.27mm isnotfinishedhousingfit. PortablematchedCAD/localdependencies/nativeviewsandfourreviewsare supplied. No electrical/insulation/thermal/placement/routing acceptance ormanufacturing/powertestapproval.

@@ -1,0 +1,11 @@
+# Actual bounded execution
+
+/root/closure04_return executed a coupled in-memory full31 witness after a failed seed with9externalspacing/physicalconflicts. Final full scalar checks passed all original numerical limits. It moves the controller/bypass/shunt/capacitor group with clamp and gate parts; no fake stochastic run or physical simulation is claimed. Root integrates the exact witness plus independent0.5mm BR1/F1 inward refinement to preserve the visible polarity marker at the edge; fresh scalar/native checks validate that refinement.
+
+/root/closure04_sources checked official component/package/control sources and proposed a realECO. Root caught omission of R13/C3 in the first13.6Mstartup suggestion; the implementer reread actual parts, corrected both directVDDcapacitors/R10auxpath and executed a loadedODE including D2leakage. The rejected result remains documented. Root selected standardE962.32Ω rather than treating a2.29Ωideal target as confirmed stock. Root authored the unapplied33-part intent before capture, generated matched schematic/footprint coupons and ran actual ERC/graph/DRC/normal-energy/startup screens. Old Q1tab wire was removed because the proposed replacement physically has only3pins, then fresh ERC waszero; no check suppression.
+
+STsource HTTPdownload timedout twice, including owner-contextretry; officialwebPDFtable facts were inspected instead, withno fabricated localsourcehash. Source links/revisions/limits and process proposals are explicit. Root is sole sharedCAD/librarywriter; four distinct final read-only roles inspect a frozen packet. Actual replacementPCB integration and routing acceptance are not claimed.
+
+## R3 continuation
+
+/root/closure04_return delivered the full33-part41x60 witness passing the exact shape-aware model. Root wrote all nativeCAD, refined R3/R14X+0.10/-0.05mm after actualsilkcollision, and executed fullnativeDRC/parity/ERC/inventory/intent/circlecontrol/radial checks. Full33DRC0violations/0parity/54unconnected; no tracks. /root/closure04_simplicity preflight caught stale inventorymetadata and incompletepad/intent/hash verification; root fixed them, reviewer independently reran native verifier. Four final role reviews concern the new frozen r3 scope separately from historical r2. No new circuit/process/fit authority is invented.

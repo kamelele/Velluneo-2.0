@@ -1,0 +1,36 @@
+{
+  "source": {
+    "negative_board": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-closure-04\\.work\\circle-negative\\ECO04_land_geometry.kicad_pcb",
+    "positive_board_sha256": "a6446c4cd31595feb57568d734ba8cf60e72c4327c96dd1e70304715ae42887d",
+    "negative_board_sha256": "ca968db7a47ecc07792ed7f10379e4a15f098f5339dbd159f506b79c86b08477",
+    "rules_byte_identical": true
+  },
+  "command": [
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--severity-all",
+    "--exit-code-violations",
+    "--output",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-closure-04\\eco\\checks\\circle-negative-drc.json",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-closure-04\\.work\\circle-negative\\ECO04_land_geometry.kicad_pcb"
+  ],
+  "negative_exit": 5,
+  "positive_native_violations": 0,
+  "negative_native_clearance_reports": 4,
+  "positive_circle_edge_gap_mm": 3.4796126628494655,
+  "negative_circle_edge_gap_mm": 2.7083194680053175,
+  "unchanged_functional_screen_mm": 3,
+  "negative_descriptions": [
+    "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)",
+    "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)",
+    "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)",
+    "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)"
+  ],
+  "scope": "Actual pinnedKiCadpositive/negativecontrols for diagonal round-pad distance. P/S bounding-boxreserve/THTjoint allowances remainunchanged; no ruleexception oroperational/process qualification.",
+  "negative_unique_pad_pairs": 2,
+  "negative_reports_per_pair": 2,
+  "expected_negative_library_mismatch": "Deliberately moved Q1 pad differs from unchanged positive library; product library untouched."
+}

@@ -1,0 +1,89 @@
+{
+  "pairs": [
+    {
+      "ref": "BR1",
+      "pins": [
+        "1",
+        "3"
+      ],
+      "nominal_copper_bbox_gap_mm": 1.5,
+      "screen_mm": 3,
+      "rigid_translation_rotation_side_invariant": true,
+      "voltage_difference": "BULK_POS - PRIMARY_GND",
+      "land_basis": "retained manufacturer recommended land geometry",
+      "status": "unresolved; no exemption or pass"
+    },
+    {
+      "ref": "Q1",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nominal_copper_bbox_gap_mm": 1.0999999999999996,
+      "screen_mm": 3,
+      "rigid_translation_rotation_side_invariant": true,
+      "voltage_difference": "DRAIN - GATE",
+      "land_basis": "retained manufacturer recommended land geometry",
+      "status": "unresolved; no exemption or pass"
+    },
+    {
+      "ref": "Q1",
+      "pins": [
+        "2",
+        "3"
+      ],
+      "nominal_copper_bbox_gap_mm": 1.0999999999999996,
+      "screen_mm": 3,
+      "rigid_translation_rotation_side_invariant": true,
+      "voltage_difference": "DRAIN - SENSE",
+      "land_basis": "retained manufacturer recommended land geometry",
+      "status": "unresolved; no exemption or pass"
+    },
+    {
+      "ref": "U1",
+      "pins": [
+        "6",
+        "7"
+      ],
+      "nominal_copper_bbox_gap_mm": 1.94,
+      "screen_mm": 3,
+      "rigid_translation_rotation_side_invariant": true,
+      "voltage_difference": "BULK_POS/HV - DRV",
+      "land_basis": "retained manufacturer recommended land geometry",
+      "status": "unresolved; no exemption or pass"
+    },
+    {
+      "ref": "T1",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nominal_copper_bbox_gap_mm": 2.6000000000000005,
+      "screen_mm": 3,
+      "rigid_translation_rotation_side_invariant": true,
+      "voltage_difference": "BULK_POS - PRIMARY_GND",
+      "land_basis": "raw-bobbin project proposal",
+      "status": "unresolved; no exemption or pass"
+    },
+    {
+      "ref": "T1",
+      "pins": [
+        "4",
+        "5"
+      ],
+      "nominal_copper_bbox_gap_mm": 2.6000000000000005,
+      "screen_mm": 3,
+      "rigid_translation_rotation_side_invariant": true,
+      "voltage_difference": "DRAIN - AUX_RAW",
+      "land_basis": "raw-bobbin project proposal",
+      "status": "unresolved; no exemption or pass"
+    }
+  ],
+  "unique_pairs": 6,
+  "native_report_count": 8,
+  "bulk_ideal_253Vac_crest_V": 357.7960312803931,
+  "aux_ideal_Qon_V": -65.59593906807207,
+  "bulk_minus_aux_ideal_Qon_V": 423.3919703484652,
+  "source_inventory_sha256": "7974490c09ee54194bfa0b3799050ddd28964f9118073da76168242ab1738631",
+  "scope": "Calculated nominal rigid geometry and ideal normal-voltage examples only. No transient/fault bound, solder/process/finished insulation qualification or permission to relax rules."
+}

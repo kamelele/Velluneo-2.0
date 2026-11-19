@@ -1,0 +1,40 @@
+{
+  "status": "Unapplied proposal",
+  "part_count_proposed": 33,
+  "pads_proposed": 81,
+  "coupon_footprints": 4,
+  "coupon_pads": 23,
+  "pairs": [
+    {
+      "object": "BR1 formed adjacent lands",
+      "nominal_gap_mm": 3.5,
+      "annulus_mm": 0.4,
+      "qualified": false
+    },
+    {
+      "object": "Q1 formed G-D and D-S",
+      "nominal_gap_mm": 3.4796126628494655,
+      "annulus_mm": 0.35,
+      "qualified": false
+    },
+    {
+      "object": "T1 adjacent project lands",
+      "nominal_gap_mm": 3.0,
+      "annulus_mm": 0.325,
+      "qualified": false
+    },
+    {
+      "object": "U1 former HV-DRV pair",
+      "nominal_gap_mm": null,
+      "reason": "High-voltage pin physically absent on new controller; real circuit/startup ECO, not a new net label",
+      "qualified": false
+    }
+  ],
+  "pin_mapping": {
+    "U1": "UCC28701_DBV_Native",
+    "BR1": "W10G_Formed5p5_PROJECT",
+    "Q1": "STF2N80K5_Stagger5p08_PROJECT",
+    "T1": "TDK_EFD25_Pad2p0_PROJECT"
+  },
+  "scope": "These isolated land coupons are not a complete placed/functional33-part driver. No routing/safety/assembly or source-process approval. Original driver remains31parts/79pads and retains its8clearance failures."
+}
