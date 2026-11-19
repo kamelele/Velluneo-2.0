@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current selected routed driver — DRIVER08,19November2026
+
+[DRIVER08](specification-reset/pcb-driver-08/README.md) is the one selected four-layer45×60mm driver under the owner's delegated choice. All33parts/81pads are retained; actual native0DRC/0unconnected/0parity and0ERC. DRV is14.467mm, no vias. Power/return copper is strengthened and measurement branches preserved. The single portable project, actual preview, stackup and designated filled/capped via map are supplied. Routed CAD is complete; operating/fault/thermal/finished-transformer-insulation/fit/process confirmation and human product/stage acceptance remain unqualified. No order or powered tests are represented. Older packets below retain historical decisions and are superseded only to the explicit DRIVER08 CAD scope.
+
 ## Current routing development and unadopted process comparison — 19 November 2026
 
 [PCB-ROUTE-07](specification-reset/pcb-route-07/README.md) preserves the approved 33-part basis. The 43 x 60 mm two-layer trial has zero native violations, five unconnected items and zero parity findings. A separately named UNADOPTED four-layer comparison has complete geometric connectivity and native0/0/0; it is not an approved stackup/process. Protected measurement/local bypass, separate return trees, all-layer measurement projection screen and positive/negative native controls are checked. The approximately43.1mm DRV and operating/current/EMI, process, finished insulation, thermal, fit and stage gates remain open. No manufacturing or powered testing is authorized.

@@ -1,0 +1,752 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T20:59:53",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Velluneo_driver.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [Net-(F1-Pad1)] of F1 on B.Cu",
+                    "pos": {
+                        "x": 114.6,
+                        "y": 101.825
+                    },
+                    "uuid": "cb98b9ac-4698-46ba-96e4-04e1da25c86b"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad1)] of J1",
+                    "pos": {
+                        "x": 120.1,
+                        "y": 101.81
+                    },
+                    "uuid": "b8586d42-981e-4fea-9c8b-f57cdcd397f2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 2 [Net-(BR1-AC-Pad2)] of BR1",
+                    "pos": {
+                        "x": 115.9,
+                        "y": 127.15
+                    },
+                    "uuid": "21e19430-c52d-42a6-84d5-b5415d40b140"
+                },
+                {
+                    "description": "PTH pad 2 [Net-(BR1-AC-Pad2)] of J1",
+                    "pos": {
+                        "x": 120.1,
+                        "y": 94.19
+                    },
+                    "uuid": "fef55718-8ea3-466c-8af9-cbd12219a7cb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/GATE] of Q1",
+                    "pos": {
+                        "x": 86.35,
+                        "y": 111.96
+                    },
+                    "uuid": "0de9ea77-30f8-45de-b8af-d71ce95b9b09"
+                },
+                {
+                    "description": "Pad 1 [/GATE] of R8 on B.Cu",
+                    "pos": {
+                        "x": 85.85,
+                        "y": 114.5
+                    },
+                    "uuid": "f1ccd15d-6a3f-4da0-8bab-051000fa7385"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/GATE] of R7 on F.Cu",
+                    "pos": {
+                        "x": 92.525,
+                        "y": 109.25
+                    },
+                    "uuid": "9c885896-033c-498b-be84-c7720821708e"
+                },
+                {
+                    "description": "PTH pad 1 [/GATE] of Q1",
+                    "pos": {
+                        "x": 86.35,
+                        "y": 111.96
+                    },
+                    "uuid": "0de9ea77-30f8-45de-b8af-d71ce95b9b09"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/VDD] of R17 on B.Cu",
+                    "pos": {
+                        "x": 109.2,
+                        "y": 93.9
+                    },
+                    "uuid": "88e58ecc-4b1c-495d-87b0-1ff90140f406"
+                },
+                {
+                    "description": "Track [/VDD] on F.Cu, length 7,4000 mm",
+                    "pos": {
+                        "x": 101.9,
+                        "y": 108.8
+                    },
+                    "uuid": "6089c35d-8b0b-40d8-a8d2-f94002d61ad4"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [/DRV] of R7 on F.Cu",
+                    "pos": {
+                        "x": 94.475,
+                        "y": 109.25
+                    },
+                    "uuid": "9f9fed1e-822a-42c9-9bd5-611fa98c8b95"
+                },
+                {
+                    "description": "Pad 3 [/DRV] of U1 on F.Cu",
+                    "pos": {
+                        "x": 102.8,
+                        "y": 119.45
+                    },
+                    "uuid": "d4b18698-b52e-4a2a-851d-a83634b60fa9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of T1",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 104.25
+                    },
+                    "uuid": "ffa26f68-dcc2-4644-90a2-3600f34ddc9a"
+                },
+                {
+                    "description": "Pad 1 [/BULK_POS] of R14 on B.Cu",
+                    "pos": {
+                        "x": 89.25,
+                        "y": 101.7
+                    },
+                    "uuid": "67420f2e-2421-4c75-b4c9-748e2409ec53"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/BULK_POS] on F.Cu, length 0,6000 mm",
+                    "pos": {
+                        "x": 93.3,
+                        "y": 120.8
+                    },
+                    "uuid": "97f7d673-bded-4af0-88e6-ec5527dcb479"
+                },
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of T1",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 104.25
+                    },
+                    "uuid": "ffa26f68-dcc2-4644-90a2-3600f34ddc9a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/BULK_POS] on F.Cu, length 0,6000 mm",
+                    "pos": {
+                        "x": 93.3,
+                        "y": 120.8
+                    },
+                    "uuid": "97f7d673-bded-4af0-88e6-ec5527dcb479"
+                },
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of BR1",
+                    "pos": {
+                        "x": 110.4,
+                        "y": 127.15
+                    },
+                    "uuid": "ec438252-229a-4c80-8d98-d40c3c8d1aeb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [/BULK_POS] of R16 on B.Cu",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 100.4
+                    },
+                    "uuid": "afdcf803-e647-493a-b4fb-0ec3ac11fa74"
+                },
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of T1",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 104.25
+                    },
+                    "uuid": "ffa26f68-dcc2-4644-90a2-3600f34ddc9a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of BR1",
+                    "pos": {
+                        "x": 110.4,
+                        "y": 127.15
+                    },
+                    "uuid": "ec438252-229a-4c80-8d98-d40c3c8d1aeb"
+                },
+                {
+                    "description": "Pad 1 [/BULK_POS] of R2 on F.Cu",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 127.1
+                    },
+                    "uuid": "5504a3b0-a777-4448-8069-73597eabe013"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [Net-(R2-Pad2)] of R3 on B.Cu",
+                    "pos": {
+                        "x": 93.5,
+                        "y": 100.4
+                    },
+                    "uuid": "7d17eb9b-228c-4784-a959-0f02d0dd55f6"
+                },
+                {
+                    "description": "Pad 2 [Net-(R2-Pad2)] of R2 on F.Cu",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 120.9
+                    },
+                    "uuid": "dc3b7330-7f53-439d-94ad-98876d9e0ece"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Pad 2 [Net-(F1-Pad2)] of F1 on B.Cu",
+                    "pos": {
+                        "x": 114.6,
+                        "y": 115.575
+                    },
+                    "uuid": "356a4e1d-d27e-4f9d-9472-e181a19dc227"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 4 [Net-(BR1-AC-Pad4)] of BR1",
+                    "pos": {
+                        "x": 110.4,
+                        "y": 121.65
+                    },
+                    "uuid": "94549b1d-ba14-42b8-bbdc-f9bdd9817221"
+                },
+                {
+                    "description": "PTH pad 2 [Net-(BR1-AC-Pad4)] of R1",
+                    "pos": {
+                        "x": 119.9,
+                        "y": 114.5
+                    },
+                    "uuid": "bf14b13f-5deb-44d9-b30d-c4eb0d31cd56"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/STARTUP_MID] of R16 on B.Cu",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 94.2
+                    },
+                    "uuid": "b7878d07-90ec-49f6-8dfc-4879086d52f5"
+                },
+                {
+                    "description": "Pad 1 [/STARTUP_MID] of R17 on B.Cu",
+                    "pos": {
+                        "x": 109.2,
+                        "y": 100.1
+                    },
+                    "uuid": "5a8bfc0a-8557-40d3-9e08-3a6a40e2103a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets Net-(F1-Pad2) and /DRAIN)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 94.3,
+                        "y": 113.2
+                    },
+                    "uuid": "746fb183-fe2a-4259-add3-2d2bd4ed3dee"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /DRAIN and Net-(F1-Pad2))",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 113.8
+                    },
+                    "uuid": "0422cada-8a57-4eb4-98a9-4fede42b563c"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets Net-(F1-Pad2) and /DRAIN)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 2,8000 mm",
+                    "pos": {
+                        "x": 94.7,
+                        "y": 114.0
+                    },
+                    "uuid": "52a9c2ce-23e0-4d66-98e3-80dacfc41791"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,9219 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 97.3,
+                        "y": 111.4
+                    },
+                    "uuid": "fb13fdff-5ad4-4e14-9d21-a2c2d19b4ddc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,6908 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 97.7,
+                        "y": 112.0
+                    },
+                    "uuid": "e23b35d4-adc7-4212-913b-5806c263d256"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,7861 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 97.5,
+                        "y": 111.6
+                    },
+                    "uuid": "c32bb960-8853-46aa-a8bf-37cc5a47b7c0"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,3625 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,8485 mm",
+                    "pos": {
+                        "x": 98.1,
+                        "y": 114.8
+                    },
+                    "uuid": "982c493f-ecaa-4981-9ae8-1b4d30615732"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,6908 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 97.7,
+                        "y": 112.2
+                    },
+                    "uuid": "9153194f-cdc5-4fdc-9d71-227a27eafab7"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,3500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 2,0000 mm",
+                    "pos": {
+                        "x": 98.1,
+                        "y": 112.8
+                    },
+                    "uuid": "6860559f-3cf7-4874-8a0e-bb1dd814b096"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,6449 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 97.9,
+                        "y": 112.6
+                    },
+                    "uuid": "67043c62-aa25-4b40-bb4e-4b2cdb8865a6"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,6449 mm)",
+            "items": [
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 97.9,
+                        "y": 112.4
+                    },
+                    "uuid": "3f35c48b-c6ff-4bef-b9d8-1cd831bafcb1"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,7861 mm)",
+            "items": [
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 97.5,
+                        "y": 111.8
+                    },
+                    "uuid": "2097aabc-7f7e-41ac-ae66-61f9f1bc3cad"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,9273 mm)",
+            "items": [
+                {
+                    "description": "Track [/PRIMARY_GND] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 97.3,
+                        "y": 111.2
+                    },
+                    "uuid": "1cb342b3-cbc2-45ad-ab93-e0b45af72204"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets Net-(F1-Pad2) and /DRAIN)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 94.3,
+                        "y": 113.4
+                    },
+                    "uuid": "bdf4db4c-cf1a-4fcb-94b6-b3583e3fa3cc"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /DRAIN and Net-(F1-Pad2))",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 113.6
+                    },
+                    "uuid": "3529dd38-186d-4958-ba71-a0f5644587ad"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (board minimum clearance 0,2500 mm; actual 0,0153 mm)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 7,9196 mm",
+                    "pos": {
+                        "x": 88.7,
+                        "y": 107.6
+                    },
+                    "uuid": "0167cafc-870b-4316-885e-088a8d0eba85"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(F1-Pad2)] of R1",
+                    "pos": {
+                        "x": 94.5,
+                        "y": 114.5
+                    },
+                    "uuid": "498268bf-81f0-4492-8f5b-4164e6b4ee1d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "kind": "surface",
+    "source_sha256": "79b31e9e934458fec4c243d904badf442b658cdf991c353deabe2951e0e1e600",
+    "negative_sha256": "4afb0a51b3df7d358a120557c5c77867e44cc28507ac12fbdcffac270f36fb0c",
+    "negative_path": ".work/negative/Velluneo_driver.kicad_pcb",
+    "injected_track": {
+      "a": "R9.1",
+      "b": "Q1.2",
+      "layer": "F.Cu",
+      "net": "/SENSE"
+    },
+    "expected": "Native clearance/short violations detected"
+  },
+  {
+    "kind": "inner",
+    "source_sha256": "79b31e9e934458fec4c243d904badf442b658cdf991c353deabe2951e0e1e600",
+    "negative_sha256": "8292f0754d241e1ba4b51e78474041e0fbfca2507b81f4bed9a363a1dd45934c",
+    "negative_path": ".work/negative-four/Velluneo_driver.kicad_pcb",
+    "injected_track": {
+      "a": "R9.1",
+      "b": "T1.10",
+      "layer": "In1.Cu",
+      "net": "/SENSE"
+    },
+    "expected": "Native clearance/short violations detected"
+  },
+  {
+    "kind": "topology",
+    "source_sha256": "79b31e9e934458fec4c243d904badf442b658cdf991c353deabe2951e0e1e600",
+    "negative_sha256": "a1b46fac947dc730af3fccc0cb9a17ef7b4830a8341df98c749398e019a24a1b",
+    "negative_path": ".work/negative-topology/Velluneo_driver.kicad_pcb",
+    "injected_track": {
+      "a": "R9.2",
+      "b": "U1.5",
+      "layer": "F.Cu",
+      "net": "/PRIMARY_GND"
+    },
+    "expected": "C1 junction-cut separation fails"
+  }
+]

@@ -1,0 +1,938 @@
+{
+  "packet": "PCB-DRIVER-08",
+  "base": "8c57a24d9cdfe50ad1bc3b28f238287200b5c51b",
+  "body_sha256": "19ceec0c77181e95ac58169d26044447f726db313b46da282f8b5cae9fe752f8",
+  "files": [
+    {
+      "path": "hardware/E27/workflow/project-index.md",
+      "bytes": 27507,
+      "sha256": "3cbf0b4e2e99ff7b1e4b40997936aca780d2318c5305303ab5f2235607ccd8e0"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/hardware.json",
+      "bytes": 50658,
+      "sha256": "8a9b440aa312b55c2f5f698ebb7245f37adaef03dbc67905e6266cfa68b0eda8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/.gitignore",
+      "bytes": 35,
+      "sha256": "7ef721c285753a404baf855a287a39998bd43b967a9b24ad2af79af5b70dcd14"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/README.md",
+      "bytes": 5730,
+      "sha256": "5dad1eee90f02df23a54afd6c48784c3365f77acf8d7c27fc3723a781ba6ce5c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/Velluneo_driver.pdf",
+      "bytes": 172789,
+      "sha256": "b9b654b90b8e631b17d8b0b70f6a050ae077d5fffc19dd578b4ba8d14756aa5f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/Velluneo_driver_KiCad.zip",
+      "bytes": 102095,
+      "sha256": "8f0ae785e2432aeb8060dfd43a6f2a2447534344391f7dfbdabc876667e19e0e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/analyze_native_routes.py",
+      "bytes": 6338,
+      "sha256": "030cfeb607e51e0810c6ac06b5871491503668e832d22c373e8f400b5ef713e8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/assembly-positions.csv",
+      "bytes": 2766,
+      "sha256": "c0e3f0428f231049643fff528a7bd0863961aa7d0ca8986dac49021f36ffa2b9"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/build_negative_controls.py",
+      "bytes": 1695,
+      "sha256": "3ddd6d8b2b6e5e09147e013f4d6c45b8d6fb0a2faf2a35506491a38b61e4bd5a"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/check_export_driver08.py",
+      "bytes": 3089,
+      "sha256": "38454a84773562bf97c56d83ebdd72c80a4ec1f8745b4cd2c7e05e4df7d9cc15"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/check_intent_policy.py",
+      "bytes": 2727,
+      "sha256": "f1793f495fb8d51e5e8e3c5a9ff09f4b5e5892f110ae906fa0edd4b4d855b92f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/check_process_geometry.py",
+      "bytes": 2292,
+      "sha256": "ae90be2a488b13f42a0ffd39dfaa91988419056118078172cb91ddb7488560bb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/complete_local_ground.py",
+      "bytes": 1025,
+      "sha256": "3011cc56e7a218bcc9c95fb25f474daea1e617e0ecdf4ce23d9fb1b2482fe6fc"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/completion-status.json",
+      "bytes": 481,
+      "sha256": "9233384920e3720fda277eb3e939fe6be3b1db0774d1beda342c05b66c08787b"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/copper-back.svg",
+      "bytes": 57046,
+      "sha256": "8d4794e0a50eeb9e12e3368c4f12f3a2e5646b3e1e88afe9d8972051b77041c8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/copper-front.svg",
+      "bytes": 54538,
+      "sha256": "3683f583f346747cabef609598b5c04ecf9978e8d45caed951fdabdc13bf25fd"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/copper-inner1.svg",
+      "bytes": 16909,
+      "sha256": "9a45502fd2a438e6582dd8c97b389e6ffaa4265ec81290fddc5a29072cdea12e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/copper-inner2.svg",
+      "bytes": 14358,
+      "sha256": "dce83484acb4282c92711935a0a3898ba525e6158004c4c3e502dbaa5fd1f115"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/BOM.csv",
+      "bytes": 6157,
+      "sha256": "3f54a6e91d4679fc406b5125d134c2014cfff14aceaa1ab02992353b8f31970d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_PROJECT.kicad_mod",
+      "bytes": 919,
+      "sha256": "d470012f4d449c3c81e9b89a76244731e2ae85fc14f0730923ee0d5b205505b0"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_Pad2p25_PROJECT.kicad_mod",
+      "bytes": 2020,
+      "sha256": "2bff605f6d49ab6818a6c6f120e6a759b94b4004342ff93ec7188e0580500e5d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_ECO04.pretty/TDK_EFD25_Pad2p0_PROJECT.kicad_mod",
+      "bytes": 1880,
+      "sha256": "dd58b70137f9c0b4efda27b0ae507f79ae8462352dc8708165493603eda67e85"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_ECO04.pretty/UCC28701_DBV_Native.kicad_mod",
+      "bytes": 1112,
+      "sha256": "4919e2ce4e11929d18ba23628b0305a80517a86b0bf0b8161d36fa41628412cf"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_ECO04.pretty/W10G_Formed5p5_PROJECT.kicad_mod",
+      "bytes": 1031,
+      "sha256": "e67f0c8320b7d4ac6b3fb0810a3102793ba02c10f828381b941e2a517f9eecbf"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_driver.kicad_dru",
+      "bytes": 2897,
+      "sha256": "27c97c8cbacf1a7a0605920b58f464d95ac0ab9d0cd1684bd9428159251f1988"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_driver.kicad_pcb",
+      "bytes": 219803,
+      "sha256": "79b31e9e934458fec4c243d904badf442b658cdf991c353deabe2951e0e1e600"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_driver.kicad_pro",
+      "bytes": 9770,
+      "sha256": "3f23e4e0db063e7870a4064802d4f083672ca4090d1590cfde99ea54896b0329"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/Velluneo_driver.kicad_sch",
+      "bytes": 81710,
+      "sha256": "aa89c07a68a7768657812ea29409e3083f97cde3bf12072ae3cbcb0a486fadab"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/build-negative-controls.stderr.log",
+      "bytes": 1308,
+      "sha256": "11bb90446f5655051e24bd27d6aa78f5b77375726f9bac6119d6f143663bcfaa"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/build-negative-controls.stdout.log",
+      "bytes": 42,
+      "sha256": "b3e807f3d6b79a59126f6180004bbcb9960e0d00168379f40150d0fb1b59cb62"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/check-status.json",
+      "bytes": 474,
+      "sha256": "f68b6cd808968f18e3a62dd43a7b261f7ad5ed5315134756ba93f5f8706dfaee"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/configuration-preview.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/configuration-preview.stdout.log",
+      "bytes": 238,
+      "sha256": "d90d8e78118ecd10c88d08af1ceeebf1bcd090db73dbcbf324aacbc986220a4b"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/doctor.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/doctor.stdout.log",
+      "bytes": 1016,
+      "sha256": "2568e209d7df2ee107568f74357e06ffec644a351cc4083d72e0b0186c01afac"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/erc.json",
+      "bytes": 1046,
+      "sha256": "2484a8c24a990aaffa5cac34381695cdfc44064e0bd2108406ec1707041481a1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/erc.stderr.log",
+      "bytes": 265,
+      "sha256": "91eae833ffdf8b66067bf4704f327003fc65d56e5067f7d8ebd31016d9b81550"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/erc.stdout.log",
+      "bytes": 189,
+      "sha256": "56bcea545e0d939e14922d3462b58594a06c777eea62f3e2b053d271adf2c493"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/final-commands.json",
+      "bytes": 10650,
+      "sha256": "74bad766b5ca605a23baeb822488108619ae6b45128679c34b68b7575d2becf5"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/final-drc.json",
+      "bytes": 1130,
+      "sha256": "6bf7b0d9870dbde3674e7630551facd61a783cb2725d2aab03b694c761af2fe4"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/final-drc.stderr.log",
+      "bytes": 265,
+      "sha256": "db0affb7d2c4017ed2a9c45f6e79c42e65c16ef113904724de4d9dda11ff0ca1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/final-drc.stdout.log",
+      "bytes": 255,
+      "sha256": "aac7c1ef8cdc9a7f5b390f26ceb123b1ceccc444a8e160214a9ec69398e97212"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/fresh-commands.json",
+      "bytes": 3085,
+      "sha256": "a8b7fcbada7ca61646d38b5d53f7a89e43e0593ba986ef38b02e5b6b31af6fc0"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/intent-policy.json",
+      "bytes": 603,
+      "sha256": "e78d51e9c24193d2a2bc61f90d217e98d69c8854ca7223a31421b67b6209b95c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/native-analysis.json",
+      "bytes": 217108,
+      "sha256": "69f947e37132659066b77ae5aa32a8821609da514b7723dee426a3a5eef6d203"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-controls-inputs.json",
+      "bytes": 1412,
+      "sha256": "0fd409aa4860546c05aad160b96f142aa9e4ca83c36f914b862006e4986634f7"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-inner.json",
+      "bytes": 50678,
+      "sha256": "b4425e215af65a8256a3e4070cf5cd833f46f76f30bd62eb8c573bf12bdd76ae"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-inner.stderr.log",
+      "bytes": 265,
+      "sha256": "8321e492e05e4022bb7ec796e3a3fcfaaea61544b612730ed0ec883dd430340b"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-inner.stdout.log",
+      "bytes": 261,
+      "sha256": "511b03872b6628d0ae6620a45673e84162461223a90204d9eaf7643565290b53"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-surface.json",
+      "bytes": 20721,
+      "sha256": "2a74f05846c1657614554cdb33cc01608234308839afe822ebb6f7e2a74f2c0d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-surface.stderr.log",
+      "bytes": 265,
+      "sha256": "731f7cd9b52acd1df914caead7e0655ad209334d7d4e975eeb37bdede431b90e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-surface.stdout.log",
+      "bytes": 263,
+      "sha256": "d11ab2e1a976835842ff28a01c858a6845d9d1d83a360498a38aad88968c2058"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-topology.json",
+      "bytes": 217539,
+      "sha256": "0c96c2a37c051ca92074d554ac718c710329a398d75dd09fc506d0ed4be51cc6"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-topology.stderr.log",
+      "bytes": 3270,
+      "sha256": "c04165787220fa87eaa2f8a5e562be2eb7304802b7253561c14e96438ab720cb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/negative-topology.stdout.log",
+      "bytes": 1508,
+      "sha256": "2e1baf3522779d8e9886c460d3cebe6c2e83efb9db95fb2f68a695c28716ffd3"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/netlist.stderr.log",
+      "bytes": 265,
+      "sha256": "08f4efcf6d0095aaec10e70f90d4b7668964cb3bdd30091806195a6ecf96f6e1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/netlist.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/netlist.xml",
+      "bytes": 54141,
+      "sha256": "c6743eb8d2233178e1e090ca8289d312f689ca5dbd8c31b356e3422106e83a85"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/placed-retained-drc.json",
+      "bytes": 27127,
+      "sha256": "9bb1e09192dd474ed368043deb078f9f4a28586d1998e6c9a70da2f14593e395"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/portable-drc.json",
+      "bytes": 1130,
+      "sha256": "2aa2a90d65ca7c81df0728a6a3f2c239c8e9cbeaf81996c87f26cabb4c06c6eb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/portable-erc.json",
+      "bytes": 1046,
+      "sha256": "db646793a6ed986fb625e996307ae420649568867f3888d1bfcb772555a87cd1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/positions.stderr.log",
+      "bytes": 192,
+      "sha256": "1546b86f3234472a8607ac20f4afee216a1c65f52ecbac8c4479bbb140901d23"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/positions.stdout.log",
+      "bytes": 175,
+      "sha256": "f8a5d14c008f0db0fdc04a0b0e1daedad2d568db800ad678a32c7d14ae77daf3"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/process-geometry.json",
+      "bytes": 7665,
+      "sha256": "3c6ef5aaab537c6e023cc5a3f3a7fd92e4871959bf6021a50a029cbbcd6dd600"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/render-bottom.stderr.log",
+      "bytes": 192,
+      "sha256": "8f2f7ad35bdfc4b1376384af64a3a6883addae40efb0551d3dee053db9e2b3c3"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/render-bottom.stdout.log",
+      "bytes": 1601,
+      "sha256": "f6f1e396d23154ae568e908953ac64bb71c0e527011de1dbcb3b3bd0131aa0d9"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/render-top.stderr.log",
+      "bytes": 192,
+      "sha256": "8f2f7ad35bdfc4b1376384af64a3a6883addae40efb0551d3dee053db9e2b3c3"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/render-top.stdout.log",
+      "bytes": 1601,
+      "sha256": "ffd6da6eab369f5278f352f8b5d017c6f98d765eb3a4cbfd492827143cf8d2a0"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-placement.json",
+      "bytes": 34574,
+      "sha256": "e18db9df60198adea9c11bf734c31ffa9a1f6c6954f9cc2ac90640c0a5066b57"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-placement.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-placement.stdout.log",
+      "bytes": 34628,
+      "sha256": "f1b10ac85bce7a7e4cbb7d65c42fc9539a918ff51f3c939c2be2b8bb564bee23"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-routing.json",
+      "bytes": 34572,
+      "sha256": "cbfb9ac96cfb8d089a6ca9ccf512c06660af1aef55620e0fc83dc1a2e2440d16"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-routing.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-routing.stdout.log",
+      "bytes": 34626,
+      "sha256": "fa70066dd2af9a11830b7e7fd8a49073f8defe8edba21ec2e9bafab73dcf93b2"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-schematic.json",
+      "bytes": 33904,
+      "sha256": "013c4f4195851e9aaf35b903a787877d745115f919f6bfda5f7baba866a021b2"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-schematic.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/requirements-schematic.stdout.log",
+      "bytes": 33958,
+      "sha256": "78a23558086308d1eff9aaf610f9f8f3e79850f270eafb327daa4b8b4282232a"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/saved-geometry.json",
+      "bytes": 6347,
+      "sha256": "8b6c402af6cac56832bf633b8f066fdb6f3f99fb995c45cb434457bec4c98a06"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/schematic-pdf.stderr.log",
+      "bytes": 265,
+      "sha256": "d34e013ae3f63ad706a4565d565ea10a8515939bf84bf496cad98bec829cb249"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/schematic-pdf.stdout.log",
+      "bytes": 167,
+      "sha256": "7fbeb189cdebfc646b91c042dbb41fb45de85f08a6eac2a6c7ca0fd0a7bcdea3"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/selected-routed-drc.json",
+      "bytes": 1130,
+      "sha256": "ae0e88cc4bf33f7c5a67113802aef097483d625d011669702c8d8c468a521ffb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-back.stderr.log",
+      "bytes": 192,
+      "sha256": "67fc4ee6500a24ae095bd3320c4cc021f679ae43aafba3113ec025b1e7ed48f7"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-back.stdout.log",
+      "bytes": 163,
+      "sha256": "7ccf5c8e2a3140e4a51ad2987a5abd97b0421faa20b31ffb12564e31bc5f8623"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-front.stderr.log",
+      "bytes": 192,
+      "sha256": "1546b86f3234472a8607ac20f4afee216a1c65f52ecbac8c4479bbb140901d23"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-front.stdout.log",
+      "bytes": 164,
+      "sha256": "8664c5bc8a9244baa2df8a183d0c465866f07cd7b3f445e6344d5f88de071cc0"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-inner1.stderr.log",
+      "bytes": 192,
+      "sha256": "67fc4ee6500a24ae095bd3320c4cc021f679ae43aafba3113ec025b1e7ed48f7"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-inner1.stdout.log",
+      "bytes": 165,
+      "sha256": "e71d30b03b347398dfebc2717896bb32539b74b35e2c4cb62c6cb721567ba716"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-inner2.stderr.log",
+      "bytes": 192,
+      "sha256": "67fc4ee6500a24ae095bd3320c4cc021f679ae43aafba3113ec025b1e7ed48f7"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/svg-inner2.stdout.log",
+      "bytes": 165,
+      "sha256": "abcc672b04213b00e89d0ea2d7ae4117abd7023cffd0464e78fe2e077af1afeb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-placement.json",
+      "bytes": 48029,
+      "sha256": "310d8b71c237e994d196af8dd8a79f199a25bfb2b46fc784b95a90708792ec0b"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-placement.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-placement.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-routing.json",
+      "bytes": 48027,
+      "sha256": "e3c7deecb26fbfefdcb8089218f39085c18f278b95ed378effa0556ff786093e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-routing.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-routing.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-schematic.json",
+      "bytes": 46873,
+      "sha256": "c580779bcb4d0394f888ea4ff74eba44ac704561a56f080b157e20150fc68a22"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-schematic.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/checks/work-schematic.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/fp-lib-table",
+      "bytes": 310,
+      "sha256": "387e4212eff1705a3535f1870a9bd6ad570d213753aaede0ba982f0208d52314"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/full-build-result.json",
+      "bytes": 7948,
+      "sha256": "346d4722bc343adfeceb208f57b32d9d8927a041fc95df6b1875bc44598e951e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.kicad_sym",
+      "bytes": 20364,
+      "sha256": "ea55996cb9c71608d50b327b5933be48463968b403237a7b97548d7558bb2ec8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/AC05_P25p4_FORMED_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1096,
+      "sha256": "288597c84066e0f67bcce2d6fc18fc6f0b08c80fe39a6e39c213968217fb3670"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/CRCW_0603_NativeReflow.kicad_mod",
+      "bytes": 1034,
+      "sha256": "6ce9d8219cf3d026257b29951362b6d29805bb7c79d5a61d9b424ab21fd19d65"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/CRCW_0805_NativeReflow.kicad_mod",
+      "bytes": 1026,
+      "sha256": "116da79996b767451514af4d416b12ea00a224e41304efdc99a551743744699f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/CRCW_1206_NativeReflow.kicad_mod",
+      "bytes": 1036,
+      "sha256": "26284dae917c9bc653b71a53703cd738d31f5c590c9e148166150a64ba3a1f7e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/CRCW_2512_NativeReflow.kicad_mod",
+      "bytes": 1020,
+      "sha256": "b65aaee3ae313ad4347cbb67e2c7ba5c13a353a45f9f8cdfca7fc68dbbccd72c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/Diodes_US1M_SMA_Native.kicad_mod",
+      "bytes": 1209,
+      "sha256": "93bfb8f50376a5e473bdcddb9a0258d09d41a6c6c678554f65fc91be7bf0d97f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/InternalWirePair_P7p62_D1p6_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1039,
+      "sha256": "c68a8f13b2d6387395b29ca4d2f2c1efcdfd9b9b7f88c8f1cb6dd09c30cba280"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/KEMET_2220_C0G_DensityB_Native.kicad_mod",
+      "bytes": 1055,
+      "sha256": "616f1553e2d78d07cd6a8e81615ff2aac807ae1de50458d7a4663984db8cd989"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/KEMET_2220_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1066,
+      "sha256": "a4852937a199183f1b8c3e212894d7b8e33588cc0076ad9472f3004f2ab94629"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/MB10S_Diodes_MBS_1P_2AC_3N_4AC.kicad_mod",
+      "bytes": 1365,
+      "sha256": "bcb61b86077c0befe787d45ba0b056c501d47edd3b1cdd96596489004b025f4f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/NTCS0603_NativeReflow.kicad_mod",
+      "bytes": 1020,
+      "sha256": "09aadb843153732b79f2dfa754966acef83e3fc2b81fd022d618a7395aa29da8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/Panasonic_ZA_D_Standard_Native.kicad_mod",
+      "bytes": 1264,
+      "sha256": "3cad320ca90ea5bcc770010add35997d1ca4734cb1f365bb90770208badb93bf"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/Rubycon_BXW_D10_P5_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1300,
+      "sha256": "472c0a4206408f1c4d1ac6575d0019013cec599348f97b10591de1cb81600893"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/SCHURTER_UMTH_WEB_PROVISIONAL.kicad_mod",
+      "bytes": 1086,
+      "sha256": "edbae882a0b49ee5a8a0efa9310fd4078bc1beb2f1fe9901f4271d46f7273b24"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/STN1NK80Z_SOT223_Tab4.kicad_mod",
+      "bytes": 1232,
+      "sha256": "f1b8edf66033160f5165cb03e9bd5d579b107ceceda4ca7340bc40d4d0cf1306"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/ST_STTH_SMA_Native.kicad_mod",
+      "bytes": 1212,
+      "sha256": "439f295996b42dc62b7d182151cd56a335307b36709fece4b013b9f3d6b7ee26"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.kicad_mod",
+      "bytes": 1910,
+      "sha256": "68e8826b5ed994ee4e42c043c01a7265bf0e4cbc9cab5a256581b05b47ef7b1c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/UCC28711DR_SOIC7_HV7.kicad_mod",
+      "bytes": 1612,
+      "sha256": "bbefd0cca0948ac2e7cbb2dd72de07704e9e18e39963371ef723b69b4a102d82"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/libraries/Velluneo_Driver.pretty/Vishay_SMBJ_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1322,
+      "sha256": "cbd89ab8d291673d4963cbf734bee43ff964d8ea8598579e912d64451a34a944"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/BR1.wrl",
+      "bytes": 303,
+      "sha256": "cfe200542cfe47e1f248b1bb021e1f2eea4efc10a6c9789552a3f8de19f046ec"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/C1.wrl",
+      "bytes": 3412,
+      "sha256": "e7b74e3dea7529c0ea13063158a9d89a0a6c1de2ae891bac435b7be631488ed8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/C2.wrl",
+      "bytes": 304,
+      "sha256": "7f7889b9a7688a36725e5e83bb6f7a9fe9c154e71e8086792203b12a42e43cad"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/C3.wrl",
+      "bytes": 304,
+      "sha256": "7f7889b9a7688a36725e5e83bb6f7a9fe9c154e71e8086792203b12a42e43cad"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/C4.wrl",
+      "bytes": 304,
+      "sha256": "ca1958d09102b4043ecacaa5484c37a6e8357077554ca8bdc848db61b45a3988"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/D1.wrl",
+      "bytes": 304,
+      "sha256": "2b55923747f4a2997267164d233a25ecb12601599719fd202572261469eabaeb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/D2.wrl",
+      "bytes": 304,
+      "sha256": "3720be512b78c1a687a468eb335efdb095f73983d7c8f63bcd04cb674a0a17ba"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/D3.wrl",
+      "bytes": 304,
+      "sha256": "3720be512b78c1a687a468eb335efdb095f73983d7c8f63bcd04cb674a0a17ba"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/F1.wrl",
+      "bytes": 304,
+      "sha256": "0a67e39697014fdabe14199406f6b1ab1fadc3912ddd6a0d0bb49a2b2708b6b7"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/J1.wrl",
+      "bytes": 304,
+      "sha256": "96ea6de847ef1a630a453ac3cea1da250c6902fba3421226d4cb9f488fa75161"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/J2.wrl",
+      "bytes": 304,
+      "sha256": "96ea6de847ef1a630a453ac3cea1da250c6902fba3421226d4cb9f488fa75161"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/Q1.wrl",
+      "bytes": 302,
+      "sha256": "846ab23f4082b8fb7c3b5a777891e67849ae6183c0ebe951c7c66e1d6f6319a4"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R1.wrl",
+      "bytes": 302,
+      "sha256": "62d4e2f5d47fb5396068d9070ff4a89800d618a5acea89a41ff57fa155bf01c5"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R10.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R11.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R12.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R13.wrl",
+      "bytes": 304,
+      "sha256": "7877ccebeaaa2b1c39ca3dafe3b4356f8a8183e4e418548e0e6d893392e52875"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R14.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R15.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R16.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R17.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R2.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R3.wrl",
+      "bytes": 304,
+      "sha256": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R4.wrl",
+      "bytes": 304,
+      "sha256": "c0b943db800534f5cb7f10328583d90f1c1051a0afa4ce65cef2c982c5626978"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R5.wrl",
+      "bytes": 304,
+      "sha256": "c0b943db800534f5cb7f10328583d90f1c1051a0afa4ce65cef2c982c5626978"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R6.wrl",
+      "bytes": 304,
+      "sha256": "7877ccebeaaa2b1c39ca3dafe3b4356f8a8183e4e418548e0e6d893392e52875"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R7.wrl",
+      "bytes": 304,
+      "sha256": "c0b943db800534f5cb7f10328583d90f1c1051a0afa4ce65cef2c982c5626978"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R8.wrl",
+      "bytes": 304,
+      "sha256": "7877ccebeaaa2b1c39ca3dafe3b4356f8a8183e4e418548e0e6d893392e52875"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/R9.wrl",
+      "bytes": 304,
+      "sha256": "2376d8863dcfda080c9fb7776794eacda9a188c022a8a141276bf220a6ed03c6"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/RT1.wrl",
+      "bytes": 304,
+      "sha256": "4aed157b4dbc22ec8b602ba96a826203d6ca56d1f6c14c77a3d785750229a938"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/T1.wrl",
+      "bytes": 305,
+      "sha256": "76865ea7e559fb7a88e43d442e2f6069fc2670cb175599d8b9a74db7831d8e63"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/TVS1.wrl",
+      "bytes": 304,
+      "sha256": "6b7bc3cb08c7ab3c861dc191990105288515a6027dd98eae74e523b558ddcaa4"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/models/U1.wrl",
+      "bytes": 303,
+      "sha256": "6b38b54ebf6b12a8bda58057746cd80b9e0860099446f38aa6b9eb3e12ae0273"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/native-inventory.json",
+      "bytes": 63493,
+      "sha256": "4094083a72672d84f11e69da0e6101f10e71ac6e1bc7c2ce29ef23f2b703d740"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/proposed-intent.json",
+      "bytes": 12158,
+      "sha256": "e1f3fe248fbe5dd6d7484dea85e23e1b63469bf575ba0719b6f26a00ce4df5ce"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/proposed-parts.json",
+      "bytes": 5541,
+      "sha256": "7ff4c0e0598c7e37ccea2f22dbe2a82eef50275825533e9162ea66ad2dadfea2"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/design/sym-lib-table",
+      "bytes": 223,
+      "sha256": "ae491b3cef7acb7c1cd3a75083670a5e1c99444e4c01e230e3757724fa1ba398"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/designated-filled-vias.csv",
+      "bytes": 2037,
+      "sha256": "404960bb8b559dfd5179d7df1eaa463f22858c760b3e3c2e63f33f129bbb0b3e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/engineering-status.md",
+      "bytes": 2874,
+      "sha256": "37706fc326e4ed0f2b9ee66a92f0b1dbaeabf90b1a8bf175782190aa3ddd94c4"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/evidence/routing-input.kicad_pcb",
+      "bytes": 160704,
+      "sha256": "c23700a4b3ba126fb85e7bd87762fec771e82e7c6b656d7990e6efe410f90791"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/extract_geometry.py",
+      "bytes": 3347,
+      "sha256": "7680757fa73b0e19d26d2029a6bd04b8022e662dd4a230bb85e3963e2c0b21ca"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/finish_driver08_native.py",
+      "bytes": 1736,
+      "sha256": "b21f4157c26d1a6a6138611d367a5a3f2ecf36015f77fa69e6050f972c34cde6"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/geometry-input.json",
+      "bytes": 119637,
+      "sha256": "2148c7d1fbda236f032726f8c7c8a8d9325610b5eb4c64b602ca823fb279a51c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/inventory-delta.json",
+      "bytes": 5749,
+      "sha256": "28adf07b87066eeffc3879532468d44d0910de1b617dc11e67bc8ddcf1122be6"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/native-bottom.png",
+      "bytes": 146506,
+      "sha256": "d5988e926d83ae13df93bc71cfaa43689416340e4a98f8c9dbc05a8e6f0af335"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/native-top.png",
+      "bytes": 125436,
+      "sha256": "39ac32e612a4e933f8541f8e54e33238b3899ca1c805e90dc1abde25f81cea06"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/package_driver08.py",
+      "bytes": 16712,
+      "sha256": "12b0a985ead1ba97ff0239ae73ea577c84279c611af63cb8767371c01a3547f8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/pcb-preview.png",
+      "bytes": 408788,
+      "sha256": "16a3f11457b9685b9e77bf8fde30b1c70f43c4118a5468f934afbf591b06aaaa"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/place_selected.py",
+      "bytes": 2440,
+      "sha256": "1d394005b1cfbc5658334f9e431291e55d0f8b8e150b49fce5394ba2df4763f4"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/placement-decision.json",
+      "bytes": 2268,
+      "sha256": "18dfbaf8efcebec27ef8fd25d2050ddbd60c59158f07ad8b122ce47a78ce6488"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/plan_selected.py",
+      "bytes": 3893,
+      "sha256": "0e8464419c4e2f85f51aba97ad3e002bbdcf222d2f43821ad1ed7a9d710e83fc"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/portable-artifacts.json",
+      "bytes": 13570,
+      "sha256": "707351549840f1ae955e1c07abe852040b720751d395e5b75a6da5b2e4193363"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/power-first-reset.json",
+      "bytes": 287,
+      "sha256": "9af4a6cb132cfe1b9b3318bed64da62396406101af699f11872fc64e35d41371"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/preview-manifest.json",
+      "bytes": 1278,
+      "sha256": "531d4ad6b621990ebd4f03d65eb220119b6ad55db0c01005737e35d356782bd0"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/protected-local-copper.json",
+      "bytes": 55922,
+      "sha256": "0c3d762f089a1022d5a853dccc988136eb1aa49b6df937cb21ca485f5d9f9566"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/reset_power_first.py",
+      "bytes": 952,
+      "sha256": "13097cc97230c65392345e0169766d3e909889553cf44c16e92f3b640b44aff8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/restore_local_copper.py",
+      "bytes": 3320,
+      "sha256": "cb6b5a703bd2e3cf5f8290b5948790d53f72e678b162e826255808474216fe9a"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/route-metrics.json",
+      "bytes": 11714,
+      "sha256": "8f0ba48a8ee1c7b3ea886925496cffabd30338b86afb0049d70a1b1f75c2523f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/routing_geometry.py",
+      "bytes": 7790,
+      "sha256": "d668557c340dd91a80b432cf9e4ecca06b4ea24b10894634f446cc38eaf58c9e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/selected-process.json",
+      "bytes": 2376,
+      "sha256": "d7b02f9941c11f701c2192ccfa13afe83970a6873cea035dcd1fe85c965d8b16"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/selected-route-plan.json",
+      "bytes": 126783,
+      "sha256": "3f3ea2befb79c3683cc3b2266167f13ff454207276d94dad967ea9099e496e35"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/selection-decision.json",
+      "bytes": 657,
+      "sha256": "fc59be1f50eed33d9eb06f6dd440e5e58d35bcaef751849ceb2bbda6a82dc0ae"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/source-bindings.json",
+      "bytes": 1680,
+      "sha256": "4401fbf6d6ab0d29d36ca59d1080ded31e7738ecdcbe12fbaa89951502a87e15"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/task-contract.md",
+      "bytes": 1680,
+      "sha256": "f6979a049309c13ba4aab1c7191b1fa27c01e7db10aada0ad2f7c62e00790414"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/verify_saved_geometry.py",
+      "bytes": 4969,
+      "sha256": "5f20b82cea2c20be0f0a5a2a25578f94c80c22cdf48b3ebe96e5c34ca84c3eee"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/pcb-driver-08/write_selected.py",
+      "bytes": 1589,
+      "sha256": "d9dc0b3d2bf8f9c63afd104aafb5eaa837cce0ebeac6c1cb057ed5cc87aa99b0"
+    }
+  ],
+  "scope": "Exact selected CAD/evidence body; reviews/lifecycle/self excluded to avoid hash cycles."
+}
