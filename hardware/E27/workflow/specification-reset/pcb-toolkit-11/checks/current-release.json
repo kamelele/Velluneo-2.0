@@ -1,0 +1,777 @@
+{
+  "schema_version": 1,
+  "mode": "release",
+  "time_utc": "2026-11-20T00:20:56.432588+00:00",
+  "ruleset_version": "0.7.2",
+  "errors": [
+    "Requirements: PB-U-PROCESS: Unresolved: Exact vendor quote/stackup/material/filledcapservice/films confirmation has not been received.",
+    "Requirements: PB-PROCESS: Required evidence kind absent: review",
+    "Spatial: Spatial contract lacks current human approval",
+    "Connectivity: missing_stale_intent_approval: Intent lacks current human approval evidence",
+    "Fabrication field missing: confirmation_evidence",
+    "Assembly process not confirmed",
+    "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation",
+    "Special product/insulation requirements lack approved standards review",
+    "Missing/stale user approval: specification",
+    "Missing/stale user approval: schematic",
+    "Missing/stale user approval: placement",
+    "Missing/stale user approval: routing",
+    "Missing/stale user approval: release",
+    "Release approval does not cover current artifacts"
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.6\n",
+      "stderr": "01:20:57: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n01:20:57: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\Velluneo_driver.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "01:20:58: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n01:20:58: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\nFontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\.work\\erc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\Velluneo_driver.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to C:/Users/kamil/Documents/Codex/2026-11-17/zo/work/Velluneo-readiness/hardware/E27/workflow/specification-reset/pcb-toolkit-11/design/.work/erc.json\n",
+      "stderr": "01:20:59: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n01:20:59: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\nFontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\.work\\drc.json",
+        "--refill-zones",
+        "--schematic-parity",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\Velluneo_driver.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to C:/Users/kamil/Documents/Codex/2026-11-17/zo/work/Velluneo-readiness/hardware/E27/workflow/specification-reset/pcb-toolkit-11/design/.work/drc.json\n",
+      "stderr": "01:21:01: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n01:21:01: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\nFontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "807c619ca5111d84904b52a3fcd7e2ff9c222e07913d817c57cf668476f022d4",
+    "archive_sha256": "d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97",
+    "package_version": "0.7.2-velluneo.1",
+    "publication_ready": false,
+    "ruleset_version": "0.7.2"
+  },
+  "requirements": {
+    "schema_version": 1,
+    "stage": "release",
+    "errors": [
+      {
+        "id": "PB-U-PROCESS",
+        "gate": "release",
+        "message": "Unresolved: Exact vendor quote/stackup/material/filledcapservice/films confirmation has not been received."
+      },
+      {
+        "id": "PB-PROCESS",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "matrix": [
+      {
+        "id": "PB-IDENTITY",
+        "revision": "C10-1",
+        "owner": "Coordinator",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "DRIVER_BARE",
+            "object": "PB-IDENTITY",
+            "path": "Velluneo_driver.kicad_pcb"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-PB-IDENTITY"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "PB-ROUTING",
+        "revision": "C10-1",
+        "owner": "Coordinator",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "DRIVER_BARE",
+            "object": "PB-ROUTING",
+            "path": "Velluneo_driver.kicad_pcb"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-PB-ROUTING"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "PB-GEOMETRY",
+        "revision": "C10-1",
+        "owner": "Coordinator",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "DRIVER_BARE",
+            "object": "PB-GEOMETRY",
+            "path": "Velluneo_driver.kicad_pcb"
+          }
+        ],
+        "required_kind": "DRC",
+        "evidence_ids": [
+          "EV-PB-GEOMETRY"
+        ],
+        "observed_levels": [
+          "DRC-checked"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "PB-CAM",
+        "revision": "C10-1",
+        "owner": "Coordinator",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER_BARE",
+            "object": "PB-CAM",
+            "path": "Velluneo_driver.kicad_pcb"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-PB-CAM"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "PB-MAPPING",
+        "revision": "C10-1",
+        "owner": "Coordinator",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "DRIVER_BARE",
+            "object": "PB-MAPPING",
+            "path": "Velluneo_driver.kicad_pcb"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-PB-MAPPING"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "PB-PROCESS",
+        "revision": "C10-1",
+        "owner": "Process/sourcing designer and qualified technical reviewer",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER_BARE",
+            "object": "PB-PROCESS",
+            "path": "Velluneo_driver.kicad_pcb"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "PB-TOOL-SCOPE",
+        "revision": "C10-1",
+        "owner": "Process/sourcing designer and qualified technical reviewer",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER_BARE",
+            "object": "PB-TOOL-SCOPE",
+            "path": "Velluneo_driver.kicad_pcb"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-PB-TOOL-SCOPE"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      }
+    ],
+    "open_questions": [
+      {
+        "id": "PB-U-PROCESS",
+        "record_id": "PB-PROCESS",
+        "field": "supplier_confirmation",
+        "owner": "Process/sourcing designer and buyer",
+        "question": "Exact vendor quote/stackup/material/filledcapservice/films confirmation has not been received.",
+        "blocks_stage": "release",
+        "status": "open"
+      }
+    ],
+    "passed": false,
+    "limitations": [
+      "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+      "Hashes establish freshness, not evidence truth or reviewer authority.",
+      "Electrical checks compare declared DC envelopes only, not complete operation."
+    ],
+    "intent_digest": "f3f648d3581f254d109c82eae869df97c192e8c670fab06edc1a8d7ab213ebdc",
+    "product": "Velluneo selected driver BARE-BOARD prototype preparation only; parent lamp qualification remains separate/open",
+    "revision": "TOOLKIT11-prototype-scope-1",
+    "document_sha256": "1da5a79114c69ea639f5de53f4856732e5646b2921b596eccd9ccfacef0aeeff",
+    "blockers": [
+      {
+        "id": "PB-U-PROCESS",
+        "gate": "release",
+        "message": "Unresolved: Exact vendor quote/stackup/material/filledcapservice/films confirmation has not been received."
+      },
+      {
+        "id": "PB-PROCESS",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "blocked_stages": [
+      "release"
+    ]
+  },
+  "snapshot": "1a8400e268ec0281cfd543f553a26292caea243d2248f99b95899ec718063641",
+  "input_hashes": {
+    ".electronics-rules/config-state.json": "59faae07a3521f4f77fa068faeca2b5405bc7506b6e891b63b8c0fd0870c1fc7",
+    ".electronics-rules/migration-proof.json": "85cd8c1867566d03579d4f4342163f059a953f2d4158a8a61d7dc3d5c211188d",
+    ".electronics-rules/placement-input.json": "9b73f1f63278a127d1ab23400193196759bd8df31752101dbde1242c4d7435be",
+    ".electronics-rules/routing-input.json": "9b73f1f63278a127d1ab23400193196759bd8df31752101dbde1242c4d7435be",
+    "baseline-full-build-result.json": "346d4722bc343adfeceb208f57b32d9d8927a041fc95df6b1875bc44598e951e",
+    "baseline-native-inventory.json": "4094083a72672d84f11e69da0e6101f10e71ac6e1bc7c2ce29ef23f2b703d740",
+    "BOM.csv": "d581f7b659922f1949aded7b4bc357470265885202214c4c8d384db019e43a53",
+    "configuration-migration.json": "0d405f344f4913c46b94b50278d0b269cd2c56e5a16fbb94dcabcbd89adc4c19",
+    "evidence/coordinator-review.json": "755f362e3a5fb02631ce35a3808c33a6e27e773e8e4d0910c68e58783f70c858",
+    "evidence/current-CAM.json": "149a9cd6043a0d71ef8ba6e2f9f73d596e0a8152caf4180b0549dcf8b082ba53",
+    "evidence/native-checks.json": "d2a1372ecf829388ea12b341abe60f8807be7e55a330048ae5f88cdf854aac06",
+    "evidence/toolkit-validation.json": "e891c461ca5268602b796c13b6dfe1ca9dafe775318885baedb23f68340cc1b5",
+    "fp-lib-table": "387e4212eff1705a3535f1870a9bd6ad570d213753aaede0ba982f0208d52314",
+    "intended-connectivity.json": "88a96fa489059e1261a6ce76ec1213ce3ace8da10dc30828f99d57b7ef599525",
+    "libraries/Velluneo_Driver.kicad_sym": "ea55996cb9c71608d50b327b5933be48463968b403237a7b97548d7558bb2ec8",
+    "libraries/Velluneo_Driver.pretty/AC05_P25p4_FORMED_PROJECT_CANDIDATE.kicad_mod": "e65dae93383cfe989ab4aa6ac9280aeea0309ca7a58d6553b57791a1339ec7ca",
+    "libraries/Velluneo_Driver.pretty/CRCW_0603_NativeReflow.kicad_mod": "62129f2cd5f66207583424c6a242433e623b45957769ab4f9c1b4306327876bc",
+    "libraries/Velluneo_Driver.pretty/CRCW_0805_NativeReflow.kicad_mod": "8ba1bc4d3b63c70a0047ce2ba3d8deb33e156de3ab17cf6b18df9f64d1951585",
+    "libraries/Velluneo_Driver.pretty/CRCW_1206_NativeReflow.kicad_mod": "220722b5caa71eecf88c3b136c68e6e251510babf77ce04cf8d6343df48301fb",
+    "libraries/Velluneo_Driver.pretty/CRCW_2512_NativeReflow.kicad_mod": "e63e807d63fbf58edc90cc50375adfcef0137f8f4f4884168208bb5647d63ed0",
+    "libraries/Velluneo_Driver.pretty/CRCW_2512_R14_SilkClear.kicad_mod": "c390dbd766fcb730f0841ab56de78df72c1a228ac9d984c979cac27e144ff29d",
+    "libraries/Velluneo_Driver.pretty/Diodes_US1M_SMA_Native.kicad_mod": "42f3a307f0d1d5c1e92334b207568bc0e4f9fe775630fd4a2d3e97108377de2a",
+    "libraries/Velluneo_Driver.pretty/InternalWirePair_P7p62_D1p6_PROJECT_CANDIDATE.kicad_mod": "c59d0dca87a432b8aa3d39b68648416e21caf63c33c68c4849a73abcb8333033",
+    "libraries/Velluneo_Driver.pretty/KEMET_2220_C0G_DensityB_Native.kicad_mod": "abe9384787e116da22499ada8eb33c4a10712f1361041a827187e1361293f198",
+    "libraries/Velluneo_Driver.pretty/KEMET_2220_PROJECT_CANDIDATE.kicad_mod": "951bd4a80b76f31e54f2dc284d69f2f4d90134aac8ce139a27812b58c5549ebe",
+    "libraries/Velluneo_Driver.pretty/MB10S_Diodes_MBS_1P_2AC_3N_4AC.kicad_mod": "5327fac6e4374e25ca1a177b5cf733921d92a86628b9c2eda3b7a8896b641558",
+    "libraries/Velluneo_Driver.pretty/NTCS0603_NativeReflow.kicad_mod": "c6fbc1964a3d1de1f1ab754b7b1ef696a98c498b26ddcbab8183ef567435025b",
+    "libraries/Velluneo_Driver.pretty/Panasonic_ZA_D_Standard_Native.kicad_mod": "5e03f6f38f01adba535bce77896e3f642c63bcfc5ab2762f13accbc2676445b2",
+    "libraries/Velluneo_Driver.pretty/Rubycon_BXW_D10_P5_PROJECT_CANDIDATE.kicad_mod": "8d7964c26119719c3625cca2a2b0b4792859820c8a1a7950f4e4478203e3fb48",
+    "libraries/Velluneo_Driver.pretty/SCHURTER_UMTH_WEB_PROVISIONAL.kicad_mod": "bba0523e1f9d417eeceab222e4d7edb49b1488126aac83e5df7af1ff29e187eb",
+    "libraries/Velluneo_Driver.pretty/ST_STTH_SMA_Native.kicad_mod": "84fbb87e0e9953616ef8c5c178b3e2f510a7f49614aca7c5eafe78eb06ecf491",
+    "libraries/Velluneo_Driver.pretty/STN1NK80Z_SOT223_Tab4.kicad_mod": "061e1fb533ee6ff4f28aee968ace48046177040a562dc971f764626cb595ce1e",
+    "libraries/Velluneo_Driver.pretty/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.kicad_mod": "ece344674c759b293f3c12a801aaf94441146cd2d795770e2492ef35eaa29b5e",
+    "libraries/Velluneo_Driver.pretty/UCC28711DR_SOIC7_HV7.kicad_mod": "e9ec90dafe06344b4e82661114ec30f59e60f98d02978b3b65b09aacd17f504e",
+    "libraries/Velluneo_Driver.pretty/Vishay_SMBJ_PROJECT_CANDIDATE.kicad_mod": "07b8093b910de4c2f6c5dc1adbdf53fe257684e954821d3d0280b550d39dd387",
+    "models/BR1.wrl": "cfe200542cfe47e1f248b1bb021e1f2eea4efc10a6c9789552a3f8de19f046ec",
+    "models/C1.wrl": "e7b74e3dea7529c0ea13063158a9d89a0a6c1de2ae891bac435b7be631488ed8",
+    "models/C2.wrl": "7f7889b9a7688a36725e5e83bb6f7a9fe9c154e71e8086792203b12a42e43cad",
+    "models/C3.wrl": "7f7889b9a7688a36725e5e83bb6f7a9fe9c154e71e8086792203b12a42e43cad",
+    "models/C4.wrl": "ca1958d09102b4043ecacaa5484c37a6e8357077554ca8bdc848db61b45a3988",
+    "models/D1.wrl": "2b55923747f4a2997267164d233a25ecb12601599719fd202572261469eabaeb",
+    "models/D2.wrl": "3720be512b78c1a687a468eb335efdb095f73983d7c8f63bcd04cb674a0a17ba",
+    "models/D3.wrl": "3720be512b78c1a687a468eb335efdb095f73983d7c8f63bcd04cb674a0a17ba",
+    "models/F1.wrl": "0a67e39697014fdabe14199406f6b1ab1fadc3912ddd6a0d0bb49a2b2708b6b7",
+    "models/J1.wrl": "96ea6de847ef1a630a453ac3cea1da250c6902fba3421226d4cb9f488fa75161",
+    "models/J2.wrl": "96ea6de847ef1a630a453ac3cea1da250c6902fba3421226d4cb9f488fa75161",
+    "models/Q1.wrl": "846ab23f4082b8fb7c3b5a777891e67849ae6183c0ebe951c7c66e1d6f6319a4",
+    "models/R1.wrl": "62d4e2f5d47fb5396068d9070ff4a89800d618a5acea89a41ff57fa155bf01c5",
+    "models/R10.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R11.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R12.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R13.wrl": "7877ccebeaaa2b1c39ca3dafe3b4356f8a8183e4e418548e0e6d893392e52875",
+    "models/R14.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R15.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R16.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R17.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R2.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R3.wrl": "2b74eefd789fe8c24df32eaee2098bcefd3096c3049e5f5760e73849aa23141d",
+    "models/R4.wrl": "c0b943db800534f5cb7f10328583d90f1c1051a0afa4ce65cef2c982c5626978",
+    "models/R5.wrl": "c0b943db800534f5cb7f10328583d90f1c1051a0afa4ce65cef2c982c5626978",
+    "models/R6.wrl": "7877ccebeaaa2b1c39ca3dafe3b4356f8a8183e4e418548e0e6d893392e52875",
+    "models/R7.wrl": "c0b943db800534f5cb7f10328583d90f1c1051a0afa4ce65cef2c982c5626978",
+    "models/R8.wrl": "7877ccebeaaa2b1c39ca3dafe3b4356f8a8183e4e418548e0e6d893392e52875",
+    "models/R9.wrl": "2376d8863dcfda080c9fb7776794eacda9a188c022a8a141276bf220a6ed03c6",
+    "models/RT1.wrl": "4aed157b4dbc22ec8b602ba96a826203d6ca56d1f6c14c77a3d785750229a938",
+    "models/T1.wrl": "76865ea7e559fb7a88e43d442e2f6069fc2670cb175599d8b9a74db7831d8e63",
+    "models/TVS1.wrl": "6b7bc3cb08c7ab3c861dc191990105288515a6027dd98eae74e523b558ddcaa4",
+    "models/U1.wrl": "6b38b54ebf6b12a8bda58057746cd80b9e0860099446f38aa6b9eb3e12ae0273",
+    "owner-basis-decision.json": "03f720f963e48a335ae0add039ba80ab1d681ca3f9b95914d64fb54ec877ed5f",
+    "parent-lamp-requirements.json": "87ec7acd6adb9119b9aedf6a8e4b5aa0ac4fa47e8f95126bf25af1d4948af5b7",
+    "proposed-intent.json": "e1f3fe248fbe5dd6d7484dea85e23e1b63469bf575ba0719b6f26a00ce4df5ce",
+    "proposed-parts.json": "7ff4c0e0598c7e37ccea2f22dbe2a82eef50275825533e9162ea66ad2dadfea2",
+    "requirements.json": "1da5a79114c69ea639f5de53f4856732e5646b2921b596eccd9ccfacef0aeeff",
+    "spatial-basis.md": "1c7de1e1649a564f09015bbf0d2d6a66ffa0b6746fcb5eae4d5153549b7f46d3",
+    "spatial-constraints.json": "1844ae1d41ecadadc1bd655dfa0475dd6000295f6cced2eb6fe14a2c71e4903c",
+    "sym-lib-table": "ae491b3cef7acb7c1cd3a75083670a5e1c99444e4c01e230e3757724fa1ba398",
+    "Velluneo_driver.kicad_dru": "2ae99d8467e95de7264bcc3a066a7e683d82b04792b106d1407f7cfcf89aff81",
+    "Velluneo_driver.kicad_pcb": "9371f0cb04eb08bac7e462b7553e250b212dc8a401e7068fdcb11cbe3448e0d4",
+    "Velluneo_driver.kicad_pro": "39d5ef8fe0e46c8843edce8c8dbfd73759a2b3e7cd3b5dcbc8ab3589251887fc",
+    "Velluneo_driver.kicad_sch": "024d34d9a2e7fed6ff76ef81351d983c69f850f30d360d5fb63a0b47ce84ca15",
+    "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_Pad2p25_PROJECT.kicad_mod": "2bff605f6d49ab6818a6c6f120e6a759b94b4004342ff93ec7188e0580500e5d",
+    "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_PROJECT.kicad_mod": "d470012f4d449c3c81e9b89a76244731e2ae85fc14f0730923ee0d5b205505b0",
+    "Velluneo_ECO04.pretty/TDK_EFD25_Pad2p0_PROJECT.kicad_mod": "dd58b70137f9c0b4efda27b0ae507f79ae8462352dc8708165493603eda67e85",
+    "Velluneo_ECO04.pretty/UCC28701_DBV_Native.kicad_mod": "4919e2ce4e11929d18ba23628b0305a80517a86b0bf0b8161d36fa41628412cf",
+    "Velluneo_ECO04.pretty/W10G_Formed5p5_PROJECT.kicad_mod": "e67f0c8320b7d4ac6b3fb0810a3102793ba02c10f828381b941e2a517f9eecbf",
+    "project-design-config": "02506c3d105b1a97a88fffcb0dae3ed18f023cbc1f10f2ac1fab12ce6114096b",
+    "toolkit:identity": "71f818c699c36d1e18bba85e90ce48dface41f7f496b83ca6cf4e1e052f0d3be",
+    "ruleset:VERSION": "d0176718bd214ce8474c06ed61c395ca113fdfc2acdd86d9aa9933b40d9b561e",
+    "ruleset:rules/catalog.json": "d1edf261c5686376ea86122b07d0c511a250ed6e6ffdb79413e1b0ae294a4e3d",
+    "ruleset:profiles/jlcpcb.json": "7f218abddc9ac159ac3ee3a18ae5bb8ee9b3e4bdb440905ce9a8b80261062c04",
+    "ruleset:profiles/assembly-inhouse.json": "842ef8a87ec249443f3659a5d1d6c21c77ba5743c921492c5e009bee6fabdf48",
+    "ruleset:scripts/pcb_rules.py": "430cc2f20e82e1ef118d03e3d1e509fe6ec512f9687d2db57c6c52a6a93021d9",
+    "ruleset:scripts/configuration.py": "a49df2df136fa8fcf5a45817df918910f785716db8b0e9b09643c3746194b1c9",
+    "ruleset:scripts/scoped_policy.py": "1df60147853ff328cafbbdba6214033d8f3f66ed84262da900606c6bfa71829f",
+    "ruleset:scripts/product_contracts.py": "1c95b8d5e9cf88f606d33270414407fe2565cda0e8ca7999ec3d53601ae56d3c",
+    "ruleset:scripts/connectivity.py": "3cbe0e9b8e136c72aac386cfa9cead056572e91f6abf538cb4b0c415ebce7abc",
+    "ruleset:scripts/spatial.py": "0297bea4de11ddafc2a34e787edd1cc7b936423e96b2cc5d6bb9848ec5ee5480",
+    "ruleset:scripts/spatial_cad.py": "75f6d5ca940b4bc5dfdad38dbd5c66af9e210bbdd8a3dc33cefed145fc642019",
+    "ruleset:scripts/toolkit_install.py": "f306aabc8ea5ba5d80ca6d096d360e4a80988fc0368c767a5a8bd7b51fab6d50",
+    "ruleset:scripts/package_toolkit.py": "a41db64afa483389a159c74bd64d643dd9956f9b7de3895998d985a68bc9c6cb",
+    "ruleset:templates/kicad/board.kicad_pro": "6fa5d1285727ba111efebce5f199d5b39573ef62ba331ec0c177b4f201adcc32"
+  },
+  "resolved_minimums_mm": {
+    "clearance": 0.25,
+    "track_width": 0.3,
+    "hole_size": 0.3,
+    "annular_width": 0.2,
+    "edge_clearance": 0.5
+  },
+  "spatial": {
+    "passed": false,
+    "errors": [
+      "Spatial contract lacks current human approval"
+    ],
+    "constraints_digest": "d2c1bfc56a66389fd9fa7ae6bdcdf0d0c460d3a79993294f7df6dddec0432286",
+    "intent_digest": "8533b925350bdaaef885ef132ae63ed204aa7abc92def2494f90432f0f4df6ad",
+    "geometry": {
+      "footprints": [
+        {
+          "reference": "J1",
+          "envelope_mm": [
+            117.117857,
+            92.275,
+            4.857143,
+            11.45
+          ]
+        },
+        {
+          "reference": "Q1",
+          "envelope_mm": [
+            79.645,
+            108.775,
+            12.05325,
+            11.45
+          ]
+        },
+        {
+          "reference": "R6",
+          "envelope_mm": [
+            98.25175,
+            120.998809,
+            4.67325,
+            5.026191
+          ]
+        },
+        {
+          "reference": "U1",
+          "envelope_mm": [
+            102.175,
+            118.625,
+            6.92325,
+            4.25
+          ]
+        },
+        {
+          "reference": "R2",
+          "envelope_mm": [
+            117.925,
+            119.875,
+            4.15,
+            8.25
+          ]
+        },
+        {
+          "reference": "R10",
+          "envelope_mm": [
+            80.725,
+            98.225,
+            4.15,
+            10.12325
+          ]
+        },
+        {
+          "reference": "R9",
+          "envelope_mm": [
+            82.16,
+            118.55175,
+            4.15,
+            4.22325
+          ]
+        },
+        {
+          "reference": "R5",
+          "envelope_mm": [
+            100.04881,
+            121.60175,
+            5.40119,
+            4.82325
+          ]
+        },
+        {
+          "reference": "RT1",
+          "envelope_mm": [
+            96.15175,
+            125.917857,
+            5.37325,
+            3.307143
+          ]
+        },
+        {
+          "reference": "C4",
+          "envelope_mm": [
+            87.125,
+            70.275,
+            10.976191,
+            7.45
+          ]
+        },
+        {
+          "reference": "R1",
+          "envelope_mm": [
+            93.125,
+            108.65175,
+            28.15,
+            9.92325
+          ]
+        },
+        {
+          "reference": "TVS1",
+          "envelope_mm": [
+            92.075,
+            118.555,
+            6.15,
+            6.39325
+          ]
+        },
+        {
+          "reference": "D2",
+          "envelope_mm": [
+            79.25175,
+            91.975,
+            5.32325,
+            6.05
+          ]
+        },
+        {
+          "reference": "J2",
+          "envelope_mm": [
+            102.775,
+            70.15175,
+            11.45,
+            4.72325
+          ]
+        },
+        {
+          "reference": "T1",
+          "envelope_mm": [
+            86.475,
+            77.65175,
+            26.4,
+            28.62325
+          ]
+        },
+        {
+          "reference": "R13",
+          "envelope_mm": [
+            101.775,
+            127.55175,
+            6.802381,
+            1.6965
+          ]
+        },
+        {
+          "reference": "R7",
+          "envelope_mm": [
+            91.775,
+            108.2,
+            3.45,
+            3.89825
+          ]
+        },
+        {
+          "reference": "F1",
+          "envelope_mm": [
+            109.85175,
+            99.675,
+            7.87325,
+            18.05
+          ]
+        },
+        {
+          "reference": "BR1",
+          "envelope_mm": [
+            107.695,
+            118.945,
+            10.91,
+            14.30325
+          ]
+        },
+        {
+          "reference": "C2",
+          "envelope_mm": [
+            98.95175,
+            117.075,
+            7.77325,
+            7.35
+          ]
+        },
+        {
+          "reference": "C3",
+          "envelope_mm": [
+            79.825,
+            92.325,
+            7.35,
+            7.77325
+          ]
+        },
+        {
+          "reference": "R16",
+          "envelope_mm": [
+            97.925,
+            93.175,
+            6.17325,
+            8.25
+          ]
+        },
+        {
+          "reference": "R15",
+          "envelope_mm": [
+            80.375,
+            101.00175,
+            8.25,
+            5.92325
+          ]
+        },
+        {
+          "reference": "C1",
+          "envelope_mm": [
+            82.485,
+            116.90175,
+            11.05,
+            12.92325
+          ]
+        },
+        {
+          "reference": "R14",
+          "envelope_mm": [
+            87.225,
+            94.475,
+            4.05,
+            8.25
+          ]
+        },
+        {
+          "reference": "R3",
+          "envelope_mm": [
+            91.425,
+            93.175,
+            5.92325,
+            8.25
+          ]
+        },
+        {
+          "reference": "R8",
+          "envelope_mm": [
+            85.175,
+            113.675,
+            4.52325,
+            2.92619
+          ]
+        },
+        {
+          "reference": "R4",
+          "envelope_mm": [
+            102.775,
+            114.75,
+            5.526191,
+            2.1
+          ]
+        },
+        {
+          "reference": "R12",
+          "envelope_mm": [
+            86.875,
+            75.925,
+            8.25,
+            4.15
+          ]
+        },
+        {
+          "reference": "D3",
+          "envelope_mm": [
+            90.975,
+            71.225,
+            6.05,
+            3.55
+          ]
+        },
+        {
+          "reference": "R11",
+          "envelope_mm": [
+            99.375,
+            74.925,
+            8.25,
+            5.92325
+          ]
+        },
+        {
+          "reference": "R17",
+          "envelope_mm": [
+            107.125,
+            92.875,
+            5.92325,
+            8.25
+          ]
+        },
+        {
+          "reference": "D1",
+          "envelope_mm": [
+            93.615,
+            116.125,
+            5.38325,
+            7.05
+          ]
+        }
+      ],
+      "area_count": 1,
+      "pcbnew_version": "10.0.6"
+    },
+    "limitations": [
+      "Consumer files verify declared inputs, not execution of an external router.",
+      "Block topology/SI/PI/EMC and physical insulation require separate evidence."
+    ]
+  },
+  "kicad_version": "10.0.6",
+  "connectivity": {
+    "schema_version": 1,
+    "passed": false,
+    "errors": [
+      {
+        "type": "missing_stale_intent_approval",
+        "message": "Intent lacks current human approval evidence"
+      }
+    ],
+    "commands": [
+      {
+        "command": [
+          "kicad-cli.exe",
+          "sch",
+          "export",
+          "netlist",
+          "--format",
+          "kicadxml",
+          "--output",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\.work\\connectivity-netlist.xml",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\Velluneo_driver.kicad_sch"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "01:20:58: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n01:20:58: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\nFontconfig error: Cannot load default config file: No such file: (null)\n"
+      }
+    ],
+    "intent_digest": "6d2cca8445877f5dde4f40cde42721160982e10b73d7e7227f3a55a059c6845a",
+    "intent_revision": "lossless-schema-adapter-of-approved33-basis-C10",
+    "physical_pins": 81,
+    "intended_nets": 23,
+    "no_connects": 4,
+    "limitations": [
+      "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+      "Approval fields record evidence; hashes do not authenticate a human."
+    ],
+    "intent_sha256": "88a96fa489059e1261a6ce76ec1213ce3ace8da10dc30828f99d57b7ef599525",
+    "export_sha256": "7d4014fc70b8e34e340be34ec3b5868b68ee0608463ae54315427e0c60a12b6a",
+    "export_tool": "Eeschema 10.0.6"
+  },
+  "erc": {
+    "report_sha256": "5ba487b19a4eb8eebd06b2a4d5cd555f99288a03dab58a8162f8f7eb3e180b1d",
+    "findings": []
+  },
+  "drc": {
+    "report_sha256": "9d739e9db4627843cbcd4307cab423a32e2d5219061e43b3b34c1d136a51b52d",
+    "findings": []
+  },
+  "artifacts_digest": "c3b68bac29d7c57c68374cf3952f073414ec97152a944f62568ad695fda3a83d",
+  "passed": false
+}

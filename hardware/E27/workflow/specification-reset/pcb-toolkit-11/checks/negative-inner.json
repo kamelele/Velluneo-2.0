@@ -1,0 +1,912 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-20T01:12:41",
+    "ignored_checks": [
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Velluneo_driver.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [/SENSE] of R9 on F.Cu",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "0acd1c5a-4e7d-4f53-9370-4d18e259dff3"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items not allowed",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        },
+        {
+            "description": "Items not allowed (rule 'HW-SPATIAL-ISOLATION')",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 1,9558 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,5657 mm",
+                    "pos": {
+                        "x": 81.7,
+                        "y": 114.0
+                    },
+                    "uuid": "dcd57cc1-d941-409b-ae7b-6aeff09d779b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,6000 mm",
+                    "pos": {
+                        "x": 88.5,
+                        "y": 107.4
+                    },
+                    "uuid": "3676b15e-19f2-46c1-bb34-b05cb20e60da"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-clearance' clearance 0,2500 mm; actual 0,0554 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Via [/PRIMARY_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 86.9,
+                        "y": 95.8
+                    },
+                    "uuid": "827db630-6fce-4e2b-bf19-ff97e1277176"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,2800 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,1044 mm",
+                    "pos": {
+                        "x": 81.27,
+                        "y": 114.5
+                    },
+                    "uuid": "f2aed142-614d-4323-bc85-63cece721dcb"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,2800 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,8000 mm",
+                    "pos": {
+                        "x": 81.3,
+                        "y": 110.6
+                    },
+                    "uuid": "e40974a5-c157-4ebb-9778-b67a995b3b3f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,1314 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 1,5232 mm",
+                    "pos": {
+                        "x": 82.3,
+                        "y": 109.6
+                    },
+                    "uuid": "d7bf3cb3-cbad-4f05-93af-465dd9b7c066"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 0,8345 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,6770 mm",
+                    "pos": {
+                        "x": 83.9,
+                        "y": 108.0
+                    },
+                    "uuid": "cca2eaff-9e72-46bf-8ef1-6ccdcaac3627"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 0,3482 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,1113 mm",
+                    "pos": {
+                        "x": 84.5,
+                        "y": 107.4
+                    },
+                    "uuid": "d520cca0-4b92-46fd-9770-2e2a16cd6e31"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,2800 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,1044 mm",
+                    "pos": {
+                        "x": 81.3,
+                        "y": 114.4
+                    },
+                    "uuid": "b01af529-7070-40f2-85c2-7a4573021f4b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,3907 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,6878 mm",
+                    "pos": {
+                        "x": 90.9,
+                        "y": 110.2
+                    },
+                    "uuid": "e167aa3e-1688-45d4-bcb5-ab0351c20425"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 1,9558 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,0000 mm",
+                    "pos": {
+                        "x": 81.7,
+                        "y": 111.0
+                    },
+                    "uuid": "92d05762-1b75-4e72-a180-a9e7b18e0138"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,4000 mm",
+                    "pos": {
+                        "x": 87.9,
+                        "y": 107.4
+                    },
+                    "uuid": "a464fe57-d695-4add-b032-a77f92754f58"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets /DRAIN and /SENSE)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 1,1662 mm",
+                    "pos": {
+                        "x": 84.9,
+                        "y": 107.4
+                    },
+                    "uuid": "0acc5658-5c3d-4f8a-a514-79a544441373"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 1,7998 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 2,4413 mm",
+                    "pos": {
+                        "x": 89.9,
+                        "y": 108.8
+                    },
+                    "uuid": "94151142-07bb-4e58-bd49-1e708aa7bcfd"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "27bc0e4b-eb4a-4cec-94f9-14ad8bd874ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 120.1,
+                        "y": 98.0
+                    },
+                    "uuid": "0cc45f6e-eafe-44ea-8d9f-c478df91e2e9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_ECO04' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 86.35,
+                        "y": 114.5
+                    },
+                    "uuid": "11ebffe3-b011-44b4-b1e0-03c0306a48ef"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 102.1,
+                        "y": 124.6
+                    },
+                    "uuid": "133d9b15-86ba-4974-af28-19d294c6737c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_ECO04' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 103.75,
+                        "y": 120.75
+                    },
+                    "uuid": "1c6aa10b-c268-4e20-870b-9fa31ddcef6a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 124.0
+                    },
+                    "uuid": "28fde08c-052a-4a16-bc38-1430915d93b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 82.8,
+                        "y": 102.35
+                    },
+                    "uuid": "307ba739-9316-4238-b339-e819b82a154f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R9",
+                    "pos": {
+                        "x": 84.235,
+                        "y": 121.55
+                    },
+                    "uuid": "3457b126-f853-4f45-b143-f5963154f21a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 104.4,
+                        "y": 124.7
+                    },
+                    "uuid": "39a3992c-aaee-4af4-be82-7d94202b1abb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint RT1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 128.4
+                    },
+                    "uuid": "3f05e25a-6d15-4736-8b66-bdf4dcca961c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 91.5,
+                        "y": 74.0
+                    },
+                    "uuid": "3f9aba25-c24e-43ee-a656-d9dd1d33282f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 107.2,
+                        "y": 114.5
+                    },
+                    "uuid": "6141c432-2f85-400c-88c2-03e1c132015f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TVS1",
+                    "pos": {
+                        "x": 95.15,
+                        "y": 120.85
+                    },
+                    "uuid": "9e86d555-0a24-4d79-8daf-7a8fc7702642"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 82.8,
+                        "y": 95.0
+                    },
+                    "uuid": "a61604d5-80ed-4888-8375-f841546eea4a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 108.5,
+                        "y": 73.0
+                    },
+                    "uuid": "c3c4bd70-c4f2-4061-acc9-f42dcc53a85d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_ECO04' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint T1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 93.0
+                    },
+                    "uuid": "d59df49b-a7a9-4353-8605-b863b0125f00"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R13",
+                    "pos": {
+                        "x": 103.2,
+                        "y": 128.4
+                    },
+                    "uuid": "d734c948-6d0c-4988-bbbf-79d6c066d2ca"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R7",
+                    "pos": {
+                        "x": 93.5,
+                        "y": 109.25
+                    },
+                    "uuid": "fb39c100-b0f9-4484-a7c9-71f4ba57690c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint F1",
+                    "pos": {
+                        "x": 114.6,
+                        "y": 108.7
+                    },
+                    "uuid": "0267d715-2a8b-43e0-9752-22ce4fd0b5f3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_ECO04' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint BR1",
+                    "pos": {
+                        "x": 113.15,
+                        "y": 124.4
+                    },
+                    "uuid": "04fa5d4f-0ec1-4fa3-96b6-2d8ebbf78201"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 103.75,
+                        "y": 120.75
+                    },
+                    "uuid": "05ae7950-2dfd-445e-9c61-ca485d08981b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 83.5,
+                        "y": 95.3
+                    },
+                    "uuid": "08cae680-b4de-4526-b6f8-4b44e8d72159"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R16",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 97.3
+                    },
+                    "uuid": "0cad3079-90d1-4402-98fc-a86f95ac8688"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R15",
+                    "pos": {
+                        "x": 84.5,
+                        "y": 104.85
+                    },
+                    "uuid": "170e9983-a00f-4937-a81e-a0f3ec23fee7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 88.01,
+                        "y": 124.25
+                    },
+                    "uuid": "2346ebbd-d9e3-44ad-9d57-38b72e6bd658"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R14",
+                    "pos": {
+                        "x": 89.25,
+                        "y": 98.6
+                    },
+                    "uuid": "48841847-4cce-45fd-aeed-33be4a8eaf50"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 93.5,
+                        "y": 97.3
+                    },
+                    "uuid": "48bce255-3c3d-461f-8fdf-37416ae9121e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R8",
+                    "pos": {
+                        "x": 86.6,
+                        "y": 114.5
+                    },
+                    "uuid": "58fd351d-6570-4a68-9b32-d94058e94e61"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R4",
+                    "pos": {
+                        "x": 104.5,
+                        "y": 115.8
+                    },
+                    "uuid": "593bd459-30bb-4e06-8560-654f3bb072fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R12",
+                    "pos": {
+                        "x": 91.0,
+                        "y": 78.0
+                    },
+                    "uuid": "5c693a36-1389-45b0-856b-0ef1047a400d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 94.0,
+                        "y": 73.0
+                    },
+                    "uuid": "b31bc6c1-9ced-47fb-ac40-9d8554f22c11"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R11",
+                    "pos": {
+                        "x": 103.5,
+                        "y": 77.0
+                    },
+                    "uuid": "b945e51f-8381-4c9b-8bae-e53bec482c9c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R17",
+                    "pos": {
+                        "x": 109.2,
+                        "y": 97.0
+                    },
+                    "uuid": "e2e83494-cff3-4edc-8306-d9a30fbdd501"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Velluneo_Driver' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 95.4,
+                        "y": 119.65
+                    },
+                    "uuid": "e89d4cd8-d976-4f84-8da4-bac551f4cc5a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

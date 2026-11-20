@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "errors": [
+    {
+      "type": "missing_stale_intent_approval",
+      "message": "Intent lacks current human approval evidence"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-toolkit-11\\design\\Velluneo_driver.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "01:20:41: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\n01:20:41: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 5: Odmowa dost?pu.)\nFontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "intent_digest": "6d2cca8445877f5dde4f40cde42721160982e10b73d7e7227f3a55a059c6845a",
+  "intent_revision": "lossless-schema-adapter-of-approved33-basis-C10",
+  "physical_pins": 81,
+  "intended_nets": 23,
+  "no_connects": 4,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "88a96fa489059e1261a6ce76ec1213ce3ace8da10dc30828f99d57b7ef599525",
+  "export_sha256": "2df13ff6960dd3c8fa863305a8f6d532c2147ee24d6dffe54aa8c9f2da26d509",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "807c619ca5111d84904b52a3fcd7e2ff9c222e07913d817c57cf668476f022d4",
+    "archive_sha256": "d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97",
+    "package_version": "0.7.2-velluneo.1",
+    "publication_ready": false,
+    "ruleset_version": "0.7.2"
+  }
+}

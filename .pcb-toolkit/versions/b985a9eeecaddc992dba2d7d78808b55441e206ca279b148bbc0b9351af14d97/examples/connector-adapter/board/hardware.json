@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "name": "board",
+  "kicad_version": "10.0.6",
+  "fabrication": {
+    "vendor": "jlcpcb",
+    "service": null,
+    "stackup": null,
+    "copper": null,
+    "finish": null,
+    "confirmation_evidence": null
+  },
+  "assembly": {
+    "mode": "inhouse",
+    "confirmation_evidence": null,
+    "local_pcba_provider_confirmation": null,
+    "stencil": "frameless"
+  },
+  "product": {
+    "requirements_file": "requirements.json",
+    "connectivity_file": "intended-connectivity.json",
+    "spatial_file": "spatial-constraints.json",
+    "domains": [
+      "Fictional passive lab adapter; <=5 V and <=10 mA only; not qualified"
+    ],
+    "requirements": [],
+    "minimums_mm": {},
+    "special_requirements": [],
+    "barriers": [],
+    "standards_review_evidence": null
+  },
+  "netclasses": [],
+  "source_files": [
+    "board.kicad_sch",
+    "board.kicad_pcb",
+    "board.kicad_pro",
+    "board.kicad_dru",
+    "Tutorial.kicad_sym",
+    "sym-lib-table",
+    "fp-lib-table",
+    "Tutorial.pretty/Connector_2.kicad_mod",
+    "specification.md",
+    "review-basis.md",
+    "bom.csv",
+    "bringup-plan.md"
+  ],
+  "approvals": {},
+  "waivers": [],
+  "release_files": {}
+}

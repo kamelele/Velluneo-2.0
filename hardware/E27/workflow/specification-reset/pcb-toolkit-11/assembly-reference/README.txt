@@ -1,0 +1,3 @@
+REFERENCE ONLY — NOT A TURNKEY PCBA ORDER
+
+BOM33references and nativepositions are supplied for engineering/fit review. SameMPNs/values/pins as DRIVER08. R14uses a named identical-land silk-only footprint variant. No automatic substitution or supplierpartnumbers assigned. CustomEFD25transformer is a manufacturing requirement, not an orderable approvedMPN. FormedBR1/Q1/R1 and provisionalF1 need actualparts/leadforming/finishedsolderjoint validation. SMT parts appear on bothsides; THT/manual assembly and heatcycle/support need qualified processreview. Native rotations/side are not calibrated to a specific assemblyhouse's library. No PCBA/stencil/panel job is released. See solderpaste geometry in CAD only if a later reviewedassemblyprocess needs a stencil.

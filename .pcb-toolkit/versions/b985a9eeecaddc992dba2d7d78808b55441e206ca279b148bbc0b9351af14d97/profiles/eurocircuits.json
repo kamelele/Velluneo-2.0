@@ -1,0 +1,24 @@
+{
+  "id": "eurocircuits",
+  "reviewed_on": "2026-11-06",
+  "status": "candidate-requires-project-confirmation",
+  "services": [
+    "STANDARD-pool-FR4-routed"
+  ],
+  "sources": [
+    "https://www.eurocircuits.com/technical-guidelines/pcb-design-guidelines/classification/",
+    "https://www.eurocircuits.com/technical-guidelines/"
+  ],
+  "scope": "STANDARD pool conventional FR4, routed edge. Pattern/drill classes, copper and actual tool compensation require order-specific confirmation.",
+  "observed_capability_mm": {
+    "inner_unconnected_hole_copper_floor": 0.2
+  },
+  "design_preferences_mm": {
+    "clearance": 0.2,
+    "track_width": 0.2,
+    "hole_size": 0.3,
+    "annular_width": 0.2,
+    "edge_clearance": 0.4
+  },
+  "note": "No inference of current service minima from historical tables. Preferences are conservative candidates, not certified fabrication capability. Annular ring/tool diameter compensation and inner clearances must be checked with Visualizer/confirmed quote."
+}

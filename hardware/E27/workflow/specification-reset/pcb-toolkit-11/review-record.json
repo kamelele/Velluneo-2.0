@@ -1,0 +1,37 @@
+{
+  "body_sha256": "494dbf9aa433a8862cb96ce5c2f6d1e3ef793e740398643b311d8351a068d3f4",
+  "actual_reviewers": [
+    {
+      "actor": "/root/c11_reality",
+      "role": "Reality Checker",
+      "report": "reviews/reality.json"
+    },
+    {
+      "actor": "/root/c8_change",
+      "role": "Change Reviewer",
+      "report": "reviews/change.json"
+    },
+    {
+      "actor": "/root/c11_completeness",
+      "role": "Completeness Reviewer",
+      "report": "reviews/completeness.json"
+    },
+    {
+      "actor": "/root/c8_simplicity",
+      "role": "Overengineering Reviewer",
+      "report": "reviews/simplicity.json"
+    }
+  ],
+  "findings": [
+    {
+      "id": "C11-COMP-01",
+      "status": "closed",
+      "original_body": "1537163eebb9d9ebd910b3aeb329db8fffc36389664ac7a4c482a6548bf97a17",
+      "correction": "checks/correction-C11-COMP-01.json",
+      "independent_closure_actor": "/root/c11_completeness",
+      "closure_body": "494dbf9aa433a8862cb96ce5c2f6d1e3ef793e740398643b311d8351a068d3f4"
+    }
+  ],
+  "human_approval": null,
+  "full_order_ready": false
+}
