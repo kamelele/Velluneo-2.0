@@ -1,0 +1,75 @@
+{
+  "board_sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+  "method": "Actual copper polygons per layer; every disjoint zone island separate; physical PTH/via cross-layer bridges only; remove both C5.2 pad faces/barrel in second pass. Conservative outward native polygon error 0.002 mm, zero contact threshold.",
+  "normal_DC_RETURN_components": 1,
+  "after_C5_negative_pad_removal_components": 2,
+  "main_pins": [
+    "BR1.3",
+    "C1.2",
+    "C2.2",
+    "D1.2",
+    "D3.2",
+    "J2.2",
+    "R8.2",
+    "R9.2"
+  ],
+  "quiet_pins": [
+    "C9.2",
+    "R15.2",
+    "R17.2",
+    "R23.2",
+    "U2.2",
+    "U2.3",
+    "U3.2",
+    "U4.2",
+    "U5.2"
+  ],
+  "main_and_quiet_separate_without_C5_pad": true,
+  "source_control_branch": "U4.4 SOURCE clamp feed uses 0.3mm track, through .8/.3 via98.9,34 to C3-return via110.3,36.1; R3/R4 relay series resistors remain intact. This control branch is not main switching-current route. Main Source tracks remain0.6mm/plane.",
+  "C3_BP_connection_length_mm": 2.672760744997572,
+  "U3_thermal_vias": 10,
+  "thermal_via_diameter_drill_mm": [
+    0.8,
+    0.3
+  ],
+  "thermal_zone_areas_mm2": [
+    {
+      "net": "/DC_RETURN",
+      "layer": "F.Cu",
+      "area_mm2": 16.8039129306515,
+      "uuid": "04618867-f6c2-47ea-8746-f0dfbe709c43"
+    },
+    {
+      "net": "/SOURCE",
+      "layer": "F.Cu",
+      "area_mm2": 36.6594295480855,
+      "uuid": "35529d78-87ad-4b1e-b2ac-53f91c7ed19b"
+    },
+    {
+      "net": "/DC_RETURN",
+      "layer": "F.Cu",
+      "area_mm2": 176.618198266088,
+      "uuid": "8fe6dc35-37c9-425d-bba1-e6a4331bb83d"
+    },
+    {
+      "net": "/SOURCE",
+      "layer": "F.Cu",
+      "area_mm2": 117.356836486482,
+      "uuid": "ac750221-5203-44fa-8aa2-439dad69e358"
+    },
+    {
+      "net": "/DC_RETURN",
+      "layer": "F.Cu",
+      "area_mm2": 153.238519265366,
+      "uuid": "bdd7b8ef-2a63-4584-99c9-75ecedd60bf0"
+    },
+    {
+      "net": "/DC_RETURN",
+      "layer": "B.Cu",
+      "area_mm2": 399.977799110888,
+      "uuid": "02a4cc3b-0681-49c2-9cd7-6a28ac1dee0c"
+    }
+  ],
+  "thetaJA85_K_per_W": "Conditional design target only, not demonstrated by copper or via count.",
+  "limits": "No switching waveform, thermal, impulse or fault behavior has been measured."
+}

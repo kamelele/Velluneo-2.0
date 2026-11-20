@@ -1,0 +1,88 @@
+{
+  "review_id": "SC08-ROUTE2-OVERENGINEERING-01",
+  "task": "SC08-ROUTE2-COMPLETE",
+  "stage": "routing",
+  "role": "Overengineering Reviewer",
+  "actual_reviewer_actor": "/root/final_route_simple",
+  "distinct_from_implementer": "/root was sole customer CAD writer; this context performed independent read-only inspection and authored no customer CAD or helper used to generate it",
+  "base_commit": "701f61633fd545a6a0b9fe08b153b824094a9cdb",
+  "manifest_sha256": "02e3217f2265c5bd8150c335af5123f7e9861c2cf4d463e016d5a124d6f54728",
+  "board_sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+  "source_snapshot": "75e64c15c23b60003a725c9671c2a9d71d9c360a1d2ae3e4807aac47749701dc",
+  "scope": "Appropriate simplicity and reuse for an accepted-schematic, bare unpowered 0..40C laboratory vehicle. No assessment as a compact finished bulb, procurement approval or physical electrical/thermal qualification.",
+  "requirements_inspected": ["LAB_SCOPE", "LAB_NETLIST", "LAB_PARTS", "LAB_INTERFACE", "LAB_SPACING", "LAB_SPATIAL", "LAB_DFM", "LAB_PARITY", "Original17 product obligations retained beyond bare PCB"],
+  "evidence_inspected": [
+    "Project AGENTS, pinned agent-workflow/existing-projects/overengineering role and review-report template",
+    "Exact frozen160source hashes and3external native CAD PNG hashes",
+    "Actual saved native CAD via raw PCB_IO_MGR loader, original accepted-placement CAD and all47part references/values/MPNs/footprints/positions/rotations",
+    "Actual native957segments,54throughvias,6filled zones,8rule areas,2copper layers; independent per-net segment/length/width inventory in inspection.json",
+    "Native components/pads, original product requirements, active LAB criteria/evidence, owner process decision, BOM-design, driver-output interface and operative lab-board-boundaries",
+    "Frozen integrated Toolkit work PASS and full saved-copper matrix PASS382861 pairs, consumer equality, disclosed baseline DRC ignored keys",
+    "Native bottom routing view plus routing basis/return-and-thermal review; absence of SOURCE backplane"
+  ],
+  "independent_checks": {
+    "all160_files_and3_views_hash_match": true,
+    "all47_component_values_MPNs_footprints_positions_rotations_unchanged": true,
+    "layers": 2,
+    "track_width_counts": {"0.3_mm": 453, "0.6_mm": 504},
+    "segments_shorter_than_0p3_mm": 283,
+    "all54_vias_diameter0p8_drill0p3_mm": true,
+    "SOURCE_backplane_absent": true,
+    "placement_and_routing_consumers_equal": true,
+    "original_product_requirement_count": 17,
+    "LAB_routing_current_evidence_count": 10,
+    "LAB_total_criteria": 12
+  },
+  "simplicity_assessment": [
+    "No circuit parts, rails, firmware, user interfaces, layers or purchased connectors were added for routing. Two-layer construction and direct soldered wire pads retain the accepted manual-prototype process.",
+    "The two PhotoMOS channels and existing discharge/connection/overvoltage components implement the approved fault-handling architecture. Removing one to reduce BOM would be a circuit/function change requiring new electrical/fault evidence and input approval, not a justified routing simplification.",
+    "The10thermalvias and clipped front/back DC_RETURN areas implement the declared thermal experiment without adding heatsink hardware, layers or a broad switched-node plane. Their geometry is not proof of the85K/W target.",
+    "140x100mm is the accepted independent laboratory footprint. Shrinking it to bulb size now would invalidate placement/spacing/thermal access; no current-stage requirement or verified compact substitute supports that change.",
+    "C5 legacy-series procurement risk remains explicitly open before assembly. Similar footprint is not adequate grounds for an unapproved MPN substitution. Bare-board routing can be reviewed without pretending assembly parts have been procured."
+  ],
+  "findings": [
+    {
+      "id": "SC08-OE-DOC-01",
+      "severity": "minor",
+      "affected_gate": "routing packet",
+      "owner": "/root",
+      "object": "routing-verification/return-and-thermal-routing-review.json source_control_branch",
+      "evidence": "Text names R3/R4; actual47part CAD and BOM have R6/R27 as relay series resistors. Circuit itself is retained.",
+      "consequence": "Misidentifies parts when a reviewer follows the protection control-branch explanation.",
+      "closure": "Correct only text to R6/R27, preserve initial report, refresh source snapshot/manifest, independently confirm unchanged PCB/schematic and new record.",
+      "related_findings": ["SC08-RR-DOC-01"]
+    },
+    {
+      "id": "SC08-OE-DOC-02",
+      "severity": "minor",
+      "affected_gate": "routing packet",
+      "owner": "/root",
+      "object": "final-routing/review-basis.md air-boundary commentary",
+      "evidence": "Commentary says25mmclearairfaces/20mmnearestsurface; operative lab-board-boundaries requires25mm beyond outer component/solder envelope both faces, no20mm condition.",
+      "consequence": "Ambiguous setup description could be read as a weaker air-envelope condition.",
+      "closure": "Align commentary with the exact operative25mm outer-envelope condition; no change to accepted basis. Rebind manifest and verify bounded documentation change."
+    }
+  ],
+  "optional_improvements": [
+    {
+      "id": "SC08-OE-OPT-01",
+      "requirement": "LAB_DFM / maintainability",
+      "objects": "Auto-routed collinear/stair-stepped track runs, notably283segments shorter than0.3mm",
+      "benefit": "A later exact geometric collinear merge could make CAD easier to edit/review; some stair-step rerouting could reduce segmentation further.",
+      "preserved_conditions": "Preserve all connectivity, widths, layer transfers, owner provenance and exact approved spacing/thermal topology; do not merge across junctions or narrow accepted scope.",
+      "verification_needed": "Any CAD/provenance changes require fresh saved/refilled native DRC, full matrix and affected routing review/approval. No claimed cost/performance benefit is inferred from object count alone.",
+      "current_gate_blocker": false,
+      "recommendation": "Do not perturb this checked laboratory routing solely for segment-count aesthetics before approval. Copper segmentation is not an added BOM or manufacturing process step."
+    }
+  ],
+  "limitations": [
+    "No new supplier pricing/stock verification, assembly order, physical wire/fixture qualification or production-file review performed; those are later release/assembly gates.",
+    "No transient simulation or physical measurements. Actual LED current, heat, clamp shutdown timing, connection impulse, surge, faults and EMC remain open.",
+    "Accepted circuit choices and numerical electrical envelopes were inspected as retained constraints; this role did not independently qualify every component corner.",
+    "Native reports establish their declared checks only. This reviewer independently inspected saved-CAD complexity and hash bindings, without rerunning a redundant native DRC already independently repeated by other roles."
+  ],
+  "earlier_checks_invalidated_by_finding_correction": "Bounded documentation/source snapshot and manifest must be refreshed. CAD/rules/schematic are to remain byte-identical. Historical packet should be retained rather than silently relabelled.",
+  "recommendation": "changes_requested",
+  "recommendation_reason": "No major simplification or routing-complexity blocker. Correct the two minor factual packet descriptions and obtain targeted freshness confirmation, then routing is suitable for Kamil's exact human review. This is not stage/release/order/test approval.",
+  "human_approval_granted": false
+}

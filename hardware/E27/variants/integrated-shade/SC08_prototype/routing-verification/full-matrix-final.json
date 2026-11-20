@@ -1,0 +1,96 @@
+{
+  "tool": "independent saved-copper geometry validator",
+  "version": "10.0.6",
+  "board_sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+  "checker_sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+  "synthetic_contract": false,
+  "contract_input_hashes": {
+    "pcb-basis/intent-native-net-binding.json": "ed102c4f47b0beff1565c51b0862ba62f02b72c6ab79d6fbb8b37e40d75486be",
+    "pcb-basis/native-binding-export.xml": "c5e47cf26e082d930eb95b19e6fc94e33d805fb5114b1a1d6bd561511d7beec8",
+    "intended-connectivity.json": "4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809",
+    "hardware.json": "77a13c19491da5595af02adda0a2ef30f2349db595fce2ee0a7500da2a167487",
+    "spatial-constraints-routing-correction.proposed.json": "4b06be0551565a4294a5e240b2cb842ce5dfcdc408a6809720659a4707e36fbe",
+    "pcb-basis/routing-and-isolation-route2.proposed.json": "e60b1955b8020a29cec67bd66634ff6a86455526ef6dba29718c97e58cbe238d",
+    "pcb-basis/domain-matrix.json": "6a20f43a47befea3055f0de9af20c5d9b5fa3f7f809ea2445f903e77f8bd13f1",
+    ".electronics-rules/routing-input.json": "9f1b809995436d01f0cb2ea646ec0d4464207c612bb729d90ce71839f84eac57"
+  },
+  "polygon_outward_error_mm": 0.002,
+  "saved_fill_boundary_comparison_envelope_mm": 0.002,
+  "limits": [
+    "Flat-board geometric target only; not physical creepage/clearance qualification or standards compliance",
+    "No electrical, transient, thermal-performance or manufacturing qualification",
+    "Saved zone fill must lie within the declared 0.002 mm comparison envelope of a valid actual outline and not be marked stale; actual copper spacing is unchanged; historical freshness still requires independent native refill evidence",
+    "Only straight tracks, two copper layers, rectangular outline and closed straight-segment/rect native courtyards supported; anything else stops",
+    "Conservative native outward polygon approximation and bounded courtyard offset can produce false failures near boundaries; no inward copper tolerance relaxation"
+  ],
+  "raw_native_track_net_parity": true,
+  "passed": true,
+  "findings": [],
+  "stats": {
+    "per_face_objects": {
+      "pad": 134,
+      "track": 957,
+      "via": 108,
+      "zone": 6
+    },
+    "different_net_face_pairs": 382861,
+    "clipped_piece_pairs": 117,
+    "noncopper_undrilled_paste_pads_excluded": 4,
+    "zone_boundary_numeric_residuals": [
+      {
+        "zone": "04618867-f6c2-47ea-8746-f0dfbe709c43",
+        "layer": "F.Cu",
+        "residual_area_mm2": 8e-12,
+        "conservative_offset_upper_bound_mm": 3.41796875e-06,
+        "comparison_envelope_mm": 0.002
+      },
+      {
+        "zone": "35529d78-87ad-4b1e-b2ac-53f91c7ed19b",
+        "layer": "F.Cu",
+        "residual_area_mm2": 1.84035e-07,
+        "conservative_offset_upper_bound_mm": 3.41796875e-06,
+        "comparison_envelope_mm": 0.002
+      },
+      {
+        "zone": "8fe6dc35-37c9-425d-bba1-e6a4331bb83d",
+        "layer": "F.Cu",
+        "residual_area_mm2": 1.4055e-07,
+        "conservative_offset_upper_bound_mm": 3.41796875e-06,
+        "comparison_envelope_mm": 0.002
+      },
+      {
+        "zone": "ac750221-5203-44fa-8aa2-439dad69e358",
+        "layer": "F.Cu",
+        "residual_area_mm2": 1.46915e-08,
+        "conservative_offset_upper_bound_mm": 4.3945312500000005e-06,
+        "comparison_envelope_mm": 0.002
+      }
+    ]
+  },
+  "finite_exception_ids_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "board_sha256_after": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+  "input_unchanged": true
+}

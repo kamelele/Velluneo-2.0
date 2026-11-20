@@ -1,0 +1,57 @@
+{
+  "stage": "routing",
+  "manifest_sha256": "93dbb5532b8c981c5ae01aff364d88c095d259902e4ad86c6a5cf0b24b299832",
+  "actual_four_distinct_review_actors": true,
+  "reviews": [
+    {
+      "role": "change",
+      "actual_actor": "/root/final_route_change",
+      "independent_of_CAD_writer": true,
+      "initial_report": "reviews/change/review.json",
+      "initial_report_sha256": "fd3e8f4623c18fe9e3c3603b3673d2117b4c62455b3d7241dfa39deec322ca60",
+      "targeted_closure": "reviews/change/closure.json",
+      "closure_sha256": "e0926784023b27fe89eb2f96e3ba41e3b001f855ac8875c9c9220370aa7a7f39",
+      "current_manifest_sha256": "93dbb5532b8c981c5ae01aff364d88c095d259902e4ad86c6a5cf0b24b299832",
+      "recommendation": "ready_for_human_review",
+      "write_ownership": "Own work review folder only; root copies immutable reports into repository."
+    },
+    {
+      "role": "reality",
+      "actual_actor": "/root/final_route_reality",
+      "independent_of_CAD_writer": true,
+      "initial_report": "reviews/reality/report.json",
+      "initial_report_sha256": "19cc337fa61a9a32966ec5ffa851e40cfbe0303270f6f5f5bd178b2da3d9044b",
+      "targeted_closure": "reviews/reality/closure.json",
+      "closure_sha256": "545eb267300f19a102257faa01458b285b700b74c3d01512c9b26dc043d137ff",
+      "current_manifest_sha256": "93dbb5532b8c981c5ae01aff364d88c095d259902e4ad86c6a5cf0b24b299832",
+      "recommendation": "ready_for_human_review",
+      "write_ownership": "Own work review folder only; root copies immutable reports into repository."
+    },
+    {
+      "role": "completeness",
+      "actual_actor": "/root/final_route_completeness",
+      "independent_of_CAD_writer": true,
+      "initial_report": "reviews/completeness/review.json",
+      "initial_report_sha256": "849abdf05bf670bd581704ca8ef7c5918a62fe284b0ddc03aa079339c4516c2d",
+      "targeted_closure": "reviews/completeness/closure.json",
+      "closure_sha256": "2043ab2c073c6b66df39063f7b80bc6403a4eaf770d32c9e7f5914f3c3fbf767",
+      "current_manifest_sha256": "93dbb5532b8c981c5ae01aff364d88c095d259902e4ad86c6a5cf0b24b299832",
+      "recommendation": "ready_for_human_review",
+      "write_ownership": "Own work review folder only; root copies immutable reports into repository."
+    },
+    {
+      "role": "overengineering",
+      "actual_actor": "/root/final_route_simple",
+      "independent_of_CAD_writer": true,
+      "initial_report": "reviews/overengineering/report.json",
+      "initial_report_sha256": "dc73e8bfe0f4f01b416840a1f00a27a8040191728b111cf1266d203082337208",
+      "targeted_closure": "reviews/overengineering/closure.json",
+      "closure_sha256": "93b2ff0c3f82797f3aee757000b6cfd3baa597475a6d4b63f9f7ed46b4847b97",
+      "current_manifest_sha256": "93dbb5532b8c981c5ae01aff364d88c095d259902e4ad86c6a5cf0b24b299832",
+      "recommendation": "ready_for_human_review",
+      "write_ownership": "Own work review folder only; root copies immutable reports into repository."
+    }
+  ],
+  "human_approval": null,
+  "limitations": "All roles independently inspected the same original frozen CAD/packet, then verified controlled doc-only revision2 freshness. No role is customer CAD writer. Physical measurements/certification/order authority are not inferred."
+}

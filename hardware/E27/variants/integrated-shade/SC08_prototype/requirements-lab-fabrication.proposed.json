@@ -142,7 +142,7 @@
         {
           "subsystem": "LAB_PCB",
           "object": "LAB_SPACING",
-          "path": "pcb-basis/routing-and-isolation-proposal.json"
+          "path": "pcb-basis/routing-and-isolation-route2.proposed.json"
         }
       ],
       "method": "review",
@@ -162,7 +162,7 @@
         {
           "subsystem": "LAB_PCB",
           "object": "LAB_SPATIAL",
-          "path": "spatial-constraints.proposed.json"
+          "path": "spatial-constraints-routing-correction.proposed.json"
         }
       ],
       "method": "review",
@@ -186,7 +186,9 @@
         }
       ],
       "method": "DRC",
-      "evidence_ids": []
+      "evidence_ids": [
+        "EV-LAB_DFM"
+      ]
     },
     {
       "id": "LAB_PARITY",
@@ -204,7 +206,9 @@
         }
       ],
       "method": "review",
-      "evidence_ids": []
+      "evidence_ids": [
+        "EV-LAB_PARITY"
+      ]
     },
     {
       "id": "LAB_ARTIFACTS",
@@ -290,33 +294,33 @@
       "id": "EV-LAB_SCOPE",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
       "artifact": "owner-spatial-prototype-decision.json",
       "sha256": "5c205a36d4f74d56617735a1f4396a4a09384203b6a8ceb50fefcb2ba95339a4",
       "inputs": [],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     },
     {
       "id": "EV-LAB_NETLIST",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
-      "artifact": "placement-verification/integrated-placement-review.json",
-      "sha256": "bb16bc4609b7b24ccafdb9ccecee1eceac5365b15adffb0227ef83c395c14019",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+      "artifact": "routing-verification/integrated-routing-review.json",
+      "sha256": "5710c69b12d1f3f71ad1d6967a7f2194a1d4b46b7f3a6e2df533ee87034fac6e",
       "inputs": [
         {
-          "path": "placement-verification/erc.json",
-          "sha256": "8b292fae72b7964afbc7818651f158ad3fde60869a6f11326a9ce9937dea5e16"
+          "path": "routing-verification/erc.json",
+          "sha256": "1119fb8d3ba9f93c4cc766ac28c09b43dc7acae218a1bbac7c1334fabf51eeb5"
         },
         {
-          "path": "placement-verification/connectivity.json",
-          "sha256": "f087db4919145fb57300e77cc68ad92c4eb49a067dd6e50e26859b0d4e6c54a5"
+          "path": "routing-verification/connectivity.json",
+          "sha256": "8c6bb389941bd5c0d0c6ae2e5336ccb358e38b59d371091f7709bd5a1436c9fc"
         },
         {
-          "path": "placement-verification/native-drc.json",
-          "sha256": "c0d51a51ef50d0c240c543d36184bf0213eb50858a1e3efa675cd2e54cb47c31"
+          "path": "routing-verification/connectivity-netlist.xml",
+          "sha256": "06745d1fdf077b525adb2c3d36105f1b46ba076201ba889c73c52f358dfde24c"
         },
         {
           "path": "SC08_prototype.kicad_sch",
@@ -324,17 +328,17 @@
         },
         {
           "path": "SC08_prototype.kicad_pcb",
-          "sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5"
+          "sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad"
         }
       ],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     },
     {
       "id": "EV-LAB_DOMAINS",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
       "artifact": "pcb-basis/domain-matrix.json",
       "sha256": "6a20f43a47befea3055f0de9af20c5d9b5fa3f7f809ea2445f903e77f8bd13f1",
       "inputs": [
@@ -343,14 +347,14 @@
           "sha256": "ed102c4f47b0beff1565c51b0862ba62f02b72c6ab79d6fbb8b37e40d75486be"
         }
       ],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     },
     {
       "id": "EV-LAB_THERMAL",
       "kind": "calculation",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
       "artifact": "pcb-basis/thermal-budget-results.json",
       "sha256": "cf96b5360c45266c273ec0055ee4ab18fa53324d651474bfc296b8a38c21a737",
       "inputs": [
@@ -363,36 +367,40 @@
           "sha256": "80697e6ee29b013b17d3c725401214077efc7d4aa350369bd4b421727550b13f"
         }
       ],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     },
     {
       "id": "EV-LAB_PARTS",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
-      "artifact": "placement-verification/integrated-placement-review.json",
-      "sha256": "bb16bc4609b7b24ccafdb9ccecee1eceac5365b15adffb0227ef83c395c14019",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+      "artifact": "routing-verification/integrated-routing-review.json",
+      "sha256": "5710c69b12d1f3f71ad1d6967a7f2194a1d4b46b7f3a6e2df533ee87034fac6e",
       "inputs": [
+        {
+          "path": "routing-verification/placement-invariance.json",
+          "sha256": "0fc3d5be80e926404a065725d35a216c5abf786e95249640b188807f1f0b95b5"
+        },
+        {
+          "path": "capture-geometry-evidence.json",
+          "sha256": "a4a87b73a77f7e2a0dbee40559dfcefda21447e5c6f331f73a89900a1a965426"
+        },
         {
           "path": "pcb-basis/C5-geometry-correction.json",
           "sha256": "92e843e54fcab0671cfafd9d28302b4afd9f8f8aa77c9a3fd29e4b310a3e2eec"
-        },
-        {
-          "path": "placement-verification/extra-placement-check.json",
-          "sha256": "b6644211e03da70a7bd7fd538f9dfe0b2c9596df073c4a3adbffbf8c669e8b48"
         }
       ],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     },
     {
       "id": "EV-LAB_INTERFACE",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
-      "artifact": "placement-verification/integrated-placement-review.json",
-      "sha256": "bb16bc4609b7b24ccafdb9ccecee1eceac5365b15adffb0227ef83c395c14019",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+      "artifact": "routing-verification/integrated-routing-review.json",
+      "sha256": "5710c69b12d1f3f71ad1d6967a7f2194a1d4b46b7f3a6e2df533ee87034fac6e",
       "inputs": [
         {
           "path": "requirements.json",
@@ -403,71 +411,123 @@
           "sha256": "33ff5e05780a94562e493bbd1bc361e488836bb36bbbdee58d83582f761cc532"
         }
       ],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     },
     {
       "id": "EV-LAB_SPACING",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
-      "artifact": "placement-verification/extra-placement-check.json",
-      "sha256": "b6644211e03da70a7bd7fd538f9dfe0b2c9596df073c4a3adbffbf8c669e8b48",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+      "artifact": "routing-verification/full-matrix-final.json",
+      "sha256": "6a67655ccc4175d74f30087285434d222dbdb3b4ee90206be730855c7e5c00a5",
       "inputs": [
         {
           "path": "SC08_prototype.kicad_pcb",
-          "sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5"
+          "sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad"
         },
         {
-          "path": "pcb-basis/routing-and-isolation-proposal.json",
-          "sha256": "06f1fff7ebc55c776491978305f62496386c77f0945c37bcd7a54915a0e96f53"
+          "path": "pcb-basis/routing-and-isolation-route2.proposed.json",
+          "sha256": "e60b1955b8020a29cec67bd66634ff6a86455526ef6dba29718c97e58cbe238d"
         },
         {
-          "path": "pcb-basis/intent-native-net-binding.json",
-          "sha256": "ed102c4f47b0beff1565c51b0862ba62f02b72c6ab79d6fbb8b37e40d75486be"
+          "path": "owner-routing-correction-decision.json",
+          "sha256": "5931ddaa3281b6f9ff708a20334de9c73f87170cf0205a229e882da48867f66e"
+        },
+        {
+          "path": "routing-verification/saved_copper_checker.py",
+          "sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a"
+        },
+        {
+          "path": "routing-verification/routing-authoring.json",
+          "sha256": "d2e681055f1737353b598891fe8c3d578c869ec79a46d8fd9de9e0ac904ff868"
         }
       ],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     },
     {
       "id": "EV-LAB_SPATIAL",
       "kind": "review",
       "result": "pass",
-      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
-      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
-      "artifact": "placement-verification/thermal-placement-review.json",
-      "sha256": "bfdf8dfdf22980923dfc29ec731f987617ec8c21a5af369025a1b71e1874295e",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+      "artifact": "routing-verification/placement-invariance.json",
+      "sha256": "0fc3d5be80e926404a065725d35a216c5abf786e95249640b188807f1f0b95b5",
       "inputs": [
         {
           "path": "SC08_prototype.kicad_pcb",
-          "sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5"
+          "sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad"
         },
         {
-          "path": "spatial-constraints.proposed.json",
-          "sha256": "496a2a9772fb63e21be76a6ee5dd945c7dbaeba00d559c4fc91a4a5c251df827"
+          "path": "spatial-constraints-routing-correction.proposed.json",
+          "sha256": "4b06be0551565a4294a5e240b2cb842ce5dfcdc408a6809720659a4707e36fbe"
         },
         {
-          "path": "placement-verification/spatial.json",
-          "sha256": "4e3f167274ef88a988dc47674a313d55931a016fe47c83066040cfc892d1b9d3"
+          "path": "routing-verification/spatial.json",
+          "sha256": "b6a154a7d1ce0a1755a5258281db33509be54dd74742307178b5c2522e09ee90"
         },
         {
-          "path": "placement-verification/extra-placement-check.json",
-          "sha256": "b6644211e03da70a7bd7fd538f9dfe0b2c9596df073c4a3adbffbf8c669e8b48"
+          "path": "placement-verification/thermal-placement-review.json",
+          "sha256": "bfdf8dfdf22980923dfc29ec731f987617ec8c21a5af369025a1b71e1874295e"
         },
         {
           "path": "placement-verification/height-envelope-geometry.json",
           "sha256": "ce5e5c96b6b83a2e4805ce50ae9a6888a0dc42213ab7d1e0c4d8bb39aebacb36"
-        },
-        {
-          "path": "placement-verification/core-correction-corridor-check.json",
-          "sha256": "34da5fdd5004a1360b9dac09dff40f550c87a0ed867ed03d11f65a9fb2943738"
-        },
-        {
-          "path": "placement-verification/loop-comparison.json",
-          "sha256": "1fedd4b90afd7f32b37d547879c9d175d4b49cb4f30c1c606a273b78878a389a"
         }
       ],
-      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
+    },
+    {
+      "id": "EV-LAB_DFM",
+      "kind": "DRC",
+      "result": "pass",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+      "artifact": "routing-verification/native-drc.json",
+      "sha256": "8f574da59694693dc3eff4b026092770c3dd2b8b106fa5ec4b583e94a61ad975",
+      "inputs": [
+        {
+          "path": "SC08_prototype.kicad_pcb",
+          "sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad"
+        },
+        {
+          "path": "SC08_prototype.kicad_pro",
+          "sha256": "00e1668c854025c56e649f6c390712680a46759cbada1cb424cf57f5e4a07359"
+        },
+        {
+          "path": "SC08_prototype.kicad_dru",
+          "sha256": "e64486d71ce1fd6b3372961902b1d35152c8710b5dde06a24721e74fa17fcfb3"
+        },
+        {
+          "path": "routing-verification/full-matrix-final.json",
+          "sha256": "6a67655ccc4175d74f30087285434d222dbdb3b4ee90206be730855c7e5c00a5"
+        }
+      ],
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
+    },
+    {
+      "id": "EV-LAB_PARITY",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root actual integrated checks; owner scope/route2 decisions and retained numerical thermal calculation explicitly scoped; independent stage review separate",
+      "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+      "artifact": "routing-verification/integrated-routing-review.json",
+      "sha256": "5710c69b12d1f3f71ad1d6967a7f2194a1d4b46b7f3a6e2df533ee87034fac6e",
+      "inputs": [
+        {
+          "path": "SC08_prototype.kicad_pcb",
+          "sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad"
+        },
+        {
+          "path": "routing-verification/connectivity-netlist.xml",
+          "sha256": "06745d1fdf077b525adb2c3d36105f1b46ba076201ba889c73c52f358dfde24c"
+        },
+        {
+          "path": "routing-verification/connectivity.json",
+          "sha256": "8c6bb389941bd5c0d0c6ae2e5336ccb358e38b59d371091f7709bd5a1436c9fc"
+        }
+      ],
+      "scope": "Bare unpowered LAB routing criterion only; no physical performance or human routing/release acceptance."
     }
   ]
 }

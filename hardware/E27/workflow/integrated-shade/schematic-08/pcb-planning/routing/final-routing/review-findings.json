@@ -1,0 +1,100 @@
+{
+  "findings": [
+    {
+      "initial_finding": {
+        "id": "SC08-ROUTE-CHANGE-DOC-01",
+        "severity": "minor",
+        "state": "open",
+        "affected_gate": "routing",
+        "owner": "/root",
+        "object": "hardware/E27/variants/integrated-shade/SC08_prototype/routing-verification/return-and-thermal-routing-review.json:source_control_branch",
+        "requirement": "LAB_NETLIST/LAB_PARITY evidence accuracy",
+        "problem": "The report claims R3/R4 relay series resistors, which do not exist. Actual intact independently fed clamp resistors are R6 and R27. The U4 SOURCE pin is correctly U4.4.",
+        "evidence_type": "Fresh native schematic XML and PCB pin-net comparison",
+        "consequence": "Misidentifies the protective current-limiting objects in the current routing evidence; no corresponding CAD defect found.",
+        "closure": "Correct documentation to R6/R27; retain current actual board/schematic; update affected evidence/source manifest/check snapshot and request targeted independent verification."
+      },
+      "review_role": "change",
+      "status": "independently_closed",
+      "closure": "reviews/change/closure.json",
+      "retained_history": true
+    },
+    {
+      "initial_finding": {
+        "id": "SC08-RR-DOC-01",
+        "severity": "minor",
+        "affected_gate": "routing packet",
+        "owner": "/root",
+        "object": "routing-verification/return-and-thermal-routing-review.json.source_control_branch",
+        "evidence": "Says R3/R4 relay series resistors; these refs do not exist on actual47part PCB. Correct resistors are R6 and R27, each100ohm. Actual protected paths are intact.",
+        "consequence": "Misleading traceability of clamp-current argument; no electrical defect demonstrated.",
+        "closure": "Correct to R6/R27, preserve prior frozen manifest/report, refresh affected evidence hashes and integrated snapshot, issue fresh manifest for targeted independent closure."
+      },
+      "review_role": "reality",
+      "status": "independently_closed",
+      "closure": "reviews/reality/closure.json",
+      "retained_history": true
+    },
+    {
+      "initial_finding": {
+        "id": "SC08-CR-COMP-01",
+        "severity": "minor",
+        "affected_gate": "routing_packet",
+        "owner": "/root",
+        "object": "final-routing/review-basis.md air-boundary statement",
+        "evidence": "Review basis says25mmclearairfaces/20mmnearestsurface; operative pcb-basis/lab-board-boundaries.json says25mmclearair beyond OUTER component/solder envelope bothfaces, with no20mm allowance.",
+        "consequence": "Could convey a weaker laboratory fixture clearance than the operative contract. Native board geometry is unchanged; this is packet wording only.",
+        "observable_closure": "Replace summary by the operative25mmouter-envelope requirement; preserve archived initial manifest/artifact, generate updated manifest and fresh source check, targeted reviewer confirmation."
+      },
+      "review_role": "completeness",
+      "status": "independently_closed",
+      "closure": "reviews/completeness/closure.json",
+      "retained_history": true
+    },
+    {
+      "initial_finding": {
+        "id": "SC08-OE-DOC-01",
+        "severity": "minor",
+        "affected_gate": "routing packet",
+        "owner": "/root",
+        "object": "routing-verification/return-and-thermal-routing-review.json source_control_branch",
+        "evidence": "Text names R3/R4; actual47part CAD and BOM have R6/R27 as relay series resistors. Circuit itself is retained.",
+        "consequence": "Misidentifies parts when a reviewer follows the protection control-branch explanation.",
+        "closure": "Correct only text to R6/R27, preserve initial report, refresh source snapshot/manifest, independently confirm unchanged PCB/schematic and new record.",
+        "related_findings": [
+          "SC08-RR-DOC-01"
+        ]
+      },
+      "review_role": "overengineering",
+      "status": "independently_closed",
+      "closure": "reviews/overengineering/closure.json",
+      "retained_history": true
+    },
+    {
+      "initial_finding": {
+        "id": "SC08-OE-DOC-02",
+        "severity": "minor",
+        "affected_gate": "routing packet",
+        "owner": "/root",
+        "object": "final-routing/review-basis.md air-boundary commentary",
+        "evidence": "Commentary says25mmclearairfaces/20mmnearestsurface; operative lab-board-boundaries requires25mm beyond outer component/solder envelope both faces, no20mm condition.",
+        "consequence": "Ambiguous setup description could be read as a weaker air-envelope condition.",
+        "closure": "Align commentary with the exact operative25mm outer-envelope condition; no change to accepted basis. Rebind manifest and verify bounded documentation change."
+      },
+      "review_role": "overengineering",
+      "status": "independently_closed",
+      "closure": "reviews/overengineering/closure.json",
+      "retained_history": true
+    }
+  ],
+  "duplicates": "R3/R4 reference typo reported by multiple roles; air-boundary summary reported by completeness/overengineering. Original IDs/reports preserved, each actual reviewer independently closed its own finding.",
+  "unresolved_major_routing_findings": [],
+  "optional_improvement": "Overengineering noted283sub0.3mm-length segments for possible future CAD editability cleanup, not track-width violations. No current functional/manufacturing benefit justifies changing checked CAD.",
+  "earlier_input_finding": "RC-ROUTE-DRAIN-01 independently closed only for exact e229adoption on9db; current completebddbboard has fresh native+matrix checks and these separate reviews.",
+  "later_gate_obligations": [
+    "Actual Kamil routing-stage acceptance",
+    "Release Gerber/drill/BOM/assembly artifact review and separate release/order decision",
+    "Named qualified human and approved guarded test fixture/instrument/energy/time/temperature limits before power",
+    "Actual current/thermal/hotshutdown/fault/connectionimpulse/surge/light/EMC qualification; original17 product requirements retained"
+  ]
+}

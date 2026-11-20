@@ -1,0 +1,60 @@
+{
+  "role": "Independent tooling and controlled-adoption Change Reviewer",
+  "actual_actor": "/root/adoption_tool_review",
+  "write_scope": "work/sc08-adoption-tool-review only; disposable synthetic tests; no customer writes/search",
+  "decision": "usable_for_exact_authorized_continuation_experiment",
+  "decision_scope": "Bounded local tooling qualification, not PCB acceptance, stage approval, fabrication, order or energized tests",
+  "checked_source_hashes": {
+    "checker.py": "c08e838180096bbcdbbd247cd72646aae93c901fe247aa637f94476a7c1e79f1",
+    "adapter.py": "21681ba0e9f09a850531428a7683b99a2a2b8ce58d0462d2d0ea7d3cafc858b7",
+    "checker_tests.py": "e5a1e8c9bf029dfcc67d9f0fbd98f1a9295ef649505011ed727c0296927b6f36",
+    "checker_contract_tests.py": "41eb05753a6f2e881123a9c1125260e2d0eece8fe96ab1185f75f0b8e6aa3439",
+    "adapter_fixtures_test.py": "19e7421fbbaa7bb17e87eea6e0e5f85affb2b09778fcaf7b26054b255e64fd26",
+    "adapter_continuation_test.py": "eed413dc07b00777f0978daedccecef670f412628894cb436585ce9f8a63d2f3"
+  },
+  "actual_adopted_inputs": {
+    "board_sha256": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+    "intent_digest": "e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8",
+    "consumer_digest": "945722e15bf601320dd233a647cd09f2788f5cacd6d879745cbe381d7e38a96c",
+    "basis_sha256": "e60b1955b8020a29cec67bd66634ff6a86455526ef6dba29718c97e58cbe238d"
+  },
+  "independent_execution": [
+    "Pinned KiCad10.0.6 disposable-copy checker tests.py --native-cli:37/37 pass, native near/separated/crossing comparison written",
+    "Pinned KiCad10.0.6 disposable-copy contract-tests.py --project actual selected approved project:6/6 pass; actual positive and five copied mutations",
+    "Pinned KiCad10.0.6 disposable-copy continuation_test.py:exit0; executes full fixtures_test.py plus physical component separation, actual UUID/net/geometry track/via provenance roundtrip and tamper negatives, hard SENSE03/AC_BUS06 floor, DC_RETURN no-addition checks"
+  ],
+  "source_inspection": [
+    "Checker pins extended scope to exact approved intent and routing-basis SHA, U1.2/U1.4 SENSE_FB/DRAIN_BLOCKED F.Cu pad/track-only 1.5mm/1.9mm; other exceptions remain bounded at1mm. Matrix and exact native courtyard clipping retained.",
+    "Checker rejects saved fill outside actual outline as well as missing/refill-marked fill. Tests cover shortened outline and multi-outer serialization cache regression. Historical freshness still requires native refill/save on exact board.",
+    "Adapter previous provenance validates input SHA and all native UUID/net/layer/endpoints/width and via geometry; preserves explicit owner or null. Components are unioned using actual centerline contact/pad centers, never net-name equality alone; DC_RETURN is explicitly deferred.",
+    "Actual adoption semantic diff is only selected spatial file/source inventory plus recorded approval; routing basis changes one margin1to1.5 and scope/revision text. Other21 concessions unchanged. Native .pro/.dru byte identical. Actual PCB9db is approved integrated proposal; backup PCBc503 is older placement and is not a configure-only preservation baseline."
+  ],
+  "limitations": [
+    "Adapter package envelope uses courtyard AABB; standalone Rules constructor allows U1 pins2/4 margin1.5 without pinning nets/layer/floor. This is not generic extended-exception qualification. Actual CLI contract selection, basis hashes and approved intent are independently bound above; exact saved-board checker remains mandatory on each candidate.",
+    "Under-approximated component contacts may miss valid rounded-pad or finite-width copper contact, causing extra routing/failure; no assumed same-net component merge is accepted.",
+    "Synthetic positives and native DRC prove exercised tool behavior only; they are not customer PCB qualification."
+  ],
+  "findings": [],
+  "RC-ROUTE-DRAIN-01": {
+    "status": "pending_exact_integrated_checks",
+    "approval_and_controlled_input_scope": "independently verified against actual receipt/configuration; no new owner approval needed",
+    "closure_conditions": [
+      "Root supplies fresh exact9db saved-board full matrix report from frozen checker with authentic source/provenance and approved active contract",
+      "Fresh native refill/save/DRC and spatial-consumer parity against exact integrated hash show no relevant violation",
+      "Record independent closure against actual result hashes; completed routing remains a separate open gate with64connections until superseded"
+    ]
+  },
+  "required_continuation_guards": [
+    "Use only a root-derived seed retaining actual27track/13via UUID/net/geometry/ownership provenance and a receipt bound to that exact seed SHA; zone stripping is an explicit derivation, not changed routing authority",
+    "Retain original9db source and native project/rules; root is sole customer CAD writer",
+    "Before accepting any saved candidate, check actual saved geometry/provenance, refill zones, rerun full matrix/native/spatial/intended-connectivity checks and affected reviews"
+  ],
+  "artifact_hashes": {
+    "adoption-inspection.json": "4ce6f12e90cbc1274234378e79861e3122cb17c9ddd04a934710cce4d4e0774f",
+    "validator\\test-results.json": "7b30a7fa8ff50682a6e521a50d76bcfb15f5cf876cabfe5b68b769ab03aa8a83",
+    "validator\\contract-test-results.json": "37c632ea0f81f5d816c367ffa8ca89ab89080fe30d711e22be3b88d90b2ee534",
+    "validator\\native-drc-comparison.json": "86c07f1adbca1afdca15ac90c85a7a7cd29c5ca3471fae8c5784e64ae9d07d4d",
+    "adapter\\fixture-results.json": "375081816a59d3bd2032100e40d823372ef5db6fc236ff6a7e1ae5a8720c61f7",
+    "adapter\\continuation-results.json": "9964cdfdca1ad46921941a15c35c90f3c5ff5031e8962a4e50a545da3a0249a0"
+  }
+}

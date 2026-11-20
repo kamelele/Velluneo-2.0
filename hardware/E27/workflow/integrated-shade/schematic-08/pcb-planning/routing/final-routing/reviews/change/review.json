@@ -1,0 +1,149 @@
+{
+  "review_id": "SC08-COMPLETE-CHANGE-01",
+  "task": "SC08-ROUTE2-COMPLETE",
+  "stage": "routing",
+  "role": "Change Reviewer",
+  "actual_reviewer": "/root/final_route_change",
+  "independent_of_customer_CAD_writer": "/root",
+  "base_commit": "701f61633fd545a6a0b9fe08b153b824094a9cdb",
+  "manifest_sha256": "02e3217f2265c5bd8150c335af5123f7e9861c2cf4d463e016d5a124d6f54728",
+  "board_sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+  "source_snapshot": "75e64c15c23b60003a725c9671c2a9d71d9c360a1d2ae3e4807aac47749701dc",
+  "recommendation": "changes_requested",
+  "scope": [
+    "Actual saved CAD invariance to accepted placement and accepted partial seed",
+    "Fresh native DRC and schematic parity; fresh XML fields and 30unordered intended pin sets plus1NC",
+    "Exact routing basis/exception delta, native pro/dru and baseline ignored checks",
+    "Independent full saved-copper matrix re-execution/raw native net identities",
+    "Native spatial rerun/47footprints8areas",
+    "Actual top and bottom views; return/thermal report with explicit physical limitations"
+  ],
+  "checks": {
+    "reviewer": "/root/final_route_change",
+    "manifest_sha256": "02e3217f2265c5bd8150c335af5123f7e9861c2cf4d463e016d5a124d6f54728",
+    "verified_manifest_files": 160,
+    "verified_external_views": 3,
+    "board_sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+    "all47_footprints_and112_pads_geometrically_and_semantically_equal_to_accepted_placement": true,
+    "all27_original_tracks_and13_original_vias_preserved": true,
+    "native_project_and_rules_byte_identical_to_accepted_placement": true,
+    "fresh_XML_112_pin_net_MPN_value_footprint_datasheet_parity": true,
+    "approved_intent30_unordered_pin_sets_plus1NC_independent_comparison": true,
+    "fresh_native_DRC": {
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        }
+      ]
+    },
+    "active_spatial_intent_digest": "e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8",
+    "consumer_digest": "945722e15bf601320dd233a647cd09f2788f5cacd6d879745cbe381d7e38a96c",
+    "only_route2_exception_differences": [
+      {
+        "i": 3,
+        "ref": "U1",
+        "pins": [
+          "2",
+          "4"
+        ],
+        "key": "scope",
+        "before": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+        "after": "PROPOSED: exactU1.2/U1.4F.Cupad/trackpairinsideactualnativecourtyardplusmax1.5mm;outsidegeneric4mm;noaddedvia/zoneexception;requiresrealownerdecision"
+      },
+      {
+        "i": 3,
+        "ref": "U1",
+        "pins": [
+          "2",
+          "4"
+        ],
+        "key": "escape_margin_mm",
+        "before": 1.0,
+        "after": 1.5
+      }
+    ],
+    "exact_full_matrix_repeat_passed": true,
+    "matrix_face_pairs": 382861,
+    "raw_native_track_net_identity_parity": true,
+    "native_tracks": 957,
+    "native_vias": 54,
+    "filled_copper_zones": 6,
+    "managed_rule_areas": 8,
+    "no_SOURCE_B_Cu_plane": true,
+    "source_clamp_actual_refs": {
+      "U4.4": "SOURCE",
+      "U4.3": "R6.2",
+      "U5.3": "R27.2"
+    },
+    "frozen_hashes_unchanged_after_checks": true
+  },
+  "additional_checks": {
+    "native_spatial_repeat": {
+      "errors": [],
+      "47footprints": true,
+      "8areas": true
+    },
+    "view_inspection": "Both actual copper layers inspected; bottom is same coordinate top-view with F.Fab overlay, not a mirrored assembly view."
+  },
+  "findings": [
+    {
+      "id": "SC08-ROUTE-CHANGE-DOC-01",
+      "severity": "minor",
+      "state": "open",
+      "affected_gate": "routing",
+      "owner": "/root",
+      "object": "hardware/E27/variants/integrated-shade/SC08_prototype/routing-verification/return-and-thermal-routing-review.json:source_control_branch",
+      "requirement": "LAB_NETLIST/LAB_PARITY evidence accuracy",
+      "problem": "The report claims R3/R4 relay series resistors, which do not exist. Actual intact independently fed clamp resistors are R6 and R27. The U4 SOURCE pin is correctly U4.4.",
+      "evidence_type": "Fresh native schematic XML and PCB pin-net comparison",
+      "consequence": "Misidentifies the protective current-limiting objects in the current routing evidence; no corresponding CAD defect found.",
+      "closure": "Correct documentation to R6/R27; retain current actual board/schematic; update affected evidence/source manifest/check snapshot and request targeted independent verification."
+    }
+  ],
+  "invalidations": [
+    "Earlier placement checks are retained for unchanged part and geometry scope only; this routing has separately rechecked actual copper and net parity.",
+    "Input-correction approval is genuine and bound to e229; complete-routing human approval has not yet happened.",
+    "Changing source_control_branch report requires refreshed snapshot/manifest and targeted re-review, not carrying forward old exact manifest."
+  ],
+  "limitations": [
+    "Read-only review; no customer CAD modifications.",
+    "No measured current/temperature/PhotoMOSfault/surge/EMC/optical qualification.",
+    "No physical assembled creepage or insulation rating inferred from matrix pass.",
+    "No Gerber/order/energized-test review or approval.",
+    "Full geometry checker is qualified shared tool re-executed independently, not a second independent implementation of its whole algorithm."
+  ],
+  "evidence": [
+    {
+      "path": "work\\sc08-complete-change-review\\check.py",
+      "sha256": "a03d21d7a2cd15a6525b7c3a764c65b9dd62b4c14aaf2999058fecfa1deaf66e"
+    },
+    {
+      "path": "work\\sc08-complete-change-review\\fresh-netlist.xml",
+      "sha256": "7df86e9f4063c8f4aff4315c8e34588efacea2fc18db98f3c27b44a04d095bce"
+    },
+    {
+      "path": "work\\sc08-complete-change-review\\native-drc.json",
+      "sha256": "90b56b6bdb1e000030c6d012dd78bcb98400ebd32e79456400699f797837dc9e"
+    },
+    {
+      "path": "work\\sc08-complete-change-review\\independent-checks.json",
+      "sha256": "1f8998c8dd471393ba1774527785945591bffc57164bfb2f5c3600f48298071b"
+    },
+    {
+      "path": "work\\sc08-complete-change-review\\independent-matrix-repeat.json",
+      "sha256": "6a67655ccc4175d74f30087285434d222dbdb3b4ee90206be730855c7e5c00a5"
+    },
+    {
+      "path": "work\\sc08-complete-change-review\\spatial-native-repeat.json",
+      "sha256": "02bece59a005dd3199dae9df2867cfc229308ecf5cde99c3c5fbfad7e02ba00b"
+    }
+  ]
+}

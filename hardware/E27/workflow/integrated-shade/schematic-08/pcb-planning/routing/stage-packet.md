@@ -1,15 +1,3 @@
-# One-pair routing input correction — owner decision packet
+# Current SC08-B routing stage
 
-The accepted placement3e261d3 and actual owner reply “akceptuje” authorized routing. Actual saved partial routes now exist in the two portable project folders. This packet requests ONLY a new input decision, not completed routing acceptance.
-
-Frozen technical manifest: `0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1` (232files+3views). Four actual independent role reports are indexed in reviews.json. All cover this final frozen input and recommend presenting this limited decision; none grants owner approval.
-
-Requested change: ONLY U1.2(SENSE_FB)/U1.4(DRAIN_BLOCKED), F.Cu pad/track local exception, courtyard escape1.0 to1.5mm. This EXTENDS by0.5mm the region receiving the already declared1.9mm local floor; it does not increase a clearance from1 to1.5mm. Outside the region generic4mm remains. Track0.6mm hard minimum, other21package exceptions,13via generic spacing and all zone spacing remain unchanged. No added-via/zone exemption. Current1mm scope produces three computed gaps3.791/3.847403/3.956588mm below the generic4mm; the proposed finite scope permits those exact local transitions. This remains an experimental functional concession, not a standards or physical-insulation qualification.
-
-Future unapproved spatial input intent: `e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8`. Complete file hashes are in proposed-spatial-decision-basis.json. hardware.json still selects the original approved spatial input; future approval remains null. Active original boardc503 remains preserved; saved proposal9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9 is separate.
-
-The current-rules checkpoint has22tracks/11vias/4zones,65unconnected, native geometry0/parity0 and exact9844facepairs pass. Proposed geometry has27tracks/13vias/4zones and64unconnected, native geometry0/parity0. Its ACTIVE1mm matrix FAILS3findings; the explicit one-pair counterfactual PASSes10807facepairs. Independent reviewers replayed full matrix and native refill/save; saved geometry and all47component/pad positions remain exact. See review-basis.md for thermal/return details and limits.
-
-Fresh full Toolkit work/routing check FAILS64unconnected errors, stale earlier PCB-hash-bound reviews and absent routing DFM/parity review evidence. Requirements matrix and full reports are in verification/. Prior evidence is not relabelled current. The original17product requirements and physical current/thermal/timing/fault/surge/800lm obligations remain open at their applicable gates.
-
-RC-ROUTE-DRAIN-01 remains major/open under the original1mm input. If accepted, controlled adoption still needs a fresh configuration preview, actual decision receipt, consumer regeneration, supported finite-scope helper checks, integrated saved-board verification and independent closure. Remaining routing must then be completed and reviewed before a separate routing-stage decision. No manufacturing release, order or energized-test authority is requested or inferred.
+See [complete integrated routing packet](final-routing/stage-packet.md) and [actual four-role reports/closures](final-routing/reviews.json). The earlier701f616input-correction packet remains historical; its owner decision was actually accepted and controlled adoption completed. Current routing itself awaits Kamil approval. No order or energized-test authorization.

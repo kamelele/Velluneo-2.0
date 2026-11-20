@@ -1,0 +1,39 @@
+{
+  "task_id": "SC08-ROUTE2-COMPLETE",
+  "stage": "routing",
+  "base_commit": "701f61633fd545a6a0b9fe08b153b824094a9cdb",
+  "goal": "Complete and independently review bare laboratory routing under actually accepted e229input",
+  "requirements": [
+    "LAB_NETLIST",
+    "LAB_PARTS",
+    "LAB_INTERFACE",
+    "LAB_SPACING",
+    "LAB_SPATIAL",
+    "LAB_DFM",
+    "LAB_PARITY"
+  ],
+  "sole_customer_CAD_writer": "/root",
+  "authorized_human": "Kamil",
+  "write_scope": [
+    "hardware/E27/variants/integrated-shade/SC08_prototype/**",
+    "hardware/E27/workflow/integrated-shade/schematic-08/**"
+  ],
+  "dependencies": [
+    "Actual placement decision3e261d3",
+    "Actual e229input correction decision701f616",
+    "Independent tooling and adoption closure recorded separately"
+  ],
+  "acceptance": [
+    "Same actual approved schematic/47parts112pins30nets1NC and physical placement",
+    "Native saved/refilled DRC0violations0unconnected0parity",
+    "Approved full matrix with bounded finite exceptions and unchanged native rule settings",
+    "Actual star return/thermal geometry evidence; no measured performance claims",
+    "Fresh routing requirements check and all four independent role reports against one manifest"
+  ],
+  "non_goals": [
+    "Circuit or component substitutions",
+    "Gerber/release/order before routing acceptance",
+    "Energized tests/finishedlamp/compliance qualification"
+  ],
+  "human_routing_approval": null
+}

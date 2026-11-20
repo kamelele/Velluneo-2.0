@@ -1,0 +1,36 @@
+{
+  "review_id": "SC08-COMPLETE-REALITY-02",
+  "actor": "/root/final_route_reality",
+  "role": "Reality Checker",
+  "prior_report": "report.json",
+  "manifest_sha256": "93dbb5532b8c981c5ae01aff364d88c095d259902e4ad86c6a5cf0b24b299832",
+  "all165files3views_hash_verified": true,
+  "controlled_delta": {
+    "changed_existing_paths": [
+      "hardware/E27/variants/integrated-shade/SC08_prototype/routing-verification/return-and-thermal-routing-review.json",
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/integrated-toolkit-check.json",
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/review-basis.md",
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/tools/sc08_integrate_complete_routing.py"
+    ],
+    "added_archival_paths": [
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/documentation-correction-impact.json",
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/authoring-source.py",
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/integrated-toolkit-check.json",
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/review-basis.md",
+      "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/thermal-review.json"
+    ],
+    "no_removed_prior_paths": true,
+    "thermal_report_and_authoring_source_only_R3_R4_to_R6_R27": true,
+    "review_basis_air_boundary_aligned_to_operative25mm_beyond_outer_envelopes_both_faces": true,
+    "fresh_integrated_check_pass": true,
+    "unchanged_actual_CAD_pro_dru_schematic_spatial_requirements": true
+  },
+  "finding_closure": {
+    "id": "SC08-RR-DOC-01",
+    "status": "closed",
+    "basis": "Actual native inspection proved R6/R27; exact factual correction independently compared to archived original bytes. No circuit or numericoperativeinput change."
+  },
+  "recommendation": "ready_for_human_review",
+  "remaining_major_routing_findings": [],
+  "limits": "Only unpowered laboratory routing review. Initial source/trace/thermal/contact-graph checks retained against byte-identical CAD. No measurements, compliance, order, release or energized test approval."
+}

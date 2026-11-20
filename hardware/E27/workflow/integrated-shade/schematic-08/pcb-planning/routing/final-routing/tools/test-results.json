@@ -1,0 +1,984 @@
+{
+  "synthetic_only": true,
+  "tool": "10.0.6",
+  "checker_sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+  "tests_sha256": "35994f2f167caaa7605645154e5e01a543db745aaae5b83ff8a010feb3afd6a4",
+  "tests": [
+    {
+      "name": "actual-rounded-holes-native-false-positive-regression",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "2ea38d86e16ed4911c6334d98f65cfd5f94b015d23dbefcb8a748d0b8376c346",
+      "report_sha256": "a314fefba95481155ff049b56b0a47f1073ea1f30fa0f7cf8cb5e36005508a68",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "actual-native-fill-rounding-containment-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "be5e88b565dd34badd965a93ceb679431f545c3527476215af52d477d1b72016",
+      "report_sha256": "a5857c5811bdad378deee441fe815c4c97261604f88add004993e90a092046f7",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "zone-fill-over-envelope-three-micron-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "16d3109c07ead65742b6b57cd8e435eadb1822dc0900adae8eb9f82ef3dbd4ca",
+      "report_sha256": "c3fd682e33fc5a5cff2ccb9d6ab61f56cc2f8c8418908ef1830a1de7b275f906",
+      "error": "Unsupported: Saved zone fill outside actual zone outline",
+      "findings": []
+    },
+    {
+      "name": "zone-fill-within-envelope-one-micron-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "e2ffb64eb213f983fcb22e33f29c1232dcd2a8839a78df49b34a3fdb187eacca",
+      "report_sha256": "f1271f87df40765e51ddfeb201ecfc770c13d51fa20f98531097632690b08f38",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "actual-outline-bowtie-invalid-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "7ffa89f96cf8ac2c989e700fc4724836191ad7f49ceac993078d37d802a4b3b1",
+      "report_sha256": "15c897cf71600e2ff8d7ccfdac2e7cdb7080299064e7bf3a2dffc972e5405f0a",
+      "error": "Unsupported: Invalid actual zone outline",
+      "findings": []
+    },
+    {
+      "name": "cached-fill-inside-outline-hole-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "447dea4f8614c71119fcb17ff8f9fe9ebf495bfed4edd8cdacd926b09f3bc72f",
+      "report_sha256": "5c55a7e6d4e826ae40e4c03091d0377353a0250615e6719af46e3e2ddabc19d9",
+      "error": "Unsupported: Saved zone fill outside actual zone outline",
+      "findings": []
+    },
+    {
+      "name": "route2-exact-extended-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "caa2618ad7bae2fd4e7810c9d39c02c3341007c15d8016fbf04bdbd2e39cbc31",
+      "report_sha256": "b5acf8e2c1e8c7ec3be9741aa4bdcc64086c27f97b3381b3743293a63766f5e1",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "route2-unapproved-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "bb5618f9984a444560570da99f3ee2efd39a6478d13565b6de75a1ea423ab3fa",
+      "report_sha256": "eb15515e116231c8152e06c4694c4658b2148940c1fd7eeb692b3e1fb7b2d1e5",
+      "error": "Unsupported: Unsupported exception scope",
+      "findings": []
+    },
+    {
+      "name": "route2-wrong-pair-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "7b3c6efe80e8f37cc6102c7d4bd1d228403b4f7179598076836badbcbee8b5eb",
+      "report_sha256": "fafb10dbdd4aa648b5a295f3a4d154d112d6feed884d760c3e9596897fe16e75",
+      "error": "Unsupported: Unsupported exception scope",
+      "findings": []
+    },
+    {
+      "name": "route2-wrong-layer-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "3a00db71b19b201aa667cf9718c70b3301c8eeedceb03a8b30fcacd03aa27b75",
+      "report_sha256": "b95f2e09c2392f8bce469e9b47701521adbb826dda6f91fafb3046aeb3e14db3",
+      "error": "Unsupported: Unsupported exception scope",
+      "findings": []
+    },
+    {
+      "name": "route2-wrong-owner-scope-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "2fda1d561896abeb43d114ff41f2c66ca343411f6279892c11b6b6b0a8bafabc",
+      "report_sha256": "e5306b5da9be2c06a412b587e98b3c3362351d2a44550f1a40e6aa133bfa6b60",
+      "error": "Unsupported: Unsupported exception scope",
+      "findings": []
+    },
+    {
+      "name": "route2-weakened-floor-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "3b0db3f5ab3fda2bca94e2671d2e8c7b2d9032a71430913f09148f37532271a3",
+      "report_sha256": "5f2f640de230a11505596e8845b5b87ed3c5f6a7b6fc9235c45a1d7c492e2c37",
+      "error": "Unsupported: Unsupported exception scope",
+      "findings": []
+    },
+    {
+      "name": "route2-old-region-insufficient-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "13ef056c94464fa38f56afd800a4ee1530b28bb528fabe899429c1dd39574888",
+      "report_sha256": "21d15b90f81bf618ef4a2a4c407dc5899916e8f02bf37451eb30a01bc9f83e70",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "U1.2",
+          "b": "70c529ef-8b6a-4845-adec-4b8f791322bf",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "SENSE_FB",
+            "DRAIN_BLOCKED"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.78577,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "U1.4",
+          "b": "230b13bb-23da-487e-8109-cc33c40d7025",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SENSE_FB"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.78577,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "230b13bb-23da-487e-8109-cc33c40d7025",
+          "b": "70c529ef-8b6a-4845-adec-4b8f791322bf",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "SENSE_FB",
+            "DRAIN_BLOCKED"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "route2-via-not-exempt-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "f6fe9bbe8fcb56ab720776f41742deebf795a391a856569596a3109ba88e6d90",
+      "report_sha256": "96fa36191c8e67883ead8213509787bf13bab767c4efec52c4c0a0e0063108f8",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "U1.2",
+          "b": "24876b20-9a3d-4ca5-97ce-bf09c244d158",
+          "kinds": [
+            "pad",
+            "via"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "SENSE_FB",
+            "DRAIN_BLOCKED"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.623143,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "b809c7bc-1739-4884-9062-a585d9cc9c32",
+          "b": "24876b20-9a3d-4ca5-97ce-bf09c244d158",
+          "kinds": [
+            "track",
+            "via"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "SENSE_FB",
+            "DRAIN_BLOCKED"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.450001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "route2-zone-not-exempt-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "de43b704b09b8a81e234d2b2c82f25ffee07d5d073f867369cb655944024894d",
+      "report_sha256": "8ad0e988ecf52af1ce8c415a7737ade88c980998d968d994cbfc667610564398",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "U1.2",
+          "b": "1cd87580-35eb-41be-92e4-783409929caf",
+          "kinds": [
+            "pad",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "SENSE_FB",
+            "DRAIN_BLOCKED"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.830194,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "39862806-1ee5-43b8-8eae-27d1ccd4332d",
+          "b": "1cd87580-35eb-41be-92e4-783409929caf",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "SENSE_FB",
+            "DRAIN_BLOCKED"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.750001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "cached-fill-outside-outline-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "c88fd193f02348f5bc037547c2849a588e37c97d93a2d6a6f2e0a3d27c284594",
+      "report_sha256": "4bbb19d72676d67731520770a522db8de771807db66dcc9882c1bb383e611d94",
+      "error": "Unsupported: Saved zone fill outside actual zone outline",
+      "findings": []
+    },
+    {
+      "name": "native-multiouter-outline-cache-stop-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "68839b5bdaa886b596f54922e15acd44c8fcf522429227f9d452e649e81b067f",
+      "report_sha256": "14c7cb3c2f91d3624ebe5007ab3d504f7447217a8a39928e278ae2cc39d2ec4e",
+      "error": "Unsupported: Saved zone fill outside actual zone outline",
+      "findings": []
+    },
+    {
+      "name": "pad-exception-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "22859d6d439af0f58c74e6a43babe68f39e5a3b226c428d1f2b00346bc328e32",
+      "report_sha256": "6fd7b3b088c9ecdbccfa589bf9758ec1ffbac31707340db579b15719ce5de122",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "connected-local-track-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "0ddc98140c6f9492f36a4a38f487171986a9a1ec1d2813df567d49db8d76b5ff",
+      "report_sha256": "c94270d8b6fbcedf3e7b68853d07cd0b222b823e730575ebd3bd17ca16611df0",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "track-escape-outside-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "20c18b202b5049e5da62c34f837ce1ed41c159668cb7bcd78645bd2e2f8c4338",
+      "report_sha256": "e8d086eb7c4a9485a7fd5d71997f46f10ca27c038313ffd7850293dcc14d292f",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "e61f376e-641a-4415-8875-5e781da5dbcc",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.78577,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "336e4113-35e1-488b-a5f4-6ba0d4a3c5f2",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.78577,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "336e4113-35e1-488b-a5f4-6ba0d4a3c5f2",
+          "b": "e61f376e-641a-4415-8875-5e781da5dbcc",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "added-via-no-exception-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "185050af76d71eb9aec578de6e784ba046bc8b5d060cf353b0f69ead8ff5f574",
+      "report_sha256": "1a22ebf2d6b8747632d7609692239ba487b06378905793999b3cdc1055d7998b",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "fef800d0-8bf4-4e3d-ab04-9129ac4ecd81",
+          "kinds": [
+            "pad",
+            "via"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.292382,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "53f244ae-7efc-4432-b698-57e9c34a4017",
+          "b": "fef800d0-8bf4-4e3d-ab04-9129ac4ecd81",
+          "kinds": [
+            "track",
+            "via"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.450001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "track-crossing-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "26a7f03d4fbdcd86d6be35be0bdc2e9610a49f73bb7803882b3320715b236cf1",
+      "report_sha256": "7092ecc71d5d69b7a218478a2472196fa3cbb6eb3f666acff88f3364e78155ef",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "761240ad-ea3b-420b-9227-11779e014417",
+          "b": "7bea4f02-41cd-48d4-b28f-bad8c083feac",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.0,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "generic-separated-tracks-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "d295855b5aa290858545d48176ecb0d81ce0d0d631cec058bce2e5b2a3dcc6e4",
+      "report_sha256": "1ed06f71b800f5a178cefdb503b0d1307feecd39928578413926325f2c2b2ec6",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "native-near-tracks-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "869813c5c05363c1c79f62199ed1517733c51975595c7f5c4bb507a2010abf24",
+      "report_sha256": "b5308c770b544bf20228ef0b42c168500c011b85b7a6e776c2dd319b89d1c6ff",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "d534aa2f-eaa9-4c83-92a3-12aa425196f6",
+          "b": "473111a6-7fee-48de-8e24-79ca693a00c1",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.1,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "near-but-disconnected-no-owner-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "9914b450c7f28438c91b3f5cc75c20aa850c3c806207fc0a0dc43bf630d57d6c",
+      "report_sha256": "8623b3b206f4bc0fd14d2da264fa07b8df437b1d442aee0c25c2af0808128343",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "d977880b-efef-4e22-9e87-9bf82119f33e",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.505951,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "1dbe14f0-b7dc-40e7-a41a-a69de6c4669e",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.505951,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "1dbe14f0-b7dc-40e7-a41a-a69de6c4669e",
+          "b": "d977880b-efef-4e22-9e87-9bf82119f33e",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "one-micron-gap-cannot-prove-owner-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "4fc5cb27a8346c51b90b0ce49f7e47b2ab93f9ff3d8526d24e3c4e9e09f36a29",
+      "report_sha256": "cc2b1fdf07f889ed22e47bdbe7824fd24f313c7c39954745ad1b66b5833e78e9",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "228ea0c7-d930-4f50-b9c3-7f1434e05573",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.353662,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "228ea0c7-d930-4f50-b9c3-7f1434e05573",
+          "b": "1692779e-e030-4025-a4b1-16e33440ba73",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "ambiguous-roots-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "efead915d3223cafafa4ec6f087cdec57237b7ee2063d8b8cb96578f50b09443",
+      "report_sha256": "ba0ed26bfdf1eed534328399bb777a2532f975e94319f9f3529a901e9ea610f3",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "cd593578-6736-4777-a515-4354ab1b083c",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.35,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": [
+            {
+              "track": "cd593578-6736-4777-a515-4354ab1b083c",
+              "layer": "F.Cu",
+              "exception_id": 0,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            },
+            {
+              "track": "cd593578-6736-4777-a515-4354ab1b083c",
+              "layer": "F.Cu",
+              "exception_id": 1,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "copper_spacing",
+          "a": "cd593578-6736-4777-a515-4354ab1b083c",
+          "b": "4c3fbd2d-efb1-42e5-8b12-851806204742",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": [
+            {
+              "track": "cd593578-6736-4777-a515-4354ab1b083c",
+              "layer": "F.Cu",
+              "exception_id": 0,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            },
+            {
+              "track": "cd593578-6736-4777-a515-4354ab1b083c",
+              "layer": "F.Cu",
+              "exception_id": 1,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "explicit-provenance-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "efead915d3223cafafa4ec6f087cdec57237b7ee2063d8b8cb96578f50b09443",
+      "report_sha256": "01c717873f2e3c7f4b17cbb3dacaeff1b551c6f079e27a178edd6aa3ae5eb8cf",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "tampered-provenance-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "efead915d3223cafafa4ec6f087cdec57237b7ee2063d8b8cb96578f50b09443",
+      "report_sha256": "fd2fcc7336d9b1056fb1effe0c82742a2ce318914ae039c93d7a3012eae85156",
+      "error": "Unsupported: Track provenance geometry mismatch cd593578-6736-4777-a515-4354ab1b083c",
+      "findings": []
+    },
+    {
+      "name": "bad-provenance-hash-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "efead915d3223cafafa4ec6f087cdec57237b7ee2063d8b8cb96578f50b09443",
+      "report_sha256": "8709fb2bd002a80355d07ae4db4ac68ca38e5eefdcff47182ad5562fd4f83dc3",
+      "error": "Unsupported: Provenance saved-board hash mismatch",
+      "findings": []
+    },
+    {
+      "name": "foreign-thermal-zone-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "b57eb9a732cde61517c2fab8cc1e10782063f69a1834085ce30dbf6048dae7b9",
+      "report_sha256": "6d0d5067ae6e8d3a05563691b874dea0633b45dca5b2086fc12585d582a60f89",
+      "error": null,
+      "findings": [
+        {
+          "type": "U3_backside_reservation",
+          "id": "ef7365e8-62ed-4db1-8077-54bf23b41d40",
+          "kind": "zone",
+          "net": "BUS_PLUS",
+          "target_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "dc-return-thermal-zone-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "eb45c1432825257ecaaaae25984db0138a9e2ece4997addcec4ae2128169ce55",
+      "report_sha256": "8f2173bb18477139553d7171ff05a0afb999f4fa0d21da44e53d9cb33a2894f1",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "track-zone-crossing-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "1611a47af37bdcc9c9ce4bc3cdbf3de557ad8c6a8fe7e8170f7f79a366c7a71c",
+      "report_sha256": "ff854b6f398a4af241835fe14a028703cd83826c952571c3c740070804711524",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "f8f6e1a5-4f4c-4a3c-82fb-fe95ae5c4a19",
+          "b": "5f62d67e-fa44-4c23-8aad-260027bb500b",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.0,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "track-in-zone-hole-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "f248025dbb1d5d48d7642d9aae010025cd0c9128a9f60c6226a5cf4471d9b53a",
+      "report_sha256": "a53dc9146013229337964411a9221cbfb6fa586cd9620ebc29a5c18f46ec3f4a",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "zone-not-package-exempt-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "179ef3ad7caceaee6b48a4ee89ea1e763e4ea7284ff8b1438ad25e6323ef8f65",
+      "report_sha256": "2275177b1bc9874b91517313eb5ef883f107245d8b8837d3a5e5b37dd618f74a",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "dedc2fc0-2b74-483b-8d90-fea109ef38f1",
+          "kinds": [
+            "pad",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.400001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "unfilled-zone-stop-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "09ad4f1543ed6ea406fc6a00f4f097b8b959e6e54b0127e990e1eda81746b511",
+      "report_sha256": "b49e6934ed35f12287e806a6c306d24d3005a4398b52a000573d5c41dfffc223",
+      "error": "Unsupported: Copper zone unfilled or marked stale",
+      "findings": []
+    },
+    {
+      "name": "dc-return-thermal-track-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "d490354a5d1a02f39957a1fc460bb507dee27bb878b8dd421c83703450398113",
+      "report_sha256": "d6c0ce876821704b2c083c8febdc4d3e31a9abcd6a79ac90b45d9bf2ebbff319",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "foreign-thermal-track-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "72d638efd1f30bea56b164546b2aeeaebc3ce7059ed6b38153dd5d1038fe7d42",
+      "report_sha256": "b45fee8e124ac2cec63c4ec12627d6beddcf91e2ec34e045b0e3054da7738ec0",
+      "error": null,
+      "findings": [
+        {
+          "type": "U3_backside_reservation",
+          "id": "4b2302fd-6856-4c8f-8d7e-46834184c2be",
+          "kind": "track",
+          "net": "BUS_PLUS",
+          "target_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "protected-area-track-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "9eb3a828ff76404459dcb2fe375a8ee55755c844e6e855ed80f76b61dc0a3037",
+      "report_sha256": "c75f52c37d74447080813b08693d30ee2dcff24f6ad43cc77b161dec74d2f0cd",
+      "error": null,
+      "findings": [
+        {
+          "type": "protected_area",
+          "id": "f21d03bc-23be-480c-8899-a8465f0be2ab",
+          "layer": "F.Cu",
+          "area": "corner"
+        }
+      ]
+    },
+    {
+      "name": "edge-track-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "ee14feddd797a3b690b0e39e661b2292781394e64f320fc00188f5cede71c4f0",
+      "report_sha256": "0e193b58d1d9d8fe77e3d0c9693ae68997574c244874b183d5aed15cbd3b0a23",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_edge_setback",
+          "id": "966b61ae-ade6-4171-8d86-3ea993664243",
+          "layer": "F.Cu",
+          "target_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "track-width-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "a44110c9bb38a6aece7a21c53d24ad8e5eeaad19bdfd3fdf68b7ba14ea315650",
+      "report_sha256": "688890993dd4f803d312b12ef058f10e66abdbd85176cdcf38f9de71c1d61e0d",
+      "error": null,
+      "findings": [
+        {
+          "type": "track_width",
+          "id": "25f11287-32c2-4ecd-9bcd-e8f7efe8be99",
+          "actual": 0.2,
+          "target_mm": 0.3
+        }
+      ]
+    },
+    {
+      "name": "unsupported-arc-stop-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "9fd5dd8ae4a39b8720f4dab0591115e84aef67d11671f26e1f0e439d26f9a3b2",
+      "report_sha256": "a0cdfc000a3a6855c8087a363ecf92ddb0631adc3275d1aa50720fa552fef631",
+      "error": "Unsupported: Only straight PCB_TRACK segments supported",
+      "findings": []
+    },
+    {
+      "name": "false-authored-owner-not-connected-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "e3e92dc4b2e81fb69bddefe19b7b36a2e8a3378368fec1f03fe3de7f9204cdfa",
+      "report_sha256": "4ea555e0b790900f534b18000b48a5f30ec6aac0e6343c5ee34105816b0dbe56",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "a8abd8f1-d400-432a-b5f0-f03c92240510",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.505951,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "a8abd8f1-d400-432a-b5f0-f03c92240510",
+          "b": "353fc8a3-1455-4d6a-8b0c-7eb2c3c7758b",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "native_drc_comparison_sha256": "d7d6237f06a8a8370f9e369470d9178f105106a060cdf061928ba8a206c7c9d0"
+}

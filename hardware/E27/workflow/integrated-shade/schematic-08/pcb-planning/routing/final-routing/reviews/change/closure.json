@@ -1,0 +1,44 @@
+{
+  "review_id": "SC08-COMPLETE-CHANGE-01-CLOSURE",
+  "reviewer": "/root/final_route_change",
+  "role": "Change Reviewer",
+  "prior_report_sha256": "fd3e8f4623c18fe9e3c3603b3673d2117b4c62455b3d7241dfa39deec322ca60",
+  "prior_manifest_sha256": "02e3217f2265c5bd8150c335af5123f7e9861c2cf4d463e016d5a124d6f54728",
+  "current_manifest_sha256": "93dbb5532b8c981c5ae01aff364d88c095d259902e4ad86c6a5cf0b24b299832",
+  "verified_files": 165,
+  "verified_external_views": 3,
+  "current_source_snapshot": "cbe355b1c1a1cbfc71e25ef5ec321e3ced2043793a77ca2dda316c52a3966204",
+  "board_sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+  "changed_existing_paths": [
+    "hardware/E27/variants/integrated-shade/SC08_prototype/routing-verification/return-and-thermal-routing-review.json",
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/integrated-toolkit-check.json",
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/review-basis.md",
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/tools/sc08_integrate_complete_routing.py"
+  ],
+  "added_archival_paths": [
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/documentation-correction-impact.json",
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/authoring-source.py",
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/integrated-toolkit-check.json",
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/review-basis.md",
+    "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/final-routing/revisions/01/thermal-review.json"
+  ],
+  "removed_paths": [],
+  "all_other_sources_and_views_byte_identical": true,
+  "fresh_integrated_check_matches_all_actual_input_hashes": true,
+  "finding_closures": [
+    {
+      "id": "SC08-ROUTE-CHANGE-DOC-01",
+      "state": "verified_closed",
+      "actual_verifier": "/root/final_route_change",
+      "evidence": "Thermal report and reproducible authoring source exactly replace R3/R4 by R6/R27; U4.4 SOURCE retained; actual circuit and prior independently checked clamp memberships unchanged. Fresh integrated check/source snapshot passed."
+    }
+  ],
+  "recommendation": "ready_for_human_review",
+  "open_findings": [],
+  "scope": "Targeted documentation closure and complete revised-manifest freshness; earlier independently executed actual native/copper/parity checks carry forward only because CAD/rules/graph/spatial/requirements bytes are unchanged. Current routing human approval remains absent.",
+  "limits": [
+    "No physical performance/compliance qualification",
+    "No release/order/energized-test authorization",
+    "Four role reports and actual human routing acceptance are separate coordinator gates"
+  ]
+}

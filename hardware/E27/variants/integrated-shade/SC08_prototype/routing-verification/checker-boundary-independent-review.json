@@ -1,0 +1,77 @@
+{
+  "role": "Independent numerical-boundary checker correction review",
+  "actual_actor": "/root/adoption_tool_review",
+  "decision": "checker_usable_for_exact_approved_contract; actual9db_saved_matrix_passes",
+  "frozen_checker_sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+  "frozen_tests_sha256": "35994f2f167caaa7605645154e5e01a543db745aaae5b83ff8a010feb3afd6a4",
+  "supersedes": "Prior218f zero-envelope containment failure and SC08-SAVED-FILL-CONTAINMENT in outline-fix-review.json are resolved by this separately inspected comparison-only numerical method; prior topology inspection retained.",
+  "authority_basis": "Root confirmed approved original9db packet reviewed explicit2um boundary envelope and independent byte-identical native refill. This implements that numerical comparison, not a new design spacing limit or physical waiver.",
+  "independent_source_inspection": [
+    "ZONE_BOUNDARY_ENVELOPE_MM=.002 affects only fill versus actual-outline comparison. zone_boundary_envelope copies original outline, uses1998nm round offset with1nm approximation. Original saved poly is appended unchanged to Copper and still drives all spacing/edge/protected/ownership checks.",
+    "Exact integer ring validator remains. Original strict residual is retained for numerical diagnostics.12-step binary search reports conservative upper bounds, not measured physical distances.",
+    "No net, layer, owner, local scope, generic spacing, native floor or vias/zones concession is changed. Historical freshness still needs independent native refill evidence."
+  ],
+  "independent_runs": {
+    "geometry_cases": 43,
+    "geometry_pass": true,
+    "actual_contract_and_copy_mutations": 6,
+    "contract_pass": true,
+    "native_comparison_pass": true,
+    "runtime": "PinnedKiCad10.0.6"
+  },
+  "adversarial_coverage": [
+    "Actual extracted rounding passes;1um overhang accepted and3um rejected",
+    "Shortened outline, lost-multiouter cache, hole-crossing fill and nonzero-area bowtie still rejected",
+    "Prior spacing, finite region, ownership and forbidden via/zone regressions remain passing"
+  ],
+  "actual_independent_saved_board_run": {
+    "report_sha256": "adb308060b0075a3143995078583c6520597cf7c0495a2a41a2c674a6dbe147c",
+    "passed": true,
+    "board_sha256": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+    "input_unchanged": true,
+    "stats": {
+      "per_face_objects": {
+        "pad": 134,
+        "track": 27,
+        "via": 26,
+        "zone": 4
+      },
+      "different_net_face_pairs": 10807,
+      "clipped_piece_pairs": 49,
+      "noncopper_undrilled_paste_pads_excluded": 4,
+      "zone_boundary_numeric_residuals": [
+        {
+          "zone": "0d053f4b-dc5a-4df2-9b7d-f3e35bf81686",
+          "layer": "F.Cu",
+          "residual_area_mm2": 6.118e-09,
+          "conservative_offset_upper_bound_mm": 3.41796875e-06,
+          "comparison_envelope_mm": 0.002
+        },
+        {
+          "zone": "c1062935-759c-4df3-ab41-447c7c2d80f9",
+          "layer": "F.Cu",
+          "residual_area_mm2": 1.46915e-08,
+          "conservative_offset_upper_bound_mm": 4.3945312500000005e-06,
+          "comparison_envelope_mm": 0.002
+        },
+        {
+          "zone": "f07c0bb6-4dd6-4ca5-88c8-f21e5d9af782",
+          "layer": "F.Cu",
+          "residual_area_mm2": 1.84035e-07,
+          "conservative_offset_upper_bound_mm": 3.41796875e-06,
+          "comparison_envelope_mm": 0.002
+        }
+      ]
+    },
+    "findings": []
+  },
+  "interpretation": "Maximum conservative residual offset upper bound4.39453125nm, far inside declared2000nm comparison envelope. These values are numerical polygon diagnostics only.10807 actual different-net face pairs pass with original actual saved copper geometry and authentic27-track provenance.",
+  "RC-ROUTE-DRAIN-01": "Matrix prerequisite now independently passed on exact9db and approved active contract. Coordinator still must bind fresh native refill/DRC and spatial-consumer checks, then record independent closure. This report alone does not close routing-stage or product gates.",
+  "findings": [],
+  "artifact_hashes": {
+    "test-results.json": "0a43886147543fa92d752dab34e2d42bbac96b4499ce5a01cad1db6e28fa34ca",
+    "contract-test-results.json": "7fdd5fd82be1afd2b7293eb94a792dba346620612f13c30e45923a65734d7f6b",
+    "native-drc-comparison.json": "65989773632a37b15887bd52882a31e1404a020d367b3b7cc458533d7413a8aa"
+  },
+  "write_scope": "Own review directory only; read-only actual board check with before/after SHA; no customer helper/CAD/configuration/approval edits or customer routing search."
+}

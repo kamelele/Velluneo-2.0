@@ -1,0 +1,31 @@
+{
+  "review_id": "SC08-COMPLETE-REALITY-01",
+  "task": "SC08-ROUTE2-COMPLETE",
+  "role": "Reality Checker",
+  "actual_actor": "/root/final_route_reality",
+  "independent_of_customer_CAD_writer": true,
+  "manifest_sha256": "02e3217f2265c5bd8150c335af5123f7e9861c2cf4d463e016d5a124d6f54728",
+  "board_sha256": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+  "scope": "Actual complete bare unpowered laboratory routing,0..40C ambient. No product safety, thermal or electrical performance qualification inferred.",
+  "sources_inspected": ["AGENTS.md", "pinned agent-workflow and reality-checker role/report template", "final-routing/task-contract.json and review-basis.md", "actual native PCB", "bom-design.json", "intended-connectivity.json", "driver-led-interface.json", "prototype-validation.json", "pcb-basis/thermal-budget-results.json", "pcb-basis/thermal-assumptions.md", "pcb-basis/layout-reservations.json", "route2 matrix and spatial contract", "actual routing-authoring and saved fills", "native DRC and integrated Toolkit check", "bottom PNG view"],
+  "checks": [
+    {"basis": "Independent file check", "result": "All160frozen files and3external image hashes verified."},
+    {"basis": "Independent repeat of qualified saved-copper checker on actual native PCB", "artifact": "matrix-repeat.json", "result": "PASS382861different-net face pairs, nofindings, raw track/net parity preserved."},
+    {"basis": "Independent native object extraction and contact graph", "artifact": "inspection.json", "result": "DC_RETURN one normal copper component; two after removing C5negative pad/barrel; power pins BR1/C1/D1/J2 on one component and U2/U3/U4/U5 quiet pins on the other. Each native filled zone is one contiguous outline; graph did not join separate islands implicitly."},
+    {"basis": "Actual PCB pins and immutable BOM comparison", "result": "U4/U5 pin4=SOURCE; pin3 connects via its own R6/R27 100ohm resistor to BP. No output clamp to DC_RETURN. Both separate package/drive paths retained. Native SOURCE narrow branch feeds clamp only, not main inductor current."},
+    {"basis": "Native route extraction and elementary copper estimate, not measured", "result": "U4 SOURCE0.3mm branch21.264mm, estimated resistance0.035ohm for35um copper at20C. At deliberately conservative7V/95ohm~74mA screen its loss~0.2mW; width is reasonable for this control branch. Exact hot clamp current/timing remain unmeasured; no functional guarantee from this estimate."},
+    {"basis": "Native dimensions/copper observation", "result": "C3BP direct2.67276mm; ten0.8/0.3mm U3 thermal vias inside20x20reserved area. Actual front DC area346.66mm2 and back399.978mm2; SOURCE154.016mm2 top only, no back SOURCE plane. These are geometry facts, not thetaJA or EMI evidence."},
+    {"basis": "Retained numeric conditions and later validation plan", "result": "21case RFpairmax2.68148W/R7max1.62694W; total8..10W allocation; U3worst feed-short screen0.50201W at80Clocal ambient requires theta<=89.64K/W to keep125C, consistent with conditional85target. Adequacy of actual copper remains test-dependent. RF/R7 standoffs, vertical free-air boundary, body-temperature stops and PhotoMOS70C/hotRon/time tests retained."},
+    {"basis": "Stage boundary inspection", "result": "145Vfault COUT/160Vcapacitor/1.89225J remain conditional experimental limits. Current55mAcalibration/50..60.5mA target, Ceff18uF, VDS680V, package/temperature/timing/surge/fault characterization explicitly unperformed. Named qualified test engineer, guarded fixture, instrumentation/energy limits required before power; not a blocker to reviewing an unpowered experimental layout."}
+  ],
+  "findings": [
+    {"id": "SC08-RR-DOC-01", "severity": "minor", "affected_gate": "routing packet", "owner": "/root", "object": "routing-verification/return-and-thermal-routing-review.json.source_control_branch", "evidence": "Says R3/R4 relay series resistors; these refs do not exist on actual47part PCB. Correct resistors are R6 and R27, each100ohm. Actual protected paths are intact.", "consequence": "Misleading traceability of clamp-current argument; no electrical defect demonstrated.", "closure": "Correct to R6/R27, preserve prior frozen manifest/report, refresh affected evidence hashes and integrated snapshot, issue fresh manifest for targeted independent closure."}
+  ],
+  "major_routing_findings": [],
+  "later_gate_obligations": ["Independent stage acceptance by Kamil", "Release artifacts/DFM inspection and separate order authorization", "Qualified guarded bring-up owner/instruments and measured current/thermal/hot shutdown/fault/impulse/surge data before operation claims", "All17original product obligations remain controlling for finished lamp"],
+  "unavailable_evidence": ["No physical sample", "No measured switching waveform/current/temperature/shutdown/surge/EMC/optical behavior", "No CTI/component assembled creepage qualification", "No thermal simulation or demonstrated thetaJA85"],
+  "invalidation": "Prior partial routing/input-only review cannot approve this complete copper; review here binds actual bddbboard. Changed future PCB requires relevant re-review.",
+  "recommendation": "changes_requested",
+  "reason": "Correct the minor resistor-reference error and refresh the packet. No substantive obstacle found to presenting this exact unpowered experimental routing for human review; operation under mains conditions remains unqualified.",
+  "human_approval": false
+}

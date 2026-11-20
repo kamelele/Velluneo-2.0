@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "product": "SC08_BARE_LAB_PCB",
+  "revision": "LAB-FAB-1-PROPOSED",
+  "subsystems": [
+    {
+      "id": "LAB_PCB",
+      "kind": "pcb",
+      "owner": "Codex-root"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "LAB_SCOPE",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Kamil",
+      "text": "Fabrication scope is bare unpowered experimental PCB,0..40C laboratory test vehicle.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Actualowneraccepts thisLAB-fabricationcontract andoriginal17criterioncrosswalk;noassembledsupply/finishedlamp/testresults released.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SCOPE",
+          "path": "pcb-basis/lab-board-boundaries.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-LAB_SCOPE"
+      ]
+    },
+    {
+      "id": "LAB_NETLIST",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Retain approved SC08-B circuit exactly.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Actualapprovedintent8be47... andfreshnativeERC0/112pins30nets1NC/47partsremainunchanged;documentonlygeometry/interfacecorrections separately.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_NETLIST",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-LAB_NETLIST"
+      ]
+    },
+    {
+      "id": "LAB_DOMAINS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Declare allhazardousdomains andconditionalvoltagematrix.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "All30netscoveredonce;incomingACsourceup1458Vbucket,separateBUS664/VDS680/COUT145conditions,explicitlocal15Vpairs,noSELVorcomplianceclaim.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DOMAINS",
+          "path": "pcb-basis/domain-matrix.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-LAB_DOMAINS"
+      ]
+    },
+    {
+      "id": "LAB_THERMAL",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Numericallybudgetheatanddesignmeasurementaccess.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Reproduce21caseRF/R7/ripplelosses;allocate8..10W,definepartlocalambient/junction/bodyconditions,U3theta85targetwithoutclaimingachievedtemperature.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_THERMAL",
+          "path": "pcb-basis/thermal-budget-results.json"
+        }
+      ],
+      "method": "calculation",
+      "evidence_ids": [
+        "EV-LAB_THERMAL"
+      ]
+    },
+    {
+      "id": "LAB_PARTS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Document exactpart/pad/bodygeometryforbareboardlayout.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "47verifiednumberedpadsets;C5court>=17height27,C4height2.7,STFig9SMAcorrect;knownlegacyC5procurementriskdoesnotbecomeunapprovedMPNswap.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARTS",
+          "path": "capture-geometry-evidence.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-LAB_PARTS"
+      ]
+    },
+    {
+      "id": "LAB_INTERFACE",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Synchronize experimental output contract.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "EmbeddedandseparateIFC-DRIVER-LEDbothSC08-B145V/1.89225Jwithidenticalpins;actualhealthy/faultoperationstillunperformed.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_INTERFACE",
+          "path": "driver-led-interface.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-LAB_INTERFACE"
+      ]
+    },
+    {
+      "id": "LAB_SPACING",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Useacceptedexperimentalfunctionalspacingwithscopedpackageexceptions.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Ownerapprovesexactmatrix/exceptioninventory;actualalllayercoppercheckedagainsttargetsanddeclaredescapes. NativeDRCflooraloneisnotcompleteclearance/creepagequalification.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPACING",
+          "path": "pcb-basis/routing-and-isolation-proposal.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-LAB_SPACING"
+      ]
+    },
+    {
+      "id": "LAB_SPATIAL",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Agree independentoutline,regions,height,edge/clampaccess.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Actualowneraccepts independent140x100spatialintentdigest;nativegeometrystaysinsideit,47courtyardsnonoverlap,hot/coolreservationsandheight/accesscheckspass.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPATIAL",
+          "path": "spatial-constraints.proposed.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-LAB_SPATIAL"
+      ]
+    },
+    {
+      "id": "LAB_DFM",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Savedroutedboardmeetsdeclaredmanufacturinggeometry.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "FreshKiCad10.0.6DRCwithzonesrefilled,zeroerrors/unconnected;allscopedextradistancechecksandcourtyard/thermalaccessreviewscompleted,nohiddenexclusions.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DFM",
+          "path": "SC08_prototype.kicad_pro"
+        }
+      ],
+      "method": "DRC",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_PARITY",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "PCBimplementssameapprovedcircuit.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "All47references/MPNs/values/footprints and112pin-netmembersagreewithfreshschematicexport;noextraelectricalpads/shorts/missingconnections.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARITY",
+          "path": "SC08_prototype.kicad_sch"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_ARTIFACTS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Manufacturingfilesboundtoexactfinalsourceandprocess.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "ReviewedGerbercopper/mask/silk/outlineanddrills,completeBOM/manualassemblydrawing/positions/hashes,FR42L1oz1.6leadfreeHASL;separateactualhumanreleaseapprovalneeded.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_ARTIFACTS",
+          "path": "hardware.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "LAB_TEST_BOUNDARY",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "text": "Unpoweredfabricationreleasecannotgrantenergizedtestpermission.",
+      "basis": "Actualownerlabprototype0..40Cchoiceand910870cschematicacceptance;thisspecificfabricationcontractstillrequiresactualreview",
+      "acceptance": "Bringupgatepreservesnamedqualifiedhuman/setup/instrument/energy/time/temperaturelimitsandall17originalproductobligationsasOPEN;noCE/optical/EMC/current/thermalqualificationclaim.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_TEST_BOUNDARY",
+          "path": "prototype-validation.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [
+    {
+      "id": "LAB_OPEN_SCOPE",
+      "record_id": "LAB_SCOPE",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "AcceptspecificunpoweredLABfabricationcontract/crosswalk,notfinishedsupplyrelease",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "Actual Kamil acceptance of reviewed LAB/spatial scope and22 exact component exceptions; owner-spatial-prototype-decision.json. Not physical qualification.",
+      "evidence_ids": [
+        "EV-LAB_SCOPE"
+      ]
+    },
+    {
+      "id": "LAB_OPEN_SPATIAL",
+      "record_id": "LAB_SPATIAL",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Acceptindependent140x100spatialintentandmechanical/thermalreservations",
+      "blocks_stage": "placement",
+      "status": "resolved",
+      "resolution": "Actual Kamil acceptance of reviewed LAB/spatial scope and22 exact component exceptions; owner-spatial-prototype-decision.json. Not physical qualification.",
+      "evidence_ids": [
+        "EV-LAB_SCOPE"
+      ]
+    },
+    {
+      "id": "LAB_OPEN_EXCEPTIONS",
+      "record_id": "LAB_SPACING",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Acceptreviewedexactpackagefunctionalexceptions/matrix;notstandardscompliance",
+      "blocks_stage": "placement",
+      "status": "resolved",
+      "resolution": "Actual Kamil acceptance of reviewed LAB/spatial scope and22 exact component exceptions; owner-spatial-prototype-decision.json. Not physical qualification.",
+      "evidence_ids": [
+        "EV-LAB_SCOPE"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-LAB_SCOPE",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "owner-spatial-prototype-decision.json",
+      "sha256": "5c205a36d4f74d56617735a1f4396a4a09384203b6a8ceb50fefcb2ba95339a4",
+      "inputs": [],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    },
+    {
+      "id": "EV-LAB_NETLIST",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "placement-verification/integrated-placement-review.json",
+      "sha256": "bb16bc4609b7b24ccafdb9ccecee1eceac5365b15adffb0227ef83c395c14019",
+      "inputs": [
+        {
+          "path": "placement-verification/erc.json",
+          "sha256": "8b292fae72b7964afbc7818651f158ad3fde60869a6f11326a9ce9937dea5e16"
+        },
+        {
+          "path": "placement-verification/connectivity.json",
+          "sha256": "f087db4919145fb57300e77cc68ad92c4eb49a067dd6e50e26859b0d4e6c54a5"
+        },
+        {
+          "path": "placement-verification/native-drc.json",
+          "sha256": "c0d51a51ef50d0c240c543d36184bf0213eb50858a1e3efa675cd2e54cb47c31"
+        },
+        {
+          "path": "SC08_prototype.kicad_sch",
+          "sha256": "824f61643e8026518b8bdd07ab2df40c6d71d79bf3391c722699126a648f0395"
+        },
+        {
+          "path": "SC08_prototype.kicad_pcb",
+          "sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5"
+        }
+      ],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    },
+    {
+      "id": "EV-LAB_DOMAINS",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "pcb-basis/domain-matrix.json",
+      "sha256": "6a20f43a47befea3055f0de9af20c5d9b5fa3f7f809ea2445f903e77f8bd13f1",
+      "inputs": [
+        {
+          "path": "pcb-basis/intent-native-net-binding.json",
+          "sha256": "ed102c4f47b0beff1565c51b0862ba62f02b72c6ab79d6fbb8b37e40d75486be"
+        }
+      ],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    },
+    {
+      "id": "EV-LAB_THERMAL",
+      "kind": "calculation",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "pcb-basis/thermal-budget-results.json",
+      "sha256": "cf96b5360c45266c273ec0055ee4ab18fa53324d651474bfc296b8a38c21a737",
+      "inputs": [
+        {
+          "path": "pcb-basis/thermal-budget-results.json",
+          "sha256": "cf96b5360c45266c273ec0055ee4ab18fa53324d651474bfc296b8a38c21a737"
+        },
+        {
+          "path": "coupled-results.json",
+          "sha256": "80697e6ee29b013b17d3c725401214077efc7d4aa350369bd4b421727550b13f"
+        }
+      ],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    },
+    {
+      "id": "EV-LAB_PARTS",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "placement-verification/integrated-placement-review.json",
+      "sha256": "bb16bc4609b7b24ccafdb9ccecee1eceac5365b15adffb0227ef83c395c14019",
+      "inputs": [
+        {
+          "path": "pcb-basis/C5-geometry-correction.json",
+          "sha256": "92e843e54fcab0671cfafd9d28302b4afd9f8f8aa77c9a3fd29e4b310a3e2eec"
+        },
+        {
+          "path": "placement-verification/extra-placement-check.json",
+          "sha256": "b6644211e03da70a7bd7fd538f9dfe0b2c9596df073c4a3adbffbf8c669e8b48"
+        }
+      ],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    },
+    {
+      "id": "EV-LAB_INTERFACE",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "placement-verification/integrated-placement-review.json",
+      "sha256": "bb16bc4609b7b24ccafdb9ccecee1eceac5365b15adffb0227ef83c395c14019",
+      "inputs": [
+        {
+          "path": "requirements.json",
+          "sha256": "1f10e2590e53a47f696a52c97886514582ace16ab7e28c953b4599a8bbcfa5af"
+        },
+        {
+          "path": "driver-led-interface.json",
+          "sha256": "33ff5e05780a94562e493bbd1bc361e488836bb36bbbdee58d83582f761cc532"
+        }
+      ],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    },
+    {
+      "id": "EV-LAB_SPACING",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "placement-verification/extra-placement-check.json",
+      "sha256": "b6644211e03da70a7bd7fd538f9dfe0b2c9596df073c4a3adbffbf8c669e8b48",
+      "inputs": [
+        {
+          "path": "SC08_prototype.kicad_pcb",
+          "sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5"
+        },
+        {
+          "path": "pcb-basis/routing-and-isolation-proposal.json",
+          "sha256": "06f1fff7ebc55c776491978305f62496386c77f0945c37bcd7a54915a0e96f53"
+        },
+        {
+          "path": "pcb-basis/intent-native-net-binding.json",
+          "sha256": "ed102c4f47b0beff1565c51b0862ba62f02b72c6ab79d6fbb8b37e40d75486be"
+        }
+      ],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    },
+    {
+      "id": "EV-LAB_SPATIAL",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex-root integratedactualchecks; actualownerdecision forscope,retained21case numericalcalculations for thermal; independent placement-role review pending",
+      "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+      "artifact": "placement-verification/thermal-placement-review.json",
+      "sha256": "bfdf8dfdf22980923dfc29ec731f987617ec8c21a5af369025a1b71e1874295e",
+      "inputs": [
+        {
+          "path": "SC08_prototype.kicad_pcb",
+          "sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5"
+        },
+        {
+          "path": "spatial-constraints.proposed.json",
+          "sha256": "496a2a9772fb63e21be76a6ee5dd945c7dbaeba00d559c4fc91a4a5c251df827"
+        },
+        {
+          "path": "placement-verification/spatial.json",
+          "sha256": "4e3f167274ef88a988dc47674a313d55931a016fe47c83066040cfc892d1b9d3"
+        },
+        {
+          "path": "placement-verification/extra-placement-check.json",
+          "sha256": "b6644211e03da70a7bd7fd538f9dfe0b2c9596df073c4a3adbffbf8c669e8b48"
+        },
+        {
+          "path": "placement-verification/height-envelope-geometry.json",
+          "sha256": "ce5e5c96b6b83a2e4805ce50ae9a6888a0dc42213ab7d1e0c4d8bb39aebacb36"
+        },
+        {
+          "path": "placement-verification/core-correction-corridor-check.json",
+          "sha256": "34da5fdd5004a1360b9dac09dff40f550c87a0ed867ed03d11f65a9fb2943738"
+        },
+        {
+          "path": "placement-verification/loop-comparison.json",
+          "sha256": "1fedd4b90afd7f32b37d547879c9d175d4b49cb4f30c1c606a273b78878a389a"
+        }
+      ],
+      "scope": "Accepted bare LAB placement criterion only; no measured/finished-product pass or human placement acceptance."
+    }
+  ]
+}

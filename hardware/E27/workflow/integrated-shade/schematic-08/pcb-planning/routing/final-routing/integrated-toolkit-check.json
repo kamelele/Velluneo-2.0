@@ -1,0 +1,1016 @@
+{
+  "schema_version": 1,
+  "mode": "work",
+  "time_utc": "2026-11-20T20:19:02.762647+00:00",
+  "ruleset_version": "0.7.1",
+  "errors": [],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\.work\\erc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC08_prototype/.work/erc.json\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\.work\\drc.json",
+        "--refill-zones",
+        "--schematic-parity",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC08_prototype/.work/drc.json\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  },
+  "requirements": {
+    "schema_version": 1,
+    "stage": "routing",
+    "errors": [],
+    "matrix": [
+      {
+        "id": "LAB_SCOPE",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Kamil",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_SCOPE",
+            "path": "pcb-basis/lab-board-boundaries.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_SCOPE"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_NETLIST",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_NETLIST",
+            "path": "intended-connectivity.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_NETLIST"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_DOMAINS",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_DOMAINS",
+            "path": "pcb-basis/domain-matrix.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_DOMAINS"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_THERMAL",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_THERMAL",
+            "path": "pcb-basis/thermal-budget-results.json"
+          }
+        ],
+        "required_kind": "calculation",
+        "evidence_ids": [
+          "EV-LAB_THERMAL"
+        ],
+        "observed_levels": [
+          "calculated"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_PARTS",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_PARTS",
+            "path": "capture-geometry-evidence.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_PARTS"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_INTERFACE",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_INTERFACE",
+            "path": "driver-led-interface.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_INTERFACE"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_SPACING",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "placement",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_SPACING",
+            "path": "pcb-basis/routing-and-isolation-route2.proposed.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_SPACING"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_SPATIAL",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "placement",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_SPATIAL",
+            "path": "spatial-constraints-routing-correction.proposed.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_SPATIAL"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_DFM",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_DFM",
+            "path": "SC08_prototype.kicad_pro"
+          }
+        ],
+        "required_kind": "DRC",
+        "evidence_ids": [
+          "EV-LAB_DFM"
+        ],
+        "observed_levels": [
+          "DRC-checked"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_PARITY",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_PARITY",
+            "path": "SC08_prototype.kicad_sch"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-LAB_PARITY"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "LAB_ARTIFACTS",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_ARTIFACTS",
+            "path": "hardware.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      },
+      {
+        "id": "LAB_TEST_BOUNDARY",
+        "revision": "LAB-FAB-1-PROPOSED",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "LAB_PCB",
+            "object": "LAB_TEST_BOUNDARY",
+            "path": "prototype-validation.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      }
+    ],
+    "open_questions": [],
+    "passed": true,
+    "limitations": [
+      "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+      "Hashes establish freshness, not evidence truth or reviewer authority.",
+      "Electrical checks compare declared DC envelopes only, not complete operation."
+    ],
+    "intent_digest": "217a28d565c71da6dbe7bb5d0f3ac46425a9b240284575d9495a995959850278",
+    "product": "SC08_BARE_LAB_PCB",
+    "revision": "LAB-FAB-1-PROPOSED",
+    "document_sha256": "a9c72f1860228ac46ef1cb340cc3a744adde4759aa0353624d7938b263d7ad93",
+    "blockers": [
+      {
+        "id": "LAB_ARTIFACTS",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "LAB_TEST_BOUNDARY",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "blocked_stages": [
+      "release"
+    ]
+  },
+  "snapshot": "cbe355b1c1a1cbfc71e25ef5ec321e3ced2043793a77ca2dda316c52a3966204",
+  "input_hashes": {
+    ".electronics-rules/config-state.json": "6fc1a318477fea9a3232793f81527f3a1ef8e3a981dd155e1f1a7ed6bf53d1eb",
+    ".electronics-rules/placement-input.json": "9f1b809995436d01f0cb2ea646ec0d4464207c612bb729d90ce71839f84eac57",
+    ".electronics-rules/routing-input.json": "9f1b809995436d01f0cb2ea646ec0d4464207c612bb729d90ce71839f84eac57",
+    "bom-design.json": "1a6d626be01d2b6b09bdfbf23ecea11346ae4a6b954c18047f4d06d2e60aba82",
+    "calculated-control.json": "0b18efb312f90e4f6f21dc6669285e74ff8f56c9832c3f8b1c3ea02e08fe9db6",
+    "Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c",
+    "capture-footprint-provenance.json": "8be05737242e07848182e7332210f2c8618557f8f39d7709f8ce7cc8d28677cc",
+    "capture-geometry-evidence.json": "a4a87b73a77f7e2a0dbee40559dfcefda21447e5c6f331f73a89900a1a965426",
+    "coupled-results.json": "80697e6ee29b013b17d3c725401214077efc7d4aa350369bd4b421727550b13f",
+    "coupled_screen.py": "f37c913b54c35d6b8dd86997c6a2bbe30df987f7ec62943b6e635822abe57faf",
+    "current-research.md": "486b120d13f11b1d437cae627de610c14c36d63fa87b081c0012dc03dad2cb90",
+    "Diode_SMD.pretty/D_SMA.kicad_mod": "100ce14ad3b13de1950fcaa532cec8a4a71aff64d2128006551329c789a262eb",
+    "Diode_THT.pretty/D_DO-201AD_P15.24mm_Horizontal.kicad_mod": "74ee663f3c238aea0760efd4c83cec08c077a4cee1bc9d6c3c7fa45c6cd4f335",
+    "driver-led-interface.json": "33ff5e05780a94562e493bbd1bc361e488836bb36bbbdee58d83582f761cc532",
+    "E27SC06.pretty/AC05_18x7p5_P25p4.kicad_mod": "2f6eabf8bad2d9ea439f76b2ac4a030676757f4d50e25dd9bc7a5b31beef012a",
+    "E27SC06.pretty/C4D02120E_TO252.kicad_mod": "02d70933c317844ebcffa874519241beb771ec1bfbd101898b0a67aae86fbc93",
+    "E27SC06.pretty/C_0805.kicad_mod": "6a008925a9c97150f234cf4b2a8900a15ff7603eacf9ce677cebb6ddf3bdd022",
+    "E27SC06.pretty/CP_16x25_P7p5.kicad_mod": "97f9e3894020054734216ada706eda79b37cc816c626bcf99885706d9262c3b7",
+    "E27SC06.pretty/Film_32x14_P27p5.kicad_mod": "c8183714ddaeb8149c3c915578e49af97c30dbea9aaf48703857bcf036f4fb2d",
+    "E27SC06.pretty/LYT_SO8C_no3.kicad_mod": "9f658fc6c06bcddba56668a64d14a20abc9742e7a79b75bf594da384ace9ef07",
+    "E27SC06.pretty/MB10S_Diodes.kicad_mod": "f6967bd4cf1ef8b498625792703cfc9b26523e9ad8e4c94a3eab5dc614e336c7",
+    "E27SC06.pretty/Panasonic_SSOP4.kicad_mod": "fe244b3e5f4d22021d6e03956d8656c49d31d3b7e88342f998b45931253d4b4c",
+    "E27SC06.pretty/R_0805.kicad_mod": "7302b340432036946b1fc4caf3803abe7beddd8058d9211438f9bf680c4392cd",
+    "E27SC06.pretty/R_1206.kicad_mod": "171adbcf15373886eec362e7d4836181572aff7831533ce6b8495f98f30f88e9",
+    "E27SC06.pretty/R_2010.kicad_mod": "097d66d8eb9b1f00e352f0af93281a7cb3d096e57dd64e9dbd8fcebf7e1c9c94",
+    "E27SC06.pretty/R_2512.kicad_mod": "6eff2deb760ff0a9efebcdb13b76c3415f4387bdac8ea176b0ea6085b0192d2c",
+    "E27SC06.pretty/RF_16x5p5_P22.kicad_mod": "8ee8c8703a9bf5063114147179ee083cf6dce514e5d8c3128fc51d44223f86be",
+    "E27SC06.pretty/RFC1010B_P6.kicad_mod": "dfddc71d0c2d0c946b40f65e60d4b056bee0cd60a7e7102e6c21c9d9f73dfcb5",
+    "E27SC06.pretty/SOT23.kicad_mod": "5a4e8f6fef1af118ea1ba916569bca37025f6cb9835e6b7b9627c7a7748c7615",
+    "E27SC06.pretty/SOT23_6.kicad_mod": "f13a8cbb65f1ca2f9b34766f0cbaef7d846d29e823b15896a4543b8d650d7e08",
+    "E27SC06.pretty/TVS_5KP_axial.kicad_mod": "513a5ceb193bd708356af611326749891b1a84913b848a85042683156449a47b",
+    "E27SC06.pretty/WirePads_2_P7p5.kicad_mod": "13c91fe30bf9aaa3b5635f142fcf7344d094347b4d3444a43623e1005fbe9b45",
+    "E27SC08.kicad_sym": "2a13f31e5a7ac0173926a29576a28763afa49ad86afb1bd482eaefd652aa45bc",
+    "fp-lib-table": "c2855869f55dc21dcf8f11f64f10c43541b081dfb9de81254aecd6d3b3f28c0a",
+    "historical-SC07-trim-results.json": "01ff8983b9ec5e1571777386a6d3c88351f8ddea04dfd086512892305524ffec",
+    "hot-research.json": "367d8860927a44ad1a58c8e9cf6e43aa84701c52ead22ea9dbe17af602f74e92",
+    "input-research.md": "34015095aa5f263b058ac272f93276734b310030ca0edb11e34603cf3a43bd36",
+    "input-results.json": "31ca34dd2232ff5cac7c62dcc969e760270a12c08a7febfd4072a0e171aab46c",
+    "input_screen.py": "aee4688152d9205dbb5d79c749f30e5ba5139f970b27ed56534268ff34c03409",
+    "intended-connectivity.json": "4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809",
+    "LIBRARY_LICENSE.md": "6c95d0b7fd398c8dae6d68f9e3d3033306bc5aa6a1470041b14d5c51c603521f",
+    "owner-capture-approval.json": "6d7af3bc55c5c3f7571d724132f716080711ba8875c328fe177bf698d2e7a97f",
+    "owner-process-line-decision.json": "35f0462ddaf81b8c60d203754702dead166d01aed3183c5b2a0037f8640b48f3",
+    "owner-prototype-scope.json": "6491988d16217c36ca1519eb1b358ec1b201469389301840d973146a850343ac",
+    "owner-routing-correction-decision.json": "5931ddaa3281b6f9ff708a20334de9c73f87170cf0205a229e882da48867f66e",
+    "owner-spatial-prototype-decision.json": "5c205a36d4f74d56617735a1f4396a4a09384203b6a8ceb50fefcb2ba95339a4",
+    "Package_TO_SOT_SMD.pretty/SOT-89-3.kicad_mod": "394a62a5d34a1f392310bac3de8e96553e8761a10971db596cd23b3fef3e8bd4",
+    "pcb-basis/all-package-pairs.json": "d90c7537d85c2e08dd28b6b94e1ab3cb1b59903c52102b285e6a31633626cbdc",
+    "pcb-basis/C5-geometry-correction.json": "92e843e54fcab0671cfafd9d28302b4afd9f8f8aa77c9a3fd29e4b310a3e2eec",
+    "pcb-basis/DESIGN_AUTHORITY.md": "2ab27da72368db6df2c99bfb06b6e1863761a4a1701ba5b825491dfb2d960de2",
+    "pcb-basis/DESIGN_AUTHORITY.routing-correction.proposed.md": "276c752c185f9ba02bfb2b474e4a9d39cc9ceb0fb865a24f772fc6f3c2e39bc6",
+    "pcb-basis/domain-matrix.json": "6a20f43a47befea3055f0de9af20c5d9b5fa3f7f809ea2445f903e77f8bd13f1",
+    "pcb-basis/footprint-preflight.json": "c4179b106983586ec58b461ca150a95316e4b3b4008c49c32a9ae614b1e4cb08",
+    "pcb-basis/hardware-lab-fabrication.proposed.json": "5d4d011fc838d93051ad0dc8f79a7a709356f2fe2314e29503579d1182f26565",
+    "pcb-basis/insulation-research.md": "370b8df6906f48e12aef7896916f6d523347fbab734d9b83fb3c3a7a4345e2eb",
+    "pcb-basis/intent-native-net-binding.json": "ed102c4f47b0beff1565c51b0862ba62f02b72c6ab79d6fbb8b37e40d75486be",
+    "pcb-basis/lab-board-boundaries.json": "8f11ee77f6f91505673c227fbdf690e7528f48d31f7bbd7180aa4353b2460555",
+    "pcb-basis/lab-fabrication-criteria.json": "4fd5610bab663204e2354fa910544532f35f2ea2b0ff7f1d4e5c25e10406b1dc",
+    "pcb-basis/layout-reservations.json": "4d1faaf63f510b7486b87277469fc21b9efbf2c24d5708095e1583f264ae1adf",
+    "pcb-basis/native-binding-export.xml": "c5e47cf26e082d930eb95b19e6fc94e33d805fb5114b1a1d6bd561511d7beec8",
+    "pcb-basis/package-exception-candidates.json": "eba09c4e779fbefb6a28d7786f73ad5041b88adef2e90dae65eecfac3a960aff",
+    "pcb-basis/package-exceptions.md": "8b57cc1f5ed78e274d030341b3661fe9d6faf8b0b73fe51be6597239f9371885",
+    "pcb-basis/preflight-findings.json": "19376bdec78c5d78871e9e0fc5f5434211251600b2e65b2033e81a7982eb29ae",
+    "pcb-basis/proposed-rule-inputs.json": "be31c3158fbc006e223c98ea7e3d220eb9569317904c14e14e0daaa4484bfb4d",
+    "pcb-basis/routing-and-isolation-proposal.json": "06f1fff7ebc55c776491978305f62496386c77f0945c37bcd7a54915a0e96f53",
+    "pcb-basis/routing-and-isolation-route2.proposed.json": "e60b1955b8020a29cec67bd66634ff6a86455526ef6dba29718c97e58cbe238d",
+    "pcb-basis/spatial-preflight-proposal.json": "dbe8c267d9848dc9103ce299456571f9bc18c3d2f306201cfea51aadebac14a1",
+    "pcb-basis/thermal-assumptions.md": "536a85e791ea26f8b1c0f215561fa921fa97ec524068454c7dbf9661493f4baf",
+    "pcb-basis/thermal-budget-results.json": "cf96b5360c45266c273ec0055ee4ab18fa53324d651474bfc296b8a38c21a737",
+    "physical-pin-intent.csv": "8835a485386b7ad48ef249e95d271f1ec55a4044c2012d3f4ef4540f5d23abc1",
+    "placement-verification/check_placement_source.py": "cdf7f1d4e747d8b2ddf60a391d8da9c5abade40f4f9ce08ac06086e09f2254f1",
+    "placement-verification/connectivity-netlist.xml": "0bfe43c7c2ffc645e9aba47b2bdf5f2f33b99a8a74466ac1f4b7502ba743b6f4",
+    "placement-verification/connectivity.json": "f087db4919145fb57300e77cc68ad92c4eb49a067dd6e50e26859b0d4e6c54a5",
+    "placement-verification/core-correction-corridor-check.json": "34da5fdd5004a1360b9dac09dff40f550c87a0ed867ed03d11f65a9fb2943738",
+    "placement-verification/doctor.json": "5d890aa252eded4b7c4c810432759e0a3f3e4d431c5f9d025e529f2f08e6c381",
+    "placement-verification/erc.json": "8b292fae72b7964afbc7818651f158ad3fde60869a6f11326a9ce9937dea5e16",
+    "placement-verification/extra-placement-check.json": "b6644211e03da70a7bd7fd538f9dfe0b2c9596df073c4a3adbffbf8c669e8b48",
+    "placement-verification/height-envelope-geometry.json": "ce5e5c96b6b83a2e4805ce50ae9a6888a0dc42213ab7d1e0c4d8bb39aebacb36",
+    "placement-verification/import-report.json": "b5627596e8fc8cd927ede05f9f1b4759cb49a52c17ced00c0d67fcc52b7d7893",
+    "placement-verification/integrated-placement-review.json": "bb16bc4609b7b24ccafdb9ccecee1eceac5365b15adffb0227ef83c395c14019",
+    "placement-verification/loop-comparison.json": "1fedd4b90afd7f32b37d547879c9d175d4b49cb4f30c1c606a273b78878a389a",
+    "placement-verification/native-drc.json": "c0d51a51ef50d0c240c543d36184bf0213eb50858a1e3efa675cd2e54cb47c31",
+    "placement-verification/original-to-lab-gate-crosswalk.json": "9f3f56c3002b6ab54bf4c1fce19b6f4dc7e308cf5f9a3615fb285ee6a7b066ac",
+    "placement-verification/placement-authoring.json": "6e5933ab10cd8a95f1b246bdaceb6205937512cccbae55cf9ff66e389931330b",
+    "placement-verification/preceding-proposal-reviews.json": "b1ba25db912640c95e818625d17edcc7e046985ce61c71c62cbc2618bf0aead5",
+    "placement-verification/reference-fields.json": "b05caa27b21deb5899e589918e7de116b702a4bdd4d9409218a2b7a75d483dc1",
+    "placement-verification/saved-corridor-geometry.json": "a2f5b28cd1aeb84ab68b8424b5d44a70e53ed2a39cdfc8fcfc691536fe1bf215",
+    "placement-verification/spatial.json": "4e3f167274ef88a988dc47674a313d55931a016fe47c83066040cfc892d1b9d3",
+    "placement-verification/summary.json": "239ac6922e9ad6f0c002c41a3c8d2482cb2aaee172f4b543e4b78d6771e7ee29",
+    "placement-verification/task-contract.json": "1d9e4c88d7f5a8a68673ca0cbaffae280dde8650e4d1c6dff8088f1ee36784f8",
+    "placement-verification/thermal-placement-review.json": "bfdf8dfdf22980923dfc29ec731f987617ec8c21a5af369025a1b71e1874295e",
+    "PowerFlags.kicad_sym": "b6b7b927b1a790c249425e0116068b8c3ea9a67778fe3fa6e0eb775221977649",
+    "prototype-validation.json": "67e34c5fc24b864e09738124084b5909cad36f556e9e158e08e601fc0625506d",
+    "rc-energy-bounds.json": "deb5a3c43cfd4ffd93cdbe5f4dcef7401eb11a881e887be1cca141963656bd09",
+    "rc_energy.py": "280555b3b16fbb07dd794aec6c5ed4ad534be88d8b0df04e01fc75bffdda1364",
+    "README.md": "c48545c9dc6f255cbee0435d1a54ee3bf33d4658f13500784fe8bb0d080f3193",
+    "recalculate_control.py": "edcaaa6c441626c235b83463f04eaedfaf6d15d6856ebb66092da6adbc1ca42f",
+    "reference/SC07/current_model.py": "58b5a54185c75f7e3c67aa849f1b36d669a1cf2e7eac78848818a60d588ce6c0",
+    "reference/SC07/electrical-checks.json": "58a7cf26e64877ef0e28a3f1349214ea80a9afe099750f82b32886751ab14da8",
+    "reference/SC07/historical-operating-scenarios.json": "322a4b065a9a47ea9e4f4d02c238cd5404d86f79f71b4eab5eb66fd1f1f8f851",
+    "reference/SC07/owner-process-line-decision.json": "35f0462ddaf81b8c60d203754702dead166d01aed3183c5b2a0037f8640b48f3",
+    "reference/SC07/previous-SC06-owner-approval.json": "778c3c96f1d17e08f1547deae1649d4e5e4187b21bc3a217f9744b9092e30da8",
+    "reference/SC07/recalculate.py": "5fe415b0bd5fab758a96286b4616047df5907a257dc2d932709b8c3c5f588472",
+    "reference/SC07/reference/electrical-calculations.json": "f25d474a10cbb6e98d275b7a76eb5933e2cec74268920fb6e8bd677bfbf07355",
+    "reference/SC07/SC06-retained-scope-reviews.json": "85c50613a7b91132c7f17559a2df5153e9009f204b13e3ecea204507fd3133d4",
+    "requirements-lab-fabrication.proposed.json": "a9c72f1860228ac46ef1cb340cc3a744adde4759aa0353624d7938b263d7ad93",
+    "requirements.json": "1f10e2590e53a47f696a52c97886514582ace16ab7e28c953b4599a8bbcfa5af",
+    "routing-verification/checker-boundary-independent-review.json": "b38295f10e35242c182efd21d7cb74cffcdc0ffb41c18e314962a2d921363806",
+    "routing-verification/connectivity-netlist.xml": "06745d1fdf077b525adb2c3d36105f1b46ba076201ba889c73c52f358dfde24c",
+    "routing-verification/connectivity.json": "8c6bb389941bd5c0d0c6ae2e5336ccb358e38b59d371091f7709bd5a1436c9fc",
+    "routing-verification/erc.json": "1119fb8d3ba9f93c4cc766ac28c09b43dc7acae218a1bbac7c1334fabf51eeb5",
+    "routing-verification/full-matrix-final.json": "6a67655ccc4175d74f30087285434d222dbdb3b4ee90206be730855c7e5c00a5",
+    "routing-verification/input-adoption-independent-closure.json": "48d1f71fc73f2228385351fb94a67f09ee00081f2eb4b7f9b192341a1edb4894",
+    "routing-verification/integrated-routing-review.json": "5710c69b12d1f3f71ad1d6967a7f2194a1d4b46b7f3a6e2df533ee87034fac6e",
+    "routing-verification/native-drc.json": "8f574da59694693dc3eff4b026092770c3dd2b8b106fa5ec4b583e94a61ad975",
+    "routing-verification/placement-invariance.json": "0fc3d5be80e926404a065725d35a216c5abf786e95249640b188807f1f0b95b5",
+    "routing-verification/return-and-thermal-routing-review.json": "2097a3b0c5e43f1c7d6fe7a0f75efa2cb20c44dad77e2db4952af69d3d29b53a",
+    "routing-verification/routing-authoring.json": "d2e681055f1737353b598891fe8c3d578c869ec79a46d8fd9de9e0ac904ff868",
+    "routing-verification/routing_adapter.py": "21681ba0e9f09a850531428a7683b99a2a2b8ce58d0462d2d0ea7d3cafc858b7",
+    "routing-verification/saved_copper_checker.py": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+    "routing-verification/spatial-geometry.json": "02bece59a005dd3199dae9df2867cfc229308ecf5cde99c3c5fbfad7e02ba00b",
+    "routing-verification/spatial-preview.svg": "d774cab58b0952e71a502894059b282bb41416cb3c5f3e0510625e8484dc62f1",
+    "routing-verification/spatial-request.json": "36599238d5b548780f453defe163354844dc3eda9a480300e6b29d0d23ecc2b9",
+    "routing-verification/spatial.json": "b6a154a7d1ce0a1755a5258281db33509be54dd74742307178b5c2522e09ee90",
+    "routing-verification/thermal-fill-authoring.json": "3666d0f0eccfcb831385e345283e5d381bf32343b05fd91dab00700d5b9c8f31",
+    "routing-verification/tooling-adoption-independent-review.json": "51cf8dcc59ea454f4d394bf2383cce824c916e9aa55b9b5f4e675b7c07385147",
+    "SC08_prototype.kicad_dru": "e64486d71ce1fd6b3372961902b1d35152c8710b5dde06a24721e74fa17fcfb3",
+    "SC08_prototype.kicad_pcb": "bddb0838b0b27a542cdc509b4d621220da3febf53ecc31e799c87fca87a34dad",
+    "SC08_prototype.kicad_pro": "00e1668c854025c56e649f6c390712680a46759cbada1cb424cf57f5e4a07359",
+    "SC08_prototype.kicad_sch": "824f61643e8026518b8bdd07ab2df40c6d71d79bf3391c722699126a648f0395",
+    "source-basis.json": "45651f38fc5d3b599666b5b7dc81e23c8e137e49b06e8bf9fb725ae36b8c6b68",
+    "spatial-constraints-routing-correction.proposed.json": "4b06be0551565a4294a5e240b2cb842ce5dfcdc408a6809720659a4707e36fbe",
+    "spatial-constraints.proposed.json": "496a2a9772fb63e21be76a6ee5dd945c7dbaeba00d559c4fc91a4a5c251df827",
+    "studies/SC08A-superseded-bom-design.json": "ea5b5458005296a590efc666b45f91e68767e4492f66ada255af68d92a7e10ad",
+    "studies/SC08A-superseded-calculated-control.json": "7871083a28016d940f7c79f0f270997d34b281763e0585e0499eaef88253c9fa",
+    "studies/SC08A-superseded-intended-connectivity.json": "8d21fa4229f7456275d09706272e8fb1f069ef5dea40cf4ba6cd7aa7f0fb2eb3",
+    "sym-lib-table": "a099148373c20c112fd2bdc6a01a3c63388a39619009330ea7d28eb8a5fd8476",
+    "project-design-config": "ebf2bcf31efaa132307b2d9ca840c0536d791c039df20c2a2a74289454dffd18",
+    "toolkit:identity": "e261a411929278425cca528b66bb84add3b1e4261d2935da8cf3aeef78f27a66",
+    "ruleset:VERSION": "902311c7bb38fa1658ff403def6158ee7378fe9d6e2e284fa1c38735c31bd30b",
+    "ruleset:rules/catalog.json": "d1edf261c5686376ea86122b07d0c511a250ed6e6ffdb79413e1b0ae294a4e3d",
+    "ruleset:profiles/jlcpcb.json": "831daf5e4d36796b45661c35001af8971c2a3849791fe8d6216f5a5390683d83",
+    "ruleset:profiles/assembly-inhouse.json": "842ef8a87ec249443f3659a5d1d6c21c77ba5743c921492c5e009bee6fabdf48",
+    "ruleset:scripts/pcb_rules.py": "36dab64eb723841b5cbc454f353fab5482bfce795252f09bd857281ddfd94955",
+    "ruleset:scripts/configuration.py": "2698a03b6545262811eee3d6f9ea7325d762ec587afc763928fa495e27e4f1de",
+    "ruleset:scripts/product_contracts.py": "1c95b8d5e9cf88f606d33270414407fe2565cda0e8ca7999ec3d53601ae56d3c",
+    "ruleset:scripts/connectivity.py": "3cbe0e9b8e136c72aac386cfa9cead056572e91f6abf538cb4b0c415ebce7abc",
+    "ruleset:scripts/spatial.py": "87c94556e3f62540cc4d40bfb61672f04655942a8ec21bf24bc144c26bd2da98",
+    "ruleset:scripts/spatial_cad.py": "48642fe3b9474a0578914cc6f964c5117be55ef22d0f0994600bae94952678f4",
+    "ruleset:scripts/toolkit_install.py": "f306aabc8ea5ba5d80ca6d096d360e4a80988fc0368c767a5a8bd7b51fab6d50",
+    "ruleset:scripts/package_toolkit.py": "a41db64afa483389a159c74bd64d643dd9956f9b7de3895998d985a68bc9c6cb",
+    "ruleset:templates/kicad/board.kicad_pro": "6fa5d1285727ba111efebce5f199d5b39573ef62ba331ec0c177b4f201adcc32"
+  },
+  "resolved_minimums_mm": {
+    "clearance": 0.3,
+    "track_width": 0.3,
+    "hole_size": 0.3,
+    "annular_width": 0.2,
+    "edge_clearance": 4.0
+  },
+  "spatial": {
+    "passed": true,
+    "errors": [],
+    "constraints_digest": "945722e15bf601320dd233a647cd09f2788f5cacd6d879745cbe381d7e38a96c",
+    "intent_digest": "e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8",
+    "geometry": {
+      "footprints": [
+        {
+          "reference": "U1",
+          "envelope_mm": [
+            106.275,
+            37.14,
+            7.45,
+            5.585
+          ]
+        },
+        {
+          "reference": "D3",
+          "envelope_mm": [
+            57.125,
+            23.55175,
+            18.99,
+            8.2965
+          ]
+        },
+        {
+          "reference": "R27",
+          "envelope_mm": [
+            102.422619,
+            31.295,
+            5.552381,
+            3.41
+          ]
+        },
+        {
+          "reference": "BR1",
+          "envelope_mm": [
+            31.155,
+            24.325,
+            7.7,
+            5.35
+          ]
+        },
+        {
+          "reference": "U4",
+          "envelope_mm": [
+            97.05,
+            42.7,
+            3.4,
+            6.0
+          ]
+        },
+        {
+          "reference": "R26",
+          "envelope_mm": [
+            53.295,
+            82.65175,
+            3.41,
+            4.32325
+          ]
+        },
+        {
+          "reference": "R28",
+          "envelope_mm": [
+            116.145,
+            6.545,
+            7.71,
+            3.91
+          ]
+        },
+        {
+          "reference": "R23",
+          "envelope_mm": [
+            45.295,
+            64.65175,
+            3.41,
+            4.32325
+          ]
+        },
+        {
+          "reference": "U5",
+          "envelope_mm": [
+            96.1,
+            51.3,
+            3.4,
+            6.0
+          ]
+        },
+        {
+          "reference": "U2",
+          "envelope_mm": [
+            30.875,
+            75.1,
+            6.2,
+            5.24825
+          ]
+        },
+        {
+          "reference": "D4",
+          "envelope_mm": [
+            85.475,
+            38.15175,
+            7.095,
+            8.1965
+          ]
+        },
+        {
+          "reference": "D1",
+          "envelope_mm": [
+            103.585,
+            47.83,
+            11.15,
+            7.195
+          ]
+        },
+        {
+          "reference": "R20",
+          "envelope_mm": [
+            52.295,
+            73.65175,
+            3.41,
+            4.32325
+          ]
+        },
+        {
+          "reference": "R16",
+          "envelope_mm": [
+            91.695,
+            64.65175,
+            4.61,
+            4.50325
+          ]
+        },
+        {
+          "reference": "Q2",
+          "envelope_mm": [
+            42.875,
+            73.65175,
+            6.08,
+            5.07325
+          ]
+        },
+        {
+          "reference": "R21",
+          "envelope_mm": [
+            53.295,
+            64.65175,
+            3.41,
+            4.32325
+          ]
+        },
+        {
+          "reference": "R17",
+          "envelope_mm": [
+            91.695,
+            72.65175,
+            4.61,
+            4.50325
+          ]
+        },
+        {
+          "reference": "J1",
+          "envelope_mm": [
+            4.517857,
+            18.475,
+            13.507143,
+            4.05
+          ]
+        },
+        {
+          "reference": "R11",
+          "envelope_mm": [
+            96.145,
+            15.045,
+            7.71,
+            3.91
+          ]
+        },
+        {
+          "reference": "C10",
+          "envelope_mm": [
+            115.175,
+            34.35175,
+            4.65,
+            6.47325
+          ]
+        },
+        {
+          "reference": "C1",
+          "envelope_mm": [
+            7.325,
+            33.15175,
+            33.35,
+            17.47325
+          ]
+        },
+        {
+          "reference": "R8",
+          "envelope_mm": [
+            104.545,
+            67.145,
+            3.91,
+            7.71
+          ]
+        },
+        {
+          "reference": "J2",
+          "envelope_mm": [
+            110.017857,
+            90.475,
+            13.507143,
+            4.05
+          ]
+        },
+        {
+          "reference": "RF2",
+          "envelope_mm": [
+            58.475,
+            5.65175,
+            25.05,
+            9.87325
+          ]
+        },
+        {
+          "reference": "C4",
+          "envelope_mm": [
+            115.175,
+            44.60175,
+            6.426191,
+            4.97325
+          ]
+        },
+        {
+          "reference": "C9",
+          "envelope_mm": [
+            33.275,
+            80.995,
+            3.45,
+            4.35325
+          ]
+        },
+        {
+          "reference": "RF1",
+          "envelope_mm": [
+            24.475,
+            5.65175,
+            25.05,
+            9.87325
+          ]
+        },
+        {
+          "reference": "C5",
+          "envelope_mm": [
+            111.075,
+            66.075,
+            20.376191,
+            17.05
+          ]
+        },
+        {
+          "reference": "R22",
+          "envelope_mm": [
+            36.695,
+            64.65175,
+            4.61,
+            4.50325
+          ]
+        },
+        {
+          "reference": "R2",
+          "envelope_mm": [
+            113.695,
+            41.65175,
+            4.61,
+            4.50325
+          ]
+        },
+        {
+          "reference": "R12",
+          "envelope_mm": [
+            96.145,
+            23.545,
+            7.71,
+            3.91
+          ]
+        },
+        {
+          "reference": "R25",
+          "envelope_mm": [
+            116.145,
+            15.045,
+            7.71,
+            3.91
+          ]
+        },
+        {
+          "reference": "L2",
+          "envelope_mm": [
+            121.475,
+            30.65175,
+            12.05,
+            13.87325
+          ]
+        },
+        {
+          "reference": "R7",
+          "envelope_mm": [
+            70.275,
+            84.15175,
+            28.45,
+            10.77325
+          ]
+        },
+        {
+          "reference": "L3",
+          "envelope_mm": [
+            121.475,
+            44.65175,
+            12.05,
+            13.87325
+          ]
+        },
+        {
+          "reference": "R18",
+          "envelope_mm": [
+            26.295,
+            72.65175,
+            3.41,
+            4.32325
+          ]
+        },
+        {
+          "reference": "R14",
+          "envelope_mm": [
+            18.695,
+            64.65175,
+            4.61,
+            4.50325
+          ]
+        },
+        {
+          "reference": "C3",
+          "envelope_mm": [
+            108.275,
+            32.55175,
+            3.45,
+            4.35325
+          ]
+        },
+        {
+          "reference": "R13",
+          "envelope_mm": [
+            9.695,
+            64.65175,
+            4.61,
+            4.50325
+          ]
+        },
+        {
+          "reference": "R24",
+          "envelope_mm": [
+            116.145,
+            23.545,
+            7.71,
+            3.91
+          ]
+        },
+        {
+          "reference": "R15",
+          "envelope_mm": [
+            27.695,
+            64.65175,
+            4.61,
+            4.50325
+          ]
+        },
+        {
+          "reference": "R10",
+          "envelope_mm": [
+            96.145,
+            6.545,
+            7.71,
+            3.91
+          ]
+        },
+        {
+          "reference": "R9",
+          "envelope_mm": [
+            104.545,
+            78.145,
+            3.91,
+            7.71
+          ]
+        },
+        {
+          "reference": "U3",
+          "envelope_mm": [
+            75.125,
+            68.65175,
+            7.0,
+            5.87325
+          ]
+        },
+        {
+          "reference": "R6",
+          "envelope_mm": [
+            100.39881,
+            33.995,
+            5.07619,
+            3.41
+          ]
+        },
+        {
+          "reference": "R19",
+          "envelope_mm": [
+            45.295,
+            81.025,
+            3.41,
+            4.32325
+          ]
+        },
+        {
+          "reference": "C2",
+          "envelope_mm": [
+            43.575,
+            33.15175,
+            33.35,
+            17.47325
+          ]
+        }
+      ],
+      "area_count": 8,
+      "pcbnew_version": "10.0.6"
+    },
+    "limitations": [
+      "Consumer files verify declared inputs, not execution of an external router.",
+      "Block topology/SI/PI/EMC and physical insulation require separate evidence."
+    ]
+  },
+  "kicad_version": "10.0.6",
+  "connectivity": {
+    "schema_version": 1,
+    "passed": true,
+    "errors": [],
+    "commands": [
+      {
+        "command": [
+          "kicad-cli.exe",
+          "sch",
+          "export",
+          "netlist",
+          "--format",
+          "kicadxml",
+          "--output",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\.work\\connectivity-netlist.xml",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_sch"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+      }
+    ],
+    "intent_digest": "8be47de3f17c30ea9a07f16a6a6a85a7a51511d35990cbc8c5f02e8aa143e574",
+    "intent_revision": "SC08-B",
+    "physical_pins": 112,
+    "intended_nets": 30,
+    "no_connects": 1,
+    "limitations": [
+      "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+      "Approval fields record evidence; hashes do not authenticate a human."
+    ],
+    "intent_sha256": "4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809",
+    "export_sha256": "858ed45398916e09eb53bc699f27c26730b97da302b31c4756ae83b23370508c",
+    "export_tool": "Eeschema 10.0.6"
+  },
+  "erc": {
+    "report_sha256": "eccf7bd37d8067d9090fa635908337d7dd99d0656b770a1ee783d3827fb67e46",
+    "findings": []
+  },
+  "drc": {
+    "report_sha256": "cc0c0d108193cb728852cc300fe886af0e8c25e7b1449b5f37df3d273d8d5050",
+    "findings": []
+  },
+  "passed": true
+}

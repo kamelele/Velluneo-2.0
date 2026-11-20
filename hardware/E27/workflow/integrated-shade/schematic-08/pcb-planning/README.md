@@ -1,7 +1,5 @@
 # SC08-B laboratory PCB workflow
 
-The owner accepted the actual placement at3e261d3 with the reply “akceptuje”; that decision is recorded in placement/owner-placement-decision.json. Current work is [partial routing and a one-pair input correction proposal](routing/progress-status.json). Routing is incomplete and its stage has not been accepted.
+Current integrated project: ../../../../variants/integrated-shade/SC08_prototype (follow repository hardware.json). The actual owner accepted placement3e261d3 and the e229one-pair input correction701f616. The active140x100mm2L board is fully routed; native refill/save DRC0/0/0 and saved-copper full-matrix PASS. Current routing review is in routing/final-routing/. Historical partial routing and proposal packets remain unchanged in their original revision scope.
 
-The accepted-constraints checkpoint has22tracks/11vias/4copperzones and65unconnecteditems. A separate proposal has27tracks/13vias/4zones and64unconnecteditems; only U1.2/U1.4 local escape changes1.0 to1.5mm, pending actual owner decision. The active project rules and accepted placement baseline remain selected. Full work checking FAILS as documented; no order or energized-test approval is granted.
-
-Earlier proposal and placement packets retain their original exact-revision scope; they are not current routing acceptance. Current status, full evidence and the pending spatial intent are under routing/.
+47parts/112pins/30nets/1NC and the approved schematic are retained. Ten thermal vias and separated power/quiet returns are implemented, without claimed measured thermal performance. Routing acceptance is pending independently from the actual input decision. No release/order/energized-test approval exists.
