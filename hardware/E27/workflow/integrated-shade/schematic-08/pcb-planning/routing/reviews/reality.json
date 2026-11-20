@@ -1,0 +1,49 @@
+{
+  "actor": "/root/route_drain_feasibility",
+  "role": "Reality Checker",
+  "recommendation": "ready_for_human_review",
+  "recommendation_scope": "ONLY owner decision on one-pair spatial/input correction; NOT routing-stage acceptance, manufacture, order or energized test",
+  "input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+  "proposal_board_sha256": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+  "actual_customer_CAD_write": false,
+  "independence": "Prior independent targeted native-geometry feasibility reviewer; not routing/CAD implementer. Fresh independent read-only replay of integrated proposal; no author conclusions copied as tests. Qualified shared geometry checker reused with its exact hash.",
+  "coverage": [
+    "All232technical files and3externalviews verified by SHA before/after replay against frozenmanifest.",
+    "Actualnative47footprints/allpad UUIDs/nets/geometry/positions/layers/libraryIDs/values invariant to acceptedc503 placement; native schematic identical824f6164...",
+    "Actual5DRAIN tracksegments0.6mm with3U1Fescape legs,1Bbridge,1D4Fleg andtwo0.8/0.3vias at104.5,44 and94,40 independently inspected from savedboard.",
+    "Active1mmfullmatrix independently replayed FAIL3, with no stoppedtool. Explicitmemory-onlycounterfactual changes exactlyonepair U1.2/U1.4 margin1\u21921.5; PASS10807differentnetfacepairs. Other21exceptions/global4mm/local1.9/native0.6/no via-zoneconcession retained.",
+    "All4savedfilledzones containedinactualsavedoutlines; fullmatrixreplay validates actualSOURCEzoneclearance withoutzoneexception. NativeCLI refill/containment and earlier independent checkpoint-zone-change closure retained with exactinputhashes; no new physicaltemperature inference.",
+    "Visualinspection actualfront/back andlocalcorrectionPNG consistentwithproposal scopeand64remainingconnections. FullToolkitcheck FAIL acknowledged; native0geometry/0parity doesnotqualifyfullmatrix orcompleteness."
+  ],
+  "retained_evidence": {
+    "finding": "RC-ROUTE-DRAIN-01",
+    "original_review_sha256": "9c64868ad9da33aff6636422ddb811d26b15720cd30ccd647cf6558be05bf4b8",
+    "retained_scope": "Exactnativec503 U1pad/courtyard geometry and original1mm/no-via escape feasibility proof. Fresh invariance comparison establishes samegeometry in9db proposal; no needrepeat12694sample proof.",
+    "physical_limits": "U3theta85target, localtemperatures,current/shutdown/fault/surge/800lm remainunmeasured; 0\u201340Cbarelaboratoryscope only."
+  },
+  "findings": [
+    {
+      "id": "RC-ROUTE-DRAIN-01",
+      "severity": "major",
+      "state": "open",
+      "affected_gate": "Current active routing acceptance; concrete correction decision itself can now be reviewed",
+      "object": "U1.2/U1.4 SENSE_FB/DRAIN_BLOCKED localescape",
+      "evidence": "Active1mm replayfails3; counterfactual1.5passes10807pairs onactualsaved9dbboard. Prior nativefullwidthproofretained.",
+      "consequence": "Currentactiveconstraints do not permit theactualproposedDRAINescape; cannot integrate/claimroutingpassunderoriginalapproval.",
+      "owner": "/root, with Kamil asactualinputdecisionauthority",
+      "closure": "Actualownerdecision boundto proposedspatialintent e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8 andfrozenpacket; controlledadoption withfreshpreview/consumers/configuration andindependentreplay on resultingactualsavedboard. Retainopenuntilthen."
+    }
+  ],
+  "routing_completion_status": "NOTREADY:64actualunconnecteditems, stalePCBhash-boundevidence andmissingroutingEV/checks/finalfourroutingreviews; fullToolkitworkFAIL. Thislimitedrecommendation doesnotwaiveanyofthose.",
+  "review_only_evidence": [
+    {
+      "path": "reality-scratch/replay.py",
+      "sha256": "64e13bd07d62a1549ee3e72f5207be6f2e4a5e88a5c80227129948bc5f045a7b"
+    },
+    {
+      "path": "reality-scratch/replay-result.json",
+      "sha256": "c6a5570395039d7a953f1aed3aa59b0cafce74c6e5bf38c6c31bb2df68eec141"
+    }
+  ],
+  "new_blocker_to_presenting_exact_one_pair_input_decision": false
+}

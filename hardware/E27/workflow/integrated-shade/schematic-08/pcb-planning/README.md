@@ -1,5 +1,7 @@
 # SC08-B laboratory PCB workflow
 
-The current stage is [actual PCB placement](placement/README.md). The owner accepted the native schematic and the separate LAB/spatial plan before this stage. Four final role reviews cover the corrected actual placement; human placement acceptance is pending before routing.
+The owner accepted the actual placement at3e261d3 with the reply “akceptuje”; that decision is recorded in placement/owner-placement-decision.json. Current work is [partial routing and a one-pair input correction proposal](routing/progress-status.json). Routing is incomplete and its stage has not been accepted.
 
-Earlier proposal/decision packets in this folder describe the pre-PCB state at their recorded revision. They are history, not an assertion that the current PCB is absent. Current status is placement/stage-status.json and placement/reviews.json. No order or energized-test approval is granted.
+The accepted-constraints checkpoint has22tracks/11vias/4copperzones and65unconnecteditems. A separate proposal has27tracks/13vias/4zones and64unconnecteditems; only U1.2/U1.4 local escape changes1.0 to1.5mm, pending actual owner decision. The active project rules and accepted placement baseline remain selected. Full work checking FAILS as documented; no order or energized-test approval is granted.
+
+Earlier proposal and placement packets retain their original exact-revision scope; they are not current routing acceptance. Current status, full evidence and the pending spatial intent are under routing/.

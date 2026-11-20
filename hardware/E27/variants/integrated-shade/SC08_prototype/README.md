@@ -1,5 +1,7 @@
 # SC08-B experimental power-board proposal
 
+Current status (2026-11-20): the owner accepted placement at commit3e261d3 and authorized routing with the actual reply “akceptuje”. This folder retains that accepted placement baseline. Actual partial native routing is saved in ../../../workflow/integrated-shade/schematic-08/pcb-planning/routing: a22-track/11-via checkpoint meets the current local rules; a27-track/13-via proposal changes ONLY U1.2/U1.4 escape1.0 to1.5mm and requires a new owner input decision. Neither is a complete or orderable board. The electrical calculations below retain their original conditional scope.
+
 This is the owner-authorized SC08-B native working schematic, not an orderable board. Open SC08_prototype.kicad_pro; portable local libraries are included. SC07-C remains intact at commit a6c7ed424a6aa882ef7e5b46899955d3d928f09d. The actual owner selected a laboratory prototype, ambient 0..40C, with component temperatures measured on the prototype. That scope is not new-map, schematic, placement or release approval.
 
 ## Selected corrections
@@ -28,10 +30,10 @@ All17 original product requirements remain controlling for the finishedlamp; ori
 
 ## Next controlled step
 
-Actual owner approval of this exact new map and the experimental145V/test-envelope proposal is recorded in owner-capture-approval.json. Native capture is completed and checked; The owner subsequently accepted commit910870c as the experimental laboratory schematic; independent spatial/LAB-fabrication-scope and insulation decisions are still required before placement. The toolkit requires independent spatial intent before PCB placement and routing/release reviews before manufacturing files. No Gerbers, purchase or energized tests are authorized by this packet.
+Actual owner approval of this exact new map and the experimental145V/test-envelope proposal is recorded in owner-capture-approval.json. Native capture is completed and checked; The owner subsequently accepted commit910870c as the experimental laboratory schematic; The owner subsequently accepted the separate LAB/spatial input and actual placement at3e261d3. Routing-stage completion and acceptance are still pending. The toolkit requires independent spatial intent before PCB placement and routing/release reviews before manufacturing files. No Gerbers, purchase or energized tests are authorized by this packet.
 
 Primary sources: Nexperia PMV65XP product data12Feb2013; Samsung CL32B226KAJNNN official product page; ST STTH110 DS3067; Vishay88301Rev09Aug2022; TE6-2176792-5; PowerIntegrations LYT0RevB/AN60. Exact URLs are retained in the BOM and research records. Research actors and evidence limits are disclosed in workflow/schematic-08 review records.
 
-Native capture checks are retained in workflow/integrated-shade/schematic-08/capture-checks. Requirements retain all17 original obligations; imported historical evidence is isolated under reference/SC07 and is not SC08 qualification. No PCB or physical test has been created/performed. Generic fabrication rules are not mains insulation rules.
+Native capture checks are retained in workflow/integrated-shade/schematic-08/capture-checks. Requirements retain all17 original obligations; imported historical evidence is isolated under reference/SC07 and is not SC08 qualification. Native placement and partial routing now exist as stated above. No physical electrical, thermal, surge or fault test has been performed. Generic fabrication rules are not mains insulation rules.
 
 Current PCB preparation is defined by pcb-basis/DESIGN_AUTHORITY.md and the proposed LAB fabrication crosswalk. This is a bare unpowered test-board scope proposal; original17product obligations remain in requirements.json. The actual schematic-stage prototype decision is recorded under workflow/schematic-08/pcb-planning/owner-schematic-prototype-decision.json. No PCB placement, routing or purchase acceptance follows from that decision.

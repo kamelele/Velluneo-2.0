@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "scope": "Synthetic discrimination of non-touching clearance; not complete DRC-clean fixtures or production acceptance",
+  "crossing_limitation": "Native convenience connectivity can propagate different-net crossing identity; checker independently uses raw PCB_IO_MGR.Load and raw UUID/native-net parity",
+  "records": [
+    {
+      "source_sha256": "5dcc6dea98eb486aa47e5c1ff2a8f715a06160f21b4736d82511997fd8bcb64b",
+      "report_sha256": "ea069481b8390728cbcbed3b2424e2b10e62ff0ccb1d8f2b7ccb6ca5efdf88bf",
+      "command": [
+        "C:/Users/kamil/Documents/Codex/2026-11-17/zo/work/kicad-10.0.6/bin/kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc08-route-validator\\fixtures\\native-near-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc08-route-validator\\fixtures\\native-near-tracks-negative.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stderr": "12:46:10: Error: Directory 'C:\\Users\\kamil\\AppData' couldn't be created (error 183: Nie mo?na utworzy? pliku, kt\ufffdry ju? istnieje.)\n",
+      "violations": [
+        "clearance",
+        "track_dangling",
+        "track_dangling",
+        "silk_edge_clearance"
+      ],
+      "unconnected": 2
+    },
+    {
+      "source_sha256": "ef5e5df16f756d7ef68b8f07afb29168456904113929f569854ee0ebf166173b",
+      "report_sha256": "f957f549ecf5acd63da1ddf31e3fd06203f3f9727dbb387266831708394ebe57",
+      "command": [
+        "C:/Users/kamil/Documents/Codex/2026-11-17/zo/work/kicad-10.0.6/bin/kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc08-route-validator\\fixtures\\native-separated-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc08-route-validator\\fixtures\\generic-separated-tracks-positive.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stderr": "12:46:10: Error: Directory 'C:\\Users\\kamil\\AppData' couldn't be created (error 183: Nie mo?na utworzy? pliku, kt\ufffdry ju? istnieje.)\n",
+      "violations": [
+        "track_dangling",
+        "track_dangling",
+        "silk_edge_clearance"
+      ],
+      "unconnected": 2
+    },
+    {
+      "source_sha256": "8e15c4b714fe98b0b668be02fc8fc7806ad77b9618f8c880d06d180786845714",
+      "report_sha256": "a410d5c9fb20b22681a994f0715ac4398fa7db172a79e7efbe94157159e97cb3",
+      "command": [
+        "C:/Users/kamil/Documents/Codex/2026-11-17/zo/work/kicad-10.0.6/bin/kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc08-route-validator\\fixtures\\native-crossing-drc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc08-route-validator\\fixtures\\track-crossing-negative.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stderr": "12:46:11: Error: Directory 'C:\\Users\\kamil\\AppData' couldn't be created (error 183: Nie mo?na utworzy? pliku, kt\ufffdry ju? istnieje.)\n",
+      "violations": [
+        "track_dangling",
+        "track_dangling",
+        "silk_edge_clearance"
+      ],
+      "unconnected": 1
+    }
+  ]
+}

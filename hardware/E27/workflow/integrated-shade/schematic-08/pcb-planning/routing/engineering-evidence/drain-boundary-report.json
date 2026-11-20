@@ -1,0 +1,28 @@
+{
+  "source_board_sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5",
+  "tool": "KiCad 10.0.6",
+  "scope": "Independent native U1 foreign-pad coverage of maximum one-mm rounded courtyard escape boundary; no routed copper",
+  "sampling_pitch_max_mm": 0.0025,
+  "polygon_error_mm": 0.0002,
+  "sample_count": 12694,
+  "maximum_minimum_pad_distance_sample": {
+    "point_mm": [
+      107.8,
+      43.7
+    ],
+    "nearest_foreign_pin": "2",
+    "minimum_gap_mm": 4.035
+  },
+  "conservative_continuous_upper_bound_mm": 4.036652,
+  "generic_required_gap_mm": 4.0,
+  "whole_escape_boundary_covered_by_foreign_pad_4mm_neighborhood": false,
+  "foreign_pins": [
+    "1",
+    "2",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "method": "Native inward foreign pad polygon distances upper-bound true pad distance. Segment sampling is bounded by 1-Lipschitz distance with half pitch; two polygon-error reserves plus coordinate rounding are added. A covered closed maximum-escape boundary prevents even a zero-width continuous drain conductor from reaching exterior without violating a generic pair gap. Actual nonzero conductor width cannot improve this."
+}

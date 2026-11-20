@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "role": "Completeness Reviewer",
+  "actual_actor": "/root/routing_correction_completeness",
+  "implementer": "/root",
+  "independence": "Separate assigned reviewer context; independently read requirements, actual decisions, active configuration, future/current diff and raw reports. No source edits and no reliance on vote counts.",
+  "input_manifest": {
+    "path": "work/Velluneo-2.0/hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/review-inputs.json",
+    "sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+    "files": 232,
+    "external_views": 3,
+    "all_hashes_independently_verified": true,
+    "hash_mismatches": []
+  },
+  "scope": "Readiness ONLY of concrete U1.2/U1.4 F.Cu pad/track escape input correction for owner decision. Neither routing-stage acceptance nor manufacturing/order readiness.",
+  "recommendation": "ready_for_human_review",
+  "routing_stage_recommendation": "blocked",
+  "correction_approved": false,
+  "order_ready": false,
+  "decision_basis": {
+    "accepted_placement_commit": "3e261d31a7c1080d5cfd9ca38fcc90d1779a76bf",
+    "actual_owner_answer": "akceptuje",
+    "active_board": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5",
+    "checkpoint_board": "5f82894e6de8fd263dfcb28bf86b09a0b9ea2574095bc47138b61a2c806aaf3a",
+    "proposal_board": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+    "future_intent_digest": "e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8",
+    "future_input_approval": null,
+    "active_selector": "spatial-constraints.proposed.json",
+    "change": "Only U1.2 SENSE_FB / U1.4 DRAIN_BLOCKED escape 1.0 -> 1.5mm, F.Cu pad/track; retains 1.9mm local floor,4mm generic elsewhere,0.6mm DRAIN hard minimum,21 other exceptions,no via/zone exception.",
+    "independent_diff": "Compared actual old/new routing JSON and spatial JSON: routing revision/scope/one escape value plus changed basis/authority hashes and cleared future approval. No other numeric routing input changed.",
+    "verification": "Raw active matrix reports3 failures with gaps3.791/3.847403/3.956588mm versus4mm; explicit counterfactual reports10807pairs zero findings. Counterfactual references original contract hashes plus exact override; it is not a checker run selecting the future file."
+  },
+  "retained_evidence": [
+    "47part/pad geometry invariant against accepted placement; unchanged824f6164 schematic; saved proposal native DRC geometry0/parity0 with64unconnected",
+    "Fresh independent intended graph:112physicalpins/30nets/1NC; ERC0; fresh spatial47footprints/8areas140x100",
+    "Manual process FR4/2L/1oz/1.6mm/leadfreeHASL; no supplier order approval",
+    "Thermal budget and copper areas are calculations/design geometry only; U3theta85K/W and component temperatures remain unmeasured"
+  ],
+  "coverage_table": [
+    {
+      "requirement": "LAB_SCOPE",
+      "owner": "Kamil",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SCOPE",
+          "path": "pcb-basis/lab-board-boundaries.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [
+        "reviewed"
+      ],
+      "current_stage_status": "verified",
+      "evidence_ids": [
+        "EV-LAB_SCOPE"
+      ],
+      "bounded_decision_effect": "Retained evidence only in its declared scope; no qualification implied."
+    },
+    {
+      "requirement": "LAB_NETLIST",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_NETLIST",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [],
+      "current_stage_status": "blocked",
+      "evidence_ids": [
+        "EV-LAB_NETLIST"
+      ],
+      "bounded_decision_effect": "Fresh graph and retained geometry supplied; this does not close missing current review evidence."
+    },
+    {
+      "requirement": "LAB_DOMAINS",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DOMAINS",
+          "path": "pcb-basis/domain-matrix.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [
+        "reviewed"
+      ],
+      "current_stage_status": "verified",
+      "evidence_ids": [
+        "EV-LAB_DOMAINS"
+      ],
+      "bounded_decision_effect": "Retained evidence only in its declared scope; no qualification implied."
+    },
+    {
+      "requirement": "LAB_THERMAL",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_THERMAL",
+          "path": "pcb-basis/thermal-budget-results.json"
+        }
+      ],
+      "required_kind": "calculation",
+      "observed_levels": [
+        "calculated"
+      ],
+      "current_stage_status": "verified",
+      "evidence_ids": [
+        "EV-LAB_THERMAL"
+      ],
+      "bounded_decision_effect": "Retained evidence only in its declared scope; no qualification implied."
+    },
+    {
+      "requirement": "LAB_PARTS",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARTS",
+          "path": "capture-geometry-evidence.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [
+        "reviewed"
+      ],
+      "current_stage_status": "verified",
+      "evidence_ids": [
+        "EV-LAB_PARTS"
+      ],
+      "bounded_decision_effect": "Retained evidence only in its declared scope; no qualification implied."
+    },
+    {
+      "requirement": "LAB_INTERFACE",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_INTERFACE",
+          "path": "driver-led-interface.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [
+        "reviewed"
+      ],
+      "current_stage_status": "verified",
+      "evidence_ids": [
+        "EV-LAB_INTERFACE"
+      ],
+      "bounded_decision_effect": "Retained evidence only in its declared scope; no qualification implied."
+    },
+    {
+      "requirement": "LAB_SPACING",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPACING",
+          "path": "pcb-basis/routing-and-isolation-proposal.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [],
+      "current_stage_status": "blocked",
+      "evidence_ids": [
+        "EV-LAB_SPACING"
+      ],
+      "bounded_decision_effect": "Exact proposed scope and saved geometry available for owner input decision; active1mm still governs until adoption."
+    },
+    {
+      "requirement": "LAB_SPATIAL",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPATIAL",
+          "path": "spatial-constraints.proposed.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [],
+      "current_stage_status": "blocked",
+      "evidence_ids": [
+        "EV-LAB_SPATIAL"
+      ],
+      "bounded_decision_effect": "Exact proposed scope and saved geometry available for owner input decision; active1mm still governs until adoption."
+    },
+    {
+      "requirement": "LAB_DFM",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DFM",
+          "path": "SC08_prototype.kicad_pro"
+        }
+      ],
+      "required_kind": "DRC",
+      "observed_levels": [],
+      "current_stage_status": "blocked",
+      "evidence_ids": [],
+      "bounded_decision_effect": "64 unconnected items prevent routing completion."
+    },
+    {
+      "requirement": "LAB_PARITY",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARITY",
+          "path": "SC08_prototype.kicad_sch"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [],
+      "current_stage_status": "blocked",
+      "evidence_ids": [],
+      "bounded_decision_effect": "Fresh graph and retained geometry supplied; this does not close missing current review evidence."
+    },
+    {
+      "requirement": "LAB_ARTIFACTS",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_ARTIFACTS",
+          "path": "hardware.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [],
+      "current_stage_status": "not_due",
+      "evidence_ids": [],
+      "bounded_decision_effect": "Not due for this local input decision; required before release."
+    },
+    {
+      "requirement": "LAB_TEST_BOUNDARY",
+      "owner": "Codex-root",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_TEST_BOUNDARY",
+          "path": "prototype-validation.json"
+        }
+      ],
+      "required_kind": "review",
+      "observed_levels": [],
+      "current_stage_status": "not_due",
+      "evidence_ids": [],
+      "bounded_decision_effect": "Not due for this local input decision; required before release."
+    }
+  ],
+  "original_product_coverage": [
+    {
+      "requirement": "REQ-SCOPE",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "specification",
+      "acceptance": "Candidate documents all owner constraints and preserves historical isolated designs.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [
+        "EV-RETAINED-SCOPE"
+      ],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-POWER",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "specification",
+      "acceptance": "Calculate 60/72/90/108V operating scenarios at 8W; exact current, LED count and voltage envelope remain unapproved.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "electrical-checks.json",
+          "path": "reference/SC07/electrical-checks.json"
+        }
+      ],
+      "evidence_ids": [
+        "EV-SCENARIO-CALC"
+      ],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-LIGHT",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "release",
+      "acceptance": "Before release agree an optical acceptance band around 800lm and demonstrate it with selected LED bins/CCT, stabilized temperatures, diffuser and calibrated measurements.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-MAINS",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Confirm target market/rated supply before schematic and establish complete startup/continuous/fault voltage range.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-FAULT",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Before schematic acceptance document numeric limits and current corner calculations; release requires physical fault verification.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "electrical-checks.json",
+          "path": "reference/SC07/electrical-checks.json"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-SAFETY",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Before schematic accept insulation architecture and applicable standards/test matrix; before placement accept assembly interfaces/accessibility; release requires complete-product safety evidence.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-PROCESS",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "specification",
+      "acceptance": "Owner confirms proposed service/stackup/finish/assembly scope or a documented alternative. No supplier capability or quote is inferred from example geometry.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [
+        "EV-OWNER-CHOICES"
+      ],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-PARTS",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Full datasheet/package/pinout, exact orderable suffix and credible procurement route exist before capture; do not substitute product briefs for missing limits.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-CONNECTIVITY",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Every physical pin and NC reason comes from requirements and exact datasheets; record real human acceptance; compare actual exported netlist after capture.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "intended-connectivity.json",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-SIZE",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "placement",
+      "acceptance": "Before placement approve actual outline, height, connector location, insulation/thermal assumptions and assembly access; 40x25mm is only an exploratory goal.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-EMC",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "release",
+      "acceptance": "Determine actual applicable EN editions and limits; retain conducted/radiated emissions, immunity, harmonics/DF/PF and PstLM/SVM measurement results before release.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-COST",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "release",
+      "acceptance": "Compare complete priced BOM/process at a named quantity/date before purchasing; no unverified price or fit claims.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-ENV",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Before schematic acceptance record rated/minimum ambient, intended fixture/orientations, thermal path, capacitor case/lifetime target, LED junction limit and corresponding evidence plan. No inherited numeric limit silently becomes approved.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-SAFETY-TEST",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "release",
+      "acceptance": "Before release retain actual tests against the approved standards/classification: insulation, accessibility during removal/replacement, abnormal operation, residual energy and relevant thermal/fire requirements. CAD review alone cannot satisfy this requirement.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-FAULT-TEST",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "release",
+      "acceptance": "Before release record measured normal/corner and fault matrices for startup, open LED/removal, short LED/output, component faults, contact bounce/reconnection, brownout, thermal response, surge/inrush and discharge against numeric limits approved before schematic acceptance.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-OPTICAL-INPUT",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Before schematic acceptance agree first CCT/CRI, target flux band around 800lm, intended diffuser loss range, operating-temperature/bin assumptions and cold/hot electrical LED envelope. Final physical verification remains REQ-LIGHT.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    },
+    {
+      "requirement": "REQ-INTERFACE",
+      "owner": "Codex-root",
+      "revision": "SC07-C",
+      "gate": "schematic",
+      "acceptance": "Before schematic acceptance create a structured two-endpoint interface contract with selected voltage/current envelopes, physical connector/pin identities, startup/fault behavior and owner; no pin identity or numeric bound may be inferred from an unapproved CAD draft.",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "README.md",
+          "path": "README.md"
+        }
+      ],
+      "evidence_ids": [],
+      "status": "Retained original product obligation; local LAB input decision does not establish finished-product compliance."
+    }
+  ],
+  "owned_unknowns": [
+    {
+      "id": "OPEN-PART",
+      "record_id": "REQ-PARTS",
+      "owner": "Codex-root",
+      "blocks_stage": "schematic",
+      "question": "SC08-B exact47-positionBOM captured. InputL1removed; actualLYTcurrentbounds,outputmagnetics/reversepath,RCsurgeandhotcomponentqualification remainunproven."
+    },
+    {
+      "id": "OPEN-LED",
+      "record_id": "REQ-POWER",
+      "owner": "Codex-root",
+      "blocks_stage": "schematic",
+      "question": "Proposed 30S Cree JB2835BG, D8 flux/AC voltage bins, 2700 K CRI80, 50-60.5 mA. Confirm reel bins and cold/hot/current envelope; about 800 lm remains unmeasured."
+    },
+    {
+      "id": "OPEN-STANDARDS",
+      "record_id": "REQ-SAFETY",
+      "owner": "Codex-root",
+      "blocks_stage": "schematic",
+      "question": "Establish classification, applicable EN editions and insulation working/fault voltage/test basis; full clauses not yet verified."
+    },
+    {
+      "id": "OPEN-FAULT",
+      "record_id": "REQ-FAULT",
+      "owner": "Codex-root",
+      "blocks_stage": "schematic",
+      "question": "Dualactuator openfaultdesignresponse and conditionalcalculations supplied. Validate survivingpathhotdrive/delay, actualcurrent/chargewindow, input/surge and thermal envelopes before schematicacceptance."
+    },
+    {
+      "id": "OPEN-MECHANICS",
+      "record_id": "REQ-SIZE",
+      "owner": "Kamil",
+      "blocks_stage": "placement",
+      "question": "Approve exploratory driver outline/height/interface and later actual enclosure, thermal and accessibility contracts before formal placement."
+    },
+    {
+      "id": "OPEN-LIGHT",
+      "record_id": "REQ-LIGHT",
+      "owner": "Kamil",
+      "blocks_stage": "release",
+      "question": "Approve flux band/CCT/ambient and actual test setup before optical qualification."
+    },
+    {
+      "id": "OPEN-ENV",
+      "record_id": "REQ-ENV",
+      "owner": "Kamil",
+      "blocks_stage": "schematic",
+      "question": "Ownerapprovedlaboratoryprototype0..40Cambient. Actualcomponenttemperatures,fixture/thermalboundariesandfinishedproductlifetime remainunqualified; do notrequestambientchoiceagain."
+    },
+    {
+      "id": "OPEN-OPTICAL-INPUT",
+      "record_id": "REQ-OPTICAL-INPUT",
+      "owner": "Kamil",
+      "blocks_stage": "schematic",
+      "question": "Agree initial CCT/CRI and optical design band/loss/temperature assumptions needed for LED selection; 2700K/CRI80 is only the proposal."
+    }
+  ],
+  "findings": [
+    {
+      "id": "RC-ROUTE-DRAIN-01",
+      "severity": "blocker",
+      "status": "open",
+      "owner": "Kamil decision; /root controlled adoption",
+      "affected_gate": "Adoption/use of proposed route under corrected input",
+      "problem": "Proposal9db violates active1mm contract in3 cases. Counterfactual pass does not authorize changing accepted scope.",
+      "evidence": [
+        "one-pair-correction-proposal/active-contract-check.json",
+        "proposed-spatial-decision-basis.json",
+        "spatial-constraints-routing-correction.proposed.json"
+      ],
+      "observable_closure": "Actual owner decision binds reviewed manifest/proposal/future intent; coordinator adopts only approved exact pair input under sole CAD ownership, records impact and refreshes checks against selected actual files. Until then preserve open finding and inactive proposal.",
+      "blocks_bounded_owner_decision": false
+    },
+    {
+      "id": "COMP-ROUTING-INCOMPLETE-01",
+      "severity": "blocker",
+      "status": "open",
+      "owner": "/root",
+      "affected_gate": "Routing acceptance",
+      "problem": "LAB_DFM requires zero unconnected; fresh native DRC contains64. Coarse geometric/parity zero does not satisfy completed copper connectivity.",
+      "evidence": [
+        "verification/drc.json",
+        "verification/check.json"
+      ],
+      "observable_closure": "Complete remaining connections without unauthorized intent/placement/rule changes; refill/save; fresh pinned DRC zero geometry/parity/unconnected and full scoped spacing/topology reviews on exact integrated board.",
+      "blocks_bounded_owner_decision": false
+    },
+    {
+      "id": "COMP-ROUTING-EVIDENCE-02",
+      "severity": "major",
+      "status": "open",
+      "owner": "/root with assigned independent reviewers",
+      "affected_gate": "Routing acceptance",
+      "problem": "Fresh requirements matrix reports stale full-PCB-bound EV-LAB_NETLIST/SPACING/SPATIAL and missing LAB_DFM/PARITY evidence. Fresh graph/spatial outputs cannot silently relabel historical review rows.",
+      "evidence": [
+        "verification/requirements-routing.json"
+      ],
+      "observable_closure": "On final integrated board obtain required-kind reviews/DRC, explicitly retain unaffected scopes, rebind valid evidence and run full requirements/work routing check without these failures.",
+      "blocks_bounded_owner_decision": false
+    },
+    {
+      "id": "COMP-PHYSICAL-BOUNDARY-03",
+      "severity": "note",
+      "status": "open",
+      "owner": "Codex-root engineering; Kamil product/mechanical/optical choices and qualified test owner",
+      "affected_gate": "Energized-test authorization and finished-product release",
+      "problem": "Current/timing/hot-fault/surge/thermal/800lm/standards qualification absent;17 original obligations and named open questions remain. Bare unpowered LAB scope changes release sequence only.",
+      "evidence": [
+        "requirements.json",
+        "prototype-validation.json",
+        "owner-prototype-scope.json",
+        "pcb-basis/lab-board-boundaries.json"
+      ],
+      "observable_closure": "Resolve each owned original unknown at its recorded gate, agree test setup/limits with named qualified human and retain actual physical results against exact hardware/fixture revisions before corresponding claims or release.",
+      "blocks_bounded_owner_decision": false
+    }
+  ],
+  "limitations": [
+    "No duplicate native CAD execution: checked exact saved source/report hashes and raw reported results. Geometry/tool correctness is additionally assigned to other roles.",
+    "Current requirements check intentionally fails; recommendation is bounded to presenting this one input decision, never blanket routing approval.",
+    "Actual human authority is recorded evidence; hashes do not authenticate chat messages. No human correction decision manufactured."
+  ],
+  "writes": "Only this independent report; no customer/tool/CAD source changed."
+}

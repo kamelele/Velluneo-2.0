@@ -1,0 +1,39 @@
+# SC08-B routing thermal geometry preparation
+
+Read-only proposal against accepted placement board SHA256 `c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5`, KiCad 10.0.6. No customer CAD, nets, refs, placements or rules modified. Geometry is unpowered routing preparation, not fabrication release or physical thermal approval. Runtime `work/sc08-env.ps1`; numerical output and all polygon outline **and hole** vertices in `native-proposal-geometry.json`. Native net names are mapped through the accepted intent-native binding, including auto-generated relay nets.
+
+## U3 copper and return topology
+
+Use DC_RETURN rectangle `(68,62)-(88,82)` on both copper layers. Backside stays DC_RETURN only throughout this rectangle; do not put a foreign signal via in the rectangle. Initial native-shape clipping of the top rectangle around U3 REF and cathode at 0.40 mm (0.30 functional target plus 0.10 margin) leaves one connected polygon with two holes and **393.5253 mm²** before tracks; back is nominal 400 mm² before any board-wide exclusion. Both holes must be retained if copying the explicit polygons; simply using the outer rectangle creates shorts. A normal native fill at the local functional rule can instead generate the pad/track exclusions, followed by the independent full-domain checker. All future foreign tracks/vias must create equivalent exclusions; do not rely on package exceptions for zones or vias.
+
+Place nine DC_RETURN vias at Cartesian product **x = 81,83,85 mm; y = 69,72,75 mm**, diameter 0.8/drill 0.3. Nominal annulus 0.25 mm. Native circle-to-effective-pad-shape collision tests show zero foreign numbered-copper-pad conflicts at full matrix spacing without any package exception. This is a pad-only check, not a routed-board DRC result. The nearest via to the tab is x81; its copper begins at x80.6 while U3 anode pad reaches x80.0, allowing the solid top island to join across a 0.6 mm lateral span. Use solid copper joins to U3 anode and thermal vias, preserving effective heat spreading rather than narrow relief spokes. Manual solderability of this copper mass remains a practical assembly consideration.
+
+REF and VCC_OV can escape east on top from U3 pin1 at `(76.05,70.5)` and pin3 at `(76.05,73.5)` with local clearance moats. Keep those tracks away from the nine via circles; via centers y69/72/75 provide 1.5 mm separation from either signal-row center before widths. Crossing between rows is available, but exact routes still require native shape checking. Do not move these signal tracks to B.Cu inside the reserved rectangle. Their escape cuts/fingers reduce practical heat spreading; recompute final filled area and connection necks after routing.
+
+Keep the U3 copper as a **quiet-return branch**: no RF/input, D1 freewheel, LED or C5 charging current through it. Join this branch to the main return star with a dedicated branch; do not use the thermal plate as the main-current corridor. Keep U2/reference return taps on that same quiet branch. Nearby DC_RETURN copper is not permission to take a shorter power-return path through U3.
+
+## U1 SOURCE island
+
+Initial candidate rectangle **`(110.5,35)-(125.1,49.5)`**, 14.6 × 14.5 mm, remains within the ≤20×15 initial allocation. Native foreign-pad-shape expansion/subtraction at matrix target plus 0.10 mm gives one connected polygon with **168.6349 mm²** and two internal holes before tracks. Explicit geometry is in the JSON. Cuts occur around U1 drain (4.1 mm), D1 CASE / C10.1 / C4.1 / R2.2 SENSE_FB (0.4 mm), and L3 COUT pad (4.1 mm). SOURCE and local SENSE/BP may use only their explicitly accepted local pair target; L2_MID, DC_RETURN and COUT do not receive it.
+
+The drain notch is essential: pad4 right edge x108.5 implies SOURCE zone x≥112.5 near y41.905 at a 4 mm target. The rounded 4.1 mm exclusion still contacts the right portion of SOURCE pad5; do not draw an uncut rectangle. L2 MID left pad edge x129.25 leaves only 4.15 mm to candidate right edge x125.1 at overlapping y; hold that edge. L3 COUT top edge y51.25 requires the lower-right corner notch; y49.5 alone is insufficient. The nominal zone area is not usable copper where these foreign-net holes/notches lie.
+
+Route C3 bypass directly and retain the dedicated north-side R2/C10 sense Kelvin branch. D1 power current must not flow in that quiet sense branch. The SOURCE island is a switched power node, not a general ground plane. Keep it only on F.Cu; no blanket B.Cu SOURCE, no expansion under quiet-control region. Thin paired BP/SOURCE B.Cu actuator tracks are a separate limited routing choice and still require the full normal via/domain clearances. Avoid broad opposite-side DC_RETURN overlap beneath SOURCE where possible.
+
+## Thermal and coupling limits
+
+These copper areas do **not** establish U3 θJA≤85 K/W. At the existing calculated 0.50201095 W, local air 80°C and assumed θJA85 would give Tj122.67°C, a narrow conditional 2.33°C margin to the 125°C target. Thermal resistance is not measured or validated by area. Nine via barrels alone, with assumed 1.6 mm length, 0.3 mm finished diameter, 18–25 µm copper plating and k=400 W/mK, give roughly 26.2–18.9 K/W parallel barrel resistance. That is one path segment, not total junction-to-ambient. Interfaces, tab spreading, FR4, actual plating, copper necks, convection, emissivity and adjacent heat remain unknown.
+
+Retain overall analytical 8–10 W board heat budget; U1 initial allocation remains 1 W even though the 0.1091768 Arms / 12.9Ω conduction model is only 0.154 W. Switching/startup losses and local airflow are not measured. Left CAD edge must remain physically uppermost in the proposed vertical laboratory fixture (air rises toward negative X). Heater/component separation is geometrical mitigation, not measured temperatures; no enclosure performance inferred.
+
+Illustrative parallel-plate bound: εr4.2, 1.6 mm dielectric, 168.6 mm² overlap would be about 3.92 pF to an opposing broad conductor. At an assumed 10 V/ns this gives about 39 mA displacement-current pulse. Neither actual overlap/εr/dv/dt nor EMC performance is established. Remove unnecessary broad opposite-side copper, minimize switched area and return-loop area, then evaluate the actual routed geometry. No common-mode or insulation certificate follows from this calculation.
+
+## Trace loss arithmetic, not ampacity qualification
+
+Assume 35 µm copper, resistivity 1.68e-8 Ωm at20°C, temperature coefficient .00393/K, density8960 kg/m³ and heat capacity385 J/kgK. Per100 mm, 0.6 mm track is 0.080Ω at20°C /0.098864Ω at80°C; 0.3 mm doubles these. At .1091768 Arms, 0.6 mm losses are .954mW /1.178mW; at50 mA .200/.247mW. These resistive drops are small compared with semiconductor losses, but do not establish ampacity, transient inductance, neck/via current capability or fault protection.
+
+For the **conditional** 1.4 A lasting .6 ms only, 0.6 mm/100 mm stores94.1µJ at20°C, a copper-only adiabatic rise .0130K; .3 mm gives188.2µJ/.0519K. At80°C those rises are .0160/.0642K. This arithmetic does not prove the 1.4 A/.6 ms electrical bound, protective timing, repeated-fault behavior, fusing or semiconductor survival. Actual trace lengths, necks, pad entries and via paths must replace these normalized examples after routing.
+
+## Remaining checks on the actual saved routed board
+
+Refill native zones; verify saved native tracks, vias and zone polygons against the full net-pair matrix, finite pad/track exception corridors, reserved B.Cu region, non-plated holes/slots, board-edge and mounting exclusions. The prep clipper ignores unnumbered mechanical holes and future routes; it is not the release checker. Report true filled area, connected neck widths and island removal. Preserve all 47 components/112 pins and accepted electrical intent. Physical current, hot shutdown, fault, temperature, surge and fixture acceptance remain open before energized testing. Bare-board ordering is a separate release gate.

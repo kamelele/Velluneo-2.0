@@ -1,0 +1,44 @@
+{
+  "input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+  "reports": [
+    {
+      "role": "reality",
+      "actual_actor": "/root/route_drain_feasibility",
+      "report": "reviews/reality.json",
+      "report_sha256": "9edf651cb064390ff72568a5da97a698ba117800ef63eef7cb9f095372dea692",
+      "input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+      "recommendation": "ready_for_human_review",
+      "scope": "ONE-pairinputcorrectionONLY;notcompleteroutingapproval"
+    },
+    {
+      "role": "overengineering",
+      "actual_actor": "/root/routing_correction_overengineering",
+      "report": "reviews/overengineering.json",
+      "report_sha256": "1b07c74b5355cafebdd554d231359dbddba0793d985e0b001a9138ae7a368837",
+      "input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+      "recommendation": "ready_for_human_review",
+      "scope": "ONE-pairinputcorrectionONLY;notcompleteroutingapproval"
+    },
+    {
+      "role": "completeness",
+      "actual_actor": "/root/routing_correction_completeness",
+      "report": "reviews/completeness.json",
+      "report_sha256": "85f84b42629097cfff400b974b907be738243e323f8162f0844dc4452da1ab79",
+      "input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+      "recommendation": "ready_for_human_review",
+      "scope": "ONE-pairinputcorrectionONLY;notcompleteroutingapproval"
+    },
+    {
+      "role": "change",
+      "actual_actor": "/root/validator_quick_review",
+      "report": "reviews/change.json",
+      "report_sha256": "89854fb75a194c6e9ac2c5e7fe20838cc30088703c449ed14851a808eb816c9a",
+      "input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+      "recommendation": "ready_for_human_review",
+      "scope": "ONE-pairinputcorrectionONLY;notcompleteroutingapproval"
+    }
+  ],
+  "human_input_correction_approval": null,
+  "routing_stage_accepted": false,
+  "no_vote_confers_authority": true
+}

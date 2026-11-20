@@ -1,0 +1,196 @@
+{
+  "manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+  "technical_inputs_verified": 232,
+  "external_views_verified": 3,
+  "input_unchanged": true,
+  "footprint_pad_geometry_and_schematic_invariance": true,
+  "board_sha256": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+  "active_check": {
+    "passed": false,
+    "findings": [
+      {
+        "type": "copper_spacing",
+        "a": "U1.2",
+        "b": "4d49a423-f62c-4b20-a1fb-767c289ea001",
+        "kinds": [
+          "pad",
+          "track"
+        ],
+        "layer": "F.Cu",
+        "nets": [
+          "SENSE_FB",
+          "DRAIN_BLOCKED"
+        ],
+        "target_mm": 4.0,
+        "conservative_gap_mm": 3.791,
+        "exception_ids": [],
+        "generic_target_mm": 4.0,
+        "ownership_ambiguities": []
+      },
+      {
+        "type": "copper_spacing",
+        "a": "U1.2",
+        "b": "b209892e-ba12-4e11-99ba-7cf873121aa1",
+        "kinds": [
+          "pad",
+          "track"
+        ],
+        "layer": "F.Cu",
+        "nets": [
+          "SENSE_FB",
+          "DRAIN_BLOCKED"
+        ],
+        "target_mm": 4.0,
+        "conservative_gap_mm": 3.847403,
+        "exception_ids": [],
+        "generic_target_mm": 4.0,
+        "ownership_ambiguities": []
+      },
+      {
+        "type": "copper_spacing",
+        "a": "aa742ad6-e9c4-4213-a96f-d152e19aebbc",
+        "b": "4d49a423-f62c-4b20-a1fb-767c289ea001",
+        "kinds": [
+          "track",
+          "track"
+        ],
+        "layer": "F.Cu",
+        "nets": [
+          "SENSE_FB",
+          "DRAIN_BLOCKED"
+        ],
+        "target_mm": 4.0,
+        "conservative_gap_mm": 3.956588,
+        "exception_ids": [],
+        "generic_target_mm": 4.0,
+        "ownership_ambiguities": []
+      }
+    ]
+  },
+  "counterfactual_check": {
+    "passed": true,
+    "stats": {
+      "per_face_objects": {
+        "pad": 134,
+        "track": 27,
+        "via": 26,
+        "zone": 4
+      },
+      "different_net_face_pairs": 10807,
+      "clipped_piece_pairs": 49,
+      "noncopper_undrilled_paste_pads_excluded": 4
+    },
+    "exact_changed_pair": "U1.2/U1.4 only1.0to1.5mm"
+  },
+  "actual_DRAIN_tracks": [
+    {
+      "a": [
+        105.5,
+        44.15
+      ],
+      "b": [
+        104.5,
+        44.0
+      ],
+      "width_mm": 0.6,
+      "layer": "F.Cu"
+    },
+    {
+      "a": [
+        91.015,
+        43.0
+      ],
+      "b": [
+        94.0,
+        40.0
+      ],
+      "width_mm": 0.6,
+      "layer": "F.Cu"
+    },
+    {
+      "a": [
+        107.525,
+        43.65
+      ],
+      "b": [
+        105.5,
+        44.15
+      ],
+      "width_mm": 0.6,
+      "layer": "F.Cu"
+    },
+    {
+      "a": [
+        107.525,
+        41.905
+      ],
+      "b": [
+        107.525,
+        43.65
+      ],
+      "width_mm": 0.6,
+      "layer": "F.Cu"
+    },
+    {
+      "a": [
+        94.0,
+        40.0
+      ],
+      "b": [
+        104.5,
+        44.0
+      ],
+      "width_mm": 0.6,
+      "layer": "B.Cu"
+    }
+  ],
+  "actual_DRAIN_vias": [
+    {
+      "center_mm": [
+        94.0,
+        40.0
+      ],
+      "diameter_mm": 0.8,
+      "drill_mm": 0.3
+    },
+    {
+      "center_mm": [
+        104.5,
+        44.0
+      ],
+      "diameter_mm": 0.8,
+      "drill_mm": 0.3
+    }
+  ],
+  "zone_containment": [
+    {
+      "name": "U3-front-0",
+      "net": "/DC_RETURN",
+      "layer": "F.Cu",
+      "filled_area_mm2": 393.506155944662,
+      "saved_fill_contained": true
+    },
+    {
+      "name": "SOURCE-compact-1",
+      "net": "/SOURCE",
+      "layer": "F.Cu",
+      "filled_area_mm2": 117.356836486482,
+      "saved_fill_contained": true
+    },
+    {
+      "name": "SOURCE-compact-0",
+      "net": "/SOURCE",
+      "layer": "F.Cu",
+      "filled_area_mm2": 36.6594295480855,
+      "saved_fill_contained": true
+    },
+    {
+      "name": "U3-back-0",
+      "net": "/DC_RETURN",
+      "layer": "B.Cu",
+      "filled_area_mm2": 399.977799110888,
+      "saved_fill_contained": true
+    }
+  ],
+  "scope": "Correction input decision only; counterfactual not active or approved; no customer writes"
+}

@@ -1,0 +1,33 @@
+{
+  "scope": "Incomplete experimentalroutinginputcorrectionreview,notroutingstageapproval",
+  "native_board_sha256": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+  "verification_snapshot": "bdaf854d632d1909ed107eb508007e4bbfd38bbf73d731586c052a48c230b55f",
+  "pinned_KiCad": "10.0.6",
+  "ERC": "PASS0",
+  "independent_pin_intent": "PASS112pins30nets1NC",
+  "spatial": "PASS47footprints8areas140x100underoriginalapprovedgeometry",
+  "native_DRC_geometry": 0,
+  "native_DRC_parity": 0,
+  "remaining_unconnected_items": 64,
+  "full_Toolkit_work_check": "FAIL",
+  "failure_reasons": [
+    "64actualunconnecteditemerrors",
+    "LAB_NETLIST/LAB_SPACING/LAB_SPATIALhistoricalfullPCBhash-boundevidenceisnotvalidfornewroutedcopy",
+    "LAB_DFMandLAB_PARITYrouting-stagereviewevidencestillabsent"
+  ],
+  "requirements_impact": "Originalschematicandphysicalplacementunchanged;affectedtechnicalreviewmustbereboundaftercorrectionandactualcompletePCB. No historical evidence is relabelled as fresh.",
+  "active_matrix_check": "FAIL3findingsatU1under1mmscope",
+  "explicit_counterfactual_proposal": "PASS10807facepairswithONLYU1.2/U1.4margin1.5mm;notactiveorapproved",
+  "native_baseline_ignored_checks_retained": [
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    }
+  ],
+  "measurements_performed": false,
+  "order_ready": false
+}

@@ -1,0 +1,59 @@
+{
+  "actor": "/root/route_drain_feasibility",
+  "role": "Reality Checker targeted geometry review",
+  "recommendation": "changes_requested",
+  "finding_id": "RC-ROUTE-DRAIN-01",
+  "severity": "major",
+  "finding_state": "open",
+  "source_board_sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5",
+  "actual_customer_CAD_write": false,
+  "actual_measurements": false,
+  "native_version": "10.0.6",
+  "proposed_correction": "ONLY U1 exact pair2/4 local escape margin1.5mm; preserve pair4/5 and allothers1mm, actual.6mm native minimum/global4mm/no via-zone exception; ownerdecisionrequired; SOURCEzoneclip/refillrequired",
+  "evidence": [
+    {
+      "path": "boundary-report.json",
+      "sha256": "64447d947007315254d05e81a396004db062fe331a599176b38e399b7dde3c26"
+    },
+    {
+      "path": "boundary-samples.json",
+      "sha256": "012dce258f2ba8791fc3371a3e67226fb6c0851f91d81f094eded47728433004"
+    },
+    {
+      "path": "boundary_probe.py",
+      "sha256": "995e0ec8a3dfb1983d3e643adbaba88b1698ada1ee43b079a11cfecae773e9cc"
+    },
+    {
+      "path": "disk-boundary-report.json",
+      "sha256": "011a9027ab3de4c13310c155c0cd2215b42211864a29e147488a581521785d83"
+    },
+    {
+      "path": "drain-minimal-proposal-report.json",
+      "sha256": "71b4fcd1d712941b352ac74fdd2bf1dd741da1b1a63c7d56d764fdbb31099cf7"
+    },
+    {
+      "path": "drain-proposal-report.json",
+      "sha256": "86387abad6b3e8ab985fe3e68769ff6f62d24aeaeea07fa257aebfafb1acbf72"
+    },
+    {
+      "path": "proposal_minimal_probe.py",
+      "sha256": "279af2fac21342d8827a1d6d2daf51c1ea24a66b0f69b54d198d7fa1454d6bcb"
+    },
+    {
+      "path": "proposal_probe.py",
+      "sha256": "c1d720dcde45f2a4466642af5c370bc1ff30e0f0efafa8b1e2dde743c3040ab0"
+    },
+    {
+      "path": "review.md",
+      "sha256": "2c2a8f8ee8233d294e75712ce0b6f166936d735e89131c4fe5fccc1b9a1eda54"
+    },
+    {
+      "path": "via-envelope-report.json",
+      "sha256": "d16ae06c9b0d6d9ec9a9e303a27919780f4a13f95a384817a9a166e2884c4dc6"
+    },
+    {
+      "path": "via_probe.py",
+      "sha256": "f6fd50fec67b6b2f47e56298a96915c8961b83b82448a9ec06f86277dccf8c25"
+    }
+  ]
+}

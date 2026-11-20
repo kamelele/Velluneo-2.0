@@ -1,0 +1,251 @@
+{
+  "status": "HYPOTHETICAL_CHANGE_PROPOSAL_REQUIRES_OWNER_DECISION_NOT_APPROVED",
+  "native_board_unchanged": true,
+  "candidate_unchanged": true,
+  "source_sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5",
+  "candidate_sha256": "5f82894e6de8fd263dfcb28bf86b09a0b9ea2574095bc47138b61a2c806aaf3a",
+  "checker_sha256": "8878e6b90b8bb1ed78cc5da2c1ad37f1778e34344fa631429cc4a94b084c3491",
+  "track_width_mm": 0.6,
+  "points_mm": [
+    [
+      107.525,
+      41.905
+    ],
+    [
+      107.525,
+      43.65
+    ],
+    [
+      105.5,
+      44.15
+    ],
+    [
+      104.5,
+      44.0
+    ]
+  ],
+  "via_mm": {
+    "center": [
+      104.5,
+      44.0
+    ],
+    "diameter": 0.8,
+    "drill": 0.3
+  },
+  "results": [
+    {
+      "proposed_margin_mm": 1.0,
+      "changed_exact_pairs_only": [
+        [
+          "U1.2",
+          "U1.4"
+        ]
+      ],
+      "tracks_pass": false,
+      "track_findings": [
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_0",
+          "b": "U1.2",
+          "kinds": [
+            "track",
+            "pad"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SENSE_FB"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.847403,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_0",
+          "b": "0bf2ef49-6971-4007-8438-8071c173cdfc",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.346913,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_1",
+          "b": "U1.2",
+          "kinds": [
+            "track",
+            "pad"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SENSE_FB"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.791,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_1",
+          "b": "aa742ad6-e9c4-4213-a96f-d152e19aebbc",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SENSE_FB"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.956588,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_1",
+          "b": "0bf2ef49-6971-4007-8438-8071c173cdfc",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.346058,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ],
+      "via_pass": true,
+      "via_findings": []
+    },
+    {
+      "proposed_margin_mm": 1.5,
+      "changed_exact_pairs_only": [
+        [
+          "U1.2",
+          "U1.4"
+        ]
+      ],
+      "tracks_pass": false,
+      "track_findings": [
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_0",
+          "b": "0bf2ef49-6971-4007-8438-8071c173cdfc",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.346913,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_1",
+          "b": "0bf2ef49-6971-4007-8438-8071c173cdfc",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.346058,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ],
+      "via_pass": true,
+      "via_findings": []
+    },
+    {
+      "proposed_margin_mm": 2.0,
+      "changed_exact_pairs_only": [
+        [
+          "U1.2",
+          "U1.4"
+        ]
+      ],
+      "tracks_pass": false,
+      "track_findings": [
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_0",
+          "b": "0bf2ef49-6971-4007-8438-8071c173cdfc",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.346913,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "PROPOSAL_DRAIN_1",
+          "b": "0bf2ef49-6971-4007-8438-8071c173cdfc",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DRAIN_BLOCKED",
+            "SOURCE"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 3.346058,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ],
+      "via_pass": true,
+      "via_findings": []
+    }
+  ],
+  "limits": "Only new F tracks and new F/B via versus existing native pads/tracks/filled zones checked. No CAD saved, no global routing/DRC/thermal/physics qualification. Proposed exact exception extension is NOT active customer policy."
+}

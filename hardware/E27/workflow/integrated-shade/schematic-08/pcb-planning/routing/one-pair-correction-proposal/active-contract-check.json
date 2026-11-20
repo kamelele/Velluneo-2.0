@@ -1,0 +1,120 @@
+{
+  "tool": "independent saved-copper geometry validator",
+  "version": "10.0.6",
+  "board_sha256": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+  "checker_sha256": "8878e6b90b8bb1ed78cc5da2c1ad37f1778e34344fa631429cc4a94b084c3491",
+  "synthetic_contract": false,
+  "contract_input_hashes": {
+    "pcb-basis/intent-native-net-binding.json": "ed102c4f47b0beff1565c51b0862ba62f02b72c6ab79d6fbb8b37e40d75486be",
+    "intended-connectivity.json": "4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809",
+    "pcb-basis/routing-and-isolation-proposal.json": "06f1fff7ebc55c776491978305f62496386c77f0945c37bcd7a54915a0e96f53",
+    "pcb-basis/domain-matrix.json": "6a20f43a47befea3055f0de9af20c5d9b5fa3f7f809ea2445f903e77f8bd13f1",
+    ".electronics-rules/routing-input.json": "a249c771e5f27c365619e23bc272d958ef850a71c5a39b3f2f897fbabc59e68f"
+  },
+  "polygon_outward_error_mm": 0.002,
+  "limits": [
+    "Flat-board geometric target only; not physical creepage/clearance qualification or standards compliance",
+    "No electrical, transient, thermal-performance or manufacturing qualification",
+    "Saved zone fill checked as stored; cannot prove freshness beyond KiCad NeedRefill flag",
+    "Only straight tracks, two copper layers, rectangular outline and closed straight-segment/rect native courtyards supported; anything else stops",
+    "Conservative native outward polygon approximation and bounded courtyard offset can produce false failures near boundaries; no inward copper tolerance relaxation"
+  ],
+  "raw_native_track_net_parity": true,
+  "passed": false,
+  "findings": [
+    {
+      "type": "copper_spacing",
+      "a": "U1.2",
+      "b": "4d49a423-f62c-4b20-a1fb-767c289ea001",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "F.Cu",
+      "nets": [
+        "SENSE_FB",
+        "DRAIN_BLOCKED"
+      ],
+      "target_mm": 4.0,
+      "conservative_gap_mm": 3.791,
+      "exception_ids": [],
+      "generic_target_mm": 4.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.2",
+      "b": "b209892e-ba12-4e11-99ba-7cf873121aa1",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "F.Cu",
+      "nets": [
+        "SENSE_FB",
+        "DRAIN_BLOCKED"
+      ],
+      "target_mm": 4.0,
+      "conservative_gap_mm": 3.847403,
+      "exception_ids": [],
+      "generic_target_mm": 4.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "aa742ad6-e9c4-4213-a96f-d152e19aebbc",
+      "b": "4d49a423-f62c-4b20-a1fb-767c289ea001",
+      "kinds": [
+        "track",
+        "track"
+      ],
+      "layer": "F.Cu",
+      "nets": [
+        "SENSE_FB",
+        "DRAIN_BLOCKED"
+      ],
+      "target_mm": 4.0,
+      "conservative_gap_mm": 3.956588,
+      "exception_ids": [],
+      "generic_target_mm": 4.0,
+      "ownership_ambiguities": []
+    }
+  ],
+  "stats": {
+    "per_face_objects": {
+      "pad": 134,
+      "track": 27,
+      "via": 26,
+      "zone": 4
+    },
+    "different_net_face_pairs": 10807,
+    "clipped_piece_pairs": 52,
+    "noncopper_undrilled_paste_pads_excluded": 4
+  },
+  "finite_exception_ids_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "board_sha256_after": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+  "input_unchanged": true
+}

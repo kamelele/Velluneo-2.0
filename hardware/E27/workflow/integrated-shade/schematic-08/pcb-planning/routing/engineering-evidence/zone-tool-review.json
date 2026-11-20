@@ -1,0 +1,36 @@
+{
+  "actor": "/root/route_helper_review",
+  "helper_sha256": "474a8b0eee2dd6a79514c8f5c2bcd1bc02e7b93453c0e368d3e8ea27685e84ed",
+  "decision": "usable_for_single_outer_zone_candidate_generation_only",
+  "findings": [
+    {
+      "id": "SC08-ZONE-OWN-001",
+      "status": "verified_closed_for_owned_helper",
+      "evidence": "Exact copied old borrowed helper regression fails area assertion before fill exit1; owned helper three separately allocated polygons forcedGC regression exit0, savedfilled holes retained, synthetic nativeDRC0violations0unconnected. Owned Outline.Append copies into native zone lifetime. Original26ade general usability remains retracted."
+    },
+    {
+      "id": "SC08-ZONE-MULTI-002",
+      "status": "correction_code_verified_actual_candidate_closure_delegated",
+      "evidence": "Root sc08_add_critical_thermal.py splits each returned outer into separate zone, preserving holes_by_outline[oi]. sc08_finalize_critical_candidate.py asserts every saved zone OutlineCount1 and savedfill containment after CLI refill. Actual candidate independent closure assigned validator_quick_review.",
+      "limitation": "Owned helper474a alone does not reject multiple outlines; use only through root split procedure or caller asserts one outline. Do not claim general multiouter helper qualification."
+    }
+  ],
+  "checks": {
+    "own_copy_owned_regression_exit": 0,
+    "own_copy_borrowed_negative_exit": 1,
+    "synthetic_native_DRC_exit": 0,
+    "synthetic_native_violations": 0,
+    "synthetic_native_unconnected": 0
+  },
+  "limits": [
+    "Single-outer call precondition mandatory; own helper standalone multiouter remains unsafe serialization",
+    "Matrix clipping, fill persistence, exact savedcopper checks and independent CLI refill remain required",
+    "Synthetic nativeDRC uses default profile with listed ignored checks; no actual customer profile qualification from this fixture",
+    "No thermal or current qualification"
+  ],
+  "customer_CAD_touched": false,
+  "reviewed_root_script_hashes": {
+    "sc08_add_critical_thermal.py": "3b93afba5331f882b69f535dd5cde19d9e53e8743c900bd4a56f7c713ac6fa94",
+    "sc08_finalize_critical_candidate.py": "6f088a878d74686dc16682c3e9750e9c368d427660c454353180afafde6c791f"
+  }
+}

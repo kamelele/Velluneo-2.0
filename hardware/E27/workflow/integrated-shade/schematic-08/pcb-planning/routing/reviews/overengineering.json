@@ -1,0 +1,85 @@
+{
+  "role": "Overengineering Reviewer",
+  "actor": "/root/routing_correction_overengineering",
+  "independence": "Separate assigned inspection context from /root, the sole CAD writer. No CAD or customer evidence edited. No physical testing performed.",
+  "input_manifest": "hardware/E27/workflow/integrated-shade/schematic-08/pcb-planning/routing/review-inputs.json",
+  "input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+  "input_integrity": {"files_checked": 232, "external_views_checked": 3, "hash_mismatches": 0},
+  "base_commit": "3e261d31a7c1080d5cfd9ca38fcc90d1779a76bf",
+  "candidate_board_sha256": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+  "proposed_intent_digest": "e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8",
+  "scope": "Readiness of ONE U1.2/U1.4 spatial input correction for actual owner decision only. This is not routing stage acceptance, release, order or energized-test authorization.",
+  "recommendation": "ready_for_human_review",
+  "recommendation_basis": "The correction has a concrete saved geometry and finite numerical scope. Direct input diffs show only the exact pair escape changes numerically, from 1.0 to 1.5 mm; local 1.9 mm floor, generic 4 mm, 0.6 mm DRAIN hard width, other 21 exceptions, layer/object scope, board size and interfaces remain protected. It avoids wider two-pair or 2 mm concessions and an unauthorized 0.3 mm neck. There is no new overengineering blocker to presenting this limited decision.",
+  "approval": null,
+  "routing_stage_complete": false,
+  "RC-ROUTE-DRAIN-01_status": "open; no closure or deviation approved by this review",
+  "coverage": [
+    "Read review-basis first, project AGENTS, exact pinned toolkit project/workflow/review/role instructions and existing-project guide.",
+    "Read task contract, actual placement receipt, hardware.json, configured laboratory requirement IDs and proposed authority; retained original product obligations are not removed by this task.",
+    "Verified all frozen manifest entries and three external view hashes; inspected local-correction and bottom-copper images.",
+    "Compared original versus proposed routing basis and spatial intent directly: one pair numerical change plus revision, authority/hash references and null future approval. hardware.json still selects the original spatial file.",
+    "Inspected finite-escape infeasibility rationale, native hard-width rule and minimal-proposal comparisons. Retained independent boundary/via proof as evidence, without claiming a new global route-optimality proof or physical validation.",
+    "Inspected authoring records and thermal authoring code for the SOURCE backside bridge, nine U3 thermal vias, dedicated quiet-return branch, full-domain zone clipping and split native zone storage.",
+    "Reviewed active full-copper FAIL3 versus explicit counterfactual PASS10807, placement-invariance evidence and fresh full Toolkit summary showing FAIL64 plus stale/missing routing evidence. Native geometry/parity zero is not represented as complete matrix or stage acceptance."
+  ],
+  "complexity_assessment": [
+    {
+      "objects": "Exact U1 pins 2/4 F.Cu pad/track escape",
+      "requirements": ["LAB_SPACING", "HW-NETCLASS-AC_BUS"],
+      "assessment": "A single 0.5 mm envelope extension is narrower in scope than the earlier two-pair proposal. The 2 mm experiment provides no additional benefit for this concrete path. This is bounded minimality of changed constraints, not proof that 1.5 mm is the mathematical minimum possible margin.",
+      "preserved_conditions": "No added-via/zone exemption; all other 21 exceptions unchanged; 1.9 mm floor and generic 4 mm retained.",
+      "verification_needed": "Actual decision and controlled consumer adoption, followed by checks and affected reviews on the saved integrated result."
+    },
+    {
+      "objects": "SOURCE B.Cu bridge (113.75,40.5)-(120.5,40.5), width 0.6 mm; two 0.8/0.3 mm vias",
+      "requirements": ["LAB_THERMAL", "LAB_SPACING"],
+      "assessment": "The 6.75 mm bridge joins two front SOURCE copper regions divided by the quiet sense branch. It predates the proposed DRAIN addition and is retained in the checkpoint. It is a limited conductor rather than a backside switched-node plane. Removing it merely to reduce via count could disconnect intended SOURCE copper or disturb sense topology; no evidence supports such removal in this decision scope.",
+      "preserved_conditions": "No broad B.Cu SOURCE plane or quiet-region expansion; no via concession. SOURCE zones are reclipped at full 4 mm plus 0.10 mm around new DRAIN copper.",
+      "verification_needed": "Final current/return topology, coupling and physical thermal qualification remain due; present geometry does not establish achieved EMC or temperature."
+    },
+    {
+      "objects": "U3 front/back DC_RETURN plates, nine solid thermal vias and dedicated B.Cu branch to C5 negative",
+      "requirements": ["LAB_THERMAL", "LAB_TEST_BOUNDARY"],
+      "assessment": "Geometry has a thermal and return-topology rationale, not a duplicate circuit or new interface. The dedicated branch avoids making the U3 plate the power-current corridor. Approximately 393.5/400 mm2 and nine vias are conditional geometry, not demonstrated thetaJA85 K/W. Reducing vias or copper on area arithmetic alone is not justified.",
+      "preserved_conditions": "Quiet return separate from D1/LED/C5 charging through-current; no foreign backside signal within the reserved plate; solid thermal joining.",
+      "verification_needed": "As later routing adds shared-net copper, review the actual branch topology and manual-solderability/access, then physical thermal/current/fault qualification before relevant test or release gates."
+    },
+    {
+      "objects": "Four saved native copper zones, including separate SOURCE components",
+      "requirements": ["LAB_DFM", "LAB_SPACING"],
+      "assessment": "Separate native zones preserve disconnected outer components and holes without unsafe polygon aliasing. This implementation complexity protects actual saved geometry and should not be collapsed for cosmetic simplicity. No added BOM, rail, layer, variant, firmware or sourcing burden arises from the one-pair correction.",
+      "verification_needed": "Maintain exact refill/outline/fill containment evidence after future zone changes; the general cached-fill checker limit remains explicit."
+    }
+  ],
+  "findings": [
+    {
+      "id": "RC-ROUTE-DRAIN-01",
+      "relation": "retained originating reality-check finding, not a new duplicate",
+      "severity": "major",
+      "state": "open",
+      "owner": "/root with actual owner decision by Kamil",
+      "affected_gate": "Adoption of proposed spatial input and eventual routing acceptance; does not block presenting the bounded decision",
+      "requirements": ["LAB_SPACING", "HW-NETCLASS-AC_BUS"],
+      "objects": "U1.2/U1.4 local escape and proposal DRAIN route",
+      "evidence": "one-pair-correction-proposal/active-contract-check.json: three generic-target violations under active 1.0 mm scope; proposed-contract-check.json passes only explicit counterfactual. Proposed future intent has approval null and is not selected by hardware.json.",
+      "consequence": "Present native DRC zero cannot authorize the inactive input correction or close the active-contract failure.",
+      "observable_closure": "Record actual owner decision bound to proposed intent and exact packet, adopt matching consumers under controlled ownership, save/refill integrated copper and independently validate full matrix/native checks and affected reviews on that result."
+    },
+    {
+      "id": "OE-SC08-RETAIN-001",
+      "severity": "note",
+      "state": "open",
+      "owner": "/root",
+      "affected_gate": "Later routing completion, manufacturing and physical qualification; not this input decision",
+      "requirements": ["LAB_DFM", "LAB_PARITY", "LAB_THERMAL", "LAB_TEST_BOUNDARY"],
+      "objects": "Incomplete proposal PCB and remaining qualification evidence",
+      "evidence": "verification/summary.json and check.json: 64 actual unconnected errors, historical PCB hash evidence stale, routing DFM/parity evidence missing. Thermal memo explicitly conditions temperature assumptions and faults.",
+      "consequence": "A scoped owner decision must not be read as complete routing or validated thermal/fault behavior. Neither connection removal nor reduced verification is a justified simplification.",
+      "observable_closure": "At the relevant later gates finish connections and affected topology review, replace stale/missing evidence with current results and obtain actual stage/test/release decisions. Keep unmeasured qualification open until actual observations exist."
+    }
+  ],
+  "new_scope_blockers": [],
+  "optional_simplifications": [],
+  "retained_evidence_limits": "Hash checks bind files, not truth or human approval. Independent tool/zone reviews and boundary proofs were inspected and retained for their stated scope; no blanket CAD rerun, electrical redesign, product-size reopening, sourcing substitution or physical operation was undertaken."
+}

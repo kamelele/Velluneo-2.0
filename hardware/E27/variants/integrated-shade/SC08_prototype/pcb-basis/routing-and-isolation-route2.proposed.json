@@ -1,0 +1,699 @@
+{
+  "revision": "PCB08-ROUTE-2-PROPOSED",
+  "scope": "Proposedexperimentalfunctionalroutingnotstandardscompliance",
+  "environment": {
+    "ambient_C": [
+      0,
+      40
+    ],
+    "pollution_degree_proposed": 2,
+    "altitude_max_m_proposed": 2000,
+    "clean_dry_no_condensation": true,
+    "material": "ApprovedFR4service;exactCTIgradeunknown",
+    "soldermask_or_coating_insulation_credit": false
+  },
+  "all30nets_hazardous_mains_referenced": true,
+  "external_SELV_nets": [],
+  "targets": {
+    "cross_HV_domains": {
+      "clearance_mm": 3.2,
+      "flat_surface_target_mm": 4.0
+    },
+    "output145V_cross": {
+      "clearance_mm": 2.0,
+      "flat_surface_target_mm": 2.0
+    },
+    "explicit_local15V_pairs": {
+      "clearance_mm": 0.3,
+      "flat_surface_target_mm": 0.3
+    },
+    "ordinary_copper_edge_mm": 4,
+    "external_fixture_reservation_mm": {
+      "air": 6.4,
+      "surface": 8
+    }
+  },
+  "package_exceptions_proposed": [
+    {
+      "ref": "BR1",
+      "pins": [
+        "3",
+        "4"
+      ],
+      "nets": [
+        "DC_RETURN",
+        "AC_N"
+      ],
+      "nominal_pad_gap_mm": 1.74,
+      "proposed_drawn_floor_mm": 1.7,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "BR1",
+      "pins": [
+        "2",
+        "1"
+      ],
+      "nets": [
+        "AC_FUSED",
+        "BUS_PLUS"
+      ],
+      "nominal_pad_gap_mm": 1.74,
+      "proposed_drawn_floor_mm": 1.7,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pins": [
+        "1",
+        "4"
+      ],
+      "nets": [
+        "BP",
+        "DRAIN_BLOCKED"
+      ],
+      "nominal_pad_gap_mm": 3.21,
+      "proposed_drawn_floor_mm": 3.2,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pins": [
+        "2",
+        "4"
+      ],
+      "nets": [
+        "SENSE_FB",
+        "DRAIN_BLOCKED"
+      ],
+      "nominal_pad_gap_mm": 1.94,
+      "proposed_drawn_floor_mm": 1.9,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "PROPOSED: exactU1.2/U1.4F.Cupad/trackpairinsideactualnativecourtyardplusmax1.5mm;outsidegeneric4mm;noaddedvia/zoneexception;requiresrealownerdecision",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.5,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pins": [
+        "4",
+        "5"
+      ],
+      "nets": [
+        "DRAIN_BLOCKED",
+        "SOURCE"
+      ],
+      "nominal_pad_gap_mm": 3.0,
+      "proposed_drawn_floor_mm": 2.95,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pins": [
+        "4",
+        "6"
+      ],
+      "nets": [
+        "DRAIN_BLOCKED",
+        "SOURCE"
+      ],
+      "nominal_pad_gap_mm": 3.139607536,
+      "proposed_drawn_floor_mm": 3.1,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pins": [
+        "4",
+        "7"
+      ],
+      "nets": [
+        "DRAIN_BLOCKED",
+        "SOURCE"
+      ],
+      "nominal_pad_gap_mm": 3.688433276,
+      "proposed_drawn_floor_mm": 3.65,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "D1",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nets": [
+        "SENSE_FB",
+        "DC_RETURN"
+      ],
+      "nominal_pad_gap_mm": 3.36,
+      "proposed_drawn_floor_mm": 3.35,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "D1",
+      "pins": [
+        "CASE",
+        "2"
+      ],
+      "nets": [
+        "SENSE_FB",
+        "DC_RETURN"
+      ],
+      "nominal_pad_gap_mm": 2.0,
+      "proposed_drawn_floor_mm": 1.95,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "L2",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nets": [
+        "SOURCE",
+        "L2_MID"
+      ],
+      "nominal_pad_gap_mm": 3.5,
+      "proposed_drawn_floor_mm": 3.45,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "R13",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nets": [
+        "COUT_PLUS",
+        "OV_MID"
+      ],
+      "nominal_pad_gap_mm": 1.8,
+      "proposed_drawn_floor_mm": 1.75,
+      "default_clearance_mm": 2,
+      "default_flat_surface_target_mm": 2,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "R14",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nets": [
+        "OV_MID",
+        "OV_SENSE"
+      ],
+      "nominal_pad_gap_mm": 1.8,
+      "proposed_drawn_floor_mm": 1.75,
+      "default_clearance_mm": 2,
+      "default_flat_surface_target_mm": 2,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "L3",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nets": [
+        "L2_MID",
+        "COUT_PLUS"
+      ],
+      "nominal_pad_gap_mm": 3.5,
+      "proposed_drawn_floor_mm": 3.45,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pins": [
+        "1",
+        "3"
+      ],
+      "nets": [
+        "OPTO_A",
+        "BP_RELAY"
+      ],
+      "nominal_pad_gap_mm": 3.496769938,
+      "proposed_drawn_floor_mm": 3.45,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pins": [
+        "1",
+        "4"
+      ],
+      "nets": [
+        "OPTO_A",
+        "SOURCE"
+      ],
+      "nominal_pad_gap_mm": 3.45,
+      "proposed_drawn_floor_mm": 3.4,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pins": [
+        "2",
+        "3"
+      ],
+      "nets": [
+        "DC_RETURN",
+        "BP_RELAY"
+      ],
+      "nominal_pad_gap_mm": 3.45,
+      "proposed_drawn_floor_mm": 3.4,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pins": [
+        "2",
+        "4"
+      ],
+      "nets": [
+        "DC_RETURN",
+        "SOURCE"
+      ],
+      "nominal_pad_gap_mm": 3.496769938,
+      "proposed_drawn_floor_mm": 3.45,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U5",
+      "pins": [
+        "1",
+        "3"
+      ],
+      "nets": [
+        "OPTO2_A",
+        "BP2_RELAY"
+      ],
+      "nominal_pad_gap_mm": 3.496769938,
+      "proposed_drawn_floor_mm": 3.45,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U5",
+      "pins": [
+        "1",
+        "4"
+      ],
+      "nets": [
+        "OPTO2_A",
+        "SOURCE"
+      ],
+      "nominal_pad_gap_mm": 3.45,
+      "proposed_drawn_floor_mm": 3.4,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U5",
+      "pins": [
+        "2",
+        "3"
+      ],
+      "nets": [
+        "DC_RETURN",
+        "BP2_RELAY"
+      ],
+      "nominal_pad_gap_mm": 3.45,
+      "proposed_drawn_floor_mm": 3.4,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "U5",
+      "pins": [
+        "2",
+        "4"
+      ],
+      "nets": [
+        "DC_RETURN",
+        "SOURCE"
+      ],
+      "nominal_pad_gap_mm": 3.496769938,
+      "proposed_drawn_floor_mm": 3.45,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    },
+    {
+      "ref": "D4",
+      "pins": [
+        "1",
+        "2"
+      ],
+      "nets": [
+        "DRAIN_BLOCKED",
+        "BUS_PLUS"
+      ],
+      "nominal_pad_gap_mm": 2.63,
+      "proposed_drawn_floor_mm": 2.6,
+      "default_clearance_mm": 3.2,
+      "default_flat_surface_target_mm": 4.0,
+      "scope": "Onlyexactcomponent/pinpairandcourtyard+max1mmlocalescapeontheexplicitlayers;existingTHTannuliincluded,noaddedvia/zoneexception,noremoteroutingexemption",
+      "qualification": "Unqualifiedcomponent-containedfunctionalgeometryforbareexperimentalPCBonly;notbasic/reinforcedinsulationoractualassembledclearance",
+      "approval": null,
+      "layers": [
+        "F.Cu"
+      ],
+      "escape_layers": [
+        "F.Cu"
+      ],
+      "escape_margin_mm": 1.0,
+      "except_object_types": [
+        "pad",
+        "track"
+      ]
+    }
+  ],
+  "native_DRC_strategy": "Managedglobal.30mmlocalfloorandnamedAC_BUS1.50mmclassareonlycoarseDRC. Independentsaved-boardvoltage-pair/escapecheckerandmanualsurfacepathreviewmustenforceadditional3.2/4and2/2targets;nohiddenKiCadexclusionsorblanketwaivers.",
+  "D4_pair_open": "ExactD4padpair2.63mm/2.60drawnfloorlistedasexperimentalHVcomponentexception. Reverse-differentialwaveformandphysicalinsulationstillunqualified;nopermissionforenergizingorremoteroutingexception.",
+  "HF_scope": "Approx66kHzswitchingrequiresIEC60664-4assessment;nofullstandardclauseverificationclaimed",
+  "approval": null,
+  "native_net_name_mapping": "Useexactintent-native-net-binding.json,validatedagainstcompleteapprovedpinsets. 15nativenamesareanonymous;slashstrippingaloneisnotvalid. Rejectunknown/membershipchanges;preserveexplicitU2.1NC.",
+  "native_AC_BUS_patterns": [
+    "Net-(J1-L)",
+    "Net-(RF1-Pad2)",
+    "Net-(BR1-AC-Pad2)",
+    "Net-(J1-N)",
+    "Net-(BR1-+)",
+    "/DRAIN_BLOCKED"
+  ],
+  "thermal_via_nominal": {
+    "drill_mm": 0.3,
+    "pad_mm": 0.8,
+    "annulus_mm": 0.25,
+    "pinned_min_annulus_mm": 0.2
+  }
+}

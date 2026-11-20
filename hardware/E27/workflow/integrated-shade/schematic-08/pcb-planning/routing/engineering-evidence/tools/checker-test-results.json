@@ -1,0 +1,695 @@
+{
+  "synthetic_only": true,
+  "tool": "10.0.6",
+  "checker_sha256": "8878e6b90b8bb1ed78cc5da2c1ad37f1778e34344fa631429cc4a94b084c3491",
+  "tests_sha256": "11627691fbfbb64b41551c373ad3aa254e43d44e72004b5da069f985c62e7e9d",
+  "tests": [
+    {
+      "name": "pad-exception-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "b1bbe0d142d43bc1a2ed7568c21a62232ffd456ceeadedb56806288f4a2ed7d3",
+      "report_sha256": "ef439c3bcf8cddbed14b6652888e538f70a3af49c4d0c6c8bfce34f86fa421e5",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "connected-local-track-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "13dbc9c7214f924cde730e37fa131d05ca8d08b11ce232835d8a415b4bd3a235",
+      "report_sha256": "f335258800cbb7bf1be91334178431d9be574d433bf371ba98595db01b8281f2",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "track-escape-outside-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "e510437bef958b72e3ab83578771102392683681e76c3e991b7d960d77b3b139",
+      "report_sha256": "016e34e6dda697961fedf2447e8a19b705846c247fe30601cb37f56c4b9a58f6",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "27504ba4-89f6-4d22-a8ba-004c15bb8073",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.78577,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "bdabc58f-3e1c-48ee-b011-22fe58d22f0f",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.78577,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "bdabc58f-3e1c-48ee-b011-22fe58d22f0f",
+          "b": "27504ba4-89f6-4d22-a8ba-004c15bb8073",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "added-via-no-exception-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "15fa28ac84c3e1181f1dc729f6dfda553c836b7f678c025aa72e822493392803",
+      "report_sha256": "72b01c67d6b6837174f681bb7802fa754585d85228e5a3b3e921f1f842888ed8",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "793d5119-c235-407e-9cb3-e7bf3d906027",
+          "kinds": [
+            "pad",
+            "via"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.292382,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "18f122d4-5209-41ed-a9a5-8d0bf536ecc0",
+          "b": "793d5119-c235-407e-9cb3-e7bf3d906027",
+          "kinds": [
+            "track",
+            "via"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.450001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "track-crossing-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "8e15c4b714fe98b0b668be02fc8fc7806ad77b9618f8c880d06d180786845714",
+      "report_sha256": "be7d9b6d135ce923079088a6bc4324459206b108c38a15a0146f3cee56f0e3ba",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "0d10e3c6-899b-4197-9abb-ddf252020957",
+          "b": "a254048f-836b-489a-a411-e130a397430c",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.0,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "generic-separated-tracks-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "ef5e5df16f756d7ef68b8f07afb29168456904113929f569854ee0ebf166173b",
+      "report_sha256": "0ac8b1cbf7432e32aab6ec262ff9c519ba6ff3f98f7462493120c16fef5d7d7b",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "native-near-tracks-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "5dcc6dea98eb486aa47e5c1ff2a8f715a06160f21b4736d82511997fd8bcb64b",
+      "report_sha256": "921e382f63304f20cc6188340c18eb4c6c1a9e63aa26b48e41b39bf5da852fbd",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "79080ddf-32dc-432f-8d82-d9314fd59de8",
+          "b": "4a9eb95a-da83-4bfe-bdfc-a852c7b1d3db",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.1,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "near-but-disconnected-no-owner-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "27cbfe0f3e844a3cf5507aed067bc605ae353153d5f97087f89a983eff15d844",
+      "report_sha256": "cb246056861eaa19ab44c812afdb3049eac07f8a0ffd4e109cc7b03aed6c9250",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "9d9c606a-5d55-48f6-b3e1-ebf96d37ab84",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.505951,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "8648da31-e03f-4dc2-8150-7398afffa785",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.505951,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "8648da31-e03f-4dc2-8150-7398afffa785",
+          "b": "9d9c606a-5d55-48f6-b3e1-ebf96d37ab84",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "one-micron-gap-cannot-prove-owner-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "965df9ceae1093eae957b0e497d7895d1c1972aa2ae205708d9020c3ae4c6c22",
+      "report_sha256": "695f601c15c54e1b0e0e2ce2e5fb65ea0b7155ae053870f884d1db5e8f6acddf",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "41cf7ede-980b-4f7f-8bbe-abe0ff54851a",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.353662,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "41cf7ede-980b-4f7f-8bbe-abe0ff54851a",
+          "b": "95c035fb-8132-488b-bed3-df2bfa320695",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "ambiguous-roots-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "f09b04fb9ce737604fbb5ec603fa8bc9927cfc3899bfcc9cb58d04d94e39450b",
+      "report_sha256": "2727a28388258b5c6b4d84f9b6c96410d6c776bb7c8ddb775ccfeb151ba13856",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "aafb6724-de75-49fb-b2c0-520435b05bf8",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.35,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": [
+            {
+              "track": "aafb6724-de75-49fb-b2c0-520435b05bf8",
+              "layer": "F.Cu",
+              "exception_id": 0,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            },
+            {
+              "track": "aafb6724-de75-49fb-b2c0-520435b05bf8",
+              "layer": "F.Cu",
+              "exception_id": 1,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "copper_spacing",
+          "a": "aafb6724-de75-49fb-b2c0-520435b05bf8",
+          "b": "5cad32bb-3c0c-434b-a400-c0c2b8c597ff",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": [
+            {
+              "track": "aafb6724-de75-49fb-b2c0-520435b05bf8",
+              "layer": "F.Cu",
+              "exception_id": 0,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            },
+            {
+              "track": "aafb6724-de75-49fb-b2c0-520435b05bf8",
+              "layer": "F.Cu",
+              "exception_id": 1,
+              "local_pad_roots": [
+                [
+                  "J1",
+                  "1"
+                ],
+                [
+                  "J1",
+                  "3"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "explicit-provenance-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "f09b04fb9ce737604fbb5ec603fa8bc9927cfc3899bfcc9cb58d04d94e39450b",
+      "report_sha256": "8f397dbf10dc9c740e02a35f260326ece4e36bac15b0936096e6e38f7c22b540",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "tampered-provenance-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "f09b04fb9ce737604fbb5ec603fa8bc9927cfc3899bfcc9cb58d04d94e39450b",
+      "report_sha256": "6c7ef35c61e051808abc38fae8c0afda05f71a3bc9fa1a7068b893481d5f39eb",
+      "error": "Unsupported: Track provenance geometry mismatch aafb6724-de75-49fb-b2c0-520435b05bf8",
+      "findings": []
+    },
+    {
+      "name": "bad-provenance-hash-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "f09b04fb9ce737604fbb5ec603fa8bc9927cfc3899bfcc9cb58d04d94e39450b",
+      "report_sha256": "7e0dd34897601c5d9b42d5a3367f74ea48e0b7707b1c3d8f68a14daeab1125be",
+      "error": "Unsupported: Provenance saved-board hash mismatch",
+      "findings": []
+    },
+    {
+      "name": "foreign-thermal-zone-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "ecfe06da2e9543416d71215338b6b601d78603bfb899cf36139db0a57a42157e",
+      "report_sha256": "fcf9bb7bf17ed126c9646f3353e34747416d4e466587926ba47f90b448d48785",
+      "error": null,
+      "findings": [
+        {
+          "type": "U3_backside_reservation",
+          "id": "be2c3943-62c7-42d7-a071-0028e61de75e",
+          "kind": "zone",
+          "net": "BUS_PLUS",
+          "target_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "dc-return-thermal-zone-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "212bd7c630ba0d4514e75369a24d8d3922fddb1c23c375e2a9837a7bf0ccd967",
+      "report_sha256": "b0bef8058c5a2a33403f802ffb6d2ccdfe61c0a422e27fb3d391924b1b97fd54",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "track-zone-crossing-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "f4a106f374a784f5d2fa57da5ecc5798409be19e1d0037cc125ef74e5ac98f85",
+      "report_sha256": "381643f8ecfab08320e546293b834fa094de9e7e2f3304418e0833f2c0adbbe4",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "77d5e404-4e5c-485a-8114-f27b5c00f911",
+          "b": "96a61287-0f1d-4411-8cf5-a032568b9825",
+          "kinds": [
+            "track",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.0,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "track-in-zone-hole-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "b49fde1ce6b7e8ccc75e2272d9582e78a82989d6615865d70595bc7d4c60091a",
+      "report_sha256": "01203f8da93499300934c5438e7df34e5df062df4595e77d09707d1aa05b8eab",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "zone-not-package-exempt-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "7ce5e5f18755dcd2efc927d9a0ad8afd9e75f64a6b043de9d5dde6c15753a5cf",
+      "report_sha256": "c1182819ac2755f8a9005a948e700b230596b77ce8fac00260ab9e23ba4fd067",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.1",
+          "b": "f9b6f466-f9cc-46a1-aa60-ec21f33285bb",
+          "kinds": [
+            "pad",
+            "zone"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 0.400001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    },
+    {
+      "name": "unfilled-zone-stop-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "75ab485b47f5d92b4be7bd42c0225df30128734eee73ff0e0a5c218e894f601e",
+      "report_sha256": "b30cc0c3799c7fd28448cbbc800f817031e96e5c122b502b36a342c8976ba6e1",
+      "error": "Unsupported: Copper zone unfilled or marked stale",
+      "findings": []
+    },
+    {
+      "name": "dc-return-thermal-track-positive",
+      "expect_pass": true,
+      "test_passed": true,
+      "board_sha256": "7e0f1476735760784a707a1ccac06d777659681eba6c6074c0454d0946a05890",
+      "report_sha256": "ac54591e15a6f3a3365eca087f23527ce8597ade13030fae583115d1215b453a",
+      "error": null,
+      "findings": []
+    },
+    {
+      "name": "foreign-thermal-track-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "8d9ee9add75ad951881d715839d0475241121430b36807699e2157f25f6d2a37",
+      "report_sha256": "a720ab2bf2dbf3f09dce14017187b298a5f0270081758aa201e5c45e45591c8d",
+      "error": null,
+      "findings": [
+        {
+          "type": "U3_backside_reservation",
+          "id": "e4a94a71-140b-47c5-b32c-185f3b916c2e",
+          "kind": "track",
+          "net": "BUS_PLUS",
+          "target_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "protected-area-track-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "9ab0c018526461c002dbf35b822eb855a49ecb89a044b9cf26e74c9061227276",
+      "report_sha256": "30d997364d37ffb7d5e0161f0406d96ec81a5794067500a176c0d3f06f035a81",
+      "error": null,
+      "findings": [
+        {
+          "type": "protected_area",
+          "id": "b25c2163-92e0-4712-8eb6-f9b9da5404a5",
+          "layer": "F.Cu",
+          "area": "corner"
+        }
+      ]
+    },
+    {
+      "name": "edge-track-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "d662c18ca78ec90d63cda62985ae7feb79b218a638f03cb27ddce7cd4b985980",
+      "report_sha256": "23287907ac8da6bfbd3895da2dd51f90994f220709abd98ae202ff9159699db1",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_edge_setback",
+          "id": "6468c9b9-4b6a-4eab-8ebb-0818137ea4f9",
+          "layer": "F.Cu",
+          "target_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "track-width-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "7bddd25a1373e9121efd6b3accf0e3376c47f834e5d10c3daea03727d1c25cdd",
+      "report_sha256": "04265dde5edf45454b47355ed3edc767e26a0497b0cf6893544ddf78bc0e496b",
+      "error": null,
+      "findings": [
+        {
+          "type": "track_width",
+          "id": "46328109-a9da-4dfa-afdd-4ef706ddce12",
+          "actual": 0.2,
+          "target_mm": 0.3
+        }
+      ]
+    },
+    {
+      "name": "unsupported-arc-stop-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "ec25bc90655c9486c05e2d12e15fff55267b513ee21ab21c3a49fc87657a4cf4",
+      "report_sha256": "4fd0e82ef57eb0bdd59fcac8a9b68ec60d97644c6fd43016a1fbc433468e8632",
+      "error": "Unsupported: Only straight PCB_TRACK segments supported",
+      "findings": []
+    },
+    {
+      "name": "false-authored-owner-not-connected-negative",
+      "expect_pass": false,
+      "test_passed": true,
+      "board_sha256": "86d33e54736275d5ac938e045997b4389a417dab7167b7a00eaabe7c07648972",
+      "report_sha256": "3122028c488115ba3df69f1ccf8878e330955b9db0484c99bb433b11a6383cf8",
+      "error": null,
+      "findings": [
+        {
+          "type": "copper_spacing",
+          "a": "J1.2",
+          "b": "0976ccad-ed0e-42f3-8419-9ef1e9c7719b",
+          "kinds": [
+            "pad",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "DC_RETURN",
+            "BUS_PLUS"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.505951,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        },
+        {
+          "type": "copper_spacing",
+          "a": "0976ccad-ed0e-42f3-8419-9ef1e9c7719b",
+          "b": "72ea86e7-51ac-4b6f-9d43-6be236c2b3b7",
+          "kinds": [
+            "track",
+            "track"
+          ],
+          "layer": "F.Cu",
+          "nets": [
+            "BUS_PLUS",
+            "DC_RETURN"
+          ],
+          "target_mm": 4.0,
+          "conservative_gap_mm": 2.700001,
+          "exception_ids": [],
+          "generic_target_mm": 4.0,
+          "ownership_ambiguities": []
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "native_drc_comparison_sha256": "8725bc5954ad481440ec365c98b482a2eda93bd4ba2034546c36d3e0223c1e2f"
+}

@@ -1,0 +1,43 @@
+{
+  "actor": "/root/validator_quick_review",
+  "role": "Independent bounded Change Reviewer",
+  "decision": "ready_for_human_review",
+  "scope": "Derived candidate05 partial routing checkpoint and SC08-ZONE-OUTLINE-001 candidate-specific closure only; no integration, completed-routing approval or release",
+  "source_board_sha256": "5f82894e6de8fd263dfcb28bf86b09a0b9ea2574095bc47138b61a2c806aaf3a",
+  "accepted_original_board_sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5",
+  "checker_sha256": "8878e6b90b8bb1ed78cc5da2c1ad37f1778e34344fa631429cc4a94b084c3491",
+  "source_ownership": "Root is sole customer CAD writer. Reviewer read original/customer and helper sources only; all reviewer changes and refill/save were under work/sc08-validator-quick-review.",
+  "evidence": ["inspection.json", "native-refilled-drc.json", "inspect.py", "../sc08-route-helper-review/validator-review.json"],
+  "actual_checks": {
+    "pinned_native_version": "10.0.6",
+    "independent_native_cli_refill_save_copy": "Completed; exact output PCB SHA equals input SHA",
+    "native_geometry_violations": 0,
+    "native_unconnected_items": 65,
+    "native_schematic_parity_issues": 0,
+    "saved_track_count": 22,
+    "saved_via_count": 11,
+    "saved_copper_zone_count": 4,
+    "saved_outer_per_zone": 1,
+    "nonempty_SOURCE_F_Cu_zones": 2,
+    "source_and_refilled_track_via_records": "Identical",
+    "source_and_refilled_filled_copper_bidirectional_difference": "Zero area for every zone/layer",
+    "saved_fill_inside_outline_plus_2um": true,
+    "exact_outline_boolean_numeric_sliver_max_mm2": 0.0000000146915,
+    "project_rules_and_library_tables_equal_copied_inputs": true,
+    "accepted_original_sha_verified_unchanged": true
+  },
+  "findings": [{
+    "id": "SC08-ZONE-OUTLINE-001",
+    "status": "verified_closed_for_this_candidate_only",
+    "severity": "major_for_routing_acceptance",
+    "closure_evidence": "Four serialized single-outer zones survive independent native CLI refill/save byte-identically. SOURCE has two nonempty F.Cu zones. Exact raw-outline Boolean subtraction has only native integer clipping slivers below 1.47e-8 mm2; conservative 2um boundary comparison is empty, and independently recomputed copper is exactly unchanged.",
+    "remaining_tool_limitation": "Checker itself still trusts saved cached fill beyond NeedRefill. This closure does not add a general fail-closed freshness/outline guard or regression. Require independent native refill and serialized-outline check on every changed candidate."
+  }],
+  "limits": [
+    "65 unconnected items remain: this is incomplete routing and cannot pass a completed-routing gate.",
+    "Prior independent helper review ran copied 26-fixture suite and concave courtyard negative; this reviewer did not rerun the suite or claim independent broad helper acceptance.",
+    "No independent full circuit/connectivity export, placement, mechanical, current, thermal, transient or physical creepage/clearance qualification in this bounded review.",
+    "Native CLI emitted AppData/fontconfig diagnostics but completed versioned reports and saved board; no configuration was changed to silence them.",
+    "Any source, zone, rule, library or contract change invalidates affected hash-bound evidence; integration requires fresh checks and applicable human stage decision."
+  ]
+}

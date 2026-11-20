@@ -1,0 +1,59 @@
+{
+  "role": "Change Reviewer",
+  "actual_actor": "/root/validator_quick_review",
+  "implementer": "/root",
+  "independence": "Separate actor/context; independent native saved-board inspection and disposable-copy native CLI runs. No customer sources written.",
+  "decision": "ready_for_human_review",
+  "decision_scope": "ONLY readiness for an owner decision on the concrete U1.2/U1.4 local escape input change from 1.0 to 1.5 mm. No full routing approval, adoption, integration, ordering or energized-test authorization.",
+  "review_input_manifest_sha256": "0960d1f428fee6ba78bc66067e20196158e8437a21fc90ea37313bb979878ed1",
+  "manifest_verification": "Independently verified all 232 listed file hashes against actual saved files",
+  "source_hashes": {
+    "accepted_original": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5",
+    "accepted_constraints_checkpoint": "5f82894e6de8fd263dfcb28bf86b09a0b9ea2574095bc47138b61a2c806aaf3a",
+    "one_pair_proposal": "9db429f38c0c7e3c668fa3d1d3452143365a825cea56a603104573382dd008a9",
+    "future_spatial_intent": "e229ed9dd0a8a593837efcfeaac4fe11b63160d5ceab293653b18370dc764dc8"
+  },
+  "independent_checks": [
+    "Original accepted board remains c503...; 47 native footprint references/values/library IDs/UUIDs/positions/rotations/layers and all pad UUIDs/numbers/nets/positions/sizes/rotations/shapes/attributes/drills/layers compare identical in both portable candidates.",
+    "Both portable candidates retain byte-identical current schematic, native project settings and native custom rules.",
+    "Checkpoint has 22 tracks, 11 vias, four nonempty copper zones; proposal has 27 tracks, 13 vias, four nonempty copper zones. All four zones in each candidate have one serialized outer and pass separate saved-fill containment with documented 2 micrometre boundary envelope.",
+    "Independent KiCad 10.0.6 CLI --refill-zones --save-board --schematic-parity on own proposal project copy reports zero geometry violations, 64 unconnected items, zero parity issues. Saved proposal PCB remains byte-identical at 9db429...08a9, independently confirming fill freshness for this exact revision.",
+    "Inspected active failure report: three actual U1 SENSE_FB/DRAIN_BLOCKED spacing findings remain under the active 1.0 mm scope, with generic 4 mm targets. Counterfactual output explicitly marks only one pair changed, 1.9 mm local floor retained, 10807 checked face pairs, and NOT_APPROVED_NOT_ACTIVE.",
+    "Inspected proposed future routing scope: exact U1.2/U1.4 F.Cu pad/track-only 1.5 mm escape; no added via/zone exception, generic 4 mm elsewhere. Future spatial approval is null and hardware.json still selects the existing spatial input.",
+    "Inspected local-correction.png: identifies proposal status, current/proposed boundaries, 0.6 mm DRAIN width, unchanged other 21 exceptions and 64 remaining connections. View supports a bounded local decision and does not claim completed routing."
+  ],
+  "retained_evidence": {
+    "SC08-ZONE-OUTLINE-001": "Prior independent byte-identical refill/save closure remains valid for exact checkpoint 5f828...af3a. Proposal is a different hash and received a new separate native refill/save and containment check in this review; closure is not inherited solely from checkpoint.",
+    "helper_review": "Prior separate helper reviewer evidence is retained within its stated scope; full synthetic suite was not repeated here. General saved-cache/NeedRefill checker limitation remains and requires separate native refill for changed candidates."
+  },
+  "findings": [
+    {
+      "id": "RC-ROUTE-DRAIN-01",
+      "status": "open",
+      "severity": "major",
+      "affected_gate": "Controlled adoption and active routing acceptance",
+      "owner": "Root coordinator and actual authorized owner",
+      "problem": "Proposal violates the current 1.0 mm local exception in three full-matrix comparisons. Counterfactual success does not change the active constraint or confer authority.",
+      "closure": "Record actual owner decision bound to this exact one-pair input basis, then controlled adoption, refresh resolved consumers/checker supported scope, rerun exact saved-board matrix/native/spatial checks and obtain affected independent reviews. If declined, reroute under current constraints.",
+      "blocks_this_limited_owner_decision": false
+    },
+    {
+      "id": "SC08-ROUTING-INCOMPLETE",
+      "status": "open",
+      "severity": "blocker",
+      "affected_gate": "Completed routing stage",
+      "owner": "Root coordinator",
+      "problem": "64 actual connections remain. Full Toolkit work check fails, including stale previous PCB-hash-bound evidence and missing routing DFM/parity reviews.",
+      "closure": "Complete routing and refresh affected technical evidence/reviews on final integrated source; obtain actual routing-stage human decision.",
+      "blocks_this_limited_owner_decision": false
+    }
+  ],
+  "invalidation_and_integration": "Root remains sole CAD writer. The original placement remains preserved; current proposal is separate and inactive. Do not write or merge into Main or select proposed inputs based on this recommendation. Any later routing, zone, library, rule or input change invalidates affected evidence and requires refreshed checks. No past PCB-hash evidence is relabelled current.",
+  "limits": "Native coarse DRC is not the complete isolation matrix. Geometry does not qualify assembled creepage, insulation, current, thermal behavior, transient response or finished product requirements. No measurements or fabrication release assessed.",
+  "reviewer_artifacts": [
+    "work/sc08-validator-quick-review/final-inspection.json",
+    "work/sc08-validator-quick-review/final_inspect.py",
+    "work/sc08-validator-quick-review/final-proposal-native-drc.json",
+    "work/sc08-validator-quick-review/change-review.json"
+  ]
+}

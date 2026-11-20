@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "stage": "routing",
+  "errors": [
+    {
+      "id": "LAB_NETLIST",
+      "gate": "schematic",
+      "message": "EV-LAB_NETLIST: Evidence input missing or modified: SC08_prototype.kicad_pcb"
+    },
+    {
+      "id": "LAB_NETLIST",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_SPACING",
+      "gate": "placement",
+      "message": "EV-LAB_SPACING: Evidence input missing or modified: SC08_prototype.kicad_pcb"
+    },
+    {
+      "id": "LAB_SPACING",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_SPATIAL",
+      "gate": "placement",
+      "message": "EV-LAB_SPATIAL: Evidence input missing or modified: SC08_prototype.kicad_pcb"
+    },
+    {
+      "id": "LAB_SPATIAL",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_DFM",
+      "gate": "routing",
+      "message": "Required evidence kind absent: DRC"
+    },
+    {
+      "id": "LAB_PARITY",
+      "gate": "routing",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "matrix": [
+    {
+      "id": "LAB_SCOPE",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Kamil",
+      "type": "requirement",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SCOPE",
+          "path": "pcb-basis/lab-board-boundaries.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-LAB_SCOPE"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "LAB_NETLIST",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_NETLIST",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-LAB_NETLIST"
+      ],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "LAB_DOMAINS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DOMAINS",
+          "path": "pcb-basis/domain-matrix.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-LAB_DOMAINS"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "LAB_THERMAL",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_THERMAL",
+          "path": "pcb-basis/thermal-budget-results.json"
+        }
+      ],
+      "required_kind": "calculation",
+      "evidence_ids": [
+        "EV-LAB_THERMAL"
+      ],
+      "observed_levels": [
+        "calculated"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "LAB_PARTS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARTS",
+          "path": "capture-geometry-evidence.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-LAB_PARTS"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "LAB_INTERFACE",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_INTERFACE",
+          "path": "driver-led-interface.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-LAB_INTERFACE"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "LAB_SPACING",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPACING",
+          "path": "pcb-basis/routing-and-isolation-proposal.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-LAB_SPACING"
+      ],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "LAB_SPATIAL",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_SPATIAL",
+          "path": "spatial-constraints.proposed.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-LAB_SPATIAL"
+      ],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "LAB_DFM",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_DFM",
+          "path": "SC08_prototype.kicad_pro"
+        }
+      ],
+      "required_kind": "DRC",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "LAB_PARITY",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_PARITY",
+          "path": "SC08_prototype.kicad_sch"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "LAB_ARTIFACTS",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_ARTIFACTS",
+          "path": "hardware.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "LAB_TEST_BOUNDARY",
+      "revision": "LAB-FAB-1-PROPOSED",
+      "owner": "Codex-root",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "LAB_PCB",
+          "object": "LAB_TEST_BOUNDARY",
+          "path": "prototype-validation.json"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    }
+  ],
+  "open_questions": [],
+  "passed": false,
+  "limitations": [
+    "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+    "Hashes establish freshness, not evidence truth or reviewer authority.",
+    "Electrical checks compare declared DC envelopes only, not complete operation."
+  ],
+  "intent_digest": "ff46ca996de83485ddfcf6c37f54a58684934b336c65816dbee7e13b9165476c",
+  "product": "SC08_BARE_LAB_PCB",
+  "revision": "LAB-FAB-1-PROPOSED",
+  "document_sha256": "0afe6049b67b9b8bcd260c964ef4bb1f1566b8ea17dd442de258cf0116232256",
+  "blockers": [
+    {
+      "id": "LAB_NETLIST",
+      "gate": "schematic",
+      "message": "EV-LAB_NETLIST: Evidence input missing or modified: SC08_prototype.kicad_pcb"
+    },
+    {
+      "id": "LAB_NETLIST",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_SPACING",
+      "gate": "placement",
+      "message": "EV-LAB_SPACING: Evidence input missing or modified: SC08_prototype.kicad_pcb"
+    },
+    {
+      "id": "LAB_SPACING",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_SPATIAL",
+      "gate": "placement",
+      "message": "EV-LAB_SPATIAL: Evidence input missing or modified: SC08_prototype.kicad_pcb"
+    },
+    {
+      "id": "LAB_SPATIAL",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_DFM",
+      "gate": "routing",
+      "message": "Required evidence kind absent: DRC"
+    },
+    {
+      "id": "LAB_PARITY",
+      "gate": "routing",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_ARTIFACTS",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "LAB_TEST_BOUNDARY",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "blocked_stages": [
+    "schematic",
+    "placement",
+    "routing",
+    "release"
+  ]
+}

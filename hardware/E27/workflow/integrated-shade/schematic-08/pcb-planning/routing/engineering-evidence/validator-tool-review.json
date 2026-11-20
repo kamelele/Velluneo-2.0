@@ -1,0 +1,33 @@
+{
+  "actor": "/root/route_helper_review",
+  "role": "Independent saved-copper validator tooling review",
+  "checker_sha256": "8878e6b90b8bb1ed78cc5da2c1ad37f1778e34344fa631429cc4a94b084c3491",
+  "decision": "usable_for_bounded_saved_copper_geometry_evidence",
+  "customer_CAD_touched": false,
+  "checks": {
+    "independent_exact_copied_26_tests_exit": 0,
+    "native_comparison_pass": true,
+    "independent_concave_courtyard_no_AABB_exception_negative_pass": true,
+    "raw_loader_UUID_net_parity_source_audited": true,
+    "inward_owner_path_and_ambiguity_provenance_source_audited": true,
+    "finite_full_shape_splitting_and_no_via_zone_exceptions_source_audited": true
+  },
+  "findings": [
+    {
+      "id": "SC08-ZONE-OUTLINE-001",
+      "severity": "major_for_routing_acceptance",
+      "status": "open",
+      "problem": "Checker validates saved cached fill but does not compare it with serialized native zone outline or independently refill. Native NeedRefill false is insufficient freshness evidence; multi-outer serializer can leave cached fill extending beyond saved outline.",
+      "closure": "Validate saved outline/fill containment and independent native CLI refill consistency on final candidate, preferably fail-closed guard plus synthetic stalefill/outline regression. Root splitting disconnected outers must be independently verified.",
+      "blocks_bounded_geometry_diagnostic": false
+    }
+  ],
+  "scope_limits": [
+    "Independent geometric acceptance evidence component only: no human stage approval",
+    "Native DRC/parity/spatial and exact activeprofile checks remain required",
+    "Fullmatrix 4/2/.3 plus native customrule floors via independent nativeDRC",
+    "No physical insulation/creepage/current/thermal/transient qualification",
+    "Outward approximation may conservatively fail near boundaries"
+  ],
+  "evidence": "work/sc08-route-helper-review/validator/test-results.json and extra-test-results.json"
+}

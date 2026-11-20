@@ -1,0 +1,43 @@
+{
+  "scope": "Frozenone-paircorrectionreview;notroutingstageacceptance",
+  "findings": [
+    {
+      "id": "RC-ROUTE-DRAIN-01",
+      "severity": "major",
+      "state": "open",
+      "owner": "/root and Kamil",
+      "gate": "Activeconstraintadoption/routingacceptance",
+      "closure": "Actualownerdecisionboundtoe229ed9d...andthispacket,controlledpreview/adoption,consumerrefresh,fullsavedchecksandindependentclosure",
+      "blocks_limited_owner_input_decision": false
+    },
+    {
+      "id": "SC08-ROUTING-INCOMPLETE",
+      "severity": "blocker",
+      "state": "open",
+      "owner": "/root",
+      "gate": "Completedrouting/release",
+      "closure": "Complete64connections;refreshallaffectedPCB-hash-boundrequirements,DFM/parityevidence;freshnative/fullmatrix/thermal/topologyreviewsandactualhumanroutingdecision",
+      "blocks_limited_owner_input_decision": false
+    },
+    {
+      "id": "SC08-ZONE-OWN-001",
+      "state": "verified_closed_with_single_outer_precondition",
+      "evidence": "engineering-evidence/zone-tool-review.json;oldhelperqualificationretracted"
+    },
+    {
+      "id": "SC08-ZONE-MULTI-002",
+      "state": "verified_closed_for_saved_candidates",
+      "evidence": "reviews/change.json;independentnativeCLIrefillretains5f828/9dbhashes;separatesingleouterzones"
+    },
+    {
+      "id": "SC08-ZONE-OUTLINE-001",
+      "state": "verified_closed_for_saved_candidates_only",
+      "evidence": "reviews/change.json;generalfill-cachefreshnesslimitationretained"
+    },
+    {
+      "id": "HELPER-ENV-001",
+      "state": "mitigated_for_actual_saved_geometry",
+      "evidence": "ExactnativefullcoppermatrixreplayedbyReality;routerAABBcandidategeometryisnotacceptanceevidence"
+    }
+  ]
+}
