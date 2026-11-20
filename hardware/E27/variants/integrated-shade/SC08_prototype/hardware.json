@@ -17,17 +17,111 @@
     "stencil": "frameless"
   },
   "product": {
-    "requirements_file": "requirements.json",
+    "requirements_file": "requirements-lab-fabrication.proposed.json",
     "connectivity_file": "intended-connectivity.json",
-    "spatial_file": null,
-    "domains": [],
+    "spatial_file": "spatial-constraints.proposed.json",
+    "domains": [
+      {
+        "id": "AC_FRONT",
+        "nets": [
+          "AC_L",
+          "AC_MID",
+          "AC_FUSED",
+          "AC_N"
+        ],
+        "normal_bucket_Vrms": 400,
+        "source_envelope_peak_V": 1457.8,
+        "note": "Resistors do not establish upstream insulation protection; conservative full incoming-source bound retained for all four nets pending specific pair analysis."
+      },
+      {
+        "id": "BUS_DRAIN",
+        "nets": [
+          "BUS_PLUS",
+          "DRAIN_BLOCKED"
+        ],
+        "normal_bucket_Vrms": 400,
+        "BUS_conditional_peak_V": 664,
+        "VDS_prototype_target_V": 680,
+        "note": "VDS is a pair constraint, not every node-to-earth voltage."
+      },
+      {
+        "id": "SWITCH_FLOAT",
+        "nets": [
+          "SOURCE",
+          "SENSE_FB",
+          "BP",
+          "BP_RELAY",
+          "BP2_RELAY",
+          "L2_MID"
+        ],
+        "normal_cross_domain_bucket_Vrms": 400,
+        "cross_domain_peak_routing_bucket_V": 690,
+        "note": "690 is a proposed margin bucket, not a verified maximum. Local SOURCE-referenced subcircuits can use low-differential rules only for explicitly listed pairs; L2_MID is excluded from that concession."
+      },
+      {
+        "id": "OUTPUT_AUX",
+        "nets": [
+          "COUT_PLUS",
+          "LED_PLUS",
+          "AUX_FEED1",
+          "AUX_FEED2",
+          "AUX_FEED3",
+          "AUX_FEED4",
+          "AUX_FEED5",
+          "OV_MID"
+        ],
+        "normal_COUT_design_limit_V": 123,
+        "conditional_fault_peak_V": 145,
+        "note": "OV_MID is around half COUT; not a 12 V control node. Aux ladder fault/pair stresses require analysis before granting adjacent-node exceptions."
+      },
+      {
+        "id": "CONTROL_RETURN",
+        "nets": [
+          "DC_RETURN",
+          "MOS_GATE",
+          "OPTO2_A",
+          "OPTO_A",
+          "OPTO_DRIVE",
+          "OV_LOW",
+          "OV_SENSE",
+          "RAIL_REF",
+          "VCC_OV",
+          "VDD_COMP"
+        ],
+        "normal_local_differential_bucket_V": 15,
+        "note": "Local differential only. No safety-low-voltage status and no general single-fault overvoltage qualification inferred."
+      }
+    ],
     "requirements": [],
-    "minimums_mm": {},
-    "special_requirements": [],
+    "minimums_mm": {
+      "clearance": 0.3,
+      "track_width": 0.3,
+      "edge_clearance": 4.0
+    },
+    "special_requirements": [
+      "experimentalmainsreferencedlaboratorytestvehicle",
+      "NoSELVoutput",
+      "Qualifiedguardedfixturebeforeenergizing",
+      "NoinsulationorEMCqualificationclaim"
+    ],
     "barriers": [],
-    "standards_review_evidence": null
+    "standards_review_evidence": "pcb-basis/insulation-research.md (proposal,noapprovedproductstandardassessment)"
   },
-  "netclasses": [],
+  "netclasses": [
+    {
+      "name": "AC_BUS",
+      "nets": [
+        "Net-(J1-L)",
+        "Net-(RF1-Pad2)",
+        "Net-(BR1-AC-Pad2)",
+        "Net-(J1-N)",
+        "Net-(BR1-+)",
+        "/DRAIN_BLOCKED"
+      ],
+      "clearance": 1.5,
+      "track_width": 0.6
+    }
+  ],
   "source_files": [
     ".electronics-rules/config-state.json",
     "Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
@@ -57,6 +151,7 @@
     "PowerFlags.kicad_sym",
     "README.md",
     "SC08_prototype.kicad_dru",
+    "SC08_prototype.kicad_pcb",
     "SC08_prototype.kicad_pro",
     "SC08_prototype.kicad_sch",
     "bom-design.json",
@@ -77,7 +172,49 @@
     "owner-capture-approval.json",
     "owner-process-line-decision.json",
     "owner-prototype-scope.json",
+    "owner-spatial-prototype-decision.json",
+    "pcb-basis/C5-geometry-correction.json",
+    "pcb-basis/DESIGN_AUTHORITY.md",
+    "pcb-basis/all-package-pairs.json",
+    "pcb-basis/domain-matrix.json",
+    "pcb-basis/footprint-preflight.json",
+    "pcb-basis/hardware-lab-fabrication.proposed.json",
+    "pcb-basis/insulation-research.md",
+    "pcb-basis/intent-native-net-binding.json",
+    "pcb-basis/lab-board-boundaries.json",
+    "pcb-basis/lab-fabrication-criteria.json",
+    "pcb-basis/layout-reservations.json",
+    "pcb-basis/native-binding-export.xml",
+    "pcb-basis/package-exception-candidates.json",
+    "pcb-basis/package-exceptions.md",
+    "pcb-basis/preflight-findings.json",
+    "pcb-basis/proposed-rule-inputs.json",
+    "pcb-basis/routing-and-isolation-proposal.json",
+    "pcb-basis/spatial-preflight-proposal.json",
+    "pcb-basis/thermal-assumptions.md",
+    "pcb-basis/thermal-budget-results.json",
     "physical-pin-intent.csv",
+    "placement-verification/check_placement_source.py",
+    "placement-verification/connectivity-netlist.xml",
+    "placement-verification/connectivity.json",
+    "placement-verification/core-correction-corridor-check.json",
+    "placement-verification/doctor.json",
+    "placement-verification/erc.json",
+    "placement-verification/extra-placement-check.json",
+    "placement-verification/height-envelope-geometry.json",
+    "placement-verification/import-report.json",
+    "placement-verification/integrated-placement-review.json",
+    "placement-verification/loop-comparison.json",
+    "placement-verification/native-drc.json",
+    "placement-verification/original-to-lab-gate-crosswalk.json",
+    "placement-verification/placement-authoring.json",
+    "placement-verification/preceding-proposal-reviews.json",
+    "placement-verification/reference-fields.json",
+    "placement-verification/saved-corridor-geometry.json",
+    "placement-verification/spatial.json",
+    "placement-verification/summary.json",
+    "placement-verification/task-contract.json",
+    "placement-verification/thermal-placement-review.json",
     "prototype-validation.json",
     "rc-energy-bounds.json",
     "rc_energy.py",
@@ -90,8 +227,10 @@
     "reference/SC07/previous-SC06-owner-approval.json",
     "reference/SC07/recalculate.py",
     "reference/SC07/reference/electrical-calculations.json",
+    "requirements-lab-fabrication.proposed.json",
     "requirements.json",
     "source-basis.json",
+    "spatial-constraints.proposed.json",
     "studies/SC08A-superseded-bom-design.json",
     "studies/SC08A-superseded-calculated-control.json",
     "studies/SC08A-superseded-intended-connectivity.json",

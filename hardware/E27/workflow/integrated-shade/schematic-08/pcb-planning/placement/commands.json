@@ -1,0 +1,133 @@
+[
+  {
+    "name": "doctor",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\pcb-toolkit.py",
+      "doctor",
+      "--kicad-cli",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "--cad-python",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe"
+    ],
+    "exit_code": 0,
+    "stdout": "{\r\n  \"passed\": true,\r\n  \"configuration_error\": false,\r\n  \"pin\": {\r\n    \"archive_sha256\": \"15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4\",\r\n    \"candidate_accepted\": true,\r\n    \"kicad_version\": \"10.0.6\",\r\n    \"manifest_sha256\": \"05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\",\r\n    \"package_version\": \"0.7.1-preview.3\",\r\n    \"publication_ready\": false,\r\n    \"ruleset_version\": \"0.7.1\"\r\n  },\r\n  \"python\": \"3.11.5 (main, Jan 23 2026, 07:39:48) [MSC v.1944 64 bit (AMD64)]\",\r\n  \"cad_runtime\": {\r\n    \"pcbnew\": \"10.0.6\",\r\n    \"python\": \"3.11.5 (main, Jan 23 2026, 07:39:48) [MSC v.1944 64 bit (AMD64)]\"\r\n  },\r\n  \"kicad_cli_version\": \"10.0.6\",\r\n  \"platform\": \"Windows-10-10.0.26300-SP0\",\r\n  \"config_directories\": {\r\n    \"KICAD_CONFIG_HOME\": \"C:\\\\Users\\\\kamil\\\\Documents\\\\Codex\\\\2026-11-19\\\\znajd-na-githubie-veluneo-2-0\\\\work\\\\Velluneo-2.0\\\\.work\\\\kicad-config\",\r\n    \"KICAD_DOCUMENTS_HOME\": \"C:\\\\Users\\\\kamil\\\\Documents\\\\Codex\\\\2026-11-19\\\\znajd-na-githubie-veluneo-2-0\\\\work\\\\Velluneo-2.0\\\\.work\\\\kicad-documents\"\r\n  }\r\n}\r\n",
+    "stderr": ""
+  },
+  {
+    "name": "ERC",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--exit-code-violations",
+      "-o",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\placement-verification\\erc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 0 violations\r\nSaved ERC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC08_prototype/placement-verification/erc.json\r\n",
+    "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\r\n"
+  },
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "hardware/E27/variants/integrated-shade/SC08_prototype",
+      "--kicad-cli",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe"
+    ],
+    "exit_code": 0,
+    "stdout": "{\r\n  \"schema_version\": 1,\r\n  \"passed\": true,\r\n  \"errors\": [],\r\n  \"commands\": [\r\n    {\r\n      \"command\": [\r\n        \"kicad-cli.exe\",\r\n        \"sch\",\r\n        \"export\",\r\n        \"netlist\",\r\n        \"--format\",\r\n        \"kicadxml\",\r\n        \"--output\",\r\n        \"C:\\\\Users\\\\kamil\\\\Documents\\\\Codex\\\\2026-11-19\\\\znajd-na-githubie-veluneo-2-0\\\\work\\\\Velluneo-2.0\\\\hardware\\\\E27\\\\variants\\\\integrated-shade\\\\SC08_prototype\\\\.work\\\\connectivity-netlist.xml\",\r\n        \"C:\\\\Users\\\\kamil\\\\Documents\\\\Codex\\\\2026-11-19\\\\znajd-na-githubie-veluneo-2-0\\\\work\\\\Velluneo-2.0\\\\hardware\\\\E27\\\\variants\\\\integrated-shade\\\\SC08_prototype\\\\SC08_prototype.kicad_sch\"\r\n      ],\r\n      \"exit_code\": 0,\r\n      \"stdout\": \"\",\r\n      \"stderr\": \"Fontconfig error: Cannot load default config file: No such file: (null)\\n\"\r\n    }\r\n  ],\r\n  \"intent_digest\": \"8be47de3f17c30ea9a07f16a6a6a85a7a51511d35990cbc8c5f02e8aa143e574\",\r\n  \"intent_revision\": \"SC08-B\",\r\n  \"physical_pins\": 112,\r\n  \"intended_nets\": 30,\r\n  \"no_connects\": 1,\r\n  \"limitations\": [\r\n    \"Graph agreement is not functional, part/MPN, PCB or physical isolation validation.\",\r\n    \"Approval fields record evidence; hashes do not authenticate a human.\"\r\n  ],\r\n  \"intent_sha256\": \"4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809\",\r\n  \"export_sha256\": \"0bfe43c7c2ffc645e9aba47b2bdf5f2f33b99a8a74466ac1f4b7502ba743b6f4\",\r\n  \"export_tool\": \"Eeschema 10.0.6\",\r\n  \"toolkit\": {\r\n    \"kind\": \"installed\",\r\n    \"lock_sha256\": \"a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d\",\r\n    \"archive_sha256\": \"15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4\",\r\n    \"candidate_accepted\": true,\r\n    \"kicad_version\": \"10.0.6\",\r\n    \"manifest_sha256\": \"05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\",\r\n    \"package_version\": \"0.7.1-preview.3\",\r\n    \"publication_ready\": false,\r\n    \"ruleset_version\": \"0.7.1\"\r\n  }\r\n}\r\n",
+    "stderr": ""
+  },
+  {
+    "name": "spatial",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\pcb-toolkit.py",
+      "run",
+      "spatial",
+      "hardware/E27/variants/integrated-shade/SC08_prototype",
+      "--kicad-cli",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe"
+    ],
+    "exit_code": 0,
+    "stdout": "{\r\n  \"passed\": true,\r\n  \"errors\": [],\r\n  \"constraints_digest\": \"437547f182ba76936b5d5c5c120e5fd94d8ed04d9dff2a5e5d5920442059be8e\",\r\n  \"intent_digest\": \"bbb49d0ae8de340b0e57a38008914b29f94b30277270c1ab14a22e457b74ea30\",\r\n  \"geometry\": {\r\n    \"footprints\": [\r\n      {\r\n        \"reference\": \"U1\",\r\n        \"envelope_mm\": [\r\n          106.275,\r\n          37.14,\r\n          7.45,\r\n          5.585\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"D3\",\r\n        \"envelope_mm\": [\r\n          57.125,\r\n          23.55175,\r\n          18.99,\r\n          8.2965\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R27\",\r\n        \"envelope_mm\": [\r\n          102.422619,\r\n          31.295,\r\n          5.552381,\r\n          3.41\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"BR1\",\r\n        \"envelope_mm\": [\r\n          31.155,\r\n          24.325,\r\n          7.7,\r\n          5.35\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"U4\",\r\n        \"envelope_mm\": [\r\n          97.05,\r\n          42.7,\r\n          3.4,\r\n          6.0\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R26\",\r\n        \"envelope_mm\": [\r\n          53.295,\r\n          82.65175,\r\n          3.41,\r\n          4.32325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R28\",\r\n        \"envelope_mm\": [\r\n          116.145,\r\n          6.545,\r\n          7.71,\r\n          3.91\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R23\",\r\n        \"envelope_mm\": [\r\n          45.295,\r\n          64.65175,\r\n          3.41,\r\n          4.32325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"U5\",\r\n        \"envelope_mm\": [\r\n          96.1,\r\n          51.3,\r\n          3.4,\r\n          6.0\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"U2\",\r\n        \"envelope_mm\": [\r\n          30.875,\r\n          75.1,\r\n          6.2,\r\n          5.24825\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"D4\",\r\n        \"envelope_mm\": [\r\n          85.475,\r\n          38.15175,\r\n          7.095,\r\n          8.1965\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"D1\",\r\n        \"envelope_mm\": [\r\n          103.585,\r\n          47.83,\r\n          11.15,\r\n          7.195\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R20\",\r\n        \"envelope_mm\": [\r\n          52.295,\r\n          73.65175,\r\n          3.41,\r\n          4.32325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R16\",\r\n        \"envelope_mm\": [\r\n          91.695,\r\n          64.65175,\r\n          4.61,\r\n          4.50325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"Q2\",\r\n        \"envelope_mm\": [\r\n          42.875,\r\n          73.65175,\r\n          6.08,\r\n          5.07325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R21\",\r\n        \"envelope_mm\": [\r\n          53.295,\r\n          64.65175,\r\n          3.41,\r\n          4.32325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R17\",\r\n        \"envelope_mm\": [\r\n          91.695,\r\n          72.65175,\r\n          4.61,\r\n          4.50325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"J1\",\r\n        \"envelope_mm\": [\r\n          4.517857,\r\n          18.475,\r\n          13.507143,\r\n          4.05\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R11\",\r\n        \"envelope_mm\": [\r\n          96.145,\r\n          15.045,\r\n          7.71,\r\n          3.91\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"C10\",\r\n        \"envelope_mm\": [\r\n          115.175,\r\n          34.35175,\r\n          4.65,\r\n          6.47325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"C1\",\r\n        \"envelope_mm\": [\r\n          7.325,\r\n          33.15175,\r\n          33.35,\r\n          17.47325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R8\",\r\n        \"envelope_mm\": [\r\n          104.545,\r\n          67.145,\r\n          3.91,\r\n          7.71\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"J2\",\r\n        \"envelope_mm\": [\r\n          110.017857,\r\n          90.475,\r\n          13.507143,\r\n          4.05\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"RF2\",\r\n        \"envelope_mm\": [\r\n          58.475,\r\n          5.65175,\r\n          25.05,\r\n          9.87325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"C4\",\r\n        \"envelope_mm\": [\r\n          115.175,\r\n          44.60175,\r\n          6.426191,\r\n          4.97325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"C9\",\r\n        \"envelope_mm\": [\r\n          33.275,\r\n          80.995,\r\n          3.45,\r\n          4.35325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"RF1\",\r\n        \"envelope_mm\": [\r\n          24.475,\r\n          5.65175,\r\n          25.05,\r\n          9.87325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"C5\",\r\n        \"envelope_mm\": [\r\n          111.075,\r\n          66.075,\r\n          20.376191,\r\n          17.05\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R22\",\r\n        \"envelope_mm\": [\r\n          36.695,\r\n          64.65175,\r\n          4.61,\r\n          4.50325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R2\",\r\n        \"envelope_mm\": [\r\n          113.695,\r\n          41.65175,\r\n          4.61,\r\n          4.50325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R12\",\r\n        \"envelope_mm\": [\r\n          96.145,\r\n          23.545,\r\n          7.71,\r\n          3.91\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R25\",\r\n        \"envelope_mm\": [\r\n          116.145,\r\n          15.045,\r\n          7.71,\r\n          3.91\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"L2\",\r\n        \"envelope_mm\": [\r\n          121.475,\r\n          30.65175,\r\n          12.05,\r\n          13.87325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R7\",\r\n        \"envelope_mm\": [\r\n          70.275,\r\n          84.15175,\r\n          28.45,\r\n          10.77325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"L3\",\r\n        \"envelope_mm\": [\r\n          121.475,\r\n          44.65175,\r\n          12.05,\r\n          13.87325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R18\",\r\n        \"envelope_mm\": [\r\n          26.295,\r\n          72.65175,\r\n          3.41,\r\n          4.32325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R14\",\r\n        \"envelope_mm\": [\r\n          18.695,\r\n          64.65175,\r\n          4.61,\r\n          4.50325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"C3\",\r\n        \"envelope_mm\": [\r\n          108.275,\r\n          32.55175,\r\n          3.45,\r\n          4.35325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R13\",\r\n        \"envelope_mm\": [\r\n          9.695,\r\n          64.65175,\r\n          4.61,\r\n          4.50325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R24\",\r\n        \"envelope_mm\": [\r\n          116.145,\r\n          23.545,\r\n          7.71,\r\n          3.91\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R15\",\r\n        \"envelope_mm\": [\r\n          27.695,\r\n          64.65175,\r\n          4.61,\r\n          4.50325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R10\",\r\n        \"envelope_mm\": [\r\n          96.145,\r\n          6.545,\r\n          7.71,\r\n          3.91\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R9\",\r\n        \"envelope_mm\": [\r\n          104.545,\r\n          78.145,\r\n          3.91,\r\n          7.71\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"U3\",\r\n        \"envelope_mm\": [\r\n          75.125,\r\n          68.65175,\r\n          7.0,\r\n          5.87325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R6\",\r\n        \"envelope_mm\": [\r\n          100.39881,\r\n          33.995,\r\n          5.07619,\r\n          3.41\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"R19\",\r\n        \"envelope_mm\": [\r\n          45.295,\r\n          81.025,\r\n          3.41,\r\n          4.32325\r\n        ]\r\n      },\r\n      {\r\n        \"reference\": \"C2\",\r\n        \"envelope_mm\": [\r\n          43.575,\r\n          33.15175,\r\n          33.35,\r\n          17.47325\r\n        ]\r\n      }\r\n    ],\r\n    \"area_count\": 8,\r\n    \"pcbnew_version\": \"10.0.6\"\r\n  },\r\n  \"limitations\": [\r\n    \"Consumer files verify declared inputs, not execution of an external router.\",\r\n    \"Block topology/SI/PI/EMC and physical insulation require separate evidence.\"\r\n  ],\r\n  \"toolkit\": {\r\n    \"kind\": \"installed\",\r\n    \"lock_sha256\": \"a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d\",\r\n    \"archive_sha256\": \"15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4\",\r\n    \"candidate_accepted\": true,\r\n    \"kicad_version\": \"10.0.6\",\r\n    \"manifest_sha256\": \"05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\",\r\n    \"package_version\": \"0.7.1-preview.3\",\r\n    \"publication_ready\": false,\r\n    \"ruleset_version\": \"0.7.1\"\r\n  }\r\n}\r\n",
+    "stderr": ""
+  },
+  {
+    "name": "DRC",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--exit-code-violations",
+      "-o",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\placement-verification\\native-drc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_pcb"
+    ],
+    "exit_code": 5,
+    "stdout": "Found 0 violations\r\nFound 81 unconnected items\r\nFound 0 schematic parity issues\r\nSaved DRC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC08_prototype/placement-verification/native-drc.json\r\n",
+    "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\r\n"
+  },
+  {
+    "name": "extra_spacing",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc08_check_placement.py"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"pins\": 112, \"pairs\": 5898, \"findings\": []}\r\n",
+    "stderr": ""
+  },
+  {
+    "name": "topSVG",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--mode-single",
+      "--layers",
+      "F.Cu,F.Silkscreen,F.Fab,Edge.Cuts",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "-o",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\schematic-08\\pcb-planning\\placement\\top.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\schematic-08\\pcb-planning\\placement\\top.svg'.\r\nDone.\r\n",
+    "stderr": ""
+  },
+  {
+    "name": "bottomSVG",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--mode-single",
+      "--layers",
+      "B.Cu,B.Silkscreen,Edge.Cuts",
+      "--mirror",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "-o",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\schematic-08\\pcb-planning\\placement\\bottom.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to 'C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\schematic-08\\pcb-planning\\placement\\bottom.svg'.\r\nDone.\r\n",
+    "stderr": ""
+  }
+]

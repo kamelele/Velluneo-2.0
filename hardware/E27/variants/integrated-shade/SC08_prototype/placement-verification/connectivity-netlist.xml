@@ -1,0 +1,2080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\kamil\Documents\Codex\2026-11-19\znajd-na-githubie-veluneo-2-0\work\Velluneo-2.0\hardware\E27\variants\integrated-shade\SC08_prototype\SC08_prototype.kicad_sch</source>
+    <date>2026-11-20T12:02:20</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Velluneo SC08-B base-reservoir LED driver</title>
+        <company/>
+        <rev>SC08-B draft</rev>
+        <date>2026-11-19</date>
+        <source>SC08_prototype.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BR1">
+      <value>1000V0.8A</value>
+      <footprint>E27SC06:MB10S_Diodes</footprint>
+      <datasheet>https://www.diodes.com/datasheet/download/MB10S.pdf</datasheet>
+      <fields>
+        <field name="MPN">MB10S-13</field>
+        <field name="Footprint">E27SC06:MB10S_Diodes</field>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/MB10S.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_BR1" description=""/>
+      <property name="MPN" value="MB10S-13"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9ae8ea3-67bb-5b0b-9a58-26769f449e7c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="1"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1">
+      <value>100nF2kV</value>
+      <footprint>E27SC06:Film_32x14_P27p5</footprint>
+      <datasheet>https://search.kemet.com/download/specsheet/R76UR31004030J</datasheet>
+      <fields>
+        <field name="MPN">R76UR31004030J</field>
+        <field name="Footprint">E27SC06:Film_32x14_P27p5</field>
+        <field name="Datasheet">https://search.kemet.com/download/specsheet/R76UR31004030J</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_C1" description=""/>
+      <property name="MPN" value="R76UR31004030J"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1f20c6f9-4d5f-50d3-ab2e-c9d47ea3cf80</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>330nF1kV</value>
+      <footprint>E27SC06:Film_32x14_P27p5</footprint>
+      <datasheet>https://search.kemet.com/download/specsheet/R76QR3330SE30J</datasheet>
+      <fields>
+        <field name="MPN">R76QR3330SE30J</field>
+        <field name="Footprint">E27SC06:Film_32x14_P27p5</field>
+        <field name="Datasheet">https://search.kemet.com/download/specsheet/R76QR3330SE30J</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_C2" description=""/>
+      <property name="MPN" value="R76QR3330SE30J"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0b7614e1-d12d-5d8a-b743-589a12c2bad3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF50V</value>
+      <footprint>E27SC06:C_0805</footprint>
+      <datasheet>https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23</datasheet>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">E27SC06:C_0805</field>
+        <field name="Datasheet">https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_C3" description=""/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e9cb871-c326-5628-a50d-ad526a2a845c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>22uF25VX7R</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</datasheet>
+      <fields>
+        <field name="MPN">CL32B226KAJNNNE</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet">https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_C4" description=""/>
+      <property name="MPN" value="CL32B226KAJNNNE"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cad9ecb1-c4f5-5d97-8c32-7e58ed2e3f21</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>150uF160V</value>
+      <footprint>E27SC06:CP_16x25_P7p5</footprint>
+      <datasheet>https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C151</datasheet>
+      <fields>
+        <field name="MPN">EEUED2C151</field>
+        <field name="Footprint">E27SC06:CP_16x25_P7p5</field>
+        <field name="Datasheet">https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C151</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_C5" description=""/>
+      <property name="MPN" value="EEUED2C151"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6409fa96-8a0a-5fa7-b98b-c2c9b41f481a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100nF50V</value>
+      <footprint>E27SC06:C_0805</footprint>
+      <datasheet>https://www.murata.com/en-us/products</datasheet>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">E27SC06:C_0805</field>
+        <field name="Datasheet">https://www.murata.com/en-us/products</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_C9" description=""/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5aced00-75b6-5848-964c-0ba8d87b23b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>22uF25VX7R</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</datasheet>
+      <fields>
+        <field name="MPN">CL32B226KAJNNNE</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet">https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_C10" description=""/>
+      <property name="MPN" value="CL32B226KAJNNNE"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>056656e4-8af6-5bdb-8ad1-8ebcae12803a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>1200V2ASiC</value>
+      <footprint>E27SC06:C4D02120E_TO252</footprint>
+      <datasheet>https://assets.wolfspeed.com/uploads/2023/10/Wolfspeed_C4D02120E_data_sheet.pdf</datasheet>
+      <fields>
+        <field name="MPN">C4D02120E</field>
+        <field name="Footprint">E27SC06:C4D02120E_TO252</field>
+        <field name="Datasheet">https://assets.wolfspeed.com/uploads/2023/10/Wolfspeed_C4D02120E_data_sheet.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_D1" description=""/>
+      <property name="MPN" value="C4D02120E"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>482c4128-e33e-5393-8d10-3cebe4402b7f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="CASE"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>376Vstandoff TVS</value>
+      <footprint>Diode_THT:D_DO-201AD_P15.24mm_Horizontal</footprint>
+      <datasheet>https://www.vishay.com/docs/88301/15ke.pdf</datasheet>
+      <fields>
+        <field name="MPN">1.5KE440A-E3/54</field>
+        <field name="Footprint">Diode_THT:D_DO-201AD_P15.24mm_Horizontal</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88301/15ke.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_D3" description=""/>
+      <property name="MPN" value="1.5KE440A-E3/54"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3faf6937-1c99-5a7b-be04-eb2d51d28a13</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D4">
+      <value>1000V1A blocking</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stth110.pdf</datasheet>
+      <fields>
+        <field name="MPN">STTH110A</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/stth110.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_D4" description=""/>
+      <property name="MPN" value="STTH110A"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>493bf8a1-6487-5668-a085-abd7bd939370</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>AC input230V50Hz</value>
+      <footprint>E27SC06:WirePads_2_P7p5</footprint>
+      <datasheet>Ownerboardonlyscope;electricalinterfaceproposal</datasheet>
+      <fields>
+        <field name="MPN">PCB wire pads, not purchased connector</field>
+        <field name="Footprint">E27SC06:WirePads_2_P7p5</field>
+        <field name="Datasheet">Ownerboardonlyscope;electricalinterfaceproposal</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_J1" description=""/>
+      <property name="MPN" value="PCB wire pads, not purchased connector"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62f21dd2-9b98-5e97-9a34-af0d1373bebc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>LED panel55mA</value>
+      <footprint>E27SC06:WirePads_2_P7p5</footprint>
+      <datasheet>SC06electricalloadinterface</datasheet>
+      <fields>
+        <field name="MPN">PCB wire pads, not purchased connector</field>
+        <field name="Footprint">E27SC06:WirePads_2_P7p5</field>
+        <field name="Datasheet">SC06electricalloadinterface</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_J2" description=""/>
+      <property name="MPN" value="PCB wire pads, not purchased connector"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0cb1d70-5fc0-5ab0-bc82-30539aa48b13</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L2">
+      <value>1.5mH</value>
+      <footprint>E27SC06:RFC1010B_P6</footprint>
+      <datasheet>https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</datasheet>
+      <fields>
+        <field name="MPN">RFC1010B-155KE</field>
+        <field name="Footprint">E27SC06:RFC1010B_P6</field>
+        <field name="Datasheet">https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_L2" description=""/>
+      <property name="MPN" value="RFC1010B-155KE"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06b2e950-ff5f-5971-add6-6b1d4d2d3856</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L3">
+      <value>1.5mH</value>
+      <footprint>E27SC06:RFC1010B_P6</footprint>
+      <datasheet>https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</datasheet>
+      <fields>
+        <field name="MPN">RFC1010B-155KE</field>
+        <field name="Footprint">E27SC06:RFC1010B_P6</field>
+        <field name="Datasheet">https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_L3" description=""/>
+      <property name="MPN" value="RFC1010B-155KE"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c4e878d-7a59-5b36-aeab-66f42dbbfd4b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>P-MOS20V</value>
+      <footprint>E27SC06:SOT23</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf</datasheet>
+      <fields>
+        <field name="MPN">PMV65XP,215</field>
+        <field name="Footprint">E27SC06:SOT23</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_Q2" description=""/>
+      <property name="MPN" value="PMV65XP,215"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bac2e00e-d15b-5645-bbec-199836ef0f1a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>28.7ohm 0.75W HP current seed</value>
+      <footprint>E27SC06:R_1206</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW120628R7FKEAHP</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R2" description=""/>
+      <property name="MPN" value="CRCW120628R7FKEAHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7b5e5219-c2f1-5c74-976a-68a0deb5fa2c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>100RBPclamp</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.yageo.com/en/Product/Index/rchip</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-07100RL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R6" description=""/>
+      <property name="MPN" value="RC0805FR-07100RL"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4c3aa0c8-4c8b-5c80-907f-95bce7cb9cf4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>470R5W</value>
+      <footprint>E27SC06:AC05_18x7p5_P25p4</footprint>
+      <datasheet>https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf</datasheet>
+      <fields>
+        <field name="MPN">AC05000004700JAC00</field>
+        <field name="Footprint">E27SC06:AC05_18x7p5_P25p4</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R7" description=""/>
+      <property name="MPN" value="AC05000004700JAC00"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1eadaeee-fdf4-5a8a-89b8-572b11e320d9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>56k1W</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/doc?20035</datasheet>
+      <fields>
+        <field name="MPN">CRCW251256K0FKEG</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/doc?20035</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R8" description=""/>
+      <property name="MPN" value="CRCW251256K0FKEG"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3508b866-3058-5444-b28e-ee5477a782f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>56k1W</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/doc?20035</datasheet>
+      <fields>
+        <field name="MPN">CRCW251256K0FKEG</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/doc?20035</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R9" description=""/>
+      <property name="MPN" value="CRCW251256K0FKEG"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11fd5761-b63f-5de9-99ed-c941e85625cf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>715ohm1.5WHP</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R10" description=""/>
+      <property name="MPN" value="CRCW2512715RFKEGHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>781e0f97-3fe6-59fa-817b-09dce81f6e0e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>715ohm1.5WHP</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R11" description=""/>
+      <property name="MPN" value="CRCW2512715RFKEGHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2fbe570a-8743-5706-b554-a4041e64a02b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>715ohm1.5WHP</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R12" description=""/>
+      <property name="MPN" value="CRCW2512715RFKEGHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e1e1166-71bb-5fee-bb81-b16e7f52bed9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>160k0.1%10ppm</value>
+      <footprint>E27SC06:R_1206</footprint>
+      <datasheet>https://www.vishay.com/docs/28758/tnpw_e3.pdf</datasheet>
+      <fields>
+        <field name="MPN">TNPW1206160KBYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R13" description=""/>
+      <property name="MPN" value="TNPW1206160KBYEA"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e7bc934-22d0-51cd-80a1-ef1a365c6a9e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>160k0.1%10ppm</value>
+      <footprint>E27SC06:R_1206</footprint>
+      <datasheet>https://www.vishay.com/docs/28758/tnpw_e3.pdf</datasheet>
+      <fields>
+        <field name="MPN">TNPW1206160KBYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R14" description=""/>
+      <property name="MPN" value="TNPW1206160KBYEA"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4375154c-91dd-552e-9a1a-369fba4a20ba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>1k0.1%10ppm</value>
+      <footprint>E27SC06:R_1206</footprint>
+      <datasheet>https://www.vishay.com/docs/28758/tnpw_e3.pdf</datasheet>
+      <fields>
+        <field name="MPN">TNPW12061K00BYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R15" description=""/>
+      <property name="MPN" value="TNPW12061K00BYEA"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2a8e63b-54cd-5581-9bd4-1208bd31cdea</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>38k3 0.1%</value>
+      <footprint>E27SC06:R_1206</footprint>
+      <datasheet>https://www.vishay.com/docs/28758/tnpw_e3.pdf</datasheet>
+      <fields>
+        <field name="MPN">TNPW120638K3BEEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R16" description=""/>
+      <property name="MPN" value="TNPW120638K3BEEA"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdd45b84-d545-555a-8cdf-ebdfb99abb8c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>10k 0.1%</value>
+      <footprint>E27SC06:R_1206</footprint>
+      <datasheet>https://www.vishay.com/docs/28758/tnpw_e3.pdf</datasheet>
+      <fields>
+        <field name="MPN">TNPW120610K0BEEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R17" description=""/>
+      <property name="MPN" value="TNPW120610K0BEEA"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>258371c2-9428-521a-923a-d5e0cc327c94</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>100R</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.yageo.com/en/Product/Index/rchip</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-07100RL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R18" description=""/>
+      <property name="MPN" value="RC0805FR-07100RL"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bb2a990a-6678-502d-99df-cd2ef1c0ab67</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>11k</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.yageo.com/en/Product/Index/rchip</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-0711KL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R19" description=""/>
+      <property name="MPN" value="RC0805FR-0711KL"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd4d31d4-2c7f-59b2-a4ed-bd39fff99bae</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>10k</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.yageo.com/en/Product/Index/rchip</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R20" description=""/>
+      <property name="MPN" value="RC0805FR-0710KL"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63730ed5-a279-5e6d-943e-46dca3b153ef</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>1k78 0.5W HP</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW08051K78FKEAHP</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R21" description=""/>
+      <property name="MPN" value="CRCW08051K78FKEAHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>52cc6f3c-0330-5d35-8535-838bda75a4d5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>210k0.1%10ppm</value>
+      <footprint>E27SC06:R_1206</footprint>
+      <datasheet>https://www.vishay.com/docs/28758/tnpw_e3.pdf</datasheet>
+      <fields>
+        <field name="MPN">TNPW1206210KBYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R22" description=""/>
+      <property name="MPN" value="TNPW1206210KBYEA"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae32ea88-384b-5eba-b6b4-63352c0901dc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R23">
+      <value>4k3</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.yageo.com/en/Product/Index/rchip</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-074K3L</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R23" description=""/>
+      <property name="MPN" value="RC0805FR-074K3L"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2aa60a69-b9c7-50af-9c64-f7ceb2d8144c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R24">
+      <value>715ohm1.5WHP</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R24" description=""/>
+      <property name="MPN" value="CRCW2512715RFKEGHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fea15bf-aec8-5b31-839f-67836527c8cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R25">
+      <value>715ohm1.5WHP</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R25" description=""/>
+      <property name="MPN" value="CRCW2512715RFKEGHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57f2cd74-57f8-5228-b8ce-6405224d9af4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R26">
+      <value>1k78 0.5W HP</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW08051K78FKEAHP</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R26" description=""/>
+      <property name="MPN" value="CRCW08051K78FKEAHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e8f0701c-4169-5097-8704-6ffb2fc2b535</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R27">
+      <value>100ohmBPclamp2</value>
+      <footprint>E27SC06:R_0805</footprint>
+      <datasheet>https://www.yageo.com/en/Product/Index/rchip</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-07100RL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R27" description=""/>
+      <property name="MPN" value="RC0805FR-07100RL"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>117c3311-617c-594f-938e-ba1de5ccc051</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R28">
+      <value>715ohm1.5WHP</value>
+      <footprint>E27SC06:R_2512</footprint>
+      <datasheet>https://www.vishay.com/docs/20043/crcwhpe3.pdf</datasheet>
+      <fields>
+        <field name="MPN">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_R28" description=""/>
+      <property name="MPN" value="CRCW2512715RFKEGHP"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>65421dcf-4e73-5d40-840f-c6339cd35007</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RF1">
+      <value>220R2Wfusible</value>
+      <footprint>E27SC06:RF_16x5p5_P22</footprint>
+      <datasheet>https://www.te.com/en/product-6-2176792-5.html</datasheet>
+      <fields>
+        <field name="MPN">FWFU2W220RJ</field>
+        <field name="Footprint">E27SC06:RF_16x5p5_P22</field>
+        <field name="Datasheet">https://www.te.com/en/product-6-2176792-5.html</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_RF1" description=""/>
+      <property name="MPN" value="FWFU2W220RJ"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>debf30cd-522f-51d7-9d0b-9ec87a60d19c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RF2">
+      <value>220R2Wfusible</value>
+      <footprint>E27SC06:RF_16x5p5_P22</footprint>
+      <datasheet>https://www.te.com/en/product-6-2176792-5.html</datasheet>
+      <fields>
+        <field name="MPN">FWFU2W220RJ</field>
+        <field name="Footprint">E27SC06:RF_16x5p5_P22</field>
+        <field name="Datasheet">https://www.te.com/en/product-6-2176792-5.html</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_RF2" description=""/>
+      <property name="MPN" value="FWFU2W220RJ"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8dc58586-eb86-56c5-a63b-e5247188adcb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>LYT0006D-TL</value>
+      <footprint>E27SC06:LYT_SO8C_no3</footprint>
+      <datasheet>https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf</datasheet>
+      <fields>
+        <field name="MPN">LYT0006D-TL</field>
+        <field name="Footprint">E27SC06:LYT_SO8C_no3</field>
+        <field name="Datasheet">https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_U1" description=""/>
+      <property name="MPN" value="LYT0006D-TL"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6706dbc0-87ae-5188-8910-f1aa4a15cc04</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>TLV6700DDCR</value>
+      <footprint>E27SC06:SOT23_6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tlv6700.pdf</datasheet>
+      <fields>
+        <field name="MPN">TLV6700DDCR</field>
+        <field name="Footprint">E27SC06:SOT23_6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv6700.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_U2" description=""/>
+      <property name="MPN" value="TLV6700DDCR"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>902d6ede-857c-560e-a89b-3a1c355bbabb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>TL431BQPK SOT89</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tl431.pdf</datasheet>
+      <fields>
+        <field name="MPN">TL431BQPK</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tl431.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_U3" description=""/>
+      <property name="MPN" value="TL431BQPK"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64196b85-87dc-5556-bd32-103523887ef2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>AQY221R2VY</value>
+      <footprint>E27SC06:Panasonic_SSOP4</footprint>
+      <datasheet>https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</datasheet>
+      <fields>
+        <field name="MPN">AQY221R2VY</field>
+        <field name="Footprint">E27SC06:Panasonic_SSOP4</field>
+        <field name="Datasheet">https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_U4" description=""/>
+      <property name="MPN" value="AQY221R2VY"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e8954ff-609e-5d4e-962c-02bc8e21d3e1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>AQY221R2VY</value>
+      <footprint>E27SC06:Panasonic_SSOP4</footprint>
+      <datasheet>https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</datasheet>
+      <fields>
+        <field name="MPN">AQY221R2VY</field>
+        <field name="Footprint">E27SC06:Panasonic_SSOP4</field>
+        <field name="Datasheet">https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="E27SC08" part="SC08_U5" description=""/>
+      <property name="MPN" value="AQY221R2VY"/>
+      <property name="Sheetname" value="SC08_prototype"/>
+      <property name="Sheetfile" value="SC08_prototype.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2192c6fa-72d1-52ee-a6c9-8d8a5b2c16bc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="E27SC08" part="SC08_BR1">
+      <docs>https://www.diodes.com/datasheet/download/MB10S.pdf</docs>
+      <fields>
+        <field name="Reference">BR</field>
+        <field name="Value">MB10S-13</field>
+        <field name="Footprint">E27SC06:MB10S_Diodes</field>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/MB10S.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="AC" type="passive"/>
+        <pin num="3" name="-" type="passive"/>
+        <pin num="4" name="AC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_C1">
+      <docs>https://search.kemet.com/download/specsheet/R76UR31004030J</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">R76UR31004030J</field>
+        <field name="Footprint">E27SC06:Film_32x14_P27p5</field>
+        <field name="Datasheet">https://search.kemet.com/download/specsheet/R76UR31004030J</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_C10">
+      <docs>https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL32B226KAJNNNE</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet">https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_C2">
+      <docs>https://search.kemet.com/download/specsheet/R76QR3330SE30J</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">R76QR3330SE30J</field>
+        <field name="Footprint">E27SC06:Film_32x14_P27p5</field>
+        <field name="Datasheet">https://search.kemet.com/download/specsheet/R76QR3330SE30J</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_C3">
+      <docs>https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM21BR71H104KA01L</field>
+        <field name="Footprint">E27SC06:C_0805</field>
+        <field name="Datasheet">https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01%23</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_C4">
+      <docs>https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL32B226KAJNNNE</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet">https://product.samsungsem.com/mlcc/CL32B226KAJNNN.do</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_C5">
+      <docs>https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C151</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">EEUED2C151</field>
+        <field name="Footprint">E27SC06:CP_16x25_P7p5</field>
+        <field name="Datasheet">https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUED2C151</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_C9">
+      <docs>https://www.murata.com/en-us/products</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM21BR71H104KA01L</field>
+        <field name="Footprint">E27SC06:C_0805</field>
+        <field name="Datasheet">https://www.murata.com/en-us/products</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_D1">
+      <docs>https://assets.wolfspeed.com/uploads/2023/10/Wolfspeed_C4D02120E_data_sheet.pdf</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">C4D02120E</field>
+        <field name="Footprint">E27SC06:C4D02120E_TO252</field>
+        <field name="Datasheet">https://assets.wolfspeed.com/uploads/2023/10/Wolfspeed_C4D02120E_data_sheet.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+        <pin num="CASE" name="CASE(K)" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_D3">
+      <docs>https://www.vishay.com/docs/88301/15ke.pdf</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1.5KE440A-E3/54</field>
+        <field name="Footprint">Diode_THT:D_DO-201AD_P15.24mm_Horizontal</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88301/15ke.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_D4">
+      <docs>https://www.st.com/resource/en/datasheet/stth110.pdf</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">STTH110A</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/stth110.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_J1">
+      <docs>Ownerboardonlyscope;electricalinterfaceproposal</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PCB wire pads, not purchased connector</field>
+        <field name="Footprint">E27SC06:WirePads_2_P7p5</field>
+        <field name="Datasheet">Ownerboardonlyscope;electricalinterfaceproposal</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="L" type="passive"/>
+        <pin num="2" name="N" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_J2">
+      <docs>SC06electricalloadinterface</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PCB wire pads, not purchased connector</field>
+        <field name="Footprint">E27SC06:WirePads_2_P7p5</field>
+        <field name="Datasheet">SC06electricalloadinterface</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="LED+" type="passive"/>
+        <pin num="2" name="RETURN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_L2">
+      <docs>https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">RFC1010B-155KE</field>
+        <field name="Footprint">E27SC06:RFC1010B_P6</field>
+        <field name="Datasheet">https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_L3">
+      <docs>https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">RFC1010B-155KE</field>
+        <field name="Footprint">E27SC06:RFC1010B_P6</field>
+        <field name="Datasheet">https://www.coilcraft.com/getmedia/c187709d-4e59-4a35-bf2f-4557b133a391/rfc1010.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_Q2">
+      <docs>https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">PMV65XP,215</field>
+        <field name="Footprint">E27SC06:SOT23</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/PMV65XP.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R10">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R11">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R12">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R13">
+      <docs>https://www.vishay.com/docs/28758/tnpw_e3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">TNPW1206160KBYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R14">
+      <docs>https://www.vishay.com/docs/28758/tnpw_e3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">TNPW1206160KBYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R15">
+      <docs>https://www.vishay.com/docs/28758/tnpw_e3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">TNPW12061K00BYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R16">
+      <docs>https://www.vishay.com/docs/28758/tnpw_e3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">TNPW120638K3BEEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R17">
+      <docs>https://www.vishay.com/docs/28758/tnpw_e3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">TNPW120610K0BEEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R18">
+      <docs>https://www.yageo.com/en/Product/Index/rchip</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0805FR-07100RL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R19">
+      <docs>https://www.yageo.com/en/Product/Index/rchip</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0805FR-0711KL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R2">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW120628R7FKEAHP</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R20">
+      <docs>https://www.yageo.com/en/Product/Index/rchip</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0805FR-0710KL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R21">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW08051K78FKEAHP</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R22">
+      <docs>https://www.vishay.com/docs/28758/tnpw_e3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">TNPW1206210KBYEA</field>
+        <field name="Footprint">E27SC06:R_1206</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R23">
+      <docs>https://www.yageo.com/en/Product/Index/rchip</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0805FR-074K3L</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R24">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R25">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R26">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW08051K78FKEAHP</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R27">
+      <docs>https://www.yageo.com/en/Product/Index/rchip</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0805FR-07100RL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R28">
+      <docs>https://www.vishay.com/docs/20043/crcwhpe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW2512715RFKEGHP</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/docs/20043/crcwhpe3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R6">
+      <docs>https://www.yageo.com/en/Product/Index/rchip</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0805FR-07100RL</field>
+        <field name="Footprint">E27SC06:R_0805</field>
+        <field name="Datasheet">https://www.yageo.com/en/Product/Index/rchip</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R7">
+      <docs>https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">AC05000004700JAC00</field>
+        <field name="Footprint">E27SC06:AC05_18x7p5_P25p4</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R8">
+      <docs>https://www.vishay.com/doc?20035</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW251256K0FKEG</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/doc?20035</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_R9">
+      <docs>https://www.vishay.com/doc?20035</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW251256K0FKEG</field>
+        <field name="Footprint">E27SC06:R_2512</field>
+        <field name="Datasheet">https://www.vishay.com/doc?20035</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_RF1">
+      <docs>https://www.te.com/en/product-6-2176792-5.html</docs>
+      <fields>
+        <field name="Reference">RF</field>
+        <field name="Value">FWFU2W220RJ</field>
+        <field name="Footprint">E27SC06:RF_16x5p5_P22</field>
+        <field name="Datasheet">https://www.te.com/en/product-6-2176792-5.html</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_RF2">
+      <docs>https://www.te.com/en/product-6-2176792-5.html</docs>
+      <fields>
+        <field name="Reference">RF</field>
+        <field name="Value">FWFU2W220RJ</field>
+        <field name="Footprint">E27SC06:RF_16x5p5_P22</field>
+        <field name="Datasheet">https://www.te.com/en/product-6-2176792-5.html</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_U1">
+      <docs>https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LYT0006D-TL</field>
+        <field name="Footprint">E27SC06:LYT_SO8C_no3</field>
+        <field name="Datasheet">https://www.power.com/sites/default/files/documents/lytswitch-0_family_datasheet.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="BP" type="power_out"/>
+        <pin num="2" name="FB" type="input"/>
+        <pin num="4" name="D" type="passive"/>
+        <pin num="5" name="S" type="passive"/>
+        <pin num="6" name="S" type="passive"/>
+        <pin num="7" name="S" type="passive"/>
+        <pin num="8" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_U2">
+      <docs>https://www.ti.com/lit/ds/symlink/tlv6700.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV6700DDCR</field>
+        <field name="Footprint">E27SC06:SOT23_6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv6700.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUTA" type="open_collector"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="INA+" type="input"/>
+        <pin num="4" name="INB-" type="input"/>
+        <pin num="5" name="VDD" type="power_in"/>
+        <pin num="6" name="OUTB" type="open_collector"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_U3">
+      <docs>https://www.ti.com/lit/ds/symlink/tl431.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TL431BQPK</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tl431.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="REF" type="input"/>
+        <pin num="2" name="A" type="passive"/>
+        <pin num="3" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_U4">
+      <docs>https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AQY221R2VY</field>
+        <field name="Footprint">E27SC06:Panasonic_SSOP4</field>
+        <field name="Datasheet">https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+        <pin num="3" name="OUT" type="passive"/>
+        <pin num="4" name="OUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="E27SC08" part="SC08_U5">
+      <docs>https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AQY221R2VY</field>
+        <field name="Footprint">E27SC06:Panasonic_SSOP4</field>
+        <field name="Datasheet">https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy221r2vy</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+        <pin num="3" name="OUT" type="passive"/>
+        <pin num="4" name="OUT" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="E27SC08">
+      <uri>${KIPRJMOD}/E27SC08.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/AUX_FEED5" class="Default">
+      <node ref="R25" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R28" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="2" name="/BP" class="Default">
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R27" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="BP_1" pintype="power_out"/>
+    </net>
+    <net code="3" name="/COUT_PLUS" class="Default">
+      <node ref="C5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="L3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R13" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R9" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="4" name="/DC_RETURN" class="Default">
+      <node ref="BR1" pin="3" pinfunction="-_3" pintype="passive"/>
+      <node ref="C1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C9" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="RETURN_2" pintype="passive"/>
+      <node ref="R15" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R17" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R23" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R8" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R9" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="INA+_3" pintype="input"/>
+      <node ref="U3" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="K_2" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="K_2" pintype="passive"/>
+    </net>
+    <net code="5" name="/DRAIN_BLOCKED" class="AC_BUS,Default">
+      <node ref="D4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="D_4" pintype="passive"/>
+    </net>
+    <net code="6" name="/LED_PLUS" class="Default">
+      <node ref="J2" pin="1" pinfunction="LED+_1" pintype="passive"/>
+      <node ref="R7" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="7" name="/MOS_GATE" class="Default">
+      <node ref="Q2" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R19" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R20" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="8" name="/OPTO_DRIVE" class="Default">
+      <node ref="Q2" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="R21" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R22" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R23" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R26" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="9" name="/OV_LOW" class="Default">
+      <node ref="R19" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="OUTB_6" pintype="open_collector"/>
+    </net>
+    <net code="10" name="/OV_SENSE" class="Default">
+      <node ref="R14" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R15" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R22" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="INB-_4" pintype="input"/>
+    </net>
+    <net code="11" name="/RAIL_REF" class="Default">
+      <node ref="R16" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R17" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="REF_1" pintype="input"/>
+    </net>
+    <net code="12" name="/SENSE_FB" class="Default">
+      <node ref="C10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D1" pin="CASE" pinfunction="CASE(K)_CASE" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="FB_2" pintype="input"/>
+    </net>
+    <net code="13" name="/SOURCE" class="Default">
+      <node ref="C10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="S_5" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="S_6" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="S_7" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="S_8" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="OUT_4" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="OUT_4" pintype="passive"/>
+    </net>
+    <net code="14" name="/VCC_OV" class="Default">
+      <node ref="Q2" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R16" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R18" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R20" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R28" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="K_3" pintype="passive"/>
+    </net>
+    <net code="15" name="/VDD_COMP" class="Default">
+      <node ref="C9" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R18" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="VDD_5" pintype="power_in"/>
+    </net>
+    <net code="16" name="Net-(BR1-+)" class="AC_BUS,Default">
+      <node ref="BR1" pin="1" pinfunction="+_1" pintype="passive"/>
+      <node ref="C1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(BR1-AC-Pad2)" class="AC_BUS,Default">
+      <node ref="BR1" pin="2" pinfunction="AC_2" pintype="passive"/>
+      <node ref="RF2" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(J1-L)" class="AC_BUS,Default">
+      <node ref="J1" pin="1" pinfunction="L_1" pintype="passive"/>
+      <node ref="RF1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(J1-N)" class="AC_BUS,Default">
+      <node ref="BR1" pin="4" pinfunction="AC_4" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="N_2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(L2-Pad2)" class="Default">
+      <node ref="L2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="L3" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(R6-Pad2)" class="Default">
+      <node ref="R6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="OUT_3" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(R10-Pad2)" class="Default">
+      <node ref="R10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R11" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(R11-Pad2)" class="Default">
+      <node ref="R11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R12" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(R12-Pad2)" class="Default">
+      <node ref="R12" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R24" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(R13-Pad2)" class="Default">
+      <node ref="R13" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R14" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(R24-Pad2)" class="Default">
+      <node ref="R24" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R25" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(R27-Pad2)" class="Default">
+      <node ref="R27" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="OUT_3" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(RF1-Pad2)" class="AC_BUS,Default">
+      <node ref="RF1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="RF2" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(U4-A)" class="Default">
+      <node ref="R21" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="A_1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(U5-A)" class="Default">
+      <node ref="R26" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U5" pin="1" pinfunction="A_1" pintype="passive"/>
+    </net>
+    <net code="31" name="unconnected-(U2-OUTA-Pad1)" class="Default">
+      <node ref="U2" pin="1" pinfunction="OUTA_1" pintype="open_collector+no_connect"/>
+    </net>
+  </nets>
+</export>

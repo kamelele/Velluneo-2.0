@@ -62,10 +62,10 @@
         "zones_intersect": "error"
       },
       "rules": {
-        "min_clearance": 0.2,
-        "min_copper_edge_clearance": 0.4,
+        "min_clearance": 0.3,
+        "min_copper_edge_clearance": 4.0,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_track_width": 0.3,
         "min_via_annular_width": 0.2
       }
     }
@@ -295,7 +295,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.3,
         "diff_pair_gap": 0.254,
         "diff_pair_via_gap": 0.254,
         "diff_pair_width": 0.254,
@@ -303,12 +303,52 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.254,
+        "track_width": 0.3,
+        "via_diameter": 1.27,
+        "via_drill": 0.7112,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 1.5,
+        "diff_pair_gap": 0.254,
+        "diff_pair_via_gap": 0.254,
+        "diff_pair_width": 0.254,
+        "line_style": 0,
+        "name": "AC_BUS",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.6,
         "via_diameter": 1.27,
         "via_drill": 0.7112,
         "wire_width": 6
       }
     ],
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(J1-L)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(RF1-Pad2)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(BR1-AC-Pad2)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(J1-N)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(BR1-+)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "/DRAIN_BLOCKED"
+      }
+    ]
   }
 }

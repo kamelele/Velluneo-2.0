@@ -1,0 +1,42 @@
+{
+  "manifest_sha256": "688ab8fb07c036e8811763d96bf8dd99d6a9dba7966c9b3303df8a7a02f20319",
+  "source_snapshot": "ad5ac54e97214daafad2aa8f0167c62e5a41da276b85bb97da9f28d245126f48",
+  "native_board_sha256": "c503ff1b7660022d665ed4fabbc536c8f05d72899694a1d2da2c8a84ec6357d5",
+  "roles": [
+    {
+      "role": "reality-checker",
+      "actor": "/root/placement_reality",
+      "recommendation": "ready_for_human_review",
+      "report": "reviews/reality-checker.json",
+      "sha256": "a4e75078711a9f86dc59f221875300c71796df4ab8b9b4d4efa4a8605b55c201"
+    },
+    {
+      "role": "overengineering-reviewer",
+      "actor": "/root/placement_overengineering",
+      "recommendation": "ready_for_human_review",
+      "report": "reviews/overengineering-reviewer.json",
+      "sha256": "7b2fac86f426b686bdd9c94c9874d07e426f19c2e0c6531208bf7e56a11b2502"
+    },
+    {
+      "role": "completeness-reviewer",
+      "actor": "/root/placement_completeness",
+      "recommendation": "ready_for_human_review",
+      "report": "reviews/completeness-reviewer.json",
+      "sha256": "b819e314e3bf79e55d3109c8a572c99c2c674a472cf1a34882d8c97e6730f8d8"
+    },
+    {
+      "role": "change-reviewer",
+      "actor": "/root/placement_change",
+      "recommendation": "ready_for_human_review",
+      "report": "reviews/change-reviewer.json",
+      "sha256": "e9fe21fc55e26ba7a52349840547fc1002a019bc9352db2be34fc18dad97e158"
+    }
+  ],
+  "all_four_actual_independent_contexts": true,
+  "coordinator": "/root",
+  "sole_CAD_writer": "/root",
+  "implementation_helper": "/root/placement_review_prep, not one of thefourreviewactors",
+  "RC01_major_closed_by": "/root/placement_reality actualfinalre-review",
+  "not_human_approval": true,
+  "retained_scope_for_publication": "Laterlifecycle/status/reviewrecords areoutsidefrozentechnicalinputs. Fourimagecopiesinviewsarebyte-identicaltofourreviewedexternal_artifacts;no newtechnicalgeometry."
+}

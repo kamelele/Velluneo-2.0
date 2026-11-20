@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "errors": [],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC08_prototype\\SC08_prototype.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "intent_digest": "8be47de3f17c30ea9a07f16a6a6a85a7a51511d35990cbc8c5f02e8aa143e574",
+  "intent_revision": "SC08-B",
+  "physical_pins": 112,
+  "intended_nets": 30,
+  "no_connects": 1,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "4dc65bef521bf584b940a65df02a24f70ae92d5f9f7cc878983a37ae7c178809",
+  "export_sha256": "0bfe43c7c2ffc645e9aba47b2bdf5f2f33b99a8a74466ac1f4b7502ba743b6f4",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}

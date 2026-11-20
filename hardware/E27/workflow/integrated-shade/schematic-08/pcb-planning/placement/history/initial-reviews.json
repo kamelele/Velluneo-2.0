@@ -1,0 +1,27 @@
+{
+  "reviewed_manifest": "ea22860fefe4c5a034592eb3752a0622e696b95593f98ff67a5a9dca746a1f74",
+  "native_board": "09bdb0e44c1de79bcdf8d56201aebad4ebb49aab2c435c8f6ace98328bb23157",
+  "disposition": "changes_requested,nohumanplacementapprovalrequested",
+  "actual_actors": [
+    {
+      "actor": "/root/placement_reality",
+      "role": "Reality Checker",
+      "result": "changes_requested",
+      "finding": "RC-PLACEMENT-01 Major: physicalpowerloopspans82.57/55.66/49.51/42.39mmnotclosedbyrouter;reviseactualfunctionalplacement",
+      "minor": "RC-PLACEMENT-02: twoinapplicablenativebaselineignoredchecks,notemptyignoredlist"
+    },
+    {
+      "actor": "/root/placement_change",
+      "role": "Change Reviewer",
+      "result": "ready_for_human_review_fromchangescopeonly; cannotoverrideRealitymajor"
+    },
+    {
+      "actor": "/root/placement_completeness",
+      "role": "Completeness Reviewer",
+      "result": "ready_for_human_review_fromcompletenessscopeonly; cannotoverrideRealitymajor"
+    }
+  ],
+  "Overengineering": "Notstartedonrejectedinitialcandidate;four-final-reviewcoveragependingaftercorrection",
+  "scope": "Allthree verified131source+3externalhashes,all112pins,0nativegeometry/parity81unconnected. Rootfollowsmajorfindingratherthanmajorityvote.",
+  "archive": "Exactinitialpacketarchivedlocallywork/sc08-placement-initial-rejected.zip;representativeinitialPCBretainedhere;noinitialstageaccepted"
+}

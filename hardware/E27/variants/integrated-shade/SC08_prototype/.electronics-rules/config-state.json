@@ -1,5 +1,5 @@
 {
-  "dru_sha256": "55db4009525df20de20cacb9490d83fa11097eb5cad363200ecf782983e03e36",
+  "dru_sha256": "e64486d71ce1fd6b3372961902b1d35152c8710b5dde06a24721e74fa17fcfb3",
   "managed": {
     "board/design_settings/rule_severities/annular_width": "error",
     "board/design_settings/rule_severities/clearance": "error",
@@ -59,10 +59,10 @@
     "board/design_settings/rule_severities/via_dangling": "warning",
     "board/design_settings/rule_severities/zone_has_empty_net": "error",
     "board/design_settings/rule_severities/zones_intersect": "error",
-    "board/design_settings/rules/min_clearance": 0.2,
-    "board/design_settings/rules/min_copper_edge_clearance": 0.4,
+    "board/design_settings/rules/min_clearance": 0.3,
+    "board/design_settings/rules/min_copper_edge_clearance": 4.0,
     "board/design_settings/rules/min_through_hole_diameter": 0.3,
-    "board/design_settings/rules/min_track_width": 0.2,
+    "board/design_settings/rules/min_track_width": 0.3,
     "board/design_settings/rules/min_via_annular_width": 0.2,
     "erc/pin_map": [
       [
@@ -277,9 +277,36 @@
     "erc/rule_severities/unit_value_mismatch": "error",
     "erc/rule_severities/unresolved_variable": "error",
     "erc/rule_severities/wire_dangling": "error",
-    "net_settings/classes/@Default/clearance": 0.2,
-    "net_settings/classes/@Default/track_width": 0.254,
-    "net_settings/netclass_patterns": []
+    "net_settings/classes/@AC_BUS/clearance": 1.5,
+    "net_settings/classes/@AC_BUS/track_width": 0.6,
+    "net_settings/classes/@Default/clearance": 0.3,
+    "net_settings/classes/@Default/track_width": 0.3,
+    "net_settings/netclass_patterns": [
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(J1-L)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(RF1-Pad2)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(BR1-AC-Pad2)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(J1-N)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "Net-(BR1-+)"
+      },
+      {
+        "netclass": "AC_BUS",
+        "pattern": "/DRAIN_BLOCKED"
+      }
+    ]
   },
   "ruleset_version": "0.7.1",
   "schema_version": 1
