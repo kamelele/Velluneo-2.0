@@ -1,5 +1,27 @@
 # E27 workflow index
 
+## Current JLCPCB quotation handoff — JLC14, 20 November 2026
+
+[JLC14](specification-reset/jlcpcb-quote-14/README.md) prepares the unchanged RFQ13
+isolated 45 × 60 mm driver for a JLCPCB bare-PCB quote plus a separate assembly
+feasibility quote, as explicitly selected by the owner. Official JLCPCB instructions
+were checked on 20 November 2026. The upload ZIP contains one GKO, four copper,
+two mask, two legend, two paste layers, one Excellon XLN, one human drill map and
+an auxiliary sk selecting all 17 epoxy-filled/capped vias; 25 insertion holes stay open.
+Fresh native ERC/DRC/parity are zero; independent CAM confirms the nine previous
+artwork layers are geometrically identical and all holes/SK coordinates agree.
+
+Full/short PCB Remark, exact form settings, a polished unsent support enquiry and
+11 technical response IDs are provided. The complete handoff is separate from the
+14-member automatic Gerber ZIP. The 33-part MPN list and matching 26-SMT BOM/CPL
+are manual quote references: no invented LCSC stock, centroid or feeder corrections.
+Standard two-sided PCBA needs a minimum 70 × 70 mm handling/panel proposal, rails
+and fiducials, while the finished board stays 45 × 60 mm. Tighter holes/registration,
+material/process, custom parts and prior physical/human release holds remain explicit.
+No account, upload, supplier message, charge, order, payment or main merge occurred.
+The RFQ13 design remains authoritative; toolkit manifest remains
+b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97.
+
 ## Current manufacturer enquiry — RFQ13, 20 November 2026
 
 [RFQ13](specification-reset/supplier-review-13/README.md) is the current selected

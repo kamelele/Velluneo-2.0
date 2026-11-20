@@ -1,0 +1,74 @@
+{
+  "candidate_body_sha256": "c1deb022e780c40681651d718f6307b1690aeed5ccebdea3de66304a4f63503f",
+  "findings": [
+    {
+      "id": "J14-RR-01",
+      "status": "open",
+      "severity": "note",
+      "affected_gate": "Fabrication release",
+      "owner": "JLCPCB/coordinator",
+      "object": "Tighter holes,registration,material,dielectric andcap/rings",
+      "evidence": "Requested capabilities are not supplier-confirmed; standard T1 size1.270..1.480 fails requested1.300..1.400",
+      "closure": "Written technical responses and reviewed exact-file redlines/guarantees",
+      "quotation_blocker": false
+    },
+    {
+      "id": "J14-RR-02",
+      "status": "open",
+      "severity": "note",
+      "affected_gate": "Assembly release",
+      "owner": "Assembly/part/forming providers and coordinator",
+      "object": "LCSC/centroids/feeder rotations/panel/customparts",
+      "evidence": "Reference BOM/CPL not machine-ready; finished45x60 needs Standardhandlingproposal",
+      "closure": "Exact sourcing, placement, panel, construction and first-article evidence",
+      "quotation_blocker": false
+    },
+    {
+      "id": "J14-RR-03",
+      "status": "open",
+      "severity": "note",
+      "affected_gate": "Submission/production/use",
+      "owner": "Owner and qualified reviewer/supplier",
+      "object": "Live import/DFM acceptance and inherited physical/human holds",
+      "closure": "Actual authorized submission and subsequent evidence at the applicable gate",
+      "quotation_blocker": false
+    },
+    {
+      "id": "J14-COMP-01",
+      "status": "open",
+      "severity": "note",
+      "affected_gate": "Procurement/assembly/use",
+      "owner": "JLCPCB/relevantproviders/qualifiedreviewer/buyer",
+      "object": "Supplieracceptance/sourcing/machinepanel/specialholes/finishedconstruction",
+      "closure": "Listed11technicalresponses and applicable exact-file approvals",
+      "related": [
+        "J14-RR-01",
+        "J14-RR-02",
+        "J14-RR-03"
+      ],
+      "quotation_blocker": false
+    },
+    {
+      "id": "J14-OE-01",
+      "status": "open",
+      "severity": "note",
+      "affected_gate": "Assembly procurement",
+      "owner": "JLCPCB/coordinator",
+      "object": "Panel/tooling/unitcount/two-sided setup cost",
+      "closure": "Itemized Standard PCBA handling panel/rails/fiducials/depanelization proposal preserving the finished board and isolation band",
+      "quotation_blocker": false
+    },
+    {
+      "id": "J14-OE-02",
+      "status": "open",
+      "severity": "note",
+      "affected_gate": "Sourcing/assembly",
+      "owner": "JLCPCB/forming/transformer providers and coordinator",
+      "object": "Exact LCSC/custompart/forming cost and feasibility",
+      "closure": "Exact part availability/mapping and separately identified fees/firstarticle requirements; compare SMT-only and addedmanual quotations before selecting scope",
+      "quotation_blocker": false
+    }
+  ],
+  "new_pre_enquiry_major_or_blocker_findings": [],
+  "inherited_holds": "All RFQ13 and parent requirements, physical qualification and genuine human acceptance remain; none waived by quote preparation."
+}

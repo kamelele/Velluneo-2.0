@@ -1,0 +1,44 @@
+{
+  "criteria": [
+    {
+      "id": "J14-SOURCE",
+      "criterion": "No source CAD/library/rule/requirement or approval changes",
+      "evidence": "source-binding.json",
+      "result": "demonstrated in prepared package"
+    },
+    {
+      "id": "J14-CAM",
+      "criterion": "11 manufacturing Gerbers +oneSK +one42PTHExcellon +onehumanmap, commonorigin, exactold9artwork",
+      "evidence": "checks/CAM-validation.json",
+      "result": "demonstrated in prepared package"
+    },
+    {
+      "id": "J14-FORM",
+      "criterion": "Exact fieldvalues, full/short PCBRemark, special-hole/registration/stack/fill/support route",
+      "evidence": "quote-settings.json",
+      "result": "demonstrated in prepared package"
+    },
+    {
+      "id": "J14-ASM",
+      "criterion": "33MPNs/26SMTreferenceBOM-CPL/7manualoperations, no inventedLCSC/machinecorrections, Standardpanelrequest",
+      "evidence": "checks/assembly-format-check.json",
+      "result": "demonstrated in prepared package"
+    },
+    {
+      "id": "J14-DELIVERY",
+      "criterion": "Separate14memberupload andfullhandoff;allCRC/memberhashes;notclaimedliveportalacceptance",
+      "evidence": "checks/package-verification.json",
+      "result": "demonstrated in prepared package"
+    },
+    {
+      "id": "J14-WEB",
+      "criterion": "Dated official JLCPCB sources mapped to applied instructions andlimitations",
+      "evidence": "jlcpcb-sources.json",
+      "result": "demonstrated in prepared package"
+    }
+  ],
+  "formal_release": false,
+  "order_ready": false,
+  "supplier_confirmations_required": true,
+  "prior_physical_and_human_holds_retained": true
+}

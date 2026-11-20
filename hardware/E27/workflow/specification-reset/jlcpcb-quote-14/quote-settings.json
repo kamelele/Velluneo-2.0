@@ -1,0 +1,148 @@
+{
+  "revision": "JLC14",
+  "status": "Prepared field values, not a submitted/live configured cart",
+  "form": "https://cart.jlcpcb.com/quote",
+  "fields": [
+    {
+      "field": "Base Material",
+      "value": "FR-4",
+      "basis": "J1"
+    },
+    {
+      "field": "Layers",
+      "value": "4",
+      "basis": "J1"
+    },
+    {
+      "field": "Dimensions",
+      "value": "45 x 60 mm",
+      "basis": "Native source / J1"
+    },
+    {
+      "field": "PCB Qty",
+      "value": "5 finished individual boards, quotation basis",
+      "basis": "J1 / retained RFQ13 assumption"
+    },
+    {
+      "field": "Product Type",
+      "value": "Industrial/Consumer electronics",
+      "basis": "J1"
+    },
+    {
+      "field": "Different Design",
+      "value": "1",
+      "basis": "J1"
+    },
+    {
+      "field": "Delivery Format",
+      "value": "Single PCB for bare-board quote",
+      "basis": "J1"
+    },
+    {
+      "field": "PCB Thickness",
+      "value": "1.6 mm; request1.44..1.76",
+      "basis": "J1/J5"
+    },
+    {
+      "field": "PCB Color",
+      "value": "Green",
+      "basis": "J1"
+    },
+    {
+      "field": "Silkscreen",
+      "value": "White",
+      "basis": "J1"
+    },
+    {
+      "field": "Surface Finish",
+      "value": "ENIG",
+      "basis": "J1"
+    },
+    {
+      "field": "Outer Copper Weight",
+      "value": "1 oz; retain source nominal35um request",
+      "basis": "J1/J5"
+    },
+    {
+      "field": "Inner Copper Weight",
+      "value": "0.5 oz; source nominal15.2um foil construction, confirm actual",
+      "basis": "J1/J5/J6"
+    },
+    {
+      "field": "Layer Stackup",
+      "value": "JLC04161H-7628 exact named construction requested; no uncontrolled substitute",
+      "basis": "J6"
+    },
+    {
+      "field": "Material Tg",
+      "value": "FR-4 Tg155 request; actual laminate/CTI/RTI/minpressed dielectric ask support",
+      "basis": "RFQ13 / J5"
+    },
+    {
+      "field": "Via Covering",
+      "value": "Epoxy-Filled & Capped: all17 Ø0.300mmvias, selectedinSK; BOTHends; all25componentholesopen",
+      "basis": "J4"
+    },
+    {
+      "field": "Min via hole size/diameter",
+      "value": "0.30 mm hole /0.70 mm land",
+      "basis": "Native source / J1"
+    },
+    {
+      "field": "Hole accuracy",
+      "value": "Request±0.050mm on25listedcomponentholes; NOT standard+0.13/-0.08; soldered insertionholes, ask about tighter-hole service",
+      "basis": "J5"
+    },
+    {
+      "field": "Hole/land registration",
+      "value": "Request≤0.025mm; explicit nonstandard capability question, not public ±0.075position guarantee",
+      "basis": "RFQ13 / J5"
+    },
+    {
+      "field": "Mark on PCB",
+      "value": "Remove Mark / no added identifiers",
+      "basis": "J1"
+    },
+    {
+      "field": "Electrical Test",
+      "value": "Flying Probe Fully Test requested; unpowered bare-board continuity/shorts",
+      "basis": "J1"
+    },
+    {
+      "field": "Gold Fingers",
+      "value": "No",
+      "basis": "J1"
+    },
+    {
+      "field": "Castellated Holes",
+      "value": "No",
+      "basis": "J1"
+    },
+    {
+      "field": "Edge Plating / V-cut / slots",
+      "value": "None on individual bare board",
+      "basis": "Native source"
+    },
+    {
+      "field": "Impedance Control",
+      "value": "No controlled-impedance target; named stack still required",
+      "basis": "RFQ13 / J6"
+    },
+    {
+      "field": "Confirm Production File",
+      "value": "Yes, do not confirm automatically, if a later order is authorized; this is not freepreorderDFM",
+      "basis": "J9"
+    },
+    {
+      "field": "PCB Assembly",
+      "value": "OFF for bare-board quote. Separate manualStandardtwo-sidedfeasibility quote, not an immediatePCBAupload",
+      "basis": "J12"
+    },
+    {
+      "field": "Stencil",
+      "value": "OFF for standalone bare-board quote; include stencil/setup in separate assembly quotation",
+      "basis": "Owner scope"
+    }
+  ],
+  "account_specific_options": "If any requested option is absent/renamed/unavailable or auto-changes another field, use the manual support route and request written confirmation; do not select a weaker default."
+}
