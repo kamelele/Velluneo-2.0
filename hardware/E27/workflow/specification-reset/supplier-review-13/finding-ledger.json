@@ -1,0 +1,135 @@
+{
+  "candidate_body_sha256": "0a12e2f7eabf62c40b89df248c4efc603c04548d28c180dbe82cb25be35918f0",
+  "findings": [
+    {
+      "id": "T13-01",
+      "status": "open",
+      "severity": "note",
+      "object": "FinishedT1",
+      "owner": "Transformerbuilder",
+      "affected_gate": "Finishedpart/assemblyacceptance",
+      "evidence": "Rawformer source doesnotinclude completewound/core/yoke/termination assembly",
+      "closure": "Accepted exactfinished drawing/STEP andfirstarticledimensions/pinfit",
+      "linked": [
+        "T1-01",
+        "RR13-R01",
+        "C13-COMP-01"
+      ],
+      "enquiry_blocker": false
+    },
+    {
+      "id": "T13-02",
+      "status": "verified_closed",
+      "severity": "note",
+      "object": "T1finishedbodyCADreservation",
+      "owner": "/root implementer",
+      "evidence": "Current30x30Fab/30.5court;0nativeDRC; actualindependentRealitynativecourtcheck",
+      "closure": "CADreservationcorrected; thisdoesnotclosephysicalT13-01",
+      "verified_by": "/root/rfq13_final_reality",
+      "enquiry_blocker": false
+    },
+    {
+      "id": "T13-03",
+      "status": "open",
+      "severity": "note",
+      "object": "T1core/yokes/secondaryterminations",
+      "owner": "Transformerbuilder andqualifiedinsulationreviewer",
+      "affected_gate": "Finishedinsulation/energization",
+      "closure": "Exactsections/materialfunctions/process/testbasis andactualacceptedfinishedconstructionevidence",
+      "linked": [
+        "T1-02",
+        "RR13-R03"
+      ],
+      "enquiry_blocker": false
+    },
+    {
+      "id": "T13-04",
+      "status": "open",
+      "severity": "note",
+      "object": "Finishedhole/pinpattern/insertion",
+      "owner": "PCBfabricator andtransformerbuilder",
+      "affected_gate": "Manufacture/assemblyacceptance",
+      "closure": "Guaranteedfinishedholes/registration/fullpinlimits andfirstarticlefit",
+      "linked": [
+        "PCB-03",
+        "T1-01",
+        "RR13-R02"
+      ],
+      "enquiry_blocker": false
+    },
+    {
+      "id": "RR13-R01",
+      "status": "open",
+      "severity": "note",
+      "object": "FinishedT1 andformedparts",
+      "owner": "Transformer/formingproviders",
+      "affected_gate": "Assemblyacceptance",
+      "closure": "Returnexactdrawings andmeasuredfirstarticles",
+      "linked": [
+        "T13-01",
+        "ASM-01",
+        "ASM-02"
+      ],
+      "enquiry_blocker": false
+    },
+    {
+      "id": "RR13-R02",
+      "status": "open",
+      "severity": "note",
+      "object": "PCBprocess/films",
+      "owner": "PCBfabricator",
+      "affected_gate": "Manufacturingrelease",
+      "closure": "AcceptPCB-01..04responses andexact-filefilms",
+      "enquiry_blocker": false
+    },
+    {
+      "id": "RR13-R03",
+      "status": "open",
+      "severity": "note",
+      "object": "Finishedinsulation/startup/fault/interlayercoupling/thermal",
+      "owner": "Qualifiedproductreviewer/testfacility",
+      "affected_gate": "Energization/productacceptance",
+      "closure": "Agreedqualifiedassessment/testbasis andactualevidence;parentcriteriaretained",
+      "enquiry_blocker": false
+    },
+    {
+      "id": "C13-COMP-01",
+      "status": "open",
+      "severity": "note",
+      "object": "Supplier/physical/stageacceptance",
+      "owner": "Namedsuppliers andqualifiedreviewer/buyer",
+      "affected_gate": "Production/assembly/use",
+      "closure": "All12responseIDs exactevidence andgenuineapplicableapproval",
+      "linked": [
+        "RR13-R01",
+        "RR13-R02",
+        "RR13-R03"
+      ],
+      "enquiry_blocker": false
+    },
+    {
+      "id": "OE13-01",
+      "status": "open",
+      "severity": "note",
+      "object": "Q1 selection yield/jig feasibility",
+      "owner": "Forming provider/coordinator",
+      "affected_gate": "Procurement/assembly",
+      "evidence": "Independent recomputed .254248081mm conditional reserve; incoming>=13.0mm not a stock guarantee",
+      "closure": "ASM-01 response with datum, usable length, yield, exact formed drawing and measured fit",
+      "enquiry_blocker": false
+    },
+    {
+      "id": "OE13-02",
+      "status": "open",
+      "severity": "note",
+      "object": "17 filled/capped vias",
+      "owner": "PCB fabricator/coordinator",
+      "affected_gate": "Fabrication release",
+      "evidence": "Independent native check finds six via lands intersecting actual outer component-pad shapes",
+      "closure": "PCB-02/04 exact-file process/cost/DFM response; any reduced-fill option requires its own validation",
+      "enquiry_blocker": false
+    }
+  ],
+  "parent_findings": "All inherited parent-lamp requirements/findings remain retained; none closed by this enquiry scope.",
+  "new_pre_enquiry_blockers": []
+}

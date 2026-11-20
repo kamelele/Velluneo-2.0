@@ -1,0 +1,52 @@
+{
+  "candidate_body_sha256": "0a12e2f7eabf62c40b89df248c4efc603c04548d28c180dbe82cb25be35918f0",
+  "actual_contexts": {
+    "reality": "/root/rfq13_final_reality",
+    "change": "/root/rfq13_final_change",
+    "completeness": "/root/rfq13_final_completeness",
+    "simplicity": "/root/rfq13_final_simplicity"
+  },
+  "distinct_from_implementation": true,
+  "root_sole_CAD_writer": true,
+  "all_recommendations": "ready_for_human_review for bounded technical enquiry only",
+  "independent_reviews": 4,
+  "missing_roles": [],
+  "no_agent_human_approval": true,
+  "implementation_advisors": [
+    "/root/rfq13_transformer",
+    "/root/rfq13_formed_parts",
+    "/root/rfq13_isolation"
+  ],
+  "task_graph": [
+    {
+      "task": "Documentary/physical-interface research",
+      "owner": "Three read-only implementation advisors",
+      "dependency": "C11/source manufacturer documents",
+      "state": "completed"
+    },
+    {
+      "task": "CAD/configuration correction and freshchecks",
+      "owner": "/root sole writer",
+      "dependency": "Advisor findings/actual source",
+      "state": "completed"
+    },
+    {
+      "task": "Archive/portable/drawing/render verification",
+      "owner": "/root",
+      "dependency": "CurrentcorrectedCAD",
+      "state": "completed"
+    },
+    {
+      "task": "Four independent frozen final roles",
+      "owner": "Actualreviewcontexts",
+      "dependency": "0a12e2f7eabf62c40b89df248c4efc603c04548d28c180dbe82cb25be35918f0",
+      "state": "completed"
+    },
+    {
+      "task": "Supplier exactdrawing/process/firstarticle acceptance",
+      "owner": "Namedsuppliers andbuyer/qualifiedreviewer",
+      "dependency": "Actual technicalenquiry",
+      "state": "not performed orclaimed"
+    }
+  ]
+}

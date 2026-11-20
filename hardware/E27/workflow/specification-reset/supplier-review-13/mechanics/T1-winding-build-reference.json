@@ -1,0 +1,178 @@
+{
+  "id": "T1-INTERLEAVED-C2",
+  "status": "Proposed construction drawing; not approved/shared CAD, supplier-confirmed build, FEA, test or recognized finished component",
+  "graph_and_external_pins_unchanged": true,
+  "turns": {
+    "P": 120,
+    "A": 22,
+    "S": 30
+  },
+  "pins": {
+    "P_dot": 1,
+    "P_finish": 5,
+    "A_dot": 2,
+    "A_finish": 4,
+    "S_dot": 6,
+    "S_finish": 10,
+    "unwound": [
+      3,
+      7,
+      8,
+      9
+    ]
+  },
+  "parts": {
+    "core_gapped": "TDK B66421U0160K187",
+    "core_ungapped": "TDK B66421G0000X187",
+    "bobbin": "TDK B66422W1010D001 / SUMIKON PM-9630 black",
+    "yokes": "2x TDK B66422B2000X000",
+    "wire_P_A": "ELEKTRISOLA Polysol180 P180 Cu0.180mm Grade2; procurement must identify recognized MW82-C/OBMW2 manufacturing site",
+    "wire_S": "Furukawa TEX-E Cu0.30mm / E206440 recognized grade; continuous intact three-layer insulation outside controlled terminal zones",
+    "tape": "3M1350F-1; exact marked/recognized grade, no generic polyester substitute",
+    "EIS_candidate": {
+      "owner": "Furukawa Electric",
+      "file": "E230451",
+      "designation": "FIS-B3",
+      "class_C": 130,
+      "source": "https://iq.ul.com/systems/list.aspx?ULID=103091579",
+      "claimed_finished_EIS_adoption": false
+    }
+  },
+  "selected_order_inner_to_outer": [
+    {
+      "winding": "P",
+      "turns": 60,
+      "radial_mm": 0.217
+    },
+    {
+      "winding": "T",
+      "turns": 0,
+      "radial_mm": 0.154
+    },
+    {
+      "winding": "A",
+      "turns": 22,
+      "radial_mm": 0.217
+    },
+    {
+      "winding": "T",
+      "turns": 0,
+      "radial_mm": 0.077
+    },
+    {
+      "winding": "S",
+      "turns": 15,
+      "radial_mm": 0.52
+    },
+    {
+      "winding": "T",
+      "turns": 0,
+      "radial_mm": 0.077
+    },
+    {
+      "winding": "S",
+      "turns": 15,
+      "radial_mm": 0.52
+    },
+    {
+      "winding": "T",
+      "turns": 0,
+      "radial_mm": 0.077
+    },
+    {
+      "winding": "P",
+      "turns": 60,
+      "radial_mm": 0.217
+    },
+    {
+      "winding": "T",
+      "turns": 0,
+      "radial_mm": 0.077
+    }
+  ],
+  "winding_band_mm": 13.8,
+  "pitch_mm": {
+    "P60": 0.23,
+    "A22": 0.6272727272727273,
+    "S15": 0.92
+  },
+  "pitch_definition": "Conservative turn-cell width: n*pitch=13.8mm. Actual center-to-center occupied span=(n-1)*pitch+wireOD is smaller. Spread S and A evenly; do not close-pack into narrower subbands.",
+  "P_connection": "One continuous120-turn wire,60 inner plus60 outer, same winding sense in electrical series; park the continuous bridge in the primary-side end pocket without a splice or extra pin. Start1 and finish5. No use of NC pins as a hidden junction.",
+  "S_connection": "One continuous30-turn TIW wire,15+15 in electrical series with a controlled end crossover; dot6/finish10 and continuous insulation into terminal zones.",
+  "geometry_mm": {
+    "native_barrel_XY": [
+      13.1,
+      6.9
+    ],
+    "native_barrel_corner_R": 2,
+    "native_straight_barrel_axial": 16.2,
+    "selected_active_band": 13.8,
+    "regular_radial": 2.153,
+    "extra_noncoincident_seam_radial": 0.077,
+    "maximum_radial": 2.23,
+    "outer_regular_shell_XY": [
+      17.56,
+      11.36
+    ],
+    "minimum_side_screen_remaining_after_chosen_0p05_build_and_0p05_decenter": 0.16999999999999915,
+    "axial_end_pocket_each": 1.1999999999999993,
+    "proposed_finished_envelope": [
+      30,
+      30,
+      18
+    ]
+  },
+  "seams": {
+    "max_extra_tape_layers_any_angle": 1,
+    "overlap_mm": 1.0,
+    "required": "All6wrap seams staggered; no coincident ridge, no6layer overlap.0.077mm is imposed incoming upper thickness, not a new vendor guarantee."
+  },
+  "leadout_contract": {
+    "native_coordinates": "Bobbin STEP X,Y,Z. PCB component-side coordinates x=X,y=-Z; pins project +Y; source mark/dot map preserved.",
+    "primary_pocket_Z_range_mm": [
+      -8.1,
+      -6.9
+    ],
+    "secondary_pocket_Z_range_mm": [
+      6.9,
+      8.1
+    ],
+    "primary_bridge_center_Z_mm": -7.5,
+    "bridge_protection": "Candidate optional FIS-B3-listed Essex Furukawa PIT-S tubing; incoming required ID>=0.25mm,OD<=0.60mm. Dimensions are a new procurement requirement, not sourced product capability or a complete barrier rating.",
+    "tube_placement_axial_error_max_mm": 0.15,
+    "tube_max_OD_mm": 0.6,
+    "axial_residual_each_mm": 0.14999999999999966,
+    "routing": "P/A starts, finishes and parked bridge exit only to row1-5 at negativeZ; S starts/finish and crossover exit only to row6-10 at positiveZ. NC pins stay unwound. No stripped secondary wire may traverse core/yoke/primary pockets.",
+    "not_verified": "End-pocket axial arithmetic does not prove bend radius, local radial/core/yoke clearance, barrier continuity or real winding-machine capability. A dimensioned actual3D exit/yoke section remains mandatory."
+  },
+  "material_process_requirements": [
+    "Builder must adopt/confirm actual FIS-B3 recognized material functions/sites/grades; no recognition is claimed for this finished transformer.",
+    "P/A two complete1350F-1 wraps retained; S TIW supplies its stated component function, not an assumed end-product standard pass.",
+    "No base wrap assumes actual PM-9630 all-path wall>=0.3mm and source-function acceptance; this remains unverified.",
+    "Off-bobbin TIW end preparation and qualified pin joining remain separate. No420C wire test copied onto bobbin.",
+    "Do not add varnish, adhesive or tube substitutions outside confirmed EIS. PIT-S listing alone does not confirm selected size or bend capability.",
+    "A-to-outerP has three intervening complete1350F-1 wraps (around A, between S layers, before outerP); do not count spaced TIW roundwires themselves as a continuous sheet barrier. Exit paths still require separate all-path review."
+  ],
+  "magnetic_acceptance": {
+    "Lp_mH": [
+      2.0736,
+      2.5344
+    ],
+    "turns_ratio": "120:22:30; exact polarity/dots as specified",
+    "effective_PS_leakage_max_uH_proposal": 20,
+    "method": "Three-winding impedance model from independently measured pair conditions and operation checks, with fixture compensation/frequency/signal/amplitude recorded;20uH not established by this drawing or slab model."
+  },
+  "insulation_access": "Core/yokes treated as hazardous primary-domain objects; bare secondary terminal pockets require actual air/surface/solid separation assessment. No norm-derived clearance, creepage or test voltage is adopted here.",
+  "effect_on_old_evidence": "Ideal turns graph/values retained; winding distribution, length/DCR, leakage/capacitance and field coupling change. Old winding-specific startup/clamp/parasitic/thermal/process calculations cannot be claimed validated for this construction without affected re-analysis.",
+  "proposed_cut_length_upper_m_including_leads": {
+    "P": 5.4,
+    "A": 0.95,
+    "S": 1.45
+  },
+  "proposed_DCR20_upper_ohm": {
+    "P": 3.78378,
+    "A": 0.665665,
+    "S": 0.381205
+  },
+  "cut_length_status": "Design/procurement acceptance proposal with explicit reserve above regular helical calculation; not confirmed builder capability. TEX-E source R20 is reference table, so exact purchased-wire resistance requirement must be agreed."
+}

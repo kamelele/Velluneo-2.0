@@ -1,0 +1,123 @@
+{
+  "constraints": {
+    "areas": [
+      {
+        "basis": "Retain existing primary/secondary no-new-copper allocation on all enabled layers; additional managed constraint, not a normative clearance substitute.",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "ISOLATION",
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          77.5,
+          82.9,
+          122.5,
+          92.135
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "basis": "Preserve selected circuit/return topology and current-sense separation. See spatial-basis.md; geometric audit is not EMI/fault qualification.",
+        "id": "DRIVER_POWER_SENSE",
+        "kelvin_connections": {
+          "objects": [
+            "R9",
+            "U1"
+          ],
+          "rationale": "Preserve dedicated positive sense connection; negative return is branch-controlled, not claimed as a complete Kelvin pair."
+        },
+        "loops": {
+          "objects": [
+            "C1",
+            "T1",
+            "Q1",
+            "R9"
+          ],
+          "rationale": "Retain compact power loop and approved graph while isolating measurement path."
+        },
+        "requirement_id": "PB-ROUTING",
+        "return_paths": {
+          "objects": [
+            "C1",
+            "R9",
+            "Q1",
+            "T1"
+          ],
+          "rationale": "Retain separate capacitor/shunt/source/auxiliary branches; no shared shortcut bypass."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "SENSE",
+            "CS"
+          ],
+          "rationale": "Preserve dedicated current-sense copper and review HV projection on every copper layer."
+        },
+        "switching_nodes": {
+          "objects": [
+            "Q1",
+            "T1",
+            "U1",
+            "D1"
+          ],
+          "rationale": "Retain selected switching node placement and source-bound loop review."
+        }
+      }
+    ],
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "intent_digest": "8533b925350bdaaef885ef132ae63ed204aa7abc92def2494f90432f0f4df6ad",
+    "kicad_version": "10.0.6",
+    "minimums_mm": {
+      "annular_width": 0.2,
+      "clearance": 0.25,
+      "edge_clearance": 0.5,
+      "hole_size": 0.3,
+      "track_width": 0.3
+    },
+    "net_settings": {
+      "classes": [
+        {
+          "bus_width": 12,
+          "clearance": 0.25,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "Default",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        }
+      ],
+      "meta": {
+        "version": 3
+      },
+      "netclass_patterns": []
+    },
+    "outline_mm": [
+      77.5,
+      70,
+      122.5,
+      130
+    ],
+    "schema_version": 1
+  },
+  "constraints_digest": "d2c1bfc56a66389fd9fa7ae6bdcdf0d0c460d3a79993294f7df6dddec0432286"
+}

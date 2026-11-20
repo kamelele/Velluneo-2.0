@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "stage": "routing",
+  "errors": [],
+  "matrix": [
+    {
+      "id": "PB-IDENTITY",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-IDENTITY",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-PB-IDENTITY"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "PB-ROUTING",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-ROUTING",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-PB-ROUTING"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "PB-GEOMETRY",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-GEOMETRY",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "DRC",
+      "evidence_ids": [
+        "EV-PB-GEOMETRY"
+      ],
+      "observed_levels": [
+        "DRC-checked"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "PB-CAM",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-CAM",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-PB-CAM"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "not_due"
+    },
+    {
+      "id": "PB-MAPPING",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-MAPPING",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-PB-MAPPING"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "PB-PROCESS",
+      "revision": "RFQ13-1",
+      "owner": "Process/sourcing designer and qualified technical reviewer",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-PROCESS",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "PB-TOOL-SCOPE",
+      "revision": "RFQ13-1",
+      "owner": "Process/sourcing designer and qualified technical reviewer",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-TOOL-SCOPE",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-PB-TOOL-SCOPE"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "not_due"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "PB-U-PROCESS",
+      "record_id": "PB-PROCESS",
+      "field": "supplier_confirmation",
+      "owner": "Process/sourcing designer and buyer",
+      "question": "Exact vendor quote/stackup/material/filledcapservice/films confirmation has not been received.",
+      "blocks_stage": "release",
+      "status": "open"
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+    "Hashes establish freshness, not evidence truth or reviewer authority.",
+    "Electrical checks compare declared DC envelopes only, not complete operation."
+  ],
+  "intent_digest": "bb1da4c4046083ae744c103b04ce4d001541576dfaa40b6c3f0ad879618d1046",
+  "product": "Velluneo selected driver BARE-BOARD prototype preparation only; parent lamp qualification remains separate/open",
+  "revision": "RFQ13-prototype-preparation-1",
+  "document_sha256": "2ca97ec8e62dd2d17361986a852bab6e9954c59b1e818ed6815e6d2bede8e4a8",
+  "blockers": [
+    {
+      "id": "PB-U-PROCESS",
+      "gate": "release",
+      "message": "Unresolved: Exact vendor quote/stackup/material/filledcapservice/films confirmation has not been received."
+    },
+    {
+      "id": "PB-PROCESS",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "blocked_stages": [
+    "release"
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "807c619ca5111d84904b52a3fcd7e2ff9c222e07913d817c57cf668476f022d4",
+    "archive_sha256": "d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97",
+    "package_version": "0.7.2-velluneo.1",
+    "publication_ready": false,
+    "ruleset_version": "0.7.2"
+  }
+}

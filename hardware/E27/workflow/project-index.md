@@ -1,5 +1,24 @@
 # E27 workflow index
 
+## Current manufacturer enquiry — RFQ13, 20 November 2026
+
+[RFQ13](specification-reset/supplier-review-13/README.md) is the current selected
+45 × 60 mm isolated four-layer, 33-part driver. It reserves the requested finished
+30 × 30 × 18 mm T1 body, makes three documented local part moves and strengthens
+P/S rules to 10.7 mm through actual pinned-toolkit preview/apply. Fresh native and
+portable ERC/DRC/parity are zero; conservative projected P/S copper gap is at least
+10.725 mm. Pin/MPN/value identity, measurement copper and separate returns remain.
+The unchanged toolkit manifest is b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97.
+
+The seven-page dimensioned review, source-based forming/hole calculations,
+independently checked CAM, separate bare-PCB/transformer-assembly/engineering ZIPs,
+unsent enquiries, response checklist and both-side native component renders are
+supplied. See review-status.json for the actual final review disposition. This
+supports technical quotation/DFM, not an order: finished T1/formed-part drawings,
+first-article fit, accepted process/films, finished insulation and physical product
+qualification remain open. No supplier contact, order, payment, powered testing or
+main merge is authorized by this packet. Earlier entries retain historical scope.
+
 ## Current selected driver and scoped toolkit extension — TOOLKIT11
 
 [TOOLKIT11](specification-reset/pcb-toolkit-11/README.md) supersedes the C10 automatic-adoption blocker. Use installed compatibility candidate0.7.2-velluneo.1/ruleset0.7.2, manifestb985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97/archive d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26, derived from public86614c3. The separate editable source checkout is work/toolkit-c11-source; distributable and changed sources are retained in this packet. Original source/cache is untouched. Actual clean-extracted Windows/KiCad10.0.6 validation:149unit passes/3symlink skips,101existing+6new native cases and installer/update/rollback/examples pass. No new Linux or upstream release acceptance is claimed.

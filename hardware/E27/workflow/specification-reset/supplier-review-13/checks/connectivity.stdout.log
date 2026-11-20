@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "errors": [
+    {
+      "type": "missing_stale_intent_approval",
+      "message": "Intent lacks current human approval evidence"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\supplier-review-13\\design\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\supplier-review-13\\design\\Velluneo_driver.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "12:06:42: Error: Directory 'C:\\Users\\kamil\\AppData' couldn't be created (error 183: Nie mo?na utworzy? pliku, kt\ufffdry ju? istnieje.)\nFontconfig error: Cannot load default config file: No such file: (null)\n\nFontconfig error: No writable cache directories\n\tC:/Users/kamil/AppData/Local/fontconfig/cache\n\tC:/Users/kamil/.cache/fontconfig\n\nFontconfig error: No writable cache directories\n\tC:/Users/kamil/AppData/Local/fontconfig/cache\n\tC:/Users/kamil/.cache/fontconfig\n"
+    }
+  ],
+  "intent_digest": "6d2cca8445877f5dde4f40cde42721160982e10b73d7e7227f3a55a059c6845a",
+  "intent_revision": "lossless-schema-adapter-of-approved33-basis-C10",
+  "physical_pins": 81,
+  "intended_nets": 23,
+  "no_connects": 4,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "88a96fa489059e1261a6ce76ec1213ce3ace8da10dc30828f99d57b7ef599525",
+  "export_sha256": "9f9fb7462548f3bc3988d7a77217d0326824a10b51b72d3780e101c235123a72",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "807c619ca5111d84904b52a3fcd7e2ff9c222e07913d817c57cf668476f022d4",
+    "archive_sha256": "d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97",
+    "package_version": "0.7.2-velluneo.1",
+    "publication_ready": false,
+    "ruleset_version": "0.7.2"
+  }
+}

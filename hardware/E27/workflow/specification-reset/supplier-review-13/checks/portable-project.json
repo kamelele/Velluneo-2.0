@@ -1,0 +1,56 @@
+{
+  "engineering_zip_sha256": "c1a0fbe41a04005ccf4f00157381343870acfea964d013bdf0505b88938a990f",
+  "checks": [
+    {
+      "check": "erc",
+      "exit_code": 0,
+      "report": {
+        "$schema": "https://schemas.kicad.org/erc.v1.json",
+        "coordinate_units": "mm",
+        "date": "2026-11-20T12:08:12",
+        "ignored_checks": [],
+        "included_severities": [
+          "error",
+          "warning"
+        ],
+        "kicad_version": "10.0.6",
+        "sheets": [
+          {
+            "path": "/",
+            "uuid_path": "/77d31777-c289-55b4-8639-423d694ceef7",
+            "violations": []
+          }
+        ],
+        "source": "Velluneo_driver.kicad_sch"
+      }
+    },
+    {
+      "check": "drc",
+      "exit_code": 0,
+      "report": {
+        "$schema": "https://schemas.kicad.org/drc.v1.json",
+        "coordinate_units": "mm",
+        "date": "2026-11-20T12:08:14",
+        "ignored_checks": [
+          {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+          },
+          {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+          }
+        ],
+        "included_severities": [
+          "error",
+          "warning"
+        ],
+        "kicad_version": "10.0.6",
+        "schematic_parity": [],
+        "source": "Velluneo_driver.kicad_pcb",
+        "unconnected_items": [],
+        "violations": []
+      }
+    }
+  ]
+}
