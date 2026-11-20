@@ -1,0 +1,191 @@
+{
+  "actor": "/root/compact_alternatives",
+  "task": "Compact09 LED candidate verification",
+  "scope": "Ownresearchonly; noCADorcustomer-sourcewrites; nohumanapprovalorphysicalqualificationclaimed",
+  "source": {
+    "index_url": "https://lumileds.com/support/documentation/datasheets/",
+    "official_current_link": "https://lumileds.com/DS216-LUXEON-2835-Architectural-Datasheet",
+    "resolved_url": "https://otmm.lumileds.com/adaptivemedia/832eef99dd3139f98fa943e60565a2920b270d04",
+    "local_file": "DS216-official.pdf",
+    "sha256": "d17a95e1c05992a8cca9dcb9689666410da4559e7a96de12b29605281286caed",
+    "bytes": 5723691,
+    "pages": 44,
+    "actual_printed_revision": "20261112",
+    "copyright_year": 2026,
+    "index_modified_date": "2026-11-16",
+    "source_is_current_manufacturer_document": true
+  },
+  "part": {
+    "mpn": "L128-4080CA3500001",
+    "family": "LUXEON2835C3V",
+    "CCT_K": 4000,
+    "minimum_CRI": 80,
+    "CRI_measurement_tolerance_points": 2,
+    "test_current_mA": 120,
+    "test_junction_temperature_C": 25,
+    "test_pulse_ms": 20,
+    "source_test_conditions_printed_page": 2,
+    "source_selection_printed_page": 3,
+    "source_selection_pdf_page": 4,
+    "flux_min_lm": 55.0,
+    "flux_typ_lm": 63.8,
+    "flux_measurement_tolerance_percent": 7.5,
+    "efficacy_typ_lm_per_W": 177.2,
+    "Vf_min_V": 2.9,
+    "Vf_typ_V": 3.0,
+    "Vf_max_V": 3.2,
+    "Vf_measurement_tolerance_V": 0.1,
+    "electrical_printed_page": 7,
+    "electrical_pdf_page": 8,
+    "typical_Vf_temperature_coefficient_mV_per_C": [
+      -2,
+      -1
+    ],
+    "coefficient_measurement_temperature_range_C": [
+      25,
+      85
+    ],
+    "thermal_resistance_junction_to_solder_pad_typ_K_per_W": 21,
+    "DC_current_abs_max_mA": 240,
+    "pulse_current_abs_max_mA": 300,
+    "pulse_limit_conditions": "<=50%duty,5mspulsewidth; recurringACripple>=100Hz permittedifaverage<=DCmaxandpeak<=pulsemax,withproperthermalderating",
+    "Tj_abs_max_C": 125,
+    "case_operating_range_C": [
+      -40,
+      105
+    ],
+    "ratings_printed_page": 8,
+    "ratings_pdf_page": 9,
+    "reverse_voltage_max_V": 5,
+    "reverse_limit_notes": "Transient<=10ms,reversecurrent<220uA; one-timebeginning-of-life5V<=10s differsfromcontinuousreverseuse",
+    "package_body_mm": {
+      "length": [
+        3.4,
+        3.6
+      ],
+      "width": [
+        2.75,
+        2.85
+      ],
+      "height": [
+        0.65,
+        0.75
+      ]
+    },
+    "mechanical_printed_page": 38,
+    "solder_pad_printed_page": 40,
+    "package_pin_mapping_note": "Figure9labelslargeundersideterminalCathode; polarity/top-versus-bottomviewmustbecheckedexplicitlybeforefootprintgeneration. NoCADpinmappingapprovedhere."
+  },
+  "twenty_series_screen": {
+    "quantity": 20,
+    "nominal_current_mA": 120,
+    "nominal_voltage_V": 60,
+    "nominal_electrical_power_W": 7.2,
+    "at_test25C_voltage_table_range_V": [
+      58,
+      64
+    ],
+    "including_Vf_measurement_tolerance_screen_V": [
+      56,
+      66
+    ],
+    "nominal_LED_heat_upper_bound_W": 7.2,
+    "per_LED_heat_upper_bound_W": 0.36,
+    "deltaTj_to_pad_from_typ_Rth_using_all_electrical_as_heat_K": 7.56,
+    "thermal_screen_limit": "Rth21istypical,notmaximum; realMCPCB/spreader/modulecase/LEDjunctiontemperaturesmustbemeasured. Do not equate caseabsmax105C or junctionabsmax125C to lifetime design targets.",
+    "operating_voltage_limit": "Temperaturecoefficientistypical,characterized25..85C;cannotmanufactureaguaranteedfulltemperatureVfwindowfromit. At0C/coldstartandhotsolderpadconditions verifyactualLEDstringvoltage andstablecurrent. OriginalRDR46457..63Vtestedloadrange doesnotcoverallpossible20Sbins."
+  },
+  "light_scenarios": [
+    {
+      "assumed_hot_flux_factor": 0.9,
+      "assumed_diffuser_transmission": 0.85,
+      "typical_initial_20LED_lm": 1276.0,
+      "calculated_typical_hot_after_diffuser_lm": 976.1400000000001,
+      "calculated_min_table_hot_after_diffuser_lm": 841.5,
+      "calculated_min_table_less_7p5pct_measurement_screen_lm": 778.3874999999999,
+      "qualification": "Scenario, not measured or guaranteed. Thermal factors are approximate typical-curve/engineering assumptions; optical transmission has not been measured."
+    },
+    {
+      "assumed_hot_flux_factor": 0.9,
+      "assumed_diffuser_transmission": 0.9,
+      "typical_initial_20LED_lm": 1276.0,
+      "calculated_typical_hot_after_diffuser_lm": 1033.5600000000002,
+      "calculated_min_table_hot_after_diffuser_lm": 891.0,
+      "calculated_min_table_less_7p5pct_measurement_screen_lm": 824.1750000000001,
+      "qualification": "Scenario, not measured or guaranteed. Thermal factors are approximate typical-curve/engineering assumptions; optical transmission has not been measured."
+    },
+    {
+      "assumed_hot_flux_factor": 0.88,
+      "assumed_diffuser_transmission": 0.85,
+      "typical_initial_20LED_lm": 1276.0,
+      "calculated_typical_hot_after_diffuser_lm": 954.4480000000001,
+      "calculated_min_table_hot_after_diffuser_lm": 822.8,
+      "calculated_min_table_less_7p5pct_measurement_screen_lm": 761.0899999999999,
+      "qualification": "Scenario, not measured or guaranteed. Thermal factors are approximate typical-curve/engineering assumptions; optical transmission has not been measured."
+    },
+    {
+      "assumed_hot_flux_factor": 0.88,
+      "assumed_diffuser_transmission": 0.9,
+      "typical_initial_20LED_lm": 1276.0,
+      "calculated_typical_hot_after_diffuser_lm": 1010.5920000000001,
+      "calculated_min_table_hot_after_diffuser_lm": 871.2,
+      "calculated_min_table_less_7p5pct_measurement_screen_lm": 805.86,
+      "qualification": "Scenario, not measured or guaranteed. Thermal factors are approximate typical-curve/engineering assumptions; optical transmission has not been measured."
+    },
+    {
+      "assumed_hot_flux_factor": 0.85,
+      "assumed_diffuser_transmission": 0.85,
+      "typical_initial_20LED_lm": 1276.0,
+      "calculated_typical_hot_after_diffuser_lm": 921.9099999999999,
+      "calculated_min_table_hot_after_diffuser_lm": 794.75,
+      "calculated_min_table_less_7p5pct_measurement_screen_lm": 735.14375,
+      "qualification": "Scenario, not measured or guaranteed. Thermal factors are approximate typical-curve/engineering assumptions; optical transmission has not been measured."
+    },
+    {
+      "assumed_hot_flux_factor": 0.85,
+      "assumed_diffuser_transmission": 0.9,
+      "typical_initial_20LED_lm": 1276.0,
+      "calculated_typical_hot_after_diffuser_lm": 976.14,
+      "calculated_min_table_hot_after_diffuser_lm": 841.5,
+      "calculated_min_table_less_7p5pct_measurement_screen_lm": 778.3875,
+      "qualification": "Scenario, not measured or guaranteed. Thermal factors are approximate typical-curve/engineering assumptions; optical transmission has not been measured."
+    }
+  ],
+  "light_assessment": "About800lmafterdiffuserisplausiblebutnotproven.20S120mAhas1100lmminimum-table/1276lmtypicalpulsefluxat25Cbeforetemperature,optics,measurementandcurrentvariation. Forhotfactor.88anddiffuser.85,typical954.4lm,minimumtable822.8lm,andconservativefluxmeasurement-screen761.09lm. Exact800targetneedsactualbin/moduletemperature/diffusermeasurementandcurrentcalibration. Noneofthesescreensisaguaranteedminimum.",
+  "minimum_on_time_screen": {
+    "basis": "Root-proposed0.68ohm||13ohmsense,1mH,253VAChighline; thisisconditionalrampcalculationnotfullcontrol-loopverification",
+    "parallel_Rsense_ohm": 0.6461988304093568,
+    "assumed_VFB_V": 0.279,
+    "calculated_Ipeak_A": 0.4317556561085973,
+    "maximum_line_peak_V_before_rectifier_drop": 357.7960312803931,
+    "nominal_ton_us_at_LED60V": 1.4498368371540622,
+    "ton_us_at_LED56V": 1.4306207218061828,
+    "controller_assumed_maximum_min_on_time_us": 1.25,
+    "corner_screen": {
+      "assumed_Lmin_H": 0.00095,
+      "assumed_VFBmin_V": 0.273,
+      "assumed_Rsense_plus1percent_ohm": 0.6526608187134504,
+      "assumed_LEDmin_V": 53.6,
+      "calculated_ton_us": 1.3063067387673166
+    },
+    "limitations": [
+      "ControllerVFBmin/minimumONtimeassumptionsmustbeboundtocurrentmanufacturerdatasheetbyrootRDRresearch.",
+      "Includeinductancetolerance,hotbias/saturation,Rtempcoefficient,line/transientbus,rippleandswitchtimingmargins. Arough1.3uscornerisclose1.25usminimumanddoesnotproveregulation.",
+      "Inductor/switchpeak~0.43AdoesnotdirectlyequalLEDpeakbecausebaseCoutfiltersit. LEDterminalripple/startup/reconnectmuststaywithinitsown300mAconditionalpeaklimit; donotapplyMOSFETcurrentratingtoLEDs."
+    ]
+  },
+  "procurement": {
+    "part_identity": "VerifiedfromcurrentprimarymanufacturerPDF",
+    "stock": "ParentreportedDigiKey5909362cut-tapestock37667; noadditionalstockverificationperformedbythisactor",
+    "alternative_6V_part": "L1284080SB35B00A1 excludedbyparentdueMOQ120000/non-stock; notsilentlysubstituted"
+  },
+  "remaining_checks": [
+    "ActualLEDlotforwardvoltagebinandluminousfluxbin/CRI/CCTonreceivedreellabel",
+    "Opticalbandaround800lmdefinedbyowner,thencalibratedstabilizedLED+diffusermeasurement",
+    "CompleteLEDcurrentboundsandrippleat207/230/253V,0..40Cambientandmodulehottestcase",
+    "UpdatedfeedbackOVPdividerandCoutvoltagemarginforpossible20Svoltagecorners",
+    "Outputreconnectdischarge/impulsepathatbasecapacitorchargedstate; LED300mAconditionandreversevoltagebound",
+    "Packagepolarityandcustomfootprintagainstprintedp38/p40beforeanyLEDboardCAD",
+    "Currentcontrollerandmagneticcornerverification; helperarithmeticisnotnativeSPICEornewphysicalmeasurement"
+  ]
+}

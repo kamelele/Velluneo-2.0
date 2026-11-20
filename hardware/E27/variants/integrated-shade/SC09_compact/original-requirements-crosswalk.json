@@ -1,0 +1,244 @@
+{
+  "source": "../SC08_prototype/requirements.json",
+  "sha256": "1f10e2590e53a47f696a52c97886514582ace16ab7e28c953b4599a8bbcfa5af",
+  "scope": "Original product obligations retained. Electrical values/architecture and existing CAD approvals do not transfer; every applicable record needs new SC09 evidence. Compact owner request additionally controls.",
+  "requirements": [
+    {
+      "id": "REQ-SCOPE",
+      "original_text": "Separate non-isolated driver study for integrated diffuser-plus-LED module; most electronics in base; no dimming.",
+      "original_acceptance": "Candidate documents all owner constraints and preserves historical isolated designs.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_SCOPE"
+      ],
+      "active_gates": {
+        "C_SCOPE": "specification"
+      }
+    },
+    {
+      "id": "REQ-POWER",
+      "original_text": "Choose a regulated LED operating point without inheriting the 8S/24V limit.",
+      "original_acceptance": "Calculate 60/72/90/108V operating scenarios at 8W; exact current, LED count and voltage envelope remain unapproved.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_ARCH",
+        "C_EFFICIENCY"
+      ],
+      "active_gates": {
+        "C_ARCH": "specification",
+        "C_EFFICIENCY": "schematic"
+      }
+    },
+    {
+      "id": "REQ-LIGHT",
+      "original_text": "Approximately 800 lm after diffuser.",
+      "original_acceptance": "Before release agree an optical acceptance band around 800lm and demonstrate it with selected LED bins/CCT, stabilized temperatures, diffuser and calibrated measurements.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_LIGHT",
+        "C_COMPLIANCE",
+        "C_OPTICAL_INPUT"
+      ],
+      "active_gates": {
+        "C_LIGHT": "specification",
+        "C_COMPLIANCE": "release",
+        "C_OPTICAL_INPUT": "schematic"
+      }
+    },
+    {
+      "id": "REQ-MAINS",
+      "original_text": "Propose 230VAC/50Hz and 207–253VAC design screening.",
+      "original_acceptance": "Confirm target market/rated supply before schematic and establish complete startup/continuous/fault voltage range.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_SUPPLY"
+      ],
+      "active_gates": {
+        "C_SUPPLY": "specification"
+      }
+    },
+    {
+      "id": "REQ-FAULT",
+      "original_text": "Bound startup, open/short/reconnect, component faults and thermal behavior.",
+      "original_acceptance": "Before schematic acceptance document numeric limits and current corner calculations; release requires physical fault verification.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_PROTECTION"
+      ],
+      "active_gates": {
+        "C_PROTECTION": "schematic"
+      }
+    },
+    {
+      "id": "REQ-SAFETY",
+      "original_text": "All driver/output/LED conductors treated as mains-referenced.",
+      "original_acceptance": "Before schematic accept insulation architecture and applicable standards/test matrix; before placement accept assembly interfaces/accessibility; release requires complete-product safety evidence.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_SAFETY_BASIS",
+        "C_PACKING",
+        "C_COMPLIANCE"
+      ],
+      "active_gates": {
+        "C_SAFETY_BASIS": "schematic",
+        "C_PACKING": "placement",
+        "C_COMPLIANCE": "release"
+      }
+    },
+    {
+      "id": "REQ-PROCESS",
+      "original_text": "Choose actual fabrication and assembly process.",
+      "original_acceptance": "Owner confirms proposed service/stackup/finish/assembly scope or a documented alternative. No supplier capability or quote is inferred from example geometry.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_PROCESS"
+      ],
+      "active_gates": {
+        "C_PROCESS": "specification"
+      }
+    },
+    {
+      "id": "REQ-PARTS",
+      "original_text": "Use exact verified and obtainable parts.",
+      "original_acceptance": "Full datasheet/package/pinout, exact orderable suffix and credible procurement route exist before capture; do not substitute product briefs for missing limits.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_PARTS"
+      ],
+      "active_gates": {
+        "C_PARTS": "schematic"
+      }
+    },
+    {
+      "id": "REQ-CONNECTIVITY",
+      "original_text": "Approve independently derived pin-level intent before capture.",
+      "original_acceptance": "Every physical pin and NC reason comes from requirements and exact datasheets; record real human acceptance; compare actual exported netlist after capture.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_GRAPH"
+      ],
+      "active_gates": {
+        "C_GRAPH": "schematic"
+      }
+    },
+    {
+      "id": "REQ-SIZE",
+      "original_text": "Measure achievable board size rather than inventing an enclosure.",
+      "original_acceptance": "Before placement approve actual outline, height, connector location, insulation/thermal assumptions and assembly access; 40x25mm is only an exploratory goal.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_SIZE",
+        "C_PACKING"
+      ],
+      "active_gates": {
+        "C_SIZE": "specification",
+        "C_PACKING": "placement"
+      }
+    },
+    {
+      "id": "REQ-EMC",
+      "original_text": "Meet applicable complete-product EMC/light-quality requirements.",
+      "original_acceptance": "Determine actual applicable EN editions and limits; retain conducted/radiated emissions, immunity, harmonics/DF/PF and PstLM/SVM measurement results before release.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_COMPLIANCE"
+      ],
+      "active_gates": {
+        "C_COMPLIANCE": "release"
+      }
+    },
+    {
+      "id": "REQ-COST",
+      "original_text": "Keep BOM and assembly simple with reasonable cost.",
+      "original_acceptance": "Compare complete priced BOM/process at a named quantity/date before purchasing; no unverified price or fit claims.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_COST"
+      ],
+      "active_gates": {
+        "C_COST": "release"
+      }
+    },
+    {
+      "id": "REQ-ENV",
+      "original_text": "Define environmental, thermal and service-life design conditions.",
+      "original_acceptance": "Before schematic acceptance record rated/minimum ambient, intended fixture/orientations, thermal path, capacitor case/lifetime target, LED junction limit and corresponding evidence plan. No inherited numeric limit silently becomes approved.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_ENV",
+        "C_THERMAL"
+      ],
+      "active_gates": {
+        "C_ENV": "schematic",
+        "C_THERMAL": "release"
+      }
+    },
+    {
+      "id": "REQ-SAFETY-TEST",
+      "original_text": "Verify complete-product electrical safety physically.",
+      "original_acceptance": "Before release retain actual tests against the approved standards/classification: insulation, accessibility during removal/replacement, abnormal operation, residual energy and relevant thermal/fire requirements. CAD review alone cannot satisfy this requirement.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_COMPLIANCE"
+      ],
+      "active_gates": {
+        "C_COMPLIANCE": "release"
+      }
+    },
+    {
+      "id": "REQ-FAULT-TEST",
+      "original_text": "Verify startup and fault response physically.",
+      "original_acceptance": "Before release record measured normal/corner and fault matrices for startup, open LED/removal, short LED/output, component faults, contact bounce/reconnection, brownout, thermal response, surge/inrush and discharge against numeric limits approved before schematic acceptance.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_PROTECTION",
+        "C_THERMAL"
+      ],
+      "active_gates": {
+        "C_PROTECTION": "schematic",
+        "C_THERMAL": "release"
+      }
+    },
+    {
+      "id": "REQ-OPTICAL-INPUT",
+      "original_text": "Define LED/optical selection criteria before driver selection.",
+      "original_acceptance": "Before schematic acceptance agree first CCT/CRI, target flux band around 800lm, intended diffuser loss range, operating-temperature/bin assumptions and cold/hot electrical LED envelope. Final physical verification remains REQ-LIGHT.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_OPTICAL_INPUT"
+      ],
+      "active_gates": {
+        "C_OPTICAL_INPUT": "schematic"
+      }
+    },
+    {
+      "id": "REQ-INTERFACE",
+      "original_text": "Define the driver-to-LED electrical interface.",
+      "original_acceptance": "Before schematic acceptance create a structured two-endpoint interface contract with selected voltage/current envelopes, physical connector/pin identities, startup/fault behavior and owner; no pin identity or numeric bound may be inferred from an unapproved CAD draft.",
+      "owner": "Codex-root",
+      "SC09_status": "Retained at original gate(s). Research direction review does not close these prerequisites. Prior CAD/measurement approvals not inherited.",
+      "active_ids": [
+        "C_INTERFACE"
+      ],
+      "active_gates": {
+        "C_INTERFACE": "schematic"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Archived authoring provenance
+
+build_proposal.py, make_packet.py and correct_review.py are archived copies of authoring scripts originally executed from workspace work/compact09/. They assume the original workspace layout and local research downloads; they are not portable repository commands. Do not execute them from this workflow directory. In particular build_proposal.py resets proposal evidence and must never be replayed over approved work. Frozen JSON/PDF/CSV and their exact hashes are the review inputs; regenerated PDF metadata can change hashes. The scripts record how this proposal was authored, not an automatic acceptance or release path.

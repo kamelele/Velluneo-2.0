@@ -1,0 +1,28 @@
+{
+  "owner_requirement": "Fitordinarybulb; oversizedSC08rejected. No circuit-size expansion without explicitownerreview.",
+  "hard_proposal_stop_envelope_mm": [
+    50,
+    25,
+    20
+  ],
+  "first_trial_body_packing_envelope_mm": [
+    45,
+    25,
+    19
+  ],
+  "state": "Proposed budget, NOT finalPCBdimension or proven bulbfit",
+  "capsule_model": "45x25x19rectangularmodule requires about31.4mm diagonal cross-section when45mmaxis vertical, before enclosure insulation/assembly clearance. Proposed test cavity34mmIDx48mmlongis an engineeringreferenceonly, not actualbulbgeometry.",
+  "reference_RDR_board_mm": {
+    "width_dimensioned": 22,
+    "length_drawing_estimate": 50.1,
+    "length_estimate_uncertainty": 0.5
+  },
+  "body_only_fit": "reference/body-packing-study.json fits45x25withC6formedleads and5mmventreserve; excludes truepads/THpinconflicts/routing/electricalspacing/thermalaccess.",
+  "placement_stop_conditions": [
+    "NoexactT1finishedbobbinpincoordinates/leadforming drawing",
+    "Noall47physicalpad/courtyard andelectricalspacingfit",
+    "Noowneracceptedactualcavity/spacebudget",
+    "Failuretomaintaincompactbudget; stopandredesignnotautomaticboardgrowth"
+  ],
+  "no_enclosure_development_required": "Only actual available internal volume and mounting/access boundaries needed before placement; no fullhousingCADneeded."
+}

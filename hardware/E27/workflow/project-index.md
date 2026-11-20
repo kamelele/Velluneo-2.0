@@ -1,3 +1,11 @@
+# Current task — SC09 compact driver (2026-11-21)
+
+This current pointer supersedes historical Active task/tool-state entries below. Owner rejected the SC08-B 140 x 100 mm product size. Preserve its CAD and reports as historical laboratory work; do not advance it to manufacturing.
+
+Active: [SC09-A compact pre-CAD proposal](integrated-shade/compact-09/SC09_propozycja.pdf), [task contract](integrated-shade/compact-09/task-contract.json), [frozen review inputs](integrated-shade/compact-09/review-inputs.json), [state](integrated-shade/compact-09/design-state.json). Branch: concept/integrated-shade-nonisolated-buck; main outside write scope. SC09 has no native schematic or PCB yet. New architecture/map and stage approvals remain required; prior SC08 approvals do not transfer.
+
+Installed pinned toolkit: manifest05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822, archive15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4, package0.7.1-preview.3/ruleset0.7.1, KiCad10.0.6 and matching pcbnew. Actual lock is .pcb-toolkit/lock.json in repository. Doctor passed for this environment; historical10.0.8 statements below do not authorize a toolchain switch.
+
 # E27 workflow index
 
 ## Toolkit and tools

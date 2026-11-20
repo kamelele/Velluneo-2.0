@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo_SC09_compact",
+  "revision": "SC09-A",
+  "subsystems": [
+    {
+      "id": "DRIVER",
+      "kind": "pcb",
+      "owner": "Codex-root"
+    },
+    {
+      "id": "LED_MODULE",
+      "kind": "pcb",
+      "owner": "Kamil"
+    },
+    {
+      "id": "ENCLOSURE",
+      "kind": "enclosure",
+      "owner": "Kamil"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "C_SCOPE",
+      "revision": "SC09-A",
+      "owner": "Kamil",
+      "text": "Compact nonisolated bulb driver,mostly inbase,no dimming,replacewholeLED+shade.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Preserve actualownerbrief and all earlier17finishedproductobligations; old140x100routingisnotasuitable compact product.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_SCOPE",
+          "path": "owner-current-brief.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-SCOPE"
+      ]
+    },
+    {
+      "id": "C_ARCH",
+      "revision": "SC09-A",
+      "owner": "Kamil",
+      "text": "Choose compactarchitecture with actual sources, not a shrink ofoldSC08.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Actualowner chooses reviewedRDR-derived19position47pinproposal, includingNRND/custommagnetics risks; no manufactured approval.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_ARCH",
+          "path": "bom-proposal.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_SUPPLY",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Poland/EU230V50Hz,207..253VACscreen.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Declare supplyandnonisolatedtwo-wireports; do notinherit90..300V qualificationfromreference.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_SUPPLY",
+          "path": "driver-led-interface.proposed.json"
+        }
+      ],
+      "method": "design",
+      "evidence_ids": [
+        "EV-SUPPLY"
+      ]
+    },
+    {
+      "id": "C_LIGHT",
+      "revision": "SC09-A",
+      "owner": "Kamil",
+      "text": "About800lm,4000K,CRIatleast80.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "ExactLEDcandidate20SL128-4080CA3500001 isdocumented; coldpulseflux andassumptions distinctfromstabilizedlampmeasurements.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_LIGHT",
+          "path": "reference/LED-primary-research.json"
+        }
+      ],
+      "method": "design",
+      "evidence_ids": [
+        "EV-LIGHT"
+      ]
+    },
+    {
+      "id": "C_SIZE",
+      "revision": "SC09-A",
+      "owner": "Kamil",
+      "text": "Ordinarybulb-sizebudget governs architecture beforeCAD.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Propose maximum50x25x20mm andfirst45x25x19bodyexperiment; no actualPCB/bulbfitclaimuntilpads/routing/cavityverified.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_SIZE",
+          "path": "mechanical-budget.proposed.json"
+        }
+      ],
+      "method": "design",
+      "evidence_ids": [
+        "EV-SIZE"
+      ]
+    },
+    {
+      "id": "C_PROCESS",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Usealreadyapprovedmanualprototypeprocess.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "FR42L1oz1.6mmleadfreeHASL/manualassembly; priorprocessdecisionappliesprocessonly,notnewdesignororder.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_PROCESS",
+          "path": "owner-process-line-decision.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-PROCESS"
+      ]
+    },
+    {
+      "id": "C_EFFICIENCY",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Avoid previouslarge resistor/auxiliary losses.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Show ownnominalcurrent135mA andreference0.79Wloss; newdriverplanning.7..1.2W mustbeverifiedlater.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_EFFICIENCY",
+          "path": "calculated-proposal.json"
+        }
+      ],
+      "method": "calculation",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_PARTS",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Exactparts andratedstress/physicalpins.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Reviewall19positions includingactiveC1/C4/C5/C6replacements,HVdividerresistor andcustomsinglewinding.T1 finishedgeometry mustclosebeforeplacement.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_PARTS",
+          "path": "bom-proposal.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_GRAPH",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Independent physicalpinintentbeforecapture.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Actualownerapproved47pins/11nets/1NCbasisandfreshschematicexportagreement; no SC08approvalreuse.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_GRAPH",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_PROTECTION",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Documentcomplete boundedprototypeprotectionstrategy.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "IntegratedOVP/short/thermalandinputfuse/MOV,100VC6 andoneopenbleeder<=40sconditionalcalculation; no hotplug, sharedICindependence or allfaultpassclaimed.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_PROTECTION",
+          "path": "calculated-proposal.json"
+        }
+      ],
+      "method": "calculation",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_INTERFACE",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Wholemodulecoldreplacement interface preserved.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "ReviewedJ2pin/load/fault envelope; no liveinsertion; hardwareaccess barrier andverifieddischargebeforeconsumerexchange.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_INTERFACE",
+          "path": "driver-led-interface.proposed.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_PACKING",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "ActualsavedPCB must fit budget,not justbodyrectangles.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "All47pads/19courtyardsincludingT1/formedC6/MOVstagger/ventzone,thermalaccess/voltagepairspacing andowneracceptedcavityverifiedbeforeplacementacceptance.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_PACKING",
+          "path": "mechanical-budget.proposed.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_ROUTING",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Actualnativecopperimplementsapprovedmapandspacing.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "FreshERC,independentgraph,refillednativeDRC/parity/alllayerdomainchecks withzeroerrors/unconnected; allfouractualroles andhumanstageapproval.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_ROUTING",
+          "path": "intended-connectivity.json"
+        }
+      ],
+      "method": "DRC",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_THERMAL",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Verify actualclosedbulb andprototypeparttemperatures.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "MeasureLED/U1/C6/T1/L1/RF1/R7 at207/230/253V,0..40Clab anddeclaredclosedbulbconditions; honorspecificpartderating.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_THERMAL",
+          "path": "standards-and-test-plan.json"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_COMPLIANCE",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Finishedlamp meets applicablecurrentrequirements.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "Own EMC/immunity/safety/fault/photometric/PstLM/SVM evidenceandqualifiedclassification; noinheritance ofreferencecertification.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_COMPLIANCE",
+          "path": "standards-and-test-plan.json"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_RELEASE",
+      "revision": "SC09-A",
+      "owner": "Codex-root",
+      "text": "Exactmanufacturingartifacts andseparateownerdecision.",
+      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
+      "acceptance": "ReviewedGerbers/drills/BOM/assembly/hash-boundsource andactualrelease/orderconsent; noenergizedtestpermissioninferred.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_RELEASE",
+          "path": "hardware.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_ENV",
+      "revision": "SC09-A",
+      "owner": "Kamil and root designer",
+      "text": "Preserve original environment inputs before schematic acceptance.",
+      "basis": "Retained original17 obligations and independent COMP-02 finding",
+      "acceptance": "Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_ENV",
+          "path": "original-requirements-crosswalk.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_OPTICAL_INPUT",
+      "revision": "SC09-A",
+      "owner": "Kamil and root designer",
+      "text": "Preserve agreed optical and LED cold/hot input basis.",
+      "basis": "Retained original17 obligations and independent COMP-02 finding",
+      "acceptance": "4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_OPTICAL_INPUT",
+          "path": "original-requirements-crosswalk.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_SAFETY_BASIS",
+      "revision": "SC09-A",
+      "owner": "Kamil and root designer",
+      "text": "Confirm insulation/classification and applicable test basis before schematic acceptance.",
+      "basis": "Retained original17 obligations and independent COMP-02 finding",
+      "acceptance": "Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_SAFETY_BASIS",
+          "path": "original-requirements-crosswalk.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C_COST",
+      "revision": "SC09-A",
+      "owner": "Kamil and root designer",
+      "text": "Price the entire build before purchase.",
+      "basis": "Retained original17 obligations and independent COMP-02 finding",
+      "acceptance": "Complete BOM, PCB, winding, assembly and process price at named quantity/date, including exclusions and Economic/Standard comparison; no ordering permission inferred.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C_COST",
+          "path": "original-requirements-crosswalk.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [
+    {
+      "id": "OPEN_ARCH",
+      "record_id": "C_ARCH",
+      "field": "acceptance",
+      "owner": "Kamil",
+      "question": "Accept thisexactcompactprototypearchitecture/mapafteractualindependentreview; activeNRNDICandcustominductorareexplicitrisks.",
+      "blocks_stage": "specification",
+      "status": "open",
+      "evidence_ids": []
+    },
+    {
+      "id": "OPEN_CAVITY",
+      "record_id": "C_PACKING",
+      "field": "acceptance",
+      "owner": "Kamil and designer",
+      "question": "Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement.",
+      "blocks_stage": "placement",
+      "status": "open",
+      "evidence_ids": []
+    },
+    {
+      "id": "OPEN_GEOMETRY",
+      "record_id": "C_PACKING",
+      "field": "acceptance",
+      "owner": "Codex-root",
+      "question": "ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking.",
+      "blocks_stage": "placement",
+      "status": "open",
+      "evidence_ids": []
+    },
+    {
+      "id": "OPEN_C_ENV",
+      "record_id": "C_ENV",
+      "field": "acceptance",
+      "owner": "Kamil and root designer",
+      "question": "Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release.",
+      "blocks_stage": "schematic",
+      "status": "open",
+      "evidence_ids": []
+    },
+    {
+      "id": "OPEN_C_OPTICAL_INPUT",
+      "record_id": "C_OPTICAL_INPUT",
+      "field": "acceptance",
+      "owner": "Kamil and root designer",
+      "question": "4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance.",
+      "blocks_stage": "schematic",
+      "status": "open",
+      "evidence_ids": []
+    },
+    {
+      "id": "OPEN_C_SAFETY_BASIS",
+      "record_id": "C_SAFETY_BASIS",
+      "field": "acceptance",
+      "owner": "Kamil and root designer",
+      "question": "Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier.",
+      "blocks_stage": "schematic",
+      "status": "open",
+      "evidence_ids": []
+    },
+    {
+      "id": "OPEN_IFC_ACCEPTANCE",
+      "record_id": "C_INTERFACE",
+      "field": "acceptance",
+      "owner": "Kamil and root designer",
+      "question": "Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints.",
+      "blocks_stage": "schematic",
+      "status": "open",
+      "evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-SCOPE",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex root, actual document review/design author",
+      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "artifact": "owner-current-brief.json",
+      "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0",
+      "inputs": [
+        {
+          "path": "owner-current-brief.json",
+          "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+        }
+      ],
+      "scope": "Root review of actual owner constraints only, not new architecture approval."
+    },
+    {
+      "id": "EV-SUPPLY",
+      "kind": "design",
+      "result": "pass",
+      "verified_by": "Codex root, actual document review/design author",
+      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "artifact": "driver-led-interface.proposed.json",
+      "sha256": "e55ac49af515bb460264768d8683a6f073f59ca70b4e28db915a7469d3e69df6",
+      "inputs": [
+        {
+          "path": "owner-current-brief.json",
+          "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+        }
+      ],
+      "scope": "Proposed port and line definition; no measured qualification."
+    },
+    {
+      "id": "EV-LIGHT",
+      "kind": "design",
+      "result": "pass",
+      "verified_by": "Codex root, actual document review/design author",
+      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "artifact": "reference/LED-primary-research.json",
+      "sha256": "cb6055d0e7dde703bd02d0c3197307b9c0831b32a4a759c1cdcccf80742a40b0",
+      "inputs": [
+        {
+          "path": "owner-current-brief.json",
+          "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+        }
+      ],
+      "scope": "Owner4000KCRI80 and exact LED candidate; not measured flux guarantee."
+    },
+    {
+      "id": "EV-SIZE",
+      "kind": "design",
+      "result": "pass",
+      "verified_by": "Codex root, actual document review/design author",
+      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "artifact": "mechanical-budget.proposed.json",
+      "sha256": "cbce063e385780520e87a8448fc87a60a42f8ed8f27a9cd7b99feba81b4d843a",
+      "inputs": [
+        {
+          "path": "owner-current-brief.json",
+          "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+        }
+      ],
+      "scope": "Explicit proposed dimension stop budget; body-only study not PCB fit."
+    },
+    {
+      "id": "EV-PROCESS",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codex root, actual document review/design author",
+      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "artifact": "owner-process-line-decision.json",
+      "sha256": "430648e1b471d9aa3fede9aa34134bb94fe95150c138cb2d5948d0886afaab47",
+      "inputs": [
+        {
+          "path": "owner-current-brief.json",
+          "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+        }
+      ],
+      "scope": "Retained actual manual prototype process acceptance only; no new architecture approval."
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "task": "SC09 compactcomponent/fitresearch",
+  "actual_actor": "/root/compact_fit_research",
+  "customer_CAD_written": false,
+  "input_RDR464_sha256": "c71ee568ae0c797061deebce5aa8e3d65cc7394d6da323566a3cf0ddc80a1f6d",
+  "reference_PCB": {
+    "explicit_max_width_mm": 22,
+    "explicit_neck_width_mm": 13,
+    "explicit_right_segment_length_mm": 29.5,
+    "overall_length_drawing_derived_mm": 50.1,
+    "drawing_derived_length_uncertainty_reservation_mm": 0.5,
+    "nominal_comparison_envelope_mm": [
+      50,
+      22
+    ],
+    "not_manufacturer_dimensioned_overall_length": true,
+    "method": "Visually inspected nativePDFp10render. Calibrate mainrightsegment29.5mm against463rasterpx;fulloutline786px =>50.08mm. Pixelvalues tiedtorender1900pxheight, approximate becauseantialias/rasteredges. Rootindependently confirmed~50.1mm withdifferentcalibration.",
+    "local_view": "rdr464-page10.png",
+    "reference_assembled_height": "Notdimensioned. Horizontal8x20canandEE10bobbin9.7mm suggest~12..14mmvolume, but fullfinishedmodelnotverified; do not publish a guaranteedheight."
+  },
+  "functional_components": [
+    {
+      "ref": "BR1",
+      "mpn": "B10S-G",
+      "kind": "bridge",
+      "body_xyz_mm": [
+        4.9,
+        4.2,
+        2.7
+      ],
+      "pitch_mm": 2.55,
+      "seated_height_max_or_reserve_mm": 2.7,
+      "source": "https://www.ic-components.nl/files/35/B10S-G.pdf",
+      "page": 1,
+      "basis": "Manufacturer Comchip REV E dimensional drawing via distributor mirror; body4.9x4.2, totalleadspan7mm max.",
+      "lead_envelope_xyz_mm": [
+        7,
+        4.9,
+        2.7
+      ],
+      "local_datasheet": "B10S-G.pdf"
+    },
+    {
+      "ref": "C1",
+      "mpn": "ECQ-E4473KF",
+      "kind": "47nF400Vfilm",
+      "body_xyz_mm": [
+        12,
+        5,
+        8.3
+      ],
+      "pitch_mm": 10,
+      "seated_height_max_or_reserve_mm": 9.3,
+      "source": "https://media.digikey.com/pdf/Data%20Sheets/Panasonic%20Capacitors%20PDFs/ECQ-E%28K%29%20Series.pdf",
+      "page": null,
+      "basis": "Manufacturer ECQ-E(K) catalogue row; seated9.3 includes1mm assembly stand-off; exact individual max/leadform must be rechecked before footprint release.",
+      "lead_diameter_mm": 0.6
+    },
+    {
+      "ref": "C4",
+      "mpn": "C222S154K30",
+      "kind": "150nF450Vfilm",
+      "body_xyz_mm": [
+        10,
+        6,
+        10.6
+      ],
+      "pitch_mm": 7.5,
+      "seated_height_max_or_reserve_mm": 10.6,
+      "source": "https://storage.sea.com.ua/tech_info/Faratronic/C22.pdf",
+      "page": 4,
+      "basis": "Visually inspected2016manufacturer C22 catalogue printedp63:400/450V0.15uF pitch7.5 row10x10.6x6;2S=450V footnote. RDR historical shorthandcode requires full modern orderingcode/leadforming confirmation.",
+      "lead_diameter_mm": 0.5,
+      "local_datasheet": "C22.pdf",
+      "material_discrepancy": "RDR BOM says polypropylene; manufacturerC22 is metallized polyester. Do not silently substitute another dielectric."
+    },
+    {
+      "ref": "C5",
+      "mpn": "GRM21BR71C475KA73L",
+      "kind": "4.7uF16V0805MLCC",
+      "body_xyz_mm": [
+        2.15,
+        1.4,
+        1.4
+      ],
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 1.4,
+      "source": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71C475KA73-01.pdf",
+      "page": 1,
+      "basis": "Manufacturer reference sheet nominal2.0\u00b1.15,1.25\u00b1.15,1.25\u00b1.15. Obsolete exactMPN per currentDigiKey. Refreshed active bypasspart required, including DCbias capacitance check."
+    },
+    {
+      "ref": "C6",
+      "mpn": "ELXZ630ELL151MH20D",
+      "kind": "reference150uF63Vcan",
+      "body_xyz_mm": [
+        8,
+        8,
+        20
+      ],
+      "pitch_mm": 3.5,
+      "seated_height_max_or_reserve_mm": 20,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": 11,
+      "basis": "Reference BOM case8x20. Reference image shows horizontalcan;20mm iscase length, not validated assembledreferenceheight. Exactpart obsolete; do not reuse asnewBOM."
+    },
+    {
+      "ref": "D1",
+      "mpn": "US1J-13-F",
+      "kind": "SMA600V1A",
+      "body_xyz_mm": null,
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 2.7,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": 11,
+      "basis": "Reference exact MPN and SMA identity verified from BOM; 6x3.5x2.7mm is a conservative preliminary land/body reservation only. Exact Diodes drawing still required.",
+      "planning_xy_reserve_mm": [
+        6,
+        3.5
+      ],
+      "exact_geometry_verified": false
+    },
+    {
+      "ref": "L1",
+      "mpn": "RL-5480-3-3300",
+      "kind": "reference3.3mHEMIchoke",
+      "body_xyz_mm": [
+        10.795,
+        10.795,
+        11.43
+      ],
+      "pitch_mm": 5.0038,
+      "seated_height_max_or_reserve_mm": 11.43,
+      "source": "https://www.cdiweb.com/datasheets/renco/rl-5480.pdf",
+      "page": 1,
+      "basis": "Manufacturer Renco catalogue printedp27:RL5480-3 Amax.375in,add.050in where leadexits overflange;Bmax.450in,F.197in. Formedleadlayout still needs exactreview.",
+      "local_datasheet": "RL5480.pdf",
+      "electrical": {
+        "inductance_uH": 3300,
+        "DCR_max_ohm": 6.72,
+        "Isat_5percent_drop_A": 0.225,
+        "rated_DC_current_A": 0.15
+      }
+    },
+    {
+      "ref": "R4",
+      "mpn": "ERJ-6ENF1242V",
+      "kind": "12.4k0805resistor",
+      "body_xyz_mm": [
+        2.1,
+        1.35,
+        0.65
+      ],
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 0.65,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": 11,
+      "basis": "ExactreferenceMPN/value; conservative0805familyreservation, exactmanufacturer dimensions not independently closed.",
+      "exact_geometry_verified": false
+    },
+    {
+      "ref": "R5",
+      "mpn": "RL1206FR-7W0R68L",
+      "kind": "0.68ohm1206sense",
+      "body_xyz_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 0.7,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": 11,
+      "basis": "ExactreferenceMPN/value; conservative1206familyreservation, exactmanufacturer dimensions not independently closed.",
+      "exact_geometry_verified": false
+    },
+    {
+      "ref": "R6",
+      "mpn": "CRCW12062R74FKEA",
+      "kind": "2.74ohm1206resistor",
+      "body_xyz_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 0.7,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": 11,
+      "basis": "ExactreferenceMPN/value; conservative1206familyreservation, exactmanufacturer dimensions not independently closed.",
+      "exact_geometry_verified": false
+    },
+    {
+      "ref": "R7",
+      "mpn": "MFR-25FBF-402K",
+      "kind": "402kaxialresistor",
+      "body_xyz_mm": null,
+      "pitch_mm": 10.16,
+      "seated_height_max_or_reserve_mm": 3,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": 11,
+      "basis": "ExactreferenceMPN/value; provisional7x3mm body and10.16mmbentleadpitch, supplier drawing/voltagerating and assemblyleadform still required.",
+      "planning_xy_reserve_mm": [
+        7,
+        3
+      ],
+      "exact_geometry_verified": false
+    },
+    {
+      "ref": "R8",
+      "mpn": "ERJ-6GEYJ104V",
+      "kind": "100k0805bleeder",
+      "body_xyz_mm": [
+        2.1,
+        1.35,
+        0.65
+      ],
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 0.65,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": 11,
+      "basis": "ExactreferenceMPN/value; conservative0805familyreservation, exactmanufacturer dimensions not independently closed.",
+      "exact_geometry_verified": false
+    },
+    {
+      "ref": "RF1",
+      "mpn": "FW20A10R0JA",
+      "kind": "10ohm2Wfusible",
+      "body_xyz_mm": [
+        12,
+        6,
+        6
+      ],
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 6,
+      "source": "https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
+      "page": 1,
+      "basis": "ManufacturerFW20A Lmax12,Dmax6,lead.65\u00b1.05mm. PCBpitch isassemblyleadforming choice; not fixedbyspec.",
+      "lead_diameter_mm": [
+        0.6,
+        0.7
+      ],
+      "local_datasheet": "FW.pdf"
+    },
+    {
+      "ref": "RV1",
+      "mpn": "V275LA4P",
+      "kind": "275VAC7mmMOV",
+      "body_xyz_mm": null,
+      "pitch_mm": 5,
+      "seated_height_max_or_reserve_mm": 15,
+      "source": "https://www.littelfuse.com/~/media/electronics/datasheets/varistors/littelfuse_varistor_la_datasheet.pdf.pdf",
+      "page": 10,
+      "basis": "7mm is baremodel/disc class; not finished maximumdiameter.10x6x15mm preliminary bodyreserve only; exact coatedpackage table mustbe transcribed visually beforefootprint release.",
+      "planning_xy_reserve_mm": [
+        10,
+        6
+      ],
+      "exact_geometry_verified": false
+    },
+    {
+      "ref": "T1",
+      "mpn": "PI-RDR464-EE10-150T",
+      "kind": "customsinglewinding1mH",
+      "body_xyz_mm": [
+        10.2,
+        10.4,
+        9.7
+      ],
+      "pitch_mm": null,
+      "seated_height_max_or_reserve_mm": 9.7,
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "page": [
+        11,
+        12,
+        13
+      ],
+      "basis": "RDR BOM bobbin envelope10.2Wx10.4Lx9.7H, not tolerancequalified finishedwoundheight.150turns31AWG,1mH\u00b15%,pins8to1,remove2,3,5,6,7. No multiwinding/isolatedtransformer required; bobbinpinspacing and final varnish/tape envelope still needdrawing/sample.",
+      "electrical": {
+        "L_uH": 1000,
+        "tolerance_percent": 5,
+        "gap_mm_from_design_sheet": 0.324
+      },
+      "finished_geometry_verified": false
+    },
+    {
+      "ref": "U1",
+      "mpn": "LYT1603D-TL",
+      "kind": "SO8controller",
+      "body_xyz_mm": [
+        3.9,
+        4.9,
+        1.75
+      ],
+      "pitch_mm": 1.27,
+      "seated_height_max_or_reserve_mm": 1.75,
+      "source": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "page": 11,
+      "basis": "ManufacturerSO8 Ddrawing3.9x4.9BSCbody,6mmBSCterminalspan,1.75maxheight. Officialfamily activeNRND. DigiKey exactreelnotnormallystocked0;re-checkprocurementbeforeselection.",
+      "lead_envelope_xyz_mm": [
+        6,
+        4.9,
+        1.75
+      ],
+      "local_datasheet": "lytswitch1.pdf"
+    }
+  ],
+  "reference_interfaces": {
+    "count": 4,
+    "refs": [
+      "L",
+      "N",
+      "+V",
+      "RTN"
+    ],
+    "reference_testpoint_MPNs": [
+      "5001",
+      "5002",
+      "5000",
+      "5001"
+    ],
+    "proposed_mode": "Mayusewirepadswithinreviewedinterface; removingtestpointbodies doesnotremoveelectricaltermination/accessrequirements"
+  },
+  "proposed_options": [
+    {
+      "ref": "C6",
+      "mpn": "EEUFS2A151",
+      "source": "https://industrial.panasonic.com/sa/products/pt/aluminum-cap-lead/models/EEUFS2A151",
+      "body_nominal_xyz_mm": [
+        12.5,
+        12.5,
+        20
+      ],
+      "body_length_max_mm": 22,
+      "diameter_tolerance_not_yet_closed": true,
+      "pitch_mm": 5,
+      "voltage_V": 100,
+      "capacitance_uF": 150,
+      "ripple_A_100kHz": 1.4,
+      "impedance_max_ohm_100kHz": 0.043,
+      "life_hours_at105C": 10000,
+      "status": "Concretecurrentprimarycataloguepart; activeprocurementDigiKey566reported; finalstock notreserved",
+      "tolerance_source": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1255.pdf",
+      "tolerance_basis": "L>=20:L\u00b12.0mm. Suppliermaximumseated22mmagrees.",
+      "assembled_height_screen_mm": {
+        "capacitor_max": 22,
+        "PCB": 1.6,
+        "bottom_SO8_max": 1.75,
+        "total_without_standoff": 25.35,
+        "minimum_planning_reserve": 26,
+        "recommended_initial_reserve": 27
+      },
+      "qualification": "DifferentESR/voltage/case; validateEMI,ripple,temperature,OVP/reconnectenergy; notreferencequalification."
+    },
+    {
+      "ref": "T1",
+      "mpn": "RFC1010B-105KE",
+      "source": "https://www.coilcraft.com/en-us/products/power/unshielded-inductors/radial-lead/rfc-rfb/rfc1010b/rfc1010b-105/",
+      "body_max_xyz_mm": [
+        11,
+        11,
+        11.5
+      ],
+      "pitch_mm": 6,
+      "L_uH": 1000,
+      "L_tolerance_percent": 10,
+      "DCR_max_ohm_25C": 1.4,
+      "Isat_10percent_drop_A_25C": 0.9,
+      "Irms_for20C_rise_A": 0.5,
+      "availability": "Mouserindexed199pieces;notreserved;primarybuywidgetambiguousso notclaimedmanufacturerstock",
+      "qualification": "Potentialcataloguealternative only.\u00b110%vsexactreference\u00b15%,L(I,T),hotcoreloss,windingterminalvoltage,pulsesandEMI/fault limitsremainunqualified. No absolute workingvoltage rating found;cannotapprovejustfromIsat."
+    }
+  ],
+  "size_assessment": {
+    "40x25_body_fit": "body-packing.json showsmechanicalbody-onlyprojectionpossible; noactualfootprint/electricalfitclaim",
+    "25mm_assembly_height": "NotestablishedwithuprightEEUFS2A151. Nominal20cannotbeusedasmax.26..27mmreservebeforeventallowance recommended.",
+    "bulb_fit": "ActualA60/E27internalcavityandwire/thermal/insulationgeometrynotprovided. Outerbulbdiameterdoesnotestablishbasecavity. ReferenceA19applicationiscontextnotnewassemblyfitproof.",
+    "no_clearance_relaxation": "Bodypackinggap.5mmisnotanelectricalrule or permission toshrinkspacing; actualmatrixmustbedefinedandrechecked."
+  },
+  "source_files": [
+    {
+      "path": "B10S-G.pdf",
+      "sha256": "e375b8d310e9cc30f492cbc718df825ac62fe347c3e4c0418c86170bfef0e36e",
+      "bytes": 103298
+    },
+    {
+      "path": "B10S-G.txt",
+      "sha256": "5ee76d64209943abf04e99fec12ba888f6c6a2dd635edea8d076c2bc4d28dce8",
+      "bytes": 5015
+    },
+    {
+      "path": "C22-page4.png",
+      "sha256": "4579c94a28e6aa72b3b0eb1d23c541cd606941e6766c0f6c7b4d288a40d18998",
+      "bytes": 400142
+    },
+    {
+      "path": "C22-page5.png",
+      "sha256": "eee7e3ebb623de469e03ec31409bbf5764e274b0662b029206565b3dc093a154",
+      "bytes": 401090
+    },
+    {
+      "path": "C22.pdf",
+      "sha256": "b95d033ac068e45b46cbda1988c7a19a47168967004bb99b3b1232ab25f6d4c0",
+      "bytes": 6357043
+    },
+    {
+      "path": "C22.txt",
+      "sha256": "0630876dc528dfb8b72c3857bcb81aee823bba6dae2eb6a0d21ba48f8ba1afcc",
+      "bytes": 13278
+    },
+    {
+      "path": "FW.pdf",
+      "sha256": "84e4be4c20a74abd81846f893996eb07b7db068a94f6521eb458ed78c2924baa",
+      "bytes": 497209
+    },
+    {
+      "path": "FW.txt",
+      "sha256": "3a8efeb973167c7e837c6fffa85433826561aa67d8345b1a4085543fe092a77b",
+      "bytes": 16452
+    },
+    {
+      "path": "lytswitch1.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "bytes": 1368708
+    },
+    {
+      "path": "lytswitch1.txt",
+      "sha256": "4594d55a72723407995d7f498a4b1e1cade10ca9adea74681a8c6053fbb88e49",
+      "bytes": 31195
+    },
+    {
+      "path": "rdr464-page10.png",
+      "sha256": "cd0892b36d3b1f9a5910c3bde89196da8f9f51b44c71806fa00c40cfeeec5e7d",
+      "bytes": 574087
+    },
+    {
+      "path": "rdr464-page11.png",
+      "sha256": "b4f2f3d5cde005cda9ba02c31d471aad9973f68e7fc63949671e663e26f69d14",
+      "bytes": 246794
+    },
+    {
+      "path": "RL5480-page1.png",
+      "sha256": "b43a4798c566b0f886e75355801da092552729e6aec4428832f7a6bdf3d42810",
+      "bytes": 262423
+    },
+    {
+      "path": "RL5480.pdf",
+      "sha256": "edc75e87196660b7fc568f4b7cda63692ffa4c80813a4176d6ce6a9e8c49406b",
+      "bytes": 244148
+    },
+    {
+      "path": "RL5480.txt",
+      "sha256": "d2def090c6fed956dca3ff9bc36b55c70da234f57c87d4f6509106505fe1a78a",
+      "bytes": 12318
+    }
+  ],
+  "open_before_PCB": [
+    "Actualchosenlifecycle/sourceableICpart and completeupdatedBOM",
+    "Exactmanufacturerpad/courtyardgeometryfortheremainingreservedparts",
+    "FinishedT1drawingorqualifiedcataloguepartstressreview",
+    "Fulllead/pad/slot/creepageclearanceandroutefit",
+    "Outputreconnect/dischargesolutionphysicalallocation",
+    "Realbulbinternalenvelopeandthermalboundary"
+  ]
+}

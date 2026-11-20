@@ -1,0 +1,387 @@
+{
+  "scope": "Body-only packing screen with preliminary C6 formed-lead reserve. No PCB or CAD created.",
+  "actor": "/root/compact_fit_research",
+  "base_projected_reservations_mm": [
+    {
+      "ref": "C6",
+      "length": 26,
+      "width": 13
+    },
+    {
+      "ref": "T1",
+      "length": 10.2,
+      "width": 10.4
+    },
+    {
+      "ref": "L1",
+      "length": 10.8,
+      "width": 10.8
+    },
+    {
+      "ref": "RF1",
+      "length": 12,
+      "width": 6
+    },
+    {
+      "ref": "C1",
+      "length": 7.3,
+      "width": 4.5
+    },
+    {
+      "ref": "C4",
+      "length": 13,
+      "width": 6
+    },
+    {
+      "ref": "RV1",
+      "length": 9,
+      "width": 5.6
+    },
+    {
+      "ref": "R7",
+      "length": 7.5,
+      "width": 2.5
+    }
+  ],
+  "capacitor_reserve_basis": "22mm maximum can length + approximately3mm lead forming + edge/process allowance, rounded up to26mm.13mm projected width is a planning reserve. Lead forming is not manufacturer qualified.",
+  "vent_basis": "Second search adds5mm clear longitudinal zone beyond the cap/lead reserve; this is a requested planning study, not a manufacturer approved vent allowance. Other projected bodies excluded from this zone.",
+  "height_budget_mm": {
+    "horizontal_can_and_mount_reserve": 13.5,
+    "PCB": 1.6,
+    "underside_SMA_bridge_reserve": 2.7,
+    "sum": 17.8,
+    "initial_assembled_budget": 19
+  },
+  "height_basis": "Preliminary root planning allowances, not verified maximum assembled model. Wire soldering, clipped leads, vent direction and T1 finished winding may change this.",
+  "body_gap_mm": 0.5,
+  "body_edge_margin_mm": 0.5,
+  "not_electrical_clearance_rules": true,
+  "omitted": [
+    "Actual THT pins/pads, staggered RV1 leads, R7 lead forming and SMD courtyards",
+    "Voltage matrix, creepage, clearance, slots and copper-to-board-edge rules",
+    "Routing, switching loops, quiet returns and EMI layout",
+    "Connector or solder interface pads, wire strain and assembly tools",
+    "Exact finished custom wound T1 geometry and tolerance",
+    "Real bulb cavity, thermal boundaries and assembly vent feasibility"
+  ],
+  "results": [
+    {
+      "board_mm": [
+        40,
+        25
+      ],
+      "vent_extension_mm": 0,
+      "fit_found_for_projected_reservations": false,
+      "placements": null,
+      "search_seed": 5999,
+      "failed_search_is_not_proof_of_impossibility": true
+    },
+    {
+      "board_mm": [
+        45,
+        25
+      ],
+      "vent_extension_mm": 0,
+      "fit_found_for_projected_reservations": true,
+      "placements": [
+        {
+          "ref": "C6",
+          "bbox_mm": [
+            0.5,
+            0.5,
+            26.5,
+            13.5
+          ],
+          "rotation_degrees": 0,
+          "reservation_includes_formed_leads": true
+        },
+        {
+          "ref": "T1",
+          "bbox_mm": [
+            27.0,
+            0.5,
+            37.4,
+            10.7
+          ],
+          "rotation_degrees": 90
+        },
+        {
+          "ref": "L1",
+          "bbox_mm": [
+            27.0,
+            11.2,
+            37.8,
+            22.0
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "RF1",
+          "bbox_mm": [
+            38.3,
+            0.5,
+            44.3,
+            12.5
+          ],
+          "rotation_degrees": 90
+        },
+        {
+          "ref": "C4",
+          "bbox_mm": [
+            0.5,
+            14.0,
+            13.5,
+            20.0
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "RV1",
+          "bbox_mm": [
+            14.0,
+            14.0,
+            23.0,
+            19.6
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "C1",
+          "bbox_mm": [
+            38.3,
+            13.0,
+            42.8,
+            20.3
+          ],
+          "rotation_degrees": 90
+        },
+        {
+          "ref": "R7",
+          "bbox_mm": [
+            23.5,
+            14.0,
+            26.0,
+            21.5
+          ],
+          "rotation_degrees": 90
+        }
+      ],
+      "search_seed": 0,
+      "failed_search_is_not_proof_of_impossibility": true
+    },
+    {
+      "board_mm": [
+        50,
+        22
+      ],
+      "vent_extension_mm": 0,
+      "fit_found_for_projected_reservations": true,
+      "placements": [
+        {
+          "ref": "C6",
+          "bbox_mm": [
+            0.5,
+            0.5,
+            26.5,
+            13.5
+          ],
+          "rotation_degrees": 0,
+          "reservation_includes_formed_leads": true
+        },
+        {
+          "ref": "T1",
+          "bbox_mm": [
+            27.0,
+            0.5,
+            37.4,
+            10.7
+          ],
+          "rotation_degrees": 90
+        },
+        {
+          "ref": "L1",
+          "bbox_mm": [
+            37.9,
+            0.5,
+            48.7,
+            11.3
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "RF1",
+          "bbox_mm": [
+            0.5,
+            14.0,
+            12.5,
+            20.0
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "C4",
+          "bbox_mm": [
+            13.0,
+            14.0,
+            26.0,
+            20.0
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "RV1",
+          "bbox_mm": [
+            27.0,
+            11.2,
+            36.0,
+            16.799999999999997
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "C1",
+          "bbox_mm": [
+            37.9,
+            11.8,
+            45.199999999999996,
+            16.3
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "R7",
+          "bbox_mm": [
+            37.9,
+            16.8,
+            45.4,
+            19.3
+          ],
+          "rotation_degrees": 0
+        }
+      ],
+      "search_seed": 0,
+      "failed_search_is_not_proof_of_impossibility": true
+    },
+    {
+      "board_mm": [
+        40,
+        25
+      ],
+      "vent_extension_mm": 5,
+      "fit_found_for_projected_reservations": false,
+      "placements": null,
+      "search_seed": 5999,
+      "failed_search_is_not_proof_of_impossibility": true
+    },
+    {
+      "board_mm": [
+        45,
+        25
+      ],
+      "vent_extension_mm": 5,
+      "fit_found_for_projected_reservations": true,
+      "placements": [
+        {
+          "ref": "C6",
+          "bbox_mm": [
+            0.5,
+            0.5,
+            31.5,
+            13.5
+          ],
+          "rotation_degrees": 0,
+          "vent_only_bbox_mm": [
+            26.5,
+            0.5,
+            31.5,
+            13.5
+          ],
+          "reservation_includes_formed_leads": true
+        },
+        {
+          "ref": "L1",
+          "bbox_mm": [
+            32.0,
+            0.5,
+            42.8,
+            11.3
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "RF1",
+          "bbox_mm": [
+            32.0,
+            11.8,
+            44.0,
+            17.8
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "T1",
+          "bbox_mm": [
+            0.5,
+            14.0,
+            10.9,
+            24.2
+          ],
+          "rotation_degrees": 90
+        },
+        {
+          "ref": "C4",
+          "bbox_mm": [
+            11.4,
+            14.0,
+            24.4,
+            20.0
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "RV1",
+          "bbox_mm": [
+            24.9,
+            14.0,
+            30.5,
+            23.0
+          ],
+          "rotation_degrees": 90
+        },
+        {
+          "ref": "C1",
+          "bbox_mm": [
+            32.0,
+            18.3,
+            39.3,
+            22.8
+          ],
+          "rotation_degrees": 0
+        },
+        {
+          "ref": "R7",
+          "bbox_mm": [
+            11.4,
+            20.5,
+            18.9,
+            23.0
+          ],
+          "rotation_degrees": 0
+        }
+      ],
+      "search_seed": 5,
+      "failed_search_is_not_proof_of_impossibility": true
+    },
+    {
+      "board_mm": [
+        50,
+        22
+      ],
+      "vent_extension_mm": 5,
+      "fit_found_for_projected_reservations": false,
+      "placements": null,
+      "search_seed": 5999,
+      "failed_search_is_not_proof_of_impossibility": true
+    }
+  ]
+}

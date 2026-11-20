@@ -1,0 +1,394 @@
+{
+  "task": "Compact09 alternative manufacturer-reference comparison",
+  "actor": "/root/compact_alternatives",
+  "write_scope": "work/compact09/alternatives/** only",
+  "requirements_context": {
+    "input": "230VAC50Hz,207..253VAC",
+    "light": "about800lm,4000K,CRI>=80",
+    "dimming": false,
+    "assembly": "Most electronics inbase; replaceablewholeLED+shade disconnectedbeforechange; capacitorinbase permitted",
+    "goal": "Small bulb-scale power supply; rejected140x100SC08 retained as history"
+  },
+  "sources": [
+    {
+      "id": "DER404",
+      "url": "https://www.power.com/sites/default/files/documents/der404.pdf",
+      "file": "der404.pdf",
+      "sha256": "af0d502abd3b3d1ced8a8a4305eed94cad12def44e3b777c9d0d75a28c8a9618",
+      "pages": 94,
+      "manufacturer": "Power Integrations",
+      "revision": "1.0,2013-12-05",
+      "visual_pages_inspected": [
+        11,
+        14,
+        21
+      ]
+    },
+    {
+      "id": "DER404JA",
+      "url": "https://www.power.com/sites/default/files/documents/der404JA.pdf",
+      "file": "der404JA.pdf",
+      "sha256": "1585cf443f421ae9f3fd1dfaab0bf3a64f18b0a14d2954cbe6d6151f9c465204",
+      "pages": 94,
+      "manufacturer": "Power Integrations",
+      "visual_pages_inspected": [
+        11,
+        14
+      ]
+    },
+    {
+      "id": "DER406",
+      "url": "https://www.power.com/sites/default/files/documents/der406.pdf",
+      "file": "der406.pdf",
+      "sha256": "86eac740fff542ef6de2e70fcb83805574bf1446f0003cb59461d59fec1ce3ea",
+      "pages": 49,
+      "manufacturer": "Power Integrations",
+      "revision": "1.0,2014-08-14",
+      "visual_pages_inspected": [
+        11,
+        19
+      ]
+    },
+    {
+      "id": "ST_AN5107",
+      "url": "https://www.st.com/resource/en/application_note/an5107-75-w-nonisolated-buck-topology-constantcurrent-led-driver-based-on-viper0p-stmicroelectronics.pdf",
+      "manufacturer": "STMicroelectronics",
+      "revision": "DocID031205Rev1,2017-11-27",
+      "pages": 34,
+      "acquisition": "Read full primary PDF through web text extraction; local download timed out. No localPDFhash or visualdimensionclaim asserted."
+    },
+    {
+      "id": "ST_BOM",
+      "url": "https://www.st.com/resource/en/bill_of_materials/steval-lll003v1_bom.pdf",
+      "manufacturer": "STMicroelectronics",
+      "revision": "version1,sheet1",
+      "acquisition": "Read primary PDF through web extraction; exact order codes below follow this separate BOM where AN5107 has abbreviated/mismatched codes."
+    },
+    {
+      "id": "ST_PRODUCT",
+      "url": "https://www.st.com/en/evaluation-tools/steval-lll003v1.html",
+      "manufacturer": "STMicroelectronics",
+      "acquisition": "Primary product page read2026-11-20; board active does not establish exactpart stock."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "DER404",
+      "controller": "LYT4322E",
+      "topology": "Nonisolated buckboost,TRIACdimmable",
+      "input_Vac": [
+        195,
+        265
+      ],
+      "output_V": 72,
+      "output_mA": 115,
+      "nominal_output_W": 8.28,
+      "board_xy_mm": [
+        57.8,
+        27.0
+      ],
+      "dimension_basis": "Visually inspected dimension drawingp11:2.27x1.06in,57.8x27mm",
+      "dimension_conflict": "BOMp14 PCBnote0.51x2.1in conflicts with explicit drawing; do not use its12.95x53.34mm conversion.",
+      "electrical_BOM_rows": 36,
+      "populated_electrical_parts": 42,
+      "count_basis": "p14sumquantities;D4/D6/D7 adds2,FR1/FR2 adds1,R4/R5adds1,R8/R11adds1,R9/R10adds1 relative to36rows. Wires/PCB excluded.",
+      "efficiency_230Vac_fraction_approx": 0.8495,
+      "efficiency_basis": "p21Figure12cyan72Vcurve,visually read about84.95%at230V25Copenframe; graph precision only",
+      "loss_calculation": {
+        "nominal_output_W": 8.28,
+        "assumed_efficiency_fraction": 0.8495,
+        "calculated_input_W": 9.746909947027662,
+        "calculated_loss_W": 1.4669099470276628,
+        "method": "Pout/eta-Pout, nominal arithmetic; not a measurement of the proposed Velluneo supply"
+      },
+      "major_parts": [
+        {
+          "refs": [
+            "U1"
+          ],
+          "mpn": "LYT4322E",
+          "package": "eSIP-7C"
+        },
+        {
+          "refs": [
+            "T1"
+          ],
+          "mpn": "custom",
+          "construction": "EE13vertical10pin,multiplewindings; custom specification required"
+        },
+        {
+          "refs": [
+            "C5"
+          ],
+          "mpn": "UVZ2A101MPD",
+          "value": "100uF100V",
+          "body_mm": [
+            10,
+            20
+          ]
+        },
+        {
+          "refs": [
+            "C4"
+          ],
+          "mpn": "TAB2GM2R2E110",
+          "value": "2.2uF400V",
+          "body_mm": [
+            6.3,
+            11
+          ]
+        },
+        {
+          "refs": [
+            "L1"
+          ],
+          "mpn": "RL-5480-3-4700",
+          "value": "4.7mH150mA"
+        },
+        {
+          "refs": [
+            "BR1"
+          ],
+          "mpn": "B10S-G"
+        },
+        {
+          "refs": [
+            "U2"
+          ],
+          "mpn": "LM431AIM3/NOPB"
+        },
+        {
+          "refs": [
+            "D3"
+          ],
+          "mpn": "STTH1R06RL"
+        }
+      ],
+      "protection_basis": "p1manufacturer reference reports single-shot no-load,auto-recoveryshort/thermal; these do not prove faults after modifications or modular connector safety.",
+      "thermal_extra": "p12shows U1heatsink; note says not required if systempotted. Neither potting nor thermalbehavior may be silently inherited.",
+      "verdict": "Reject as chosencompactno-dimmingroute:larger57.8x27,42parts,custommagnetic/thermaldependency,~1.47Wnormalizedloss; TRIACsupportadds unnecessarycomplexity."
+    },
+    {
+      "id": "DER406",
+      "controller": "LYT4322E",
+      "topology": "Nonisolated buckboost,TRIACdimmable",
+      "input_Vac": [
+        185,
+        265
+      ],
+      "output_V": 48,
+      "output_mA": 120,
+      "nominal_output_W": 5.76,
+      "board_xy_mm": [
+        40.9,
+        26.8
+      ],
+      "dimension_basis": "Visually inspected p11Figure5 overallshape:40.9x26.8mm; excludeswires",
+      "parts_in_reference_BOM": 31,
+      "count_basis": "p13eachrowqty1,includingJ1connector;30electricalitemswithoutJ1.",
+      "efficiency_230Vac_fraction_approx": 0.823,
+      "efficiency_basis": "p19Figure9visuallyabout82.3%at230V48VLEDroomtemperature; p7specification82%full-loadno-dimmer",
+      "loss_calculation": {
+        "nominal_output_W": 5.76,
+        "assumed_efficiency_fraction": 0.823,
+        "calculated_input_W": 6.998784933171325,
+        "calculated_loss_W": 1.238784933171325,
+        "method": "Pout/eta-Pout, nominal arithmetic; not a measurement of the proposed Velluneo supply"
+      },
+      "major_parts": [
+        {
+          "refs": [
+            "U1"
+          ],
+          "mpn": "LYT4322E",
+          "package": "eSIP-7C"
+        },
+        {
+          "refs": [
+            "T1"
+          ],
+          "mpn": "custom",
+          "construction": "EE10vertical,470uH+/-5%,93turnpowerwindingand46turnauxiliarywinding,p14–15; bobbin101HicalisnotacompleteinductorMPN"
+        },
+        {
+          "refs": [
+            "C7"
+          ],
+          "mpn": "EKMG630ELL221MJ16S",
+          "value": "220uF63V",
+          "body_mm": [
+            10,
+            16
+          ]
+        },
+        {
+          "refs": [
+            "C4"
+          ],
+          "mpn": "TAB2GM2R2E110",
+          "value": "2.2uF400V",
+          "body_mm": [
+            6.3,
+            11
+          ]
+        },
+        {
+          "refs": [
+            "L1"
+          ],
+          "mpn": "B82144A2475J",
+          "value": "4.7mH90mA"
+        },
+        {
+          "refs": [
+            "F1"
+          ],
+          "mpn": "0263005.MXL",
+          "value": "5A250Vreferencefuse"
+        },
+        {
+          "refs": [
+            "VR1"
+          ],
+          "mpn": "EDZTE6127B",
+          "value": "27V5%SOD523"
+        },
+        {
+          "refs": [
+            "C5"
+          ],
+          "mpn": "C3216X5R1A107M",
+          "value": "100uF10VX5R1206"
+        }
+      ],
+      "protection_basis": "Manufacturer p1shortautorecovery,thermalshutdown,brownout; original no-load/protection waveform/changedload implications require relevantreview.",
+      "non_dimming_change": "p10explicitlypermitsomittingdimmingdamper/bleedercircuits,includingR1/C1passiveRCbranch; exactredesignperformance cannotinheritmeasured82.3% or originalEMI/surge.",
+      "optical_limit": "Only5.76WnominalLEDpower;~800lm4000KwithdiffuserrequiresactualLEDflux/bin/temp/opticalbudget,notassumed.",
+      "verdict": "Realcompactalternativebutnotpreferred:40.9x26.8mm,customEE10,30electricalitemsand~1.24Wnormalizedlossfor5.76Woutput. Dimmingremovalcouldimprovebutwouldbea newdesign."
+    },
+    {
+      "id": "ST_STEVAL_LLL003V1",
+      "controller": "VIPER0PLD",
+      "topology": "Nonisolatedbuck,EUbridge/USdoublerconfigurable",
+      "input_EU_Vac": [
+        180,
+        275
+      ],
+      "input_range_note": "AN5107p6–7gives180..275;productpage175..285; use narrowerprimaryANscreenpendingdatasheetreview. J2OPENforEU;D3/D6DNM.",
+      "output_mA": 130,
+      "output_current_tolerance_claim_percent": 2.5,
+      "load": "15..21whiteLEDs",
+      "max_output_W": 8,
+      "board_xy_mm": null,
+      "dimension_status": "NoexplicitdimensioninAN5107;manufacturerGerberneededbeforefitclaim. Circularlabboardcannotbecalled30x30/40x20withoutnativeoutlineevidence.",
+      "reference_BOM_rows": 21,
+      "all_BOM_positions_including_J1_J2_J3": 30,
+      "EU_populated_positions_including_connectors": 28,
+      "count_basis": "BOMquantitysum30minusD3,D6DNM2; notaclaimall30manufacturerlisteditemsfullymappedtoourschematic.",
+      "efficiency_full_load_approx": 0.883,
+      "efficiency_basis": "AN5107p12Fig4,21LEDcurve~88.3%at230V;graphreadnotprecisetablevalue. Datasheetclaimsapprox89%maxload.87.5%Table4isACTIVE-MODEAVERAGEacross25/50/75/100%load,notfull-load.",
+      "normalized_loss_calculation": {
+        "nominal_output_W": 7.5,
+        "assumed_efficiency_fraction": 0.883,
+        "calculated_input_W": 8.493771234428086,
+        "calculated_loss_W": 0.9937712344280865,
+        "method": "Pout/eta-Pout, nominal arithmetic; not a measurement of the proposed Velluneo supply"
+      },
+      "open_load_V_at230": 85.46,
+      "open_load_input_mW_at230": 225,
+      "open_load_basis": "AN5107p14Table5; regulationtargetabout80Vp23butactualmeasured85.46Vp14.",
+      "major_parts": [
+        {
+          "refs": [
+            "U1"
+          ],
+          "mpn": "VIPER0PLD",
+          "package": "SO16narrow"
+        },
+        {
+          "refs": [
+            "L1"
+          ],
+          "mpn": "RLB9012-272KL",
+          "value": "2.7mH0.3A"
+        },
+        {
+          "refs": [
+            "L2"
+          ],
+          "mpn": "744772332",
+          "value": "3.3mH0.3A"
+        },
+        {
+          "refs": [
+            "C1",
+            "C6"
+          ],
+          "mpn": "ULH2D150MNL1GS",
+          "value": "15uF200Veach"
+        },
+        {
+          "refs": [
+            "C8"
+          ],
+          "mpn": "UUX2A220MNL1GS",
+          "value": "22uF100V"
+        },
+        {
+          "refs": [
+            "C4"
+          ],
+          "mpn": "B32921C3104M",
+          "value": "100nFX2305VAC"
+        },
+        {
+          "refs": [
+            "RV1"
+          ],
+          "mpn": "S14K300",
+          "value": "300VAC14mmdisc"
+        },
+        {
+          "refs": [
+            "RT1"
+          ],
+          "mpn": "B57153S150M",
+          "value": "15ohmNTC"
+        },
+        {
+          "refs": [
+            "F1"
+          ],
+          "mpn": "39211000000",
+          "value": "1A300VAC; exactcodefromseparateBOM;AN5107abbreviates3921100000"
+        },
+        {
+          "refs": [
+            "D2",
+            "D3",
+            "D4",
+            "D5",
+            "D6",
+            "D7",
+            "D8"
+          ],
+          "mpn": "STTH1L06A",
+          "value": "600V1ASMA;D3/D6DNMinEU"
+        }
+      ],
+      "protection_basis": "AN5107p19softstart8ms,cyclelimiting;p21–22overload50mstyp/off1styprestart;p23R6/R5/D8openloop;thermalshutdowninternal. Singlefault/hotplug notqualifiedforourapplication.",
+      "surge_important_caveat": "AN5107pp28–30 2kVsurgePASSusesMODIFIEDFig29network:275VACMOV+two2.2nFY1capacitorswithmidpointPE/referenceplane. OriginalBOMisnotthattestedcircuit;cannotcarrythis2kVclaimintotwo-wireE27bulb. Originalbursttest4kVstillreference-only.",
+      "verdict": "Fallbackforcatalogmagneticsanddocumentedprotection; no customwinding. NotselectedforcompactbulbwithoutactualmechanicaldesignandEU-onlysimplification."
+    }
+  ],
+  "recommendation": "Prefer root/RDR464research as baseline over these alternatives, subject to root verifying its actual dimensions, source availability, magnetics,outputcapmargin,LEDselection,reconnect/singlefaultandthermalbudget. No alternative establishes finalVelluneofit orcompliance.",
+  "common_limits": [
+    "No newVelluneoCADwrittenorstageapproved.",
+    "No newdesignmanufactured/measured.",
+    "ReferenceEMC/surge/thermal/lumenclaimsdo nottransferafterparts/layout/connectionchanges.",
+    "NoneofthethreecircuitsprovidesgalvanicSELVoutput.",
+    "Poweroutputisnotluminousflux; about800lm4000KCRI80requiresactualLEDanddiffuserderating.",
+    "Availabilityandcurrentpriceswerenotverified; exactMPNsarehistoricalreferenceidentities,notguaranteedprocurement.",
+    "Finalvolumeneedsmaxcomponentenvelopes,PCBthickness,bottomleadtrim,wirebend/strainrelief,thermalairpathandactualbulbcavity."
+  ]
+}

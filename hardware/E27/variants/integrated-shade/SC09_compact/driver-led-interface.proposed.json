@@ -1,0 +1,25 @@
+{
+  "id": "IFC-DRIVER-LED",
+  "revision": "SC09-A",
+  "owner": "Kamil and root design",
+  "input": "230VAC50Hz,207..253VAC",
+  "connector": "J2",
+  "pins": {
+    "1": "LED_PLUS",
+    "2": "DC_RETURN"
+  },
+  "target_LED_current_mA": 135,
+  "provisional_LED_load_window_V": [
+    52,
+    68
+  ],
+  "basis": "20S3Vwhite4000KminCRI80,DS21625Cbins58..64V at120mA; measurementtol,temp/currentvariation reserves require confirmation.",
+  "max_dynamic_COUT_design_target_V": 90,
+  "COUT_rating_V": 100,
+  "reservoir_uF": 150,
+  "COUT_tolerance_percent": 20,
+  "stored_energy_at90V_Cmax_J": 0.7290000000000001,
+  "replacement": "Powerremoved andoutputdischargeverified. Noenergizedinsertion/reconnectioncapabilityisclaimed; physicalcontact access barrier/mating remainsrequired beforeproductintegration.",
+  "exposed_contact_safety": "Allnetsmainsreferenced,notSELV; ICOVP/bleeders do not create isolation or hand-access barrier.",
+  "no_downstream_bulk_capacitor_bypass": true
+}

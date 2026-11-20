@@ -1,0 +1,20 @@
+﻿Ref,Value,MPN,Package,Source,Limits
+J1,230V AC input,Direct insulated-wire solder pads,2wirepads,Actual owner board-only interface,No mechanical connector or consumer contact barrier selected.
+RF1,10 ohm 2W fusible,FW20A10R0JA,axial,https://www.bourns.com/docs/Product-Datasheets/FW.pdf,Exact lead forming and abnormal fusing/pulse behavior need qualification.
+RV1,275V AC MOV,V275LA4P,radial staggered,https://www.littelfuse.com/assetdocs/varistors-la-datasheet?assetguid=f7c547ce-c2fa-4789-86cc-ec39a5060afb,Lead offsets nominal5x2.5mm;7mmdiscclass is not finishedbodydiameter. Thermal/abnormal coordination unqualified.
+BR1,1000V 0.8A bridge,MB10S-13,MBS/SO4,https://www.diodes.com/datasheet/download/MB10S.pdf,Reuse exact Diodes pin map from separately verifiedSC08part; not Comchip numeric identity.
+C1,47nF 400V 10%,B32529E6473K189,radial P5,https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529E6473K189,Postrectifier only; not an X capacitor. Actual ripple/surge remains to be checked.
+L1,3.3mH EMI choke,RL-5480-3-3300,radial P5,https://www.cdiweb.com/datasheets/renco/rl-5480.pdf,Reference0.150A;6.72ohm maxDCR;0.225A at5%Ldrop. Not selected main power inductor.
+C4,150nF 630V 10%,B32671P6154K000,radial P10,https://product.tdk.com/en/search/capacitor/film/snubbering_pfc/info?part_no=B32671P6154K000,Production part; AC/repetitive pulse curves and derating still apply.450VECWFEcandidate rejected for240Vp-p limitation.
+U1,LYTSwitch-1,LYT1603D-TL,SO8,https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf,Active but NRND. Prototype direction only pending actual owner selection and verified procurement. All8pins physical.
+C5,4.7uF 25V X7R,CL21B475KAFNNNE,0805,https://product.samsungsem.com/mlcc/CL21B475KAFNNN.do,"Effective capacitance at5.55V is ~3.14uF typical per Samsung curve, not guaranteed; BPdroop to measure."
+R4,12.4kohm 1%,ERJ-6ENF1242V,0805,https://industrial.panasonic.com/ww/products/pt/chip-resistors/models/ERJ6ENF1242V,Retainreference lowerdivider;13.3kohm rejected asprimary due cold/high-bin OVPheadroom risk.
+R5,0.68ohm 1% 0.5W,RL1206FR-7W0R68L,1206,https://www.power.com/sites/default/files/documents/rdr464.pdf,Reference exact part;200ppm/K retained in screens.
+R6,3.65ohm 1%,CRCW12063R65FKEA,1206,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"0.68||3.65=>0.57321ohm. Nominal135.2mA by datasheet ratio3.6, not inconsistent RDR ratio4.666."
+D1,600V 1A ultrafast,US1J-13-F,SMA,https://www.diodes.com/assets/Datasheets/ds16008.pdf,"Pin1cathode,pin2anode; actual land geometry due before capture/placement."
+T1,1mH 5% single winding,RDR464 EE10 150turn build,EE10,https://www.power.com/sites/default/files/documents/rdr464.pdf,"One winding only; not isolation transformer. Pins2/3/5/6/7 removed;4 retainedunwound. Finished winding envelope, pinpitch and quote/sample remain due before placement."
+C6,150uF 100V 20%,EEUFS2A151,radial P5 mounted horizontal,https://industrial.panasonic.com/sa/products/pt/aluminum-cap-lead/models/EEUFS2A151,"12.5diam nominal(+0.5),20nom length22max;26x13 formedlead/body reservation +separate5mmventzone.105C10000h catalograting; not achievedlife."
+R7,390kohm 1% 1.6kV,VR25000003903FR500,axial,https://www.vishay.com/docs/28907/vr25vr37vr68.pdf,~.113W conservative normal-cycle bound; limit localambient100C until actualthermal/dutyevidence.200ppm/K.
+R8A,68kohm 1% 0.25W,RC1206FR-0768KL,1206,https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL,Two parallel bleeders; one-open discharge calculated to5Vwithin40s from90V. No accessiblecontact barrier or energizedhotplug guarantee.
+R8B,68kohm 1% 0.25W,RC1206FR-0768KL,1206,https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL,Two parallel bleeders; one-open discharge calculated to5Vwithin40s from90V. No accessiblecontact barrier or energizedhotplug guarantee.
+J2,LED module output,Direct insulated-wire solder pads,2wirepads,Actual owner integratedLED+shade module,"Nonisolated, mainsreferenced. Cold replacement only after deenergizing and verified discharge; final contact mechanism separate."
