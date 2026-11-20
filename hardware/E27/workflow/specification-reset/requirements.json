@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo E27 repairable LED lamp",
-  "revision": "specification-contract-rectangular-driver-6",
+  "revision": "specification-contract-catalogue-sourcing-7",
   "subsystems": [
     {
       "id": "BASE",
@@ -558,6 +558,42 @@
           "subsystem": "PANEL",
           "object": "Round LED insert",
           "path": "rectangular-driver-01/owner-form-decision.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-SOURCING",
+      "revision": "owner-instruction-2026-11-20",
+      "owner": "Owner (mandatory sourcing intent); coordinator (implementation and qualification)",
+      "text": "Every driver-board electronic component must have an exact orderable manufacturer part. Prefer actual JLCPCB assembly catalogue stock; reputable external distributors are acceptable when JLCPCB cannot supply it.",
+      "basis": "catalogue-redesign-15/owner-sourcing-instruction.md; explicit owner request in current conversation",
+      "acceptance": "Before final parts/assembly release, verify manufacturer identity, relevant electrical/mechanical ratings, exact source code, dated stock/leadtime, MOQ/packing, intended quantity plus assembly attrition, and supplier acceptance of external parts. Distinguish purchase availability from qualified circuit operation; wire raw material is not a completed harness.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "CAT15 proposed purchase map and engineering holds; actual revised CAD remains incomplete",
+          "path": "catalogue-redesign-15/selected-bom.json"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-STOCK-T1",
+      "revision": "owner-instruction-2026-11-20",
+      "owner": "Owner (mandatory sourcing intent); coordinator (implementation and qualification)",
+      "text": "The driver transformer must be a complete factory-wound off-the-shelf manufacturer catalogue part. No custom/customer winding, custom magnetic build or bare core/bobbin kit is permitted.",
+      "basis": "catalogue-redesign-15/owner-sourcing-instruction.md; explicit owner request in current conversation",
+      "acceptance": "Before accepting the revised schematic/library basis, identify the complete purchasable transformer and source, independently verify real pins/winding taps/polarity and dimensions, and establish suitability for declared normal/fault/startup and insulation conditions. A catalogue listing alone does not close electrical qualification.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "CAT15 proposed purchase map and engineering holds; actual revised CAD remains incomplete",
+          "path": "catalogue-redesign-15/selected-bom.json"
         }
       ],
       "method": "review",

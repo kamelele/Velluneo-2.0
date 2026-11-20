@@ -1,6 +1,24 @@
 # E27 workflow index
 
-## Current JLCPCB quotation handoff — JLC14, 20 November 2026
+## Current catalogue sourcing redesign — CAT15, 20 November 2026
+
+[CAT15](specification-reset/catalogue-redesign-15/README.md) supersedes the old
+custom-wound transformer procurement basis. The owner requires all parts orderable,
+preferably JLCPCB, and a complete factory-wound transformer with no custom winding.
+The exact proposed33-position purchase map covers31 electronic positions and two
+wire-pad pairs;14 positions have observed JLCPCB stocked listings, the others have
+external stock/material routes. Selected T1 is MYRRA74215, not a core/bobbin kit.
+
+This is a sourcing/ECO proposal, not completed electrical selection or revised PCB.
+Fault-current versus T1 rating, Q1's1.8mm maker footprint versus3mm policy, new bias,
+clamp/leakage/thermal/insulation, optical/enclosure and actual assembly/harness remain
+open. Native RFQ13 CAD is retained only as historical geometric implementation;
+its old checks do not validate the new parts. **Do not order RFQ13/JLC14 archives for
+this variant.** No new Gerbers/CPL, supplier contact, order or physical test exists.
+Toolkit revision and3/10.7mm rules stay unchanged. See CAT15 frozen files, actual
+four-role reports and acceptance record for precise proposal/implementation status.
+
+## Historical JLCPCB quotation handoff — JLC14, 20 November 2026
 
 [JLC14](specification-reset/jlcpcb-quote-14/README.md) prepares the unchanged RFQ13
 isolated 45 × 60 mm driver for a JLCPCB bare-PCB quote plus a separate assembly
@@ -22,7 +40,7 @@ No account, upload, supplier message, charge, order, payment or main merge occur
 The RFQ13 design remains authoritative; toolkit manifest remains
 b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97.
 
-## Current manufacturer enquiry — RFQ13, 20 November 2026
+## Historical manufacturer enquiry — RFQ13, 20 November 2026
 
 [RFQ13](specification-reset/supplier-review-13/README.md) is the current selected
 45 × 60 mm isolated four-layer, 33-part driver. It reserves the requested finished

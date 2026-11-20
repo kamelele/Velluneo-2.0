@@ -1,0 +1,61 @@
+{
+  "checked": "2026-11-20",
+  "sources": [
+    {
+      "id": "MYRRA74215",
+      "url": "https://myrra.com/wp-content/uploads/2019/11/74215-Datasheet.pdf",
+      "scope": "Pinout/dots/windings, dimensions, currents, insulation; manufacturer does not specify leakage/DCR/frequency here"
+    },
+    {
+      "id": "MYRRAfamily",
+      "url": "https://myrra.com/flyback/",
+      "scope": "S3 operating window19.2..28.8V; do not misuse S2 for27V"
+    },
+    {
+      "id": "TIcontroller",
+      "url": "https://www.ti.com/lit/ds/symlink/ucc28700.pdf",
+      "scope": "SLUSB41A;UCC28701 belongs to this family;CC/VS/RLC/thresholds and caveat that limits are average levels"
+    },
+    {
+      "id": "STD2N80K5",
+      "url": "https://www.st.com/resource/en/datasheet/std2n80k5.pdf",
+      "scope": "DPAK pinout,800V/2A and manufacturer land pattern; RthJA conditional"
+    },
+    {
+      "id": "SDB107",
+      "url": "https://www.mouser.com/datasheet/2/258/SDB101_SDB107_SDB_1_-2510779.pdf",
+      "scope": "MCCRev4-1-12072023; polarity, geometry and reduced surge versus W10G"
+    },
+    {
+      "id": "AC05AT",
+      "url": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+      "scope": "Factory WSZ pads; do not call AC-AT a guaranteed fusible resistor"
+    },
+    {
+      "id": "CRCW",
+      "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "scope": "14Apr2026;2512rated500V per manufacturer, contradicts marketplace300V; conservative small-size power retained"
+    },
+    {
+      "id": "TVS",
+      "url": "https://www.littelfuse.com/assetdocs/tvs-diodes-smbj-series-datasheet?assetguid=ba555e99-a12d-4f72-a0b6-86b06c67171e",
+      "scope": "SMBJ160A primary manufacturer2.3A at259V; do not copy LCSC1.9A"
+    },
+    {
+      "id": "C4",
+      "url": "https://industrial.panasonic.com/content/data/CP/PDF/ABA0000PE428.pdf",
+      "scope": "Hybrid ZA; preserve ESR/ripple/life"
+    },
+    {
+      "id": "D1",
+      "url": "https://www.diodes.com/assets/Datasheets/ds16008.pdf",
+      "scope": "US1M genuine maker identity"
+    },
+    {
+      "id": "wire",
+      "url": "https://www.micro-semiconductor.com/datasheet/b4-5854-7-BK005.pdf",
+      "scope": "Alpha Wire source drawing; UL1213105C differs from MIL200C"
+    }
+  ],
+  "inventory_sources": "Exact distributor URLs and dated observed counts are alongside every selected-bom.json position; JLC UI observations are separate. Search-crawler/distributor readings are not a guaranteed future allocation."
+}
