@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "reviewed_body_sha256": "8b70e2ae60cf24bc07792f1dbba528a79b8acbb0c0caadb2ebbd919bd969d7f2",
+  "recommendation": "ready_for_human_review",
+  "scope": "Engineering draft publication, not manufacturing release",
+  "reviews": [
+    {
+      "role": "reality",
+      "actor": "/root/c16_final_reality",
+      "report": "reviews/reality.md",
+      "recommendation": "ready_for_human_review",
+      "read_only_candidate": true
+    },
+    {
+      "role": "change",
+      "actor": "/root/c16_final_change",
+      "report": "reviews/change.md",
+      "recommendation": "ready_for_human_review",
+      "read_only_candidate": true
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c16_final_completeness",
+      "report": "reviews/completeness.md",
+      "recommendation": "ready_for_human_review",
+      "read_only_candidate": true
+    },
+    {
+      "role": "overengineering",
+      "actor": "/root/c16_final_simplicity",
+      "report": "reviews/overengineering.md",
+      "recommendation": "ready_for_human_review",
+      "read_only_candidate": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "C16-RC-01",
+      "status": "independently_verified_closed"
+    },
+    {
+      "id": "C16-RC-02",
+      "status": "independently_verified_closed"
+    },
+    {
+      "id": "C16-CHANGE-01",
+      "status": "independently_verified_closed"
+    },
+    {
+      "id": "C16-CHANGE-02",
+      "status": "independently_verified_closed"
+    },
+    {
+      "id": "C16-COMP-01",
+      "status": "independently_verified_closed"
+    },
+    {
+      "id": "C16-COMP-02",
+      "status": "independently_verified_closed"
+    },
+    {
+      "id": "C16-SIMP-01",
+      "status": "optional_maintenance_note",
+      "description": "11unused legacy modules; actual PCB uses correct factory parts; no current acceptance blocker."
+    }
+  ],
+  "human_stage_approval": false,
+  "manufacturing_release": false
+}

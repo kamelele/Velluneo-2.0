@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo C16 revised driver candidate; parent lamp targets retained, not an order release",
+  "revision": "C16-2",
+  "subsystems": [
+    {
+      "id": "DRIVER",
+      "kind": "pcb",
+      "owner": "Engineering coordinator"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "PB-IDENTITY",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "text": "33 positions /80 physical pads,45x60mm four layers, exact listed factory parts; no customer winding or lead forming.",
+      "basis": "Owner catalogue-part/PCB correction request; exact source and calculations in ../engineering-change.md and ../calculations.json. Parent lamp targets retained.",
+      "acceptance": "33 positions /80 physical pads,45x60mm four layers, exact listed factory parts; no customer winding or lead forming.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "PB-IDENTITY",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-C16-IDENTITY"
+      ]
+    },
+    {
+      "id": "PB-ROUTING",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "text": "Saved native CAD has zero DRC, unconnected and schematic-parity findings with the retained3mm/10.7mm rules. This criterion is geometric, not EMI/return-path qualification.",
+      "basis": "Owner catalogue-part/PCB correction request; exact source and calculations in ../engineering-change.md and ../calculations.json. Parent lamp targets retained.",
+      "acceptance": "Saved native CAD has zero DRC, unconnected and schematic-parity findings with the retained3mm/10.7mm rules. This criterion is geometric, not EMI/return-path qualification.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "PB-ROUTING",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "DRC",
+      "evidence_ids": [
+        "EV-C16-DRC"
+      ]
+    },
+    {
+      "id": "C16-FAULT",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "text": "At253Vac,Lpmin0.99mH,Rcsmin1.7622ohm, OCP threshold1.6V and total delay<=400ns, transformer peak<=1.1A. The delay allocation and every-cycle behavior require physical verification.",
+      "basis": "Owner catalogue-part/PCB correction request; exact source and calculations in ../engineering-change.md and ../calculations.json. Parent lamp targets retained.",
+      "acceptance": "At253Vac,Lpmin0.99mH,Rcsmin1.7622ohm, OCP threshold1.6V and total delay<=400ns, transformer peak<=1.1A. The delay allocation and every-cycle behavior require physical verification.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-FAULT",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "C16-Q1",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "text": "Straight TO-3PF copper spacing>=3mm; verify lead shoulder geometry/stand-off and first-fit; lowest wide shoulder>=3mm abovePCB.",
+      "basis": "Owner catalogue-part/PCB correction request; exact source and calculations in ../engineering-change.md and ../calculations.json. Parent lamp targets retained.",
+      "acceptance": "Straight TO-3PF copper spacing>=3mm; verify lead shoulder geometry/stand-off and first-fit; lowest wide shoulder>=3mm abovePCB.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-Q1",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C16-MAGNETIC",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "text": "Factory74032 pinout/holes/insulation correct; actual leakage, startup, fault reset, clamp peak and heating remain to be characterized.",
+      "basis": "Owner catalogue-part/PCB correction request; exact source and calculations in ../engineering-change.md and ../calculations.json. Parent lamp targets retained.",
+      "acceptance": "Factory74032 pinout/holes/insulation correct; actual leakage, startup, fault reset, clamp peak and heating remain to be characterized.",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-MAGNETIC",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "C16-PROCESS",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "text": "T1 finishedhole1.40+/-0.05mm and annular tolerance; filled/capped via process and assembly provider capability must be confirmed.",
+      "basis": "Owner catalogue-part/PCB correction request; exact source and calculations in ../engineering-change.md and ../calculations.json. Parent lamp targets retained.",
+      "acceptance": "T1 finishedhole1.40+/-0.05mm and annular tolerance; filled/capped via process and assembly provider capability must be confirmed.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-PROCESS",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "C16-PRODUCT",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "text": "Retain750..850lm and diameter60x120mm owner target; qualify matched LEDpanel, enclosure thermal/mechanical and applicable lighting insulation independently.",
+      "basis": "Owner catalogue-part/PCB correction request; exact source and calculations in ../engineering-change.md and ../calculations.json. Parent lamp targets retained.",
+      "acceptance": "Retain750..850lm and diameter60x120mm owner target; qualify matched LEDpanel, enclosure thermal/mechanical and applicable lighting insulation independently.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-PRODUCT",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [],
+  "evidence": [
+    {
+      "id": "EV-C16-IDENTITY",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root engineering coordinator",
+      "artifact": "evidence/identity-review.json",
+      "sha256": "4450e2b1c59c3708d656e7a09535ba737a69e928df33717de7fcda51335825d7",
+      "intent_digest": "7ebfbaf391a60026f9cb7dea60de6951f66d2ce5927c78bddddd368ef5dbda56",
+      "inputs": [
+        {
+          "path": "libraries/Velluneo_Driver.kicad_sym",
+          "sha256": "d2156e164601b771bc91a6104fd46bcb73b346e9342d71972c84b30d28ad95c1"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/AC05_P25p4_FORMED_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "e65dae93383cfe989ab4aa6ac9280aeea0309ca7a58d6553b57791a1339ec7ca"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_0603_NativeReflow.kicad_mod",
+          "sha256": "6f2704bc42b80bf6a3d64aef0a745e24aec63b0aac6f35c5f56163c0fc4a4829"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_0805_NativeReflow.kicad_mod",
+          "sha256": "b8b1f90d68028e5bf15e2dea1bf66b41263e4e6153055d8e10f7e96f7a163f8b"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_1206_NativeReflow.kicad_mod",
+          "sha256": "b24cad861ea2e5e8f20977fd054399556eb4e9bb2a2d642222d78395106c6c7b"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_2512_NativeReflow.kicad_mod",
+          "sha256": "0e51618590b22d9829173424d9d5fb24edf6ed0b947ea0c27379319992e36274"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_2512_R14_SilkClear.kicad_mod",
+          "sha256": "9671c8ace83b3dbb8c61a9eb7c05c28a00714e20c228bca911c80f34855a95e8"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Diodes_US1M_SMA_Native.kicad_mod",
+          "sha256": "59fc932f80338a29898d265f8e783bef675a07378b5e24db2b542f1251e7a9a1"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/InternalWirePair_P7p62_D1p6_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "cdf1912b41ffba52abf41ac5340e49efe0287ffb59f4a61fc413cef0e6f0abc1"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/KEMET_2220_C0G_DensityB_Native.kicad_mod",
+          "sha256": "6e0aba87fad5b53392dd5600b91d93b39cca8ce788a007ce64b0bc58ac3d9629"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/KEMET_2220_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "951bd4a80b76f31e54f2dc284d69f2f4d90134aac8ce139a27812b58c5549ebe"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/MB10S_Diodes_MBS_1P_2AC_3N_4AC.kicad_mod",
+          "sha256": "5327fac6e4374e25ca1a177b5cf733921d92a86628b9c2eda3b7a8896b641558"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/NTCS0603_NativeReflow.kicad_mod",
+          "sha256": "5f493cfd7a62fa7b7dbd4a641e15c97ca9bcc17e95de83328205e1312132ce52"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Panasonic_ZA_D_Standard_Native.kicad_mod",
+          "sha256": "c40f1a94de05134a3b91c95eb3c869fd717a59b9f66c673a5f8e0c19a8d76c65"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Rubycon_BXW_D10_P5_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "08a3f15443da123ac45fe44790cb66efb1a47ded514eb3bde41645008ea27388"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/SCHURTER_UMTH_WEB_PROVISIONAL.kicad_mod",
+          "sha256": "368395cea1f3a6366aad6a27359d3585c27b78abea623e6817d5e553a3e050d9"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/ST_STTH_SMA_Native.kicad_mod",
+          "sha256": "04e6a759bbdb6ac6e267a494a6bb1546ce35e5c4863e35cca0fc68c7b4e58158"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/STN1NK80Z_SOT223_Tab4.kicad_mod",
+          "sha256": "061e1fb533ee6ff4f28aee968ace48046177040a562dc971f764626cb595ce1e"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.kicad_mod",
+          "sha256": "ece344674c759b293f3c12a801aaf94441146cd2d795770e2492ef35eaa29b5e"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/UCC28711DR_SOIC7_HV7.kicad_mod",
+          "sha256": "e9ec90dafe06344b4e82661114ec30f59e60f98d02978b3b65b09aacd17f504e"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Vishay_SMBJ_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "894a21b527b077a3450f7a636231cdc7e3b099f5f336d8983bd63dcfca6deafd"
+        },
+        {
+          "path": "Velluneo_C16.pretty/MCC_SDB107_SDB1_FACTORY.kicad_mod",
+          "sha256": "659e8e267eea6721741e107193e5a69dca901fc1e4b7680d084ce22e25aa2100"
+        },
+        {
+          "path": "Velluneo_C16.pretty/MYRRA74032_E25_FACTORY.kicad_mod",
+          "sha256": "9e9ac54375795ef28dcb35e8ae8021400109edf3e627f7520ae753857ef9b454"
+        },
+        {
+          "path": "Velluneo_C16.pretty/STFW2N105K5_TO3PF_STRAIGHT.kicad_mod",
+          "sha256": "9624a7eee41661cbc8918dd126c38537a91629b196a8548dae363626e48fd8f4"
+        },
+        {
+          "path": "Velluneo_C16.pretty/Vishay_AC05AT_WSZ_FACTORY.kicad_mod",
+          "sha256": "c3c741e5545a4fe9d441ab8e5d5f66883ac9f70010d66f0f49beaf22c0c7baf5"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "25bd142ca95e36a9f5a60cc0d2aed45c093c22ca45486e2279e7d2f989852727"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "3c13b9d2048a6d6b1c830c75445d27412516f0c0fb03d6c5285b8c2f69067f78"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "618cbcda03bffe353ec0a5ae65fe6cd5c520b0895ccaaefe24db4edca93cc04f"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "ff338411041d79b5d9deb505c69a24ebe3a07199a7f39b09eb8120916daee416"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_Pad2p25_PROJECT.kicad_mod",
+          "sha256": "2bff605f6d49ab6818a6c6f120e6a759b94b4004342ff93ec7188e0580500e5d"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_PROJECT.kicad_mod",
+          "sha256": "d470012f4d449c3c81e9b89a76244731e2ae85fc14f0730923ee0d5b205505b0"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/TDK_EFD25_FINISHED30x30_RESERVATION.kicad_mod",
+          "sha256": "7610333a1c3805910a0d87110b98f99633b1ab6856c2a789b68c1e22885a380a"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/TDK_EFD25_Pad2p0_PROJECT.kicad_mod",
+          "sha256": "dd58b70137f9c0b4efda27b0ae507f79ae8462352dc8708165493603eda67e85"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/UCC28701_DBV_Native.kicad_mod",
+          "sha256": "f1a012110b1309b229f62211c2fd7c59c4889879a34f62b7b402eb312dc28188"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/W10G_Formed5p5_PROJECT.kicad_mod",
+          "sha256": "e67f0c8320b7d4ac6b3fb0810a3102793ba02c10f828381b941e2a517f9eecbf"
+        }
+      ]
+    },
+    {
+      "id": "EV-C16-DRC",
+      "kind": "DRC",
+      "result": "pass",
+      "verified_by": "KiCad10.0.6 native CLI; root recorded actual result",
+      "artifact": "evidence/drc.json",
+      "sha256": "ab8cb32d71f442ee498916689452ca94b0c467548a44cdadf30bf9ccbe75e699",
+      "intent_digest": "7ebfbaf391a60026f9cb7dea60de6951f66d2ce5927c78bddddd368ef5dbda56",
+      "inputs": [
+        {
+          "path": "libraries/Velluneo_Driver.kicad_sym",
+          "sha256": "d2156e164601b771bc91a6104fd46bcb73b346e9342d71972c84b30d28ad95c1"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/AC05_P25p4_FORMED_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "e65dae93383cfe989ab4aa6ac9280aeea0309ca7a58d6553b57791a1339ec7ca"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_0603_NativeReflow.kicad_mod",
+          "sha256": "6f2704bc42b80bf6a3d64aef0a745e24aec63b0aac6f35c5f56163c0fc4a4829"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_0805_NativeReflow.kicad_mod",
+          "sha256": "b8b1f90d68028e5bf15e2dea1bf66b41263e4e6153055d8e10f7e96f7a163f8b"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_1206_NativeReflow.kicad_mod",
+          "sha256": "b24cad861ea2e5e8f20977fd054399556eb4e9bb2a2d642222d78395106c6c7b"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_2512_NativeReflow.kicad_mod",
+          "sha256": "0e51618590b22d9829173424d9d5fb24edf6ed0b947ea0c27379319992e36274"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/CRCW_2512_R14_SilkClear.kicad_mod",
+          "sha256": "9671c8ace83b3dbb8c61a9eb7c05c28a00714e20c228bca911c80f34855a95e8"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Diodes_US1M_SMA_Native.kicad_mod",
+          "sha256": "59fc932f80338a29898d265f8e783bef675a07378b5e24db2b542f1251e7a9a1"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/InternalWirePair_P7p62_D1p6_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "cdf1912b41ffba52abf41ac5340e49efe0287ffb59f4a61fc413cef0e6f0abc1"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/KEMET_2220_C0G_DensityB_Native.kicad_mod",
+          "sha256": "6e0aba87fad5b53392dd5600b91d93b39cca8ce788a007ce64b0bc58ac3d9629"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/KEMET_2220_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "951bd4a80b76f31e54f2dc284d69f2f4d90134aac8ce139a27812b58c5549ebe"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/MB10S_Diodes_MBS_1P_2AC_3N_4AC.kicad_mod",
+          "sha256": "5327fac6e4374e25ca1a177b5cf733921d92a86628b9c2eda3b7a8896b641558"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/NTCS0603_NativeReflow.kicad_mod",
+          "sha256": "5f493cfd7a62fa7b7dbd4a641e15c97ca9bcc17e95de83328205e1312132ce52"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Panasonic_ZA_D_Standard_Native.kicad_mod",
+          "sha256": "c40f1a94de05134a3b91c95eb3c869fd717a59b9f66c673a5f8e0c19a8d76c65"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Rubycon_BXW_D10_P5_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "08a3f15443da123ac45fe44790cb66efb1a47ded514eb3bde41645008ea27388"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/SCHURTER_UMTH_WEB_PROVISIONAL.kicad_mod",
+          "sha256": "368395cea1f3a6366aad6a27359d3585c27b78abea623e6817d5e553a3e050d9"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/ST_STTH_SMA_Native.kicad_mod",
+          "sha256": "04e6a759bbdb6ac6e267a494a6bb1546ce35e5c4863e35cca0fc68c7b4e58158"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/STN1NK80Z_SOT223_Tab4.kicad_mod",
+          "sha256": "061e1fb533ee6ff4f28aee968ace48046177040a562dc971f764626cb595ce1e"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.kicad_mod",
+          "sha256": "ece344674c759b293f3c12a801aaf94441146cd2d795770e2492ef35eaa29b5e"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/UCC28711DR_SOIC7_HV7.kicad_mod",
+          "sha256": "e9ec90dafe06344b4e82661114ec30f59e60f98d02978b3b65b09aacd17f504e"
+        },
+        {
+          "path": "libraries/Velluneo_Driver.pretty/Vishay_SMBJ_PROJECT_CANDIDATE.kicad_mod",
+          "sha256": "894a21b527b077a3450f7a636231cdc7e3b099f5f336d8983bd63dcfca6deafd"
+        },
+        {
+          "path": "Velluneo_C16.pretty/MCC_SDB107_SDB1_FACTORY.kicad_mod",
+          "sha256": "659e8e267eea6721741e107193e5a69dca901fc1e4b7680d084ce22e25aa2100"
+        },
+        {
+          "path": "Velluneo_C16.pretty/MYRRA74032_E25_FACTORY.kicad_mod",
+          "sha256": "9e9ac54375795ef28dcb35e8ae8021400109edf3e627f7520ae753857ef9b454"
+        },
+        {
+          "path": "Velluneo_C16.pretty/STFW2N105K5_TO3PF_STRAIGHT.kicad_mod",
+          "sha256": "9624a7eee41661cbc8918dd126c38537a91629b196a8548dae363626e48fd8f4"
+        },
+        {
+          "path": "Velluneo_C16.pretty/Vishay_AC05AT_WSZ_FACTORY.kicad_mod",
+          "sha256": "c3c741e5545a4fe9d441ab8e5d5f66883ac9f70010d66f0f49beaf22c0c7baf5"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "25bd142ca95e36a9f5a60cc0d2aed45c093c22ca45486e2279e7d2f989852727"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "3c13b9d2048a6d6b1c830c75445d27412516f0c0fb03d6c5285b8c2f69067f78"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "618cbcda03bffe353ec0a5ae65fe6cd5c520b0895ccaaefe24db4edca93cc04f"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "ff338411041d79b5d9deb505c69a24ebe3a07199a7f39b09eb8120916daee416"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_Pad2p25_PROJECT.kicad_mod",
+          "sha256": "2bff605f6d49ab6818a6c6f120e6a759b94b4004342ff93ec7188e0580500e5d"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_PROJECT.kicad_mod",
+          "sha256": "d470012f4d449c3c81e9b89a76244731e2ae85fc14f0730923ee0d5b205505b0"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/TDK_EFD25_FINISHED30x30_RESERVATION.kicad_mod",
+          "sha256": "7610333a1c3805910a0d87110b98f99633b1ab6856c2a789b68c1e22885a380a"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/TDK_EFD25_Pad2p0_PROJECT.kicad_mod",
+          "sha256": "dd58b70137f9c0b4efda27b0ae507f79ae8462352dc8708165493603eda67e85"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/UCC28701_DBV_Native.kicad_mod",
+          "sha256": "f1a012110b1309b229f62211c2fd7c59c4889879a34f62b7b402eb312dc28188"
+        },
+        {
+          "path": "Velluneo_ECO04.pretty/W10G_Formed5p5_PROJECT.kicad_mod",
+          "sha256": "e67f0c8320b7d4ac6b3fb0810a3102793ba02c10f828381b941e2a517f9eecbf"
+        }
+      ]
+    }
+  ]
+}

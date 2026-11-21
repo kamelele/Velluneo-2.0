@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "errors": [
+    {
+      "type": "missing_stale_intent_approval",
+      "message": "Intent lacks current human approval evidence"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\catalogue-pcb-16\\design\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\catalogue-pcb-16\\design\\Velluneo_driver.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "08:42:38: Error: Directory 'C:\\Users\\kamil\\AppData' couldn't be created (error 183: Nie mo?na utworzy? pliku, kt�ry ju? istnieje.)\n"
+    }
+  ],
+  "intent_digest": "6f0f12003d5e0e1365daae31902d1b49a88dca09869b76de0e174dff92386ccc",
+  "intent_revision": "C16-independent-1",
+  "physical_pins": 80,
+  "intended_nets": 23,
+  "no_connects": 3,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "2367c995511137207688399cb0b36a40758f2580c87d0550e7aaa44f483734b3",
+  "export_sha256": "1ca7fee8381d2d262341fcc191f4ae3d4bd87fb02076307f6e1f7a1eef4c30dd",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "807c619ca5111d84904b52a3fcd7e2ff9c222e07913d817c57cf668476f022d4",
+    "archive_sha256": "d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97",
+    "package_version": "0.7.2-velluneo.1",
+    "publication_ready": false,
+    "ruleset_version": "0.7.2"
+  }
+}

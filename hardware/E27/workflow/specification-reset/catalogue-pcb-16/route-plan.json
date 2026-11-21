@@ -1,0 +1,6797 @@
+{
+  "source_sha256": "67b79cbc8ea090f51034c480f2039c9c177a9823163f9f021ecf5777a065e2d0",
+  "grid_mm": 0.2,
+  "via_diameter_mm": 0.8,
+  "via_drill_mm": 0.3,
+  "retained_clearance_mm": {
+    "primary_HV_quiet": 3.0,
+    "primary_secondary_projected": 10.7
+  },
+  "critical_HV_projection": true,
+  "connections": [
+    {
+      "label": "Mains bridge input",
+      "a": "J1.2",
+      "b": "BR1.2",
+      "net": "AC_CAP_B",
+      "family": "AC_CAP_B",
+      "width": 0.6,
+      "objects": 5,
+      "length_mm": 14.337470087499199,
+      "visits": 3570,
+      "elapsed_s": 0.07800000000133878,
+      "passed": true
+    },
+    {
+      "label": "Mains fused input",
+      "a": "J1.1",
+      "b": "F1.1",
+      "net": "AC_CAP_A",
+      "family": "AC_CAP_A",
+      "width": 0.6,
+      "objects": 6,
+      "length_mm": 17.48596679918781,
+      "visits": 5590,
+      "elapsed_s": 0.09399999999732245,
+      "passed": true
+    },
+    {
+      "label": "Primary drain power connection",
+      "a": "T1.3",
+      "b": "Q1.2",
+      "net": "DRAIN",
+      "family": "DRAIN",
+      "width": 0.65,
+      "objects": 6,
+      "length_mm": 20.424005229840628,
+      "visits": 392,
+      "elapsed_s": 0.046999999998661224,
+      "passed": true
+    },
+    {
+      "label": "VS input",
+      "a": "R5.1",
+      "b": "U1.6",
+      "net": "VS",
+      "family": "VS",
+      "width": 0.3,
+      "objects": 4,
+      "length_mm": 4.960465451786996,
+      "visits": 70,
+      "elapsed_s": 0.046000000002095476,
+      "passed": true
+    },
+    {
+      "label": "Dedicated shunt Kelvin",
+      "a": "R9.1",
+      "b": "R6.1",
+      "net": "SENSE",
+      "family": "kelvin",
+      "width": 0.3,
+      "objects": 3,
+      "length_mm": 4.5578427124746135,
+      "visits": 44,
+      "elapsed_s": 0.0629999999946449,
+      "passed": true
+    },
+    {
+      "label": "Source power to shunt",
+      "a": "Q1.3",
+      "b": "R9.1",
+      "net": "SENSE",
+      "family": "power",
+      "width": 0.8,
+      "objects": 4,
+      "length_mm": 5.192766952966361,
+      "visits": 132,
+      "elapsed_s": 0.04700000000593718,
+      "passed": true
+    },
+    {
+      "label": "Source referenced pulldown",
+      "a": "Q1.3",
+      "b": "R8.2",
+      "net": "SENSE",
+      "family": "power",
+      "width": 0.3,
+      "objects": 4,
+      "length_mm": 2.548199501942879,
+      "visits": 36,
+      "elapsed_s": 0.06199999999807915,
+      "passed": true
+    },
+    {
+      "label": "Shunt return to bulk capacitor",
+      "a": "R9.2",
+      "b": "C1.2",
+      "net": "PRIMARY_GND",
+      "family": "shunt",
+      "width": 1.0,
+      "objects": 9,
+      "length_mm": 17.049545098671935,
+      "visits": 4214,
+      "elapsed_s": 0.11000000000058208,
+      "passed": true
+    },
+    {
+      "label": "Bridge charge return to bulk capacitor",
+      "a": "BR1.3",
+      "b": "C1.2",
+      "net": "PRIMARY_GND",
+      "family": "charge",
+      "width": 0.8,
+      "objects": 8,
+      "length_mm": 22.524554860612753,
+      "visits": 10076,
+      "elapsed_s": 0.17199999999866122,
+      "passed": true
+    },
+    {
+      "label": "Auxiliary return to bulk capacitor",
+      "a": "T1.1",
+      "b": "C1.2",
+      "net": "PRIMARY_GND",
+      "family": "aux",
+      "width": 0.5,
+      "objects": 4,
+      "length_mm": 28.045606603360287,
+      "visits": 11032,
+      "elapsed_s": 0.18699999999807915,
+      "passed": true
+    },
+    {
+      "label": "Aux reservoir local return",
+      "a": "C3.2",
+      "b": "T1.1",
+      "net": "PRIMARY_GND",
+      "family": "aux",
+      "width": 0.45,
+      "objects": 4,
+      "length_mm": 8.63484182952782,
+      "visits": 276,
+      "elapsed_s": 0.15600000000267755,
+      "passed": true
+    },
+    {
+      "label": "Quiet control return to bulk capacitor",
+      "a": "U1.5",
+      "b": "C1.2",
+      "net": "PRIMARY_GND",
+      "family": "quiet",
+      "width": 0.35,
+      "objects": 8,
+      "length_mm": 13.86155086718081,
+      "visits": 693,
+      "elapsed_s": 0.17199999999866122,
+      "passed": true
+    },
+    {
+      "label": "Local controller bypass return",
+      "a": "C2.2",
+      "b": "U1.5",
+      "net": "PRIMARY_GND",
+      "family": "quiet",
+      "width": 0.35,
+      "objects": 5,
+      "length_mm": 3.8399494936611656,
+      "visits": 923,
+      "elapsed_s": 0.09399999999732245,
+      "passed": true
+    },
+    {
+      "label": "VS divider quiet return",
+      "a": "R5.2",
+      "b": "U1.5",
+      "net": "PRIMARY_GND",
+      "family": "quiet",
+      "width": 0.3,
+      "objects": 8,
+      "length_mm": 6.107240696674695,
+      "visits": 212,
+      "elapsed_s": 0.07800000000133878,
+      "passed": true
+    },
+    {
+      "label": "NTC quiet return",
+      "a": "RT1.2",
+      "b": "U1.5",
+      "net": "PRIMARY_GND",
+      "family": "quiet",
+      "width": 0.3,
+      "objects": 9,
+      "length_mm": 7.711269837220802,
+      "visits": 334,
+      "elapsed_s": 0.0940000000045984,
+      "passed": true
+    },
+    {
+      "label": "VDD bleed quiet return",
+      "a": "R13.2",
+      "b": "U1.5",
+      "net": "PRIMARY_GND",
+      "family": "quiet",
+      "width": 0.3,
+      "objects": 8,
+      "length_mm": 10.572820704401622,
+      "visits": 544,
+      "elapsed_s": 0.07799999999406282,
+      "passed": true
+    },
+    {
+      "label": "Current sense input",
+      "a": "R6.2",
+      "b": "U1.4",
+      "net": "CS",
+      "family": "CS",
+      "width": 0.3,
+      "objects": 4,
+      "length_mm": 2.844646111349607,
+      "visits": 26,
+      "elapsed_s": 0.0940000000045984,
+      "passed": true
+    },
+    {
+      "label": "Gate series resistor",
+      "a": "Q1.1",
+      "b": "R7.2",
+      "net": "GATE",
+      "family": "gate",
+      "width": 0.3,
+      "objects": 5,
+      "length_mm": 8.231994764472386,
+      "visits": 132,
+      "elapsed_s": 0.0930000000007567,
+      "passed": true
+    },
+    {
+      "label": "Gate pulldown",
+      "a": "Q1.1",
+      "b": "R8.1",
+      "net": "GATE",
+      "family": "gate",
+      "width": 0.3,
+      "objects": 8,
+      "length_mm": 16.999166301130696,
+      "visits": 10515,
+      "elapsed_s": 0.20300000000133878,
+      "passed": true
+    },
+    {
+      "label": "Controller gate drive",
+      "a": "U1.3",
+      "b": "R7.1",
+      "net": "DRV",
+      "family": "DRV",
+      "width": 0.3,
+      "objects": 5,
+      "length_mm": 7.176031210381011,
+      "visits": 129,
+      "elapsed_s": 0.20300000000133878,
+      "passed": true
+    },
+    {
+      "label": "VS divider",
+      "a": "R4.2",
+      "b": "R5.1",
+      "net": "VS",
+      "family": "VS",
+      "width": 0.3,
+      "objects": 9,
+      "length_mm": 14.372190190335871,
+      "visits": 6824,
+      "elapsed_s": 0.17199999999866122,
+      "passed": true
+    },
+    {
+      "label": "NTC input",
+      "a": "RT1.1",
+      "b": "U1.1",
+      "net": "NTC",
+      "family": "NTC",
+      "width": 0.3,
+      "objects": 9,
+      "length_mm": 11.39880916738387,
+      "visits": 184,
+      "elapsed_s": 0.10899999999674037,
+      "passed": true
+    },
+    {
+      "label": "Aux feed to reservoir",
+      "a": "R10.2",
+      "b": "C3.1",
+      "net": "VDD",
+      "family": "VDD",
+      "width": 0.45,
+      "objects": 6,
+      "length_mm": 11.985814935892755,
+      "visits": 2068,
+      "elapsed_s": 0.125,
+      "passed": true
+    },
+    {
+      "label": "Controller bias feed",
+      "a": "C3.1",
+      "b": "U1.2",
+      "net": "VDD",
+      "family": "VDD",
+      "width": 0.35,
+      "objects": 7,
+      "length_mm": 12.861550867180824,
+      "visits": 3327,
+      "elapsed_s": 0.13999999999941792,
+      "passed": true
+    },
+    {
+      "label": "Local controller bypass feed",
+      "a": "C2.1",
+      "b": "U1.2",
+      "net": "VDD",
+      "family": "VDD",
+      "width": 0.4,
+      "objects": 6,
+      "length_mm": 1.9571067811865521,
+      "visits": 91,
+      "elapsed_s": 0.11000000000058208,
+      "passed": true
+    },
+    {
+      "label": "VDD bleed feed",
+      "a": "R13.1",
+      "b": "U1.2",
+      "net": "VDD",
+      "family": "VDD",
+      "width": 0.3,
+      "objects": 12,
+      "length_mm": 14.281651879858488,
+      "visits": 2328,
+      "elapsed_s": 0.13999999999941792,
+      "passed": true
+    },
+    {
+      "label": "Startup VDD feed",
+      "a": "R17.2",
+      "b": "C3.1",
+      "net": "VDD",
+      "family": "VDD",
+      "width": 0.3,
+      "objects": 8,
+      "length_mm": 33.62551189785975,
+      "visits": 15159,
+      "elapsed_s": 0.375,
+      "passed": true
+    },
+    {
+      "label": "Auxiliary rectifier winding",
+      "a": "T1.2",
+      "b": "D2.2",
+      "net": "AUX_RAW",
+      "family": "AUX_RAW",
+      "width": 0.4,
+      "objects": 4,
+      "length_mm": 5.8986737731397065,
+      "visits": 153,
+      "elapsed_s": 0.28100000000267755,
+      "passed": true
+    },
+    {
+      "label": "Winding sense feed",
+      "a": "T1.2",
+      "b": "R4.1",
+      "net": "AUX_RAW",
+      "family": "AUX_RAW",
+      "width": 0.3,
+      "objects": 9,
+      "length_mm": 12.438240456008161,
+      "visits": 1184,
+      "elapsed_s": 0.2819999999992433,
+      "passed": true
+    },
+    {
+      "label": "Rectified auxiliary feed",
+      "a": "D2.1",
+      "b": "R10.1",
+      "net": "AUX_RECT",
+      "family": "AUX_RECT",
+      "width": 0.45,
+      "objects": 4,
+      "length_mm": 9.755029266420877,
+      "visits": 148,
+      "elapsed_s": 0.15600000000267755,
+      "passed": true
+    },
+    {
+      "label": "Bleeder A return",
+      "a": "R3.2",
+      "b": "C1.2",
+      "net": "PRIMARY_GND",
+      "family": "bleedA",
+      "width": 0.3,
+      "objects": 5,
+      "length_mm": 15.234343073316596,
+      "visits": 1507,
+      "elapsed_s": 0.18699999999807915,
+      "passed": true
+    },
+    {
+      "label": "Bleeder B return",
+      "a": "R15.2",
+      "b": "C1.2",
+      "net": "PRIMARY_GND",
+      "family": "bleedB",
+      "width": 0.3,
+      "objects": 11,
+      "length_mm": 25.26865764836736,
+      "visits": 7062,
+      "elapsed_s": 0.25,
+      "passed": true
+    },
+    {
+      "label": "Secondary reservoir return",
+      "a": "T1.10",
+      "b": "C4.2",
+      "net": "OUTPUT_NEG",
+      "family": "OUTPUT_NEG",
+      "width": 0.8,
+      "objects": 4,
+      "length_mm": 10.400028498265847,
+      "visits": 441,
+      "elapsed_s": 0.07800000000133878,
+      "passed": true
+    },
+    {
+      "label": "LED output return",
+      "a": "T1.10",
+      "b": "J2.2",
+      "net": "OUTPUT_NEG",
+      "family": "OUTPUT_NEG",
+      "width": 0.8,
+      "objects": 5,
+      "length_mm": 26.166882747758226,
+      "visits": 2255,
+      "elapsed_s": 0.09399999999732245,
+      "passed": true
+    },
+    {
+      "label": "Output bleed return",
+      "a": "R12.2",
+      "b": "T1.10",
+      "net": "OUTPUT_NEG",
+      "family": "OUTPUT_NEG",
+      "width": 0.3,
+      "objects": 3,
+      "length_mm": 4.740230523621181,
+      "visits": 110,
+      "elapsed_s": 0.06300000000192085,
+      "passed": true
+    },
+    {
+      "label": "Second output bleed return",
+      "a": "R11.2",
+      "b": "T1.10",
+      "net": "OUTPUT_NEG",
+      "family": "OUTPUT_NEG",
+      "width": 0.3,
+      "objects": 6,
+      "length_mm": 22.37992748558817,
+      "visits": 3807,
+      "elapsed_s": 0.10899999999674037,
+      "passed": true
+    },
+    {
+      "label": "Secondary rectifier winding",
+      "a": "T1.6",
+      "b": "D3.2",
+      "net": "SECONDARY_RAW",
+      "family": "SECONDARY_RAW",
+      "width": 0.8,
+      "objects": 7,
+      "length_mm": 21.841882747758227,
+      "visits": 13667,
+      "elapsed_s": 0.2190000000045984,
+      "passed": true
+    },
+    {
+      "label": "Secondary reservoir feed",
+      "a": "D3.1",
+      "b": "C4.1",
+      "net": "OUTPUT_POS",
+      "family": "OUTPUT_POS",
+      "width": 0.8,
+      "objects": 8,
+      "length_mm": 18.07616882454315,
+      "visits": 2991,
+      "elapsed_s": 0.10899999999674037,
+      "passed": true
+    },
+    {
+      "label": "LED output feed",
+      "a": "D3.1",
+      "b": "J2.1",
+      "net": "OUTPUT_POS",
+      "family": "OUTPUT_POS",
+      "width": 0.8,
+      "objects": 2,
+      "length_mm": 8.695000000000007,
+      "visits": 204,
+      "elapsed_s": 0.06300000000192085,
+      "passed": true
+    },
+    {
+      "label": "Output bleed feed",
+      "a": "R11.1",
+      "b": "C4.1",
+      "net": "OUTPUT_POS",
+      "family": "OUTPUT_POS",
+      "width": 0.3,
+      "objects": 6,
+      "length_mm": 22.20832611206852,
+      "visits": 7542,
+      "elapsed_s": 0.13999999999941792,
+      "passed": true
+    },
+    {
+      "label": "Second output bleed feed",
+      "a": "R12.1",
+      "b": "C4.1",
+      "net": "OUTPUT_POS",
+      "family": "OUTPUT_POS",
+      "width": 0.3,
+      "objects": 5,
+      "length_mm": 16.122539674441622,
+      "visits": 3633,
+      "elapsed_s": 0.0940000000045984,
+      "passed": true
+    },
+    {
+      "label": "Primary bulk power feed",
+      "a": "T1.5",
+      "b": "C1.1",
+      "net": "BULK_POS",
+      "family": "BULK_POS",
+      "width": 0.8,
+      "objects": 4,
+      "length_mm": 22.99220114240853,
+      "visits": 778,
+      "elapsed_s": 0.18699999999807915,
+      "passed": true
+    },
+    {
+      "label": "Clamp return to primary bulk",
+      "a": "TVS1.2",
+      "b": "T1.5",
+      "net": "BULK_POS",
+      "family": "BULK_POS",
+      "width": 0.65,
+      "objects": 3,
+      "length_mm": 4.8064468567133005,
+      "visits": 24,
+      "elapsed_s": 0.17199999999866122,
+      "passed": true
+    },
+    {
+      "label": "Bridge bulk charging feed",
+      "a": "BR1.1",
+      "b": "C1.1",
+      "net": "BULK_POS",
+      "family": "BULK_POS",
+      "width": 0.8,
+      "objects": 4,
+      "length_mm": 7.907902636475707,
+      "visits": 111,
+      "elapsed_s": 0.17199999999866122,
+      "passed": true
+    },
+    {
+      "label": "Bleeder A bulk feed",
+      "a": "R2.1",
+      "b": "BR1.1",
+      "net": "BULK_POS",
+      "family": "BULK_POS",
+      "width": 0.3,
+      "objects": 4,
+      "length_mm": 4.103206018787269,
+      "visits": 75,
+      "elapsed_s": 0.17199999999866122,
+      "passed": true
+    },
+    {
+      "label": "Bleeder B bulk feed",
+      "a": "R14.1",
+      "b": "T1.5",
+      "net": "BULK_POS",
+      "family": "BULK_POS",
+      "width": 0.3,
+      "objects": 4,
+      "length_mm": 13.934308267873634,
+      "visits": 132,
+      "elapsed_s": 0.17199999999866122,
+      "passed": true
+    },
+    {
+      "label": "Startup bulk feed",
+      "a": "R16.1",
+      "b": "T1.5",
+      "net": "BULK_POS",
+      "family": "BULK_POS",
+      "width": 0.3,
+      "objects": 6,
+      "length_mm": 14.999993692822873,
+      "visits": 476,
+      "elapsed_s": 0.17100000000209548,
+      "passed": true
+    },
+    {
+      "label": "Short drain clamp pickup",
+      "a": "D1.2",
+      "b": "T1.3",
+      "net": "DRAIN",
+      "family": "DRAIN",
+      "width": 0.65,
+      "objects": 4,
+      "length_mm": 4.456133674821604,
+      "visits": 85,
+      "elapsed_s": 0.20399999999790452,
+      "passed": true
+    },
+    {
+      "label": "Local diode TVS clamp",
+      "a": "D1.1",
+      "b": "TVS1.1",
+      "net": "CLAMP",
+      "family": "CLAMP",
+      "width": 0.65,
+      "objects": 9,
+      "length_mm": 14.284122693554098,
+      "visits": 5137,
+      "elapsed_s": 0.25,
+      "passed": true
+    },
+    {
+      "label": "Fused inrush resistor feed",
+      "a": "F1.2",
+      "b": "R1.1",
+      "net": "AC_FUSED",
+      "family": "AC_FUSED",
+      "width": 0.6,
+      "objects": 6,
+      "length_mm": 8.351016961248085,
+      "visits": 2369,
+      "elapsed_s": 0.23399999999674037,
+      "passed": true
+    },
+    {
+      "label": "Limited bridge input",
+      "a": "R1.2",
+      "b": "BR1.4",
+      "net": "AC_LIMITED",
+      "family": "AC_LIMITED",
+      "width": 0.6,
+      "objects": 5,
+      "length_mm": 5.956430773899566,
+      "visits": 1079,
+      "elapsed_s": 0.2190000000045984,
+      "passed": true
+    },
+    {
+      "label": "Bleeder A midpoint",
+      "a": "R2.2",
+      "b": "R3.1",
+      "net": "BLEED_MID",
+      "family": "BLEED_MID",
+      "width": 0.3,
+      "objects": 7,
+      "length_mm": 18.769343417595163,
+      "visits": 7031,
+      "elapsed_s": 0.2809999999954016,
+      "passed": true
+    },
+    {
+      "label": "Bleeder B midpoint",
+      "a": "R14.2",
+      "b": "R15.1",
+      "net": "BLEED_MID_B",
+      "family": "BLEED_MID_B",
+      "width": 0.3,
+      "objects": 9,
+      "length_mm": 47.722034611053274,
+      "visits": 27715,
+      "elapsed_s": 0.5160000000032596,
+      "passed": true
+    },
+    {
+      "label": "Startup series midpoint",
+      "a": "R16.2",
+      "b": "R17.1",
+      "net": "STARTUP_MID",
+      "family": "STARTUP_MID",
+      "width": 0.3,
+      "objects": 12,
+      "length_mm": 16.27106781186549,
+      "visits": 6300,
+      "elapsed_s": 0.4680000000007567,
+      "passed": true
+    }
+  ],
+  "elements": [
+    {
+      "net": "SENSE",
+      "a": [
+        -14.924999999999997,
+        20.0
+      ],
+      "b": [
+        -14.924999999999997,
+        20.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "kelvin",
+      "label": "Kelvin pad takeoff R9.1"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -10.599999999999994,
+        19.950000000000003
+      ],
+      "b": [
+        -10.599999999999994,
+        19.950000000000003
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "kelvin",
+      "label": "Kelvin pad takeoff R6.1"
+    },
+    {
+      "net": "AC_CAP_B",
+      "a": [
+        2.3100000000000023,
+        27.200000000000003
+      ],
+      "b": [
+        2.3000000000000007,
+        27.200000000000003
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_B",
+      "label": "Mains bridge input"
+    },
+    {
+      "net": "AC_CAP_B",
+      "a": [
+        2.3000000000000007,
+        27.200000000000003
+      ],
+      "b": [
+        9.5,
+        27.200000000000003
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_B",
+      "label": "Mains bridge input"
+    },
+    {
+      "net": "AC_CAP_B",
+      "a": [
+        9.5,
+        27.200000000000003
+      ],
+      "b": [
+        10.700000000000003,
+        28.4
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_B",
+      "label": "Mains bridge input"
+    },
+    {
+      "net": "AC_CAP_B",
+      "a": [
+        10.700000000000003,
+        28.4
+      ],
+      "b": [
+        16.1,
+        28.4
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_B",
+      "label": "Mains bridge input"
+    },
+    {
+      "net": "AC_CAP_B",
+      "a": [
+        16.1,
+        28.4
+      ],
+      "b": [
+        16.095,
+        28.370000000000005
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_B",
+      "label": "Mains bridge input"
+    },
+    {
+      "net": "AC_CAP_A",
+      "a": [
+        -5.310000000000002,
+        27.200000000000003
+      ],
+      "b": [
+        -5.300000000000001,
+        27.200000000000003
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_A",
+      "label": "Mains fused input"
+    },
+    {
+      "net": "AC_CAP_A",
+      "a": [
+        -5.300000000000001,
+        27.200000000000003
+      ],
+      "b": [
+        -5.300000000000001,
+        25.0
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_A",
+      "label": "Mains fused input"
+    },
+    {
+      "net": "AC_CAP_A",
+      "a": [
+        -5.300000000000001,
+        25.0
+      ],
+      "b": [
+        -0.8999999999999986,
+        20.6
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_A",
+      "label": "Mains fused input"
+    },
+    {
+      "net": "AC_CAP_A",
+      "a": [
+        -0.8999999999999986,
+        20.6
+      ],
+      "b": [
+        -0.8999999999999986,
+        14.400000000000002
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_A",
+      "label": "Mains fused input"
+    },
+    {
+      "net": "AC_CAP_A",
+      "a": [
+        -0.8999999999999986,
+        14.400000000000002
+      ],
+      "b": [
+        1.1000000000000014,
+        12.400000000000002
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_A",
+      "label": "Mains fused input"
+    },
+    {
+      "net": "AC_CAP_A",
+      "a": [
+        1.1000000000000014,
+        12.400000000000002
+      ],
+      "b": [
+        1.125,
+        12.400000000000006
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_CAP_A",
+      "label": "Mains fused input"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        0.0,
+        -3.010000000000005
+      ],
+      "b": [
+        -0.09999999999999787,
+        -3.0
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Primary drain power connection"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        -0.09999999999999787,
+        -3.0
+      ],
+      "b": [
+        -0.5,
+        -2.5999999999999996
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Primary drain power connection"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        -0.5,
+        -2.5999999999999996
+      ],
+      "b": [
+        -0.5,
+        -0.39999999999999947
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Primary drain power connection"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        -0.5,
+        -0.39999999999999947
+      ],
+      "b": [
+        -10.899999999999999,
+        10.0
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Primary drain power connection"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        -10.899999999999999,
+        10.0
+      ],
+      "b": [
+        -13.7,
+        10.0
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Primary drain power connection"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        -13.7,
+        10.0
+      ],
+      "b": [
+        -13.650000000000006,
+        10.0
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Primary drain power connection"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -5.200000000000003,
+        21.174999999999997
+      ],
+      "b": [
+        -5.300000000000001,
+        21.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS input"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -5.300000000000001,
+        21.200000000000003
+      ],
+      "b": [
+        -7.1,
+        19.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS input"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -7.1,
+        19.400000000000002
+      ],
+      "b": [
+        -7.1,
+        17.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS input"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -7.1,
+        17.200000000000003
+      ],
+      "b": [
+        -7.049999999999997,
+        17.299999999999997
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS input"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -14.924999999999997,
+        20.0
+      ],
+      "b": [
+        -10.7,
+        20.0
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "kelvin",
+      "label": "Dedicated shunt Kelvin"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -10.7,
+        20.0
+      ],
+      "b": [
+        -10.5,
+        19.8
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "kelvin",
+      "label": "Dedicated shunt Kelvin"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -10.5,
+        19.8
+      ],
+      "b": [
+        -10.599999999999994,
+        19.950000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "kelvin",
+      "label": "Dedicated shunt Kelvin"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -13.650000000000006,
+        15.450000000000003
+      ],
+      "b": [
+        -13.7,
+        15.400000000000002
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source power to shunt"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -13.7,
+        15.400000000000002
+      ],
+      "b": [
+        -13.7,
+        18.8
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source power to shunt"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -13.7,
+        18.8
+      ],
+      "b": [
+        -14.899999999999999,
+        20.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source power to shunt"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -14.899999999999999,
+        20.0
+      ],
+      "b": [
+        -14.924999999999997,
+        20.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source power to shunt"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -13.650000000000006,
+        15.450000000000003
+      ],
+      "b": [
+        -13.7,
+        15.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source referenced pulldown"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -13.7,
+        15.400000000000002
+      ],
+      "b": [
+        -13.7,
+        17.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source referenced pulldown"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -13.7,
+        17.200000000000003
+      ],
+      "b": [
+        -13.299999999999999,
+        17.6
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source referenced pulldown"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -13.299999999999999,
+        17.6
+      ],
+      "b": [
+        -13.25,
+        17.5
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "power",
+      "label": "Source referenced pulldown"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -12.375,
+        20.0
+      ],
+      "b": [
+        -12.299999999999999,
+        20.0
+      ],
+      "width": 1.0,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -12.299999999999999,
+        20.0
+      ],
+      "b": [
+        -11.899999999999999,
+        19.6
+      ],
+      "width": 1.0,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -11.899999999999999,
+        19.6
+      ],
+      "b": [
+        -11.899999999999999,
+        19.200000000000003
+      ],
+      "width": 1.0,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -11.899999999999999,
+        19.200000000000003
+      ],
+      "b": [
+        -11.7,
+        19.0
+      ],
+      "width": 1.0,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -11.7,
+        19.0
+      ],
+      "b": [
+        -11.7,
+        19.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -11.7,
+        19.0
+      ],
+      "b": [
+        -11.299999999999999,
+        18.6
+      ],
+      "width": 1.0,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -11.299999999999999,
+        18.6
+      ],
+      "b": [
+        2.900000000000002,
+        18.6
+      ],
+      "width": 1.0,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        2.900000000000002,
+        18.6
+      ],
+      "b": [
+        3.5,
+        19.200000000000003
+      ],
+      "width": 1.0,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        19.200000000000003
+      ],
+      "b": [
+        3.5999999999999943,
+        19.25
+      ],
+      "width": 1.0,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "shunt",
+      "label": "Shunt return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        21.305000000000007,
+        19.629999999999995
+      ],
+      "b": [
+        21.300000000000004,
+        19.6
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        21.300000000000004,
+        19.6
+      ],
+      "b": [
+        20.300000000000004,
+        20.6
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        20.300000000000004,
+        20.6
+      ],
+      "b": [
+        20.300000000000004,
+        20.6
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        20.300000000000004,
+        20.6
+      ],
+      "b": [
+        17.1,
+        23.8
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        17.1,
+        23.8
+      ],
+      "b": [
+        6.5,
+        23.8
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        6.5,
+        23.8
+      ],
+      "b": [
+        3.5,
+        20.8
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        20.8
+      ],
+      "b": [
+        3.5,
+        19.200000000000003
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        19.200000000000003
+      ],
+      "b": [
+        3.5999999999999943,
+        19.25
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "charge",
+      "label": "Bridge charge return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -10.0,
+        -3.010000000000005
+      ],
+      "b": [
+        -10.1,
+        -3.0
+      ],
+      "width": 0.5,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Auxiliary return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -10.1,
+        -3.0
+      ],
+      "b": [
+        -10.1,
+        5.600000000000001
+      ],
+      "width": 0.5,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Auxiliary return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -10.1,
+        5.600000000000001
+      ],
+      "b": [
+        3.5,
+        19.200000000000003
+      ],
+      "width": 0.5,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Auxiliary return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        19.200000000000003
+      ],
+      "b": [
+        3.5999999999999943,
+        19.25
+      ],
+      "width": 0.5,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Auxiliary return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -5.75,
+        3.5
+      ],
+      "b": [
+        -5.699999999999999,
+        3.6000000000000014
+      ],
+      "width": 0.45,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Aux reservoir local return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -5.699999999999999,
+        3.6000000000000014
+      ],
+      "b": [
+        -10.1,
+        -0.7999999999999998
+      ],
+      "width": 0.45,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Aux reservoir local return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -10.1,
+        -0.7999999999999998
+      ],
+      "b": [
+        -10.1,
+        -3.0
+      ],
+      "width": 0.45,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Aux reservoir local return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -10.1,
+        -3.0
+      ],
+      "b": [
+        -10.0,
+        -3.010000000000005
+      ],
+      "width": 0.45,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "aux",
+      "label": "Aux reservoir local return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.0,
+        17.299999999999997
+      ],
+      "b": [
+        -8.1,
+        17.200000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        17.200000000000003
+      ],
+      "b": [
+        -7.899999999999999,
+        17.0
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.899999999999999,
+        17.0
+      ],
+      "b": [
+        -7.899999999999999,
+        16.400000000000002
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.899999999999999,
+        16.400000000000002
+      ],
+      "b": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "b": [
+        -5.899999999999999,
+        16.200000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -5.899999999999999,
+        16.200000000000003
+      ],
+      "b": [
+        -2.8999999999999986,
+        19.200000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -2.8999999999999986,
+        19.200000000000003
+      ],
+      "b": [
+        3.5,
+        19.200000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        19.200000000000003
+      ],
+      "b": [
+        3.5999999999999943,
+        19.25
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Quiet control return to bulk capacitor"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.5,
+        18.650000000000006
+      ],
+      "b": [
+        -7.5,
+        16.8
+      ],
+      "width": 0.35,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Local controller bypass return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.5,
+        16.8
+      ],
+      "b": [
+        -8.1,
+        16.200000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Local controller bypass return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        16.200000000000003
+      ],
+      "b": [
+        -8.1,
+        16.200000000000003
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "quiet",
+      "label": "Local controller bypass return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        16.200000000000003
+      ],
+      "b": [
+        -8.1,
+        17.200000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Local controller bypass return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        17.200000000000003
+      ],
+      "b": [
+        -8.0,
+        17.299999999999997
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "Local controller bypass return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -5.200000000000003,
+        19.224999999999994
+      ],
+      "b": [
+        -5.300000000000001,
+        19.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -5.300000000000001,
+        19.200000000000003
+      ],
+      "b": [
+        -6.300000000000001,
+        18.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -6.300000000000001,
+        18.200000000000003
+      ],
+      "b": [
+        -6.300000000000001,
+        16.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -6.300000000000001,
+        16.400000000000002
+      ],
+      "b": [
+        -6.5,
+        16.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -6.5,
+        16.200000000000003
+      ],
+      "b": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "b": [
+        -8.1,
+        16.6
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        16.6
+      ],
+      "b": [
+        -8.1,
+        17.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        17.200000000000003
+      ],
+      "b": [
+        -8.0,
+        17.299999999999997
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VS divider quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -2.200000000000003,
+        16.5
+      ],
+      "b": [
+        -2.8999999999999986,
+        15.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -2.8999999999999986,
+        15.8
+      ],
+      "b": [
+        -2.8999999999999986,
+        15.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -2.8999999999999986,
+        15.600000000000001
+      ],
+      "b": [
+        -3.099999999999998,
+        15.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -3.099999999999998,
+        15.400000000000002
+      ],
+      "b": [
+        -6.099999999999998,
+        15.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -6.099999999999998,
+        15.400000000000002
+      ],
+      "b": [
+        -6.899999999999999,
+        16.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -6.899999999999999,
+        16.200000000000003
+      ],
+      "b": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "b": [
+        -8.1,
+        16.6
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        16.6
+      ],
+      "b": [
+        -8.1,
+        17.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        17.200000000000003
+      ],
+      "b": [
+        -8.0,
+        17.299999999999997
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "NTC quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -1.3499999999999943,
+        22.099999999999994
+      ],
+      "b": [
+        -1.2999999999999972,
+        22.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -1.2999999999999972,
+        22.0
+      ],
+      "b": [
+        -1.8999999999999986,
+        21.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -1.8999999999999986,
+        21.400000000000002
+      ],
+      "b": [
+        -1.8999999999999986,
+        20.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -1.8999999999999986,
+        20.8
+      ],
+      "b": [
+        -6.5,
+        16.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -6.5,
+        16.200000000000003
+      ],
+      "b": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -7.699999999999999,
+        16.200000000000003
+      ],
+      "b": [
+        -8.1,
+        16.6
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        16.6
+      ],
+      "b": [
+        -8.1,
+        17.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -8.1,
+        17.200000000000003
+      ],
+      "b": [
+        -8.0,
+        17.299999999999997
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "quiet",
+      "label": "VDD bleed quiet return"
+    },
+    {
+      "net": "CS",
+      "a": [
+        -9.049999999999997,
+        19.799999999999997
+      ],
+      "b": [
+        -9.1,
+        19.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "CS",
+      "label": "Current sense input"
+    },
+    {
+      "net": "CS",
+      "a": [
+        -9.1,
+        19.8
+      ],
+      "b": [
+        -9.1,
+        17.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "CS",
+      "label": "Current sense input"
+    },
+    {
+      "net": "CS",
+      "a": [
+        -9.1,
+        17.400000000000002
+      ],
+      "b": [
+        -8.899999999999999,
+        17.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "CS",
+      "label": "Current sense input"
+    },
+    {
+      "net": "CS",
+      "a": [
+        -8.899999999999999,
+        17.200000000000003
+      ],
+      "b": [
+        -8.950000000000003,
+        17.299999999999997
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "CS",
+      "label": "Current sense input"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -13.650000000000006,
+        4.549999999999997
+      ],
+      "b": [
+        -13.7,
+        4.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate series resistor"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -13.7,
+        4.600000000000001
+      ],
+      "b": [
+        -12.7,
+        5.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate series resistor"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -12.7,
+        5.600000000000001
+      ],
+      "b": [
+        -11.1,
+        5.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate series resistor"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -11.1,
+        5.600000000000001
+      ],
+      "b": [
+        -7.5,
+        9.2
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate series resistor"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -7.5,
+        9.2
+      ],
+      "b": [
+        -7.474999999999994,
+        9.25
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate series resistor"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -13.650000000000006,
+        4.549999999999997
+      ],
+      "b": [
+        -14.7,
+        5.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -14.7,
+        5.600000000000001
+      ],
+      "b": [
+        -15.7,
+        5.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -15.7,
+        5.600000000000001
+      ],
+      "b": [
+        -18.1,
+        8.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -18.1,
+        8.0
+      ],
+      "b": [
+        -18.1,
+        14.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -18.1,
+        14.200000000000003
+      ],
+      "b": [
+        -16.7,
+        15.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -16.7,
+        15.600000000000001
+      ],
+      "b": [
+        -16.7,
+        15.600000000000001
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -16.7,
+        15.600000000000001
+      ],
+      "b": [
+        -14.7,
+        17.6
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "GATE",
+      "a": [
+        -14.7,
+        17.6
+      ],
+      "b": [
+        -14.75,
+        17.5
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "gate",
+      "label": "Gate pulldown"
+    },
+    {
+      "net": "DRV",
+      "a": [
+        -8.950000000000003,
+        14.700000000000003
+      ],
+      "b": [
+        -8.899999999999999,
+        14.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "DRV",
+      "label": "Controller gate drive"
+    },
+    {
+      "net": "DRV",
+      "a": [
+        -8.899999999999999,
+        14.8
+      ],
+      "b": [
+        -8.899999999999999,
+        12.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "DRV",
+      "label": "Controller gate drive"
+    },
+    {
+      "net": "DRV",
+      "a": [
+        -8.899999999999999,
+        12.8
+      ],
+      "b": [
+        -5.5,
+        9.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "DRV",
+      "label": "Controller gate drive"
+    },
+    {
+      "net": "DRV",
+      "a": [
+        -5.5,
+        9.400000000000002
+      ],
+      "b": [
+        -5.5,
+        9.2
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "DRV",
+      "label": "Controller gate drive"
+    },
+    {
+      "net": "DRV",
+      "a": [
+        -5.5,
+        9.2
+      ],
+      "b": [
+        -5.525000000000006,
+        9.25
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "DRV",
+      "label": "Controller gate drive"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -4.424999999999997,
+        8.0
+      ],
+      "b": [
+        -4.5,
+        8.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -4.5,
+        8.0
+      ],
+      "b": [
+        -4.5,
+        11.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -4.5,
+        11.0
+      ],
+      "b": [
+        -5.300000000000001,
+        11.8
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -5.300000000000001,
+        11.8
+      ],
+      "b": [
+        -5.300000000000001,
+        11.8
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -5.300000000000001,
+        11.8
+      ],
+      "b": [
+        -6.099999999999998,
+        12.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -6.099999999999998,
+        12.600000000000001
+      ],
+      "b": [
+        -6.099999999999998,
+        20.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -6.099999999999998,
+        20.400000000000002
+      ],
+      "b": [
+        -6.099999999999998,
+        20.400000000000002
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -6.099999999999998,
+        20.400000000000002
+      ],
+      "b": [
+        -5.300000000000001,
+        21.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "VS",
+      "a": [
+        -5.300000000000001,
+        21.200000000000003
+      ],
+      "b": [
+        -5.200000000000003,
+        21.174999999999997
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VS",
+      "label": "VS divider"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -3.799999999999997,
+        16.5
+      ],
+      "b": [
+        -3.6999999999999993,
+        16.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -3.6999999999999993,
+        16.400000000000002
+      ],
+      "b": [
+        -3.6999999999999993,
+        16.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -3.6999999999999993,
+        16.8
+      ],
+      "b": [
+        -2.8999999999999986,
+        17.6
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -2.8999999999999986,
+        17.6
+      ],
+      "b": [
+        -1.5,
+        17.6
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -1.5,
+        17.6
+      ],
+      "b": [
+        -1.2999999999999972,
+        17.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -1.2999999999999972,
+        17.400000000000002
+      ],
+      "b": [
+        -1.2999999999999972,
+        15.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -1.2999999999999972,
+        15.600000000000001
+      ],
+      "b": [
+        -2.099999999999998,
+        14.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -2.099999999999998,
+        14.8
+      ],
+      "b": [
+        -7.1,
+        14.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "NTC",
+      "a": [
+        -7.1,
+        14.8
+      ],
+      "b": [
+        -7.049999999999997,
+        14.700000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "NTC",
+      "label": "NTC input"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -1.0,
+        7.400000000000006
+      ],
+      "b": [
+        -0.8999999999999986,
+        7.4
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Aux feed to reservoir"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -0.8999999999999986,
+        7.4
+      ],
+      "b": [
+        -2.299999999999997,
+        7.4
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Aux feed to reservoir"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -2.299999999999997,
+        7.4
+      ],
+      "b": [
+        -6.099999999999998,
+        3.6000000000000014
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Aux feed to reservoir"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -6.099999999999998,
+        3.6000000000000014
+      ],
+      "b": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Aux feed to reservoir"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "b": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "VDD",
+      "label": "Aux feed to reservoir"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "b": [
+        -11.049999999999997,
+        3.5
+      ],
+      "width": 0.45,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Aux feed to reservoir"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -11.049999999999997,
+        3.5
+      ],
+      "b": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "width": 0.35,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Controller bias feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "b": [
+        -7.899999999999999,
+        6.800000000000001
+      ],
+      "width": 0.35,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Controller bias feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        6.800000000000001
+      ],
+      "b": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "width": 0.35,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Controller bias feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "b": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "VDD",
+      "label": "Controller bias feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "b": [
+        -7.899999999999999,
+        14.600000000000001
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Controller bias feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        14.600000000000001
+      ],
+      "b": [
+        -8.1,
+        14.8
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Controller bias feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -8.1,
+        14.8
+      ],
+      "b": [
+        -8.0,
+        14.700000000000003
+      ],
+      "width": 0.35,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Controller bias feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.5,
+        13.349999999999994
+      ],
+      "b": [
+        -7.5,
+        13.400000000000002
+      ],
+      "width": 0.4,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Local controller bypass feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.5,
+        13.400000000000002
+      ],
+      "b": [
+        -7.699999999999999,
+        13.600000000000001
+      ],
+      "width": 0.4,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Local controller bypass feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.699999999999999,
+        13.600000000000001
+      ],
+      "b": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "width": 0.4,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Local controller bypass feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "b": [
+        -7.899999999999999,
+        14.600000000000001
+      ],
+      "width": 0.4,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Local controller bypass feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        14.600000000000001
+      ],
+      "b": [
+        -8.1,
+        14.8
+      ],
+      "width": 0.4,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Local controller bypass feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -8.1,
+        14.8
+      ],
+      "b": [
+        -8.0,
+        14.700000000000003
+      ],
+      "width": 0.4,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Local controller bypass feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -2.8499999999999943,
+        22.099999999999994
+      ],
+      "b": [
+        -2.8999999999999986,
+        22.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -2.8999999999999986,
+        22.0
+      ],
+      "b": [
+        -3.8999999999999986,
+        22.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -3.8999999999999986,
+        22.0
+      ],
+      "b": [
+        -4.099999999999998,
+        22.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -4.099999999999998,
+        22.200000000000003
+      ],
+      "b": [
+        -6.300000000000001,
+        22.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -6.300000000000001,
+        22.200000000000003
+      ],
+      "b": [
+        -7.1,
+        21.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.1,
+        21.400000000000002
+      ],
+      "b": [
+        -7.1,
+        20.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.1,
+        20.8
+      ],
+      "b": [
+        -7.1,
+        20.8
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.1,
+        20.8
+      ],
+      "b": [
+        -7.1,
+        14.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.1,
+        14.400000000000002
+      ],
+      "b": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        13.600000000000001
+      ],
+      "b": [
+        -7.899999999999999,
+        14.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -7.899999999999999,
+        14.600000000000001
+      ],
+      "b": [
+        -8.1,
+        14.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -8.1,
+        14.8
+      ],
+      "b": [
+        -8.0,
+        14.700000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "VDD bleed feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        19.1,
+        -4.4
+      ],
+      "b": [
+        17.1,
+        -2.3999999999999995
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        17.1,
+        -2.3999999999999995
+      ],
+      "b": [
+        17.1,
+        -2.3999999999999995
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        17.1,
+        -2.3999999999999995
+      ],
+      "b": [
+        12.5,
+        2.200000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        12.5,
+        2.200000000000001
+      ],
+      "b": [
+        -8.5,
+        2.200000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        2
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -8.5,
+        2.200000000000001
+      ],
+      "b": [
+        -8.5,
+        2.200000000000001
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -8.5,
+        2.200000000000001
+      ],
+      "b": [
+        -9.7,
+        2.200000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -9.7,
+        2.200000000000001
+      ],
+      "b": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "VDD",
+      "a": [
+        -11.1,
+        3.6000000000000014
+      ],
+      "b": [
+        -11.049999999999997,
+        3.5
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "VDD",
+      "label": "Startup VDD feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -5.0,
+        -3.010000000000005
+      ],
+      "b": [
+        -4.899999999999999,
+        -3.0
+      ],
+      "width": 0.4,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Auxiliary rectifier winding"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -4.899999999999999,
+        -3.0
+      ],
+      "b": [
+        -4.899999999999999,
+        1.0
+      ],
+      "width": 0.4,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Auxiliary rectifier winding"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -4.899999999999999,
+        1.0
+      ],
+      "b": [
+        -6.099999999999998,
+        2.200000000000001
+      ],
+      "width": 0.4,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Auxiliary rectifier winding"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -6.099999999999998,
+        2.200000000000001
+      ],
+      "b": [
+        -6.0,
+        2.1850000000000023
+      ],
+      "width": 0.4,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Auxiliary rectifier winding"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -5.0,
+        -3.010000000000005
+      ],
+      "b": [
+        -4.899999999999999,
+        -3.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -4.899999999999999,
+        -3.0
+      ],
+      "b": [
+        -4.899999999999999,
+        0.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -4.899999999999999,
+        0.0
+      ],
+      "b": [
+        -4.5,
+        0.40000000000000036
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -4.5,
+        0.40000000000000036
+      ],
+      "b": [
+        -4.5,
+        6.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -4.5,
+        6.600000000000001
+      ],
+      "b": [
+        -4.699999999999999,
+        6.800000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -4.699999999999999,
+        6.800000000000001
+      ],
+      "b": [
+        -5.300000000000001,
+        6.800000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -5.300000000000001,
+        6.800000000000001
+      ],
+      "b": [
+        -6.300000000000001,
+        7.800000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -6.300000000000001,
+        7.800000000000001
+      ],
+      "b": [
+        -6.300000000000001,
+        8.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RAW",
+      "a": [
+        -6.300000000000001,
+        8.0
+      ],
+      "b": [
+        -6.375,
+        8.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AUX_RAW",
+      "label": "Winding sense feed"
+    },
+    {
+      "net": "AUX_RECT",
+      "a": [
+        -6.0,
+        6.215000000000003
+      ],
+      "b": [
+        -6.099999999999998,
+        6.200000000000001
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RECT",
+      "label": "Rectified auxiliary feed"
+    },
+    {
+      "net": "AUX_RECT",
+      "a": [
+        -6.099999999999998,
+        6.200000000000001
+      ],
+      "b": [
+        -0.8999999999999986,
+        11.400000000000002
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RECT",
+      "label": "Rectified auxiliary feed"
+    },
+    {
+      "net": "AUX_RECT",
+      "a": [
+        -0.8999999999999986,
+        11.400000000000002
+      ],
+      "b": [
+        -0.8999999999999986,
+        13.600000000000001
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RECT",
+      "label": "Rectified auxiliary feed"
+    },
+    {
+      "net": "AUX_RECT",
+      "a": [
+        -0.8999999999999986,
+        13.600000000000001
+      ],
+      "b": [
+        -1.0,
+        13.599999999999994
+      ],
+      "width": 0.45,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AUX_RECT",
+      "label": "Rectified auxiliary feed"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        5.900000000000006
+      ],
+      "b": [
+        3.5,
+        8.8
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "bleedA",
+      "label": "Bleeder A return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        8.8
+      ],
+      "b": [
+        1.3000000000000007,
+        11.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "bleedA",
+      "label": "Bleeder A return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        1.3000000000000007,
+        11.0
+      ],
+      "b": [
+        1.3000000000000007,
+        17.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "bleedA",
+      "label": "Bleeder A return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        1.3000000000000007,
+        17.0
+      ],
+      "b": [
+        3.5,
+        19.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "bleedA",
+      "label": "Bleeder A return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        19.200000000000003
+      ],
+      "b": [
+        3.5999999999999943,
+        19.25
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "bleedA",
+      "label": "Bleeder A return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -18.700000000000003,
+        14.099999999999994
+      ],
+      "b": [
+        -18.7,
+        14.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -18.7,
+        14.0
+      ],
+      "b": [
+        -16.9,
+        14.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -16.9,
+        14.0
+      ],
+      "b": [
+        -15.5,
+        15.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -15.5,
+        15.400000000000002
+      ],
+      "b": [
+        -15.5,
+        15.400000000000002
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -15.5,
+        15.400000000000002
+      ],
+      "b": [
+        -15.3,
+        15.600000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -15.3,
+        15.600000000000001
+      ],
+      "b": [
+        -15.3,
+        16.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -15.3,
+        16.400000000000002
+      ],
+      "b": [
+        -14.1,
+        17.6
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        -14.1,
+        17.6
+      ],
+      "b": [
+        2.3000000000000007,
+        17.6
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        2.3000000000000007,
+        17.6
+      ],
+      "b": [
+        2.3000000000000007,
+        18.0
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        2.3000000000000007,
+        18.0
+      ],
+      "b": [
+        3.5,
+        19.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "PRIMARY_GND",
+      "a": [
+        3.5,
+        19.200000000000003
+      ],
+      "b": [
+        3.5999999999999943,
+        19.25
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "bleedB",
+      "label": "Bleeder B return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.0,
+        -18.25
+      ],
+      "b": [
+        -10.1,
+        -18.2
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Secondary reservoir return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.1,
+        -18.2
+      ],
+      "b": [
+        -10.1,
+        -21.6
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Secondary reservoir return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.1,
+        -21.6
+      ],
+      "b": [
+        -14.899999999999999,
+        -26.4
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Secondary reservoir return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -14.899999999999999,
+        -26.4
+      ],
+      "b": [
+        -15.0,
+        -26.400000000000006
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Secondary reservoir return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.0,
+        -18.25
+      ],
+      "b": [
+        -10.1,
+        -18.2
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "LED output return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.1,
+        -18.2
+      ],
+      "b": [
+        -3.6999999999999993,
+        -24.6
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "LED output return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -3.6999999999999993,
+        -24.6
+      ],
+      "b": [
+        9.899999999999999,
+        -24.6
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "LED output return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        9.899999999999999,
+        -24.6
+      ],
+      "b": [
+        12.300000000000004,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "LED output return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        12.300000000000004,
+        -27.0
+      ],
+      "b": [
+        12.310000000000002,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "LED output return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -12.099999999999994,
+        -22.0
+      ],
+      "b": [
+        -12.1,
+        -20.2
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -12.1,
+        -20.2
+      ],
+      "b": [
+        -10.1,
+        -18.2
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.1,
+        -18.2
+      ],
+      "b": [
+        -10.0,
+        -18.25
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        6.599999999999994,
+        -23.0
+      ],
+      "b": [
+        3.700000000000003,
+        -23.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Second output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        3.700000000000003,
+        -23.0
+      ],
+      "b": [
+        1.5,
+        -25.2
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Second output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        1.5,
+        -25.2
+      ],
+      "b": [
+        -6.099999999999998,
+        -25.2
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Second output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -6.099999999999998,
+        -25.2
+      ],
+      "b": [
+        -10.1,
+        -21.2
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Second output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.1,
+        -21.2
+      ],
+      "b": [
+        -10.1,
+        -18.2
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Second output bleed return"
+    },
+    {
+      "net": "OUTPUT_NEG",
+      "a": [
+        -10.1,
+        -18.2
+      ],
+      "b": [
+        -10.0,
+        -18.25
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_NEG",
+      "label": "Second output bleed return"
+    },
+    {
+      "net": "SECONDARY_RAW",
+      "a": [
+        10.0,
+        -18.25
+      ],
+      "b": [
+        9.899999999999999,
+        -18.2
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "SECONDARY_RAW",
+      "label": "Secondary rectifier winding"
+    },
+    {
+      "net": "SECONDARY_RAW",
+      "a": [
+        9.899999999999999,
+        -18.2
+      ],
+      "b": [
+        8.5,
+        -18.2
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "SECONDARY_RAW",
+      "label": "Secondary rectifier winding"
+    },
+    {
+      "net": "SECONDARY_RAW",
+      "a": [
+        8.5,
+        -18.2
+      ],
+      "b": [
+        -0.29999999999999716,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "SECONDARY_RAW",
+      "label": "Secondary rectifier winding"
+    },
+    {
+      "net": "SECONDARY_RAW",
+      "a": [
+        -0.29999999999999716,
+        -27.0
+      ],
+      "b": [
+        -5.5,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "SECONDARY_RAW",
+      "label": "Secondary rectifier winding"
+    },
+    {
+      "net": "SECONDARY_RAW",
+      "a": [
+        -5.5,
+        -27.0
+      ],
+      "b": [
+        -5.5,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "SECONDARY_RAW",
+      "label": "Secondary rectifier winding"
+    },
+    {
+      "net": "SECONDARY_RAW",
+      "a": [
+        -5.5,
+        -27.0
+      ],
+      "b": [
+        -8.1,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "SECONDARY_RAW",
+      "label": "Secondary rectifier winding"
+    },
+    {
+      "net": "SECONDARY_RAW",
+      "a": [
+        -8.1,
+        -27.0
+      ],
+      "b": [
+        -8.015,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "SECONDARY_RAW",
+      "label": "Secondary rectifier winding"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -3.9849999999999994,
+        -27.0
+      ],
+      "b": [
+        -3.8999999999999986,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -3.8999999999999986,
+        -27.0
+      ],
+      "b": [
+        -4.5,
+        -27.6
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -4.5,
+        -27.6
+      ],
+      "b": [
+        -4.5,
+        -27.8
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -4.5,
+        -27.8
+      ],
+      "b": [
+        -5.300000000000001,
+        -28.6
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -5.300000000000001,
+        -28.6
+      ],
+      "b": [
+        -17.9,
+        -28.6
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -17.9,
+        -28.6
+      ],
+      "b": [
+        -20.1,
+        -26.4
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -20.1,
+        -26.4
+      ],
+      "b": [
+        -20.1,
+        -26.4
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -20.1,
+        -26.4
+      ],
+      "b": [
+        -20.0,
+        -26.400000000000006
+      ],
+      "width": 0.8,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Secondary reservoir feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -3.9849999999999994,
+        -27.0
+      ],
+      "b": [
+        4.700000000000003,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "LED output feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        4.700000000000003,
+        -27.0
+      ],
+      "b": [
+        4.689999999999998,
+        -27.0
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "LED output feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        0.4000000000000057,
+        -23.0
+      ],
+      "b": [
+        0.5,
+        -23.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        0.5,
+        -23.0
+      ],
+      "b": [
+        -7.1,
+        -23.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -7.1,
+        -23.0
+      ],
+      "b": [
+        -7.1,
+        -23.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "OUTPUT_POS",
+      "label": "Output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -7.1,
+        -23.0
+      ],
+      "b": [
+        -16.7,
+        -23.0
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -16.7,
+        -23.0
+      ],
+      "b": [
+        -20.1,
+        -26.4
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -20.1,
+        -26.4
+      ],
+      "b": [
+        -20.0,
+        -26.400000000000006
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -5.899999999999999,
+        -22.0
+      ],
+      "b": [
+        -6.899999999999999,
+        -23.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Second output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -6.899999999999999,
+        -23.0
+      ],
+      "b": [
+        -7.1,
+        -23.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Second output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -7.1,
+        -23.0
+      ],
+      "b": [
+        -16.7,
+        -23.0
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Second output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -16.7,
+        -23.0
+      ],
+      "b": [
+        -20.1,
+        -26.4
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Second output bleed feed"
+    },
+    {
+      "net": "OUTPUT_POS",
+      "a": [
+        -20.1,
+        -26.4
+      ],
+      "b": [
+        -20.0,
+        -26.400000000000006
+      ],
+      "width": 0.3,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "OUTPUT_POS",
+      "label": "Second output bleed feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        10.0,
+        -3.010000000000005
+      ],
+      "b": [
+        9.899999999999999,
+        -3.0
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Primary bulk power feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        -3.0
+      ],
+      "b": [
+        9.899999999999999,
+        17.8
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Primary bulk power feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        17.8
+      ],
+      "b": [
+        8.5,
+        19.200000000000003
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Primary bulk power feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        8.5,
+        19.200000000000003
+      ],
+      "b": [
+        8.599999999999994,
+        19.25
+      ],
+      "width": 0.8,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Primary bulk power feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        10.0,
+        1.5649999999999977
+      ],
+      "b": [
+        9.899999999999999,
+        1.6000000000000014
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Clamp return to primary bulk"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        1.6000000000000014
+      ],
+      "b": [
+        9.899999999999999,
+        -3.0
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Clamp return to primary bulk"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        -3.0
+      ],
+      "b": [
+        10.0,
+        -3.010000000000005
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Clamp return to primary bulk"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        16.095,
+        19.629999999999995
+      ],
+      "b": [
+        16.1,
+        19.6
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bridge bulk charging feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        16.1,
+        19.6
+      ],
+      "b": [
+        8.900000000000002,
+        19.6
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bridge bulk charging feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        8.900000000000002,
+        19.6
+      ],
+      "b": [
+        8.5,
+        19.200000000000003
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bridge bulk charging feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        8.5,
+        19.200000000000003
+      ],
+      "b": [
+        8.599999999999994,
+        19.25
+      ],
+      "width": 0.8,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bridge bulk charging feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        12.599999999999994,
+        20.5
+      ],
+      "b": [
+        12.5,
+        20.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder A bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        12.5,
+        20.400000000000002
+      ],
+      "b": [
+        15.300000000000004,
+        20.400000000000002
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder A bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        15.300000000000004,
+        20.400000000000002
+      ],
+      "b": [
+        16.1,
+        19.6
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder A bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        16.1,
+        19.6
+      ],
+      "b": [
+        16.095,
+        19.629999999999995
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder A bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        16.5,
+        7.900000000000006
+      ],
+      "b": [
+        16.5,
+        8.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder B bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        16.5,
+        8.0
+      ],
+      "b": [
+        9.899999999999999,
+        1.4000000000000004
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder B bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        1.4000000000000004
+      ],
+      "b": [
+        9.899999999999999,
+        -3.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder B bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        -3.0
+      ],
+      "b": [
+        10.0,
+        -3.010000000000005
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Bleeder B bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        -0.09999999999999787,
+        6.0
+      ],
+      "b": [
+        2.700000000000003,
+        6.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Startup bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        2.700000000000003,
+        6.0
+      ],
+      "b": [
+        4.900000000000002,
+        3.8000000000000007
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Startup bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        4.900000000000002,
+        3.8000000000000007
+      ],
+      "b": [
+        5.100000000000001,
+        3.8000000000000007
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Startup bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        5.100000000000001,
+        3.8000000000000007
+      ],
+      "b": [
+        9.899999999999999,
+        -1.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Startup bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        -1.0
+      ],
+      "b": [
+        9.899999999999999,
+        -3.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Startup bulk feed"
+    },
+    {
+      "net": "BULK_POS",
+      "a": [
+        9.899999999999999,
+        -3.0
+      ],
+      "b": [
+        10.0,
+        -3.010000000000005
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BULK_POS",
+      "label": "Startup bulk feed"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        3.799999999999997,
+        -1.9000000000000057
+      ],
+      "b": [
+        3.700000000000003,
+        -2.0
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Short drain clamp pickup"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        3.700000000000003,
+        -2.0
+      ],
+      "b": [
+        0.9000000000000021,
+        -2.0
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Short drain clamp pickup"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        0.9000000000000021,
+        -2.0
+      ],
+      "b": [
+        -0.09999999999999787,
+        -3.0
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Short drain clamp pickup"
+    },
+    {
+      "net": "DRAIN",
+      "a": [
+        -0.09999999999999787,
+        -3.0
+      ],
+      "b": [
+        0.0,
+        -3.010000000000005
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "DRAIN",
+      "label": "Short drain clamp pickup"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        3.799999999999997,
+        2.0999999999999943
+      ],
+      "b": [
+        3.700000000000003,
+        2.0
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        3.700000000000003,
+        2.0
+      ],
+      "b": [
+        7.100000000000001,
+        -1.3999999999999995
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        7.100000000000001,
+        -1.3999999999999995
+      ],
+      "b": [
+        7.100000000000001,
+        -1.3999999999999995
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        7.100000000000001,
+        -1.3999999999999995
+      ],
+      "b": [
+        7.100000000000001,
+        4.200000000000001
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        7.100000000000001,
+        4.200000000000001
+      ],
+      "b": [
+        8.700000000000003,
+        5.800000000000001
+      ],
+      "width": 0.65,
+      "layers": [
+        1
+      ],
+      "via": false,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        8.700000000000003,
+        5.800000000000001
+      ],
+      "b": [
+        8.700000000000003,
+        5.800000000000001
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        8.700000000000003,
+        5.800000000000001
+      ],
+      "b": [
+        9.5,
+        5.800000000000001
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        9.5,
+        5.800000000000001
+      ],
+      "b": [
+        9.899999999999999,
+        5.4
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "CLAMP",
+      "a": [
+        9.899999999999999,
+        5.4
+      ],
+      "b": [
+        10.0,
+        5.435000000000002
+      ],
+      "width": 0.65,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "CLAMP",
+      "label": "Local diode TVS clamp"
+    },
+    {
+      "net": "AC_FUSED",
+      "a": [
+        14.875,
+        12.400000000000006
+      ],
+      "b": [
+        14.899999999999999,
+        12.400000000000002
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_FUSED",
+      "label": "Fused inrush resistor feed"
+    },
+    {
+      "net": "AC_FUSED",
+      "a": [
+        14.899999999999999,
+        12.400000000000002
+      ],
+      "b": [
+        14.899999999999999,
+        9.400000000000002
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_FUSED",
+      "label": "Fused inrush resistor feed"
+    },
+    {
+      "net": "AC_FUSED",
+      "a": [
+        14.899999999999999,
+        9.400000000000002
+      ],
+      "b": [
+        14.899999999999999,
+        9.400000000000002
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "AC_FUSED",
+      "label": "Fused inrush resistor feed"
+    },
+    {
+      "net": "AC_FUSED",
+      "a": [
+        14.899999999999999,
+        9.400000000000002
+      ],
+      "b": [
+        14.899999999999999,
+        5.600000000000001
+      ],
+      "width": 0.6,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AC_FUSED",
+      "label": "Fused inrush resistor feed"
+    },
+    {
+      "net": "AC_FUSED",
+      "a": [
+        14.899999999999999,
+        5.600000000000001
+      ],
+      "b": [
+        15.900000000000006,
+        4.600000000000001
+      ],
+      "width": 0.6,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AC_FUSED",
+      "label": "Fused inrush resistor feed"
+    },
+    {
+      "net": "AC_FUSED",
+      "a": [
+        15.900000000000006,
+        4.600000000000001
+      ],
+      "b": [
+        16.0,
+        4.650000000000006
+      ],
+      "width": 0.6,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AC_FUSED",
+      "label": "Fused inrush resistor feed"
+    },
+    {
+      "net": "AC_LIMITED",
+      "a": [
+        16.0,
+        27.349999999999994
+      ],
+      "b": [
+        15.900000000000006,
+        27.4
+      ],
+      "width": 0.6,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AC_LIMITED",
+      "label": "Limited bridge input"
+    },
+    {
+      "net": "AC_LIMITED",
+      "a": [
+        15.900000000000006,
+        27.4
+      ],
+      "b": [
+        20.300000000000004,
+        27.4
+      ],
+      "width": 0.6,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AC_LIMITED",
+      "label": "Limited bridge input"
+    },
+    {
+      "net": "AC_LIMITED",
+      "a": [
+        20.300000000000004,
+        27.4
+      ],
+      "b": [
+        21.300000000000004,
+        28.4
+      ],
+      "width": 0.6,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "AC_LIMITED",
+      "label": "Limited bridge input"
+    },
+    {
+      "net": "AC_LIMITED",
+      "a": [
+        21.300000000000004,
+        28.4
+      ],
+      "b": [
+        21.300000000000004,
+        28.4
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "AC_LIMITED",
+      "label": "Limited bridge input"
+    },
+    {
+      "net": "AC_LIMITED",
+      "a": [
+        21.300000000000004,
+        28.4
+      ],
+      "b": [
+        21.305000000000007,
+        28.370000000000005
+      ],
+      "width": 0.6,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "AC_LIMITED",
+      "label": "Limited bridge input"
+    },
+    {
+      "net": "BLEED_MID",
+      "a": [
+        12.599999999999994,
+        26.700000000000003
+      ],
+      "b": [
+        12.5,
+        26.800000000000004
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID",
+      "label": "Bleeder A midpoint"
+    },
+    {
+      "net": "BLEED_MID",
+      "a": [
+        12.5,
+        26.800000000000004
+      ],
+      "b": [
+        12.5,
+        25.4
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID",
+      "label": "Bleeder A midpoint"
+    },
+    {
+      "net": "BLEED_MID",
+      "a": [
+        12.5,
+        25.4
+      ],
+      "b": [
+        3.700000000000003,
+        16.6
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID",
+      "label": "Bleeder A midpoint"
+    },
+    {
+      "net": "BLEED_MID",
+      "a": [
+        3.700000000000003,
+        16.6
+      ],
+      "b": [
+        3.700000000000003,
+        12.200000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID",
+      "label": "Bleeder A midpoint"
+    },
+    {
+      "net": "BLEED_MID",
+      "a": [
+        3.700000000000003,
+        12.200000000000003
+      ],
+      "b": [
+        3.700000000000003,
+        12.200000000000003
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "BLEED_MID",
+      "label": "Bleeder A midpoint"
+    },
+    {
+      "net": "BLEED_MID",
+      "a": [
+        3.700000000000003,
+        12.200000000000003
+      ],
+      "b": [
+        3.5,
+        12.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "BLEED_MID",
+      "label": "Bleeder A midpoint"
+    },
+    {
+      "net": "BLEED_MID",
+      "a": [
+        3.5,
+        12.0
+      ],
+      "b": [
+        3.5,
+        12.099999999999994
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "BLEED_MID",
+      "label": "Bleeder A midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        16.5,
+        1.7000000000000028
+      ],
+      "b": [
+        16.5,
+        1.8000000000000007
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        16.5,
+        1.8000000000000007
+      ],
+      "b": [
+        15.700000000000003,
+        1.8000000000000007
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        15.700000000000003,
+        1.8000000000000007
+      ],
+      "b": [
+        11.5,
+        -2.3999999999999995
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        11.5,
+        -2.3999999999999995
+      ],
+      "b": [
+        11.5,
+        -4.6
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        11.5,
+        -4.6
+      ],
+      "b": [
+        -11.5,
+        -4.6
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        -11.5,
+        -4.6
+      ],
+      "b": [
+        -11.5,
+        -0.39999999999999947
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        -11.5,
+        -0.39999999999999947
+      ],
+      "b": [
+        -18.7,
+        6.800000000000001
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        -18.7,
+        6.800000000000001
+      ],
+      "b": [
+        -18.7,
+        8.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "BLEED_MID_B",
+      "a": [
+        -18.7,
+        8.0
+      ],
+      "b": [
+        -18.700000000000003,
+        7.900000000000006
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "BLEED_MID_B",
+      "label": "Bleeder B midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        6.099999999999994,
+        6.0
+      ],
+      "b": [
+        7.5,
+        6.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        7.5,
+        6.0
+      ],
+      "b": [
+        8.5,
+        7.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        8.5,
+        7.0
+      ],
+      "b": [
+        8.700000000000003,
+        7.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        8.700000000000003,
+        7.0
+      ],
+      "b": [
+        8.700000000000003,
+        7.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        8.700000000000003,
+        7.0
+      ],
+      "b": [
+        8.900000000000002,
+        7.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        8.900000000000002,
+        7.0
+      ],
+      "b": [
+        10.5,
+        5.4
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        10.5,
+        5.4
+      ],
+      "b": [
+        10.5,
+        -0.39999999999999947
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        10.5,
+        -0.39999999999999947
+      ],
+      "b": [
+        12.5,
+        -2.3999999999999995
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        12.5,
+        -2.3999999999999995
+      ],
+      "b": [
+        12.5,
+        -3.0
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        12.5,
+        -3.0
+      ],
+      "b": [
+        12.5,
+        -3.0
+      ],
+      "width": 0.8,
+      "layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "via": true,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        12.5,
+        -3.0
+      ],
+      "b": [
+        12.5,
+        -4.0
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "STARTUP_MID",
+      "a": [
+        12.5,
+        -4.0
+      ],
+      "b": [
+        12.900000000000006,
+        -4.400000000000006
+      ],
+      "width": 0.3,
+      "layers": [
+        3
+      ],
+      "via": false,
+      "family": "STARTUP_MID",
+      "label": "Startup series midpoint"
+    },
+    {
+      "net": "SENSE",
+      "a": [
+        -10.549999999999997,
+        19.799999999999997
+      ],
+      "b": [
+        -10.599999999999994,
+        19.950000000000003
+      ],
+      "width": 0.3,
+      "layers": [
+        0
+      ],
+      "via": false,
+      "family": "kelvin",
+      "label": "R6 Kelvin pad-to-offset-via local correction"
+    }
+  ],
+  "all_planned": true,
+  "post_route_correction": {
+    "old_via_mm": [
+      89.45,
+      119.8
+    ],
+    "new_via_mm": [
+      89.4,
+      119.95
+    ],
+    "reason": "Original seed via approached C2 ground corner to0.1315mm; offset to clear0.25mm without changing the shunt Kelvin net or R6 position.",
+    "native_DRC_required": true,
+    "selection": "Native effective-shape scan of local grid, minimum0.275mm other-net clearance for via and front stub; final full native DRC remains authoritative."
+  }
+}

@@ -1,0 +1,3 @@
+# C16 spatial basis
+
+45x60mm four-layer rectangular driver. Retain10.7mm projected primary/secondary copper separation,3mm primaryHV/quiet floor and the existing all-four-layer no-copper band. C16 route engine consumes these same numeric constraints, then native DRC and an independent projected-geometry audit check saved CAD. Separate positive shunt Kelvin on In2; separate high-current/quiet/auxiliary C1-negative branches are design intent, not measured EMI performance. Input includes nine-pin catalogue74032 (pin4 absent) and straight TO-3PF. No human approval of revised graph/placement/release is recorded.

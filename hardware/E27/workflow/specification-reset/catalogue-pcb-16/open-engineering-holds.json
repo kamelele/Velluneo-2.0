@@ -1,0 +1,85 @@
+{
+  "owner": "root engineering coordinator; product/human gates remain with owner",
+  "all_inherited_physical_human_holds_retained": true,
+  "holds": [
+    {
+      "id": "CAT15-01",
+      "severity": "blocker",
+      "object": "T1/Q1/R9",
+      "problem": "Static1.6V/2.55ohm screen=.627A exceeds74215 specified0.50Apk; average threshold is not a per-cycle bound.",
+      "affected_gate": "Revised electrical/PCB qualification",
+      "closure": "Establish a guaranteed abnormal-current bound within transformer capability, an accepted independent protective change, or a demonstrably suitable factory-stock transformer; retain no-custom-winding requirement.",
+      "status": "open_qualification",
+      "C16_correction": "Factory74032/R9=1.80; static0.908A and conditional400ns1.05252A versus1.1A; no guaranteed delay or physical test. Original static incompatibility corrected in draft, qualification open."
+    },
+    {
+      "id": "CAT15-02",
+      "severity": "blocker",
+      "object": "Q1 footprint",
+      "problem": "STD2N80K5 maker land pattern has1.8mm TAB-G/S gap versus project3mm floor.",
+      "affected_gate": "Footprint/placement/routing acceptance",
+      "closure": "Source-backed modified land pattern with reliable soldering and complete exposure/tolerance assessment, or explicitly reviewed and human-authorized package-local rule; no global weakening.",
+      "status": "open_qualification",
+      "C16_correction": "Straight factory TO3PF Q1; actual nominal3.10mm copper, DRC0; shoulder/fixture/first-fit remain unqualified."
+    },
+    {
+      "id": "CAT15-03",
+      "severity": "major",
+      "object": "T1/D1/TVS1/R10",
+      "problem": "MYRRA sheet does not publish leakage/DCR/saturation curves; custom transformer assumptions cannot transfer.",
+      "affected_gate": "Clamp/reset/thermal acceptance",
+      "closure": "Credible manufacturer data/characterization and recalculated clamp/diode/thermal envelope for selected part.",
+      "status": "open_qualification",
+      "C16_correction": "D1+TVS local clamp; R10 corrected as AUX resistor. No manufactured leakage/clamp/thermal qualification."
+    },
+    {
+      "id": "CAT15-04",
+      "severity": "major",
+      "object": "U1/C2/C3/D2/T1",
+      "problem": "New auxiliary14turn ratio changes VDD takeover, dropout and fault/recovery;20..27V is analytical only.",
+      "affected_gate": "Electrical acceptance",
+      "closure": "New cornered startup/fault/bias model with declared limits, then physical verification. No invented TINA result.",
+      "status": "open_qualification",
+      "C16_correction": "New10-turn aux and19..22V/about319mA screens; C0G.94uF retained. Startup/load/fault tests remain."
+    },
+    {
+      "id": "CAT15-05",
+      "severity": "major",
+      "object": "LED interface/enclosure",
+      "problem": "750..850lm and diameter60x120mm are not proven by20..27V250mA or19.5mm transformer body.",
+      "affected_gate": "Product/interface qualification",
+      "closure": "Select matched purchasable LED panel and validate optical/thermal/mechanical integration without silently lowering owner targets.",
+      "status": "open_qualification"
+    },
+    {
+      "id": "CAT15-06",
+      "severity": "major",
+      "object": "T1/PCB insulation and insertion",
+      "problem": "NPTH unused tap proposal is not a qualified footprint or internal transformer/lamp insulation approval.",
+      "affected_gate": "Library/placement/safety acceptance",
+      "closure": "Complete native library/pin parity, pad/annulus/hole tolerances, exposed pin metal and finished insulation review; retain10.7mm copper floor.",
+      "status": "open_qualification",
+      "C16_correction": "Actual9-PTH footprint, absentpin4, unused7/8/9; full80pad parity passes; oval1.95x2.30/hole1.4, tight finish tolerance and product insulation remain."
+    },
+    {
+      "id": "CAT15-07",
+      "severity": "major",
+      "object": "BR1/F1/R1",
+      "problem": "New bridge has30A surge instead of50A; AC-AT is not specified fusible.",
+      "affected_gate": "Input protection acceptance",
+      "closure": "Rerun inrush/fuse/bridge I2t/pulse/thermal coordination; retain actual F1.",
+      "status": "open_qualification"
+    },
+    {
+      "id": "CAT15-08",
+      "severity": "major",
+      "object": "Assembly/harness",
+      "problem": "Two wire material SKUs are not a finished harness; JLC stock is limited and outside-part acceptance not agreed.",
+      "affected_gate": "Assembly/manufacturing release",
+      "closure": "Actual quantity/attrition allocation, approved sourcing/assembly process, cut lengths/sleeves/strain relief/panel and fresh CPL/files after CAD.",
+      "status": "open_qualification"
+    }
+  ],
+  "revision": "C16",
+  "scope": "Original CAT15 issue history retained; design corrections are distinct from physical qualification closure."
+}

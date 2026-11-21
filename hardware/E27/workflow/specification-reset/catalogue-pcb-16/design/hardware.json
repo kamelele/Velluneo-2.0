@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "name": "Velluneo_driver",
+  "kicad_version": "10.0.6",
+  "fabrication": {
+    "vendor": "jlcpcb",
+    "service": "FR4-4L-1oz-epoxy-filled-capped-routed",
+    "stackup": "JLC04161H-7628; nominal1.6mm",
+    "copper": "outer35um / inner15.2um",
+    "finish": "ENIG",
+    "confirmation_evidence": null
+  },
+  "assembly": {
+    "mode": "inhouse",
+    "confirmation_evidence": null,
+    "local_pcba_provider_confirmation": null,
+    "stencil": "not_ordered"
+  },
+  "product": {
+    "requirements_file": "requirements.json",
+    "connectivity_file": "intended-connectivity.json",
+    "spatial_file": "spatial-constraints.json",
+    "domains": [
+      {
+        "id": "PRIMARY",
+        "description": "E27 isolated-driver primary from accepted nominal230Vac50Hz, normal207\u2013253Vac. Peakfaultvoltage/current not yet qualified; parentrequirements remain open.",
+        "working_voltage_nominal_v": 230,
+        "normal_line_range_v": [
+          207,
+          253
+        ],
+        "peak_voltage_v": null,
+        "current_a": null
+      },
+      {
+        "id": "SECONDARY",
+        "description": "Isolated LED output and auxiliary magnetic construction per selectedgraph; operatingvoltage/current/fault/insulation qualification remains open.",
+        "working_voltage_v": null,
+        "current_a": null
+      }
+    ],
+    "requirements": [],
+    "minimums_mm": {
+      "clearance": 0.25,
+      "track_width": 0.3,
+      "hole_size": 0.3,
+      "annular_width": 0.2,
+      "edge_clearance": 0.5
+    },
+    "special_requirements": [
+      "mains_isolation",
+      "filled_via_in_pad"
+    ],
+    "barriers": [],
+    "standards_review_evidence": null,
+    "scoped_clearances": [
+      {
+        "id": "PRIMARY_SECONDARY",
+        "nets_a": [
+          "/AUX_RAW",
+          "/BLEED_MID_B",
+          "/BULK_POS",
+          "/CS",
+          "/DRAIN",
+          "/DRV",
+          "/GATE",
+          "/NTC",
+          "/PRIMARY_GND",
+          "/SENSE",
+          "/STARTUP_MID",
+          "/VDD",
+          "/VS",
+          "Net-(BR1-AC-Pad2)",
+          "Net-(BR1-AC-Pad4)",
+          "Net-(D1-K)",
+          "Net-(D2-K)",
+          "Net-(F1-Pad1)",
+          "Net-(F1-Pad2)",
+          "Net-(R2-Pad2)"
+        ],
+        "nets_b": [
+          "/OUTPUT_NEG",
+          "/OUTPUT_POS",
+          "/SECONDARY_RAW",
+          "unconnected-(T1-Pad7)",
+          "unconnected-(T1-Pad8)",
+          "unconnected-(T1-Pad9)"
+        ],
+        "min_mm": 10.7
+      },
+      {
+        "id": "HV_QUIET",
+        "nets_a": [
+          "/BULK_POS",
+          "/DRAIN",
+          "/STARTUP_MID",
+          "Net-(BR1-AC-Pad2)",
+          "Net-(BR1-AC-Pad4)",
+          "Net-(D1-K)",
+          "Net-(F1-Pad1)",
+          "Net-(F1-Pad2)"
+        ],
+        "nets_b": [
+          "/AUX_RAW",
+          "/CS",
+          "/DRV",
+          "/GATE",
+          "/NTC",
+          "/PRIMARY_GND",
+          "/SENSE",
+          "/VDD",
+          "/VS",
+          "Net-(D2-K)"
+        ],
+        "min_mm": 3.0
+      }
+    ],
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ]
+  },
+  "netclasses": [],
+  "source_files": [
+    ".electronics-rules/config-state.json",
+    ".electronics-rules/placement-input.json",
+    ".electronics-rules/routing-input.json",
+    "BOM.csv",
+    "Velluneo_C16.pretty/MCC_SDB107_SDB1_FACTORY.kicad_mod",
+    "Velluneo_C16.pretty/MYRRA74032_E25_FACTORY.kicad_mod",
+    "Velluneo_C16.pretty/STFW2N105K5_TO3PF_STRAIGHT.kicad_mod",
+    "Velluneo_C16.pretty/Vishay_AC05AT_WSZ_FACTORY.kicad_mod",
+    "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_PROJECT.kicad_mod",
+    "Velluneo_ECO04.pretty/STF2N80K5_Stagger5p08_Pad2p25_PROJECT.kicad_mod",
+    "Velluneo_ECO04.pretty/TDK_EFD25_FINISHED30x30_RESERVATION.kicad_mod",
+    "Velluneo_ECO04.pretty/TDK_EFD25_Pad2p0_PROJECT.kicad_mod",
+    "Velluneo_ECO04.pretty/UCC28701_DBV_Native.kicad_mod",
+    "Velluneo_ECO04.pretty/W10G_Formed5p5_PROJECT.kicad_mod",
+    "Velluneo_driver.kicad_dru",
+    "Velluneo_driver.kicad_pcb",
+    "Velluneo_driver.kicad_pro",
+    "Velluneo_driver.kicad_sch",
+    "assignments.json",
+    "display-values.json",
+    "evidence/drc.json",
+    "evidence/identity-review.json",
+    "evidence/intent-comparison.json",
+    "evidence/native-audit.json",
+    "fp-lib-table",
+    "intended-connectivity.json",
+    "libraries/Velluneo_Driver.kicad_sym",
+    "libraries/Velluneo_Driver.pretty/AC05_P25p4_FORMED_PROJECT_CANDIDATE.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/CRCW_0603_NativeReflow.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/CRCW_0805_NativeReflow.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/CRCW_1206_NativeReflow.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/CRCW_2512_NativeReflow.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/CRCW_2512_R14_SilkClear.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/Diodes_US1M_SMA_Native.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/InternalWirePair_P7p62_D1p6_PROJECT_CANDIDATE.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/KEMET_2220_C0G_DensityB_Native.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/KEMET_2220_PROJECT_CANDIDATE.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/MB10S_Diodes_MBS_1P_2AC_3N_4AC.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/NTCS0603_NativeReflow.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/Panasonic_ZA_D_Standard_Native.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/Rubycon_BXW_D10_P5_PROJECT_CANDIDATE.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/SCHURTER_UMTH_WEB_PROVISIONAL.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/STN1NK80Z_SOT223_Tab4.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/ST_STTH_SMA_Native.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/UCC28711DR_SOIC7_HV7.kicad_mod",
+    "libraries/Velluneo_Driver.pretty/Vishay_SMBJ_PROJECT_CANDIDATE.kicad_mod",
+    "proposed-intent.json",
+    "proposed-parts.json",
+    "reference-aliases.json",
+    "requirements.json",
+    "spatial-basis.md",
+    "spatial-constraints.json",
+    "sym-lib-table"
+  ],
+  "approvals": {},
+  "waivers": [],
+  "release_files": {},
+  "severity_overrides": {
+    "board": {
+      "npth_inside_courtyard": "error",
+      "pth_inside_courtyard": "error"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "test": "Move Q1 drain copper1mm toward source in disposable copy; retain all project rules.",
+  "source_sha256": "3c13b9d2048a6d6b1c830c75445d27412516f0c0fb03d6c5285b8c2f69067f78",
+  "modified_sha256": "92393cd39353e081219a1990e5d5f95dce39c48de2b8402e0078ae488d97d999",
+  "command": [
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--severity-all",
+    "--output",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\catalogue-pcb-16\\design\\.work\\negative-controls\\drc.json",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\catalogue-pcb-16\\design\\.work\\negative-controls\\Velluneo_driver.kicad_pcb"
+  ],
+  "exit_code": 0,
+  "expected_3mm_violations": [
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,8253 mm)",
+      "items": [
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        },
+        {
+          "description": "Track [/SENSE] on F.Cu, length 3,4000 mm",
+          "pos": {
+            "x": 86.3,
+            "y": 115.4
+          },
+          "uuid": "97d1376b-a7e4-4d06-a976-96fb595ef164"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,8253 mm)",
+      "items": [
+        {
+          "description": "Track [/SENSE] on F.Cu, length 0,0707 mm",
+          "pos": {
+            "x": 86.35,
+            "y": 115.45
+          },
+          "uuid": "8bff21a3-b607-4794-80ca-8938a6c6f94f"
+        },
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,1000 mm)",
+      "items": [
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        },
+        {
+          "description": "PTH pad 3 [/SENSE] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 115.45
+          },
+          "uuid": "f05c311a-fa6a-45c7-aa30-d2dfb52eab0c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,1000 mm)",
+      "items": [
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        },
+        {
+          "description": "PTH pad 3 [/SENSE] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 115.45
+          },
+          "uuid": "f05c311a-fa6a-45c7-aa30-d2dfb52eab0c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,8908 mm)",
+      "items": [
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        },
+        {
+          "description": "Pad 2 [/PRIMARY_GND] of R15 on B.Cu",
+          "pos": {
+            "x": 81.3,
+            "y": 114.1
+          },
+          "uuid": "2394fb12-f30f-430c-ac39-d081aaa3ea80"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,6280 mm)",
+      "items": [
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        },
+        {
+          "description": "Pad 1 [/VDD] of C2 on B.Cu",
+          "pos": {
+            "x": 92.5,
+            "y": 113.35
+          },
+          "uuid": "1ac77e82-1482-4fd4-b466-6747ca407fa6"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,1000 mm)",
+      "items": [
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        },
+        {
+          "description": "PTH pad 3 [/SENSE] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 115.45
+          },
+          "uuid": "f05c311a-fa6a-45c7-aa30-d2dfb52eab0c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,1000 mm)",
+      "items": [
+        {
+          "description": "PTH pad 2 [/DRAIN] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 111.0
+          },
+          "uuid": "8eaabfde-d67a-46e8-8bfc-02fd953f6830"
+        },
+        {
+          "description": "PTH pad 3 [/SENSE] of Q1",
+          "pos": {
+            "x": 86.35,
+            "y": 115.45
+          },
+          "uuid": "f05c311a-fa6a-45c7-aa30-d2dfb52eab0c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  ],
+  "scope": "Actual native negative geometric check, no physical test or source CAD modification."
+}

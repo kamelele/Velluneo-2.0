@@ -1,5 +1,9 @@
 # E27 workflow index
 
+## Current integrated catalogue PCB — C16, 21 November 2026
+
+[C16](specification-reset/catalogue-pcb-16/README.md) implements an actual revised45x60mm four-layer,33-position80-pad schematic and fully connected PCB. Factory-wound MYRRA74032 and straight-lead STFW2N105K5 replace CAT15 parts; R4/R5/R6/R9 updated. Native ERC/DRC/parity/unconnected all zero; projected P/S copper11.146726mm, Q1 nominal padgap3.10mm. New fault screen1.05252Apk assumes400ns total extra rise delay versus1.1Apk maker rating; actual fault/startup/clamp/shoulder/thermal/insulation/process/lamp qualification and revised human approvals remain OPEN. Toolkit retains3mm/10.7mm, reports truthful gate holds. See actual review packet and both-face copper preview. No order-ready Gerbers/CPL or physical test. RFQ13/JLC14 archives remain invalid for this variant.
+
 ## Current catalogue sourcing redesign — CAT15, 20 November 2026
 
 [CAT15](specification-reset/catalogue-redesign-15/README.md) supersedes the old
