@@ -1,0 +1,91 @@
+{
+  "renderer": "KiCad10.0.6 native highquality raytracing with floor/shadows",
+  "source_board_sha256": "3c13b9d2048a6d6b1c830c75445d27412516f0c0fb03d6c5285b8c2f69067f78",
+  "renders": [
+    {
+      "side": "top",
+      "path": "Velluneo_C16_top_4K.png",
+      "sha256": "205ce66e2e5d3bf10482f5c0e53bfc261a7b562310bc33cd6a464adc276710b5",
+      "dimensions": [
+        4064,
+        3056
+      ],
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "render",
+        "--width",
+        "4096",
+        "--height",
+        "3072",
+        "--side",
+        "top",
+        "--rotate",
+        "325,0,30",
+        "--perspective",
+        "--zoom",
+        ".60",
+        "--background",
+        "opaque",
+        "--quality",
+        "high",
+        "--floor",
+        "--light-top",
+        ".8",
+        "--light-bottom",
+        ".7",
+        "--light-side",
+        ".6",
+        "--light-camera",
+        ".45",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\visualisation-18\\Velluneo_C16_top_4K.png",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\visualisation-18\\scene\\Velluneo_C16_VISUAL_ONLY.kicad_pcb"
+      ]
+    },
+    {
+      "side": "bottom",
+      "path": "Velluneo_C16_bottom_4K.png",
+      "sha256": "909c0e70b10b30a1a43e98c38c0082b685cd7d1acb98f35a982184589051d770",
+      "dimensions": [
+        4064,
+        3056
+      ],
+      "command": [
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+        "pcb",
+        "render",
+        "--width",
+        "4096",
+        "--height",
+        "3072",
+        "--side",
+        "bottom",
+        "--rotate",
+        "325,0,30",
+        "--perspective",
+        "--zoom",
+        ".60",
+        "--background",
+        "opaque",
+        "--quality",
+        "high",
+        "--floor",
+        "--light-top",
+        ".8",
+        "--light-bottom",
+        ".7",
+        "--light-side",
+        ".6",
+        "--light-camera",
+        ".45",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\visualisation-18\\Velluneo_C16_bottom_4K.png",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\visualisation-18\\scene\\Velluneo_C16_VISUAL_ONLY.kicad_pcb"
+      ]
+    }
+  ],
+  "composite": "Two native rendered images resized together; annotation only, no generative image content",
+  "connections": "Exact current C16 saved-copper diagrams, not simulated currentflow. F.Cu/In1/In2 topview; B.Cu mirrored for physicalunderside and explicitly labeled.",
+  "limits": "Appearance models not exact supplier STEP. No harness/assembly fit/electricalqualification or manufacturingchange implied."
+}

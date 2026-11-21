@@ -1,5 +1,15 @@
 # E27 workflow index
 
+## Current native 3D and connection views - VIS18, 21 November 2026
+
+[VIS18](specification-reset/visualisation-18/README.md) presents currentC16/C17
+45x60mm4layerdriver: bothface4Kclass nativeKiCad raytraces with31electronicappearance
+models, plus currentouter/innercopperdiagrams. Native comparison retains33positions,
+80pads333copperobjects and exactsourcehash. Currentfactory74032 andstraightTO3PF
+envelopes replace historicalcustom/formedpartappearances. J1/J2remainwirepadswithout
+inventedharness. Generic/envelopemodels are visualization, not supplierSTEP/firstfit.
+ProductionCAD, C17manufacturingfiles, rules and allphysical/process/humanholds unchanged.
+
 ## Current prototype manufacturing-data handoff - C17, 21 November 2026
 
 [C17](specification-reset/manufacturing-c17/README.md) packages unchanged C16 CAD
