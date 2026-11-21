@@ -1,0 +1,47 @@
+{
+  "reports": [
+    {
+      "name": "four-layer-drc",
+      "source_sha256": "50968cfb9b55c907d075eecc8a80eedd4678fcb7778fe24fbb1e933a283e2c3f",
+      "violations": {},
+      "unconnected": 0,
+      "parity": 0
+    },
+    {
+      "name": "route07-native-drc",
+      "source_sha256": "b591413682ade1b0d2ce2fc419d9558a37ed78d5deaa0e3b9b0e8f1511ba3f49",
+      "violations": {},
+      "unconnected": 5,
+      "parity": 0
+    },
+    {
+      "name": "negative-inner-drc",
+      "source_sha256": "d094dae11f6c5fd338b217330e9f69cc0d72c719ca1881b1f0ec3eaed8d3c463",
+      "violations": {
+        "items_not_allowed": 1,
+        "clearance": 16,
+        "tracks_crossing": 1,
+        "shorting_items": 1,
+        "track_dangling": 1
+      },
+      "unconnected": 1,
+      "parity": 0
+    },
+    {
+      "name": "negative-drc",
+      "source_sha256": "e8e10f48861bf4c1b1b057dab6217dfd2e3b739f2d9c8d9563dbb7dbc2e5c7bb",
+      "violations": {
+        "shorting_items": 1,
+        "solder_mask_bridge": 1
+      },
+      "unconnected": 5,
+      "parity": 0
+    }
+  ],
+  "junction_cut_positive_boards": 2,
+  "junction_cut_negative_detected": true,
+  "protected_copper_preservation": true,
+  "models_resolved_per_board": 33,
+  "no_policy_or_check_relaxation": true,
+  "scope": "Native geometry/connectivity controls; not operating, EMC, process or finished insulation acceptance."
+}

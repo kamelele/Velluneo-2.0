@@ -1,0 +1,436 @@
+{
+  "task": "ELEC-CLOSE-01",
+  "revision": 2,
+  "previous_frozen_digest": "d0bed449de92f3fe001c8aa4ec80964b33b2020cca9db06109f059c45ff9d64d",
+  "delta_from_previous": "README only:40V is explicitly an illustrative unapproved engineering fault ceiling, distinct from accepted service-access goals; no graph or numerical change",
+  "parent_remote_commit": "bb28f9c81f902f3e9de92dfab5ac17fce0e75fb4",
+  "scope": "specific design-proposal and calculations only; lifecycle reviews excluded to avoid hash cycles; no whole-repository source snapshot claimed",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1064,
+      "sha256": "e022bac38e42e8333705a714360eb53efe3e4649a8d963a747cacbf98414d3b1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/Velluneo_specification_reset.kicad_pro",
+      "bytes": 95,
+      "sha256": "a0f1aed1d2d10ccad132f3f162c666494c14c25cae67ec5490c3efa1f4455a7c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/Velluneo_specification_reset.kicad_sch",
+      "bytes": 71677,
+      "sha256": "8a21535690628f24b807437ba1a38816085650f5e7269a520993c967d94b419a"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/driver-study/primary-buffer/calculate.py",
+      "bytes": 6429,
+      "sha256": "432a8a480078e093359206ea02cce14c5861ab6c60d7f580ed7b8c6516fc25ea"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/ECO-01.md",
+      "bytes": 4343,
+      "sha256": "80f70508070eea487f7d51cb8e78af6680239d5e1ec849e5ec6c2cfa3f252d6d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/ECO-01.png",
+      "bytes": 103757,
+      "sha256": "298a8c8e03f4be0ae674e1a87a3a55f95a017b8458126da86e5a1625a061ede4"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/ECO-01.svg",
+      "bytes": 75103,
+      "sha256": "463a9a9cb0a09ca5c6a2c66c793501420f8ad0cf21c2a9e9a0eea2960904781f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/README.md",
+      "bytes": 9766,
+      "sha256": "bf6e9557d1f4307aa481db1a2c21d6d192aed99d7e44ea13d4fab673f3acfe16"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/calculate-integration-limits.py",
+      "bytes": 1978,
+      "sha256": "aaae62a4cb820fbb14c4bf0950bef97bcdc825b503ff3c32bfed649ccb15b22e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/calculate.py",
+      "bytes": 6112,
+      "sha256": "773b43950468cbe28abae188fa1c76253947712e0044c509fc94555738a5158f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/check-work.json",
+      "bytes": 44711,
+      "sha256": "17a1bb09af4d29b50c65306bcc05639979ed434b63c9a8b8d59f95c4f08964a0"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/connectivity.json",
+      "bytes": 1689,
+      "sha256": "9d7598a3f47c8bad61ab48632ffbb41714071e9791e7d7cd646e9c568f4eb1e2"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/doctor.json",
+      "bytes": 835,
+      "sha256": "f690ad7a351246367ad40026443b56233eb62e11af820957a210fb082a4e9946"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/draw-proposal.py",
+      "bytes": 1776,
+      "sha256": "718456efc35e51e27abb5255ece84cc950a14bcfdb0b41525b5b664881f37275"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/erc.json",
+      "bytes": 1022,
+      "sha256": "f9c000fe43c9d5f2019c29519270f70c146c0d58de7d3154aae54198006888ea"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/findings.md",
+      "bytes": 3732,
+      "sha256": "c46b24d011c2120963f768f620e8fb9aea48b39d2f7997bd46824f5e938cdd47"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/input-corners-results.json",
+      "bytes": 5224,
+      "sha256": "a2ba3a610228251b3f825fcdc7375e99e5e4d74a252ca3ee515775a112bf9816"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/input-corners.py",
+      "bytes": 3180,
+      "sha256": "d22f2fcf16bf541a1246946a12a1b9f34052820a2c4ad0a342f9d840a91e642a"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/integration-limits.json",
+      "bytes": 1483,
+      "sha256": "f9ff0c6267314c971321007db56779ca2ff0dd74358e5f9d39876e14a0459fcb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/README.md",
+      "bytes": 2788,
+      "sha256": "d7838e8ace48d2536d2ef2b75972dd1e64af910b46f638370e94af492a9c6cc1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/artifact-hashes.json",
+      "bytes": 805,
+      "sha256": "3e9119113fefd77e3042c13d41a9d1a1e56a5ee226dfca6c50fa60d5b8e805c8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/calculate.py",
+      "bytes": 4870,
+      "sha256": "8b508cb11a05c3720ff1c17c854d773920f3f8dd5ad6e085044af2ef03ebd928"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/check-window.py",
+      "bytes": 3310,
+      "sha256": "97ecdd8e96d542fd2bc2e5e2b6c5cab8e5d2749919b1af6f212489e29ef017cc"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/sources.json",
+      "bytes": 3203,
+      "sha256": "ff1a60d6a59cfd9fa46d827a856c7ff3a6576b7ff7c6859579edc05d1b8cc70d"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/verification.json",
+      "bytes": 982,
+      "sha256": "b5583976fdec239a43f092834edcff9fe5af711d1f938a390ce89b2a7aa7f466"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/winding-proposal.md",
+      "bytes": 11833,
+      "sha256": "b294e5428ca5d608863be2bc32e9d2e27a0662b275bf7b44e460c8067f7da71e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/winding-results.json",
+      "bytes": 10634,
+      "sha256": "b4964267013eddb58fa4407792a57809e94894bf56bba8b1fd7a04c83bd78079"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/window-fit.md",
+      "bytes": 6918,
+      "sha256": "1d5773d322d95db743b366ca45a85bd914b6ab1328df771bda769403b116c383"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/magnetics/window-results.json",
+      "bytes": 2117,
+      "sha256": "0e495f2bc4aa05baf09bcbad38f53a334d642f8ffdaf18956a97bf8eb7981935"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/native-runs.json",
+      "bytes": 39849,
+      "sha256": "86bef2ffcb9f0147a88c67706b316196013222f4de2e9ba8ddde039305ab63a9"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/native-typical-flux-curve.json",
+      "bytes": 70271,
+      "sha256": "3a7909f6873b1b8bda461e43fb587eaf12c797da32d71b9f6e20815f4ffb8553"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/proposal-check.json",
+      "bytes": 506,
+      "sha256": "7ec0569e1f6abcb01942e4a6d0dace28f91d4974c4cdf1a512eae3dcb4827665"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/proposed-connectivity.json",
+      "bytes": 14810,
+      "sha256": "8621b97580f9b908169b3076448b1f1a6b5d3aea2b2b13400a6d251c169f5f7c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/proposed-parts.json",
+      "bytes": 5140,
+      "sha256": "142919c3a4e7eff9e5dc176639d2e9aff4432bf53173a2ee26e2552cd0cab5ae"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/reference-aliases.json",
+      "bytes": 568,
+      "sha256": "41fe29a6b6555dce76e3b8e944aca90750bc14d1abf0b2b2bb5694ad3e3f0320"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/requirements-schematic.json",
+      "bytes": 32023,
+      "sha256": "2533ce43dcf30924ed6c638778a49207a0b76d81b2e330642bb4682c946fb174"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/results.json",
+      "bytes": 5959,
+      "sha256": "9abe4bbc0c74cbdcbd254393943246aa7fea9c36488d6ec26eea03e29cbf4a22"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/sources.json",
+      "bytes": 1193,
+      "sha256": "198af012a2d27ec55918482fa5224562bdc7bea7ee044d9bac91294013fff85e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/HANDOFF.md",
+      "bytes": 8834,
+      "sha256": "42d0b47f35f941b14b9e0559112a4370c32d07dab33be12429d23fd123ec6d7b"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/README.md",
+      "bytes": 3726,
+      "sha256": "356ccbbc8771d1e7bd3a7a929f14a89ea38b15d916bedc096e0ec7887dea88c8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/calculate.log",
+      "bytes": 5475,
+      "sha256": "dc57679fd1803f0de3f80a375e7a13acb059dccfc3985d50679c9c6dcde5dc36"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/calculate.py",
+      "bytes": 8493,
+      "sha256": "5808ce6e7cb3143205a6e44e2de4e9531aa49d36250a75eca9a5526369f5519c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/hybrid3-results.json",
+      "bytes": 2698,
+      "sha256": "aac241a0633476e459801ae2420ab65f3753041a188e553f75d363fa449328cb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/hybrid3.log",
+      "bytes": 2698,
+      "sha256": "aac241a0633476e459801ae2420ab65f3753041a188e553f75d363fa449328cb"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/hybrid3.py",
+      "bytes": 3277,
+      "sha256": "ddbc60f010de7306617d93fb9522861d8c8aa1d1479b0dc947a8ae804e13f376"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/integration-check.json",
+      "bytes": 1661,
+      "sha256": "eeea25ff54cbfedaf24ae73521696c3b752bc37bd2ec6c9eeb7c3cc4c04e7fae"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/manifest.json",
+      "bytes": 1519,
+      "sha256": "a2c0865a59b6965124c5e8ea3a6f829ce9f2c933bae48c0faafaf884d0b8673e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/results.json",
+      "bytes": 5475,
+      "sha256": "dc57679fd1803f0de3f80a375e7a13acb059dccfc3985d50679c9c6dcde5dc36"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/rows.json",
+      "bytes": 86701,
+      "sha256": "bc9be18312f9fd92cc22225ec37c5bdb4a9606e1925c4456628ee72df595b6d9"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/startup/sources.json",
+      "bytes": 1359,
+      "sha256": "1d82ddbadb858f8ecba0fdf0ee7d9cf6547fd12c89f84a2e7e21d50c00f0579a"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/electrical-integration/task-contract.md",
+      "bytes": 3081,
+      "sha256": "10942bd6691d8d5fee649c8623184bfedb4b85fd3c12a309de73ef6878ca36fa"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/finalization/support-results.json",
+      "bytes": 10038,
+      "sha256": "7b031346b2cf2c45744198094e863111ea0efcbaa1a992b4bde0ce05224d1314"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/footprint-study/assignments.json",
+      "bytes": 6573,
+      "sha256": "ee9a9c077ea352a1508075cd0340a8eaacf7bd05280056171b6eac54135ba5b1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/fp-lib-table",
+      "bytes": 227,
+      "sha256": "43087dad28dd81785c75c80de00a43e57a804233247bb1ab231fefd394afccb5"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/hardware.json",
+      "bytes": 2656,
+      "sha256": "b7f1834a473c8c67f45e589269b5f1087fc87ca94d199dbe0dd4da5debc805b1"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.kicad_sym",
+      "bytes": 16795,
+      "sha256": "a83b3e6805eab01297799f033350774fd1ac9c280472f7bd2b564abf407caf60"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/AC05_P25p4_FORMED_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1096,
+      "sha256": "288597c84066e0f67bcce2d6fc18fc6f0b08c80fe39a6e39c213968217fb3670"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/CRCW_0603_NativeReflow.kicad_mod",
+      "bytes": 1034,
+      "sha256": "6ce9d8219cf3d026257b29951362b6d29805bb7c79d5a61d9b424ab21fd19d65"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/CRCW_0805_NativeReflow.kicad_mod",
+      "bytes": 1026,
+      "sha256": "116da79996b767451514af4d416b12ea00a224e41304efdc99a551743744699f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/CRCW_1206_NativeReflow.kicad_mod",
+      "bytes": 1036,
+      "sha256": "26284dae917c9bc653b71a53703cd738d31f5c590c9e148166150a64ba3a1f7e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/CRCW_2512_NativeReflow.kicad_mod",
+      "bytes": 1020,
+      "sha256": "b65aaee3ae313ad4347cbb67e2c7ba5c13a353a45f9f8cdfca7fc68dbbccd72c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/Diodes_US1M_SMA_Native.kicad_mod",
+      "bytes": 1209,
+      "sha256": "93bfb8f50376a5e473bdcddb9a0258d09d41a6c6c678554f65fc91be7bf0d97f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/InternalWirePair_P7p62_D1p6_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1039,
+      "sha256": "c68a8f13b2d6387395b29ca4d2f2c1efcdfd9b9b7f88c8f1cb6dd09c30cba280"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/KEMET_2220_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1066,
+      "sha256": "a4852937a199183f1b8c3e212894d7b8e33588cc0076ad9472f3004f2ab94629"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/MB10S_Diodes_MBS_1P_2AC_3N_4AC.kicad_mod",
+      "bytes": 1365,
+      "sha256": "bcb61b86077c0befe787d45ba0b056c501d47edd3b1cdd96596489004b025f4f"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/NTCS0603_NativeReflow.kicad_mod",
+      "bytes": 1020,
+      "sha256": "09aadb843153732b79f2dfa754966acef83e3fc2b81fd022d618a7395aa29da8"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/Panasonic_ZA_D_Standard_Native.kicad_mod",
+      "bytes": 1264,
+      "sha256": "3cad320ca90ea5bcc770010add35997d1ca4734cb1f365bb90770208badb93bf"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/Rubycon_BXW_D10_P5_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1300,
+      "sha256": "472c0a4206408f1c4d1ac6575d0019013cec599348f97b10591de1cb81600893"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/SCHURTER_UMTH_WEB_PROVISIONAL.kicad_mod",
+      "bytes": 1086,
+      "sha256": "edbae882a0b49ee5a8a0efa9310fd4078bc1beb2f1fe9901f4271d46f7273b24"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/STN1NK80Z_SOT223_Tab4.kicad_mod",
+      "bytes": 1232,
+      "sha256": "f1b8edf66033160f5165cb03e9bd5d579b107ceceda4ca7340bc40d4d0cf1306"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/ST_STTH_SMA_Native.kicad_mod",
+      "bytes": 1212,
+      "sha256": "439f295996b42dc62b7d182151cd56a335307b36709fece4b013b9f3d6b7ee26"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/TDK_B66422W1010D001_EFD25_RAW_CANDIDATE.kicad_mod",
+      "bytes": 1910,
+      "sha256": "68e8826b5ed994ee4e42c043c01a7265bf0e4cbc9cab5a256581b05b47ef7b1c"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/UCC28711DR_SOIC7_HV7.kicad_mod",
+      "bytes": 1612,
+      "sha256": "bbefd0cca0948ac2e7cbb2dd72de07704e9e18e39963371ef723b69b4a102d82"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/libraries/Velluneo_Driver.pretty/Vishay_SMBJ_PROJECT_CANDIDATE.kicad_mod",
+      "bytes": 1322,
+      "sha256": "cbd89ab8d291673d4963cbf734bee43ff964d8ea8598579e912d64451a34a944"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/requirements-and-plan.md",
+      "bytes": 34515,
+      "sha256": "a0c2867d511313741495cf9d2696590e756c0d6a335d7180df5409cc6532b34e"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/requirements.json",
+      "bytes": 39877,
+      "sha256": "8b5220dcf3d55e56961a94257bf5a0ae77233bfa948f378c4364f6753b7166f9"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/intended-connectivity.json",
+      "bytes": 13751,
+      "sha256": "b48f1f4942dde63f388b7ffbc0072651ec3fb2dc9d105a13340ced493938598a"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/local-terminal-contract.md",
+      "bytes": 2027,
+      "sha256": "6b82a32d748c79b55f9b0e83b7c651575417e410e839f9e03b9bdd76e00167ee"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/native-source-register-primary.json",
+      "bytes": 820,
+      "sha256": "41b7de71c5abe4b5630ab500f2657f02640b035bb6a02aee68d071b0d55797af"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/native-source-register-secondary.json",
+      "bytes": 2522,
+      "sha256": "7c3333ec2122c8f57f053e7ba81ac329d61acaaab696ef3dca3735f5a36844c9"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/owner-scope-acceptance.md",
+      "bytes": 1835,
+      "sha256": "724c17767acef7f4768c870529746470e837d427348d708051a41b3c17cc2500"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/parts.json",
+      "bytes": 4661,
+      "sha256": "808295707d760d62e198794e6f406f1879cdff322e48412e9bd4d2df784bc221"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/pin-basis-primary.md",
+      "bytes": 6270,
+      "sha256": "f02c2faa3cf05bd833c44a56180a7f53140158d84717fa14907b37ea9d7d56a4"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/schematic-intent/pin-basis-secondary.md",
+      "bytes": 8679,
+      "sha256": "6323b4bf6d7661210e3081af8eeb39779bf153d198120fdaf24f8b81467ebc32"
+    },
+    {
+      "path": "hardware/E27/workflow/specification-reset/sym-lib-table",
+      "bytes": 223,
+      "sha256": "ae491b3cef7acb7c1cd3a75083670a5e1c99444e4c01e230e3757724fa1ba398"
+    }
+  ],
+  "frozen_digest": "0f9aaf158b94acc0b9471d9ab57d09223f04b0aaaca79fd2dc78011458cba7e4"
+}

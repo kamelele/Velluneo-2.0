@@ -1,0 +1,113 @@
+{
+  "normal": [
+    {
+      "cooler": "Nano7050",
+      "sink_C": 78.25,
+      "primary_plate_C": 81.65,
+      "LED_board_C": 80.25,
+      "driver_interface_heat_W": 4,
+      "sink_to_air_heat_W": 12,
+      "power_balance_residual_W": 0.0,
+      "gamma_max_for_plate68": 0.803921568627451
+    },
+    {
+      "cooler": "Micro8650",
+      "sink_C": 68.5,
+      "primary_plate_C": 71.9,
+      "LED_board_C": 70.5,
+      "driver_interface_heat_W": 4,
+      "sink_to_air_heat_W": 12,
+      "power_balance_residual_W": 0.0,
+      "gamma_max_for_plate68": 1.0789473684210527
+    },
+    {
+      "cooler": "Micro8680",
+      "sink_C": 64.25,
+      "primary_plate_C": 67.65,
+      "LED_board_C": 66.25,
+      "driver_interface_heat_W": 4,
+      "sink_to_air_heat_W": 12,
+      "power_balance_residual_W": 0.0,
+      "gamma_max_for_plate68": 1.2680412371134022
+    }
+  ],
+  "interface": {
+    "two_30x30mm_TIM_interfaces_K_per_W": 0.19068062222222223,
+    "AM997_ceramic_2mm_20WmK_30x30contact_K_per_W": 0.11111111111111112,
+    "primary_6063_plate_2mm_through_K_per_W": 0.014814814814814814,
+    "adapter_3mm_radial_annulus_screen_K_per_W": 0.23316044566367958,
+    "adapter_to_fin_end_TIM_450mm2_K_per_W": 0.19068062222222223,
+    "additional_contact_spreading_reserve_K_per_W": 0.1,
+    "sum_screen_K_per_W": 0.8404476160340499
+  },
+  "geometry": {
+    "ceramic_square_diagonal_mm": 82.02438661763952,
+    "driver_board_allocation_diagonal_mm": 81.41252974819048,
+    "housing_inner_diameter_mm": 84,
+    "ceramic_radial_fit_remaining_mm": 0.9878066911802392,
+    "board_radial_fit_remaining_mm": 1.2937351259047603,
+    "ceramic_primary_plate_overhang_each_side_mm": 14.0,
+    "TIM_force_30x30_at10psi_N": 62.05284,
+    "fin_end_TIM_force_450mm2_at10psi_N": 31.02642,
+    "no_component_packing_or_normative_separation_proof": true
+  },
+  "cooling": [
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 837.5,
+      "energy_balance_residual_J": 4.774847184307873e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 837.5,
+      "energy_balance_residual_J": -6.821210263296962e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 1567.5,
+      "energy_balance_residual_J": 4.547473508864641e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 20,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 1567.25,
+      "energy_balance_residual_J": -6.366462912410498e-12
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 1174.5,
+      "energy_balance_residual_J": -2.1373125491663814e-11
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 180,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 1174.25,
+      "energy_balance_residual_J": 1.5120349416974932e-11
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.5,
+      "time_to_both_nodes45C_s": 1894.5,
+      "energy_balance_residual_J": -6.821210263296962e-13
+    },
+    {
+      "primary_heat_capacity_J_per_K_assumed": 80,
+      "sink_heat_capacity_J_per_K_assumed": 360,
+      "step_s": 0.25,
+      "time_to_both_nodes45C_s": 1894.25,
+      "energy_balance_residual_J": 6.207301339600235e-11
+    }
+  ],
+  "cases": 324
+}

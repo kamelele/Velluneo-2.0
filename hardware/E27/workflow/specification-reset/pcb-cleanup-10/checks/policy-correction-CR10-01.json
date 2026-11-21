@@ -1,0 +1,19 @@
+{
+  "finding": "CR10-01",
+  "initial_body": "63e9b2e40bd07709184987067c94ced233a2d13c579776a69adbb6157f9a96b8",
+  "correction": [
+    {
+      "field": "pth_inside_courtyard",
+      "before": "warning",
+      "after": "error"
+    },
+    {
+      "field": "npth_inside_courtyard",
+      "before": "warning",
+      "after": "error"
+    }
+  ],
+  "no_waiver": true,
+  "no_geometry_change": true,
+  "scope": "Restore original strict severities. Retain resulting managed mismatch rather than weaken project policy."
+}

@@ -1,0 +1,1115 @@
+{
+  "previous_plan_sha256": "0bddacd75a4d6af9b1e3b9a0f44e59164c3353ad8b353dc806cd9c6e83b71de3",
+  "previous_seed_sha256": "b474e25ff9796cf6fd189a6c871854b7f6f6d3f34271855fbedab99bd510acf0",
+  "tasks": [
+    {
+      "a": "Q1.3",
+      "b": "R9.1",
+      "label": "power_shunt",
+      "width": 0.8,
+      "planar_length_mm": 6.150459851201919,
+      "vias": 0
+    },
+    {
+      "a": "R8.2",
+      "b": "Q1.3",
+      "label": "source_pulldown",
+      "width": 0.4,
+      "planar_length_mm": 3.1900482036223985,
+      "vias": 0
+    },
+    {
+      "a": "BR1.3",
+      "b": "C1.2",
+      "label": "charging_ground",
+      "width": 0.8,
+      "planar_length_mm": 47.094092618054695,
+      "vias": 1
+    },
+    {
+      "a": "T1.2",
+      "b": "C1.2",
+      "label": "aux_ground",
+      "width": 0.4,
+      "planar_length_mm": 25.442187517944916,
+      "vias": 1
+    },
+    {
+      "a": "R5.2",
+      "b": "U1.5",
+      "label": "quiet_ground",
+      "width": 0.4,
+      "planar_length_mm": 2.1856601717798276,
+      "vias": 0
+    },
+    {
+      "a": "RT1.2",
+      "b": "C2.2",
+      "label": "quiet_ground",
+      "width": 0.4,
+      "planar_length_mm": 6.392640687119279,
+      "vias": 1
+    },
+    {
+      "a": "R13.2",
+      "b": "RT1.2",
+      "label": "quiet_ground",
+      "width": 0.4,
+      "planar_length_mm": 4.412741699796948,
+      "vias": 0
+    },
+    {
+      "a": "C3.2",
+      "b": "T1.2",
+      "label": "aux_branch",
+      "width": 0.4,
+      "planar_length_mm": 13.805944446836255,
+      "vias": 1
+    },
+    {
+      "a": "R15.2",
+      "b": "C3.2",
+      "label": "aux_branch",
+      "width": 0.4,
+      "planar_length_mm": 11.728989184666206,
+      "vias": 0
+    },
+    {
+      "a": "R3.2",
+      "b": "C3.2",
+      "label": "aux_branch",
+      "width": 0.4,
+      "planar_length_mm": 7.926016961248081,
+      "vias": 0
+    }
+  ],
+  "active_routes": {
+    "0": [
+      {
+        "net": "SENSE",
+        "a": [
+          -13.650000000000006,
+          17.040000000000006
+        ],
+        "b": [
+          -13.7,
+          17.0
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -13.7,
+          17.0
+        ],
+        "b": [
+          -13.7,
+          17.6
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -13.7,
+          17.6
+        ],
+        "b": [
+          -14.3,
+          18.200000000000003
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -14.3,
+          18.200000000000003
+        ],
+        "b": [
+          -14.3,
+          18.6
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -14.3,
+          18.6
+        ],
+        "b": [
+          -15.7,
+          20.0
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -15.7,
+          20.0
+        ],
+        "b": [
+          -15.7,
+          20.200000000000003
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -15.7,
+          20.200000000000003
+        ],
+        "b": [
+          -17.1,
+          21.6
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -17.1,
+          21.6
+        ],
+        "b": [
+          -17.040000000000006,
+          21.549999999999997
+        ],
+        "width": 0.8,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "power_shunt"
+      }
+    ],
+    "1": [
+      {
+        "net": "SENSE",
+        "a": [
+          -12.650000000000006,
+          14.5
+        ],
+        "b": [
+          -12.7,
+          14.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "source_pulldown"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -12.7,
+          14.400000000000006
+        ],
+        "b": [
+          -12.7,
+          15.0
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "source_pulldown"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -12.7,
+          15.0
+        ],
+        "b": [
+          -13.299999999999999,
+          15.600000000000001
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "source_pulldown"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -13.299999999999999,
+          15.600000000000001
+        ],
+        "b": [
+          -13.299999999999999,
+          16.6
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "source_pulldown"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -13.299999999999999,
+          16.6
+        ],
+        "b": [
+          -13.7,
+          17.0
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "source_pulldown"
+      },
+      {
+        "net": "SENSE",
+        "a": [
+          -13.7,
+          17.0
+        ],
+        "b": [
+          -13.650000000000006,
+          17.040000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "source_pulldown"
+      }
+    ],
+    "4": [
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          4.400000000000006,
+          23.724999999999994
+        ],
+        "b": [
+          4.5,
+          23.800000000000004
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          4.5,
+          23.800000000000004
+        ],
+        "b": [
+          4.5,
+          23.6
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          4.5,
+          23.6
+        ],
+        "b": [
+          3.900000000000002,
+          23.0
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          3.900000000000002,
+          23.0
+        ],
+        "b": [
+          3.900000000000002,
+          22.200000000000003
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          3.900000000000002,
+          22.200000000000003
+        ],
+        "b": [
+          3.75,
+          22.049999999999997
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      }
+    ],
+    "5": [
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          0.7999999999999972,
+          28.400000000000006
+        ],
+        "b": [
+          0.7000000000000028,
+          28.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          0.7000000000000028,
+          28.400000000000006
+        ],
+        "b": [
+          0.7000000000000028,
+          27.800000000000004
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          0.7000000000000028,
+          27.800000000000004
+        ],
+        "b": [
+          0.7000000000000028,
+          27.800000000000004
+        ],
+        "width": 0.6,
+        "layers": [
+          0,
+          1
+        ],
+        "via": true,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          0.7000000000000028,
+          27.800000000000004
+        ],
+        "b": [
+          1.1000000000000014,
+          27.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          1.1000000000000014,
+          27.400000000000006
+        ],
+        "b": [
+          1.1000000000000014,
+          26.0
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          1.1000000000000014,
+          26.0
+        ],
+        "b": [
+          3.700000000000003,
+          23.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          3.700000000000003,
+          23.400000000000006
+        ],
+        "b": [
+          3.75,
+          23.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      }
+    ],
+    "6": [
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          3.950000000000003,
+          28.400000000000006
+        ],
+        "b": [
+          3.900000000000002,
+          28.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          3.900000000000002,
+          28.400000000000006
+        ],
+        "b": [
+          3.900000000000002,
+          28.0
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          3.900000000000002,
+          28.0
+        ],
+        "b": [
+          3.3000000000000007,
+          27.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          3.3000000000000007,
+          27.400000000000006
+        ],
+        "b": [
+          1.7000000000000028,
+          27.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          1.7000000000000028,
+          27.400000000000006
+        ],
+        "b": [
+          0.7000000000000028,
+          28.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          0.7000000000000028,
+          28.400000000000006
+        ],
+        "b": [
+          0.7999999999999972,
+          28.400000000000006
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "quiet_ground"
+      }
+    ],
+    "7": [
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -13.849999999999994,
+          -4.700000000000003
+        ],
+        "b": [
+          -13.899999999999999,
+          -4.799999999999997
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -13.899999999999999,
+          -4.799999999999997
+        ],
+        "b": [
+          -13.7,
+          -4.799999999999997
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -13.7,
+          -4.799999999999997
+        ],
+        "b": [
+          -13.1,
+          -4.199999999999999
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -13.1,
+          -4.199999999999999
+        ],
+        "b": [
+          -13.1,
+          -4.199999999999999
+        ],
+        "width": 0.6,
+        "layers": [
+          0,
+          1
+        ],
+        "via": true,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -13.1,
+          -4.199999999999999
+        ],
+        "b": [
+          -11.7,
+          -4.199999999999999
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -11.7,
+          -4.199999999999999
+        ],
+        "b": [
+          -6.1,
+          1.4000000000000021
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -6.1,
+          1.4000000000000021
+        ],
+        "b": [
+          -6.1,
+          1.6000000000000014
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -6.1,
+          1.6000000000000014
+        ],
+        "b": [
+          -5.899999999999999,
+          1.8000000000000007
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -5.899999999999999,
+          1.8000000000000007
+        ],
+        "b": [
+          -5.899999999999999,
+          2.0
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -5.899999999999999,
+          2.0
+        ],
+        "b": [
+          -5.699999999999999,
+          2.200000000000003
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -5.699999999999999,
+          2.200000000000003
+        ],
+        "b": [
+          -5.699999999999999,
+          3.6000000000000014
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -5.699999999999999,
+          3.6000000000000014
+        ],
+        "b": [
+          -5.099999999999998,
+          4.200000000000003
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -5.099999999999998,
+          4.200000000000003
+        ],
+        "b": [
+          -5.0,
+          4.25
+        ],
+        "width": 0.4,
+        "layers": [
+          0
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      }
+    ],
+    "8": [
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -18.599999999999994,
+          4.849999999999994
+        ],
+        "b": [
+          -18.5,
+          4.800000000000004
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -18.5,
+          4.800000000000004
+        ],
+        "b": [
+          -18.5,
+          3.6000000000000014
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -18.5,
+          3.6000000000000014
+        ],
+        "b": [
+          -18.1,
+          3.200000000000003
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -18.1,
+          3.200000000000003
+        ],
+        "b": [
+          -18.1,
+          1.8000000000000007
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -18.1,
+          1.8000000000000007
+        ],
+        "b": [
+          -17.9,
+          1.6000000000000014
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -17.9,
+          1.6000000000000014
+        ],
+        "b": [
+          -17.9,
+          -0.7999999999999972
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -17.9,
+          -0.7999999999999972
+        ],
+        "b": [
+          -13.899999999999999,
+          -4.799999999999997
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -13.899999999999999,
+          -4.799999999999997
+        ],
+        "b": [
+          -13.849999999999994,
+          -4.700000000000003
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      }
+    ],
+    "9": [
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -6.5,
+          -5.799999999999997
+        ],
+        "b": [
+          -12.9,
+          -5.799999999999997
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -12.9,
+          -5.799999999999997
+        ],
+        "b": [
+          -13.899999999999999,
+          -4.799999999999997
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      },
+      {
+        "net": "PRIMARY_GND",
+        "a": [
+          -13.899999999999999,
+          -4.799999999999997
+        ],
+        "b": [
+          -13.849999999999994,
+          -4.700000000000003
+        ],
+        "width": 0.4,
+        "layers": [
+          1
+        ],
+        "via": false,
+        "origin": "new",
+        "label": "aux_branch"
+      }
+    ]
+  },
+  "scope": "Exact retained copper candidate, not an approval. Current layout and native checks must validate replay."
+}

@@ -1,0 +1,618 @@
+{
+  "kind": "Executed source-pinned construction and conditional air-energy/DC screens; no FEA, leakage guarantee, actual temperature or measurement",
+  "candidate": "T1-INTERLEAVED-C2",
+  "raw_bobbin_bbox_from_retained430face_data_mm": [
+    -12.5000001,
+    12.5000001,
+    -6.150000100000338,
+    10.25,
+    -13.0000001,
+    13.0000001
+  ],
+  "fresh_STEP_import_performed": false,
+  "source_retrieval_limitation": "New primary STEP/PDF byte attempts failedDNS in child andHTTP403 in coordinator; retained prior pinned geometry used.",
+  "geometry": {
+    "native_barrel_XY": [
+      13.1,
+      6.9
+    ],
+    "native_barrel_corner_R": 2,
+    "native_straight_barrel_axial": 16.2,
+    "selected_active_band": 13.8,
+    "regular_radial": 2.153,
+    "extra_noncoincident_seam_radial": 0.077,
+    "maximum_radial": 2.23,
+    "outer_regular_shell_XY": [
+      17.56,
+      11.36
+    ],
+    "minimum_side_screen_remaining_after_chosen_0p05_build_and_0p05_decenter": 0.16999999999999915,
+    "axial_end_pocket_each": 1.1999999999999993,
+    "proposed_finished_envelope": [
+      30,
+      30,
+      18
+    ]
+  },
+  "leakage_cases": [
+    {
+      "construction": "baseline",
+      "common_sheet_width_mm_assumption": 8.25,
+      "leakage_H": {
+        "PS_Aopen": 9.449580133070986e-05,
+        "PA_Sopen": 3.941924779303106e-05,
+        "AS_Popen": 1.6255824744107592e-06
+      }
+    },
+    {
+      "construction": "baseline",
+      "common_sheet_width_mm_assumption": 10.5,
+      "leakage_H": {
+        "PS_Aopen": 7.424670104555775e-05,
+        "PA_Sopen": 3.097226612309583e-05,
+        "AS_Popen": 1.2772433727513108e-06
+      }
+    },
+    {
+      "construction": "baseline",
+      "common_sheet_width_mm_assumption": 16.2,
+      "leakage_H": {
+        "PS_Aopen": 4.812286178878743e-05,
+        "PA_Sopen": 2.0074616931636187e-05,
+        "AS_Popen": 8.27842926783257e-07
+      }
+    },
+    {
+      "construction": "interleaved_Ainner",
+      "common_sheet_width_mm_assumption": 13.3,
+      "leakage_H": {
+        "PS_Aopen": 1.4590150009690575e-05,
+        "PA_Sopen": 2.4238093990600067e-05,
+        "AS_Popen": 9.86413589352608e-07
+      }
+    },
+    {
+      "construction": "interleaved_Ainner",
+      "common_sheet_width_mm_assumption": 13.8,
+      "leakage_H": {
+        "PS_Aopen": 1.406152138615106e-05,
+        "PA_Sopen": 2.335990217934644e-05,
+        "AS_Popen": 9.506739665499772e-07
+      }
+    },
+    {
+      "construction": "interleaved_Ainner",
+      "common_sheet_width_mm_assumption": 14.3,
+      "leakage_H": {
+        "PS_Aopen": 1.3569859799222703e-05,
+        "PA_Sopen": 2.25431223828658e-05,
+        "AS_Popen": 9.174336180692089e-07
+      }
+    },
+    {
+      "construction": "interleaved_Aoutside",
+      "common_sheet_width_mm_assumption": 13.8,
+      "leakage_H": {
+        "PS_Aopen": 8.868854167439999e-06,
+        "PA_Sopen": 4.037104935135301e-05,
+        "AS_Popen": 1.7835613205762308e-06
+      }
+    }
+  ],
+  "selected_PS_slab_H": 1.406152138615106e-05,
+  "selected_balanced_two_coordinate_leakage_matrix_H": [
+    [
+      1.406152138615106e-05,
+      1.7403956087903629e-06
+    ],
+    [
+      1.7403956087903629e-06,
+      9.506739665499772e-07
+    ]
+  ],
+  "matrix_coordinates": "Ip,Ia with Is=-(120Ip+22Ia)/30; only balanced air-energy subspace, not a complete3port magnetizing model",
+  "PSD_determinant_H2": 1.0338945436802783e-11,
+  "PA_matrix_consistency_error_H": 2.0328790734103208e-20,
+  "numerical_midpoint_convergence": [
+    {
+      "midpoints_per_segment": 40,
+      "H": 1.4060416291130613e-05,
+      "absolute_error_H": 1.105095020446776e-09
+    },
+    {
+      "midpoints_per_segment": 80,
+      "H": 1.4061245112395951e-05,
+      "absolute_error_H": 2.762737551091529e-10
+    },
+    {
+      "midpoints_per_segment": 160,
+      "H": 1.4061452317712283e-05,
+      "absolute_error_H": 6.90684387768647e-11
+    },
+    {
+      "midpoints_per_segment": 320,
+      "H": 1.4061504119041367e-05,
+      "absolute_error_H": 1.7267109693369143e-11
+    }
+  ],
+  "selected_PS_segment_energy": [
+    {
+      "segment": 0,
+      "winding": "P",
+      "turns": 60,
+      "radial_start_mm": 0.0,
+      "radial_end_mm": 0.217,
+      "MMF_start_At": 0.0,
+      "MMF_end_At": 59.99999999999999,
+      "leakage_contribution_H": 8.913167256523668e-07
+    },
+    {
+      "segment": 1,
+      "winding": "T",
+      "turns": 0,
+      "radial_start_mm": 0.217,
+      "radial_end_mm": 0.371,
+      "MMF_start_At": 59.99999999999999,
+      "MMF_end_At": 59.99999999999999,
+      "leakage_contribution_H": 1.9392746271095334e-06
+    },
+    {
+      "segment": 2,
+      "winding": "A",
+      "turns": 22,
+      "radial_start_mm": 0.371,
+      "radial_end_mm": 0.588,
+      "MMF_start_At": 59.99999999999999,
+      "MMF_end_At": 59.99999999999999,
+      "leakage_contribution_H": 2.8155261333622017e-06
+    },
+    {
+      "segment": 3,
+      "winding": "T",
+      "turns": 0,
+      "radial_start_mm": 0.588,
+      "radial_end_mm": 0.665,
+      "MMF_start_At": 59.99999999999999,
+      "MMF_end_At": 59.99999999999999,
+      "leakage_contribution_H": 1.0223718972094913e-06
+    },
+    {
+      "segment": 4,
+      "winding": "S",
+      "turns": 15,
+      "radial_start_mm": 0.665,
+      "radial_end_mm": 1.185,
+      "MMF_start_At": 59.99999999999999,
+      "MMF_end_At": -7.105427357601002e-15,
+      "leakage_contribution_H": 2.3616014744308565e-06
+    },
+    {
+      "segment": 5,
+      "winding": "T",
+      "turns": 0,
+      "radial_start_mm": 1.185,
+      "radial_end_mm": 1.262,
+      "MMF_start_At": -7.105427357601002e-15,
+      "MMF_end_At": -7.105427357601002e-15,
+      "leakage_contribution_H": 1.566581337804654e-38
+    },
+    {
+      "segment": 6,
+      "winding": "S",
+      "turns": 15,
+      "radial_start_mm": 1.262,
+      "radial_end_mm": 1.7820000000000003,
+      "MMF_start_At": -7.105427357601002e-15,
+      "MMF_end_At": -60.00000000000001,
+      "leakage_contribution_H": 2.6675695095822656e-06
+    },
+    {
+      "segment": 7,
+      "winding": "T",
+      "turns": 0,
+      "radial_start_mm": 1.7820000000000003,
+      "radial_end_mm": 1.8590000000000002,
+      "MMF_start_At": -60.00000000000001,
+      "MMF_end_At": -60.00000000000001,
+      "leakage_contribution_H": 1.211740597611722e-06
+    },
+    {
+      "segment": 8,
+      "winding": "P",
+      "turns": 60,
+      "radial_start_mm": 1.8590000000000002,
+      "radial_end_mm": 2.076,
+      "MMF_start_At": -60.00000000000001,
+      "MMF_end_At": -1.4210854715202004e-14,
+      "leakage_contribution_H": 1.1521204211926248e-06
+    },
+    {
+      "segment": 9,
+      "winding": "T",
+      "turns": 0,
+      "radial_start_mm": 2.076,
+      "radial_end_mm": 2.153,
+      "MMF_start_At": -1.4210854715202004e-14,
+      "MMF_end_At": -1.4210854715202004e-14,
+      "leakage_contribution_H": 7.059044728240427e-38
+    }
+  ],
+  "extra_A_S_radial_separation_sensitivity": [
+    {
+      "extra_mm": 0,
+      "PS_slab_H": 1.406152138615106e-05
+    },
+    {
+      "extra_mm": 0.05,
+      "PS_slab_H": 1.4783020566654869e-05
+    },
+    {
+      "extra_mm": 0.1,
+      "PS_slab_H": 1.5509669105976632e-05
+    },
+    {
+      "extra_mm": 0.2,
+      "PS_slab_H": 1.697841426107405e-05
+    }
+  ],
+  "selected_PS_model_fraction_of20uH": 0.703076069307553,
+  "max_unmodeled_extra_before20uH_H_arithmetic_only": 5.9384786138489415e-06,
+  "length_by_layer": [
+    {
+      "winding": "P",
+      "turns": 60,
+      "radial_center_mm": 0.1085,
+      "MLT_rounded_rectangle_mm": 37.24809622018816,
+      "helical_length_m": 2.234928379009543
+    },
+    {
+      "winding": "A",
+      "turns": 22,
+      "radial_center_mm": 0.4795,
+      "MLT_rounded_rectangle_mm": 39.57915796915179,
+      "helical_length_m": 0.8708508235310928
+    },
+    {
+      "winding": "S",
+      "turns": 15,
+      "radial_center_mm": 0.9249999999999999,
+      "MLT_rounded_rectangle_mm": 42.37831702350029,
+      "helical_length_m": 0.6358245312918228
+    },
+    {
+      "winding": "S",
+      "turns": 15,
+      "radial_center_mm": 1.522,
+      "MLT_rounded_rectangle_mm": 46.129378651886505,
+      "helical_length_m": 0.6920782790494531
+    },
+    {
+      "winding": "P",
+      "turns": 60,
+      "radial_center_mm": 1.9675,
+      "MLT_rounded_rectangle_mm": 48.928537706235005,
+      "helical_length_m": 2.935744697253775
+    }
+  ],
+  "copper_loss_screens": [
+    {
+      "temperature_C": 20,
+      "windings": {
+        "P": {
+          "length_m_calculated_geometry_and_leads": 5.270673076263318,
+          "length_m_proposed_acceptance_upper": 5.4,
+          "resistance_ohm": 3.78378,
+          "I_RMS_A_screen": 0.091545,
+          "DC_equivalent_loss_W": 0.0317099191954545
+        },
+        "A": {
+          "length_m_calculated_geometry_and_leads": 0.9308508235310928,
+          "length_m_proposed_acceptance_upper": 0.95,
+          "resistance_ohm": 0.665665,
+          "I_RMS_A_screen": 0.1,
+          "DC_equivalent_loss_W": 0.006656650000000001
+        },
+        "S": {
+          "length_m_calculated_geometry_and_leads": 1.4079028103412758,
+          "length_m_proposed_acceptance_upper": 1.45,
+          "resistance_ohm": 0.381205,
+          "I_RMS_A_screen": 0.53879,
+          "DC_equivalent_loss_W": 0.1106617774282405
+        }
+      },
+      "total_DC_equivalent_W": 0.14902834662369502,
+      "remaining_of_0p50W_T1_budget_for_core_AC_gap_termination_W": 0.350971653376305
+    },
+    {
+      "temperature_C": 100,
+      "windings": {
+        "P": {
+          "length_m_calculated_geometry_and_leads": 5.270673076263318,
+          "length_m_proposed_acceptance_upper": 5.4,
+          "resistance_ohm": 4.973400432,
+          "I_RMS_A_screen": 0.091545,
+          "DC_equivalent_loss_W": 0.0416795177905054
+        },
+        "A": {
+          "length_m_calculated_geometry_and_leads": 0.9308508235310928,
+          "length_m_proposed_acceptance_upper": 0.95,
+          "resistance_ohm": 0.874950076,
+          "I_RMS_A_screen": 0.1,
+          "DC_equivalent_loss_W": 0.00874950076
+        },
+        "S": {
+          "length_m_calculated_geometry_and_leads": 1.4079028103412758,
+          "length_m_proposed_acceptance_upper": 1.45,
+          "resistance_ohm": 0.501055852,
+          "I_RMS_A_screen": 0.53879,
+          "DC_equivalent_loss_W": 0.14545384025167932
+        }
+      },
+      "total_DC_equivalent_W": 0.19588285880218473,
+      "remaining_of_0p50W_T1_budget_for_core_AC_gap_termination_W": 0.3041171411978153
+    },
+    {
+      "temperature_C": 110,
+      "windings": {
+        "P": {
+          "length_m_calculated_geometry_and_leads": 5.270673076263318,
+          "length_m_proposed_acceptance_upper": 5.4,
+          "resistance_ohm": 5.122102986,
+          "I_RMS_A_screen": 0.091545,
+          "DC_equivalent_loss_W": 0.04292571761488676
+        },
+        "A": {
+          "length_m_calculated_geometry_and_leads": 0.9308508235310928,
+          "length_m_proposed_acceptance_upper": 0.95,
+          "resistance_ohm": 0.9011107104999999,
+          "I_RMS_A_screen": 0.1,
+          "DC_equivalent_loss_W": 0.009011107105
+        },
+        "S": {
+          "length_m_calculated_geometry_and_leads": 1.4079028103412758,
+          "length_m_proposed_acceptance_upper": 1.45,
+          "resistance_ohm": 0.5160372085,
+          "I_RMS_A_screen": 0.53879,
+          "DC_equivalent_loss_W": 0.14980284810460917
+        }
+      },
+      "total_DC_equivalent_W": 0.20173967282449592,
+      "remaining_of_0p50W_T1_budget_for_core_AC_gap_termination_W": 0.2982603271755041
+    },
+    {
+      "temperature_C": 125,
+      "windings": {
+        "P": {
+          "length_m_calculated_geometry_and_leads": 5.270673076263318,
+          "length_m_proposed_acceptance_upper": 5.4,
+          "resistance_ohm": 5.345156817,
+          "I_RMS_A_screen": 0.091545,
+          "DC_equivalent_loss_W": 0.044795017351458806
+        },
+        "A": {
+          "length_m_calculated_geometry_and_leads": 0.9308508235310928,
+          "length_m_proposed_acceptance_upper": 0.95,
+          "resistance_ohm": 0.9403516622499999,
+          "I_RMS_A_screen": 0.1,
+          "DC_equivalent_loss_W": 0.0094035166225
+        },
+        "S": {
+          "length_m_calculated_geometry_and_leads": 1.4079028103412758,
+          "length_m_proposed_acceptance_upper": 1.45,
+          "resistance_ohm": 0.53850924325,
+          "I_RMS_A_screen": 0.53879,
+          "DC_equivalent_loss_W": 0.15632635988400395
+        }
+      },
+      "total_DC_equivalent_W": 0.21052489385796275,
+      "remaining_of_0p50W_T1_budget_for_core_AC_gap_termination_W": 0.28947510614203725
+    }
+  ],
+  "flux_screens": [
+    {
+      "Lp_H": 0.0020736,
+      "Ipk_A": 0.358522,
+      "kind": "normal witness",
+      "B_from_LpI_over_NA_T": 0.1086887747368421,
+      "remanence_not_included": true
+    },
+    {
+      "Lp_H": 0.0020736,
+      "Ipk_A": 0.6895868082043591,
+      "kind": "static backup-current proxy, NOT maximum dynamicfault",
+      "B_from_LpI_over_NA_T": 0.20905368501353203,
+      "remanence_not_included": true
+    },
+    {
+      "Lp_H": 0.002304,
+      "Ipk_A": 0.358522,
+      "kind": "normal witness",
+      "B_from_LpI_over_NA_T": 0.1207653052631579,
+      "remanence_not_included": true
+    },
+    {
+      "Lp_H": 0.002304,
+      "Ipk_A": 0.6895868082043591,
+      "kind": "static backup-current proxy, NOT maximum dynamicfault",
+      "B_from_LpI_over_NA_T": 0.2322818722372578,
+      "remanence_not_included": true
+    },
+    {
+      "Lp_H": 0.0025344,
+      "Ipk_A": 0.358522,
+      "kind": "normal witness",
+      "B_from_LpI_over_NA_T": 0.13284183578947367,
+      "remanence_not_included": true
+    },
+    {
+      "Lp_H": 0.0025344,
+      "Ipk_A": 0.6895868082043591,
+      "kind": "static backup-current proxy, NOT maximum dynamicfault",
+      "B_from_LpI_over_NA_T": 0.2555100594609836,
+      "remanence_not_included": true
+    }
+  ],
+  "core_and_AC_loss_acceptance": {
+    "T1_total_normal_loss_target_W": 0.5,
+    "110C_DC_equivalent_screen_W": 0.20173967282449592,
+    "remaining_core_plus_AC_plus_fringe_plus_termination_W": 0.2982603271755041,
+    "N87_source_reference": "June2025 material p2 typical375kW/m3 at100kHz,200mT,100C; Bs390mT atH1200A/m/10kHz/100C. Neither is actual flyback loss or safe operating flux. No fitted Steinmetz coefficients or unipolar/DC-bias correction available.",
+    "required": "Actual waveform-specific core+AC/fringing/termination loss must fit remaining budget across duty/frequency/temperature and all required faults. Do not compare total triangular flux swing directly to sinusoidal peak or use Bs as a designpass."
+  },
+  "capacitance_EMI": "Interleaving adds another P/S-facing interface. TI SLUP338 identifies leakage/capacitance tradeoff. No actual Cps or commonmode current is established; EMI/VS sampling and startup must be reassessed.",
+  "limitations": [
+    "1D homogenized sheets omit axial fringe/unequal occupancy, round-wire local fields,3D core/gap/yoke geometry and leadouts. Variable MLT is geometric, not FEA.",
+    "The modeled width is an explicit common current-sheet assumption; total physicalwindow width is not a guarantee that windingcurrent occupies it.",
+    "Baseline result flags20uH as unsupported by prior construction; it does not mathematically prove measuredbaselinefailure. Selected14uH is a promisingcandidate, not a manufacturedmaximum.",
+    "Layer pitch and end-pocket/tube limits are proposed controls, not confirmed winding-builder capabilities.",
+    "Copper skin/proximity/gapfringing/termination and core loss are omitted from DC loss numbers. RMS maxima are conservative separate priorwitnesses; A100mA is a sensitivity.",
+    "Changes are proposed only. No shared footprint,graph,BOM,approvedrequirements or productPCB is modified."
+  ],
+  "material_files_hash_checked": [
+    {
+      "filename": "tex.pdf",
+      "sha256": "555d1d7ad971071b09ec2c6b4ae72e9c951c6c7c7eb22d37676d2d6e434ba713",
+      "bytes": 732829
+    },
+    {
+      "filename": "processing.pdf",
+      "sha256": "df69893b3d147b83bc0e09b75ae35ba9c22b852d719ddc821fe7079bf26f27af",
+      "bytes": 1157750
+    },
+    {
+      "filename": "ul-fis-b3.html",
+      "sha256": "4f9cdd521236fb71e63708094b7d2042af0678854d9ebcc882dff81022ed4f0e",
+      "bytes": 142971
+    },
+    {
+      "filename": "ul-polysol.html",
+      "sha256": "0a99dcb8725da8481523dfdb0cf9d5c39de7cc0b0134a671c548758a79965fa4",
+      "bytes": 7259
+    },
+    {
+      "filename": "ul-tape.html",
+      "sha256": "93407e8fd608f330d211b0b6ac0b635c6583d9098adc1fe057db91093890a141",
+      "bytes": 9757
+    },
+    {
+      "filename": "ul-pm9630.html",
+      "sha256": "ed6839ec2f28117d5a0157babf04b134c4b478582c96b72d74d9e381e16943cd",
+      "bytes": 11384
+    }
+  ],
+  "isolated_round_wire_skin_sensitivity": [
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 106000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.0008048330137875,
+      "skin_depth_mm": 0.20297185916541177
+    },
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 106000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.000439327070493,
+      "skin_depth_mm": 0.23615494512587368
+    },
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 500000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.017666131908617,
+      "skin_depth_mm": 0.09345526218447796
+    },
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 500000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.0097025862253297,
+      "skin_depth_mm": 0.10873390234315024
+    },
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 1000000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.0678108155742407,
+      "skin_depth_mm": 0.06608284962821108
+    },
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 1000000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.0379306854594672,
+      "skin_depth_mm": 0.07688647969171736
+    },
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 2000000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.2342218907339129,
+      "skin_depth_mm": 0.04672763109223898
+    },
+    {
+      "radius_mm": 0.09,
+      "frequency_Hz": 2000000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.1392494488348588,
+      "skin_depth_mm": 0.05436695117157512
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 106000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.0061834084833146,
+      "skin_depth_mm": 0.20297185916541177
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 106000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.003381889210417,
+      "skin_depth_mm": 0.23615494512587368
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 500000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.1246346551639739,
+      "skin_depth_mm": 0.09345526218447796
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 500000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.071181172373766,
+      "skin_depth_mm": 0.10873390234315024
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 1000000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.3885271705964672,
+      "skin_depth_mm": 0.06608284962821108
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 1000000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.244258441254194,
+      "skin_depth_mm": 0.07688647969171736
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 2000000,
+      "temperature_C": 20,
+      "Rac_over_Rdc_isolated_wire": 1.8772458200426234,
+      "skin_depth_mm": 0.04672763109223898
+    },
+    {
+      "radius_mm": 0.15,
+      "frequency_Hz": 2000000,
+      "temperature_C": 110,
+      "Rac_over_Rdc_isolated_wire": 1.641199017074088,
+      "skin_depth_mm": 0.05436695117157512
+    }
+  ],
+  "skin_sensitivity_scope": "Own round-conductor diffusion/Bessel solution using engineeringrho20=1.724e-8ohmm,alpha.00393,mu_r1; no proximity,gapfield,terminations or actual current spectrum. Singlefrequency ratios cannot bound actual AC loss."
+}

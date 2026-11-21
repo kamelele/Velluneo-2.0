@@ -1,0 +1,59 @@
+{
+  "candidate_body_sha256": "39c2d9dbca07cdc1ac6628c0943d3f3cde22b02a7cc13a9b27a07b7ec3d67742",
+  "findings": [
+    {
+      "id": "C17-CHANGE-01",
+      "severity": "major",
+      "status": "verified_closed",
+      "object": "Native-source ZIP initially empty",
+      "initial_body": "5434d7459c1436c48a9acf46f82df8a1e4d376d91225326ddb1c4fcb60482df2",
+      "verified_body": "39c2d9dbca07cdc1ac6628c0943d3f3cde22b02a7cc13a9b27a07b7ec3d67742",
+      "verified_by": "/root/c16_final_change",
+      "closure": "NativeZIP now76members; alloriginalsourcebytes except solepermittedhardware.release_files delta verified; fullhandoff embeds exactcorrectedarchive; packagingassertions added."
+    },
+    {
+      "id": "C17-COMP-01",
+      "severity": "major",
+      "status": "verified_closed",
+      "object": "Native-source ZIP initially empty",
+      "initial_body": "5434d7459c1436c48a9acf46f82df8a1e4d376d91225326ddb1c4fcb60482df2",
+      "verified_body": "39c2d9dbca07cdc1ac6628c0943d3f3cde22b02a7cc13a9b27a07b7ec3d67742",
+      "verified_by": "/root/c16_final_completeness",
+      "closure": "NativeZIP now76members; alloriginalsourcebytes except solepermittedhardware.release_files delta verified; fullhandoff embeds exactcorrectedarchive; packagingassertions added."
+    },
+    {
+      "id": "C17-SIMP-01",
+      "severity": "major",
+      "status": "verified_closed",
+      "object": "Native-source ZIP initially empty",
+      "initial_body": "5434d7459c1436c48a9acf46f82df8a1e4d376d91225326ddb1c4fcb60482df2",
+      "verified_body": "39c2d9dbca07cdc1ac6628c0943d3f3cde22b02a7cc13a9b27a07b7ec3d67742",
+      "verified_by": "/root/c16_final_simplicity",
+      "closure": "NativeZIP now76members; alloriginalsourcebytes except solepermittedhardware.release_files delta verified; fullhandoff embeds exactcorrectedarchive; packagingassertions added."
+    }
+  ],
+  "retained_conditions": [
+    {
+      "id": "C17-REALITY-01",
+      "status": "open",
+      "gate": "Manufacturing acceptance",
+      "owner": "JLCPCB / engineering coordinator",
+      "closure": "Written tighterhole/registration/ring/filledcap/material/dielectric/DFM acceptance"
+    },
+    {
+      "id": "C17-REALITY-02",
+      "status": "open",
+      "gate": "PCBA acceptance",
+      "owner": "JLCPCB / part supplier / assembly coordinator",
+      "closure": "ActualT1lot/firstfit,Q1fixture/support,exactsourcing,panel andmachineCPL acceptance"
+    },
+    {
+      "id": "C17-REALITY-03",
+      "status": "open",
+      "gate": "Qualified operation / product release",
+      "owner": "Qualified test operator / authorized human reviewer",
+      "closure": "Controlledfault/startup/clamp/thermal/insulationtests andcurrentgenuineapprovals"
+    }
+  ],
+  "unresolved_data_handoff_blockers": []
+}

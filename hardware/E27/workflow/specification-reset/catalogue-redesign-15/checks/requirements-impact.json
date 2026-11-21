@@ -1,0 +1,50 @@
+{
+  "new_mandatory_requirements": [
+    "R-SOURCING",
+    "R-STOCK-T1"
+  ],
+  "owner_instruction_file": "owner-sourcing-instruction.md",
+  "no_fabricated_pass_evidence": true,
+  "old_evidence_unchanged_but_stale_for_new_intent": true,
+  "checks": [
+    {
+      "stage": "specification",
+      "exit_code": 1,
+      "error_count": 9,
+      "error_ids": [
+        "U01",
+        "U02",
+        "U03",
+        "U04",
+        "U14",
+        "U15",
+        "U16",
+        "R-SPEC-PACKET",
+        "R-SPEC-PACKET"
+      ]
+    },
+    {
+      "stage": "schematic",
+      "exit_code": 1,
+      "error_count": 15,
+      "error_ids": [
+        "U05",
+        "U06",
+        "U07",
+        "U08",
+        "U09",
+        "U01",
+        "U02",
+        "U03",
+        "U04",
+        "U14",
+        "U15",
+        "U16",
+        "R-SPEC-PACKET",
+        "R-SPEC-PACKET",
+        "R-STOCK-T1"
+      ]
+    }
+  ],
+  "meaning": "Failure is retained. New sourcing requirements are now consumed by the toolkit. Prior specification scope evidence is bound to an old intent; U05-U09 and new transformer application still require actual engineering review/implementation. No new specification/schematic pass is claimed."
+}

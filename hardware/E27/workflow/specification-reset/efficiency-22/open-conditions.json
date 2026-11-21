@@ -1,0 +1,23 @@
+{
+  "revision": "E22",
+  "status": "Prototype comparison candidate only",
+  "conditions": [
+    {
+      "id": "E22-BIAS-QUAL-01",
+      "status": "open_qualification",
+      "gate": "Qualification/adoption of newD3; full startup/no-regression acceptance",
+      "owner": "Engineering coordinator and qualified test operator",
+      "problem": "LowerD3forwarddrop can reduce auxiliaryVDD. Lossless19V ratio leaves105.6mV; R10/winding/ripple losses not bounded.",
+      "closure": "Bound or measure fullVDDwaveform at cold/hot/line/ramp/load/first-and-repeatedfaults; require>=9.45Vhealthyallocation and accepted<=1s/90%flux criterion. IncludeR10pulse/winding/ripple/gatedrive/OCPspike behavior."
+    },
+    {
+      "id": "E22-D3-PERFORMANCE-01",
+      "status": "open_qualification",
+      "gate": "Claim of netefficiency/thermal improvement",
+      "owner": "Qualifiedtestoperator / engineeringcoordinator",
+      "problem": "Sourceforwardenvelopes differ inTjreference; hotIR/Cjcan erasegain or increaseheat.",
+      "closure": "Same-temperature comparativeinput/output/waveform/thermal tests with actualparts anduncertainty; qualify leakage/thermalrunaway andcommutation; preserveexistingfault/insulationlimits."
+    }
+  ],
+  "inherited_C16_C17_physical_process_human_holds": "All retained; no human/manufacturing approval or measurements."
+}

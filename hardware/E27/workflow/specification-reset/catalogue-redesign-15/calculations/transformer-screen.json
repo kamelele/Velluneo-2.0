@@ -1,0 +1,47 @@
+{
+  "status": "Analytical screen only; no simulation or measurement",
+  "results": {
+    "assumptions": {
+      "eta_transformer": 0.9,
+      "Vccr": 0.319,
+      "normal_CS_threshold_V": 0.75,
+      "RS1_ohm": 51100,
+      "RS2_ohm": 17400,
+      "RCS_ohm": 2.55,
+      "TD_s": 1.265e-07,
+      "KLC": 25,
+      "VFsecondary": 0.8,
+      "VFaux": 0.8,
+      "nominal_VS_regulation_V": 4.05
+    },
+    "Np_over_Ns": 4.444444444444445,
+    "Na_over_Ns": 0.5185185185185185,
+    "RCS_for_250mA": 2.552,
+    "nominal_current_A": 0.2501960784313726,
+    "normal_Ipk_A": 0.29411764705882354,
+    "static_fault_Ipk_at_1p6V_A": 0.627450980392157,
+    "RLC_ohm": 1962.3312500000002,
+    "CV_boundary_V": 29.949076354679804,
+    "VDD_at_20V": 9.985185185185184,
+    "VDD_at_27V": 13.614814814814814,
+    "VDD_margin_output_floor_V": 19.65357142857143,
+    "CC_demag_frequency_at_24V_Hz": 88483.95061728393,
+    "estimated_copper_gap_active_1p55mm": 10.74186723000212,
+    "all_9_PTH_2mm_gap": 10.206555615733702,
+    "all_9_PTH_1p5mm_gap": 10.706555615733702,
+    "DPAK_maker_pad_gap_mm": 1.8
+  },
+  "normal_candidate_output_V": [
+    20,
+    27
+  ],
+  "old_18V_low_end_retained": false,
+  "unresolved": [
+    "Per-cycle/jitter and abnormal pulse stress versus0.50Apk; static1.6V screen exceeds0.50A",
+    "Actual transformer leakage, DCR, saturation/reset and clamp energy",
+    "VDD takeover/cold start/short/open recovery",
+    "Optical750..850lm and completed lamp thermal evidence",
+    "Component-level insulation approval versus lighting-product conditions",
+    "DPAK package-local3mm rule incompatibility; no waiver granted"
+  ]
+}

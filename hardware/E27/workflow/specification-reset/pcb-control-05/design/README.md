@@ -1,0 +1,3 @@
+# Current design in PCB-CONTROL-05
+
+This is the owner's selected33-component basis, refined in placement and Q1lands. Open Velluneo_specification_reset.kicad_pro. Main PCB remains unrouted and native0violations/54unconnected/0parity. Read ../README.md for the actual owner decision, all operating/process/insulation/fit limitations, changed assignments and separate real partial-routing study. The historical proposed-intent.json is preserved byte-for-byte and selected by ../owner-decision.json; historical null approval is not evidence that the new owner decision is absent. Technical stage acceptance is still absent.

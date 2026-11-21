@@ -1,0 +1,138 @@
+{
+  "units": "mm",
+  "view": "top/component-side; xright,ydown; centredorigin is projectchoice",
+  "ucc": {
+    "source": "bias-repair/source/ucc2871x.pdf",
+    "page": 36,
+    "sha256": "762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248",
+    "pad_xy_mm": [
+      1.55,
+      0.6
+    ],
+    "source_column_spacing_mm": 5.4,
+    "source_pitch_mm": 1.27,
+    "source_missing_position_gap_mm": 2.54,
+    "vacant_xy_mm": [
+      2.7,
+      -0.635
+    ],
+    "pads": [
+      {
+        "number": "1",
+        "function": "VDD",
+        "xy_mm": [
+          -2.7,
+          -1.905
+        ]
+      },
+      {
+        "number": "2",
+        "function": "VS",
+        "xy_mm": [
+          -2.7,
+          -0.635
+        ]
+      },
+      {
+        "number": "3",
+        "function": "NTC",
+        "xy_mm": [
+          -2.7,
+          0.635
+        ]
+      },
+      {
+        "number": "4",
+        "function": "GND",
+        "xy_mm": [
+          -2.7,
+          1.905
+        ]
+      },
+      {
+        "number": "5",
+        "function": "CS",
+        "xy_mm": [
+          2.7,
+          1.905
+        ]
+      },
+      {
+        "number": "6",
+        "function": "DRV",
+        "xy_mm": [
+          2.7,
+          0.635
+        ]
+      },
+      {
+        "number": "7",
+        "function": "HV",
+        "xy_mm": [
+          2.7,
+          -1.905
+        ]
+      }
+    ],
+    "numbering_note": "Genericpackage-position8 atupperright renamedfunctional7 perUCCp3; no pad8"
+  },
+  "mb10s": {
+    "source": "tmp/pin-basis-a/mb10s.pdf",
+    "page": 4,
+    "sha256": "a46066843f6b010bffdb85fe3162573330e70bd481df3c5ef9000eeb59e6a77c",
+    "source_dimensions_mm": {
+      "C": 2.5,
+      "X": 1,
+      "X1": 3.5,
+      "Y": 2.15,
+      "Y1": 7.5
+    },
+    "derived_rowspacing_mm": 5.35,
+    "pad_xy_mm": [
+      1,
+      2.15
+    ],
+    "pads": [
+      {
+        "number": "1",
+        "function": "+",
+        "xy_mm": [
+          1.25,
+          -2.675
+        ]
+      },
+      {
+        "number": "2",
+        "function": "AC",
+        "xy_mm": [
+          1.25,
+          2.675
+        ]
+      },
+      {
+        "number": "3",
+        "function": "-",
+        "xy_mm": [
+          -1.25,
+          -2.675
+        ]
+      },
+      {
+        "number": "4",
+        "function": "AC",
+        "xy_mm": [
+          -1.25,
+          2.675
+        ]
+      }
+    ]
+  },
+  "remaining_project_choices": [
+    "courtyard",
+    "mask/paste allowances",
+    "pad corner radius",
+    "silkscreen",
+    "3Dmodel orientation"
+  ],
+  "approval": "none; candidate sourceaudit only"
+}

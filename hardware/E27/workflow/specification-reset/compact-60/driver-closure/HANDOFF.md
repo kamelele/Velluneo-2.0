@@ -1,0 +1,13 @@
+# Driver implementer handoff
+
+Base 9f6f999aba18ca06b4bdc5ff4d0bf6148bb3fe94. Input: unchanged active31-position graph/parts, design-closure-02 T1-C2 proposal and controller fault cases, electrical-refinement capacitor model, root compact task contract. Work confined to compact-60/driver-closure; no shared CAD, graph, libraries, requirements or approvals changed. No purchase, publication, prototype energization or physical measurement.
+
+Changed files: calculate.py, results.json, README.md, sources.json, criterion-ledger.json, HANDOFF.md and artifact-hashes.json. `calculate.py` executed successfully with numpy2.2.6/numba0.61.2;108 declared line/load/R1 cases,27 component sensitivities, three convergence cases, three cold-charge calculations. Energy-ledger residual assertions and convergence assertions passed. Results JSON is the actual execution output. No successful nativeTINA model/FFT/physical pass is claimed.
+
+47ohm conditional screen1.336–2.156W; nominal24V/250mA/253Vac/50Hz1.728W. This replaces an arbitrary4W working allocation for exploration, **not** a guaranteed maximum. Exact model/source limitations and design closure requirements are recorded beside the result. ST D3 source loss ~.19W removes the apparent motivation for an unqualified replacement. C2 copper reduction is represented explicitly; core/AC remains a real manufacturing qualification item.
+
+R1 remains47ohm, R10 remains2512. R11/R12 1206 ECO is conditional/unapplied with exact source/MPN/power/temp/voltage criteria. No invalid smaller footprint is silently introduced. AC05 standing lead proposal is not supported by the examined native length/drawing; parent has been told. AC05-CS is a distinct potential safety-fusible family, not a qualified drop-in substitute.
+
+TI EVM reference evidence was inspected. Its measured startup/transient/ripple tests do not include the outstanding exact Velluneo short behavior. Native tool absence has been separated from the actual electrical evidence gap. Existing controller/NTC-open findings are not marked closed by opinion or deletion, and the previous sevenpart backup remains unapplied.
+
+Parent owns integration and independent four-reviewer process. Specific external/design blockers: qualified T1 construction/loss/insulation, actual bounded fault pulse/reset and VDD injection, input protective coordination, real compact thermal assembly/RT1 passive or backup fault coverage. These are actionable evidence requirements rather than a request for user software installation. No stage advance or human approval evidence is written here. Exclusive writer lease released to coordinator after this handoff; further edits should be assigned explicitly.

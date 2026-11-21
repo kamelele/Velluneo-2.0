@@ -1,0 +1,19 @@
+E22 ASSEMBLY REFERENCE - NOT MACHINE/PROCESS OR MANUFACTURING APPROVAL
+
+CurrentBOM_33_FULL.csv describes33positions:28SMT,3THT(T1,Q1,C1),2wirepairs(J1,J2).
+BOM_28_SMT.csv andCPL_28_SMT.csv are the matched current E22engineering inputs.
+Unchanged-partLCSCcodes are inherited unverified sourcing hints, not stock/approval.
+D3/R13/R16/R17 newMPNpositions have blankLCSCfields; external sourcing/consignment
+and machine orientation/attrition/panel acceptance remain to be agreed.
+
+Drawing: ../Velluneo_E22_assembly_layers.pdf and ../../Velluneo_E22_schematic.pdf
+in the repository; the compendium provides correspondingPDFs in03_Schemat_BOM.
+Use actualPDFs, not absent C17assembly-top/bottomSVGs. Nativeposition origin and
+angles are recorded; normalized angles0..360 are not qualifiedmachine rotations.
+D3bottom moves+.3mmYabsolute (CPLY57->56.7); newSMB cathodeband matchespad1K.
+R13uses newIPC0603lands; R16/R17retain2512package. ObserveT1pinview/finishedholes,
+Q1shoulder>=3mm/support, wirelength/sleeves/strainrelief and allretainedprocessholds.
+
+NewD3VDD/takeover/no-regression andhotleakage/Cj gains requirecomparativebench
+qualification. Existingfault/thermal/insulation/EMC/life/humanreleaseholdsremain.
+No supplier upload/order or physicaltest is represented.

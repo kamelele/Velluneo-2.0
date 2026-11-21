@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T22:23:19",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Velluneo_driver.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by board edge (board setup constraints silk clearance 0,1500 mm; actual 0,1202 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 77.5,
+                        "y": 70.0
+                    },
+                    "uuid": "3f14cee9-bd29-4386-afe6-c55076f33ffb"
+                },
+                {
+                    "description": "Reference field of C4",
+                    "pos": {
+                        "x": 91.5,
+                        "y": 69.35
+                    },
+                    "uuid": "f0ca2869-7d4c-4177-a99a-b65d157edb84"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R13",
+                    "pos": {
+                        "x": 103.2,
+                        "y": 126.65
+                    },
+                    "uuid": "3650eb8b-d56a-42e7-a48e-201b35238990"
+                },
+                {
+                    "description": "Pad 1 [/VS] of R5 on F.Cu",
+                    "pos": {
+                        "x": 104.4,
+                        "y": 125.675
+                    },
+                    "uuid": "c3c21485-4197-4c6a-a818-b04616a298a1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clearance (board setup constraints silk clearance 0,1500 mm; actual 0,1000 mm)",
+            "items": [
+                {
+                    "description": "Segment of R14 on B.Silkscreen",
+                    "pos": {
+                        "x": 91.25,
+                        "y": 101.85
+                    },
+                    "uuid": "0e2f0e9b-d93e-442a-9da6-1118d70f0682"
+                },
+                {
+                    "description": "Segment of R3 on B.Silkscreen",
+                    "pos": {
+                        "x": 91.5,
+                        "y": 100.55
+                    },
+                    "uuid": "93d8f9ef-70f8-4715-8ab1-a7800d9d4208"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C1",
+                    "pos": {
+                        "x": 88.01,
+                        "y": 117.75
+                    },
+                    "uuid": "5f16890e-59b2-4191-bb1b-577ddad99594"
+                },
+                {
+                    "description": "PTH pad 3 [/SENSE] of Q1",
+                    "pos": {
+                        "x": 86.35,
+                        "y": 117.04
+                    },
+                    "uuid": "c14dd952-7fa7-4b7c-b279-e08e0f9b5556"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

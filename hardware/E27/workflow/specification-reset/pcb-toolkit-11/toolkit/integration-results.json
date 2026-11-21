@@ -1,0 +1,705 @@
+{
+  "kicad_version": "10.0.6",
+  "tests": [
+    {
+      "name": "connectivity valid",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "connectivity renamed",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "connectivity merged",
+      "passed": true,
+      "detail": [
+        "barrier_breached",
+        "merged_nets"
+      ]
+    },
+    {
+      "name": "connectivity mismatch cannot be hidden by clean ERC parity DRC",
+      "passed": true,
+      "detail": {
+        "erc_clean": true,
+        "drc_parity_clean": true,
+        "errors": [
+          "Connectivity: merged_nets: Distinct intended nets are electrically merged",
+          "Connectivity: barrier_breached: Declared electrical separation is bridged"
+        ]
+      }
+    },
+    {
+      "name": "connectivity split",
+      "passed": true,
+      "detail": [
+        "split_net"
+      ]
+    },
+    {
+      "name": "connectivity wrong-pin",
+      "passed": true,
+      "detail": [
+        "barrier_breached",
+        "merged_nets",
+        "split_net"
+      ]
+    },
+    {
+      "name": "connectivity omitted-unit",
+      "passed": true,
+      "detail": [
+        "missing_nc_marker",
+        "unassigned_expected_pins",
+        "unit_instance_count_mismatch"
+      ]
+    },
+    {
+      "name": "connectivity missing-nc",
+      "passed": true,
+      "detail": [
+        "missing_nc_marker"
+      ]
+    },
+    {
+      "name": "connectivity connected-nc",
+      "passed": true,
+      "detail": [
+        "connected_nc",
+        "missing_nc_marker"
+      ]
+    },
+    {
+      "name": "DRC valid",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "DRC short",
+      "passed": true,
+      "detail": [
+        "missing_courtyard",
+        "shorting_items",
+        "silk_overlap",
+        "tracks_crossing",
+        "unconnected_items"
+      ]
+    },
+    {
+      "name": "DRC clearance",
+      "passed": true,
+      "detail": [
+        "clearance"
+      ]
+    },
+    {
+      "name": "DRC width",
+      "passed": true,
+      "detail": [
+        "track_width"
+      ]
+    },
+    {
+      "name": "DRC hole",
+      "passed": true,
+      "detail": [
+        "drill_out_of_range",
+        "unconnected_items",
+        "via_dangling"
+      ]
+    },
+    {
+      "name": "DRC ring",
+      "passed": true,
+      "detail": [
+        "annular_width",
+        "unconnected_items",
+        "via_dangling"
+      ]
+    },
+    {
+      "name": "DRC edge",
+      "passed": true,
+      "detail": [
+        "copper_edge_clearance"
+      ]
+    },
+    {
+      "name": "ERC valid",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "ERC conflict",
+      "passed": true,
+      "detail": [
+        "pin_to_pin"
+      ]
+    },
+    {
+      "name": "ERC power",
+      "passed": true,
+      "detail": [
+        "power_pin_not_driven"
+      ]
+    },
+    {
+      "name": "ERC unconnected",
+      "passed": true,
+      "detail": [
+        "pin_not_connected",
+        "pin_not_driven"
+      ]
+    },
+    {
+      "name": "DRC scope-applies",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DRC scope-other-net",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DRC priority-local",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release incomplete jlcpcb/supplier",
+      "passed": true,
+      "detail": [
+        "Spatial contract missing: adopt product.spatial_file",
+        "Fabrication field missing: service",
+        "Fabrication field missing: stackup",
+        "Fabrication field missing: copper",
+        "Fabrication field missing: finish",
+        "Fabrication field missing: confirmation_evidence",
+        "Service is outside selected fabrication profile",
+        "Assembly process not confirmed",
+        "Product domain list missing",
+        "Missing/stale user approval: specification",
+        "Missing/stale user approval: schematic",
+        "Missing/stale user approval: placement",
+        "Missing/stale user approval: routing",
+        "Missing/stale user approval: release",
+        "Release approval does not cover current artifacts",
+        "Release artifact missing: gerbers",
+        "Release artifact missing: drills",
+        "Release artifact missing: bom",
+        "Release artifact missing: positions",
+        "Release artifact missing: assembly_drawing",
+        "Release artifact missing: bringup_plan"
+      ]
+    },
+    {
+      "name": "release incomplete jlcpcb/inhouse",
+      "passed": true,
+      "detail": [
+        "Spatial contract missing: adopt product.spatial_file",
+        "Fabrication field missing: service",
+        "Fabrication field missing: stackup",
+        "Fabrication field missing: copper",
+        "Fabrication field missing: finish",
+        "Fabrication field missing: confirmation_evidence",
+        "Service is outside selected fabrication profile",
+        "Assembly process not confirmed",
+        "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation",
+        "Product domain list missing",
+        "Missing/stale user approval: specification",
+        "Missing/stale user approval: schematic",
+        "Missing/stale user approval: placement",
+        "Missing/stale user approval: routing",
+        "Missing/stale user approval: release",
+        "Release approval does not cover current artifacts",
+        "Release artifact missing: gerbers",
+        "Release artifact missing: drills",
+        "Release artifact missing: bom",
+        "Release artifact missing: positions",
+        "Release artifact missing: assembly_drawing",
+        "Release artifact missing: bringup_plan"
+      ]
+    },
+    {
+      "name": "release incomplete eurocircuits/supplier",
+      "passed": true,
+      "detail": [
+        "Spatial contract missing: adopt product.spatial_file",
+        "Fabrication field missing: service",
+        "Fabrication field missing: stackup",
+        "Fabrication field missing: copper",
+        "Fabrication field missing: finish",
+        "Fabrication field missing: confirmation_evidence",
+        "Service is outside selected fabrication profile",
+        "Assembly process not confirmed",
+        "Product domain list missing",
+        "Missing/stale user approval: specification",
+        "Missing/stale user approval: schematic",
+        "Missing/stale user approval: placement",
+        "Missing/stale user approval: routing",
+        "Missing/stale user approval: release",
+        "Release approval does not cover current artifacts",
+        "Release artifact missing: gerbers",
+        "Release artifact missing: drills",
+        "Release artifact missing: bom",
+        "Release artifact missing: positions",
+        "Release artifact missing: assembly_drawing",
+        "Release artifact missing: bringup_plan"
+      ]
+    },
+    {
+      "name": "release incomplete eurocircuits/inhouse",
+      "passed": true,
+      "detail": [
+        "Spatial contract missing: adopt product.spatial_file",
+        "Fabrication field missing: service",
+        "Fabrication field missing: stackup",
+        "Fabrication field missing: copper",
+        "Fabrication field missing: finish",
+        "Fabrication field missing: confirmation_evidence",
+        "Service is outside selected fabrication profile",
+        "Assembly process not confirmed",
+        "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation",
+        "Product domain list missing",
+        "Missing/stale user approval: specification",
+        "Missing/stale user approval: schematic",
+        "Missing/stale user approval: placement",
+        "Missing/stale user approval: routing",
+        "Missing/stale user approval: release",
+        "Release approval does not cover current artifacts",
+        "Release artifact missing: gerbers",
+        "Release artifact missing: drills",
+        "Release artifact missing: bom",
+        "Release artifact missing: positions",
+        "Release artifact missing: assembly_drawing",
+        "Release artifact missing: bringup_plan"
+      ]
+    },
+    {
+      "name": "release complete synthetic manifest",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "local PCBA confirmation missing",
+      "passed": true,
+      "detail": [
+        "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation"
+      ]
+    },
+    {
+      "name": "local PCBA confirmation obsolete draft key only",
+      "passed": true,
+      "detail": [
+        "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation"
+      ]
+    },
+    {
+      "name": "local PCBA confirmation canonical field",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "release refuses stale spatial approval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release refuses undeclared spatial contract",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release refuses stale independent intent approval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release refuses undeclared independent connectivity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release refuses stale contract evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release refuses missing contract declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "legacy work report identifies unconfigured requirements",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release stale approvals refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing CAD tool fails closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "adoption preview leaves existing CAD unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "adoption preserves unrelated KiCad settings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "adopted existing project passes real ERC DRC parity",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "repeat adoption is a source no-op",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "adoption rollback restores exact original CAD bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "blocked adoption still reports actual CAD violations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "managed ERC policy tampering refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial no-outline preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial no-outline saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC no-outline",
+      "passed": true,
+      "detail": [
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial outside preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial outside saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC outside",
+      "passed": true,
+      "detail": [
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial preview includes footprint envelopes and pads",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial divergent routing versus DRC refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial stale preview refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial repeat configure preserves PCB bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial moved protective area fails verification",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial mismatched area adoption preserves source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial track preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial track saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC track",
+      "passed": true,
+      "detail": [
+        "items_not_allowed",
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial transaction rollback restores original PCB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spatial local-exception preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial local-exception saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC local-exception",
+      "passed": true,
+      "detail": [
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial other-net-exception preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial other-net-exception saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC other-net-exception",
+      "passed": true,
+      "detail": [
+        "items_not_allowed",
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial other-layer preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial other-layer saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC other-layer",
+      "passed": true,
+      "detail": [
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial via preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial via saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC via",
+      "passed": true,
+      "detail": [
+        "items_not_allowed",
+        "missing_courtyard",
+        "unconnected_items",
+        "via_dangling"
+      ]
+    },
+    {
+      "name": "spatial via-outside preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial via-outside saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC via-outside",
+      "passed": true,
+      "detail": [
+        "missing_courtyard",
+        "unconnected_items",
+        "via_dangling"
+      ]
+    },
+    {
+      "name": "spatial pad preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial pad saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC pad",
+      "passed": true,
+      "detail": [
+        "items_not_allowed",
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial pad-outside preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial pad-outside saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC pad-outside",
+      "passed": true,
+      "detail": [
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial zone preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial zone saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC zone",
+      "passed": true,
+      "detail": [
+        "isolated_copper",
+        "items_not_allowed",
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial zone-outside preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial zone-outside saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC zone-outside",
+      "passed": true,
+      "detail": [
+        "isolated_copper",
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial class-width preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial class-width saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC class-width",
+      "passed": true,
+      "detail": [
+        "missing_courtyard",
+        "track_width"
+      ]
+    },
+    {
+      "name": "spatial shared netclass width class-width",
+      "passed": true,
+      "detail": [
+        "missing_courtyard",
+        "track_width"
+      ]
+    },
+    {
+      "name": "spatial class-width-valid preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial class-width-valid saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC class-width-valid",
+      "passed": true,
+      "detail": [
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial shared netclass width class-width-valid",
+      "passed": true,
+      "detail": [
+        "missing_courtyard"
+      ]
+    },
+    {
+      "name": "spatial exception-other-area preview read-only",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial exception-other-area saved geometry and consumer inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "spatial DRC exception-other-area",
+      "passed": true,
+      "detail": [
+        "items_not_allowed",
+        "missing_courtyard"
+      ]
+    }
+  ],
+  "passed": true
+}

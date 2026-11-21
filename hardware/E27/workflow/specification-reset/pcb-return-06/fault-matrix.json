@@ -1,0 +1,43 @@
+{
+  "source": "https://www.ti.com/lit/ds/symlink/ucc28700.pdf",
+  "cases": [
+    {
+      "fault": "VDD_brownout",
+      "assessment": "SourceUVLOoff7.7\u20138.45V; actualauxhandoff/restartsequenceunverified",
+      "closed": false
+    },
+    {
+      "fault": "output_open",
+      "assessment": "VSOVPsource4.52\u20134.68V; divider/auxspike/stopsequenceandstressmustbeverified",
+      "closed": false
+    },
+    {
+      "fault": "output_short",
+      "assessment": "CCandfaultalgorithmsnotaguaranteedthermal/faultdurationbound; reset/auxUVLOsequenceunverified",
+      "closed": false
+    },
+    {
+      "fault": "NTC_open",
+      "assessment": "No guaranteed shutdown; not credited fail-safe",
+      "closed": false
+    },
+    {
+      "fault": "NTC_short",
+      "assessment": "LowNTCforcesfaultUVLOaccordingtosource; recovery/time/thermaloutcomenotmeasured",
+      "closed": false
+    },
+    {
+      "fault": "CS_open_or_short",
+      "assessment": "No guaranteed safe response inferred; controlled fault analysis/testing required",
+      "closed": false
+    },
+    {
+      "fault": "loss_of_demagnetization",
+      "assessment": "Stopcase inbringupplan; no presumed reset/core protection",
+      "closed": false
+    }
+  ],
+  "no_powered_tests": true,
+  "no_native_IC_simulation": true,
+  "no_new_BOM_protection_claimed": true
+}

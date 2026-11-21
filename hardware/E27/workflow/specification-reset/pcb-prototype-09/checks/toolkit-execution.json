@@ -1,0 +1,44 @@
+{
+  "commands": [
+    {
+      "name": "doctor",
+      "command": [
+        "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+        "doctor"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "requirements-release",
+      "command": [
+        "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+        "run",
+        "requirements",
+        "hardware\\E27\\workflow\\specification-reset",
+        "--stage",
+        "release"
+      ],
+      "exit_code": 1
+    },
+    {
+      "name": "release-check",
+      "command": [
+        "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+        "run",
+        "check",
+        "hardware\\E27\\workflow\\specification-reset",
+        "--mode",
+        "release",
+        "--stage",
+        "release"
+      ],
+      "exit_code": 2
+    }
+  ],
+  "scope": "Existing managed project contract at specification-reset, not a successful adoption of selected subproject. Selected09 native/portable checks are separate. Any unresolved contract/source/profile/spatial mapping blocks formal release; no configuration applied.",
+  "configuration_applied": false,
+  "formal_release_pass": false
+}

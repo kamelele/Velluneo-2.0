@@ -1,0 +1,207 @@
+{
+  "study": "current programming / DC-fed startup / limit sensitivity",
+  "dependency_SHA256": "6435677103247ad888ab1bdf2078409f8a5ecadcf165749fc70191534f4addb3",
+  "upstream_model": "VEL-FLYBACK-01 r2 results.json",
+  "sense_equation": "R = 0.14 * (Np/Ns) / I_total_secondary; no controller-accuracy guarantee",
+  "sense_rows": [
+    {
+      "R_ohm": 2.21,
+      "ideal_total_secondary_A": 0.2533936651583711,
+      "LED_A_assuming_10kohm_bleed": {
+        "18": 0.25159366515837106,
+        "21": 0.2512936651583711,
+        "24": 0.25099366515837107,
+        "27": 0.2506936651583711
+      },
+      "ideal_total_A_resistor_tolerance_only": [
+        0.2508848169884862,
+        0.25595319712966774
+      ]
+    },
+    {
+      "R_ohm": 2.24,
+      "ideal_total_secondary_A": 0.25,
+      "LED_A_assuming_10kohm_bleed": {
+        "18": 0.2482,
+        "21": 0.2479,
+        "24": 0.2476,
+        "27": 0.2473
+      },
+      "ideal_total_A_resistor_tolerance_only": [
+        0.2475247524752475,
+        0.25252525252525254
+      ]
+    },
+    {
+      "R_ohm": 2.26,
+      "ideal_total_secondary_A": 0.24778761061946908,
+      "LED_A_assuming_10kohm_bleed": {
+        "18": 0.24598761061946908,
+        "21": 0.2456876106194691,
+        "24": 0.24538761061946907,
+        "27": 0.24508761061946907
+      },
+      "ideal_total_A_resistor_tolerance_only": [
+        0.24533426794006838,
+        0.2502905157772415
+      ]
+    }
+  ],
+  "bleeder_offset": [
+    {
+      "Vo_V": 18,
+      "total_for_250mA_LED_A": 0.2518,
+      "R_ideal_for_250mA_LED_ohm": 2.2239872915011913
+    },
+    {
+      "Vo_V": 21,
+      "total_for_250mA_LED_A": 0.2521,
+      "R_ideal_for_250mA_LED_ohm": 2.2213407378024597
+    },
+    {
+      "Vo_V": 24,
+      "total_for_250mA_LED_A": 0.2524,
+      "R_ideal_for_250mA_LED_ohm": 2.218700475435816
+    },
+    {
+      "Vo_V": 27,
+      "total_for_250mA_LED_A": 0.2527,
+      "R_ideal_for_250mA_LED_ohm": 2.2160664819944604
+    }
+  ],
+  "OCP_screen": [
+    {
+      "configuration_label": "isolated-mode comparator",
+      "thresholds_V": [
+        3.2,
+        3.6
+      ],
+      "bounds": {
+        "trip_A": {
+          "min": 1.4336275256484925,
+          "max": 1.6454134101192925
+        },
+        "delay_proxy_peak_A": {
+          "min": 1.443172980193947,
+          "max": 1.6662848452773156
+        },
+        "linear_flux_at_trip_T": {
+          "min": 0.832428885860415,
+          "max": 1.1677127426653044
+        },
+        "linear_flux_with_typical_delay_proxy_T": {
+          "min": 0.8392030794088021,
+          "max": 1.179831640498995
+        }
+      },
+      "interpretation": "Linear extrapolation only; not physical saturation waveform or a safe threshold."
+    },
+    {
+      "configuration_label": "lower comparator reference configuration",
+      "thresholds_V": [
+        0.59,
+        0.68
+      ],
+      "bounds": {
+        "trip_A": {
+          "min": 0.26432507504144076,
+          "max": 0.31080031080031084
+        },
+        "delay_proxy_peak_A": {
+          "min": 0.2738705295868953,
+          "max": 0.33167174595833376
+        },
+        "linear_flux_at_trip_T": {
+          "min": 0.15347907583051398,
+          "max": 0.22056796250344637
+        },
+        "linear_flux_with_typical_delay_proxy_T": {
+          "min": 0.16025326937890105,
+          "max": 0.23268686033713715
+        }
+      },
+      "interpretation": "Linear extrapolation only; not physical saturation waveform or a safe threshold."
+    }
+  ],
+  "startup_rows": [
+    {
+      "startup_R_nom_ohm": 430000,
+      "bus_assumed_V": [
+        200,
+        357.7960312803931
+      ],
+      "cap_nom_F": 1e-05,
+      "cap_tolerance": 0.2,
+      "R_tolerance": 0.01,
+      "startup_source_min_A_at29V": 0.000393737048123417,
+      "startup_sink_max_A": 1.475e-05,
+      "min_source_exceeds_startup_sink": true,
+      "source_max_A_at10p4V": 0.0008160583304683888,
+      "not_switching_sink_min_A": 0.0009,
+      "net_discharge_min_A_not_switching_screen": 8.394166953161117e-05,
+      "source_below_not_switching_sink": true,
+      "charge_0_to29V_s_at_lowbus_and_maxRC": 0.8457451125681564,
+      "R_loss_W_upper_at_highbus_VCC0": 0.30072351421188637,
+      "R_loss_W_at_highbus_VCC18p3": 0.27074830926741283,
+      "hold_23_to15p7V_s_ignoring_feed_assumed_draw_A": {
+        "0.002": 0.029200000000000007,
+        "0.005": 0.011680000000000003,
+        "0.01": 0.0058400000000000014
+      },
+      "unmodeled": "Bridge waveform, initial bus rise, load startup, bias transfer, tolerances outside table, temperature/leakage, actual gate draw, faults."
+    },
+    {
+      "startup_R_nom_ohm": 680000,
+      "bus_assumed_V": [
+        200,
+        357.7960312803931
+      ],
+      "cap_nom_F": 1e-05,
+      "cap_tolerance": 0.2,
+      "R_tolerance": 0.01,
+      "startup_source_min_A_at29V": 0.00024898078043098426,
+      "startup_sink_max_A": 1.475e-05,
+      "min_source_exceeds_startup_sink": true,
+      "source_max_A_at10p4V": 0.0005160368854432458,
+      "not_switching_sink_min_A": 0.0009,
+      "net_discharge_min_A_not_switching_screen": 0.00038396311455675413,
+      "source_below_not_switching_sink": true,
+      "charge_0_to29V_s_at_lowbus_and_maxRC": 1.3659902028552668,
+      "R_loss_W_upper_at_highbus_VCC0": 0.1901633986928105,
+      "R_loss_W_at_highbus_VCC18p3": 0.17120848968380517,
+      "hold_23_to15p7V_s_ignoring_feed_assumed_draw_A": {
+        "0.002": 0.029200000000000007,
+        "0.005": 0.011680000000000003,
+        "0.01": 0.0058400000000000014
+      },
+      "unmodeled": "Bridge waveform, initial bus rise, load startup, bias transfer, tolerances outside table, temperature/leakage, actual gate draw, faults."
+    },
+    {
+      "startup_R_nom_ohm": 1000000,
+      "bus_assumed_V": [
+        200,
+        357.7960312803931
+      ],
+      "cap_nom_F": 1e-05,
+      "cap_tolerance": 0.2,
+      "R_tolerance": 0.01,
+      "startup_source_min_A_at29V": 0.0001693069306930693,
+      "startup_sink_max_A": 1.475e-05,
+      "min_source_exceeds_startup_sink": true,
+      "source_max_A_at10p4V": 0.0003509050821014072,
+      "not_switching_sink_min_A": 0.0009,
+      "net_discharge_min_A_not_switching_screen": 0.0005490949178985928,
+      "source_below_not_switching_sink": true,
+      "charge_0_to29V_s_at_lowbus_and_maxRC": 2.065210221150388,
+      "R_loss_W_upper_at_highbus_VCC0": 0.12931111111111113,
+      "R_loss_W_at_highbus_VCC18p3": 0.11642177298498751,
+      "hold_23_to15p7V_s_ignoring_feed_assumed_draw_A": {
+        "0.002": 0.029200000000000007,
+        "0.005": 0.011680000000000003,
+        "0.01": 0.0058400000000000014
+      },
+      "unmodeled": "Bridge waveform, initial bus rise, load startup, bias transfer, tolerances outside table, temperature/leakage, actual gate draw, faults."
+    }
+  ],
+  "verification": "Executed arithmetic and dependency hash check only; no controller, SPICE, CAD, physical or fault pass."
+}

@@ -1,0 +1,506 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T19:38:17",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Velluneo_four_layer_COMPARISON.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on F.Cu, length 0,0781 mm",
+                    "pos": {
+                        "x": 82.9,
+                        "y": 121.6
+                    },
+                    "uuid": "b18023fa-70ea-46be-8e56-b1668e7e8c63"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items not allowed",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 0,9997 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 83.7,
+                        "y": 108.2
+                    },
+                    "uuid": "cf874e03-d0e0-4475-84a3-956578883a78"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_PS_10mm' clearance 10,0000 mm; actual 9,2062 mm)",
+            "items": [
+                {
+                    "description": "Via [/OUTPUT_POS] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 89.0,
+                        "y": 72.0955
+                    },
+                    "uuid": "29bef0d1-818f-461f-a078-12073b0c22f4"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (board minimum clearance 0,2500 mm; actual 0,1054 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Via [/PRIMARY_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 86.9,
+                        "y": 95.8
+                    },
+                    "uuid": "a997a962-7780-4a30-ae30-7bfd1cc9a828"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 1,5671 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 81.27,
+                        "y": 114.5
+                    },
+                    "uuid": "45be3018-43b8-493d-b555-1b32df0cf983"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,4800 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 1,2000 mm",
+                    "pos": {
+                        "x": 81.3,
+                        "y": 114.4
+                    },
+                    "uuid": "e0cf90e0-b206-49e9-bca3-b041e6396a11"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 0,6406 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2000 mm",
+                    "pos": {
+                        "x": 84.1,
+                        "y": 108.0
+                    },
+                    "uuid": "baec6b4d-2f9b-4870-a52f-4aa984e1f0ef"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,3648 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,5657 mm",
+                    "pos": {
+                        "x": 81.3,
+                        "y": 113.2
+                    },
+                    "uuid": "b3b37af5-ed8b-48a6-8ca8-b20fd1734c78"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,4466 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 81.7,
+                        "y": 111.4
+                    },
+                    "uuid": "aef71d2f-3497-465a-873d-02e955b38c50"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 0,0846 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,4000 mm",
+                    "pos": {
+                        "x": 84.5,
+                        "y": 107.8
+                    },
+                    "uuid": "b7cf10a1-3c7b-44e3-b870-a629b8c49bf9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 3,6000 mm",
+                    "pos": {
+                        "x": 85.1,
+                        "y": 107.6
+                    },
+                    "uuid": "d76103c2-80cb-4506-9299-6bfd47507445"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,4466 mm)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 1,2000 mm",
+                    "pos": {
+                        "x": 81.9,
+                        "y": 111.2
+                    },
+                    "uuid": "922fe6a2-34c0-47c5-aa4f-158405d1e139"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /SENSE and /DRAIN)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                },
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 84.9,
+                        "y": 107.8
+                    },
+                    "uuid": "9d1bb475-75d3-41c4-8402-39267532a9cc"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,3648 mm)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 1,4000 mm",
+                    "pos": {
+                        "x": 81.7,
+                        "y": 112.8
+                    },
+                    "uuid": "65c08912-960f-4210-a807-142da529dca4"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 0,4785 mm)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 84.3,
+                        "y": 108.0
+                    },
+                    "uuid": "682ff697-6a05-4186-8d1a-4229e288ed05"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,4800 mm)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,1044 mm",
+                    "pos": {
+                        "x": 81.27,
+                        "y": 114.5
+                    },
+                    "uuid": "50cec012-0d97-4e4a-926e-55302840c7d1"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 1,1966 mm)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 2,5456 mm",
+                    "pos": {
+                        "x": 81.9,
+                        "y": 110.0
+                    },
+                    "uuid": "323e492b-6fd5-4e29-a61f-8ee155254117"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 2,8224 mm)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 7,9196 mm",
+                    "pos": {
+                        "x": 88.7,
+                        "y": 107.6
+                    },
+                    "uuid": "0167cafc-870b-4316-885e-088a8d0eba85"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'PROPOSED_HV_QUIET_3mm' clearance 3,0000 mm; actual 0,8376 mm)",
+            "items": [
+                {
+                    "description": "Track [/DRAIN] on In1.Cu, length 0,2828 mm",
+                    "pos": {
+                        "x": 83.9,
+                        "y": 108.2
+                    },
+                    "uuid": "1bfc661e-c3c5-4652-93eb-4d0764894f09"
+                },
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on In1.Cu, length 40,4178 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "6a6cc9e8-2ef5-4fb3-b95f-5dd6622af205"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}

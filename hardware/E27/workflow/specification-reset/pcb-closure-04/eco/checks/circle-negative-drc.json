@@ -1,0 +1,238 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T00:44:05",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "ECO04_land_geometry.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of BR1",
+                    "pos": {
+                        "x": 47.25,
+                        "y": 17.25
+                    },
+                    "uuid": "260c8b22-a052-41df-ba4c-10447fc30eaa"
+                },
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of T1",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 71.25
+                    },
+                    "uuid": "1516869d-fdcd-4c14-a4cf-135212cd149c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 3 [/PRIMARY_GND] of BR1",
+                    "pos": {
+                        "x": 52.75,
+                        "y": 22.75
+                    },
+                    "uuid": "198f3acb-eaef-4b0a-afd5-a19fdb85c7a6"
+                },
+                {
+                    "description": "Pad 5 [/PRIMARY_GND] of U1 on F.Cu",
+                    "pos": {
+                        "x": 21.3,
+                        "y": 20.0
+                    },
+                    "uuid": "16c6b67b-da51-46f3-a02c-9f22c5427f91"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/PRIMARY_GND] of T1",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 71.25
+                    },
+                    "uuid": "9b357296-f0e1-438d-882e-eb26ea103ea7"
+                },
+                {
+                    "description": "PTH pad 3 [/PRIMARY_GND] of BR1",
+                    "pos": {
+                        "x": 52.75,
+                        "y": 22.75
+                    },
+                    "uuid": "198f3acb-eaef-4b0a-afd5-a19fdb85c7a6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 5 [/DRAIN] of T1",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 71.25
+                    },
+                    "uuid": "aa27dfbe-9833-4cbf-ae63-8f421331ac90"
+                },
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 24.2
+                    },
+                    "uuid": "568ea03b-605b-4a1a-8507-ce0eb9084c2a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/GATE] of Q1",
+                    "pos": {
+                        "x": 82.46,
+                        "y": 20.0
+                    },
+                    "uuid": "18646020-48cd-4859-95c5-238b79767688"
+                },
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 24.2
+                    },
+                    "uuid": "568ea03b-605b-4a1a-8507-ce0eb9084c2a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/GATE] of Q1",
+                    "pos": {
+                        "x": 82.46,
+                        "y": 20.0
+                    },
+                    "uuid": "18646020-48cd-4859-95c5-238b79767688"
+                },
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 24.2
+                    },
+                    "uuid": "568ea03b-605b-4a1a-8507-ce0eb9084c2a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 24.2
+                    },
+                    "uuid": "568ea03b-605b-4a1a-8507-ce0eb9084c2a"
+                },
+                {
+                    "description": "PTH pad 3 [/SENSE] of Q1",
+                    "pos": {
+                        "x": 87.54,
+                        "y": 20.0
+                    },
+                    "uuid": "78795914-feb8-4621-94bd-cc90efd115fa"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'DRAFT_PRIMARY_HV_QUIET_3mm_UNRESOLVED' clearance 3,0000 mm; actual 2,7083 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 24.2
+                    },
+                    "uuid": "568ea03b-605b-4a1a-8507-ce0eb9084c2a"
+                },
+                {
+                    "description": "PTH pad 3 [/SENSE] of Q1",
+                    "pos": {
+                        "x": 87.54,
+                        "y": 20.0
+                    },
+                    "uuid": "78795914-feb8-4621-94bd-cc90efd115fa"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Footprint 'STF2N80K5_Stagger5p08_PROJECT' does not match copy in library 'Velluneo_ECO04'",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 20.0
+                    },
+                    "uuid": "696baf25-4ffc-481f-8564-b778b22f2514"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        }
+    ]
+}

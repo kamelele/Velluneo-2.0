@@ -1,0 +1,182 @@
+{
+  "basis": {
+    "url": "https://www.ti.com/lit/ds/symlink/ucc28711.pdf",
+    "document": "SLUSB86C",
+    "section": "11.1",
+    "page": 23,
+    "retained_sha256": "762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248"
+  },
+  "reference_aliases": "Cards refer to actual Velluneo refs, not TI example numbering. Numeric search weights do not come from TI.",
+  "status": "Preparation only; not approved spatial constraints or routing adapter input.",
+  "cards": [
+    {
+      "id": "DRV-POWER",
+      "nets": [
+        "BULK_POS",
+        "DRAIN",
+        "SENSE",
+        "PRIMARY_GND"
+      ],
+      "path": [
+        "C1.1",
+        "T1.1",
+        "T1.5",
+        "Q1.2/4",
+        "Q1.3",
+        "R9.1",
+        "R9.2",
+        "C1.2"
+      ],
+      "instruction": "Minimize primary power loop. Keep IC/signal return out of Q1/R9 pulse-current path; signal and power grounds meet at C1 negative. Model real vias/width/copper heating, not just straight links."
+    },
+    {
+      "id": "DRV-LOCAL-BIAS",
+      "nets": [
+        "VDD",
+        "PRIMARY_GND"
+      ],
+      "path": [
+        "U1.1",
+        "C2.1 or C3.1",
+        "C2.2 or C3.2",
+        "U1.4"
+      ],
+      "instruction": "At least one bypass must be physically local to U1.1/4 with short return. Final proposal establishes1.412mm projected endpoints on opposite faces, but vias and physical loop remain to qualify. Exact effective bypass and startup charge remain source-bound; do not replace C0G by an unqualified tiny ceramic."
+    },
+    {
+      "id": "DRV-VS",
+      "nets": [
+        "AUX_RAW",
+        "VS",
+        "PRIMARY_GND"
+      ],
+      "path": [
+        "T1.4",
+        "R4.1",
+        "R4.2",
+        "U1.2",
+        "R5.1",
+        "R5.2",
+        "U1.4"
+      ],
+      "instruction": "Place R4/R5 VS junction near U1.2 and quiet GND. Keep away from DRAIN/CLAMP; short direct VS route, avoid parallel high-dv/dt conductors."
+    },
+    {
+      "id": "DRV-CS-KELVIN",
+      "nets": [
+        "SENSE",
+        "CS",
+        "PRIMARY_GND"
+      ],
+      "path": [
+        "R9.1",
+        "R6.1",
+        "R6.2",
+        "U1.5",
+        "U1.4",
+        "R9.2"
+      ],
+      "instruction": "Dedicated sense takeoff at R9 pads and quiet return. No shared gate/power current in CS branch; verify actual R6 placement and full source/ground loop."
+    },
+    {
+      "id": "DRV-GATE",
+      "nets": [
+        "DRV",
+        "GATE",
+        "SENSE"
+      ],
+      "path": [
+        "U1.6",
+        "R7.1",
+        "R7.2",
+        "Q1.1",
+        "R8.1",
+        "R8.2",
+        "Q1.3"
+      ],
+      "instruction": "Compact gate loop with defined source return and R7 near gate. Native Q1.2/4 are same DRAIN, not duplicate independent devices."
+    },
+    {
+      "id": "DRV-CLAMP",
+      "nets": [
+        "DRAIN",
+        "CLAMP",
+        "BULK_POS"
+      ],
+      "path": [
+        "T1.5",
+        "D1.2",
+        "D1.1",
+        "TVS1.1",
+        "TVS1.2",
+        "T1.1"
+      ],
+      "instruction": "Short clamp connections; retain dynamic VDS/TVS/leakage/fault bounds. No assumption that cold static TVS or nominal leakage qualifies MOS SOA."
+    },
+    {
+      "id": "DRV-AUX",
+      "nets": [
+        "AUX_RAW",
+        "AUX_RECT",
+        "VDD",
+        "PRIMARY_GND"
+      ],
+      "path": [
+        "T1.4",
+        "D2.2",
+        "D2.1",
+        "R10.1",
+        "R10.2",
+        "C2.1",
+        "C2.2",
+        "T1.2"
+      ],
+      "instruction": "Compact rectifier/charge loop, local bias filtering; include finite P/A/S coupling and actual HV startup source in startup/retry assessment."
+    },
+    {
+      "id": "DRV-OUTPUT",
+      "nets": [
+        "SECONDARY_RAW",
+        "OUTPUT_POS",
+        "OUTPUT_NEG"
+      ],
+      "path": [
+        "T1.10",
+        "D3.2",
+        "D3.1",
+        "C4.1",
+        "C4.2",
+        "T1.6"
+      ],
+      "instruction": "Compact secondary rectification loop and local output cap. Output J2 wires/strain relief and abuse states stay explicit; do not infer a selected dock from wire pads."
+    },
+    {
+      "id": "DRV-TEMP",
+      "nets": [
+        "NTC",
+        "PRIMARY_GND"
+      ],
+      "path": [
+        "RT1.1",
+        "U1.3",
+        "RT1.2",
+        "U1.4"
+      ],
+      "instruction": "RT1 position must follow actual thermal hotspot, gradient and lag; short trace alone is insufficient. Open sensor removes channel; independent backup candidate not applied."
+    },
+    {
+      "id": "DRV-BARRIER",
+      "nets": [
+        "PRIMARY_DOMAIN",
+        "SECONDARY_DOMAIN"
+      ],
+      "path": [
+        "T1 core/yokes/leadouts",
+        "PCB copper and slots",
+        "J2 conductors",
+        "touchable surfaces"
+      ],
+      "instruction": "Maintain all-path air/surface/solid insulation to adopted actual source limits. Planning9.35mm projected metal distance is not a normative pass; NC pads and core/yokes are included in physical assessment."
+    }
+  ]
+}

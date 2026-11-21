@@ -1,0 +1,804 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo E27 repairable LED lamp",
+  "revision": "specification-contract-rectangular-driver-6",
+  "subsystems": [
+    {
+      "id": "BASE",
+      "kind": "pcb",
+      "owner": "Coordinator: isolated driver design"
+    },
+    {
+      "id": "PANEL",
+      "kind": "pcb",
+      "owner": "Coordinator: replaceable LED panel design"
+    },
+    {
+      "id": "BODY",
+      "kind": "enclosure",
+      "owner": "Owner/workshop integration; coordinator interface definition"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R-PURPOSE",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Retain the base when the LED panel fails; replace the complete panel.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Demonstrate panel replacement and restored operation on the integrated prototype; release/integration.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Retain the base when the LED panel fails; replace the complete panel.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Retain the base when the LED panel fails; replace the complete panel.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Retain the base when the LED panel fails; replace the complete panel.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-SUPPLY",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "E27 nominal230Vac50Hz; normaldesign/test207–253Vac49–51Hz; no120V support.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Verify cold/hot startup and normal/fault behavior at declared line/ambient corners; start≤1s and ≥90% stabilizedflux; no repetitive healthy restarts.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "E27 nominal230Vac50Hz; normaldesign/test207–253Vac49–51Hz; no120V support.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-LIGHT",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "750–850 lm emitted by each complete lamp variant with its diffuser fitted (owner accepted).",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Whole lamp with diffuser750–850lm. Baseline230Vac50Hz/25±1C/baseup;≥30minandthree5minspacedreadingschange<0.5%; record calibration/uncertainty/sample IDs.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "PANEL",
+          "object": "750–850 lm emitted by each complete lamp variant with its diffuser fitted (owner accepted).",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "750–850 lm emitted by each complete lamp variant with its diffuser fitted (owner accepted).",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-CCT",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Panels in nominal 2700 K, 4000 K and 6500 K; brightest/dimmest flux ratio ≤1.10 and CRI Ra ≥80 (owner accepted).",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "CCT2700±150K/4000±200K/6500±300K;Ra≥80;eachlamp750–850lm;brightest/dimmest≤1.10 on samebase and matched stabilized conditions. One4000Kprototype does not verify family.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "PANEL",
+          "object": "Panels in nominal 2700 K, 4000 K and 6500 K; brightest/dimmest flux ratio ≤1.10 and CRI Ra ≥80 (owner accepted).",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Panels in nominal 2700 K, 4000 K and 6500 K; brightest/dimmest flux ratio ≤1.10 and CRI Ra ≥80 (owner accepted).",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-COMPAT",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "One base accepts all three panels without settings, switches or user configuration.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Freeze a compatible electrical/mechanical interface before schematic/placement; demonstrate each variant on the same base.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "One base accepts all three panels without settings, switches or user configuration.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "One base accepts all three panels without settings, switches or user configuration.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "One base accepts all three panels without settings, switches or user configuration.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-REPLACE",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Tool-free intuitive replacement; prevent incorrect installation. Minimum 50 complete panel replacement and diffuser reclosing cycles without damage to mountings or loss of reliable electrical contact.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Freeze mechanical keying/retention and contact sequence before placement; assess wrong orientation, partial insertion and at least 50 full replacement/reclosing cycles. Keep 100 cycles as a stretch goal only.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "PANEL",
+          "object": "Tool-free intuitive replacement; prevent incorrect installation. Minimum 50 complete panel replacement and diffuser reclosing cycles without damage to mountings or loss of reliable electrical contact.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Tool-free intuitive replacement; prevent incorrect installation. Minimum 50 complete panel replacement and diffuser reclosing cycles without damage to mountings or loss of reliable electrical contact.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-OFFLINE",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Onlypanel/mountaccessibleafterdiffuserremoval;driverbehindcover. Offlineunscrewedservicegoals≤5VDC/≤0.5mJ/≤45C; derivewaitfromwholeassemblyworstcasecooling/discharge,includingfaults;notuniversalstandardlimits.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Replacement only after unscrewing from the socket and waiting for cooling/discharge. After diffuser removal only the panel and mounting are accessible; the driver remains behind a separate base cover.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-ENV",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Dry domestic interiors, ambient 10–40°C; all operating orientations, including base up, base down and horizontal; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Ambient range and all orientations accepted; define ventilation assumptions at specification; identify and test thermal worst-case orientation before release.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Dry domestic interiors, ambient 10–40°C; all operating orientations, including base up, base down and horizontal; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Dry domestic interiors, ambient 10–40°C; all operating orientations, including base up, base down and horizontal; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Dry domestic interiors, ambient 10–40°C; all operating orientations, including base up, base down and horizontal; open or ventilated fixtures. Owner confirmed this narrower first-prototype range after the retail comparison. Closed fixtures, damp locations and outdoor use are outside prototype scope.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-DIFFUSER",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Removable milky diffuser hides individual LEDs and provides broad side illumination assessed against an ordinary milky E27 lamp around 800 lm. Emission towards the cap is not required.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "CoreProA60~806lmreferenceidentified in finalizationU14; matchednormalized90degreeintensity≥75%reference;individualLEDpointsnotdistinguishableat0.5m/0,45,90degrees/twoazimuths/100–300lxafteropticaltestreadiness;capdirectionnotrequired.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "PANEL",
+          "object": "Removable milky diffuser hides individual LEDs and provides broad side illumination assessed against an ordinary milky E27 lamp around 800 lm. Emission towards the cap is not required.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Removable milky diffuser hides individual LEDs and provides broad side illumination assessed against an ordinary milky E27 lamp around 800 lm. Emission towards the cap is not required.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-FAULT",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "An open/failed panel, missing panel and shorted panel must not damage the base.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Missing/open/hardshortpanel must not damagebase or needfuse/manualreset; offlinepanelswap+powercycle restoresoperation. Initial24hfaultscreen aftersteadystate, repeat recovery; individualLED/contact/partialinsertionfaultcases before schematicacceptance.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "An open/failed panel, missing panel and shorted panel must not damage the base.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-EMPTY",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "The energized base can remain without a panel without damage or overheating.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Continuous absentpaneloperation must not damagebase/overheat;initial24hscreenaftersteadystate,recoveryafterofflinepanelreplacement/powercycle. No livereplacement.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "The energized base can remain without a panel without damage or overheating.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-THERMAL",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Protect against overheating using a justified simple implementation.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "AutomaticNTCinhibition/retry direction; select justifiedtrip/restart/lag andsensoropen/shortresponse before schematicacceptance, thenmeasure actualpart/materialprotection.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Protect against overheating using a justified simple implementation.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Protect against overheating using a justified simple implementation.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Protect against overheating using a justified simple implementation.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-USE",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Design for 8–12 hours/day, including long continuous sessions.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Establish continuous-duty thermal test conditions before schematic; a timetable is not a required forced shutdown.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Design for 8–12 hours/day, including long continuous sessions.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Design for 8–12 hours/day, including long continuous sessions.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Design for 8–12 hours/day, including long continuous sessions.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "measurement",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-BASE-LIFE",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Five-year base life is an acceptable design target; ten years is aspirational.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Assess parts at measured electrical/thermal stress. At 8–12 h/day: 14,600–21,900 h in five years; 29,200–43,800 h in ten. Calendar aging also matters. Agree failure/end-of-life definition before schematic. Do not claim years of demonstrated service from short tests.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Five-year base life is an acceptable design target; ten years is aspirational.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "calculation",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-PANEL-LIFE",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Panel design target: 15,000 operating hours while retaining at least 70% of initial luminous flux (L70 target), accepted by owner.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Evaluate exact LED lifetime data at measured operating conditions and document the assessment and uncertainty. A short prototype test does not demonstrate 15,000 h. Define sample/population criteria, catastrophic-failure treatment and maintenance measurement conditions at specification.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "PANEL",
+          "object": "Panel design target: 15,000 operating hours while retaining at least 70% of initial luminous flux (L70 target), accepted by owner.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-FEATURES",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Basic full-output on/off lighting; no Wi-Fi, app or added smart functions.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Confirm feature scope at specification; check normal behavior before release. Wall-dimmer compatibility is excluded from the primary design.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Basic full-output on/off lighting; no Wi-Fi, app or added smart functions.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Basic full-output on/off lighting; no Wi-Fi, app or added smart functions.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Basic full-output on/off lighting; no Wi-Fi, app or added smart functions.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-SIZE",
+      "revision": "owner-compact-2026-11-17",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+      "basis": "compact-60/owner-size-decision.md; actual latest owner instruction in this conversation",
+      "acceptance": "Before placement provide tolerance-aware complete mechanical envelope, component/pin/body fit, cooling and replacement access against diameter60mm/fullheight120mm. Quantify any deviation and obtain actual owner acceptance; no larger alternative is selected.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+          "path": "compact-60/owner-size-decision.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+          "path": "compact-60/owner-size-decision.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Target overall lamp diameter60mm and fullheight120mm, including E27 cap. Approximately170mm proposal rejected; approach60x120 without an invented allowable overrun.",
+          "path": "compact-60/owner-size-decision.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-COST",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Prefer rational cost and future manufacturability; no fixed prototype budget.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Compare BOM, sourcing, assembly and tooling costs during architecture and release reviews. No invented cost ceiling.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Prefer rational cost and future manufacturability; no fixed prototype budget.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Prefer rational cost and future manufacturability; no fixed prototype budget.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Prefer rational cost and future manufacturability; no fixed prototype budget.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-BUILD",
+      "revision": "interview-r9",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Prefer JLCPCB fabrication and populated PCB delivery; one LED colour assembled by JLCPCB is sufficient for the first prototype. All three colours need not be stocked/assembled there now. Laboratory assembly remains a fallback; future three-colour common-base compatibility remains required.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Confirm actual service, exact parts/bins for at least one initial colour and any transformer/THT/manual work before process acceptance and release. Future colour variants may use another sourcing/assembly route. Housing and lamp assembly are separate.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Prefer JLCPCB fabrication and populated PCB delivery; one LED colour assembled by JLCPCB is sufficient for the first prototype. All three colours need not be stocked/assembled there now. Laboratory assembly remains a fallback; future three-colour common-base compatibility remains required.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Prefer JLCPCB fabrication and populated PCB delivery; one LED colour assembled by JLCPCB is sufficient for the first prototype. All three colours need not be stocked/assembled there now. Laboratory assembly remains a fallback; future three-colour common-base compatibility remains required.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Prefer JLCPCB fabrication and populated PCB delivery; one LED colour assembled by JLCPCB is sufficient for the first prototype. All three colours need not be stocked/assembled there now. Laboratory assembly remains a fallback; future three-colour common-base compatibility remains required.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-DEMO",
+      "revision": "interview-r11",
+      "owner": "Owner (product intent); coordinator (engineering implementation)",
+      "text": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
+      "basis": "requirements-and-plan.md sections 1–3 and dated owner decision records",
+      "acceptance": "Final deadline accepted: 30 September 2027. Agree detailed test scope and intermediate bookings; retain matched hardware revisions and actual reports. Commercial certification and sales release are not automatically included.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Deliver one complete, integrated, laboratory-tested and documented prototype with at least one colour no later than 30 September 2027. Completing all three colours by then is a stretch goal, not a deadline acceptance condition; iterations are allowed.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "R-SPEC-PACKET",
+      "revision": "accepted-scope-2026-11-17",
+      "owner": "Coordinator; owner stage decision",
+      "text": "Complete specification has reviewed product, safety, interfaces, fabrication/assembly, owned unknowns and test scope before schematic work.",
+      "basis": "requirements-and-plan.md r12; finalization/decision-packet.md frozen source; schematic-intent/owner-scope-acceptance.md",
+      "acceptance": "Owner scope acceptance2026-11-17 plus independently reviewed finalization criteria/direction and synchronized requirements/owned later gaps; no circuit or manufacturing qualification inferred.",
+      "gate": "specification",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Complete specification has reviewed product, safety, interfaces, fabrication/assembly, owned unknowns and test scope before schematic work.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Complete specification has reviewed product, safety, interfaces, fabrication/assembly, owned unknowns and test scope before schematic work.",
+          "path": "requirements-and-plan.md"
+        },
+        {
+          "subsystem": "BODY",
+          "object": "Complete specification has reviewed product, safety, interfaces, fabrication/assembly, owned unknowns and test scope before schematic work.",
+          "path": "requirements-and-plan.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "R-BOARD-FORM",
+      "revision": "owner-correction-2026-11-18",
+      "owner": "Owner (form decision); coordinator (verified dimensional implementation)",
+      "text": "BASE power-driver PCB rectangular; only PANEL LED insert round. Retain overall lamp target diameter60mm/fullheight120mm.",
+      "basis": "rectangular-driver-01/owner-form-decision.md; actual latest owner correction",
+      "acceptance": "Before placement show rectangular BASE and round PANEL in a coherent tolerance-aware assembly within R-SIZE. Choose and verify actual driver dimensions/orientation;32x60mm longitudinal trial and48mm panel are proposals, not owner-fixed dimensions or demonstrated fit.",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "BASE",
+          "object": "Rectangular driver PCB",
+          "path": "rectangular-driver-01/owner-form-decision.md"
+        },
+        {
+          "subsystem": "PANEL",
+          "object": "Round LED insert",
+          "path": "rectangular-driver-01/owner-form-decision.md"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [
+    {
+      "id": "U01",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Owner + technical reviewer",
+      "question": "P-OPTICS and P-CRI accepted by owner on 2026-11-14; P-SUPPLY and its technical basis remain open. Optical measurement conditions are still tracked at U14.",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "Owner accepted207–253Vac49–51Hz normaldesignrange and opticaltargets; frequencycorners/startupimplementation remains dueU06.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "U02",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Owner + coordinator",
+      "question": "Panel target 15,000 h / ≥70% initial flux accepted on 2026-11-14. Define sample/population acceptance, catastrophic-failure treatment, maintenance measurement conditions remain open. Minimum replacement life is now accepted as 50 complete panel-replacement/diffuser-reclosing cycles.",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "One P0 specimen;100h zero-failure/≥95%initialflux screen, not population/lifetimeproof; exactlifeassessment U07 and actualmeasurements U12 remain.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "U03",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Coordinator + owner",
+      "question": "External pre-fabrication electronics reviewer is not an owner prerequisite. Assign technical calculations/checks to the coordinator and four independent agent contexts; owner retains stage approval. Establish a feasible proposed fabrication/assembly route with unconfirmed constraints explicit. Name physical-test personnel before affected tests; detailed order evidence remains due at U11/U13.",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "JLC2layer1.6mm2ozENIG/SMDpopulationplusagreedTHT/customtransformer/manualfallback proposedandaccepted; technicalrolecoverage is recorded; order-specificprocessconfirmationU11/U13 remains.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "U04",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Technical reviewer + owner",
+      "question": "Select exact laboratory-demo scope versus external qualification; identify applicable product/safety/EMC/flicker requirements without assuming old limits.",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "Laboratorydemonstrator scope, applicablecompleteproduct/controlgear/module/EMC sourcefamilies andclassificationlead identifiedinfinalizationU04. Fullclauses/numericalimplementation/ENadoption/commercialqualification arenot claimed and remainU06/U11/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "U05",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Coordinator + independent reviewer",
+      "question": "Architecture A selected by owner: isolated CC driver in base, simple LED panel. Select/verify its LED and driver implementation using power, tolerance, thermal and cost calculations; no fixed LED count or current.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "U06",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Electrical reviewer + laboratory lead",
+      "question": "Implement the product-level safety/operating criteria from U16: determine numerical circuit limits, discharge/cooling implementation, short duration/recovery, hot/cold startup and disturbance response.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "U07",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Coordinator + laboratory lead",
+      "question": "Develop thermal/life calculations and detailed optical measurement procedures using the specification decisions from U14/U15; define base lifetime/end-of-life basis.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "U08",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Electrical/mechanical reviewers",
+      "question": "Select overtemperature behavior, thresholds and protection-fault response (including sensor faults only if a sensor is selected); define absence/reversal/partial-contact abuse cases even though live replacement is forbidden.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "U09",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Coordinator + independent reviewer + owner decision",
+      "question": "Freeze panel/base pin map and independently reviewed intended connectivity with exact datasheet/pin/footprint basis.",
+      "blocks_stage": "schematic",
+      "status": "open"
+    },
+    {
+      "id": "U10",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Mechanical owner (to assign) + coordinator",
+      "question": "Freeze preliminary enclosure envelope, heat path/contact, insulation materials, dimensions, heights, keying and retention.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "U11",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Coordinator + supplier",
+      "question": "Confirm actual stackup, copper, materials and service limits as needed for insulation/layout/assembly.",
+      "blocks_stage": "placement",
+      "status": "open"
+    },
+    {
+      "id": "U12",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Laboratory lead + owner",
+      "question": "Confirm available calibrated instruments, personnel, samples, test limits and stop conditions. Release evidence must cover actual operating/fault conditions.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "U13",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Coordinator + supplier + owner",
+      "question": "Establish BOM availability, exact costs, release outputs, matched revisions and test/programming/assembly instructions.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "U14",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Owner + coordinator + laboratory lead",
+      "question": "Owner accepted an ordinary milky approximately 800 lm E27 lamp as distribution reference, without cap-direction emission. Select exact reference/comparison conditions; finalize CCT tolerances, stabilized optical conditions and sample plan.",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "CCTwindows, identifiedCoreProreference,stabilization/sample/matchedpolar/LEDpointappearance methods set infinalizationU14; physicalphotometry remains dueR-LIGHT/R-CCT/R-DIFFUSER/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "U15",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Owner + coordinator + technical reviewer",
+      "question": "Ambient 10–40°C and all orientations are accepted. Define open/ventilated-fixture assumptions and the thermal worst-case analysis/test plan at specification. Actual worst-case measurements belong to R-ENV/U12 before the affected tests and release, not before design.",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "Openbarelampholder/stillair/200mmclearance and10/25/40C×3orientations+anyworse,≥3h/steady<1K/hfor1h planned; actualworstcase/materialtemperatures remainU07/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "U16",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Electrical reviewer + owner + laboratory lead",
+      "question": "Owner accepted separate base shielding: only panel/mounting accessible after diffuser removal. Define remaining normal/fault, recovery, residual-energy and cooling criteria through coordinator and independent technical reviews; implementation follows U06.",
+      "blocks_stage": "specification",
+      "status": "resolved",
+      "resolution": "Separatecover/offlineaccessgoals, faultscreenandrecoverycriteriaandNTCretrydirection set; thresholds,sensorfaults,insulationconstruction andwholeassemblywaitimplementation remainU06/U08/U09/U10/U12.",
+      "evidence_ids": [
+        "E-SPEC-SCOPE-REVIEW"
+      ]
+    },
+    {
+      "id": "U17",
+      "record_id": "R-SPEC-PACKET",
+      "field": "acceptance",
+      "owner": "Owner + laboratory lead",
+      "question": "Final handover deadline 30 September 2027 accepted; the proposed staged planning baseline is recorded. Confirm actual laboratory/iteration bookings before affected work/tests, without blocking ordinary design on bookings.",
+      "blocks_stage": "release",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-SPEC-SCOPE-REVIEW",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Coordinator actual scope-only delta review for owner board-form correction; earlier reviews retain their old digest",
+      "artifact": "rectangular-driver-01/scope-delta-review.md",
+      "sha256": "66ff480896b66d809d5cb486ff3f2e92f9b4f317ba1dc2862a415027726e0da9",
+      "intent_digest": "768a28e8d82a226fa9f74b071090a379c8236591bfbed90e4328cdad1d761587",
+      "inputs": [
+        {
+          "path": "requirements-and-plan.md",
+          "sha256": "a0c2867d511313741495cf9d2696590e756c0d6a335d7180df5409cc6532b34e"
+        },
+        {
+          "path": "finalization/decision-packet.md",
+          "sha256": "ea6ef879ed417a6ced7360e1434ce873637becf548e33cf261296bcfa9401fba"
+        },
+        {
+          "path": "finalization/review.md",
+          "sha256": "112fc650642c2871de6ddb6a1612b7ad469f8dfe5b9a27d14c0b782f3ae5d4ba"
+        },
+        {
+          "path": "schematic-intent/owner-scope-acceptance.md",
+          "sha256": "724c17767acef7f4768c870529746470e837d427348d708051a41b3c17cc2500"
+        },
+        {
+          "path": "scope-reviews/reality.md",
+          "sha256": "3896fe9e679d1484079fb049e8b9629384253a244842fb520d8bb7b498419aae"
+        },
+        {
+          "path": "scope-reviews/simplicity.md",
+          "sha256": "c6abf6951d2f69c354c69b6ff20d3f818529b5c61bf6b4f3bebe1cc2914d0073"
+        },
+        {
+          "path": "scope-reviews/completeness.md",
+          "sha256": "aaf6b0c0f2f4a14c2a490445e89a7c1fa5e12b4788f76ed9114c4250d06f0daf"
+        },
+        {
+          "path": "scope-reviews/change.md",
+          "sha256": "d45ab378ee3dd1d0759bd20bf55f2cc12b8156bdb88a9b4fb39bb83179521df5"
+        },
+        {
+          "path": "compact-60/owner-size-decision.md",
+          "sha256": "217f83108249427b8f3012c3a9d5a2de35722207bbeacbc078778620512ff5d0"
+        },
+        {
+          "path": "rectangular-driver-01/owner-form-decision.md",
+          "sha256": "76a2f88288eef7272579e43f2662adc110680982ee5c8d20a94ea1edd2f481a6"
+        }
+      ]
+    }
+  ]
+}

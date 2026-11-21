@@ -1,0 +1,7 @@
+# SCHURTER UMT-H native web retrieval record
+
+Retrieved2026-11-17. Primary originalPDF https://www.schurter.com/en/datasheet/typ_UMT-H.pdf ; PDFpage2 has Dimension[mm] andSolderingpads. Primaryparent https://www.schurter.com/en/datasheet/UMT-H lists exact3403.0268.23. Primarypadimage https://www.schurter.com/_ImagePool_/Technik/IM0012660_small.jpg ; bodyimage https://www.schurter.com/_ImagePool_/Technik/IM0012659_small.jpg .
+
+Web-source refs: turn160view2/turn163view0 contain extractedofficialPDFdimensions; turn165view0 (find against turn163search3) contains source drawingdescription atlines264–294. It transcribes solderingpadwidth3.75mm,height5.6mm,innergap10mm; bodyoverall15.4mm,endview5.35mm,with no numeric tolerances established. Source PDFpage2 drawing not a manufacturer-numbered two-pin map; terminals are interchangeable and local1/2assignment is project-owned.
+
+Localurllibfetches oforiginalPDF,English/GermanlegacyPDFurls,with/withoutwww,andbothsmall/fullsizeofficialJPGs returnedHTTP403. Webscreenshot commands returned onlytextreference<<ImageDisplayed>> tothisagent,withoutactualimagecontent; **this is not a completed direct visual check**. No hashoforiginalPDF, revision-dateclaim,maximumqualifiedbodyenvelope or selfapproval is asserted. The source-text transcription is enough to propose candidate copper, while originalimagevisual confirmation andsourcebyteidentity remain open. Coordinates arederived locally: (10+3.75)/2=6.875mm; two3.75×5.6mmrectanglesatX±6.875,Y0,overall17.5mm.

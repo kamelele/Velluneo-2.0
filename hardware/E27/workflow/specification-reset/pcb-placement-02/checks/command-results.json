@@ -1,0 +1,207 @@
+[
+  {
+    "name": "native-netlist",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\checks\\current-netlist.xml",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\Velluneo_specification_reset.kicad_sch"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "saved-board-parity",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\verify_board.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "scalar-geometry",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\verify_geometry.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "native-drc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\checks\\native-drc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\Velluneo_specification_reset.kicad_pcb"
+    ],
+    "exit_code": 5
+  },
+  {
+    "name": "native-front",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--layers",
+      "F.Cu,F.SilkS,Edge.Cuts,Dwgs.User",
+      "--mode-single",
+      "--page-size-mode",
+      "2",
+      "--exclude-drawing-sheet",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\native-front.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\Velluneo_specification_reset.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "native-back",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "svg",
+      "--layers",
+      "B.Cu,B.SilkS,Edge.Cuts,Dwgs.User",
+      "--mode-single",
+      "--page-size-mode",
+      "2",
+      "--exclude-drawing-sheet",
+      "--mirror",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\native-back.svg",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\Velluneo_specification_reset.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "render-top",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "render",
+      "--width",
+      "1400",
+      "--height",
+      "1100",
+      "--side",
+      "top",
+      "--rotate",
+      "325,0,30",
+      "--perspective",
+      "--zoom",
+      ".9",
+      "--background",
+      "opaque",
+      "--quality",
+      "basic",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\.work\\native-top.png",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\Velluneo_specification_reset.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "render-bottom",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "render",
+      "--width",
+      "1400",
+      "--height",
+      "1100",
+      "--side",
+      "bottom",
+      "--rotate",
+      "325,0,30",
+      "--perspective",
+      "--zoom",
+      ".9",
+      "--background",
+      "opaque",
+      "--quality",
+      "basic",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\.work\\native-bottom.png",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\Velluneo_specification_reset.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "doctor",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "doctor"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "hardware/E27/workflow/specification-reset"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "erc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\checks\\erc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-placement-02\\Velluneo_specification_reset.kicad_sch"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "requirements",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "work-check",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 2
+  }
+]

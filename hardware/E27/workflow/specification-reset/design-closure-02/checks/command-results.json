@@ -1,0 +1,115 @@
+[
+  {
+    "name": "cooling",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\design-closure-02\\cooling\\calculate.py",
+      "--source-dir",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\closure-cooling-sources"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "housing",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\design-closure-02\\cooling\\housing-branch.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "controller-verification",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\design-closure-02\\controller\\verify.py",
+      "--source-dir",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\closure-controller-sources"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "doctor",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "doctor"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "hardware/E27/workflow/specification-reset"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "capture-contract",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\eco01-capture\\verify_capture.py",
+      "--bom",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\library-source-03\\BOM.csv",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\design-closure-02\\checks\\capture-contract.json"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "erc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\design-closure-02\\checks\\erc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\Velluneo_specification_reset.kicad_sch"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "requirements",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1
+  },
+  {
+    "name": "work-check",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2
+  }
+]

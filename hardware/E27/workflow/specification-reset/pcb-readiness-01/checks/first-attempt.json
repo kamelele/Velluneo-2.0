@@ -1,0 +1,68 @@
+[
+  {
+    "name": "thermal",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-readiness-01\\thermal\\calculate.py",
+      "--source-dir",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\readiness-sources"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "expected_result": true,
+    "stdout": "thermal.stdout.log",
+    "stderr": "thermal.stderr.log"
+  },
+  {
+    "name": "service-energy",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-readiness-01\\service-energy.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "expected_result": true,
+    "stdout": "service-energy.stdout.log",
+    "stderr": "service-energy.stderr.log"
+  },
+  {
+    "name": "startup-verification",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-readiness-01\\startup-protection\\verify.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "expected_result": true,
+    "stdout": "startup-verification.stdout.log",
+    "stderr": "startup-verification.stderr.log"
+  },
+  {
+    "name": "doctor",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "doctor"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "expected_result": true,
+    "stdout": "doctor.stdout.log",
+    "stderr": "doctor.stderr.log"
+  },
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 0,
+    "expected_result": false,
+    "stdout": "connectivity.stdout.log",
+    "stderr": "connectivity.stderr.log"
+  }
+]

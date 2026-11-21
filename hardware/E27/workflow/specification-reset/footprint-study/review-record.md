@@ -1,0 +1,11 @@
+# FOOTPRINT-01 final candidate-library review
+
+2026-11-17. All four actual distinct read-only contexts inspected the same36 frozen inputs (manifestSHA256a3f351dd2f27b40ae531ba18f56a3d6c625698d1f3a623b64981dce71ee745f2). Their full reports are reviews/reality.md, simplicity.md, completeness.md and change.md. No missing role is simulated and neither implementer is counted as a reviewer.
+
+Reality/root/spec_reality independently checked all15 pad coordinate/size/function tuples against native TI/Diodes/ST drawings, including UCC's absent lead position, MB polarity and SOT223 tab4. Completeness/root/spec_completeness reconciled current assignments/BOM/native export and tracked module inventories. Overengineering/root/spec_simplicity inspected the need for dedicated definitions and actual rendered PNGs. Change/root/spec_change verified graph/source boundaries, assignments and the saved native export. All checked36hashes and recommend bounded candidate-library transfer only. No independent reviewer reran the native toolkit or the complete previous analog studies.
+
+No new bounded-transfer blocker was found. SCH-LIB-001 is partially addressed for three of28 source-backed copper candidates, not closed for complete physical/process qualification. Courtyard/mask/paste/assembly, remaining25footprints, transformer, interfaces and every pre-existing electrical/model/thermal/safety major retain their scope. SCH-ANN-001 remains open for nonnumeric-reference export warning. Requirements schematic and full-work configuration failures remain visible.
+
+The coordinator's actual commands show native footprint loading/geometry, SVG/PDF export, approved physical graph and ERC passes. Later package-check.json and package-open-check.json separately record actual archive CRC/byte checks and native geometry/ERC on a fresh extraction. They are coordinator evidence outside the frozen design inputs, not additional reviewer executions. Lifecycle/index metadata summarizes the same inspected source state; all36frozen bytes remain unchanged.
+
+This is continued reversible schematic/library correction, not a schematic-stage decision, placement, order or physical test. Only the owner grants stage approval; none is manufactured here. Prior initial-capture snapshot/reviews remain historical at their original Git commit and are not rehashed into current acceptance.

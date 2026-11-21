@@ -1,0 +1,58 @@
+VELLUNEO JLC14 — JAK UZYSKAĆ WYCENĘ JLCPCB
+
+Pakiet obejmuje wycenę PCB oraz osobną ocenę możliwości montażu. Niczego jeszcze
+nie wysłano, nie wgrano na konto JLCPCB ani nie zamówiono.
+
+1. Rozpakuj Velluneo_JLC14_Quote_Handoff.zip.
+2. Otwórz https://cart.jlcpcb.com/quote. W polu „Add gerber file” wybierz tylko
+   Velluneo_JLC14_Gerber_Upload.zip. Nie wgrywaj tam całego pakietu zapytania.
+3. Ustaw: FR-4; 4 warstwy; 45 × 60 mm; 5 sztuk; Industrial/Consumer electronics;
+   1 projekt; Single PCB; 1.6 mm; Green; White; ENIG; Outer Copper 1 oz;
+   Inner Copper 0.5 oz; Remove Mark; Flying Probe Fully Test.
+   Poproś o dokładny stack JLC04161H-7628 i FR-4 Tg155. Szczegóły są również
+   w quote-settings.json. Jeśli opcja nie jest dostępna, uzgodnij ją z obsługą.
+4. Via Covering: „Epoxy-Filled & Capped”. Wszystkie 17 przelotek Ø0.300 mm
+   mają być wypełnione nieprzewodzącym epoksydem i zamknięte miedzią z obu stron.
+   Wszystkie 25 otworów do montażu elementów pozostaje otwartych.
+5. Wklej PCB-REMARK-PASTE.txt do „PCB Remark”. Jeśli pole nie mieści tekstu,
+   użyj PCB-REMARK-SHORT.txt i przekaż pełny opis obsłudze technicznej.
+   Nie pomijaj wymagań. JLCPCB zastrzega, że opisy PDF/TXT/Excel ukryte
+   w archiwum Gerber mogą być pomijane. Dlatego są też w uwagach i zapytaniu.
+6. Sprawdź podgląd: 4 warstwy miedzi, jeden obrys 45 × 60 mm i 42 otwory.
+   Nie ma otworów NPTH ani szczelin. „Velluneo_JLC14.sk” to pomocnicza mapa
+   17 przelotek do wypełnienia, a nie kolejna warstwa miedzi lub drugi obrys.
+   Przy błędnym rozpoznaniu plików przerwij ten krok i skontaktuj się z obsługą.
+7. Wyślij przygotowane zapytanie z JLCPCB-ENQUIRY-UNSENT.txt do support@jlcpcb.com,
+   gdy zdecydujesz się skontaktować z wykonawcą. Załącz pakiet zapytania lub
+   osobno Gerber ZIP oraz pliki support/ i assembly-feasibility/.
+   Zalecana jest ręczna ocena techniczna: standardowa tolerancja otworów JLCPCB
+   nie spełnia wymagania T1. Potrzebna jest pisemna odpowiedź na listę pytań.
+8. Dla osobnej wyceny gołego PCB pozostaw PCB Assembly i Stencil wyłączone.
+   Montaż wyceń osobno: 26 elementów SMT z obu stron oraz możliwość wykonania
+   5 operacji THT i 2 operacji przewodów. JLCPCB ma potwierdzić dokładne części,
+   dostępność, koszty i proces; nie zatwierdzono żadnych zamienników.
+9. Montaż dwustronny wymaga Standard PCBA oraz panelu technologicznego minimum
+   70 × 70 mm, szyn i znaczników pozycjonujących. Docelowa płytka nadal ma
+   45 × 60 mm. Wykonawca ma przedstawić panel, sposób rozdzielenia płytek,
+   liczbę dostarczonych sztuk i koszt do sprawdzenia.
+10. BOM/CPL w assembly-feasibility/ są plikami referencyjnymi do ręcznej wyceny.
+    Nagłówki odpowiadają JLCPCB, ale numery LCSC i korekty centroidów/obrotów
+    pod konkretne części nie są potwierdzone. Nie traktuj ich jako gotowego
+    zlecenia automatycznego montażu. Poproś o dokładne dopasowanie MPN/LCSC,
+    kontrolę polaryzacji i podgląd rozmieszczenia przed przyszłym montażem.
+
+WAŻNE WYMAGANIE OTWORÓW
+T1: 10 gotowych otworów 1.350 mm, wymagany zakres 1.300–1.400 mm.
+Standard JLCPCB +0.13/−0.08 mm daje 1.270–1.480 mm i nie jest zaakceptowany.
+Prosimy o dokładniejszą usługę ±0.050 mm dla wszystkich 25 otworów elementów
+oraz uzgodnienie rejestracji otworów i pól. Nazwa usługi może zawierać „Press-fit”,
+ale nasze otwory służą elementom lutowanym — nie złączom wciskanym.
+
+To zapytanie, nie zamówienie. Sama cena kalkulatora ani przyjęcie ZIP nie oznacza
+potwierdzenia specjalnych wymagań. Nie aktywuj płatnego doboru części bez osobnej
+decyzji. Nie przechodź do płatności ani zatwierdzenia produkcji.
+
+Jeśli później zamówienie zostanie zatwierdzone, wybierz „Confirm Production File”
+bez automatycznej akceptacji. JLCPCB zwykle przygotowuje te pliki po etapie
+zamówienia/płatności. Wcześniejszą ocenę DFM i ewentualną opłatę trzeba uzgodnić
+osobno; nie obiecujemy bezpłatnych filmów produkcyjnych przed zamówieniem.

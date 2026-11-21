@@ -1,0 +1,103 @@
+{
+  "kind": "mathematical conditional energy envelope and illustrative cooling sensitivity, not physical measurements or approved user instructions",
+  "proof": "If every stored-energy mode has E_dot<=-2E/tau_max and conversion is passive with no external source after unplugging, arbitrary redistribution still gives E_total(t)<=E0exp(-2t/tau_max). Vout<=sqrt(2E_total/Cout_min). Dedicated resistors establish capacitor-mode terms; a PSD magnetic L matrix obeys L/R<=trace(L)/min(R).",
+  "conditions": [
+    "R13 and both output bleeders remain intact in these three scenarios; this is not every single component fault.",
+    "All initial capacitor voltages are no greater than the stated loose rating ceilings450/50/63V, with total other initial stored energy<=1mJ. This does not rate the whole circuit for those voltages.",
+    "Cout total<=20.592uF and permanent base output capacitance>=8uF; any added panel/input storage must be included independently.",
+    "Trace of actual winding self-inductance matrix<=3mH and every winding DCresistance>=1mohm; omitted reactive modes must not have a slower energy-decay constant than the selectedtau. These are acceptance conditions, not a fresh physical measurement.",
+    "No battery/external backfeed, primary reinsertion, active negative resistance or energy source is present after unscrewing.",
+    "A missing R13, outputbleeder failure, winding fault or unbounded external panel capacitance requires another assessment; the proof cannot waive them."
+  ],
+  "storage": {
+    "Cbulk_max_F": 1.8e-05,
+    "Cdd_max_F": 9.89961e-07,
+    "Cout_total_max_F": 2.0592e-05,
+    "Cout_permanent_min_F": 8e-06,
+    "magnetic_tau_upper_condition_s": 3.0
+  },
+  "cases": [
+    {
+      "case": "two_bulk_branches",
+      "bulk_equivalent_R_max_ohm": 509478.99999999994,
+      "slowest_energy_tau_s": 9.170622,
+      "initial_energy_upper_J": 1.8656022752499999,
+      "energy_target_J": 9.999999999999999e-05,
+      "time_to5V_energy_envelope_s": 45.09160130598847,
+      "energy_upper_at100s_J": 6.300716361873335e-10,
+      "Vout_upper_at100s_V": 0.0125506138912339
+    },
+    {
+      "case": "one_bulk_branch_open",
+      "bulk_equivalent_R_max_ohm": 1018957.9999999999,
+      "slowest_energy_tau_s": 18.341244,
+      "initial_energy_upper_J": 1.8656022752499999,
+      "energy_target_J": 9.999999999999999e-05,
+      "time_to5V_energy_envelope_s": 90.18320261197694,
+      "energy_upper_at100s_J": 3.428502702407538e-05,
+      "Vout_upper_at100s_V": 2.927670875631147
+    },
+    {
+      "case": "one_bulk_bleeder_short",
+      "bulk_equivalent_R_max_ohm": 339652.6666666666,
+      "slowest_energy_tau_s": 6.113747999999999,
+      "initial_energy_upper_J": 1.8656022752499999,
+      "energy_target_J": 9.999999999999999e-05,
+      "time_to5V_energy_envelope_s": 30.061067537325645,
+      "energy_upper_at100s_J": 1.1579114884436575e-14,
+      "Vout_upper_at100s_V": 5.380314787360628e-05
+    }
+  ],
+  "electrical_design_screen_s_not_user_instruction": 100,
+  "cooling_sensitivities": [
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 30,
+      "time_to45C_s": 51.68299793223311
+    },
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 60,
+      "time_to45C_s": 103.36599586446621
+    },
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 120,
+      "time_to45C_s": 206.73199172893243
+    },
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 300,
+      "time_to45C_s": 516.829979322331
+    },
+    {
+      "initial_surface_C_hypothesis": 80,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 30,
+      "time_to45C_s": 62.383246250395075
+    },
+    {
+      "initial_surface_C_hypothesis": 80,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 60,
+      "time_to45C_s": 124.76649250079015
+    },
+    {
+      "initial_surface_C_hypothesis": 80,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 120,
+      "time_to45C_s": 249.5329850015803
+    },
+    {
+      "initial_surface_C_hypothesis": 80,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 300,
+      "time_to45C_s": 623.8324625039508
+    }
+  ],
+  "user_wait_not_selected": "An actual user wait is at least max(verified complete-assembly electrical discharge, verified cooling to45C) under accepted conditions, with measurement uncertainty and margins.100s is only this conditional electrical screen; cooler/hotter real structures can require longer."
+}

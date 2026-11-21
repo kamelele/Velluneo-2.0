@@ -1,0 +1,35 @@
+C17 assembly candidate - manual feasibility and quotation
+
+Quote five finished45x60boards: optionA28SMT on both faces; optionB addsT1/Q1/C1.
+J1/J2arewirepadpairs, not connectors; exclude harness from base quote. Full33list
+also identifies exact wire rawmaterial, but no cutlength/sleeve/strainrelief is released.
+No DNP electronicpositions. Do not substitute MPN, package, rating or suffix.
+
+BOM_28_SMT.csv and CPL_28_SMT.csv are matching JLC-style CSVs. All LCSC upload fields
+are blank pending exact vendor match. BOM_33_FULL.csv includes observed sourcing hints
+and purchase links, not reserved stock. Ask GlobalSourcing/Consignment feasibility;
+do not assume externally purchased parts are accepted or already in MyParts.
+
+CPL uses native footprint origins, positiveCCW normalized0..360degrees, mm and
+Top/Bottom. Both faces share top-viewXY; bottomX is NOT negated. Body centroid and
+supplier feeder-zero offsets must be checked for every package in placement preview.
+assembly-top/bottom.svg show native fab/padnumber orientation; bottom drawing is
+physically mirrored. All33nativepositions supplied separately for engineering reference.
+Request corrected machineCPL and marked polarities for independent approval.
+
+StandardPCBA minimum70x70mm exceeds the finished45x60board. Ask JLC to propose
+panel/rails/fiducials/tooling and tab locations outside finishedoutline; retain all
+existing copperclearances and no-copper band. No panel artwork is released here.
+Quote stencil/paste/reflow process after mixedpackage checks; original paste apertures
+are exported, not a processqualified stencil. Large factorySMD R1/BR1 and hybridC4
+need package/reflow/handling confirmation. C1/T1/Q1 areTHT, not pickandplaceSMT.
+
+T1=currentMYRRA74032,9pins,pin4absent. Reject wrongpinmap, oldbody substitute or
+forced insertion. Q1straightleads: lowestwide shoulder>=3mm abovePCB, bodybottom
+approx6.5mm, reservedheight29.7mm; agree controlled fixture/support and inspect before
+soldering/trim. No userleadforming or customtransformer winding. C1frontmounted,
+correctpolarity and>=2mm ventclearance. Follow operations.csv and dimensionedPDF.
+
+Before energizing verify every polarizedcomponent, connector/wire net, solderjoint,
+clearance, insulation, partlot and actualmechanical fit. Follow bring-up plan; no
+electrical/thermal/insulation test was performed by generating these files.

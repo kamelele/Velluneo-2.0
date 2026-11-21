@@ -1,0 +1,1698 @@
+{
+  "study": "VEL-CLAMP-01",
+  "date": "2026-11-16",
+  "assumptions": {
+    "R_nom_ohm": 99800,
+    "R_factors": [
+      0.98,
+      1.02
+    ],
+    "C_nom_F": 4.7e-08,
+    "C_effective_factors_assumed": [
+      0.9471499999999999,
+      1.05315
+    ],
+    "leakage_fraction_sensitivity": [
+      0.005,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "leakage_design_target_max": 0.02,
+    "bus_V": [
+      240,
+      280,
+      357.7960312803931
+    ],
+    "Vo_V": [
+      18,
+      21,
+      24,
+      27
+    ],
+    "Vd_output_V": [
+      0.5,
+      1.2
+    ],
+    "Lp_nom_H": 0.002304,
+    "Lp_factors": [
+      0.9,
+      1.1
+    ],
+    "Rcs_ohm": 2.37,
+    "Rcs_factors": [
+      0.99,
+      1.01
+    ],
+    "VCST_V": [
+      0.738,
+      0.78,
+      0.81
+    ],
+    "VCCR_V": [
+      0.318,
+      0.33,
+      0.343
+    ],
+    "clamp_diode_drop_V_assumed": [
+      0.7,
+      1.7
+    ],
+    "extra_commutation_V_assumed": 50,
+    "screening_drain_target_V": 700,
+    "MOSFET_absolute_V": 800,
+    "R_local_ambient_C_assumed": 105,
+    "R_power_70C_W_each": 1,
+    "R_zero_power_temperature_C": 155,
+    "capacitor_rated_DC_V": 630,
+    "capacitor_body_temperature_C_assumed": 105
+  },
+  "cases": 27648,
+  "normal_design_target_cases": 20736,
+  "normal_design_target_bounds": {
+    "cap_peak_V": [
+      97.39102890037076,
+      198.27813031364767
+    ],
+    "drain_screen_V": [
+      388.8911259629421,
+      607.0735850091428
+    ],
+    "resistor_each_average_upper_proxy_W": [
+      0.048097081429766736,
+      0.19951282643453208
+    ],
+    "resistor_each_peak_upper_W": [
+      0.048297361405828854,
+      0.2002005795237459
+    ],
+    "cap_voltage_pp_V": [
+      0.337295023070169,
+      0.9784559406324433
+    ],
+    "clamp_time_s": [
+      1.0807488260284422e-07,
+      2.5180831350386697e-07
+    ],
+    "capacitor_peak_dVdt_V_per_us": [
+      6.228716322033952,
+      7.755054544536348
+    ]
+  },
+  "all_sensitivity_bounds": {
+    "cap_peak_V": [
+      97.39102890037076,
+      270.538331599063
+    ],
+    "drain_screen_V": [
+      388.8911259629421,
+      679.3990707288118
+    ],
+    "resistor_each_average_upper_proxy_W": [
+      0.048097081429766736,
+      0.36950312516878914
+    ],
+    "resistor_each_peak_upper_W": [
+      0.048297361405828854,
+      0.3707514538114807
+    ],
+    "cap_voltage_pp_V": [
+      0.337295023070169,
+      1.3562601325150752
+    ],
+    "clamp_time_s": [
+      1.0807488260284422e-07,
+      3.4920733187666597e-07
+    ],
+    "capacitor_peak_dVdt_V_per_us": [
+      6.228716322033952,
+      7.755054544536348
+    ]
+  },
+  "worst_design_target_drain_case": {
+    "cap_trough_V": 196.789343916873,
+    "cap_peak_V": 197.57755372874965,
+    "clamp_time_s": 2.0296704481790848e-07,
+    "resistor_off_interval_W": 0.3777204333769339,
+    "resistor_peak_W": 0.3834815684058014,
+    "cap_voltage_pp_V": 0.7882098118766407,
+    "bus_V": 357.7960312803931,
+    "Vo_V": 27,
+    "Vd_output_V": 1.2,
+    "Vd_clamp_V": 1.7,
+    "leakage_fraction": 0.02,
+    "frequency_Hz": 54593.57853223592,
+    "Ip_A": 0.34522439585730724,
+    "Lleak_H": 5.0688000000000013e-05,
+    "C_F": 4.4516049999999996e-08,
+    "R_ohm": 101796.0,
+    "drain_screen_V": 607.0735850091428,
+    "resistor_each_average_upper_proxy_W": 0.19480453504399087,
+    "resistor_each_peak_upper_W": 0.19557559988695872,
+    "capacitor_peak_dVdt_V_per_us": 7.755054544536348
+  },
+  "resistor_each_allowed_W_at_assumed_105C": 0.5882352941176471,
+  "capacitor_catalogue_DC_rating_V": 630,
+  "capacitor_tolerance_temperature_range_F": [
+    4.4516049999999996e-08,
+    4.9498049999999994e-08
+  ],
+  "fault_train_sensitivities": [
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 611.1422332740183,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 610.977160609692,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 633.0526391080074,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 632.9779913491691,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 112,
+      "first_pulse_exceeding_800V_in_screen": 681,
+      "max_drain_over_1000_pulses_proxy_V": 806.5763576550639,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 124,
+      "first_pulse_exceeding_800V_in_screen": 758,
+      "max_drain_over_1000_pulses_proxy_V": 805.3149757484478,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 613.5862569512788,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 613.1783490078537,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 55,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 762.6416120138459,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 62,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 762.523763136807,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 32,
+      "first_pulse_exceeding_800V_in_screen": 91,
+      "max_drain_over_1000_pulses_proxy_V": 1037.4604865184376,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 0,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 36,
+      "first_pulse_exceeding_800V_in_screen": 101,
+      "max_drain_over_1000_pulses_proxy_V": 1035.035283044529,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 629.5171891083226,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 629.2767854362137,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 67,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 719.0316096793938,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 75,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 718.9287145249422,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 32,
+      "first_pulse_exceeding_800V_in_screen": 137,
+      "max_drain_over_1000_pulses_proxy_V": 888.6084729063068,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 36,
+      "first_pulse_exceeding_800V_in_screen": 153,
+      "max_drain_over_1000_pulses_proxy_V": 887.9280064229407,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 694.0293361813527,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 693.7188549853189,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 14,
+      "first_pulse_exceeding_800V_in_screen": 70,
+      "max_drain_over_1000_pulses_proxy_V": 844.3331773184073,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 15,
+      "first_pulse_exceeding_800V_in_screen": 77,
+      "max_drain_over_1000_pulses_proxy_V": 844.1891209339251,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 12,
+      "first_pulse_exceeding_800V_in_screen": 40,
+      "max_drain_over_1000_pulses_proxy_V": 1117.8252136066776,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 36.59444666977425,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 13,
+      "first_pulse_exceeding_800V_in_screen": 44,
+      "max_drain_over_1000_pulses_proxy_V": 1116.2525900620951,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 646.472157353011,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": null,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 646.2134165986901,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 40,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 733.606375561866,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 44,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 733.4986953881839,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 24,
+      "first_pulse_exceeding_800V_in_screen": 110,
+      "max_drain_over_1000_pulses_proxy_V": 901.7925504263759,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 27,
+      "first_pulse_exceeding_800V_in_screen": 122,
+      "max_drain_over_1000_pulses_proxy_V": 901.1963497801382,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 25,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 709.1866445895629,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 10000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 28,
+      "first_pulse_exceeding_800V_in_screen": null,
+      "max_drain_over_1000_pulses_proxy_V": 708.8598384471127,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 10,
+      "first_pulse_exceeding_800V_in_screen": 53,
+      "max_drain_over_1000_pulses_proxy_V": 857.6531928539919,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 33000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 11,
+      "first_pulse_exceeding_800V_in_screen": 59,
+      "max_drain_over_1000_pulses_proxy_V": 857.5048094305696,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.4516049999999996e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 9,
+      "first_pulse_exceeding_800V_in_screen": 33,
+      "max_drain_over_1000_pulses_proxy_V": 1130.3640342889405,
+      "model_invalid_before_1000_pulses": false
+    },
+    {
+      "Vo_V_assumed": 42,
+      "leakage_fraction": 0.05,
+      "frequency_Hz_assumed": 106000,
+      "C_F": 4.949805e-08,
+      "initial_clamp_V_assumed": 200,
+      "Ip_fault_A_proxy": 0.7561204759269383,
+      "first_pulse_exceeding_700V_screen": 10,
+      "first_pulse_exceeding_800V_in_screen": 37,
+      "max_drain_over_1000_pulses_proxy_V": 1128.9120698697361,
+      "model_invalid_before_1000_pulses": false
+    }
+  ],
+  "RCD_light_load_sensitivity": [
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 9.831526635546114e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.313716286746129e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 9.91240337431759e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.363327263438997e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 9.998847181400361e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.429572977111688e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0068789191561682e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.472037594534524e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 9.518740325554189e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.036053999970285e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 9.592365152063652e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.080968422057172e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 9.67301265412002e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.143578553810596e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 9.736515457899664e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.01,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.181952176025135e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.035213952499982e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.690907311559644e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0399998929277296e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.719536154288033e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0481453873080112e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.795903360608085e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0522206657415843e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.820234198658285e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0000677955695934e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.389015473750842e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0043926870628404e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.414811228334366e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0121906499671817e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.489089639335415e-07,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 600,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 3300,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": false,
+      "clamp_time_s": null,
+      "below_600ns": null
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.07458551762349229,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 1.0158687487802692e-06,
+      "below_600ns": false
+    },
+    {
+      "leakage_fraction": 0.02,
+      "f_Hz_assumed": 33000,
+      "Ip_A": 0.0916336359374334,
+      "periodic_transfer_model_valid": true,
+      "clamp_time_s": 8.511000207849774e-07,
+      "below_600ns": false
+    }
+  ],
+  "preferred_direct_clamp": {
+    "MPN": "Vishay SMBJ160A-E3/52",
+    "VBR25_min_V": 178,
+    "VBR25_max_V": 197,
+    "Vclamp25_max_V_at_2p3A": 259,
+    "temperature_coefficient_VBR_max_per_C": 0.00108,
+    "Tj_sensitivity_C": [
+      10,
+      25,
+      125
+    ],
+    "plateau_proxy_V": [
+      175.1164,
+      286.97200000000004
+    ],
+    "plateau_is_not_a_guaranteed_full_IV_temperature_curve": true,
+    "local_ambient_C_assumed": 85,
+    "Tj_design_target_C_assumed": 125,
+    "transformer_leakage_design_target_max": 0.01
+  },
+  "TVS_normal_cases": 34560,
+  "TVS_leakage_1pct_cases": 17280,
+  "TVS_1pct_bounds": {
+    "clamp_time_s": [
+      1.4890395329776889e-08,
+      1.388426994973943e-07
+    ],
+    "power_W": [
+      0.032854378083828024,
+      0.2291199547057509
+    ],
+    "pulse_energy_J": [
+      6.587223499372584e-07,
+      4.196829752980235e-06
+    ],
+    "peak_power_W": [
+      53.990016794084475,
+      99.06973532796319
+    ],
+    "diode_average_A": [
+      0.00011448635436149876,
+      0.0013083866200181756
+    ],
+    "drain_screen_V": [
+      465.8164,
+      696.4680312803932
+    ],
+    "maximum_required_thermal_R_C_per_W": [
+      174.58104009914945,
+      1217.4937506940446
+    ]
+  },
+  "TVS_all_sensitivity_bounds": {
+    "clamp_time_s": [
+      1.4890395329776889e-08,
+      6.942134974869715e-07
+    ],
+    "power_W": [
+      0.032854378083828024,
+      1.1455997735287544
+    ],
+    "pulse_energy_J": [
+      6.587223499372584e-07,
+      2.098414876490118e-05
+    ],
+    "peak_power_W": [
+      53.990016794084475,
+      99.06973532796319
+    ],
+    "diode_average_A": [
+      0.00011448635436149876,
+      0.006541933100090878
+    ],
+    "drain_screen_V": [
+      465.8164,
+      696.4680312803932
+    ],
+    "maximum_required_thermal_R_C_per_W": [
+      34.91620801982989,
+      1217.4937506940446
+    ]
+  },
+  "TVS_min_current_reset_proxy_max_s": 9.425704437790172e-08,
+  "TVS_fault_train_sensitivities": [
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 1.1205426697025743e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.07418502080023648,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 6.774483632841825e-08,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.07349820381064481,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 1.1205426697025743e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.7863612204825067,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.5086720829831389
+    },
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 6.774483632841825e-08,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.779080960392835,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.5134254594006616
+    },
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 2.2410853394051485e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.14837004160047296,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 1.354896726568365e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.14699640762128963,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 2.2410853394051485e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 1.5727224409650133,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.25433604149156946
+    },
+    {
+      "Vo_assumed_V": 0,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 1.354896726568365e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 1.55816192078567,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.2567127297003308
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 7.777676889646492e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.5149175818437091,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.7768233482487892
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 1.4039508984046906e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.15231842729805167,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 7.777676889646492e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 5.458126367543317,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.07328522153290463
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 1.4039508984046906e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 1.6145753293593479,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.24774316362106016
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 1.5555353779292984e-06,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 1.0298351636874181,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.3884116741243946
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 2.8079017968093813e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.30463685459610335,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 1.5555353779292984e-06,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 10.916252735086633,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.03664261076645232
+    },
+    {
+      "Vo_assumed_V": 36.59444666977425,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 2.8079017968093813e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 3.2291506587186958,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.12387158181053008
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 6.352976177527013e-06,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 4.205959153687064,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.09510315849105395
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 1.6682148253614743e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.18098913493562158,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 6.352976177527013e-06,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 44.58316702908288,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.008971996084061695
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.01,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 1.6682148253614743e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 1.9184848303175888,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.20849786960983344
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 1.2705952355054026e-05,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 8.411918307374128,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.04755157924552698
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 10000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 3.3364296507229487e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 0.36197826987124315,
+      "hypothetical_max_train_duty_for_0p4W_average": 1.0
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 175.1164,
+      "reset_time_s": 1.2705952355054026e-05,
+      "reset_fits_period": false,
+      "TVS_power_during_train_W": 89.16633405816576,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.004485998042030847
+    },
+    {
+      "Vo_assumed_V": 42,
+      "leakage_fraction": 0.02,
+      "frequency_Hz_assumed": 106000,
+      "Vz_proxy_V": 286.97200000000004,
+      "reset_time_s": 3.3364296507229487e-07,
+      "reset_fits_period": true,
+      "TVS_power_during_train_W": 3.8369696606351775,
+      "hypothetical_max_train_duty_for_0p4W_average": 0.10424893480491672
+    }
+  ],
+  "one_pulse_RK4_check": {
+    "analytic_peak_V": 197.57755372874965,
+    "RK4_2ns_peak_V": 197.56876695884856,
+    "RK4_1ns_peak_V": 197.56876695884836,
+    "step_peak_difference_V": 1.9895196601282805e-13,
+    "scope": "Representative exact-resistor pulse versus ideal charging map; no whole-converter validation"
+  },
+  "startup_low_clamp_state_not_modelled": true,
+  "no_actual_controller_SPICE_CAD_or_physical_test": true
+}

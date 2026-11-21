@@ -1,0 +1,9 @@
+from pathlib import Path
+import subprocess,json
+W=Path(__file__).resolve().parent;D=W/'Velluneo-readiness/hardware/E27/workflow/specification-reset/supplier-review-13';K=W/'kicad-10.0.6/bin'
+r=subprocess.run([str(K/'python.exe'),str(D/'build_negative_controls.py')],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=120);assert r.returncode==0,r.stderr;rows=[]
+for name,folder in [('surface','negative'),('inner','negative-four')]:
+ out=D/'checks'/('negative-'+name+'.json');r=subprocess.run([str(K/'kicad-cli.exe'),'pcb','drc','--format','json','--severity-all','--exit-code-violations','--output',str(out),str(D/'.work'/folder/'Velluneo_driver.kicad_pcb')],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=120);j=json.loads(out.read_text());assert r.returncode!=0 and any(x['type']in('clearance','shorting_items')for x in j['violations']);rows.append(dict(name=name,exit_code=r.returncode,violations=len(j['violations'])))
+out=D/'checks/negative-topology.json';r=subprocess.run([str(K/'python.exe'),str(D/'analyze_native_routes.py'),'--board',str(D/'.work/negative-topology/Velluneo_driver.kicad_pcb'),'--output',str(out)],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=120);assert r.returncode==0,r.stderr;assert not json.loads(out.read_text())['junction_cut_diagnostics'][0]['separate']
+assert all(x['separate']for x in json.loads((D/'checks/native-analysis.json').read_text())['junction_cut_diagnostics'])
+(D/'checks/current-negative-controls.json').write_text(json.dumps(dict(passed=True,negative_native=rows,same_net_shortcut_detected=True,positive_return_branches_separate=True,scope='Actual current refinedCAD/generated3/10.7rules, deliberateinvalidcopies only.'),indent=2)+'\n');print('Currentnegativecontrols PASS',rows)

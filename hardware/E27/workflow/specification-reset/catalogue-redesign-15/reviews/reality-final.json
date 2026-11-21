@@ -1,0 +1,33 @@
+{
+  "role": "Reality Checker",
+  "actor": "/root/cat15_reality",
+  "body_sha256": "888c57e60b196ffc622cabc4f9d064f5a30a7f412779e3f202d61f3e52843ac8",
+  "record": "Coordinator transcription of the actual targeted final review and retained original independent analysis.",
+  "recommendation": "ready_for_human_review",
+  "scope": "Corrected sourcing/ECO proposal only; no electrical/native-design/assembly/release acceptance or ordering.",
+  "actual_checks": [
+    "Independently verified all28 frozen sizes/SHA256/canonical digest before and after targeted inspection.",
+    "Actual git-show semantic comparison against base: only revision and two added requirements; historical requirements/evidence unchanged.",
+    "R-SOURCING exact orderable manufacturer parts/JLC preference/outside route and release quantity/attrition/packing/ratings/source/process acceptance explicit.",
+    "R-STOCK-T1 excludes customer/custom winding and bare kits; qualified normal/fault/startup/insulation and pins/taps/polarity/dimensions acceptance explicit.",
+    "Both evidence lists empty; owner instruction bound; no invented stage acceptance or qualification.",
+    "Inspected actual requirements reports without rerun: specification exit1/9, schematic exit1/15; R-STOCK-T1 blocked, R-SOURCING not_due, historic stale intent visible.",
+    "BOM/calculation/pin-intent hashes unchanged from first independent source/calculation review.",
+    "Earlier independently checked all127 historical CAD bytes and actual native33refs/81pads/old MPN+values; installed manifest and118 payload hashes.",
+    "Recounted14 JLC reference positions/13 unique MPNs and19 outside/wire positions.",
+    "Recomputed0.250196A output,0.294118A primary peak,88.48395kHz@24V,29.94908V CV,1962.331ohm RLC and10.741867mm proposed copper gap.",
+    "Original MYRRA/TI sources confirm0.50Apk, static1.6/2.55=.627451A and average-threshold/frequency caveat.",
+    "Exact Farnell74215 listing displayed48/MOQ1/24.86PLNnet; possibly cached and unreserved. ST manufacturer document independently retrieved.",
+    "Doctor UnicodeDecodeError warning retained; no clean-stderr or new native/CAM/physical/supplier claim."
+  ],
+  "new_current_scope_major_or_blocker_findings": [],
+  "retained_findings": [
+    {"id":"CAT15-01","severity":"blocker","status":"open","object":"T1/U1/R9","problem":"Static OCP screen0.627451A exceeds transformer0.50Apk; normal calculations do not establish per-cycle/abnormal compatibility.","closure":"Defensible current bound, protective redesign or demonstrably suitable factory-wound part."},
+    {"id":"CAT15-02","severity":"blocker","status":"open","object":"Q1 footprint/3mm policy","problem":"Reported maker1.8mm gap below3mm; no exception authorized.","closure":"Usable compliant footprint or explicit reviewed/human-authorized package-local treatment without global weakening.","review_limit":"Graphical footprint dimensions/630Vrms note were not independently rendered and are not closed here."},
+    {"id":"CAT15-03 through CAT15-08","severity":"major","status":"open","objects":"Clamp/leakage/DCR; auxiliary startup/faults; optical/enclosure; insulation/insertion; input protection; assembly/harness.","closure":"Complete individual observable conditions; stock and old production files cannot substitute for evidence."}
+  ],
+  "coverage": {"configured_owner_sourcing_constraints":"covered","factory_wound_purchase_basis":"catalogue proposal covered","all33purchase_mapping":"proposal covered;31electronic+2wirematerial pairs","complete_electrical_suitability":"not achieved","revised_native_manufacturing_files":"not implemented","order_readiness":"not achieved"},
+  "user_goal_still_incomplete": "Concrete factory-stock proposal exists; qualified completed supply, revised PCB, finished harness and matched manufacturing files remain outstanding.",
+  "authority": "Presentation of bounded proposal only; no rule waiver, transformer application acceptance, human stage approval or procurement authorization.",
+  "read_only": true
+}

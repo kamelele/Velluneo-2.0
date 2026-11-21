@@ -1,0 +1,225 @@
+{
+  "scope": "Calculated typical models and conservative conditional bounds; no simulation or physical measurement; no changed parts or graph.",
+  "source_SHA256": {
+    "cree2835.pdf": "74d4261952c25e6833212a82b0f72e759f8297478627a368f4acff22378c92c8",
+    "cree-lm80.pdf": "35ea8a1f3658866877efd058af3eff0384ed0e31437c71e274000a99e248f54c",
+    "cree-thermal.pdf": "2487399e6e62987aaec1c8d1bb44e8418c3d673137ee70ca4ea3b3c15b878038",
+    "cie1931.csv": "fa663e3535a7e0763a745993a1f0a192eb0275ac46ad2d1befd7626841e713c1"
+  },
+  "script_SHA256": "4d07bcc31fde777141abd6feaebe7d921ddb68eca7f28d9a8b4b8d91b1d0fe8f",
+  "optical_input_SHA256": "8b70e82733f0265f058d6cef3481b36199ac17dee405a1e059cab087ca7ec987",
+  "spectral_model_assumptions": [
+    "80CRI published generic spectra apply at modeled actual current/temperature (unverified)",
+    "380-780nm truncated source; not all emitted wavelengths",
+    "fitted diffuser spectrally neutral tau_radiant=tau_luminous=.87 (unverified)",
+    "85C electrical junction/reference condition not actual25Cambient"
+  ],
+  "family_typical": {
+    "2700": {
+      "LED_count": 8,
+      "current_A": 0.2560067013300516,
+      "Vf25_typical_V": 2.933245508841356,
+      "Vf85_typical_V": 2.879245508841356,
+      "panel_V85_typical_V": 23.03396407073085,
+      "panel_electrical85_typical_W": 5.896849160302732,
+      "whole_lamp_flux_typical_lm": 815.5539939095808,
+      "spectral_LER_typical_lm_per_radiant_W": 326.42783841187185,
+      "escaping_radiant_typical_W": 2.49842047135867,
+      "LED_emitted_radiant_typical_W_neutral_diffuser": 2.8717476682283567,
+      "LED_local_heat_typical_W": 3.0251014920743757,
+      "diffuser_absorption_typical_W_neutral_diffuser": 0.3733271968696865,
+      "panel_plus_diffuser_heat_typical_W": 3.3984286889440622,
+      "per_LED_electrical85_typical_W": 0.7371061450378416,
+      "junction_rise_full_electrical_times_7p6_typical_K": 5.6020067022875955
+    },
+    "4000": {
+      "LED_count": 7,
+      "current_A": 0.2560067013300516,
+      "Vf25_typical_V": 2.933245508841356,
+      "Vf85_typical_V": 2.879245508841356,
+      "panel_V85_typical_V": 20.154718561889492,
+      "panel_electrical85_typical_W": 5.15974301526489,
+      "whole_lamp_flux_typical_lm": 787.06957132818,
+      "spectral_LER_typical_lm_per_radiant_W": 336.624607104618,
+      "escaping_radiant_typical_W": 2.338122510109816,
+      "LED_emitted_radiant_typical_W_neutral_diffuser": 2.68749713805726,
+      "LED_local_heat_typical_W": 2.4722458772076306,
+      "diffuser_absorption_typical_W_neutral_diffuser": 0.3493746279474439,
+      "panel_plus_diffuser_heat_typical_W": 2.8216205051550745,
+      "per_LED_electrical85_typical_W": 0.7371061450378416,
+      "junction_rise_full_electrical_times_7p6_typical_K": 5.6020067022875955
+    },
+    "6500": {
+      "LED_count": 7,
+      "current_A": 0.2560067013300516,
+      "Vf25_typical_V": 2.933245508841356,
+      "Vf85_typical_V": 2.879245508841356,
+      "panel_V85_typical_V": 20.154718561889492,
+      "panel_electrical85_typical_W": 5.15974301526489,
+      "whole_lamp_flux_typical_lm": 784.4460060904194,
+      "spectral_LER_typical_lm_per_radiant_W": 310.88430157670194,
+      "escaping_radiant_typical_W": 2.5232731344489565,
+      "LED_emitted_radiant_typical_W_neutral_diffuser": 2.900313947642479,
+      "LED_local_heat_typical_W": 2.2594290676224116,
+      "diffuser_absorption_typical_W_neutral_diffuser": 0.37704081319352234,
+      "panel_plus_diffuser_heat_typical_W": 2.636469880815934,
+      "per_LED_electrical85_typical_W": 0.7371061450378416,
+      "junction_rise_full_electrical_times_7p6_typical_K": 5.6020067022875955
+    }
+  },
+  "typical_forward_voltage_coldhot_screen": [
+    {
+      "I_A": 0.21876295319202657,
+      "T_C": -20,
+      "Vf_typ_V": 2.930323023719322,
+      "7_LED_V": 20.512261166035255,
+      "8_LED_V": 23.442584189754577,
+      "8_LED_electrical_W": 5.1283689478034225
+    },
+    {
+      "I_A": 0.21876295319202657,
+      "T_C": 25,
+      "Vf_typ_V": 2.889823023719322,
+      "7_LED_V": 20.22876116603525,
+      "8_LED_V": 23.118584189754575,
+      "8_LED_electrical_W": 5.057489750969205
+    },
+    {
+      "I_A": 0.21876295319202657,
+      "T_C": 85,
+      "Vf_typ_V": 2.835823023719322,
+      "7_LED_V": 19.850761166035255,
+      "8_LED_V": 22.686584189754576,
+      "8_LED_electrical_W": 4.9629841551902505
+    },
+    {
+      "I_A": 0.21876295319202657,
+      "T_C": 105,
+      "Vf_typ_V": 2.817823023719322,
+      "7_LED_V": 19.724761166035254,
+      "8_LED_V": 22.542584189754574,
+      "8_LED_electrical_W": 4.931482289930599
+    },
+    {
+      "I_A": 0.2560067013300516,
+      "T_C": -20,
+      "Vf_typ_V": 2.9737455088413562,
+      "7_LED_V": 20.816218561889492,
+      "8_LED_V": 23.78996407073085,
+      "8_LED_electrical_W": 6.0903902265082515
+    },
+    {
+      "I_A": 0.2560067013300516,
+      "T_C": 25,
+      "Vf_typ_V": 2.933245508841356,
+      "7_LED_V": 20.532718561889492,
+      "8_LED_V": 23.46596407073085,
+      "8_LED_electrical_W": 6.007444055277314
+    },
+    {
+      "I_A": 0.2560067013300516,
+      "T_C": 85,
+      "Vf_typ_V": 2.879245508841356,
+      "7_LED_V": 20.154718561889492,
+      "8_LED_V": 23.03396407073085,
+      "8_LED_electrical_W": 5.896849160302732
+    },
+    {
+      "I_A": 0.2560067013300516,
+      "T_C": 105,
+      "Vf_typ_V": 2.861245508841356,
+      "7_LED_V": 20.02871856188949,
+      "8_LED_V": 22.889964070730848,
+      "8_LED_electrical_W": 5.859984195311204
+    },
+    {
+      "I_A": 0.2891944014593847,
+      "T_C": -20,
+      "Vf_typ_V": 3.0116497325714393,
+      "7_LED_V": 21.081548128000076,
+      "8_LED_V": 24.093197860571514,
+      "8_LED_electrical_W": 6.967617934530507
+    },
+    {
+      "I_A": 0.2891944014593847,
+      "T_C": 25,
+      "Vf_typ_V": 2.971149732571439,
+      "7_LED_V": 20.798048128000072,
+      "8_LED_V": 23.769197860571513,
+      "8_LED_electrical_W": 6.873918948457666
+    },
+    {
+      "I_A": 0.2891944014593847,
+      "T_C": 85,
+      "Vf_typ_V": 2.9171497325714393,
+      "7_LED_V": 20.420048128000076,
+      "8_LED_V": 23.337197860571514,
+      "8_LED_electrical_W": 6.748986967027212
+    },
+    {
+      "I_A": 0.2891944014593847,
+      "T_C": 105,
+      "Vf_typ_V": 2.899149732571439,
+      "7_LED_V": 20.294048128000075,
+      "8_LED_V": 23.193197860571512,
+      "8_LED_electrical_W": 6.7073429732170595
+    }
+  ],
+  "guaranteed_condition_only_escape_lower_bound_W_at750lm": 1.0964912280701755,
+  "whole_lamp_heat_identity": "Qtotal=measured Pin - total escaping radiant; conditional Qtotal<=Pin-actual flux/684. No credit for absorbed/scattered photons remaining inside.",
+  "no_flux_credit_LED_electrical_rectangular_screen_W": 7.808248839403387,
+  "panel_temperature_contract_calculated": {
+    "rim_C": 75,
+    "local_R_allowance_K_per_W_per_LED": 10,
+    "mutual_R_allowance_K_per_W_total_panel": 1,
+    "solder_case_screen_C": 93.96289003855108,
+    "junction_screen_C_with15KperW_allowance": 110.69485183727262,
+    "solder_case_design_target_C": 95,
+    "junction_design_target_C": 115
+  },
+  "screen_junction_rise_7p6_times_Imax_27div7_K": 8.477527311352247,
+  "screen_junction_rise_design_allowance15_times_Imax_27div7_K": 16.73196179872154,
+  "geometry_calculated_proposal": {
+    "panel_diameter_mm": 48,
+    "package_mm": [
+      2.8,
+      3.5,
+      0.7
+    ],
+    "LED_ring_radius_mm": 16,
+    "eight_LED_pitch_mm": 12.245869835682873,
+    "worst_body_circumradius_mm": 18.241093483101498,
+    "rim_contact_OD_mm": 48,
+    "rim_contact_ID_mm": 36,
+    "rim_contact_area_mm2": 791.6813487046279,
+    "TIM_0p1mm_k1p5_1D_R_K_per_W": 0.08420896459888641,
+    "dielectric_150um_k1_8mm_square_R_K_per_W": 2.34375,
+    "dielectric_150um_k1_3mm_square_R_K_per_W": 16.666666666666664
+  },
+  "checks": [
+    {
+      "CCT": "2700",
+      "LER_1nm_vs_quarter_nm_delta_percent": -0.0007323846791917887
+    },
+    {
+      "CCT": "4000",
+      "LER_1nm_vs_quarter_nm_delta_percent": -0.00021376668908335006
+    },
+    {
+      "CCT": "6500",
+      "LER_1nm_vs_quarter_nm_delta_percent": -0.0006472393692558143
+    },
+    {
+      "check": "all_model_LED_heat_positive",
+      "pass": true
+    },
+    {
+      "check": "all_integration_errors_below_0p02percent",
+      "pass": true
+    },
+    {
+      "check": "ring_body_fits_48mm",
+      "pass": true
+    }
+  ]
+}

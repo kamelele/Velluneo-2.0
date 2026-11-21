@@ -1,0 +1,47 @@
+[
+  {
+    "name": "portable-drc",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-draft-01\\checks\\portable-drc.json",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\pcb-draft-01\\.work\\portable\\Velluneo_specification_reset.kicad_pcb"
+    ],
+    "exit_code": 5
+  },
+  {
+    "name": "current-requirements",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "current-work",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 2
+  }
+]

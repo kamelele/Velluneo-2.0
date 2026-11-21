@@ -1,0 +1,80 @@
+{
+  "revision": "mechanical-space-preview-1",
+  "status": "Illustrative mechanical-space proposal; not native PCB placement or a fabrication source",
+  "proposed_board_mm": [
+    75,
+    40
+  ],
+  "board_size_approved": false,
+  "enclosure_fit": "not assessed; E27 thread alone does not establish internal clearance",
+  "items": [
+    {
+      "ref": "F1",
+      "x": 6,
+      "y": 14,
+      "w": 5.3,
+      "h": 16,
+      "label": "Bezpiecznik",
+      "basis": "Input-stage candidate body dimensions; final tolerance/land/assembly verification remains"
+    },
+    {
+      "ref": "RIN",
+      "x": 15,
+      "y": 15,
+      "w": 7.5,
+      "h": 18,
+      "label": "Rezystor wejściowy",
+      "basis": "AC05 body18x7.5mm rotated; no lead/drill/thermal clearance qualified"
+    },
+    {
+      "ref": "CBULK",
+      "x": 23,
+      "y": 32,
+      "w": 10.5,
+      "h": 10.5,
+      "label": "Kondensator 450 V",
+      "basis": "Rubycon nominalD10mm plus source0.5mm maximum allowance; height up to22mm"
+    },
+    {
+      "ref": "T1",
+      "x": 44,
+      "y": 20,
+      "w": 30,
+      "h": 30,
+      "label": "Transformator",
+      "basis": "Allocated preliminary area only; raw bobbin25.2x26mm bounding body fits; complete core/winding/yokes/insulation/leadout envelope unqualified"
+    },
+    {
+      "ref": "COUT",
+      "x": 65,
+      "y": 12,
+      "w": 7.8,
+      "h": 7.1,
+      "label": "Kondensator LED",
+      "basis": "Allocated body/lead area; sourceH7.8max and6.6±.2base; no land/courtyard accepted"
+    },
+    {
+      "ref": "DOUT",
+      "x": 66,
+      "y": 26,
+      "w": 7,
+      "h": 4,
+      "label": "Prostownik LED",
+      "basis": "Space reservation only, not native SMA land dimensions"
+    }
+  ],
+  "remaining_components": "Other22schematicitems not positioned; symbols/wireinterfaces are not invented footprints",
+  "not_shown": [
+    "copper",
+    "pads/drills",
+    "safeinsulationgap",
+    "thermalpaths",
+    "backsidecomponents",
+    "enclosure"
+  ],
+  "sources": [
+    "../schematic-intent/pin-basis-primary.md",
+    "../schematic-intent/pin-basis-secondary.md",
+    "../driver-study/input-stage/parts.csv"
+  ]
+}

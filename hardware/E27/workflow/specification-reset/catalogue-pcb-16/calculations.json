@@ -1,0 +1,74 @@
+{
+  "revision": "C16-Rcs1.80",
+  "scope": "Executed analytical screens, not simulation or measurement. TI normal CS thresholds/frequency are jitter averages; OCP1.6V is not marked by that footnote, but no maximum OCP delay is supplied.",
+  "sources": {
+    "T1": "https://www.atd-shop.com/www/prilohy/74032-datasheet.pdf",
+    "Q1": "https://www.st.com/resource/en/datasheet/stfw2n105k5.pdf",
+    "U1": "https://www.ti.com/lit/ds/symlink/ucc28700.pdf"
+  },
+  "inputs": {
+    "Rcs_ohm": 1.8,
+    "Rcs_fraction_total": 0.021,
+    "Lp_h": 0.0011,
+    "Lp_fraction": 0.1,
+    "OCP_v": 1.6,
+    "line_max_vrms": 253,
+    "allocated_total_delay_ns": 400,
+    "transformer_current_limit_Apk": 1.1,
+    "eta_transformer_assumed": 0.9
+  },
+  "fault": {
+    "Rcs_min_ohm": 1.7622,
+    "static_ocp_a": 0.9079559641357394,
+    "additional_ramp_a": 0.14456405304258307,
+    "peak_at_allocated_delay_a": 1.0525200171783224,
+    "absolute_delay_frontier_ns": 531.3742436584613
+  },
+  "normal": {
+    "output_nom_a": 0.319,
+    "output_screen_min_a": 0.30362389813907936,
+    "output_screen_max_a": 0.33605720122574056,
+    "normal_average_peak_max_a": 0.4397911701282488,
+    "frequency_22v_conservative_hz": 113254.43146808693
+  },
+  "geometry": {
+    "Q1_pitch_nom_mm": 5.45,
+    "Q1_pad_mm": 2.35,
+    "Q1_copper_gap_mm": 3.1,
+    "Q1_pitch_min_mm": 5.35,
+    "Q1_max_shoulder_width_mm": 2.2,
+    "Q1_conditional_shoulder_gap_mm": 3.15,
+    "Q1_lowest_wide_shoulder_standoff_mm": 3,
+    "T1_primary_gap_mm": 3.05,
+    "T1_row_copper_gap_mm": 12.940000000000001,
+    "T1_finished_hole_required_mm": [
+      1.35,
+      1.45
+    ]
+  },
+  "qualification_holds": [
+    "400ns total current-rise delay is an allocation, not a guaranteed TI maximum; verify first and repeated fault pulses over line/temperature and threshold conditions.",
+    "TI normal CS/frequency are averaged for jitter; additional OCP is unblanked. Verify every-cycle peak/minimum-on-time and restart behavior.",
+    "MYRRA does not publish leakage/DCR/Ae/saturation curves; never transfer custom-transformer assumptions.",
+    "Shoulder gap assumes actual manufacturer geometry and centering; exact drawing/physical first-fit must confirm all metal exposures.",
+    "T1 ambient<=50C per maker, not full lamp qualification."
+  ],
+  "dependent_screens": {
+    "CV_nom_v": 26.027199999999997,
+    "VDD_at_19v_low_v": 9.833333333333334,
+    "VS_negative_current_upper_a": 0.0009433913152582579,
+    "RLC_equivalent_delay_ns": 126.68140777593516,
+    "output_cap_charge_to_takeover_ms": 0.7662265958254268,
+    "nominal_secondary_rms_a": 0.6273105439744191,
+    "C4_ripple_nom_a": 0.5401458308470792,
+    "ideal_cold_inrush_peak_a": 8.013348964846431,
+    "ideal_cold_inrush_i2t_a2s": 0.025804300111982093,
+    "ideal_cold_inrush_j": 1.1521620000000004
+  },
+  "equations": {
+    "Iout": "VCCR*eta*NPS/(2*RCS)",
+    "fault_peak": "1.6/RCSmin + Vbulkmax*allocated_delay/LPmin",
+    "frequency_sensitivity": "VCCR*NPS*(Vo+Vf)*RCS/(LP*VCST^2)",
+    "RLC_inverse_TI_Eq4": "TD = RLC*LP/(KLC*RCS*RS1*NPA)"
+  }
+}

@@ -1,0 +1,559 @@
+{
+  "scope": "Conditional unmeasured accounting and thermal scenarios; no hard loss/temperature bounds",
+  "nominal": {
+    "Vac": 230,
+    "eta_XFMR_assumed": 0.9,
+    "corner": "nom",
+    "preset": "central",
+    "Vf_model_Tj_C": 85,
+    "flux_model_used": false,
+    "total_secondary_A": 0.319,
+    "LED_current_A": 0.3169364088395068,
+    "Vo_V": 20.63591160493202,
+    "LED_power_W": 6.540271717196657,
+    "total_DC_output_W": 6.582855801973314,
+    "input_W": 8.585985348680788,
+    "driver_heat_W": 2.0457136314841313,
+    "efficiency_to_LEDs": 0.7617380477130153,
+    "efficiency_to_total_output": 0.7666977678904088,
+    "line_current_RMS_A": 0.06973408081565667,
+    "PF_model": 0.535324631006528,
+    "bus_min_V": 302.84155229411925,
+    "bus_mean_V": 310.36319233213163,
+    "bus_max_V": 317.6018920360862,
+    "primary_RMS_surrogate_A": 0.08254327791961223,
+    "secondary_RMS_surrogate_A": 0.5648008498577175,
+    "C1_LF_RMS_A": 0.06440166656303938,
+    "C1_HF_RMS_surrogate_A": 0.0780904933676592,
+    "C4_RMS_surrogate_A": 0.46608904728603096,
+    "frequency_surrogate_Hz": 79708.91033568948,
+    "demag_duty_surrogate": 0.42533333333333334,
+    "primary_peak_assumed_A": 0.41666666666666663,
+    "VDD_surrogate_V": 11.131062002740011,
+    "aggregate_G_W": 7.611093868859237,
+    "aggregate_loss_W": 0.7611093868859236,
+    "net_aux_allocation_W": 0.036937036442411156,
+    "startup_branch_input_W": 0.1155352955922693,
+    "losses_W": {
+      "R1": 0.2285535752786132,
+      "F1": 0.021785532281876324,
+      "BR1": 0.03743900712321946,
+      "C1": 0.12505917751395174,
+      "bulk_bleeders_R2_R3_R14_R15": 0.19307625169018397,
+      "startup_R16_R17": 0.11139254509984586,
+      "Q1": 0.24117853342795106,
+      "R9": 0.01226410691348582,
+      "T1_assumed_allocation": 0.470712027788283,
+      "D1_TVS1_assumed_allocation": 0.25346032265522933,
+      "U1_aux_gate_R10_R13_VS_network": 0.041079786934834585,
+      "D3": 0.24106000000000002,
+      "C4": 0.02606868,
+      "output_bleeders_R11_R12": 0.0425840847766568
+    },
+    "line_energy_residual_W": -1.1876957994871873e-06,
+    "capacitor_storage_rate_W": -3.844045295409161e-08,
+    "charge_residual_A": 0.0,
+    "dt_s": 4e-06
+  },
+  "scenario_count": 97,
+  "ranges_selected_cases": {
+    "input_W": [
+      7.827984321250959,
+      9.924398350534286
+    ],
+    "driver_heat_W": [
+      1.4904434193036606,
+      3.1682203616362425
+    ],
+    "LED_power_W": [
+      5.7503667207524884,
+      7.35944412913138
+    ],
+    "efficiency_to_LEDs": [
+      0.6766383734238106,
+      0.8126952391363058
+    ],
+    "line_current_RMS_A": [
+      0.061252977200946995,
+      0.08390233232656918
+    ],
+    "PF_model": [
+      0.5083540304498292,
+      0.5714257524762668
+    ],
+    "LED_current_A": [
+      0.2846702659484542,
+      0.345192818426742
+    ],
+    "Vo_V": [
+      20.19540693027725,
+      21.32388982080612
+    ]
+  },
+  "refinement": {
+    "dt_coarse_s": 4e-06,
+    "dt_fine_s": 2e-06,
+    "input_delta_W": -1.413320605436752e-06,
+    "Irms_delta_A": -1.4034430025067213e-07
+  },
+  "cooling_requirements": [
+    {
+      "ambient_C": 10,
+      "LED_heat_fraction": 0,
+      "R_cavity_max_K_W": 12.625384422231859
+    },
+    {
+      "ambient_C": 10,
+      "LED_heat_fraction": 0.25,
+      "R_cavity_max_K_W": 7.987090634862445
+    },
+    {
+      "ambient_C": 10,
+      "LED_heat_fraction": 0.5,
+      "R_cavity_max_K_W": 5.84117060431905
+    },
+    {
+      "ambient_C": 10,
+      "LED_heat_fraction": 1.0,
+      "R_cavity_max_K_W": 3.799513181207336
+    },
+    {
+      "ambient_C": 25,
+      "LED_heat_fraction": 0,
+      "R_cavity_max_K_W": 7.890865263894911
+    },
+    {
+      "ambient_C": 25,
+      "LED_heat_fraction": 0.25,
+      "R_cavity_max_K_W": 4.991931646789028
+    },
+    {
+      "ambient_C": 25,
+      "LED_heat_fraction": 0.5,
+      "R_cavity_max_K_W": 3.650731627699406
+    },
+    {
+      "ambient_C": 25,
+      "LED_heat_fraction": 1.0,
+      "R_cavity_max_K_W": 2.374695738254585
+    },
+    {
+      "ambient_C": 40,
+      "LED_heat_fraction": 0,
+      "R_cavity_max_K_W": 3.1563461055579647
+    },
+    {
+      "ambient_C": 40,
+      "LED_heat_fraction": 0.25,
+      "R_cavity_max_K_W": 1.9967726587156112
+    },
+    {
+      "ambient_C": 40,
+      "LED_heat_fraction": 0.5,
+      "R_cavity_max_K_W": 1.4602926510797625
+    },
+    {
+      "ambient_C": 40,
+      "LED_heat_fraction": 1.0,
+      "R_cavity_max_K_W": 0.949878295301834
+    }
+  ],
+  "thermal_scenarios": [
+    {
+      "electrical_case": "central",
+      "ambient_C": 10,
+      "scenario": "target_path",
+      "R_cavity_effective_K_W": 3.0,
+      "R_board_to_cavity_K_W": 8.0,
+      "LED_heat_coupling_fraction": 0.0,
+      "cavity_air_C": 16.137140894452394,
+      "board_node_C": 32.50284994632544,
+      "component_scenario_C": {
+        "Q1_junction": 38.33937045528186,
+        "D3_junction": 39.73464994632544,
+        "U1_aux_junction_upper_allocation": 34.326792486232094,
+        "T1_hotspot_UNCALIBRATED": 51.33133105785676,
+        "C1_internal_UNCALIBRATED": 42.50758414744158,
+        "C4_internal_UNCALIBRATED": 35.63109154632544,
+        "R1_hotspot_UNCALIBRATED": 38.21668932829077,
+        "BR1_junction_UNCALIBRATED": 33.62602016002202,
+        "TVS_D1_hotspot_UNCALIBRATED": 45.17586607908691
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 10,
+      "scenario": "weak_closed_path",
+      "R_cavity_effective_K_W": 8.0,
+      "R_board_to_cavity_K_W": 18.52,
+      "LED_heat_coupling_fraction": 0.25,
+      "cavity_air_C": 39.44625248626637,
+      "board_node_C": 77.33286894135247,
+      "component_scenario_C": {
+        "Q1_junction": 83.16938945030888,
+        "D3_junction": 84.56466894135248,
+        "U1_aux_junction_upper_allocation": 79.15681148125913,
+        "T1_hotspot_UNCALIBRATED": 96.16135005288379,
+        "C1_internal_UNCALIBRATED": 87.33760314246861,
+        "C4_internal_UNCALIBRATED": 80.46111054135247,
+        "R1_hotspot_UNCALIBRATED": 83.0467083233178,
+        "BR1_junction_UNCALIBRATED": 78.45603915504906,
+        "TVS_D1_hotspot_UNCALIBRATED": 90.00588507411393
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 10,
+      "scenario": "poor_closed_path",
+      "R_cavity_effective_K_W": 15.0,
+      "R_board_to_cavity_K_W": 30.0,
+      "LED_heat_coupling_fraction": 0.5,
+      "cavity_air_C": 89.7377423512369,
+      "board_node_C": 151.10915129576085,
+      "component_scenario_C": {
+        "Q1_junction": 156.94567180471728,
+        "D3_junction": 158.34095129576085,
+        "U1_aux_junction_upper_allocation": 152.9330938356675,
+        "T1_hotspot_UNCALIBRATED": 169.93763240729217,
+        "C1_internal_UNCALIBRATED": 161.113885496877,
+        "C4_internal_UNCALIBRATED": 154.23739289576085,
+        "R1_hotspot_UNCALIBRATED": 156.82299067772618,
+        "BR1_junction_UNCALIBRATED": 152.23232150945745,
+        "TVS_D1_hotspot_UNCALIBRATED": 163.7821674285223
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 25,
+      "scenario": "target_path",
+      "R_cavity_effective_K_W": 3.0,
+      "R_board_to_cavity_K_W": 8.0,
+      "LED_heat_coupling_fraction": 0.0,
+      "cavity_air_C": 31.137140894452394,
+      "board_node_C": 47.50284994632544,
+      "component_scenario_C": {
+        "Q1_junction": 53.33937045528186,
+        "D3_junction": 54.73464994632544,
+        "U1_aux_junction_upper_allocation": 49.326792486232094,
+        "T1_hotspot_UNCALIBRATED": 66.33133105785676,
+        "C1_internal_UNCALIBRATED": 57.50758414744158,
+        "C4_internal_UNCALIBRATED": 50.63109154632544,
+        "R1_hotspot_UNCALIBRATED": 53.21668932829077,
+        "BR1_junction_UNCALIBRATED": 48.62602016002202,
+        "TVS_D1_hotspot_UNCALIBRATED": 60.17586607908691
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 25,
+      "scenario": "weak_closed_path",
+      "R_cavity_effective_K_W": 8.0,
+      "R_board_to_cavity_K_W": 18.52,
+      "LED_heat_coupling_fraction": 0.25,
+      "cavity_air_C": 54.44625248626637,
+      "board_node_C": 92.33286894135247,
+      "component_scenario_C": {
+        "Q1_junction": 98.16938945030888,
+        "D3_junction": 99.56466894135248,
+        "U1_aux_junction_upper_allocation": 94.15681148125913,
+        "T1_hotspot_UNCALIBRATED": 111.16135005288379,
+        "C1_internal_UNCALIBRATED": 102.33760314246861,
+        "C4_internal_UNCALIBRATED": 95.46111054135247,
+        "R1_hotspot_UNCALIBRATED": 98.0467083233178,
+        "BR1_junction_UNCALIBRATED": 93.45603915504906,
+        "TVS_D1_hotspot_UNCALIBRATED": 105.00588507411393
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 25,
+      "scenario": "poor_closed_path",
+      "R_cavity_effective_K_W": 15.0,
+      "R_board_to_cavity_K_W": 30.0,
+      "LED_heat_coupling_fraction": 0.5,
+      "cavity_air_C": 104.7377423512369,
+      "board_node_C": 166.10915129576085,
+      "component_scenario_C": {
+        "Q1_junction": 171.94567180471728,
+        "D3_junction": 173.34095129576085,
+        "U1_aux_junction_upper_allocation": 167.9330938356675,
+        "T1_hotspot_UNCALIBRATED": 184.93763240729217,
+        "C1_internal_UNCALIBRATED": 176.113885496877,
+        "C4_internal_UNCALIBRATED": 169.23739289576085,
+        "R1_hotspot_UNCALIBRATED": 171.82299067772618,
+        "BR1_junction_UNCALIBRATED": 167.23232150945745,
+        "TVS_D1_hotspot_UNCALIBRATED": 178.7821674285223
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 40,
+      "scenario": "target_path",
+      "R_cavity_effective_K_W": 3.0,
+      "R_board_to_cavity_K_W": 8.0,
+      "LED_heat_coupling_fraction": 0.0,
+      "cavity_air_C": 46.13714089445239,
+      "board_node_C": 62.50284994632544,
+      "component_scenario_C": {
+        "Q1_junction": 68.33937045528185,
+        "D3_junction": 69.73464994632545,
+        "U1_aux_junction_upper_allocation": 64.3267924862321,
+        "T1_hotspot_UNCALIBRATED": 81.33133105785676,
+        "C1_internal_UNCALIBRATED": 72.50758414744158,
+        "C4_internal_UNCALIBRATED": 65.63109154632544,
+        "R1_hotspot_UNCALIBRATED": 68.21668932829077,
+        "BR1_junction_UNCALIBRATED": 63.62602016002202,
+        "TVS_D1_hotspot_UNCALIBRATED": 75.1758660790869
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 40,
+      "scenario": "weak_closed_path",
+      "R_cavity_effective_K_W": 8.0,
+      "R_board_to_cavity_K_W": 18.52,
+      "LED_heat_coupling_fraction": 0.25,
+      "cavity_air_C": 69.44625248626636,
+      "board_node_C": 107.33286894135247,
+      "component_scenario_C": {
+        "Q1_junction": 113.16938945030888,
+        "D3_junction": 114.56466894135248,
+        "U1_aux_junction_upper_allocation": 109.15681148125913,
+        "T1_hotspot_UNCALIBRATED": 126.16135005288379,
+        "C1_internal_UNCALIBRATED": 117.33760314246861,
+        "C4_internal_UNCALIBRATED": 110.46111054135247,
+        "R1_hotspot_UNCALIBRATED": 113.0467083233178,
+        "BR1_junction_UNCALIBRATED": 108.45603915504906,
+        "TVS_D1_hotspot_UNCALIBRATED": 120.00588507411393
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "central",
+      "ambient_C": 40,
+      "scenario": "poor_closed_path",
+      "R_cavity_effective_K_W": 15.0,
+      "R_board_to_cavity_K_W": 30.0,
+      "LED_heat_coupling_fraction": 0.5,
+      "cavity_air_C": 119.7377423512369,
+      "board_node_C": 181.10915129576085,
+      "component_scenario_C": {
+        "Q1_junction": 186.94567180471728,
+        "D3_junction": 188.34095129576085,
+        "U1_aux_junction_upper_allocation": 182.9330938356675,
+        "T1_hotspot_UNCALIBRATED": 199.93763240729217,
+        "C1_internal_UNCALIBRATED": 191.113885496877,
+        "C4_internal_UNCALIBRATED": 184.23739289576085,
+        "R1_hotspot_UNCALIBRATED": 186.82299067772618,
+        "BR1_junction_UNCALIBRATED": 182.23232150945745,
+        "TVS_D1_hotspot_UNCALIBRATED": 193.7821674285223
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 10,
+      "scenario": "target_path",
+      "R_cavity_effective_K_W": 3.0,
+      "R_board_to_cavity_K_W": 8.0,
+      "LED_heat_coupling_fraction": 0.0,
+      "cavity_air_C": 19.504661084908726,
+      "board_node_C": 44.850423977998666,
+      "component_scenario_C": {
+        "Q1_junction": 60.169435081109086,
+        "D3_junction": 52.45053883272784,
+        "U1_aux_junction_upper_allocation": 47.12498120672887,
+        "T1_hotspot_UNCALIBRATED": 68.50649731200579,
+        "C1_internal_UNCALIBRATED": 68.45595727513235,
+        "C4_internal_UNCALIBRATED": 47.60314602773785,
+        "R1_hotspot_UNCALIBRATED": 52.97548397729658,
+        "BR1_junction_UNCALIBRATED": 46.90853456705152,
+        "TVS_D1_hotspot_UNCALIBRATED": 74.42051564550756
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 10,
+      "scenario": "weak_closed_path",
+      "R_cavity_effective_K_W": 8.0,
+      "R_board_to_cavity_K_W": 18.52,
+      "LED_heat_coupling_fraction": 0.25,
+      "cavity_air_C": 48.6477951312311,
+      "board_node_C": 107.32323622873432,
+      "component_scenario_C": {
+        "Q1_junction": 122.64224733184474,
+        "D3_junction": 114.92335108346349,
+        "U1_aux_junction_upper_allocation": 109.59779345746452,
+        "T1_hotspot_UNCALIBRATED": 130.97930956274143,
+        "C1_internal_UNCALIBRATED": 130.928769525868,
+        "C4_internal_UNCALIBRATED": 110.07595827847351,
+        "R1_hotspot_UNCALIBRATED": 115.44829622803223,
+        "BR1_junction_UNCALIBRATED": 109.38134681778718,
+        "TVS_D1_hotspot_UNCALIBRATED": 136.89332789624322
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 10,
+      "scenario": "poor_closed_path",
+      "R_cavity_effective_K_W": 15.0,
+      "R_board_to_cavity_K_W": 30.0,
+      "LED_heat_coupling_fraction": 0.5,
+      "cavity_air_C": 107.40592631757298,
+      "board_node_C": 202.45253716666025,
+      "component_scenario_C": {
+        "Q1_junction": 217.77154826977068,
+        "D3_junction": 210.05265202138943,
+        "U1_aux_junction_upper_allocation": 204.72709439539045,
+        "T1_hotspot_UNCALIBRATED": 226.10861050066737,
+        "C1_internal_UNCALIBRATED": 226.05807046379394,
+        "C4_internal_UNCALIBRATED": 205.20525921639944,
+        "R1_hotspot_UNCALIBRATED": 210.57759716595817,
+        "BR1_junction_UNCALIBRATED": 204.5106477557131,
+        "TVS_D1_hotspot_UNCALIBRATED": 232.02262883416915
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 25,
+      "scenario": "target_path",
+      "R_cavity_effective_K_W": 3.0,
+      "R_board_to_cavity_K_W": 8.0,
+      "LED_heat_coupling_fraction": 0.0,
+      "cavity_air_C": 34.504661084908726,
+      "board_node_C": 59.850423977998666,
+      "component_scenario_C": {
+        "Q1_junction": 75.16943508110909,
+        "D3_junction": 67.45053883272784,
+        "U1_aux_junction_upper_allocation": 62.12498120672887,
+        "T1_hotspot_UNCALIBRATED": 83.50649731200579,
+        "C1_internal_UNCALIBRATED": 83.45595727513235,
+        "C4_internal_UNCALIBRATED": 62.60314602773785,
+        "R1_hotspot_UNCALIBRATED": 67.97548397729658,
+        "BR1_junction_UNCALIBRATED": 61.90853456705152,
+        "TVS_D1_hotspot_UNCALIBRATED": 89.42051564550756
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 25,
+      "scenario": "weak_closed_path",
+      "R_cavity_effective_K_W": 8.0,
+      "R_board_to_cavity_K_W": 18.52,
+      "LED_heat_coupling_fraction": 0.25,
+      "cavity_air_C": 63.6477951312311,
+      "board_node_C": 122.32323622873432,
+      "component_scenario_C": {
+        "Q1_junction": 137.64224733184474,
+        "D3_junction": 129.9233510834635,
+        "U1_aux_junction_upper_allocation": 124.59779345746452,
+        "T1_hotspot_UNCALIBRATED": 145.97930956274143,
+        "C1_internal_UNCALIBRATED": 145.928769525868,
+        "C4_internal_UNCALIBRATED": 125.07595827847351,
+        "R1_hotspot_UNCALIBRATED": 130.44829622803223,
+        "BR1_junction_UNCALIBRATED": 124.38134681778718,
+        "TVS_D1_hotspot_UNCALIBRATED": 151.89332789624322
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 25,
+      "scenario": "poor_closed_path",
+      "R_cavity_effective_K_W": 15.0,
+      "R_board_to_cavity_K_W": 30.0,
+      "LED_heat_coupling_fraction": 0.5,
+      "cavity_air_C": 122.40592631757298,
+      "board_node_C": 217.45253716666025,
+      "component_scenario_C": {
+        "Q1_junction": 232.77154826977068,
+        "D3_junction": 225.05265202138943,
+        "U1_aux_junction_upper_allocation": 219.72709439539045,
+        "T1_hotspot_UNCALIBRATED": 241.10861050066737,
+        "C1_internal_UNCALIBRATED": 241.05807046379394,
+        "C4_internal_UNCALIBRATED": 220.20525921639944,
+        "R1_hotspot_UNCALIBRATED": 225.57759716595817,
+        "BR1_junction_UNCALIBRATED": 219.5106477557131,
+        "TVS_D1_hotspot_UNCALIBRATED": 247.02262883416915
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 40,
+      "scenario": "target_path",
+      "R_cavity_effective_K_W": 3.0,
+      "R_board_to_cavity_K_W": 8.0,
+      "LED_heat_coupling_fraction": 0.0,
+      "cavity_air_C": 49.504661084908726,
+      "board_node_C": 74.85042397799867,
+      "component_scenario_C": {
+        "Q1_junction": 90.1694350811091,
+        "D3_junction": 82.45053883272784,
+        "U1_aux_junction_upper_allocation": 77.12498120672888,
+        "T1_hotspot_UNCALIBRATED": 98.50649731200579,
+        "C1_internal_UNCALIBRATED": 98.45595727513236,
+        "C4_internal_UNCALIBRATED": 77.60314602773786,
+        "R1_hotspot_UNCALIBRATED": 82.97548397729659,
+        "BR1_junction_UNCALIBRATED": 76.90853456705153,
+        "TVS_D1_hotspot_UNCALIBRATED": 104.42051564550758
+      },
+      "transformer_air_50C_condition_met_in_scenario": true
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 40,
+      "scenario": "weak_closed_path",
+      "R_cavity_effective_K_W": 8.0,
+      "R_board_to_cavity_K_W": 18.52,
+      "LED_heat_coupling_fraction": 0.25,
+      "cavity_air_C": 78.6477951312311,
+      "board_node_C": 137.32323622873432,
+      "component_scenario_C": {
+        "Q1_junction": 152.64224733184474,
+        "D3_junction": 144.9233510834635,
+        "U1_aux_junction_upper_allocation": 139.59779345746452,
+        "T1_hotspot_UNCALIBRATED": 160.97930956274143,
+        "C1_internal_UNCALIBRATED": 160.928769525868,
+        "C4_internal_UNCALIBRATED": 140.0759582784735,
+        "R1_hotspot_UNCALIBRATED": 145.44829622803223,
+        "BR1_junction_UNCALIBRATED": 139.38134681778718,
+        "TVS_D1_hotspot_UNCALIBRATED": 166.89332789624322
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    },
+    {
+      "electrical_case": "max_heat_selected",
+      "ambient_C": 40,
+      "scenario": "poor_closed_path",
+      "R_cavity_effective_K_W": 15.0,
+      "R_board_to_cavity_K_W": 30.0,
+      "LED_heat_coupling_fraction": 0.5,
+      "cavity_air_C": 137.40592631757298,
+      "board_node_C": 232.45253716666025,
+      "component_scenario_C": {
+        "Q1_junction": 247.77154826977068,
+        "D3_junction": 240.05265202138943,
+        "U1_aux_junction_upper_allocation": 234.72709439539045,
+        "T1_hotspot_UNCALIBRATED": 256.1086105006674,
+        "C1_internal_UNCALIBRATED": 256.0580704637939,
+        "C4_internal_UNCALIBRATED": 235.20525921639944,
+        "R1_hotspot_UNCALIBRATED": 240.57759716595817,
+        "BR1_junction_UNCALIBRATED": 234.5106477557131,
+        "TVS_D1_hotspot_UNCALIBRATED": 262.02262883416915
+      },
+      "transformer_air_50C_condition_met_in_scenario": false
+    }
+  ]
+}

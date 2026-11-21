@@ -1,0 +1,57 @@
+{
+  "packet": "PCB-CLAMP-03-r2",
+  "base": "21edf6f7451a9af57856710883a2505f64d10f52",
+  "body_sha256": "6793646575c2c0907109854245018948531e918ace2f88905fda3bc4ce4f169f",
+  "reviewed_members": 194,
+  "coordinator": "/root",
+  "actual_final_reviews": [
+    {
+      "role": "reality",
+      "actor": "/root/clamp03_reality",
+      "report": "reviews/reality.md",
+      "sha256": "50e7eda8483f86daaed4f50994bf7124d7b235325561c32ebf37fe23be470788",
+      "actual_independent_read_only_review": true,
+      "recommendation": "ready_for_human_review_for_bounded_publication; product_acceptance_blocked"
+    },
+    {
+      "role": "change",
+      "actor": "/root/pl_change",
+      "report": "reviews/change.md",
+      "sha256": "e417140559499e1d5602dc7f3f8c8fac4b1bbad04787478574708504f009b826",
+      "actual_independent_read_only_review": true,
+      "recommendation": "ready_for_human_review_for_bounded_publication; product_acceptance_blocked"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/clamp03_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "755d8a5c0aec570380bf8a6b203541dc18ab1a8444421a1517b65e48866b7f90",
+      "actual_independent_read_only_review": true,
+      "recommendation": "ready_for_human_review_for_bounded_publication; product_acceptance_blocked"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/clamp03_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "4d14e85729cacc38b91621aa0903326191d84a6fd15c35af08a0098fc29236ea",
+      "actual_independent_read_only_review": true,
+      "recommendation": "ready_for_human_review_for_bounded_publication; product_acceptance_blocked"
+    }
+  ],
+  "artwork_correction_complete": true,
+  "clamp_geometry_alternate_created": true,
+  "all_remaining_spacing_resolved": false,
+  "clamp_electrical_qualification_complete": false,
+  "full_driver_qualification_complete": false,
+  "routing_ready": false,
+  "human_schematic_placement_routing_approval": false,
+  "manufacturing_or_power_authorized": false,
+  "integration_decision": "Publish exact artwork correction and transparently limited width/clamp alternate. Do not select widened design as accepted or imply the broader spacing/clamp/routing goal is complete.",
+  "open_findings": [
+    "return topology and longer Q1-clamp-C1 chain",
+    "unaccepted width/finished fit and process",
+    "package and additional cross-face insulation/coupling",
+    "U05\u2013U11 and affected requirements"
+  ],
+  "superseded_review_body": "9b7030886b34914c37061b9753990ba763613f2b0d94bee83d96892687e43850"
+}

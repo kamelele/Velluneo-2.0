@@ -1,0 +1,48 @@
+{
+  "packet": "ASSEMBLY-FIT-01-r2",
+  "body_sha256": "2f4d3e2eb2e0c63df7cf94675e409501a94b1dd60f37863f157c41f89770e652",
+  "reviewed_members": 68,
+  "reports": [
+    {
+      "role": "reality",
+      "actor": "/root/c2_reality",
+      "report": "reviews/reality.md",
+      "sha256": "53b03e5dc2c138740463310a156502e2edb520b96efbb2789b0db6771f4d015b",
+      "reviewed_body_sha256": "2f4d3e2eb2e0c63df7cf94675e409501a94b1dd60f37863f157c41f89770e652",
+      "recommendation": "ready_for_human_review for conditional mechanical study only; actual PCB/assembly/thermal/insulation qualification not granted"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c2_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "066897037ee8bb3b24a15cff5e6a3c68ff836b043f3aa044491b513420874fac",
+      "reviewed_body_sha256": "2f4d3e2eb2e0c63df7cf94675e409501a94b1dd60f37863f157c41f89770e652",
+      "recommendation": "ready_for_human_review for conditional mechanical study only; actual PCB/assembly/thermal/insulation qualification not granted"
+    },
+    {
+      "role": "change",
+      "actor": "/root/c2_change",
+      "report": "reviews/change.md",
+      "sha256": "6a4508e5c99c7926f7410e38ddc26fa8cc62b476059d636d4289a0d320c33606",
+      "reviewed_body_sha256": "2f4d3e2eb2e0c63df7cf94675e409501a94b1dd60f37863f157c41f89770e652",
+      "recommendation": "ready_for_human_review for conditional mechanical study only; actual PCB/assembly/thermal/insulation qualification not granted"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/c2_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "4b49767f044370b65f27e80c564e2613aa91520ba3bf66fa7f33667aa3d84582",
+      "reviewed_body_sha256": "2f4d3e2eb2e0c63df7cf94675e409501a94b1dd60f37863f157c41f89770e652",
+      "recommendation": "ready_for_human_review for conditional mechanical study only; actual PCB/assembly/thermal/insulation qualification not granted"
+    }
+  ],
+  "stage_approval": false,
+  "independence": "Four actual distinct nonimplementer read-only contexts; source auditor is different. Root records actual returned reports. Same underlying model is not proof of independence.",
+  "RF01": {
+    "initial_body": "4b293ecbf1b3307a327e17b19fd6d6573b466222f43308107f61bb40117db462",
+    "initial_reality_recommendation": "changes_requested",
+    "severity": "major",
+    "status": "corrected only within declared rigid-envelope scope; targeted Reality/Change re-reviews verify concretephase/geometry correction",
+    "resolution": "RF01-resolution.md"
+  }
+}

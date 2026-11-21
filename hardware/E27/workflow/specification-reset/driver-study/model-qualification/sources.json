@@ -1,0 +1,62 @@
+[
+  {
+    "name": "STN1NK80Z native model",
+    "url": "https://www.st.com/resource/en/spice_model/stn1nk80z_spice.zip",
+    "SHA256": "851813f6e812d104adaddf3e8fe062aef1235679492b9b2231b46eeaec480f42",
+    "bytes": 975,
+    "accessed": "2026-11-16",
+    "reference_only": true
+  },
+  {
+    "name": "STN1NK80Z datasheet",
+    "url": "https://www.st.com/resource/en/datasheet/stn1nk80z.pdf",
+    "SHA256": "b2e23ffd24302bb78fd42dddbd25155a0833f785765aba20ef38fdff6aabf03b",
+    "bytes": 1055284,
+    "accessed": "2026-11-16",
+    "reference_only": true
+  },
+  {
+    "name": "STD2N80K5 datasheet",
+    "url": "https://www.st.com/resource/en/datasheet/std2n80k5.pdf",
+    "SHA256": "1287054737d78886a3292a4ee99305c98cf736b6db712ca5c62942c6f4ff0eae",
+    "bytes": 760722,
+    "accessed": "2026-11-16",
+    "reference_only": true
+  },
+  {
+    "name": "Debian official package record",
+    "url": "https://deb.debian.org/debian/dists/trixie/main/binary-amd64/Packages.xz",
+    "SHA256": "7c801dd1c8e76bfebcb96e6df032cba57ef42c1d84956e5509c6b4769855086e",
+    "bytes": 915,
+    "accessed": "2026-11-16",
+    "reference_only": true,
+    "artifact_type": "Extracted text stanza; SHA256/bytes identify stanza, not downloaded Packages.xz",
+    "extraction": "xz decode official index; select Package: ngspice stanza",
+    "archive_SHA256": "7778d3e3f303b7ddb8ce0fe7c8d57473a076c6bf2e8f241f75421d2396352498"
+  },
+  {
+    "name": "native POLY module",
+    "url": "https://deb.debian.org/debian/pool/main/n/ngspice/ngspice_44.2+ds-1_amd64.deb",
+    "SHA256": "3401deb0ee1cf58fac01f50d550b81b449374928e3117050a520d564072ed7f0",
+    "bytes": 23648,
+    "accessed": "2026-11-16",
+    "reference_only": true,
+    "artifact_type": "Extracted code module; SHA256/bytes identify payload, not downloaded .deb",
+    "extraction_path": "usr/lib/x86_64-linux-gnu/ngspice/spice2poly.cm",
+    "archive_SHA256": "4d76721dd91416055b1088cfc58626d4db47b91afda7c73258c0968ba6e4d24e"
+  },
+  {
+    "name": "existing shared runtime",
+    "url": "https://ngspice.sourceforge.io/shared.html",
+    "SHA256": "8b24e526865425243ee57efa9dcbdde99e7220393eb77a1ab863e849a2e0d761",
+    "bytes": 8858472,
+    "accessed": "2026-11-16",
+    "reference_only": true
+  },
+  {
+    "name": "Debian package verification",
+    "package_SHA256": "4d76721dd91416055b1088cfc58626d4db47b91afda7c73258c0968ba6e4d24e",
+    "Packages_xz_SHA256": "7778d3e3f303b7ddb8ce0fe7c8d57473a076c6bf2e8f241f75421d2396352498",
+    "method": "Downloaded package digest matched official HTTPS Packages.xz stanza, version44.2+ds-1 amd64. No independent signature verification claimed. Package extracted in scratch only; no system installation or toolkit qualification."
+  }
+]

@@ -1,0 +1,37 @@
+stdout Note: No compatibility mode selected!
+stdout Circuit: component qualification experiment
+stdout Reducing trtol to 1 for xspice 'A' devices
+stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout rail                                       640
+stdout d                                          640
+stdout g                                            0
+stdout xq.4                                         0
+stdout xq.12                                        0
+stdout xq.6                                       640
+stdout xq.5                               1.01872e-08
+stdout xq.9                               1.67706e-10
+stdout xq.7                                       640
+stdout xq.8                                       640
+stdout xq.10                                  639.999
+stdout xq.11                              0.000640658
+stdout xq.13                                      640
+stdout xq.101                                 639.999
+stdout xq.102                             0.000640648
+stdout xq.100                                 640.639
+stdout l.xq.ld#branch                    -2.56042e-09
+stdout l.xq.ls#branch                      1.9203e-09
+stdout l.xq.lg#branch                    -6.40099e-10
+stdout e.xq.e2#branch                     6.40099e-10
+stdout e.xq.e1#branch                               0
+stdout vgate#branch                       6.40099e-10
+stdout vdc#branch                        -2.56042e-09
+stdout a$poly$e.xq.e3#branch_1_0            6.401e-10
+stderr Warning: singular matrix:  check node xq.5
+stdout No. of Data Rows : 66
+stderr doAnalyses: TRAN:  Timestep too small; time = 1e-07, timestep = 1.95837e-21: trouble with node "e.xq.e2#branch"
+stderr run simulation(s) aborted

@@ -1,0 +1,238 @@
+{
+  "scope": "Conditional construction envelopes and required tolerances, not supplier confirmed dimensions, normative insulation, manufactured fit or thermal qualification.",
+  "target_diameter_mm": 60,
+  "target_height_mm": 120,
+  "axial_chain": [
+    {
+      "name": "E27 cap envelope",
+      "nominal_mm": 27,
+      "required_plusminus_mm": 0.2
+    },
+    {
+      "name": "cup floor",
+      "nominal_mm": 1.5,
+      "required_plusminus_mm": 0.1
+    },
+    {
+      "name": "PCB seating gap",
+      "nominal_mm": 2.5,
+      "required_plusminus_mm": 0.1
+    },
+    {
+      "name": "driver length",
+      "nominal_mm": 60,
+      "required_plusminus_mm": 0.15
+    },
+    {
+      "name": "upper seating gap",
+      "nominal_mm": 1.5,
+      "required_plusminus_mm": 0.1
+    },
+    {
+      "name": "cup cover",
+      "nominal_mm": 1.5,
+      "required_plusminus_mm": 0.1
+    },
+    {
+      "name": "cover-to-plate gap",
+      "nominal_mm": 1,
+      "required_plusminus_mm": 0.1
+    },
+    {
+      "name": "aluminum plate",
+      "nominal_mm": 2,
+      "required_plusminus_mm": 0.1
+    },
+    {
+      "name": "TIM",
+      "nominal_mm": 0.1,
+      "required_plusminus_mm": 0.05
+    },
+    {
+      "name": "LED MCPCB",
+      "nominal_mm": 1.5,
+      "required_plusminus_mm": 0.1
+    },
+    {
+      "name": "optical dome rise",
+      "nominal_mm": 19.9,
+      "required_plusminus_mm": 0.2
+    }
+  ],
+  "board": {
+    "width_mm": 32,
+    "length_mm": 60,
+    "thickness_mm": 1.6,
+    "thickness_tol_mm": 0.1,
+    "nominal_bottom_Z_mm": 31,
+    "center_Z_mm": 61,
+    "normal_midplane_D_mm": 0.6,
+    "mount_X_bound_mm": 0.3,
+    "mount_D_bound_mm": 0.3,
+    "mount_Z_bound_mm": 0.5,
+    "part_position_bound_mm": 0.1
+  },
+  "cup": {
+    "proposed_wall_mm": 1.5,
+    "cavity_erosion_mm": 0.2,
+    "floor_inner_Z_mm": 28.5,
+    "cover_inner_Z_mm": 92.5,
+    "cover_outer_Z_mm": 94,
+    "lower_outer_profile_Z_R_mm": [
+      [
+        27,
+        14.5
+      ],
+      [
+        30,
+        20.5
+      ],
+      [
+        40,
+        29.6
+      ],
+      [
+        63,
+        29.6
+      ]
+    ],
+    "upper_cavity_from_Z_mm": 56,
+    "upper_inside_X_D_box_mm": [
+      -17,
+      -4.5,
+      17,
+      20.5
+    ],
+    "upper_inside_corner_r_mm": 0.5,
+    "upper_outer_X_D_box_mm": [
+      -18.5,
+      -6,
+      18.5,
+      22
+    ],
+    "upper_outer_corner_r_mm": 2,
+    "outer_step_Z_mm": 63,
+    "material_and_solid_insulation_qualified": false,
+    "construction": "UppercupwideopenmouthZ40 + SEPARATEjoiningsleeveZ34..42 + lowerflarednose(open topZ40) + removablelid. LoadPCBfirst, then sleeve/nose/lid. No fixedtonguebelowZ40 duringPCBloading.",
+    "nose_joint_Z_mm": [
+      34,
+      42
+    ],
+    "nose_overlap_radial_stack_mm": 3.55,
+    "nose_overlap_status": "Separate8mmsleeve,6mmlowernoseoverlapZ34..40 and2mmupperoverlapZ40..42. Neitherlap is a qualified insulationpath. Two1.5mmwalls+.55radialassemblygap. Endcradles fittedwithnose/lidafterbodyloading; no integralobstructingsiderails.",
+    "upper_cup_open_bottom_Z_mm": 40,
+    "joiner_radial_gap_mm": 0.55,
+    "joiner_outer_reduction_from_profile_mm": 2.05,
+    "joiner_outer_radius_tol_mm": 0.1,
+    "joiner_eccentricity_bound_mm": 0.1,
+    "lid_service_passage_diameter_mm": 12.4
+  },
+  "cooler": {
+    "type": "CUSTOM annular fins; not stockMPS60 and no inherited5.35K/W",
+    "finished_OD_mm": 59.6,
+    "OD_plusminus_mm": 0.1,
+    "pocket_nominal_cup_gap_mm": 0.5,
+    "fin_start_Z_mm": 64,
+    "fin_pitch_mm": 3,
+    "fin_count": 10,
+    "fin_thickness_mm": 1,
+    "plate_Z_mm": [
+      95,
+      97
+    ],
+    "plate_OD_mm": 58,
+    "plate_service_bore_mm": 14.4,
+    "thermal_resistance_qualified": false
+  },
+  "panel": {
+    "OD_mm": 48,
+    "bottom_Z_mm": 97.1,
+    "top_Z_mm": 98.6,
+    "thickness_mm": 1.5,
+    "central_passage_diameter_mm": 12.4,
+    "central_passage_center_X_D_mm": [
+      0,
+      3
+    ],
+    "LED_count_preview": 8,
+    "LED_ring_radius_mm": 16,
+    "LED_envelope_height_mm": 0.9,
+    "contact_annulus_OD_ID_mm": [
+      48,
+      36
+    ]
+  },
+  "service": {
+    "connector_reserved_diameter_mm": 9.6,
+    "connector_Z_mm": [
+      92,
+      105
+    ],
+    "center_X_D_mm": [
+      0,
+      3
+    ],
+    "selected_part": null,
+    "bushing_required": true,
+    "wire_route_qualified": false,
+    "bushing_OD_mm": 14.0,
+    "bushing_upper_stem_OD_mm": 12.0,
+    "bushing_ID_mm": 10.4,
+    "bore_and_bushing_plusminus_mm": 0.1,
+    "bushing_lower_stem_OD_mm": 12
+  },
+  "diffuser": {
+    "base_Z_mm": 98.6,
+    "nominal_top_Z_mm": 118.5,
+    "base_radius_mm": 29.8,
+    "shell_mm": 1.0,
+    "optical_transfer_qualified": false
+  },
+  "mechanical_working_body_clearance_mm": 0.3,
+  "vent_keepout_mm": 2,
+  "vent_requirement_status": "Project fullface reservation; actual manufacturer tableMAX/MIN conflict needs clarification. No certification.",
+  "support": {
+    "type": "removableendcradlesintegralwithlowernoseandlid, installedafterPCBloading",
+    "left_right_X_intervals_mm": [
+      [
+        -17,
+        -13
+      ],
+      [
+        13,
+        17
+      ]
+    ],
+    "D_flange_intervals_mm": [
+      [
+        -1,
+        -0.4
+      ],
+      [
+        1.6,
+        2.2
+      ]
+    ],
+    "bottom_cradle_Z_mm": [
+      28.5,
+      31.2
+    ],
+    "top_cradle_Z_mm": [
+      90.7,
+      92.5
+    ],
+    "seating_and_retention_force_qualified": false,
+    "scope": "Nominalendgrooveenvelopes; board thickness/width float is correlatedwithdeclaredgroove/channel sizes. No fixededgeflanges duringPCBloading.",
+    "bottom_left_right_X_intervals_mm": [
+      [
+        -17,
+        -15.5
+      ],
+      [
+        15.5,
+        17
+      ]
+    ],
+    "integral_side_guides_present_during_loading": false
+  }
+}

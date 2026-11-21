@@ -1,0 +1,39 @@
+VELLUNEO RFQ13 - DFM / QUOTATION ONLY
+No production, payment or energized-test authorization.
+
+BOARD: one rectangular 45.000 x 60.000 mm rigid PCB; dimensions refer to the
+Edge.Cuts route centreline. Four copper layers in order F.Cu / In1.Cu / In2.Cu /
+B.Cu. Request JLC04161H-7628, nominal 1.6 mm FR-4 Tg155, 35 um outer / 15.2 um
+inner copper, ENIG, green mask and white legends. Confirm actual material, CTI/RTI
+and minimum pressed dielectric thicknesses. Requested thickness range: 1.44-1.76 mm.
+No controlled-impedance target, panel, V-cut, edge plating or blind/buried vias.
+
+VIAS: epoxy-fill and copper-cap BOTH ENDS of the 17 specified through-vias only.
+Artwork land 0.700 mm; Excellon entry 0.300 mm. Finish exposed caps with ENIG.
+Use designated-filled-vias.csv. Ordinary tenting or mask plugging is not a substitute.
+Please state your pre-drill/finished-hole definition and guarantees for registration,
+finished ring, copper/cap thickness and planarity. The 0.200 mm annulus is nominal
+design geometry, not a guaranteed finished minimum.
+
+INSERTION HOLES: keep all 25 component holes open; total 42 PTH, 0 NPTH, no slots
+or mounting holes. Requested FINISHED plated-hole targets: T1 ten x 1.350 mm
+(desired acceptance 1.300-1.400), Q1 three x 1.500, BR1 four x 1.200, R1 two x
+1.100, C1 two x 1.000, and J1/J2 four x 1.600 mm. Confirm pre-drill compensation.
+Proposed component-hole tolerance +/-0.050 mm and hole/land registration <=0.025 mm
+require explicit agreement. Return guaranteed alternatives for review if unavailable.
+F1 and C4 are SMD; do not treat them as insertion components.
+
+FILES: common origin is native (77.5,130) mm; output X right, Y up. Gerber precision
+is six decimal mm; Excellon is three decimal mm (rounding <=0.0005 mm per axis).
+Nine Gerber layers, separate PTH/empty NPTH, drill maps and IPC-D-356 are supplied.
+Bare-board continuity/short e-test is requested; it is not a powered functional test.
+
+ISOLATION: do not add copper, tooling, thieving or identification marks inside
+native Y=82.900..92.135 mm across the board width, on any layer. Actual projected
+P/S copper gap is >=10.725 mm. The proposed 0.35 mm per-domain finishing budget
+is an engineering condition requiring process confirmation, not certification.
+Do not add slots, repair artwork or change dimensions without reviewed redlines.
+
+Please return exact production films, DFM exceptions, process/material details,
+price and lead time for five bare boards. No PCBA or stencil order is included.
+Finished transformer/assembly/isolation acceptance remains separate.

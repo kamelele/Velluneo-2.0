@@ -1,0 +1,60 @@
+{
+  "cases": [
+    {
+      "case": "two_bulk_branches",
+      "bulk_equivalent_R_max_ohm": 509478.99999999994,
+      "slowest_energy_tau_s": 9.170622,
+      "initial_energy_upper_J": 1.8656022752499999,
+      "energy_target_J": 9.999999999999999e-05,
+      "time_to5V_energy_envelope_s": 45.09160130598847,
+      "energy_upper_at100s_J": 6.300716361873335e-10,
+      "Vout_upper_at100s_V": 0.0125506138912339
+    },
+    {
+      "case": "one_bulk_branch_open",
+      "bulk_equivalent_R_max_ohm": 1018957.9999999999,
+      "slowest_energy_tau_s": 18.341244,
+      "initial_energy_upper_J": 1.8656022752499999,
+      "energy_target_J": 9.999999999999999e-05,
+      "time_to5V_energy_envelope_s": 90.18320261197694,
+      "energy_upper_at100s_J": 3.428502702407538e-05,
+      "Vout_upper_at100s_V": 2.927670875631147
+    },
+    {
+      "case": "one_bulk_bleeder_short",
+      "bulk_equivalent_R_max_ohm": 339652.6666666666,
+      "slowest_energy_tau_s": 6.113747999999999,
+      "initial_energy_upper_J": 1.8656022752499999,
+      "energy_target_J": 9.999999999999999e-05,
+      "time_to5V_energy_envelope_s": 30.061067537325645,
+      "energy_upper_at100s_J": 1.1579114884436575e-14,
+      "Vout_upper_at100s_V": 5.380314787360628e-05
+    }
+  ],
+  "cooling_examples": [
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 30,
+      "time_to45C_s": 51.68299793223311
+    },
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 60,
+      "time_to45C_s": 103.36599586446621
+    },
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 120,
+      "time_to45C_s": 206.73199172893243
+    },
+    {
+      "initial_surface_C_hypothesis": 68,
+      "ambient_C": 40,
+      "thermal_time_constant_s_hypothesis": 300,
+      "time_to45C_s": 516.829979322331
+    }
+  ]
+}

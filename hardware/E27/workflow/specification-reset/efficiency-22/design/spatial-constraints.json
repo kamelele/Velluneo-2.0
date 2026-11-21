@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "revision": "C16-factory-parts-1",
+  "basis": "Inherited all-layer barrier and fresh factory-part routing allocation; no approved placement or manufacturing stage is claimed.",
+  "basis_sources": [
+    {
+      "path": "spatial-basis.md",
+      "sha256": "04fd9f54861321b5ed5514217ee937422fba59cfa9073910e43aad4536a76c76"
+    }
+  ],
+  "outline_mm": [
+    77.5,
+    70,
+    122.5,
+    130
+  ],
+  "areas": [
+    {
+      "id": "ISOLATION",
+      "rectangle_mm": [
+        77.5,
+        82.9,
+        122.5,
+        92.135
+      ],
+      "layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "disallow": [
+        "track",
+        "via",
+        "pad",
+        "zone"
+      ],
+      "basis": "Retain existing primary/secondary no-new-copper allocation on all enabled layers; additional managed constraint, not a normative clearance substitute.",
+      "exceptions": []
+    }
+  ],
+  "blocks": [
+    {
+      "id": "DRIVER_POWER_SENSE",
+      "requirement_id": "PB-ROUTING",
+      "basis": "Preserve selected circuit/return topology and current-sense separation. See spatial-basis.md; geometric audit is not EMI/fault qualification.",
+      "sensitive_nets": {
+        "objects": [
+          "SENSE",
+          "CS"
+        ],
+        "rationale": "Preserve dedicated current-sense copper and review HV projection on every copper layer."
+      },
+      "switching_nodes": {
+        "objects": [
+          "Q1",
+          "T1",
+          "U1",
+          "D1"
+        ],
+        "rationale": "Retain selected switching node placement and source-bound loop review."
+      },
+      "return_paths": {
+        "objects": [
+          "C1",
+          "R9",
+          "Q1",
+          "T1"
+        ],
+        "rationale": "Retain separate capacitor/shunt/source/auxiliary branches; no shared shortcut bypass."
+      },
+      "loops": {
+        "objects": [
+          "C1",
+          "T1",
+          "Q1",
+          "R9"
+        ],
+        "rationale": "Retain compact power loop and independent proposed graph while isolating measurement path."
+      },
+      "kelvin_connections": {
+        "objects": [
+          "R9",
+          "U1"
+        ],
+        "rationale": "Preserve dedicated positive sense connection; negative return is branch-controlled, not claimed as a complete Kelvin pair."
+      }
+    }
+  ],
+  "approval": null
+}

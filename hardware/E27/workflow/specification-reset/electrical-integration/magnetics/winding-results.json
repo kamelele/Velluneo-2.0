@@ -1,0 +1,354 @@
+{
+  "status": "proposed construction; source-linked conditional calculations, not qualified winding",
+  "native": {
+    "AN_mm2": 40.7,
+    "MLT_mm": 50,
+    "Np": 120,
+    "Ns": 30,
+    "Na": 22,
+    "AL_nH": 160,
+    "AL_tolerance_fraction": 0.1,
+    "Lp_mH": 2.3040000000000003,
+    "Amin_mm2": 57
+  },
+  "winding_band_mm": 10.5,
+  "winding_order_inner_to_outer": [
+    "base tape",
+    "P three layers, no interlayer tape",
+    "one tape wrap",
+    "A one layer",
+    "one tape wrap",
+    "S two layers",
+    "outer tape"
+  ],
+  "windings": [
+    {
+      "id": "P",
+      "turns": 120,
+      "layers": [
+        40,
+        40,
+        40
+      ],
+      "pitch": 0.24,
+      "wire": {
+        "name": "ELEKTRISOLA Polysol 180 P180 copper 0.180mm IEC Grade2",
+        "bare": 0.18,
+        "bare_min": 0.177,
+        "od_max": 0.217,
+        "r20_max_ohm_m": 0.7007
+      },
+      "irms": 0.091545,
+      "ipeak": 0.358522,
+      "dot": 1,
+      "finish": 5,
+      "maximum_layer_span_mm": 9.6,
+      "available_unused_width_mm": 0.9000000000000004
+    },
+    {
+      "id": "A",
+      "turns": 22,
+      "layers": [
+        22
+      ],
+      "pitch": 0.24,
+      "wire": {
+        "name": "ELEKTRISOLA Polysol 180 P180 copper 0.180mm IEC Grade2",
+        "bare": 0.18,
+        "bare_min": 0.177,
+        "od_max": 0.217,
+        "r20_max_ohm_m": 0.7007
+      },
+      "irms": null,
+      "ipeak": null,
+      "dot": 2,
+      "finish": 4,
+      "maximum_layer_span_mm": 5.279999999999999,
+      "available_unused_width_mm": 5.220000000000001
+    },
+    {
+      "id": "S",
+      "turns": 30,
+      "layers": [
+        15,
+        15
+      ],
+      "pitch": 0.55,
+      "wire": {
+        "name": "Furukawa TEX-E 0.30mm",
+        "bare": 0.3,
+        "bare_min": 0.29,
+        "od_max": 0.52,
+        "r20_max_ohm_m": 0.2629,
+        "reference_table_not_purchase_spec": true
+      },
+      "irms": 0.53879,
+      "ipeak": 1.434,
+      "dot": 6,
+      "finish": 10,
+      "maximum_layer_span_mm": 8.25,
+      "available_unused_width_mm": 2.25
+    }
+  ],
+  "tape": {
+    "name": "3M1350F-1",
+    "nominal": 0.064,
+    "representative_upper": 0.077,
+    "not_binding_spec": true
+  },
+  "geometry": {
+    "radial_wire_mm": 1.9080000000000001,
+    "radial_regular_mm": 2.216,
+    "radial_one_seam_mm": 2.293,
+    "band_x_radial_envelope_mm2": 24.076500000000003,
+    "band_envelope_over_AN": 0.5915601965601965,
+    "copper_area_mm2": 5.734034911332089,
+    "copper_fill": 0.14088537865680809,
+    "wire_OD_circle_area_mm2": 11.622823105983686,
+    "OD_circle_fill": 0.28557304928706845,
+    "needed_local_cross_section_mm": [
+      10.5,
+      2.293
+    ],
+    "rectangular_window_fit_verified": false
+  },
+  "loss_cases": [
+    {
+      "MLT_mm": 50,
+      "temperature_C": 20,
+      "windings": [
+        {
+          "winding": "P",
+          "wire_length_m": 6.1,
+          "R_ohm": 4.27427,
+          "DC_equivalent_Irms_loss_W": 0.03582046427634675,
+          "peak_IR_drop_V": 1.53241982894,
+          "Jrms_A_mm2": 3.720473494933783,
+          "aux_loss_at_rms_A_W": null
+        },
+        {
+          "winding": "A",
+          "wire_length_m": 1.2000000000000002,
+          "R_ohm": 0.8408400000000001,
+          "DC_equivalent_Irms_loss_W": null,
+          "peak_IR_drop_V": null,
+          "Jrms_A_mm2": null,
+          "aux_loss_at_rms_A_W": {
+            "0.02": 0.00033633600000000007,
+            "0.05": 0.002102100000000001,
+            "0.1": 0.008408400000000003
+          }
+        },
+        {
+          "winding": "S",
+          "wire_length_m": 1.6,
+          "R_ohm": 0.42064000000000007,
+          "DC_equivalent_Irms_loss_W": 0.12210954750702402,
+          "peak_IR_drop_V": 0.60319776,
+          "Jrms_A_mm2": 8.157059860973346,
+          "aux_loss_at_rms_A_W": null
+        }
+      ],
+      "sum_PS_dc_loss_W": 0.15793001178337077
+    },
+    {
+      "MLT_mm": 50,
+      "temperature_C": 100,
+      "windings": [
+        {
+          "winding": "P",
+          "wire_length_m": 6.1,
+          "R_ohm": 5.618100488,
+          "DC_equivalent_Irms_loss_W": 0.04708241824483017,
+          "peak_IR_drop_V": 2.014212623158736,
+          "Jrms_A_mm2": 3.720473494933783,
+          "aux_loss_at_rms_A_W": null
+        },
+        {
+          "winding": "A",
+          "wire_length_m": 1.2000000000000002,
+          "R_ohm": 1.1052000960000001,
+          "DC_equivalent_Irms_loss_W": null,
+          "peak_IR_drop_V": null,
+          "Jrms_A_mm2": null,
+          "aux_loss_at_rms_A_W": {
+            "0.02": 0.00044208003840000005,
+            "0.05": 0.002763000240000001,
+            "0.1": 0.011052000960000004
+          }
+        },
+        {
+          "winding": "S",
+          "wire_length_m": 1.6,
+          "R_ohm": 0.5528892160000001,
+          "DC_equivalent_Irms_loss_W": 0.16050078924323236,
+          "peak_IR_drop_V": 0.7928431357440001,
+          "Jrms_A_mm2": 8.157059860973346,
+          "aux_loss_at_rms_A_W": null
+        }
+      ],
+      "sum_PS_dc_loss_W": 0.20758320748806253
+    },
+    {
+      "MLT_mm": 50,
+      "temperature_C": 125,
+      "windings": [
+        {
+          "winding": "P",
+          "wire_length_m": 6.1,
+          "R_ohm": 6.038047515499999,
+          "DC_equivalent_Irms_loss_W": 0.05060177885998123,
+          "peak_IR_drop_V": 2.1647728713520906,
+          "Jrms_A_mm2": 3.720473494933783,
+          "aux_loss_at_rms_A_W": null
+        },
+        {
+          "winding": "A",
+          "wire_length_m": 1.2000000000000002,
+          "R_ohm": 1.1878126260000001,
+          "DC_equivalent_Irms_loss_W": null,
+          "peak_IR_drop_V": null,
+          "Jrms_A_mm2": null,
+          "aux_loss_at_rms_A_W": {
+            "0.02": 0.0004751250504000001,
+            "0.05": 0.002969531565000001,
+            "0.1": 0.011878126260000003
+          }
+        },
+        {
+          "winding": "S",
+          "wire_length_m": 1.6,
+          "R_ohm": 0.5942170960000001,
+          "DC_equivalent_Irms_loss_W": 0.17249805228579745,
+          "peak_IR_drop_V": 0.852107315664,
+          "Jrms_A_mm2": 8.157059860973346,
+          "aux_loss_at_rms_A_W": null
+        }
+      ],
+      "sum_PS_dc_loss_W": 0.2230998311457787
+    },
+    {
+      "MLT_mm": 60,
+      "temperature_C": 20,
+      "windings": [
+        {
+          "winding": "P",
+          "wire_length_m": 7.3,
+          "R_ohm": 5.11511,
+          "DC_equivalent_Irms_loss_W": 0.04286711298644775,
+          "peak_IR_drop_V": 1.8338794674199999,
+          "Jrms_A_mm2": 3.720473494933783,
+          "aux_loss_at_rms_A_W": null
+        },
+        {
+          "winding": "A",
+          "wire_length_m": 1.4200000000000002,
+          "R_ohm": 0.994994,
+          "DC_equivalent_Irms_loss_W": null,
+          "peak_IR_drop_V": null,
+          "Jrms_A_mm2": null,
+          "aux_loss_at_rms_A_W": {
+            "0.02": 0.0003979976,
+            "0.05": 0.0024874850000000007,
+            "0.1": 0.009949940000000003
+          }
+        },
+        {
+          "winding": "S",
+          "wire_length_m": 1.9000000000000001,
+          "R_ohm": 0.49951000000000007,
+          "DC_equivalent_Irms_loss_W": 0.14500508766459103,
+          "peak_IR_drop_V": 0.7162973400000001,
+          "Jrms_A_mm2": 8.157059860973346,
+          "aux_loss_at_rms_A_W": null
+        }
+      ],
+      "sum_PS_dc_loss_W": 0.18787220065103877
+    },
+    {
+      "MLT_mm": 60,
+      "temperature_C": 100,
+      "windings": [
+        {
+          "winding": "P",
+          "wire_length_m": 7.3,
+          "R_ohm": 6.7233005839999995,
+          "DC_equivalent_Irms_loss_W": 0.05634453330938693,
+          "peak_IR_drop_V": 2.410451171976848,
+          "Jrms_A_mm2": 3.720473494933783,
+          "aux_loss_at_rms_A_W": null
+        },
+        {
+          "winding": "A",
+          "wire_length_m": 1.4200000000000002,
+          "R_ohm": 1.3078201136,
+          "DC_equivalent_Irms_loss_W": null,
+          "peak_IR_drop_V": null,
+          "Jrms_A_mm2": null,
+          "aux_loss_at_rms_A_W": {
+            "0.02": 0.00052312804544,
+            "0.05": 0.0032695502840000006,
+            "0.1": 0.013078201136000002
+          }
+        },
+        {
+          "winding": "S",
+          "wire_length_m": 1.9000000000000001,
+          "R_ohm": 0.6565559440000001,
+          "DC_equivalent_Irms_loss_W": 0.19059468722633843,
+          "peak_IR_drop_V": 0.9415012236960001,
+          "Jrms_A_mm2": 8.157059860973346,
+          "aux_loss_at_rms_A_W": null
+        }
+      ],
+      "sum_PS_dc_loss_W": 0.24693922053572537
+    },
+    {
+      "MLT_mm": 60,
+      "temperature_C": 125,
+      "windings": [
+        {
+          "winding": "P",
+          "wire_length_m": 7.3,
+          "R_ohm": 7.225860141499999,
+          "DC_equivalent_Irms_loss_W": 0.06055622716030541,
+          "peak_IR_drop_V": 2.590629829650863,
+          "Jrms_A_mm2": 3.720473494933783,
+          "aux_loss_at_rms_A_W": null
+        },
+        {
+          "winding": "A",
+          "wire_length_m": 1.4200000000000002,
+          "R_ohm": 1.4055782741,
+          "DC_equivalent_Irms_loss_W": null,
+          "peak_IR_drop_V": null,
+          "Jrms_A_mm2": null,
+          "aux_loss_at_rms_A_W": {
+            "0.02": 0.00056223130964,
+            "0.05": 0.003513945685250001,
+            "0.1": 0.014055782741000004
+          }
+        },
+        {
+          "winding": "S",
+          "wire_length_m": 1.9000000000000001,
+          "R_ohm": 0.7056328015000001,
+          "DC_equivalent_Irms_loss_W": 0.2048414370893845,
+          "peak_IR_drop_V": 1.011877437351,
+          "Jrms_A_mm2": 8.157059860973346,
+          "aux_loss_at_rms_A_W": null
+        }
+      ],
+      "sum_PS_dc_loss_W": 0.2653976642496899
+    }
+  ],
+  "limitations": [
+    "AN area alone does not guarantee rectangle or local exit clearance; require actual usable bobbin width>=10.5mm and radialroom>=2.293mm everywhere in active band.",
+    "P layer crossover routes use reserved side pockets, not an added crossover over active winding; feasibility must be confirmed on winding drawing/sample.",
+    "MLT60mm is proposed cut-length acceptance/sensitivity, not a sourced maximum.",
+    "Source table OD/resistance and tape thickness include reference/representative limitations; procurement batch limits must be specified.",
+    "Temperature loss extrapolation uses approximate copper alpha .00393/K; skin/proximity/gapfringing/termination AC loss excluded.",
+    "P/S currents are separate maxima from a correlated corner sweep; summed losses are a conservative screen of maxima, not one asserted controller trajectory.",
+    "Aux waveform not supplied; auxiliary loss coefficient and explicit current sensitivities only."
+  ]
+}

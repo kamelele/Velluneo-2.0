@@ -1,0 +1,9 @@
+# FOOTPRINT-02 — remaining component library candidates
+
+2026-11-17. Baseline6f6d1b2477ccb8b9824aa6eda40bc85b96246085. User requests continued design work. This bounded task remains in schematic/libraries, with root as sole shared CAD/library writer. Preserve previous three reviewed footprints and all circuit values/physical graph. Never infer expected intent from exported CAD.
+
+Two implementers inspect native source drawings in separate scratch paths: /root/model_compatibility (CRCW/NTC/KEMET and bobbin view) and /root/support_design (rectifiers/TVS/capacitors/fuse/axial resistor). Their audits are not independent approval. Four separate read-only reviewer contexts inspect the same frozen final candidate.
+
+Prepare as many remaining native footprints as source evidence supports. Clearly distinguish manufacturer-recommended copper, project-proposed land/drill/body/courtyard/mask/paste choices, and unresolved part/view/interface inputs. Do not invent a confirmed transformer top-side view, lead-forming dimension, wire gauge, process capability or insulation spacing. Unresolved assignments may remain empty with specific owned closure conditions. Project-defined internal wire terminations may have explicitly provisional hole/pad geometry, with the actual wire/build requirements still open; these do not define the user dock.
+
+Checks: native KiCad10.0.6 parsing and pad inventory/coordinates/sizes/layers/drills, source-derived pin/polarity mapping, actual source-hashed assignment coverage and fresh approved physical connectivity/ERC. Run schematic requirements and work checks honestly; no dummyPCB, false profile adoption, global relaxation, measurement or fabrication claim. Produce native views and an updated editable package. Native library candidates do not grant schematic-stage, placement or manufacturing acceptance.

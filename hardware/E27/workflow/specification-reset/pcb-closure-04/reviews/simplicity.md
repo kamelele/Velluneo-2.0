@@ -1,0 +1,20 @@
+# Independent Simplicity review — PCB-CLOSURE-04-r3
+
+Actor: /root/closure04_simplicity
+Base: 4eb215d273262ec4ba995fdf69e9118f9537aff1
+Frozen body: 95d1910491f2d8f8a4119e4ff377ec30d6d8bee73608ed86e77a62be19e2acde
+
+Coordinator transcription of the actual returned independent final report; scopes and limitations retained.
+
+ReadpinnedtoolkitSimplicity/currentrequirements/task/routingintent/actualreports. Independentlyverified344freeze/155ZIPCRC+hashes andreranreadonlynativeverifier:33/81/23+4NC/41x60/zero_tracks/matchingnativepads/drills/layers/values/MPNs/sourcehashes/intent/allRefsvisible/modelsresolve. Full+portable0violations/54unconnected/0parity; formercoupon-onlygapclosedatsavedCADscope.
+
+RetainsisolatedCCarchitecture,noextrafirmware/rails. Realcomponent/constructionchangesremoveinternalconflictswithoutreducing3/10mm. Additionalstartupparts/formingprocessneedwholeproductselectionreview,nocostceilinginvented.
+
+S-C04-07 routingacceptanceblocker:sense19.906mmvsclampchain20.997/return4.472; lengthnotitselffailurebutrequiresactualdedicatedKelvin/reference/separation/coupling/errorlimits. Ownerpower/layout.
+S-C04-08 mechanicalplacementblocker:58.0288diameter/.9856radialouter60differencebeforewalls/mount/wires/tolerances; ownersmechanical/process/coordinator,closefinishedinternalenvelope/fullheight/interfaces.
+S-C04-02 construction/insulationretained:forming/root/bend/strain/seating/jig/polarity/T1finishedmargin;ownersprocess/mechanical/magnetic/insulation,closedimensionedverifiedconstruction/finishedpaths.Noexemption/protectiondeletionsupported.
+S-C04-03 operating/thermalretained:+.130Winitialloss,new140k/typicalNTC/auxVDD/fault/retry/clamp/core;ownerspower/magnetic/thermal,closesourcevalidoperating/thermal/lifereview.
+S-C04-09 crossfaceunresolved:threeprojectedpairsnotqualifiedsolidinsulation/coupling;ownerpower/insulation,closeactualmaterial/stackup/process/correlatedwaveforms.
+S-C04-01 selection/costcomparisonnotpublicationblocker:reviewsource/assembly/forming/inspectionimplicationsbeforeadoption,retainprotection/verification.
+
+FormerS-C04-04fullboardgapclosedonlynominalgeometry,old31retains8. Proseambiguitycorrected. No publicationblockingdefect. Ready_for_human_reviewfortruthfulcompleteproposal;adoption/placement/routing/manufacture/poweredtestblocked. NoCAD/fileswrites.

@@ -1,0 +1,150 @@
+{
+  "kind": "Executed combined design-proposal diagnostic, not real/controller-native/three-winding transient validation",
+  "input_sha256": {
+    "pcb-readiness-01\\startup-protection\\calculate.py": "b5b360b1441e9c8a987bcd266c1e31bbb1252ab0c65142f37897dfa90b285f23",
+    "pcb-readiness-01\\startup-protection\\results-160.json": "7db21522ca33df2bb353508ebbfc95168f65e92bd91404a9153b636c825d2054",
+    "design-closure-02\\transformer\\construction-contract.json": "eb9d292daf7725750930a3ab6f873a0cd16adc3bf6c372624f1c86b9579bba88"
+  },
+  "cases": 256,
+  "case_grid_digest_sha256": "3cbf33f08c144feaca7020515b72a4a6d6dfa748b6cf767808cd8497b9c29e01",
+  "groups": [
+    {
+      "temperature_C_screen": 10,
+      "backup_bias_A_screen": 0.0,
+      "cases": 64,
+      "minimum_VDD_V": 11.623500130457376,
+      "maximum_VDD_V": 19.0
+    },
+    {
+      "temperature_C_screen": 10,
+      "backup_bias_A_screen": 8.5e-05,
+      "cases": 64,
+      "minimum_VDD_V": 11.514463858727812,
+      "maximum_VDD_V": 19.0
+    },
+    {
+      "temperature_C_screen": 125,
+      "backup_bias_A_screen": 0.0,
+      "cases": 64,
+      "minimum_VDD_V": 11.653917378005861,
+      "maximum_VDD_V": 19.0
+    },
+    {
+      "temperature_C_screen": 125,
+      "backup_bias_A_screen": 8.5e-05,
+      "cases": 64,
+      "minimum_VDD_V": 11.524400308616112,
+      "maximum_VDD_V": 19.0
+    }
+  ],
+  "worst160": {
+    "new_cut_length_DCR_temperature_C_screen": 10,
+    "additional_backup_bias_A_screen": 8.5e-05,
+    "config": {
+      "Cout_F": 2.0592e-05,
+      "Cdd_F": 8.90321e-07,
+      "bus_V": 240,
+      "Raux_ohm": 4.7,
+      "first3_VCS_V": 0.175,
+      "extra_initial_wait_s": 0.0003,
+      "Lp_factor": 1.1,
+      "Rcs_factor": 1.021,
+      "LEDs": 7,
+      "LED_shift_V": -0.3,
+      "VFout_V": 0.0,
+      "VFaux_V": 1.2,
+      "extra_bias_A": 8.5e-05
+    },
+    "integration_steps_per_demag": 160,
+    "pulses": 174,
+    "duration_s": 0.006003847080412902,
+    "Vo_final_V": 18.371433380303042,
+    "VDD_final_V": 12.452571443569013,
+    "VDD_min_V": 11.514463858727812,
+    "VDD_max_V": 19.0,
+    "reaches10V_reserve": true,
+    "remains_above8p5_UVLO": true,
+    "maximum_KCL_error_A": 1.465320920157609e-14,
+    "maximum_off_energy_error_J": 1.652539770114961e-11,
+    "total_aux_charge_C": 1.855993791248233e-05,
+    "maximum_commanded_primary_peak_A": 0.33474255817701687,
+    "events": []
+  },
+  "matched320": {
+    "config": {
+      "Cout_F": 2.0592e-05,
+      "Cdd_F": 8.90321e-07,
+      "bus_V": 240,
+      "Raux_ohm": 4.7,
+      "first3_VCS_V": 0.175,
+      "extra_initial_wait_s": 0.0003,
+      "Lp_factor": 1.1,
+      "Rcs_factor": 1.021,
+      "LEDs": 7,
+      "LED_shift_V": -0.3,
+      "VFout_V": 0.0,
+      "VFaux_V": 1.2,
+      "extra_bias_A": 8.5e-05
+    },
+    "integration_steps_per_demag": 320,
+    "pulses": 174,
+    "duration_s": 0.006003847151952011,
+    "Vo_final_V": 18.37143337615414,
+    "VDD_final_V": 12.45257221365182,
+    "VDD_min_V": 11.514463559389458,
+    "VDD_max_V": 19.0,
+    "reaches10V_reserve": true,
+    "remains_above8p5_UVLO": true,
+    "maximum_KCL_error_A": 1.5102502581854083e-14,
+    "maximum_off_energy_error_J": 9.763588659891971e-13,
+    "total_aux_charge_C": 1.8559938857694313e-05,
+    "maximum_commanded_primary_peak_A": 0.33474255817701687,
+    "events": []
+  },
+  "refinement_VDD_difference_V": -2.993383532157168e-07,
+  "clamp_screens": [
+    {
+      "Lp_H": 0.0020736,
+      "effective_PS_leakage_H_hypothesis": 1.40615e-05,
+      "TVS_normal_W_at11W_magnetic_rate_hypothesis": 0.23214522453418424,
+      "available0p4W_allocation_W": 0.4
+    },
+    {
+      "Lp_H": 0.0020736,
+      "effective_PS_leakage_H_hypothesis": 2e-05,
+      "TVS_normal_W_at11W_magnetic_rate_hypothesis": 0.33018557697853607,
+      "available0p4W_allocation_W": 0.4
+    },
+    {
+      "Lp_H": 0.002304,
+      "effective_PS_leakage_H_hypothesis": 1.40615e-05,
+      "TVS_normal_W_at11W_magnetic_rate_hypothesis": 0.20893070208076578,
+      "available0p4W_allocation_W": 0.4
+    },
+    {
+      "Lp_H": 0.002304,
+      "effective_PS_leakage_H_hypothesis": 2e-05,
+      "TVS_normal_W_at11W_magnetic_rate_hypothesis": 0.29716701928068245,
+      "available0p4W_allocation_W": 0.4
+    },
+    {
+      "Lp_H": 0.0025344000000000005,
+      "effective_PS_leakage_H_hypothesis": 1.40615e-05,
+      "TVS_normal_W_at11W_magnetic_rate_hypothesis": 0.18993700189160526,
+      "available0p4W_allocation_W": 0.4
+    },
+    {
+      "Lp_H": 0.0025344000000000005,
+      "effective_PS_leakage_H_hypothesis": 2e-05,
+      "TVS_normal_W_at11W_magnetic_rate_hypothesis": 0.2701518357097112,
+      "available0p4W_allocation_W": 0.4
+    }
+  ],
+  "limits": [
+    "New cut-length DCR limits are proposed procurement conditions, not measured or guaranteed actual transformer values.125C is a stress diagnostic beyond110C normal winding target.",
+    "This model remains ideal-coupled plus finite winding resistances; new slab leakage/capacitance/leadouts and the full native TI law are absent. Matching a threshold is not a complete startup/fault pass.",
+    "85uA is the backup enabledbias screen only; LDO output charging and uniform-source charging sensitivities remain separately in controller report.",
+    "11W magnetic-energy rate is a normal hypothesis, not an actual combined input/driver thermal bound or a fault-power limit.",
+    "The slab14.0615uH is not a parameter guarantee; the20uH acceptance proposal still requires actual three-winding characterization/source-conditioned equivalent model."
+  ]
+}

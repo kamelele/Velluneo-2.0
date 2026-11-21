@@ -1,0 +1,32 @@
+{
+  "result": "pass",
+  "scope": "Native10.0.6threefootprintloads/geometry andschematicERConfreshZIPextraction; not process/functionapproval",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/footprint-package-test/Velluneo_driver/footprint-study/verify_native_footprints.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"result\": \"pass\",\n  \"native_pcbnew\": \"10.0.6\",\n  \"scope\": \"Native footprint loading, unique exact pad inventory/centres/sizes/layers and reserved courtyard body/pad containment; not PCB DRC, solder/process, thermal or safety approval\",\n  \"parts\": [\n    {\n      \"ref\": \"U1\",\n      \"footprint\": \"UCC28711DR_SOIC7_HV7\",\n      \"file_sha256\": \"bbefd0cca0948ac2e7cbb2dd72de07704e9e18e39963371ef723b69b4a102d82\",\n      \"pads\": [\n        [\n          \"1\",\n          -2.7,\n          -1.905,\n          1.55,\n          0.6\n        ],\n        [\n          \"2\",\n          -2.7,\n          -0.635,\n          1.55,\n          0.6\n        ],\n        [\n          \"3\",\n          -2.7,\n          0.635,\n          1.55,\n          0.6\n        ],\n        [\n          \"4\",\n          -2.7,\n          1.905,\n          1.55,\n          0.6\n        ],\n        [\n          \"5\",\n          2.7,\n          1.905,\n          1.55,\n          0.6\n        ],\n        [\n          \"6\",\n          2.7,\n          0.635,\n          1.55,\n          0.6\n        ],\n        [\n          \"7\",\n          2.7,\n          -1.905,\n          1.55,\n          0.6\n        ]\n      ],\n      \"result\": \"pass\"\n    },\n    {\n      \"ref\": \"BR1\",\n      \"footprint\": \"MB10S_Diodes_MBS_1P_2AC_3N_4AC\",\n      \"file_sha256\": \"bcb61b86077c0befe787d45ba0b056c501d47edd3b1cdd96596489004b025f4f\",\n      \"pads\": [\n        [\n          \"1\",\n          1.25,\n          -2.675,\n          1.0,\n          2.15\n        ],\n        [\n          \"2\",\n          1.25,\n          2.675,\n          1.0,\n          2.15\n        ],\n        [\n          \"3\",\n          -1.25,\n          -2.675,\n          1.0,\n          2.15\n        ],\n        [\n          \"4\",\n          -1.25,\n          2.675,\n          1.0,\n          2.15\n        ]\n      ],\n      \"result\": \"pass\"\n    },\n    {\n      \"ref\": \"Q1\",\n      \"footprint\": \"STN1NK80Z_SOT223_Tab4\",\n      \"file_sha256\": \"f1b8edf66033160f5165cb03e9bd5d579b107ceceda4ca7340bc40d4d0cf1306\",\n      \"pads\": [\n        [\n          \"1\",\n          -2.3,\n          3.2,\n          1.2,\n          1.5\n        ],\n        [\n          \"2\",\n          0.0,\n          3.2,\n          1.2,\n          1.5\n        ],\n        [\n          \"3\",\n          2.3,\n          3.2,\n          1.2,\n          1.5\n        ],\n        [\n          \"4\",\n          0.0,\n          -3.2,\n          3.3,\n          1.5\n        ]\n      ],\n      \"result\": \"pass\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/footprint-package-test/Velluneo_driver/package-erc.json",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/footprint-package-test/Velluneo_driver/Velluneo_specification_reset.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to /workspace/hardware/E27/workflow/specification-reset/.work/footprint-package-test/Velluneo_driver/package-erc.json\n",
+      "stderr": ""
+    }
+  ]
+}

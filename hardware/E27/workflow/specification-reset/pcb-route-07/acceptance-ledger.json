@@ -1,0 +1,74 @@
+{
+  "packet": "PCB-ROUTE-07",
+  "owner_basis_approved": true,
+  "approved_intent_digest": "87b164503d5c5894dfe592608a172bd858c960b3a40b1b141f3588bfeffd716b",
+  "open": [
+    {
+      "id": "C05-CTRL",
+      "owner": "Power/magnetic/thermal designer",
+      "closure": "Source-valid VDDaux/transients, RLCactualdelay, NTCfault, retry, reset/clamp/core/SOA/thermal evidence; actual individual-cycle current/frequency bounds remain unproven because source CS/frequency limits are EMI-modulated average levels"
+    },
+    {
+      "id": "C05-SENSE",
+      "owner": "Power/layout designer",
+      "closure": "C06 long-return/five-via geometry is superseded for the C07 candidates: IC trunk27.033mm on2layers and23.581mm in the unadopted4layer comparison, with19comparisonvias. Actual coupling/error, shared2.7mmnegative strap, assembly and operating waveform qualification remain open; DRV43.1mm is a major new open finding."
+    },
+    {
+      "id": "C05-ISOL",
+      "owner": "Process/magnetic/insulation designer",
+      "closure": "FinishedT1metal/annuli/fillets/insertion/forming/root/freelead and correctnormative/material/stackupbasis;10.7nominaltoleranceproposalunmet"
+    },
+    {
+      "id": "C05-FIT",
+      "owner": "Mechanical/process designer",
+      "closure": "Finished wall/mount/wire/tolerance/120mm fit remains unqualified. Historical58.029mm nominal diameter screen applied to the41mm baseline; widening to43mm requires a fresh finished-fit assessment and does not inherit that result."
+    },
+    {
+      "id": "C05-CONFIG",
+      "owner": "Coordinator",
+      "closure": "Controlled managedconfigurationmigration preservingstricter/scopedrules, actualrequirementsU05-U11andgenuinestagereview"
+    },
+    {
+      "id": "C07-2L",
+      "owner": "Power/layout designer",
+      "closure": "Five 2-layer DRAIN/BULK connections remain; no two-layer infeasibility is claimed."
+    },
+    {
+      "id": "C07-PROCESS",
+      "owner": "Owner and process designer",
+      "closure": "Four-layer comparison is unadopted. Owner process decision, exact service/stackup/copper/dielectric/assembly/cost and fresh affected review required."
+    },
+    {
+      "id": "C07-DRV",
+      "owner": "Power/layout designer",
+      "closure": "43.1mm DRV is a major open performance/layout finding. Reduce/validate driver and return loop, ringing, reference bounce, coupling/error, pulse current and EMI;0DRC is insufficient."
+    },
+    {
+      "id": "C07-MEAS",
+      "owner": "Power/layout designer",
+      "closure": "Projected3mm corridor and preservedtopology are geometric only; shared2.7mmR9negative strap remains. Otherquiet-net projections, current/stress/closed-looparea/inductance and actualwaveforms remain unqualified."
+    }
+  ],
+  "technical_stage_approved": false,
+  "manufacturing_or_powered_test_authorized": false,
+  "inherited_completed_from_CONTROL05": [
+    "actual owner decision recorded",
+    "full33native0violations/ERC0 with retainednumericrules",
+    "previous3opposite-facepadprojectionsremoved",
+    "namedQ1landannulusrefinement",
+    "source-correctRLCequation/128conditionalcorners/CV/NTC/UVLOassessment",
+    "real8-segment3-branchsensestudy/nativepositiveandnegativecontrols",
+    "isolatedT1ovalstudy/nativepositiveandnegativecontrols"
+  ],
+  "completed": [
+    "Native 2-layer routing advanced from39 to5unconnected, no native violations/parity",
+    "Separate unadopted 4-layer comparison has0violations/0unconnected/0parity",
+    "Independent81pin intent/ERC and unchangedpolicy checked",
+    "ProtectedSENSE/CS and localVDD preserved; C1/R9/Q1/T1 cutcontrols executed",
+    "All-layer projected measurement screen and localmodels checked; negativecontrols detected"
+  ],
+  "inherited_open_finding_ids_preserved": true,
+  "base_commit": "d4d41aa81bc43c12b0ff6e00fb44357baed33609",
+  "four_layer_process_approved": false,
+  "technical_routing_stage_approved": false
+}

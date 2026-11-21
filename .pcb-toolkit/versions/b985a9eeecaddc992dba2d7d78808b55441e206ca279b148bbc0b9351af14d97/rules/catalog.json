@@ -1,0 +1,125 @@
+{
+  "rules": [
+    {
+      "basis": "Candidate policy + datasheet",
+      "id": "LIB-001",
+      "method": "review",
+      "scope": "all",
+      "status": "candidate-until-project-profile-approval",
+      "text": "All pins and exposed pads represented; pin numbers and footprint pads match the exact MPN/datasheet"
+    },
+    {
+      "basis": "Candidate policy / KiCad",
+      "id": "ERC-001",
+      "method": "ERC",
+      "scope": "all",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Conflicting driven outputs are errors; pin types reflect real electrical function"
+    },
+    {
+      "basis": "KiCad / proposed policy",
+      "id": "ERC-002",
+      "method": "ERC",
+      "scope": "all",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Unconnected pins and undriven power/input pins require correction or explicit local waiver"
+    },
+    {
+      "basis": "KiCad / proposed policy",
+      "id": "DRC-001",
+      "method": "DRC",
+      "scope": "all",
+      "status": "candidate-until-project-profile-approval",
+      "text": "No shorts or unconnected nets; refill zones and check schematic parity"
+    },
+    {
+      "basis": "Supplier source + project approval",
+      "id": "DFM-001",
+      "method": "DRC",
+      "scope": "selected fabrication",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Minimum clearance follows selected process and stricter product requirements"
+    },
+    {
+      "basis": "Supplier source + project approval",
+      "id": "DFM-002",
+      "method": "DRC",
+      "scope": "selected fabrication",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Minimum track_width follows selected process and stricter product requirements"
+    },
+    {
+      "basis": "Supplier source + project approval",
+      "id": "DFM-003",
+      "method": "DRC",
+      "scope": "selected fabrication",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Minimum hole_size follows selected process and stricter product requirements"
+    },
+    {
+      "basis": "Supplier source + project approval",
+      "id": "DFM-004",
+      "method": "DRC",
+      "scope": "selected fabrication",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Minimum annular_width follows selected process and stricter product requirements"
+    },
+    {
+      "basis": "Supplier source + project approval",
+      "id": "DFM-005",
+      "method": "DRC",
+      "scope": "selected fabrication",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Minimum edge_clearance follows selected process and stricter product requirements"
+    },
+    {
+      "basis": "Product requirements",
+      "id": "DES-001",
+      "method": "calculation",
+      "scope": "power",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Current, temperature rise and fault conditions justify power track widths"
+    },
+    {
+      "basis": "Product requirements",
+      "id": "DES-002",
+      "method": "calculation",
+      "scope": "RF/high-speed",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Impedance/differential geometry follows confirmed stackup and topology"
+    },
+    {
+      "basis": "Product-specific standard",
+      "id": "ISO-001",
+      "method": "review",
+      "scope": "isolation",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Each barrier has separate clearance/creepage requirements and standard-clause evidence"
+    },
+    {
+      "basis": "Candidate policy; local PCBA provider confirmation required",
+      "id": "ASM-001",
+      "method": "review",
+      "scope": "inhouse",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Assembly envelope and frameless stencil verified against actual process"
+    },
+    {
+      "basis": "User decision",
+      "id": "REL-001",
+      "method": "review",
+      "scope": "all",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Human approval at every design stage; evidence bound to input hashes"
+    },
+    {
+      "basis": "User decision",
+      "id": "REL-002",
+      "method": "review",
+      "scope": "all",
+      "status": "candidate-until-project-profile-approval",
+      "text": "Release artifacts match reviewed source snapshot and include bring-up plan"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,55 @@
+{
+  "status": "Proposed independent source-based intent, before new schematic; NOT owner-approved",
+  "mpn": "74215",
+  "view_basis": "Manufacturer bottom-view pin drawing; mirror X for top-side PCB footprint",
+  "pins": {
+    "1": "PGND_AUX_RETURN",
+    "2": "AUX_RAW (dot)",
+    "3": "physically absent",
+    "4": "DRAIN (dot)",
+    "5": "physical pin; no winding shown; no external connection",
+    "6": "BULK_P",
+    "7": "SECONDARY_RAW (dot)",
+    "8": "S2 tap; winding-connected; external NC",
+    "9": "S1 tap; winding-connected; external NC",
+    "10": "OUT_NEG"
+  },
+  "windings": [
+    {
+      "pins": [
+        4,
+        6
+      ],
+      "turns": 120
+    },
+    {
+      "pins": [
+        2,
+        1
+      ],
+      "turns": 14
+    },
+    {
+      "pins": [
+        7,
+        10
+      ],
+      "turns": 27
+    },
+    {
+      "pins": [
+        8,
+        10
+      ],
+      "turns": 17
+    },
+    {
+      "pins": [
+        9,
+        10
+      ],
+      "turns": 6
+    }
+  ],
+  "unused_pins_are_not_unwound": true
+}

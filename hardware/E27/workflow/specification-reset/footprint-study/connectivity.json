@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "errors": [],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/connectivity-netlist.xml",
+        "/workspace/hardware/E27/workflow/specification-reset/Velluneo_specification_reset.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Warning: schematic has annotation errors, please use the schematic editor to fix them\n",
+      "stderr": ""
+    }
+  ],
+  "intent_digest": "b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57",
+  "intent_revision": "driver-pin-intent-draft-1",
+  "physical_pins": 73,
+  "intended_nets": 21,
+  "no_connects": 4,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "b48f1f4942dde63f388b7ffbc0072651ec3fb2dc9d105a13340ced493938598a",
+  "export_sha256": "ad07402f08d9d405514d7c9640e1c153693ea96a854519a3a1049bd618e6a310",
+  "export_tool": "Eeschema 10.0.6+dfsg-1",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}

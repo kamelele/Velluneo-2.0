@@ -1,0 +1,78 @@
+[
+  {
+    "id": "TI-UCC2871x",
+    "url": "https://www.ti.com/lit/ds/symlink/ucc28711.pdf",
+    "external_relative_path": "readiness-sources/ucc2871x.pdf",
+    "bytes": 1372733,
+    "sha256": "762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248",
+    "note": "2017 source; electrical tables, 8.3.2, applications; legacy NTC pin prose is not actual physical pin map"
+  },
+  {
+    "id": "TI-EVM",
+    "url": "https://www.ti.com/lit/ug/sluua12/sluua12.pdf",
+    "external_relative_path": "compact-sources/ucc28711-evm.pdf",
+    "bytes": 517799,
+    "sha256": "6c1341711252b3a59db49a3d51be5ed61bfecfb769d09d0165490aa238f3d4fe",
+    "note": "2012 measured 5V/1A reference; pp7-10 startup/transient/ripple, no short test"
+  },
+  {
+    "id": "VISHAY-AC",
+    "url": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+    "external_relative_path": "compact-sources/ac05.pdf",
+    "bytes": 218742,
+    "sha256": "ebd3c714bb6b8c267c4cee006f5c72f105ee79c47d43ca680eb7e65929051f51",
+    "note": "05Dec2024; single-pulse graph E/R not joules alone"
+  },
+  {
+    "id": "SCHURTER-F1",
+    "url": "https://www.schurter.com/en/datasheet/typ_UMT_H.pdf",
+    "external_relative_path": "sources/schurter-umth.pdf",
+    "bytes": 461066,
+    "sha256": "bac65726cd086e794288aa169ef2349664e674520019839b234b3a90f7c06ec7",
+    "note": "Actual local native data; .25A row p3: .15A2s typical, not guaranteed min"
+  },
+  {
+    "id": "RUBYCON-C1",
+    "url": "https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/BXW.pdf",
+    "external_relative_path": "readiness-sources/rubycon-bxw.pdf",
+    "bytes": 241224,
+    "sha256": "9fb3a22e969e8244e135b7204aa46baa7b8a99d68803a6408fca20c3d8fd5fa6",
+    "note": "Rated test conditions for tan-delta, leakage and ripple"
+  },
+  {
+    "id": "PANASONIC-C4",
+    "url": "https://industrial.panasonic.com/content/data/CP/PDF/ABA0000PE428.pdf",
+    "external_relative_path": "readiness-sources/panasonic-za.pdf",
+    "bytes": 1838494,
+    "sha256": "877d35869a3a68b69c8e70f4898c77fbbc0742337383e3bc0b9641d6522b4de2",
+    "note": "ZA hybrid source; .12ohm at100kHz conditional; hash refers to retained native source from earlier packet; previous RDE alias not freshly byte-verified"
+  },
+  {
+    "id": "ST-D3",
+    "url": "https://www.st.com/resource/en/datasheet/stth2r02.pdf",
+    "note": "Web primary inspected 2026-11-17 DS4744 Rev3 Dec2018; source loss equation p2",
+    "sha256": null,
+    "reason": "Web-primary inspection, no fresh native-byte hash asserted"
+  },
+  {
+    "id": "ST-D2",
+    "url": "https://www.st.com/resource/en/datasheet/stth1r02.pdf",
+    "note": "Web primary inspected; analogous source loss equation",
+    "sha256": null,
+    "reason": "Web-primary inspection, no fresh native-byte hash asserted"
+  },
+  {
+    "id": "ST-Q1",
+    "url": "https://www.st.com/resource/en/datasheet/stn1nk80z.pdf",
+    "note": "Web primary Rev2 July2026; 16ohm test max, Qg and switching typical, time-equivalent Coss is not energy-equivalent",
+    "sha256": null,
+    "reason": "Web-primary inspection, no fresh native-byte hash asserted"
+  },
+  {
+    "id": "VISHAY-FUSIBLE",
+    "url": "https://www.vishay.com/en/product/28909/",
+    "note": "Web primary identifies separate AC05-CS UL1412 E362452 family; datasheet fetch timed out; no qualified substitute selected",
+    "sha256": null,
+    "reason": "Web-primary inspection, no fresh native-byte hash asserted"
+  }
+]

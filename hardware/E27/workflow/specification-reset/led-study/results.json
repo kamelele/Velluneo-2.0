@@ -1,0 +1,127 @@
+{
+  "scope": "calculation only; candidate counts/currents, not approved electrical interface",
+  "cree": {
+    "2700": {
+      "count": 14,
+      "current_ma": 150,
+      "flux_lm": 777.08,
+      "typical_string_v_25C": 40.04,
+      "typical_led_electrical_w_25C": 6.006,
+      "low_bin_hot_proxy_lm_not_guaranteed": 758.4
+    },
+    "4000": {
+      "count": 13,
+      "current_ma": 150,
+      "flux_lm": 797.36,
+      "typical_string_v_25C": 37.18,
+      "typical_led_electrical_w_25C": 5.577,
+      "low_bin_hot_proxy_lm_not_guaranteed": 765.71
+    },
+    "6500": {
+      "count": 13,
+      "current_ma": 150,
+      "flux_lm": 787.18,
+      "typical_string_v_25C": 37.18,
+      "typical_led_electrical_w_25C": 5.577,
+      "low_bin_hot_proxy_lm_not_guaranteed": 765.74
+    }
+  },
+  "lumileds": {
+    "2700": {
+      "count": 30,
+      "current_ma": 65,
+      "flux_lm_assuming_hot_factor_0_90": 798.66,
+      "lower_flux_assuming_same_hot_factor": 742.28,
+      "illustrative_electrical_w_at_assumed_2_8V_each": 5.46
+    },
+    "4000": {
+      "count": 28,
+      "current_ma": 65,
+      "flux_lm_assuming_hot_factor_0_90": 795.84,
+      "lower_flux_assuming_same_hot_factor": 741.03,
+      "illustrative_electrical_w_at_assumed_2_8V_each": 5.096
+    },
+    "6500": {
+      "count": 28,
+      "current_ma": 65,
+      "flux_lm_assuming_hot_factor_0_90": 795.84,
+      "lower_flux_assuming_same_hot_factor": 741.03,
+      "illustrative_electrical_w_at_assumed_2_8V_each": 5.096
+    }
+  },
+  "sensitivity": [
+    {
+      "family": "cree",
+      "cases": 81,
+      "failing_criteria": 72,
+      "min_lm": 664.54,
+      "max_lm": 882.59,
+      "max_ratio": 1.18055,
+      "meaning": "assumed independent +/-7% deviations; not a statistical or manufacturer tolerance guarantee"
+    },
+    {
+      "family": "lumileds",
+      "cases": 81,
+      "failing_criteria": 71,
+      "min_lm": 680.58,
+      "max_lm": 884.03,
+      "max_ratio": 1.15461,
+      "meaning": "assumed independent +/-7% deviations; not a statistical or manufacturer tolerance guarantee"
+    }
+  ],
+  "cree_nominal": {
+    "ratio": 1.0261,
+    "nominal_criteria_met": true
+  },
+  "lumileds_nominal_assumed_hot": {
+    "ratio": 1.00354,
+    "nominal_criteria_met": true
+  },
+  "cree_equal_count_14": {
+    "flux_lm": [
+      777.08,
+      858.69,
+      847.73
+    ],
+    "ratio": 1.10502,
+    "nominal_criteria_met": false
+  },
+  "power_sensitivity": [
+    {
+      "panel_electrical_w": 5.5,
+      "assumed_driver_efficiency": 0.8,
+      "input_w": 6.875,
+      "base_conversion_loss_w": 1.375
+    },
+    {
+      "panel_electrical_w": 5.5,
+      "assumed_driver_efficiency": 0.85,
+      "input_w": 6.471,
+      "base_conversion_loss_w": 0.971
+    },
+    {
+      "panel_electrical_w": 5.5,
+      "assumed_driver_efficiency": 0.9,
+      "input_w": 6.111,
+      "base_conversion_loss_w": 0.611
+    },
+    {
+      "panel_electrical_w": 6.0,
+      "assumed_driver_efficiency": 0.8,
+      "input_w": 7.5,
+      "base_conversion_loss_w": 1.5
+    },
+    {
+      "panel_electrical_w": 6.0,
+      "assumed_driver_efficiency": 0.85,
+      "input_w": 7.059,
+      "base_conversion_loss_w": 1.059
+    },
+    {
+      "panel_electrical_w": 6.0,
+      "assumed_driver_efficiency": 0.9,
+      "input_w": 6.667,
+      "base_conversion_loss_w": 0.667
+    }
+  ]
+}

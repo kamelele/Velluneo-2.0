@@ -1,0 +1,89 @@
+{
+  "packet": "PCB-DRIVER-08",
+  "body_sha256": "19ceec0c77181e95ac58169d26044447f726db313b46da282f8b5cae9fe752f8",
+  "actual_final_roles": [
+    {
+      "role": "completeness",
+      "actor": "/root/c8_completeness",
+      "body_sha256": "19ceec0c77181e95ac58169d26044447f726db313b46da282f8b5cae9fe752f8",
+      "report": "reviews/completeness.md",
+      "sha256": "d057a3a03da082c5ff87f2c85b8b5c3ec9fe3adebabf8d77cd1c1af0b5c88c28",
+      "recommendation": "ready_for_human_review",
+      "inspection_limited": true,
+      "independent_of_implementation": true
+    },
+    {
+      "role": "change",
+      "actor": "/root/c8_change",
+      "body_sha256": "19ceec0c77181e95ac58169d26044447f726db313b46da282f8b5cae9fe752f8",
+      "report": "reviews/change.md",
+      "sha256": "a6369aab147e95e4b72c09d72b4b271ec735e73d4aeaa4739c78ebc0ee151e40",
+      "recommendation": "ready_for_human_review",
+      "inspection_limited": true,
+      "independent_of_implementation": true
+    },
+    {
+      "role": "reality",
+      "actor": "/root/c8_reality",
+      "body_sha256": "19ceec0c77181e95ac58169d26044447f726db313b46da282f8b5cae9fe752f8",
+      "report": "reviews/reality.md",
+      "sha256": "4367e80664b9db94b189df01af1874cbae96d8cde3b92baa12a9d4a378685f90",
+      "recommendation": "ready_for_human_review",
+      "inspection_limited": false,
+      "independent_of_implementation": true
+    },
+    {
+      "role": "overengineering",
+      "actor": "/root/c8_simplicity",
+      "body_sha256": "19ceec0c77181e95ac58169d26044447f726db313b46da282f8b5cae9fe752f8",
+      "report": "reviews/overengineering.md",
+      "sha256": "c5a2ec60cd41a3eaf62c8592d9606003a2cbfd0947a3e870f8a0aab2eef008a7",
+      "recommendation": "ready_for_human_review",
+      "inspection_limited": false,
+      "independent_of_implementation": true
+    }
+  ],
+  "scope": "Bounded routed-CAD publication only. Two roles explicitly have interrupted automated-verification gaps; no four-role exhaustive reproduction is asserted.",
+  "technical_stage_approved": false,
+  "manufacturing_released": false,
+  "findings": [
+    {
+      "id": "C08-SIMP-01",
+      "gate": "release",
+      "owner": "Process/sourcing designer",
+      "state": "open",
+      "closure": "Confirm exact selected supplier process/assembly/cost"
+    },
+    {
+      "id": "C08-SIMP-02",
+      "gate": "physical placement/product",
+      "owner": "Mechanical/process designer",
+      "state": "open",
+      "closure": "Assembled tolerance-aware \u00d860x120 housing/heat path/transformer/leads/wires fit"
+    },
+    {
+      "id": "C08-SIMP-03",
+      "gate": "operating/release",
+      "owner": "Power/magnetic/insulation designers",
+      "state": "open",
+      "closure": "Recorded source-valid operating and physical evidence"
+    },
+    {
+      "id": "C08-REVIEW-COVERAGE",
+      "gate": "technical-stage acceptance",
+      "state": "open",
+      "owner": "Authorized technical reviewer",
+      "closure": "Independent Change/Completeness native/hash/archive/visual coverage before formal acceptance; current reports disclose gaps"
+    }
+  ],
+  "historical_findings_retained": [
+    "C05-CTRL",
+    "C05-SENSE",
+    "C05-ISOL",
+    "C05-FIT",
+    "C05-CONFIG",
+    "U05-U11",
+    "R-SIZE",
+    "R-BOARD-FORM"
+  ]
+}

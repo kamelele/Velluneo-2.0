@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "product": "fictional-two-board-lamp",
+  "revision": "1",
+  "subsystems": [
+    {
+      "id": "POWER",
+      "kind": "pcb",
+      "owner": "example-team"
+    },
+    {
+      "id": "LED",
+      "kind": "pcb",
+      "owner": "example-team"
+    },
+    {
+      "id": "CASE",
+      "kind": "enclosure",
+      "owner": "example-team"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-PRODUCT",
+      "revision": "1",
+      "owner": "example-team",
+      "gate": "specification",
+      "basis": "Fictional example product specification; not a shared design rule",
+      "acceptance": "Review the explicitly stated contract and resolve any disagreement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "POWER",
+          "object": "product specification"
+        }
+      ],
+      "evidence_ids": [
+        "EV-REVIEW"
+      ],
+      "text": "The product has POWER and LED boards in CASE with named interface owners."
+    },
+    {
+      "id": "REQ-POWER",
+      "revision": "1",
+      "owner": "example-team",
+      "gate": "schematic",
+      "basis": "Fictional example product specification; not a shared design rule",
+      "acceptance": "Review the explicitly stated contract and resolve any disagreement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "POWER",
+          "object": "J1 / power budget"
+        }
+      ],
+      "evidence_ids": [
+        "EV-REVIEW"
+      ],
+      "text": "Supply the LED board within its declared voltage/current acceptance."
+    },
+    {
+      "id": "REQ-COMMS",
+      "revision": "1",
+      "owner": "example-team",
+      "gate": "schematic",
+      "basis": "Fictional example product specification; not a shared design rule",
+      "acceptance": "Review the explicitly stated contract and resolve any disagreement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "LED",
+          "object": "firmware UART configuration"
+        }
+      ],
+      "evidence_ids": [
+        "EV-REVIEW"
+      ],
+      "text": "Both firmware endpoints use the same protocol and parameters."
+    },
+    {
+      "id": "REQ-FIT",
+      "revision": "1",
+      "owner": "example-team",
+      "gate": "placement",
+      "basis": "Fictional example product specification; not a shared design rule",
+      "acceptance": "Review the explicitly stated contract and resolve any disagreement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "LED",
+          "object": "board outline / mounting / connector envelope"
+        }
+      ],
+      "evidence_ids": [
+        "EV-REVIEW"
+      ],
+      "text": "The LED board fits the declared mechanical envelope."
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "IF-POWER",
+      "revision": "1",
+      "owner": "example-team",
+      "gate": "schematic",
+      "basis": "Fictional example product specification; not a shared design rule",
+      "acceptance": "Review the explicitly stated contract and resolve any disagreement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "POWER",
+          "object": "J1 ↔ LED:J2 cable"
+        }
+      ],
+      "evidence_ids": [
+        "EV-REVIEW"
+      ],
+      "kind": "electrical",
+      "requirements": [
+        "REQ-POWER"
+      ],
+      "startup_behavior": "Output remains disabled until source startup is complete.",
+      "fault_behavior": "Disable LED load on supply fault; final hardware implementation requires review.",
+      "endpoints": [
+        {
+          "subsystem": "POWER",
+          "connector": "J1",
+          "pins": [
+            {
+              "pin": "1",
+              "signal": "VLED",
+              "role": "power",
+              "direction": "source",
+              "voltage_min_v": 4.8,
+              "voltage_max_v": 5.2,
+              "current_ma": 500
+            },
+            {
+              "pin": "2",
+              "signal": "GND",
+              "role": "ground"
+            }
+          ]
+        },
+        {
+          "subsystem": "LED",
+          "connector": "J2",
+          "pins": [
+            {
+              "pin": "1",
+              "signal": "VLED",
+              "role": "power",
+              "direction": "sink",
+              "voltage_min_v": 4.5,
+              "voltage_max_v": 5.5,
+              "current_ma": 300
+            },
+            {
+              "pin": "2",
+              "signal": "GND",
+              "role": "ground"
+            }
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "a": "1",
+          "b": "1"
+        },
+        {
+          "a": "2",
+          "b": "2"
+        }
+      ]
+    },
+    {
+      "id": "IF-UART",
+      "revision": "1",
+      "owner": "example-team",
+      "gate": "schematic",
+      "basis": "Fictional example product specification; not a shared design rule",
+      "acceptance": "Review the explicitly stated contract and resolve any disagreement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "LED",
+          "object": "firmware UART settings"
+        }
+      ],
+      "evidence_ids": [
+        "EV-REVIEW"
+      ],
+      "kind": "firmware",
+      "requirements": [
+        "REQ-COMMS"
+      ],
+      "startup_behavior": "LED off until a valid command.",
+      "fault_behavior": "LED off after command timeout; timeout value requires product-specific review.",
+      "endpoints": [
+        {
+          "subsystem": "POWER",
+          "protocol": "UART",
+          "parameters": {
+            "baud_hz": 115200,
+            "framing": "8N1"
+          }
+        },
+        {
+          "subsystem": "LED",
+          "protocol": "UART",
+          "parameters": {
+            "baud_hz": 115200,
+            "framing": "8N1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "IF-FIT",
+      "revision": "1",
+      "owner": "example-team",
+      "gate": "placement",
+      "basis": "Fictional example product specification; not a shared design rule",
+      "acceptance": "Review the explicitly stated contract and resolve any disagreement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "LED",
+          "object": "mechanical drawing LED ↔ CASE"
+        }
+      ],
+      "evidence_ids": [
+        "EV-REVIEW"
+      ],
+      "kind": "mechanical",
+      "requirements": [
+        "REQ-FIT"
+      ],
+      "startup_behavior": "Assembly clearance is required before first power-on.",
+      "fault_behavior": "Do not energize if enclosure or connector fit is damaged.",
+      "endpoints": [
+        {
+          "subsystem": "LED"
+        },
+        {
+          "subsystem": "CASE"
+        }
+      ],
+      "geometry": {
+        "unit": "mm",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            40,
+            0
+          ],
+          [
+            40,
+            20
+          ],
+          [
+            0,
+            20
+          ]
+        ],
+        "mounting_holes": [
+          {
+            "x": 3,
+            "y": 3,
+            "diameter": 2.2
+          },
+          {
+            "x": 37,
+            "y": 17,
+            "diameter": 2.2
+          }
+        ],
+        "connector_positions": [
+          {
+            "ref": "J2",
+            "x": 5,
+            "y": 10,
+            "z": 0,
+            "height": 6
+          }
+        ],
+        "max_component_height_mm": 8,
+        "tolerance_mm": 0.2,
+        "keepouts": [],
+        "thermal_conditions": "Fictional 20–30 C ambient; actual thermal qualification is outside this example."
+      }
+    }
+  ],
+  "unknowns": [],
+  "evidence": [
+    {
+      "id": "EV-REVIEW",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "synthetic-example-not-human-approval",
+      "artifact": "design-review.md",
+      "sha256": "b273c55c4df6c6c5f1d8597a5489b2a0b417f221fddb5b2db41ec68d5f8695b0",
+      "intent_digest": "02433e9141b05576bb3a4284ee17346e488f202cba86f49ba45a2e71445a8ffc",
+      "inputs": []
+    }
+  ]
+}

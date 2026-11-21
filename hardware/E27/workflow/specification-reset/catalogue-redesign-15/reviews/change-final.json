@@ -1,0 +1,28 @@
+{
+  "role": "Change Reviewer",
+  "actor": "/root/cat15_change",
+  "body_sha256": "888c57e60b196ffc622cabc4f9d064f5a30a7f412779e3f202d61f3e52843ac8",
+  "record": "Coordinator transcription of actual targeted final review, retaining prior unchanged-source inspection.",
+  "recommendation": "ready_for_human_review",
+  "scope": "Sourcing/ECO proposal only; no electrical, native-design or manufacturing acceptance.",
+  "actual_checks": [
+    "Verified all28 frozen sizes/SHA256/canonical digest before and after targeted inspection.",
+    "Semantic Git comparison: only requirements revision and two added requirements; all prior requirement records preserved.",
+    "R-SOURCING explicitly covers exact identity/ratings/stock/leadtime/MOQ/packing/quantity/attrition/external supplier acceptance.",
+    "R-STOCK-T1 excludes custom/customer winding and bare kits; normal/fault/startup/insulation suitability required before schematic/library acceptance.",
+    "Both evidence lists empty; owner instruction does not grant a waiver, stage approval or purchase authorization.",
+    "Actual requirements reports inspected: specification exit1/9 and schematic exit1/15 including R-STOCK-T1; no fabricated pass.",
+    "Reverified all127 RFQ13 design-source hashes; calculation SHA e0956b86e2a2d33dac5e3979cac7dbc89a84299695c1c4d4b6c5480cdbf1a62c unchanged.",
+    "Purchase map remains nine electronic changes plus two wire-material selections; hardware approvals remain empty.",
+    "Initial independent native inspection:33refs/81pads/321copperobjects; all33 old MPN/values match; all118 toolkit payload hashes and manifest verified unchanged; primary MYRRA/ST sources inspected; independent formulas recomputed."
+  ],
+  "correction_assessment": {"related_finding":"CAT15-COMP-01","result":"Configured requirement-consumption gap corrected; qualification gates unsatisfied."},
+  "new_findings": [],
+  "retained_findings": [
+    {"id":"CAT15-CH-01","duplicate_of":"CAT15-01","severity":"blocker","status":"open","evidence":"Static1.6/2.55=.627451A versus manufacturer0.50Apk; this does not prove the controller necessarily commands this current.","closure":"Defensible abnormal-current bound, qualified protection or suitable complete factory-stock replacement."},
+    {"id":"CAT15-CH-02","duplicate_of":"CAT15-02","severity":"blocker","status":"open","evidence":"Maker1.8mm footprint versus unchanged3mm rule; no waiver granted.","closure":"Usable compliant pattern or explicit reviewed package-local decision; no global weakening."}
+  ],
+  "limitations": ["Inspected requirement reports without rerunning them","Dot graphics/top-view footprint not independently visually requalified","No new CAD, ERC/DRC/CAM, supplier acceptance, physical qualification or purchasing verification"],
+  "remaining_owner_goal": "Qualified assembled PCB and matching procurement/manufacturing package remain incomplete.",
+  "read_only": true
+}

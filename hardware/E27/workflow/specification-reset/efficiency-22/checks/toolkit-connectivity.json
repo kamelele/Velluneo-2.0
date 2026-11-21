@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "errors": [
+    {
+      "type": "missing_stale_intent_approval",
+      "message": "Intent lacks current human approval evidence"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\design\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\design\\Velluneo_driver.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "intent_digest": "84fc142ee028b0a75344c84b80c4229486993268ef120fe05ef58ce6254ac88c",
+  "intent_revision": "E22-same-physical-pin-graph",
+  "physical_pins": 80,
+  "intended_nets": 23,
+  "no_connects": 3,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "e08f03e0efc313f37ec4b0580ba946395f19da690d2fec73d6880102fb73d2de",
+  "export_sha256": "9be2b44656f16d6c0462b19b1b7ffa78aabe3e583bdb5e81344ca2b2b13c472c",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "807c619ca5111d84904b52a3fcd7e2ff9c222e07913d817c57cf668476f022d4",
+    "archive_sha256": "d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97",
+    "package_version": "0.7.2-velluneo.1",
+    "publication_ready": false,
+    "ruleset_version": "0.7.2"
+  }
+}

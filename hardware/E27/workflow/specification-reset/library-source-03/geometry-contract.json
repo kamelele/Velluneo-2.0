@@ -1,0 +1,19 @@
+{
+  "units": "mm",
+  "view": "Component/top side; centered origin X right, Y down; local pin1 left/pin2 right; nonpolar capacitor",
+  "name": "KEMET_2220_C0G_DensityB_Native",
+  "refs": ["C2", "C3"],
+  "mpn": "C2220C474J5GACTU",
+  "source": "KEMET C1003_C0G 20-Feb-2025, Table3 PDF page12, 2220 densityB",
+  "native_table": {"C": 2.65, "Y": 1.50, "X": 5.40, "V1": 7.30, "V2": 5.90},
+  "pads": [
+    {"number":"1", "at":[-2.65,0], "size":[1.5,5.4], "type":"smd"},
+    {"number":"2", "at":[2.65,0], "size":[1.5,5.4], "type":"smd"}
+  ],
+  "body_mm": [6.1,5.4],
+  "height_max_mm": 1.85,
+  "courtyard_mm": [7.3,5.9],
+  "copper_outer_span_mm": 6.8,
+  "copper_inner_gap_mm": 3.8,
+  "choices": "DensityB/reflow selected for this candidate; native Y/X/C/V1/V2 adopted. Body maximum from exact part bounds. Rectangular pad shape, local numbering/frame and artwork are project choices. Mask/paste have no explicit overrides and process qualification remains open. V1/V2 are grid placement courtyard dimensions, not copper span or insulation clearances."
+}

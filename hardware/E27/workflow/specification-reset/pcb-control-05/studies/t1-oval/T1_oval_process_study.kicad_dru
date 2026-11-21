@@ -1,0 +1,2 @@
+(version 1)
+(rule "T1_STUDY_FUNCTIONAL_3mm" (condition "(A.NetName == '/BULK_POS' && B.NetName == '/PRIMARY_GND') || (B.NetName == '/BULK_POS' && A.NetName == '/PRIMARY_GND') || (A.NetName == '/AUX_RAW' && B.NetName == '/DRAIN') || (B.NetName == '/AUX_RAW' && A.NetName == '/DRAIN')") (constraint clearance (min 3 mm)))

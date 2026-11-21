@@ -1,0 +1,45 @@
+{
+  "averaged_source_results_sha256": "a2ba3a610228251b3f825fcdc7375e99e5e4d74a252ca3ee515775a112bf9816",
+  "native_rating": {
+    "iref120Hz_A": 0.19,
+    "coefficient50Hz": 0.8,
+    "all_band_50Hz_comparison_A": 0.15200000000000002,
+    "not_combined_spectrum_or_lifetime_qualification": true
+  },
+  "conditional_mixed_envelope": {
+    "Ibridge_rms_A": 0.09922712263147405,
+    "Vmin_V": 255.73470929495608,
+    "Vmax_V": 352.3295187243063,
+    "triangular_primary_rms_A": 0.1013943557757663,
+    "bleeder_sup_A": 0.0007212167311626445,
+    "draw_rms_triangle_bound_A": 0.10211557250692894,
+    "nonnegative_KCL_rss_bound_A": 0.14238543469800363,
+    "triangle_Ibridge_plus_Idraw_A": 0.201342695138403,
+    "allowed_positive_return_rms_A_if_all_other_bounds_hold": 0.013362441057094096,
+    "source_model_is_averaged_not_actual_switched_bound": true
+  },
+  "illustrative_unverified_onepercent_return": {
+    "return_power_fraction": 0.01,
+    "peak_return_A": 0.358522,
+    "shape_independent_return_rms_bound_A": 0.012418221722442392,
+    "combined_KCL_bound_A": 0.15130192683611945,
+    "rating_ratio": 0.9954074133955225,
+    "not_a_qualified_leakage_or_clampwaveform_bound": true
+  },
+  "switched_model_samewaveform": {
+    "Ibridge_max_rms_A": 0.0992242678036238,
+    "Idraw_max_rms_A": 0.0989709689479661,
+    "RSS_of_separate_maxima_A": 0.1401453103591573,
+    "actual_max_Ic_rms_A": 0.127134770089569,
+    "rating_ratio": 0.8364129611155854,
+    "additional_signed_current_triangle_budget_A_if_baseline_waveform_unchanged": 0.024865229910431025,
+    "positive_return_rss_budget_A_if_bounds_stillhold": 0.01613927628852317
+  },
+  "conditions": [
+    "KCL pointwiseIc=Ib+Ir-Id; Ib,Ir,Idnonnegative. Dropnegativecrossesonly; retainIbIr viaCauchy.",
+    "Ib andId bounds must hold on actualsamewaveforms after addingreturn. An unknownreturn changesbulkvoltage/bridgeconduction andcannot simplybe appendedas aphysicalratingpass.",
+    "Clampreturn power/peak bounds, triangularprimarymoments,11Wdrawenvelope andsourcebridgeHF requireactualcircuitvalidation.",
+    "Signed/unaccounted currentsu require trianglebudget||Ic+u||<=||Ic||+||u|| on the samebaseline; not independence/orthogonality.",
+    "Do not infer sum(I_f/I_allow_f)^2 formula as manufacturerprescription; nativefamilytableprovides coefficients only."
+  ]
+}

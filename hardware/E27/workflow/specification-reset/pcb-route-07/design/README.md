@@ -1,0 +1,3 @@
+# Historical unrouted baseline used for independent comparison
+
+The 41 x 60 mm, 33-part C05/C06 baseline is retained byte-for-byte as design input. It has no tracks and is not the current routed board. Current C07 sources are ../studies/sense (two layers, five unconnected items) and ../studies/four-layer-comparison (separate UNADOPTED four-layer comparison). Libraries/models and independent selected intent in this directory supply both projects. Owner basis approval does not establish technical-stage or process approval. See the packet README and fresh checks; inherited baseline calculators and data are not new physical measurements.

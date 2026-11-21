@@ -1,0 +1,51 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-44.2 shared library
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+stdout ******
+stdout ** ngspice-44.2 : Circuit level simulation program
+stdout ** Compiled with KLU Direct Linear Solver
+stdout ** The U. C. Berkeley CAD Group
+stdout ** Copyright 1985-1994, Regents of the University of California.
+stdout ** Copyright 2001-2024, The ngspice team.
+stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+stdout Note: No compatibility mode selected!
+stdout Circuit: stn1nk80z resistive-load gate-charge model witness
+stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout rail                                       640
+stdout d                                          640
+stdout g                                            0
+stdout xq.4                               1.65436e-24
+stdout xq.12                             -2.58494e-26
+stdout xq.6                                       640
+stdout xq.5                               1.01872e-08
+stdout xq.9                               1.67706e-10
+stdout xq.7                                       640
+stdout xq.8                                       640
+stdout xq.10                                  639.999
+stdout xq.11                              0.000640658
+stdout xq.13                                      640
+stdout xq.101                                 639.999
+stdout xq.102                             0.000640648
+stdout xq.100                                 640.639
+stdout b.xq.be3#branch                    6.40057e-10
+stdout l.xq.ld#branch                    -2.56043e-09
+stdout l.xq.ls#branch                      1.9203e-09
+stdout l.xq.lg#branch                    -6.40099e-10
+stdout e.xq.e2#branch                     6.40099e-10
+stdout e.xq.e1#branch                               0
+stdout vgate#branch                       6.40099e-10
+stdout vdc#branch                        -2.56043e-09
+ Reference value :  0.00000e+00
+stdout No. of Data Rows : 4
+stderr doAnalyses: TRAN:  Timestep too small; time = 2.25e-11, timestep = 7.64931e-21: trouble with node "e.xq.e2#branch"
+stderr run simulation(s) aborted

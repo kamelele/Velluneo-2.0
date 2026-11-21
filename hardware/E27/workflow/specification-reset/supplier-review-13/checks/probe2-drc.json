@@ -1,0 +1,118 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-20T11:35:45",
+    "ignored_checks": [
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Velluneo_driver.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Clearance violation (rule 'HW-clearance' clearance 0,2500 mm; actual 0,0483 mm)",
+            "items": [
+                {
+                    "description": "Track [/BLEED_MID_B] on B.Cu, length 5,9368 mm",
+                    "pos": {
+                        "x": 87.0983,
+                        "y": 104.3483
+                    },
+                    "uuid": "8e97a185-289d-4a0b-a126-26101fd1c2f7"
+                },
+                {
+                    "description": "Pad 2 [/PRIMARY_GND] of C3 on B.Cu",
+                    "pos": {
+                        "x": 86.15,
+                        "y": 95.9
+                    },
+                    "uuid": "bcffe53d-5403-4bf8-8ac9-aab31a8f027a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-clearance' clearance 0,2500 mm; actual 0,0483 mm)",
+            "items": [
+                {
+                    "description": "Track [/BLEED_MID_B] on B.Cu, length 3,0430 mm",
+                    "pos": {
+                        "x": 87.0983,
+                        "y": 98.4115
+                    },
+                    "uuid": "75b73e00-1f1b-4180-8449-66037c2df24b"
+                },
+                {
+                    "description": "Pad 2 [/PRIMARY_GND] of C3 on B.Cu",
+                    "pos": {
+                        "x": 86.15,
+                        "y": 95.9
+                    },
+                    "uuid": "bcffe53d-5403-4bf8-8ac9-aab31a8f027a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,4496 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [/PRIMARY_GND] of C3 on B.Cu",
+                    "pos": {
+                        "x": 86.15,
+                        "y": 95.9
+                    },
+                    "uuid": "bcffe53d-5403-4bf8-8ac9-aab31a8f027a"
+                },
+                {
+                    "description": "Pad 1 [/BULK_POS] of R14 on B.Cu",
+                    "pos": {
+                        "x": 89.25,
+                        "y": 101.7
+                    },
+                    "uuid": "67420f2e-2421-4c75-b4c9-748e2409ec53"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'HW-SCOPED-HV_QUIET' clearance 3,0000 mm; actual 2,8927 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 4 [/AUX_RAW] of T1",
+                    "pos": {
+                        "x": 105.0,
+                        "y": 104.25
+                    },
+                    "uuid": "0489a69b-844a-4d16-82fd-446399619b4c"
+                },
+                {
+                    "description": "Pad 1 [/STARTUP_MID] of R17 on B.Cu",
+                    "pos": {
+                        "x": 109.2,
+                        "y": 100.5
+                    },
+                    "uuid": "5a8bfc0a-8557-40d3-9e08-3a6a40e2103a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        }
+    ]
+}

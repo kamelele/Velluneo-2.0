@@ -1,0 +1,41 @@
+{
+  "packet": "PCB-READINESS-01-r1",
+  "reviewed_members": 87,
+  "body_sha256": "9ade792922910aef78b194aa5eaaff6a3f73ac368f9d96fd0728b86dfb042956",
+  "reports": [
+    {
+      "role": "reality",
+      "actor": "/root/ready_reality",
+      "report": "reviews/reality.md",
+      "sha256": "5cd13ab81b4edd102179b398281d0b101d4b64644b1d094e37ed7a4c45a45501",
+      "reviewed_body_sha256": "9ade792922910aef78b194aa5eaaff6a3f73ac368f9d96fd0728b86dfb042956",
+      "recommendation": "ready_for_human_review for bounded analysis only; PCB entry blocked"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/ready_completeness",
+      "report": "reviews/completeness.md",
+      "sha256": "d4509af7408f92178803ceb00516c7082620a1a6aa95e150df638b5dc3139a0a",
+      "reviewed_body_sha256": "9ade792922910aef78b194aa5eaaff6a3f73ac368f9d96fd0728b86dfb042956",
+      "recommendation": "ready_for_human_review for bounded analysis only; PCB entry blocked"
+    },
+    {
+      "role": "change",
+      "actor": "/root/ready_change",
+      "report": "reviews/change.md",
+      "sha256": "511046c0bffd85b2ef5f2858ef5683d48fc8b360e5cb4597b7179c6c904fa0b6",
+      "reviewed_body_sha256": "9ade792922910aef78b194aa5eaaff6a3f73ac368f9d96fd0728b86dfb042956",
+      "recommendation": "ready_for_human_review for bounded analysis only; PCB entry blocked"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/ready_simplicity",
+      "report": "reviews/simplicity.md",
+      "sha256": "78e9d2a45a2dda5ffbed15848fdd4f185dafca575eea4a5dff90b16aa070f4d9",
+      "reviewed_body_sha256": "9ade792922910aef78b194aa5eaaff6a3f73ac368f9d96fd0728b86dfb042956",
+      "recommendation": "ready_for_human_review for bounded analysis only; PCB entry blocked"
+    }
+  ],
+  "independence": "Four actual nonimplementer read-only actor contexts; identical underlying model identity is not asserted to establish independence.",
+  "stage_approval": false
+}

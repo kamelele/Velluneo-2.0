@@ -1,0 +1,39 @@
+{
+  "Q1_FORM_A": {
+    "developed_max_mm": 12.745751918948773,
+    "raw_usable_incoming_request_mm": 13,
+    "reserve_mm": 0.25424808105122665,
+    "installed_body_top_max_mm": 22.7,
+    "source_min_inferred_mm": 12.2,
+    "source_min_shortfall_against_proposed_max_mm": 0.5457519189487741,
+    "assumptions": "Root3.7..3.8 beyond3.6maxwidenedsection;insideR.70...75,rectangularthickness<=.70,offset5.08±.05;PCB1.6±10%;above.2...3,tail.4...5. Suppliermustqualifyneutralaxis/bendmethod andactualusablelengthfromdrawndatum."
+  },
+  "T1": {
+    "pin_diagonal_nominal_mm": 0.848528137423857,
+    "radial_insertion_budget_before_pin_position_limits_mm": 0.2257359312880715,
+    "flush_pin_tail_below_board_mm": [
+      1.5399999999999998,
+      2.2600000000000002
+    ],
+    "with_rejected_2mm_spacer_tail_mm": [
+      -0.4600000000000002,
+      0.26000000000000023
+    ],
+    "source_full_pattern_tolerances_missing": true
+  },
+  "proposed_fabrication_tolerance_budget": {
+    "finished_component_hole_plus_minus_mm": 0.05,
+    "copper_land_diameter_plus_minus_mm": 0.025,
+    "hole_land_registration_max_mm": 0.025
+  },
+  "conditional_component_annulus_min_mm": {
+    "T1": 0.26249999999999996,
+    "Q1": 0.3125,
+    "BR1": 0.3375,
+    "R1": 0.48750000000000004,
+    "C1": 0.4375
+  },
+  "via_nominal_ring_mm": 0.2,
+  "via_finished_ring_status": "Nominaldesignpreference only; filledviafinishedring/tolerances requireprocess-specificsupplierconfirmation. ComponentPTHtolerancebudgetisnotavendorqualifiedviaprocess.",
+  "scope": "Calculated proposedacceptanceconstraints, notphysicalmeasurementormanufacturingcapability."
+}

@@ -1,0 +1,135 @@
+{
+  "purpose": "Analytical/sourcewitness, not controller/model/measurement pass",
+  "input_SHA256": {
+    "native/ucc2871x.pdf": "762813589e339955cd318f19958f101c259a97ca750a29b12ac94038a1645248",
+    "native/sluaac5.pdf": "57cb199bd678c1af8283f12ef1f0cb3b51e7f75a5d8392977fd68b6489af0796",
+    "native/slua783.pdf": "23be2ca81d848bcb7e49baab8a1945ec68ddaf711aa43b9965ac50e962d1d806",
+    "requirements.json": "8b5220dcf3d55e56961a94257bf5a0ae77233bfa948f378c4364f6753b7166f9",
+    "requirements-and-plan.md": "a0c2867d511313741495cf9d2696590e756c0d6a335d7180df5409cc6532b34e",
+    "finalization/support-study.md": "0e90da49695df6e78381dce15a67f179879e44c71d804d6b2d7bb53752718b52",
+    "finalization/support-results.json": "7b031346b2cf2c45744198094e863111ea0efcbaa1a992b4bde0ce05224d1314"
+  },
+  "first3_source_witness": "SLUAAC5p5 says3pulses atfSWmax; familyincludesUCC28711p2; parametersdifferp3. No guaranteedUVLOtofirstedge/waitextension specified.",
+  "Q_available_to10V": 8.012889e-06,
+  "Q_available_to8p5V": 9.3483705e-06,
+  "Vtake": 16.272727272727273,
+  "cases": 128,
+  "worst_case": {
+    "Cout": 2.0592e-05,
+    "ESR": 0,
+    "LEDs": 7,
+    "LEDshift": -0.3,
+    "Qg": 1.6e-08,
+    "base_draw": 0.0035,
+    "ramp_time": 0.0015081689717598016,
+    "ramp_charge": 5.942570720407372e-06,
+    "settling_and_first3_gate_charge": 5.676000000000001e-07,
+    "first3_allowance": 0.0004293480798836081,
+    "source_cadence_witness_t3": 3.260869565217391e-05,
+    "VDD_if_3periods_at_slowest_fSWmax": 11.55964853666264,
+    "VDD_if_t3_0p3ms": 10.50848882548275,
+    "source_cadence_total_base_time": 0.0016407776674119755,
+    "total_gate_events_proxy": 55.09870745300414,
+    "base_max_if_Qg16nC": 0.004346298601199431,
+    "Qg_max_if_base3p5mA": 4.120182249273999e-08
+  },
+  "main_min_allowance": 0.000689238687791433,
+  "source_cadence_witness_worst_VDD": 11.55964853666264,
+  "native_first_on_time_fault_period_fastest": 9.433962264150944e-06,
+  "ideal_firston_range": [
+    4.1913451506615824e-07,
+    9.785236808419856e-07
+  ],
+  "worst_firston": {
+    "bus": 240,
+    "Lp": 0.0025344000000000005,
+    "Rcs": 2.32023,
+    "VCSTmin": 0.215,
+    "Ip": 0.09266322735246074,
+    "ideal_ton": 9.785236808419856e-07
+  },
+  "ideal_demag_range": [
+    2.1467851055058244e-05,
+    6.385715246013396e-05
+  ],
+  "longest_first_demag": {
+    "Cout": 2.0592e-05,
+    "Lp": 0.0025344000000000005,
+    "Ip_first": 0.09266322735246074,
+    "Vdiode_assumed": 0.5,
+    "individual_demag": [
+      6.385715246013396e-05,
+      4.1829549009497744e-05,
+      3.366094969734131e-05
+    ],
+    "sum_demag": 0.00013934765116697302,
+    "Vo_after3_ideal": 1.349429720339892,
+    "first_pulse_demag": 6.385715246013396e-05
+  },
+  "three_fullyreset_demag_sum_max": 0.00013934765116697302,
+  "residual_first3_total_bias_charge_budget": 1.5027182795926285e-06,
+  "source_cadence_frontier": {
+    "minimum_constant_base_allowance_if16nC": 0.00434629860119943,
+    "minimum_Qg_allowance_if3p5mA": 4.1201822492739914e-08,
+    "worst_total_base_time": 0.0016407776674119755,
+    "worst_total_gate_events_proxy": 55.09870745300414,
+    "extra_unmodelled_charge_allowance": 1.3885878448100198e-06,
+    "condition": "Ibase*Ttotal+Qg*Nequivalent+Qextra<=8.012889uC; physicaltiming/current/rampboundsnotyetguaranteed"
+  },
+  "first3_envelope_A_times_seconds": {
+    "Iwait": 0.00012,
+    "Irun_minus_wait": 0.00253,
+    "ancillary_extra": 0.0008500000000000001,
+    "condition": "(Iwait+ancillary_extra)*Ttotal + (Irun-Iwait)*Trun <= residual; first3gatealreadyallocated; sourcecurrentsonly25Vconditions"
+  },
+  "capacitance_candidates": [
+    {
+      "Cout_max": 1.2e-05,
+      "ramp_time_if_same_rates": 0.0008788863471793716,
+      "first3_allrun_allowance": 0.0011377864141845868,
+      "conditional_only_no_newpart_or_ripple_acceptance": true
+    },
+    {
+      "Cout_max": 1.44e-05,
+      "ramp_time_if_same_rates": 0.0010546636166152458,
+      "first3_allrun_allowance": 0.0009398986113072186,
+      "conditional_only_no_newpart_or_ripple_acceptance": true
+    },
+    {
+      "Cout_max": 2.0592e-05,
+      "ramp_time_if_same_rates": 0.0015081689717598016,
+      "first3_allrun_allowance": 0.0004293480798836081,
+      "conditional_only_no_newpart_or_ripple_acceptance": true
+    },
+    {
+      "Cout_max": 9.67824e-06,
+      "ramp_time_if_same_rates": 0.0007088394167271067,
+      "first3_allrun_allowance": 0.0013292230746881528,
+      "conditional_only_no_newpart_or_ripple_acceptance": true
+    }
+  ],
+  "timing_independent_passive_feed": {
+    "required_mean_bias": 0.005196,
+    "R_max": 41762.89453425712,
+    "loss_at_highline_withVDD23": 2.683922745564451,
+    "rejected_as_default": "~2.7Wconstantloss is poor fit to6-10Wlamp; not aselectedchange"
+  },
+  "remaining_exact_bounds": [
+    "maximum netstartupbiascharge or actualstartupcurrentenvelope across9-23V",
+    "UVLOon-tofirstpulse latency + any startupclock/demag/waitextension",
+    "actualMOSgatechargeatdrive",
+    "minimumoutputchargingcurrentandauxtransferbounds atlowVo"
+  ],
+  "no_shared_changes": true,
+  "optional_UNAPPROVED_RVDD_ECO": {
+    "Rnom": 1000000.0,
+    "Rmin": 979000.0,
+    "voltage_for_extra_draw": 35,
+    "extra_draw": 3.575076608784474e-05,
+    "worst_source_cadence_VDD": 11.493763245189335,
+    "worst_0p3ms_VDD": 10.431866458307914,
+    "stress_min_first3_allowance": 0.00040874628967487787,
+    "main_min_first3_allowance": 0.0006638553718989228,
+    "not_folded_into_approved_baseline": true
+  }
+}

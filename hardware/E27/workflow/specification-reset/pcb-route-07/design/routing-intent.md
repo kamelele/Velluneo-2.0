@@ -1,0 +1,3 @@
+# C07 routing scope
+
+This directory retains the historical unrouted baseline. Preserve the approved 33-part physical graph and source pin types. C07 changes only exploratory placement/routing, with 43 x 60 mm trial outline, F1 rotation, R4 backside move and R10 rectifier-local front move. Keep the numeric 3 mm HV/quiet, 10 mm primary/secondary, 0.25 mm other-net, 0.5 mm edge and 0.3 mm track policy. No exclusions or severity changes. The comparison with four copper layers is unadopted pending owner process decision and exact stackup/assembly review. Native connectivity/clearance and junction-cut diagnostics do not qualify noise, fault behavior, finished insulation or manufacture.

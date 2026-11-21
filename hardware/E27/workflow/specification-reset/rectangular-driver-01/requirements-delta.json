@@ -1,0 +1,30 @@
+{
+  "base": "e00c391dcf030067cf8658c31d7966ca68dd4c18",
+  "added_requirement": {
+    "id": "R-BOARD-FORM",
+    "revision": "owner-correction-2026-11-18",
+    "owner": "Owner (form decision); coordinator (verified dimensional implementation)",
+    "text": "BASE power-driver PCB rectangular; only PANEL LED insert round. Retain overall lamp target diameter60mm/fullheight120mm.",
+    "basis": "rectangular-driver-01/owner-form-decision.md; actual latest owner correction",
+    "acceptance": "Before placement show rectangular BASE and round PANEL in a coherent tolerance-aware assembly within R-SIZE. Choose and verify actual driver dimensions/orientation;32x60mm longitudinal trial and48mm panel are proposals, not owner-fixed dimensions or demonstrated fit.",
+    "gate": "placement",
+    "implementation": [
+      {
+        "subsystem": "BASE",
+        "object": "Rectangular driver PCB",
+        "path": "rectangular-driver-01/owner-form-decision.md"
+      },
+      {
+        "subsystem": "PANEL",
+        "object": "Round LED insert",
+        "path": "rectangular-driver-01/owner-form-decision.md"
+      }
+    ],
+    "method": "review",
+    "evidence_ids": []
+  },
+  "all_preexisting_requirement_objects_unchanged": true,
+  "unknowns_unchanged": true,
+  "interfaces_unchanged": true,
+  "intent_digest": "768a28e8d82a226fa9f74b071090a379c8236591bfbed90e4328cdad1d761587"
+}

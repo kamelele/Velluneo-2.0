@@ -1,0 +1,111 @@
+{
+  "base": "b1117ae2caecc037d9fc1253bd9c3a3c4effaaf2",
+  "retrieved_date": "2026-11-17",
+  "downloaded_by": "/root coordinator; actual bytes and relevant pages/tables inspected by /root/readiness_isolation",
+  "downloaded_sources": [
+    {
+      "filename": "tex.pdf",
+      "url": "https://www.furukawaelectric.com/en/product/catalogue/pdf/tex_m028_e.pdf",
+      "bytes": 732829,
+      "sha256": "555d1d7ad971071b09ec2c6b4ae72e9c951c6c7c7eb22d37676d2d6e434ba713",
+      "pages": [
+        1,
+        2
+      ],
+      "inspection_scope": "Relevant manufacturer technical pages visually rendered and inspected"
+    },
+    {
+      "filename": "processing.pdf",
+      "url": "https://www.tdk-electronics.tdk.com/download/531538/67fa2f237fae90fab6f31f4a10f42772/pdf-processingnotes.pdf",
+      "bytes": 1157750,
+      "sha256": "df69893b3d147b83bc0e09b75ae35ba9c22b852d719ddc821fe7079bf26f27af",
+      "pages": [
+        7,
+        17
+      ],
+      "inspection_scope": "Relevant manufacturer technical pages visually rendered and inspected"
+    },
+    {
+      "filename": "ul-fis-b3.html",
+      "url": "https://iq.ul.com/systems/list.aspx?ULID=103091579",
+      "bytes": 142971,
+      "sha256": "4f9cdd521236fb71e63708094b7d2042af0678854d9ebcc882dff81022ed4f0e",
+      "pages": [],
+      "inspection_scope": "FIS-B3 TableI, filament/enamel/Ground-Interwinding/optionalTapes; actualfunctions matter"
+    },
+    {
+      "filename": "ul-polysol.html",
+      "url": "https://iq.ul.com/ul/cert.aspx?ULID=101732414",
+      "bytes": 7259,
+      "sha256": "0a99dcb8725da8481523dfdb0cf9d5c39de7cc0b0134a671c548758a79965fa4",
+      "pages": [],
+      "inspection_scope": "Polysol180 MW82-C/180C manufacturing-site entry"
+    },
+    {
+      "filename": "ul-tape.html",
+      "url": "https://iq.ul.com/ul/cert.aspx?ULID=101796084",
+      "bytes": 9757,
+      "sha256": "93407e8fd608f330d211b0b6ac0b635c6583d9098adc1fe057db91093890a141",
+      "pages": [],
+      "inspection_scope": "1350F-1(b) exactgrade,130C,conditionedCTImarking"
+    },
+    {
+      "filename": "ul-pm9630.html",
+      "url": "https://iq.ul.com/ul/cert.aspx?ULID=232751",
+      "bytes": 11384,
+      "sha256": "ed6839ec2f28117d5a0157babf04b134c4b478582c96b72d74d9e381e16943cd",
+      "pages": [],
+      "inspection_scope": "PM-9630 black,thicknessconditionedRTI/CTIperformancelevel3"
+    }
+  ],
+  "repository_inputs": [
+    {
+      "path": "transformer-footprint/geometry-contract.json",
+      "sha256": "109a8d8be457b0f5bb0128eada3f6cb42bd6905a9f9853e92570b89c567cba79"
+    },
+    {
+      "path": "electrical-integration/magnetics/winding-results.json",
+      "sha256": "b4964267013eddb58fa4407792a57809e94894bf56bba8b1fd7a04c83bd78079"
+    },
+    {
+      "path": "electrical-integration/magnetics/window-results.json",
+      "sha256": "0e495f2bc4aa05baf09bcbad38f53a334d642f8ffdaf18956a97bf8eb7981935"
+    },
+    {
+      "path": "electrical-integration/magnetics/sources.json",
+      "sha256": "ff1a60d6a59cfd9fa46d827a856c7ff3a6576b7ff7c6859579edc05d1b8cc70d"
+    },
+    {
+      "path": "schematic-intent/intended-connectivity.json",
+      "sha256": "6f0c7df9dbc6b34c3ed041149779f99b6504b9e1a835082542bf89bb9044c0ca"
+    },
+    {
+      "path": "electrical-integration/proposed-parts.json",
+      "sha256": "142919c3a4e7eff9e5dc176639d2e9aff4432bf53173a2ee26e2552cd0cab5ae"
+    }
+  ],
+  "retained_prior_source_scopes": [
+    {
+      "url": "https://www.tdk-electronics.tdk.com/inf/80/db/fer/efd_25_13_9.pdf",
+      "sha256": "f4b6084fa9171a0157c3744663e146da6b3a738171dab4dfd3e137c125f6f06e",
+      "scope": "Prior native p2 core/p3 bobbin dimensions/material and pinned sourcegeometry result; fresh direct PDF attempts403, no fresh local PDF byte check claimed"
+    },
+    {
+      "url": "https://multimedia.3m.com/mws/media/86180O/3m-tape.pdf?fn=1350FDS.pdf",
+      "sha256": "d1eae6e4f40279fa49f7aa2322cbde5c276ea7a635e5550c19feb68cc3997468",
+      "scope": "Prior nominal0.064+/-0.013mm source budget retained; current UL material/system listings separately downloaded"
+    },
+    {
+      "url": "https://www.elektrisola.com/Download/Enamelled%20wire_eng.pdf",
+      "sha256": "061d2605a50cd0dbf6c1b04ef13a96cb159a131b6bcc8232a99450e56839e2bb",
+      "scope": "Prior P180Grade2OD max0.217mm retained via pinned winding-result input; current UL grade mapping separately downloaded"
+    }
+  ],
+  "vendor_originals_redistributed": false,
+  "unusable_normative_source_discovery": {
+    "url": "https://www.lialabcert.org.uk/standards/o3vuQha0gRlc6rU4QQB0kV3pG34kQqIU/BS-EN-IEC-61347-12024.pdf",
+    "sha256": "8f9bdacae9398ca47ee65a95a8ad68982318e47c7ff0705f8812ebb65310b570",
+    "pages": 116,
+    "limitation": "Rendered technical pages blocked by expiry/member-area notice. No numerical limits adopted; investigation stopped; original not redistributed. See standards-access-note.md."
+  }
+}

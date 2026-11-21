@@ -1,0 +1,37 @@
+{
+  "result": "pass",
+  "scope": "Native10.0.6netlist/ERC onfreshlyextractedzip; noPCB/functionclaim",
+  "commands": [
+    {
+      "command": [
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/package-open-test/Velluneo_driver/test.xml",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/package-open-test/Velluneo_driver/Velluneo_specification_reset.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Warning: schematic has annotation errors, please use the schematic editor to fix them\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/package-open-test/Velluneo_driver/erc-test.json",
+        "/workspace/hardware/E27/workflow/specification-reset/.work/package-open-test/Velluneo_driver/Velluneo_specification_reset.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to /workspace/hardware/E27/workflow/specification-reset/.work/package-open-test/Velluneo_driver/erc-test.json\n",
+      "stderr": ""
+    }
+  ]
+}

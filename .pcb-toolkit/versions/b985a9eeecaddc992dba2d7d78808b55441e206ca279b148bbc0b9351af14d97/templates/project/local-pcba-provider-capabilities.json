@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "document_type": "local-pcba-provider-capabilities",
+  "revision": "draft-1",
+  "status": "unconfirmed",
+  "provider": {
+    "name": null,
+    "site": null,
+    "process_id": null,
+    "contact_role": "local PCBA provider"
+  },
+  "scope": {
+    "assembly_modes": [],
+    "board_materials": [],
+    "assembly_sides": null,
+    "package_families": [],
+    "unsupported_package_families": [],
+    "bga_supported": null,
+    "min_board_size_mm": null,
+    "max_board_size_mm": null,
+    "board_thickness_range_mm": null,
+    "panel_handling": null,
+    "fiducials_and_tooling": null,
+    "paste": null,
+    "stencil_type": null,
+    "reflow_profile": null,
+    "inspection_methods": [],
+    "rework_capabilities": null
+  },
+  "sources": [],
+  "rules": [
+    {
+      "id": "LOCAL-PCBA-PITCH-001",
+      "parameter": "minimum_lead_pitch",
+      "relation": "minimum",
+      "value": null,
+      "unit": "mm",
+      "applies_to": [],
+      "exceptions": [],
+      "status": "unconfirmed",
+      "basis": null,
+      "source_ids": [],
+      "verification": {"method": "manual-review", "evidence": null},
+      "cad_mapping": null,
+      "confirmation": {"confirmed_by": null, "confirmed_on": null, "valid_until": null}
+    },
+    {
+      "id": "LOCAL-PCBA-GAP-001",
+      "parameter": "minimum_component_body_gap",
+      "relation": "minimum",
+      "value": null,
+      "unit": "mm",
+      "applies_to": [],
+      "exceptions": [],
+      "status": "unconfirmed",
+      "basis": null,
+      "source_ids": [],
+      "verification": {"method": "manual-review", "evidence": null},
+      "cad_mapping": null,
+      "confirmation": {"confirmed_by": null, "confirmed_on": null, "valid_until": null}
+    },
+    {
+      "id": "LOCAL-PCBA-STENCIL-001",
+      "parameter": "stencil_thickness",
+      "relation": "range",
+      "value": null,
+      "unit": "mm",
+      "applies_to": [],
+      "exceptions": [],
+      "status": "unconfirmed",
+      "basis": null,
+      "source_ids": [],
+      "verification": {"method": "manual-review", "evidence": null},
+      "cad_mapping": null,
+      "confirmation": {"confirmed_by": null, "confirmed_on": null, "valid_until": null}
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "LOCAL-PCBA-Q-001",
+      "owner_role": "local PCBA provider",
+      "question": "Which process, packages, pitch, panel, paste/stencil, sides, reflow, inspection and rework capabilities are confirmed for this project?",
+      "blocks_stage": "specification",
+      "status": "open"
+    }
+  ],
+  "project_acceptance": {
+    "accepted_by": null,
+    "accepted_on": null,
+    "evidence": null
+  }
+}

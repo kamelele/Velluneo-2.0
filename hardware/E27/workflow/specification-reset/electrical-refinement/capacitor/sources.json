@@ -1,0 +1,28 @@
+{
+  "task": "ELEC-REFINE-02",
+  "base_commit": "36ad2f243d36d592228304b26c27188da0d46c4d",
+  "native_originals_redistributed": false,
+  "sources": [
+    {
+      "id": "rubycon-bxw",
+      "url": "https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/BXW.pdf",
+      "sha256": "9fb3a22e969e8244e135b7204aa46baa7b8a99d68803a6408fca20c3d8fd5fa6",
+      "basis": "Native PDFp1frequency coefficient table,p4exact450V15uF10x20rating row; external --bulk-pdf input required"
+    },
+    {
+      "id": "historical-averaged-input-results",
+      "repo_relative": "../../electrical-integration/input-corners-results.json",
+      "sha256": "a2ba3a610228251b3f825fcdc7375e99e5e4d74a252ca3ee515775a112bf9816",
+      "basis": "1152averagedcases, not this64case switched diagnostic"
+    },
+    {
+      "id": "historical-source-engine",
+      "repo_relative": "../../driver-study/primary-buffer/calculate.py",
+      "sha256": "432a8a480078e093359206ea02cce14c5861ab6c60d7f580ed7b8c6516fc25ea",
+      "basis": "Historical averaged bridge/bulk engine; not imported by this new numerical model"
+    }
+  ],
+  "retained_candidate": "450BXW15MEFR10X20",
+  "no_CAD_or_value_change": true,
+  "scope": "Conditional numerical/refinement evidence only; no nativecontroller, fullripple, temperature or lifetime qualification"
+}

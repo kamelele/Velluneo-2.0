@@ -1,0 +1,172 @@
+{
+  "prototype_scope_closed": [
+    "PB-CAM",
+    "PB-GEOMETRY",
+    "PB-IDENTITY",
+    "PB-MAPPING",
+    "PB-ROUTING"
+  ],
+  "prototype_scope_open": [
+    "PB-PROCESS",
+    "PB-TOOL-SCOPE"
+  ],
+  "parent_lamp_requirement_errors_preserved": [
+    {
+      "id": "U05",
+      "gate": "schematic",
+      "message": "Unresolved: Architecture A selected by owner: isolated CC driver in base, simple LED panel. Select/verify its LED and driver implementation using power, tolerance, thermal and cost calculations; no fixed LED count or current."
+    },
+    {
+      "id": "U06",
+      "gate": "schematic",
+      "message": "Unresolved: Implement the product-level safety/operating criteria from U16: determine numerical circuit limits, discharge/cooling implementation, short duration/recovery, hot/cold startup and disturbance response."
+    },
+    {
+      "id": "U07",
+      "gate": "schematic",
+      "message": "Unresolved: Develop thermal/life calculations and detailed optical measurement procedures using the specification decisions from U14/U15; define base lifetime/end-of-life basis."
+    },
+    {
+      "id": "U08",
+      "gate": "schematic",
+      "message": "Unresolved: Select overtemperature behavior, thresholds and protection-fault response (including sensor faults only if a sensor is selected); define absence/reversal/partial-contact abuse cases even though live replacement is forbidden."
+    },
+    {
+      "id": "U09",
+      "gate": "schematic",
+      "message": "Unresolved: Freeze panel/base pin map and independently reviewed intended connectivity with exact datasheet/pin/footprint basis."
+    },
+    {
+      "id": "U10",
+      "gate": "placement",
+      "message": "Unresolved: Freeze preliminary enclosure envelope, heat path/contact, insulation materials, dimensions, heights, keying and retention."
+    },
+    {
+      "id": "U11",
+      "gate": "placement",
+      "message": "Unresolved: Confirm actual stackup, copper, materials and service limits as needed for insulation/layout/assembly."
+    },
+    {
+      "id": "U12",
+      "gate": "release",
+      "message": "Unresolved: Confirm available calibrated instruments, personnel, samples, test limits and stop conditions. Release evidence must cover actual operating/fault conditions."
+    },
+    {
+      "id": "U13",
+      "gate": "release",
+      "message": "Unresolved: Establish BOM availability, exact costs, release outputs, matched revisions and test/programming/assembly instructions."
+    },
+    {
+      "id": "U17",
+      "gate": "release",
+      "message": "Unresolved: Final handover deadline 30 September 2027 accepted; the proposed staged planning baseline is recorded. Confirm actual laboratory/iteration bookings before affected work/tests, without blocking ordinary design on bookings."
+    },
+    {
+      "id": "R-PURPOSE",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-SUPPLY",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-LIGHT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-CCT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-COMPAT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-REPLACE",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-OFFLINE",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-ENV",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-DIFFUSER",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-FAULT",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-EMPTY",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-THERMAL",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-USE",
+      "gate": "release",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "R-BASE-LIFE",
+      "gate": "release",
+      "message": "Required evidence kind absent: calculation"
+    },
+    {
+      "id": "R-PANEL-LIFE",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "R-FEATURES",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "R-SIZE",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "R-COST",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "R-BUILD",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "R-DEMO",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "R-BOARD-FORM",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    }
+  ],
+  "parent_contract_unchanged_sha256": "87ec7acd6adb9119b9aedf6a8e4b5aa0ac4fa47e8f95126bf25af1d4948af5b7",
+  "scope": "Parent31failures are not closed by changing scope. This explicit bare-board contract documents only actual preprocurement work; parentassembledlamp/physicalrelease remains separate and open."
+}

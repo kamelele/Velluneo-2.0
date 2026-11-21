@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-17",
+  "task": "ELEC-REFINE-02",
+  "cases_rerun": 64,
+  "numerical_results_exactly_equal_excluding_source_hash_path_metadata": true,
+  "wave_csv_byte_identical": true,
+  "analytical_bounds_exactly_equal": true,
+  "syntax_parse_passed": [
+    "calculate.py",
+    "bounds.py"
+  ],
+  "original_result_hashes": {
+    "results.json": "f9785903baaef7c575ea757e051b4a63ca4e15abf6b0d7acc1625d4f4babf76c",
+    "bounds-results.json": "9a9c15dbfa2c7d38533f43812c1431b60f00b41b646f134144cee49a81f44eb1",
+    "wave.csv": "3c64232ef8ebf3768b1b428e10ce1c06d397cc88684c96d720fb76d1643c009c"
+  },
+  "original_result_source_hash_metadata": {
+    "/workspace/scratch/d4c1ae92033a/tmp/refine-cap/model.cpp": "8163bb1a2d57705d4506ed398c2c027fb6550d80d58a35766a6544f7cbce5636",
+    "input-stage/source/bulk-bxw.pdf": "9fb3a22e969e8244e135b7204aa46baa7b8a99d68803a6408fca20c3d8fd5fa6"
+  },
+  "integrated_result_source_hash_metadata": {
+    "model.cpp": "8163bb1a2d57705d4506ed398c2c027fb6550d80d58a35766a6544f7cbce5636",
+    "external_native_bulk_pdf": "9fb3a22e969e8244e135b7204aa46baa7b8a99d68803a6408fca20c3d8fd5fa6"
+  },
+  "build_executable": "TemporaryDirectory outside repository; cleaned after actual run",
+  "commands": [
+    "python /absolute/path/capacitor/calculate.py --bulk-pdf /external/pinned/BXW.pdf --output-dir /absolute/path/capacitor/rerun",
+    "python /absolute/path/capacitor/bounds.py --switched-results /absolute/path/capacitor/rerun/results.json --output /absolute/path/capacitor/rerun/bounds-results.json"
+  ],
+  "bounds_script_actual_working_directory": "/tmp",
+  "unperformed": "No native controller, physical tests, complete ripple/lifetime qualification or CAD/value change."
+}

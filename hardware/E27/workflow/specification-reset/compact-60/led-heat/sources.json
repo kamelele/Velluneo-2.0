@@ -1,0 +1,66 @@
+{
+  "checked_date": "2026-11-17",
+  "raw_files_location": "external ../compact-sources; do not redistribute manufacturer PDFs",
+  "sources": [
+    {
+      "file": "cree2835.pdf",
+      "url": "https://downloads.cree-led.com/files/ds/j/JSeries-2835-3V-Consolidated.pdf",
+      "revision": "CLJ-DS40 Rev10B2025-06-09",
+      "pages": [
+        4,
+        5,
+        6,
+        41,
+        43,
+        55,
+        57
+      ],
+      "SHA256": "74d4261952c25e6833212a82b0f72e759f8297478627a368f4acff22378c92c8",
+      "use": "Gclass rating/current/voltage/flux/bins/native spectra/mechanics; typical values and calculated85C reference are not guarantees"
+    },
+    {
+      "file": "cree-lm80.pdf",
+      "url": "https://downloads.cree-led.com/files/da/j/J-Series-IES-LM-80-Results.pdf",
+      "revision": "CLJ-LM80-002 Rev36 Oct15,2026",
+      "pages": [
+        10
+      ],
+      "SHA256": "35ea8a1f3658866877efd058af3eff0384ed0e31437c71e274000a99e248f54c",
+      "use": "manufacturer-declared Gfamily applicability; source is summary not warranty/full report"
+    },
+    {
+      "file": "cree-thermal.pdf",
+      "url": "https://downloads.cree-led.com/files/da/x/JESD51-14-Thermal-Resistance-Calculation.pdf",
+      "revision": "CLD-AP271 Rev1A",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "SHA256": "2487399e6e62987aaec1c8d1bb44e8418c3d673137ee70ca4ea3b3c15b878038",
+      "use": "electrical-input-normalized thermal-resistance caution; XLamp scope not proof of Jseries methodology"
+    },
+    {
+      "file": "cie1931.csv",
+      "url": "https://files.cie.co.at/Publications-datasets/CIE_xyz_1931_2deg.csv",
+      "metadata_url": "https://files.cie.co.at/Publications-datasets/CIE_xyz_1931_2deg.csv_metadata.json",
+      "landing_url": "https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer",
+      "SHA256": "fa663e3535a7e0763a745993a1f0a192eb0275ac46ad2d1befd7626841e713c1",
+      "MD5": "17cca777db64b17170f06f67ce9d3ab7",
+      "citation": "CIE2019, Colour-matching functions of CIE1931 standard colorimetric observer, DOI10.25039/CIE.DS.xvudnb9b",
+      "license": "CC BY-SA4.0",
+      "use": "ybar photopic weighting; original CIE018:2019Table6,1nm360-830nm"
+    },
+    {
+      "url": "https://www.bipm.org/en/si-base-units/candela",
+      "use": "SI Kcd683lm/W at540THz; conservative684ceiling for conditional escaped radiant lower bound",
+      "access": "web primary page read2026-11-17; not a safety standard"
+    },
+    {
+      "url": "https://jlcpcb.com/help/article/jlcpcb-base-material",
+      "page_updated": "2026-11-10",
+      "use": "generic1layerAl,1/1.2/1.6mm,1oz,1W/mK,HASL; dielectric thickness not specified; breakdown3000V not reinforced system certification",
+      "access": "web primary page read2026-11-17; not exact supplier order confirmation"
+    }
+  ]
+}

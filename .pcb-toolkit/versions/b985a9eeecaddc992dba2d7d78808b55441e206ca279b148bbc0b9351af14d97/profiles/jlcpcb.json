@@ -1,0 +1,38 @@
+{
+  "id": "jlcpcb",
+  "reviewed_on": "2026-11-06",
+  "status": "candidate-requires-project-confirmation",
+  "services": [
+    "FR4-2L-1oz-routed",
+    "FR4-4L-1oz-routed",
+    "FR4-4L-1oz-epoxy-filled-capped-routed"
+  ],
+  "sources": [
+    "https://jlcpcb.com/capabilities/pcb-capabilities",
+    "https://jlcpcb.com/capabilities/pcb-assembly-capabilities"
+  ],
+  "scope": "FR4, routed edge, conventional through vias; no HDI, flex, castellations or filled via-in-pad. Stackup and service confirmation required. Candidate extension: separately selected FR4-4L-1oz-epoxy-filled-capped-routed permits explicitly specified filled/capped through-vias; published capability is not exact-order supplier confirmation. Conventional service scope remains unchanged.",
+  "observed_capability_mm": {
+    "track_width_1oz_2L": 0.1,
+    "spacing_1oz_2L": 0.1,
+    "ring_absolute_1oz_2L": 0.18,
+    "routed_edge": 0.2
+  },
+  "design_preferences_mm": {
+    "clearance": 0.2,
+    "track_width": 0.2,
+    "hole_size": 0.3,
+    "annular_width": 0.2,
+    "edge_clearance": 0.4
+  },
+  "note": "Preferences are proposed project policy, not supplier absolute minima. SMD pad-pair, hole-copper, mask, aspect ratio and tolerances require DFM review.",
+  "filled_capped_candidate": {
+    "reviewed_on": "2026-11-20",
+    "sources": [
+      "https://jlcpcb.com/help/article/pcb-via-covering",
+      "https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv"
+    ],
+    "annular_preference_mm": 0.2,
+    "supplier_confirmation_required": true
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "packet": "CLEANUP10",
+  "body_sha256": "aaf3aeb331037f269501552005794e061fb925aad1b362a228870c866a78aaf3",
+  "actual_roles": [
+    {
+      "role": "reality",
+      "actor": "/root/c8_reality",
+      "path": "reviews/reality.md",
+      "sha256": "db1e2630ab247fd7f251699e0c7e6a149c48414128d95a135e26ddfc9aa350ce",
+      "body_sha256": "aaf3aeb331037f269501552005794e061fb925aad1b362a228870c866a78aaf3",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded CAD/configuration-correction publication only; order-ready goal incomplete",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "change",
+      "actor": "/root/c8_change",
+      "path": "reviews/change.md",
+      "sha256": "6338c6e6289db6d0e5e43fc758b2205c621f273ebe258be5cc1a048f76b411c3",
+      "body_sha256": "aaf3aeb331037f269501552005794e061fb925aad1b362a228870c866a78aaf3",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded CAD/configuration-correction publication only; order-ready goal incomplete",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c8_completeness",
+      "path": "reviews/completeness.md",
+      "sha256": "3c17512aa9fb1cfe4aec9dfe6690f960c693966f834064d903b2382c86ffef91",
+      "body_sha256": "aaf3aeb331037f269501552005794e061fb925aad1b362a228870c866a78aaf3",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded CAD/configuration-correction publication only; order-ready goal incomplete",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "overengineering",
+      "actor": "/root/c8_simplicity",
+      "path": "reviews/overengineering.md",
+      "sha256": "8043c295c4072fd59798e7ad70c41972a689f677e68ce2c8c39351da01d469c5",
+      "body_sha256": "aaf3aeb331037f269501552005794e061fb925aad1b362a228870c866a78aaf3",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded CAD/configuration-correction publication only; order-ready goal incomplete",
+      "independent_of_implementation": true
+    }
+  ],
+  "full_order_ready_goal_achieved": false,
+  "formal_release": false,
+  "findings": [
+    {
+      "id": "CR10-01",
+      "initial_body": "63e9b2e40bd07709184987067c94ced233a2d13c579776a69adbb6157f9a96b8",
+      "severity": "major",
+      "state": "verified_closed_for_publication",
+      "verified_by": "/root/c8_change",
+      "closed_body": "aaf3aeb331037f269501552005794e061fb925aad1b362a228870c866a78aaf3",
+      "correction": "Restore both courtyard ERROR severities; retain stronger managed conflicts and refresh actual checks/evidence/archives"
+    },
+    {
+      "id": "CR10-02",
+      "state": "withdrawn_after_discriminating_check",
+      "verified_by": "/root/c8_change",
+      "reason": "Historicalexport and current_source bindings deliberately differ only for correctedpolicy; currentarray exact, historicalhash reconstructed independently"
+    }
+  ],
+  "open_gates": [
+    {
+      "id": "C10-TOOL",
+      "links": [
+        "C10-COMP-01",
+        "C10-SIMP-01",
+        "PB-TOOL-SCOPE",
+        "C05-CONFIG"
+      ],
+      "owner": "Coordinator/toolkit maintainer/authorized technical reviewer",
+      "closure": "Reviewed compatible selective3/10mm and4layer support, genuine current approvals and applicable passingchecks",
+      "work_findings": 5,
+      "release_findings": 20
+    },
+    {
+      "id": "C10-PROCESS",
+      "links": [
+        "C10-COMP-02",
+        "C10-SIMP-02",
+        "PB-PROCESS"
+      ],
+      "owner": "Process/sourcing designer and buyer",
+      "closure": "Actual exact supplier DFM/process/material/films/quote acceptance"
+    },
+    {
+      "id": "C10-PHYSICAL",
+      "links": [
+        "C10-COMP-03",
+        "C10-SIMP-03",
+        "C05-CTRL",
+        "C05-SENSE",
+        "C05-ISOL",
+        "C05-FIT"
+      ],
+      "owner": "Qualified mechanical/process/power/magnetic/insulation/thermal reviewers",
+      "closure": "Original observable physical construction/operating/fault/thermal/insulation/fit evidence"
+    }
+  ]
+}

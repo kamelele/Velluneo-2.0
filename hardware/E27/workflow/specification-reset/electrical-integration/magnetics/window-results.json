@@ -1,0 +1,68 @@
+{
+  "nominal_core_bobbin_intersection_mm3": 0.0,
+  "sources": {
+    "bobbin_step_sha256": "f6acdbbccb291fd39ac8028c163d7bdb47fa6849c8c7d94dce01076f05dfb2f0",
+    "core_step_sha256": "062a59009fed08ba69f30db6acdb0448a2e1f085f2e5882620ddc56f0536783f"
+  },
+  "native_nominal_geometry": {
+    "bobbin_flange_inner_faces_Z_mm": [
+      -8.3,
+      8.3
+    ],
+    "barrel_straight_extent_Z_mm": [
+      -8.1,
+      8.1
+    ],
+    "barrel_envelope_XY_mm": [
+      13.1,
+      6.9
+    ],
+    "barrel_corner_radius_mm": 2.0,
+    "core_inner_side_planes_X_mm": [
+      -9.35,
+      9.35
+    ],
+    "core_half_transform": "rotateX -90deg; translate(0,3.2,12.5); secondhalfrotateY180deg"
+  },
+  "candidates": [
+    {
+      "TEX_E_mm": 0.3,
+      "radial_build_mm": 2.293,
+      "envelope_bbox": [
+        -8.843,
+        8.843,
+        -5.743,
+        5.743,
+        -5.25,
+        5.25
+      ],
+      "nominal_bobbin_intersection_mm3": 0.0,
+      "nominal_core_intersection_mm3": 0.0,
+      "nominal_side_core_gap_mm": 0.5069999999999997,
+      "PDF_side_dimension_only_gap_mm": 0.20699999999999896,
+      "axial_straight_barrel_margin_per_side_mm": 2.8499999999999996
+    },
+    {
+      "TEX_E_mm": 0.4,
+      "radial_build_mm": 2.503,
+      "envelope_bbox": [
+        -9.053,
+        9.053,
+        -5.953,
+        5.953,
+        -5.25,
+        5.25
+      ],
+      "nominal_bobbin_intersection_mm3": 0.0,
+      "nominal_core_intersection_mm3": 0.0,
+      "nominal_side_core_gap_mm": 0.2969999999999988,
+      "PDF_side_dimension_only_gap_mm": -0.003000000000001002,
+      "axial_straight_barrel_margin_per_side_mm": 2.8499999999999996
+    }
+  ],
+  "limitations": [
+    "Collision-free nominal STEP is not tolerance/insulation clearance acceptance.",
+    "Source nominal two ungapped halves are conservativelyused for window collision; actualgappedcore center-post removal does not narrow externalwindow.",
+    "PDF-side dimension-only screen uses coreinnerwidth18.7+/-0.6 and bobbinbarrelwidth13.1-0.2; it omits lateraloffset, assemblytolerance, windingdistortion, seamsoutsidebudget, leadouts, yokes andqualification."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "packet": "DRIVER-ENTRY-02",
+  "PCB_entry_ready": false,
+  "source_and_assembly_work_distinguished": true,
+  "no_product_PCB": true,
+  "criteria": [
+    {
+      "id": "ENTRY-TOPOLOGY",
+      "gate": "schematic/placement",
+      "owner": "Coordinator",
+      "advance": "47 same-net endpoint checks; semiconductors clear of T1; scalar/native geometry agree. Final C2 opposite-face local-bypass witness has1.412mm projected endpoints at each U1.1/4.",
+      "remaining_acceptance": "Actual bypass vias/loop and VS/CS/Kelvin/gate/return topology still require qualified routing handoff. Do not accept aggregate score as electrical verification.",
+      "status": "open"
+    },
+    {
+      "id": "ENTRY-START-FAULT",
+      "gate": "schematic",
+      "owner": "Power designer/coordinator",
+      "advance": "Finite consistent magnetic sensitivity family and protection charge calculations prepared.",
+      "remaining_acceptance": "Actual AC startup<=1s, short/open/VS/CS/NTC faults, pulse count/energy, Vout/VDD/VDS, reset/recovery and independent NTC-open safety need bounded device/state evidence. No11W fault cap or zero-injection retry assumption.",
+      "status": "open"
+    },
+    {
+      "id": "ENTRY-INPUT",
+      "gate": "schematic",
+      "owner": "Coordinator plus component manufacturer/qualified reviewer",
+      "advance": "Official safety-fusible R1 candidate native sources and exact charge envelope.",
+      "remaining_acceptance": "Exact part identity and hot/repeated exponential inrush endurance; safe opening207-253Vac with source-impedance bounds; retainedF1/BR1 coordination and adjacent heating. No fictitious manufacturer confirmation.",
+      "status": "open"
+    },
+    {
+      "id": "ENTRY-MAG",
+      "gate": "schematic/placement",
+      "owner": "Transformer designer/builder with coordinator",
+      "advance": "Raw footprint and C2 winding specification retained; three-port surrogate now internally consistent.",
+      "remaining_acceptance": "Exact finished core/yoke/protected bridge/TIW exit sections, adopted EIS/process capability, full tolerance envelope<=30x30x18, Lp/ratios/DCR/pair-leakage and waveform loss/thermal bounds. Slab surrogate is not a physical guarantee.",
+      "status": "open"
+    },
+    {
+      "id": "ENTRY-ISO",
+      "gate": "schematic/placement",
+      "owner": "Qualified insulation reviewer with authorized applicable sources",
+      "advance": "Existing material-source proposal retained; no numeric standard table invented.",
+      "remaining_acceptance": "Actual applicable editions/tables and working/transient voltage/material group/pollution/altitude/air/surface/solid/test assignment for finished transformer, PCB and accessible interface. User has no full standards; no repeat request or mirror bypass.",
+      "status": "open"
+    },
+    {
+      "id": "ENTRY-THERMAL",
+      "gate": "placement",
+      "owner": "Coordinator/component/assembly designer",
+      "advance": "Retained conditional normal driver1.336-2.156W screen, not arbitrary4W.",
+      "remaining_acceptance": "Bound component-specific normal/fault losses and cap/ripple/life, hotMOS/core/TVS/NTC temperatures versus an explicit mounting/ambient boundary. Housing design paused at owner request; boundary remains necessary even for driver PCB.",
+      "status": "open"
+    },
+    {
+      "id": "ENTRY-PROCESS-INTERFACE",
+      "gate": "schematic/placement",
+      "owner": "Coordinator plus owner/workshop and selected service",
+      "advance": "All18 local footprint definitions and31assignments retained; unchanged approved circuit.",
+      "remaining_acceptance": "Qualify formedR1/C1/T1 joints/wires, source-limited F1 body/process and J1/J2 termination/strain-relief; select/confirm actual fabrication/material/stackup/copper/assembly profile; approve independent spatial intent before placement.",
+      "status": "open"
+    },
+    {
+      "id": "ENTRY-STAGE",
+      "gate": "before product placement",
+      "owner": "Coordinator plus authorized owner",
+      "advance": "Fresh graph/ERC; actual U05-U09 and configuration failures retained.",
+      "remaining_acceptance": "Close mandatory technical issues first, complete four reviews and present exact complete schematic/library packet for actual human stage decision. Earlier ECO-map approval does not approve this stage.",
+      "status": "open"
+    }
+  ]
+}

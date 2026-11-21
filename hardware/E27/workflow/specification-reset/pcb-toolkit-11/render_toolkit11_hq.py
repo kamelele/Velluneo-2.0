@@ -1,0 +1,7 @@
+from pathlib import Path
+import subprocess,json,hashlib
+W=next(p for p in Path(__file__).resolve().parents if (p/'Velluneo-readiness').is_dir());D=W/'Velluneo-readiness/hardware/E27/workflow/specification-reset/pcb-toolkit-11';O=D/'render';K=W/'kicad-10.0.6/bin';B=O/'Velluneo_bareboard_RENDER_ONLY.kicad_pcb';results=[]
+for side in('top','bottom'):
+ target=O/('Velluneo_bareboard_'+side+'_4K.png');cmd=[str(K/'kicad-cli.exe'),'pcb','render','--width','4096','--height','3072','--side',side,'--rotate','325,0,30','--perspective','--zoom','.65','--background','opaque','--quality','high','--floor','--light-top','.8','--light-side','.45','--light-camera','.4','--output',str(target),str(B)];r=subprocess.run(cmd,capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=300);(O/(side+'-4K.stdout.log')).write_text(r.stdout,encoding='utf-8');(O/(side+'-4K.stderr.log')).write_text(r.stderr,encoding='utf-8');assert r.returncode==0,(side,r.stderr)
+ results.append(dict(side=side,path=target.name,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),width=4096,height=3072,renderer='KiCad10.0.6 native raytracing highquality',command=cmd));print('HQ4Krender',side,'complete',flush=True)
+(O/'high-quality-renders.json').write_text(json.dumps(dict(source_render_board_sha256=hashlib.sha256(B.read_bytes()).hexdigest(),renders=results,scope='Actual barePCB copper/mask/ENIG/legend visualization; pasteoverlay andcomponentmodels hidden in render-onlycopy. Not a vendor production photograph or supplieracceptance.'),indent=2)+'\n')

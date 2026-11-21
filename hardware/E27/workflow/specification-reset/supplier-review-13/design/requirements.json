@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo selected driver BARE-BOARD prototype preparation only; parent lamp qualification remains separate/open",
+  "revision": "RFQ13-prototype-preparation-1",
+  "subsystems": [
+    {
+      "id": "DRIVER_BARE",
+      "kind": "pcb",
+      "owner": "Coordinator: selected unpowered bare-board prototype preparation"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "PB-IDENTITY",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "text": "One45x60mm four-layer driver,33components81pads, same selectedMPNs/values/pinmap; only documentedRFQ13 R10/C3/R17 pose refinements.",
+      "basis": "Actual owner RFQ and mechanical/isolation review request; retained33part pinintent and parentlamp criteria; documented RFQ13 local pose/corner refinements.",
+      "acceptance": "One45x60mm four-layer driver,33components81pads, same selectedMPNs/values/pinmap; only documentedRFQ13 R10/C3/R17 pose refinements.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-IDENTITY",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-PB-IDENTITY"
+      ]
+    },
+    {
+      "id": "PB-ROUTING",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "text": "Retain304segments/17vias, dedicatedmeasurementcopper and separateC1/shunt/source/auxiliaryreturns; documentlocalattachedendpoint/AUXcornerchanges.",
+      "basis": "Actual owner RFQ and mechanical/isolation review request; retained33part pinintent and parentlamp criteria; documented RFQ13 local pose/corner refinements.",
+      "acceptance": "Retain304segments/17vias, dedicatedmeasurementcopper and separateC1/shunt/source/auxiliaryreturns; documentlocalattachedendpoint/AUXcornerchanges.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-ROUTING",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-PB-ROUTING"
+      ]
+    },
+    {
+      "id": "PB-GEOMETRY",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "text": "Freshstrict nativeDRC0/unconnected0/parity0/ERC0;3mmHVquiet/10.7mmPScoplanar rules and projectedPS>=10.7; nominalviaannulus>=.2mm.",
+      "basis": "Actual owner RFQ and mechanical/isolation review request; retained33part pinintent and parentlamp criteria; documented RFQ13 local pose/corner refinements.",
+      "acceptance": "Freshstrict nativeDRC0/unconnected0/parity0/ERC0;3mmHVquiet/10.7mmPScoplanar rules and projectedPS>=10.7; nominalviaannulus>=.2mm.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-GEOMETRY",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "DRC",
+      "evidence_ids": [
+        "EV-PB-GEOMETRY"
+      ]
+    },
+    {
+      "id": "PB-CAM",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "text": "Manufacturing files have matching layers, common origin, exact45x60outline and42PTH/0NPTH; source/ZIP checks bind current revision.",
+      "basis": "Actual owner RFQ and mechanical/isolation review request; retained33part pinintent and parentlamp criteria; documented RFQ13 local pose/corner refinements.",
+      "acceptance": "Manufacturing files have matching layers, common origin, exact45x60outline and42PTH/0NPTH; source/ZIP checks bind current revision.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-CAM",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-PB-CAM"
+      ]
+    },
+    {
+      "id": "PB-MAPPING",
+      "revision": "RFQ13-1",
+      "owner": "Coordinator",
+      "text": "Toolkit hardware basename and relative source paths address this selected project; no historical-root CAD is checked as current.",
+      "basis": "Actual owner RFQ and mechanical/isolation review request; retained33part pinintent and parentlamp criteria; documented RFQ13 local pose/corner refinements.",
+      "acceptance": "Toolkit hardware basename and relative source paths address this selected project; no historical-root CAD is checked as current.",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-MAPPING",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-PB-MAPPING"
+      ]
+    },
+    {
+      "id": "PB-PROCESS",
+      "revision": "RFQ13-1",
+      "owner": "Process/sourcing designer and qualified technical reviewer",
+      "text": "Actual vendor confirms exact four-layer stackup/material,0.7pad/0.3hole filled/cappedvia process and production films before order.",
+      "basis": "Actual owner RFQ and mechanical/isolation review request; retained33part pinintent and parentlamp criteria; documented RFQ13 local pose/corner refinements.",
+      "acceptance": "Actual vendor confirms exact four-layer stackup/material,0.7pad/0.3hole filled/cappedvia process and production films before order.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-PROCESS",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": []
+    },
+    {
+      "id": "PB-TOOL-SCOPE",
+      "revision": "RFQ13-1",
+      "owner": "Process/sourcing designer and qualified technical reviewer",
+      "text": "Controlledtoolkitadoption supportsactual3/10.7mmselectiveclearance andfourlayerbarrier with genuine migrationproof andnoweakening.",
+      "basis": "Actual owner RFQ and mechanical/isolation review request; retained33part pinintent and parentlamp criteria; documented RFQ13 local pose/corner refinements.",
+      "acceptance": "Controlledtoolkitadoption supportsactual3/10.7mmselectiveclearance andfourlayerbarrier with genuine migrationproof andnoweakening.",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER_BARE",
+          "object": "PB-TOOL-SCOPE",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "method": "review",
+      "evidence_ids": [
+        "EV-PB-TOOL-SCOPE"
+      ]
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [
+    {
+      "id": "PB-U-PROCESS",
+      "record_id": "PB-PROCESS",
+      "field": "supplier_confirmation",
+      "owner": "Process/sourcing designer and buyer",
+      "question": "Exact vendor quote/stackup/material/filledcapservice/films confirmation has not been received.",
+      "blocks_stage": "release",
+      "status": "open"
+    },
+    {
+      "id": "PB-U-TOOL",
+      "record_id": "PB-TOOL-SCOPE",
+      "field": "scoped_rule_adoption",
+      "owner": "Qualified toolkit maintainer and coordinator",
+      "question": "Pinned0.7.1 cannot generate these selectiveclearance/four-layer rules; controlled compatible extension required, not a global-rule substitution.",
+      "blocks_stage": "release",
+      "status": "resolved",
+      "resolution": "Separately versioned compatibility candidate installed through real update; actual configure preview/apply owns exact scoped3/10mm rules and four-layer exclusion, independent equivalence and actual clean-extracted validation pass. No upstream or human hardware approval inferred.",
+      "evidence_ids": [
+        "EV-PB-TOOL-SCOPE"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-PB-IDENTITY",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root actual native/source/CAM inspection",
+      "artifact": "evidence/coordinator-review.json",
+      "sha256": "acd0f0b84e8c730ca87bb00aaa7b6849cbd370b1263ace7a63ec7018bb76c843",
+      "intent_digest": "bb1da4c4046083ae744c103b04ce4d001541576dfaa40b6c3f0ad879618d1046",
+      "inputs": [
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "05e08b6cafcf2a980c1dd7d66d020364d72356808b41bf197c5b594edb8bb236"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "39d5ef8fe0e46c8843edce8c8dbfd73759a2b3e7cd3b5dcbc8ab3589251887fc"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "50f665429b589cb25bba2ef6b2679b4e93f61840ac78a77df8d1828a5fdc7f06"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "13e434d2ea8b0884284e5c09724db346e38badf4d1499756fac3b3c3558af263"
+        },
+        {
+          "path": "BOM.csv",
+          "sha256": "21e75294c718039e70f47d2df4df349c7ec5d43134f892e5fef7af3d49020662"
+        }
+      ]
+    },
+    {
+      "id": "EV-PB-ROUTING",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root actual native/source/CAM inspection",
+      "artifact": "evidence/coordinator-review.json",
+      "sha256": "acd0f0b84e8c730ca87bb00aaa7b6849cbd370b1263ace7a63ec7018bb76c843",
+      "intent_digest": "bb1da4c4046083ae744c103b04ce4d001541576dfaa40b6c3f0ad879618d1046",
+      "inputs": [
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "05e08b6cafcf2a980c1dd7d66d020364d72356808b41bf197c5b594edb8bb236"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "39d5ef8fe0e46c8843edce8c8dbfd73759a2b3e7cd3b5dcbc8ab3589251887fc"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "50f665429b589cb25bba2ef6b2679b4e93f61840ac78a77df8d1828a5fdc7f06"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "13e434d2ea8b0884284e5c09724db346e38badf4d1499756fac3b3c3558af263"
+        }
+      ]
+    },
+    {
+      "id": "EV-PB-GEOMETRY",
+      "kind": "DRC",
+      "result": "pass",
+      "verified_by": "/root actual native/source/CAM inspection",
+      "artifact": "evidence/native-checks.json",
+      "sha256": "705fdfbc67fd72838db0aa1effdff4e2371dd56413de4f2fd77f31d1dba3304d",
+      "intent_digest": "bb1da4c4046083ae744c103b04ce4d001541576dfaa40b6c3f0ad879618d1046",
+      "inputs": [
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "05e08b6cafcf2a980c1dd7d66d020364d72356808b41bf197c5b594edb8bb236"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "39d5ef8fe0e46c8843edce8c8dbfd73759a2b3e7cd3b5dcbc8ab3589251887fc"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "50f665429b589cb25bba2ef6b2679b4e93f61840ac78a77df8d1828a5fdc7f06"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "13e434d2ea8b0884284e5c09724db346e38badf4d1499756fac3b3c3558af263"
+        }
+      ]
+    },
+    {
+      "id": "EV-PB-CAM",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root actual native/source/CAM inspection",
+      "artifact": "evidence/current-CAM.json",
+      "sha256": "77855fc7d7ce4ad02422e2648faa97722fadd88c05a486f9f826dd72fa848a6c",
+      "intent_digest": "bb1da4c4046083ae744c103b04ce4d001541576dfaa40b6c3f0ad879618d1046",
+      "inputs": [
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "05e08b6cafcf2a980c1dd7d66d020364d72356808b41bf197c5b594edb8bb236"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "39d5ef8fe0e46c8843edce8c8dbfd73759a2b3e7cd3b5dcbc8ab3589251887fc"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "50f665429b589cb25bba2ef6b2679b4e93f61840ac78a77df8d1828a5fdc7f06"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "13e434d2ea8b0884284e5c09724db346e38badf4d1499756fac3b3c3558af263"
+        }
+      ]
+    },
+    {
+      "id": "EV-PB-MAPPING",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root actual native/source/CAM inspection",
+      "artifact": "evidence/coordinator-review.json",
+      "sha256": "acd0f0b84e8c730ca87bb00aaa7b6849cbd370b1263ace7a63ec7018bb76c843",
+      "intent_digest": "bb1da4c4046083ae744c103b04ce4d001541576dfaa40b6c3f0ad879618d1046",
+      "inputs": [
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "05e08b6cafcf2a980c1dd7d66d020364d72356808b41bf197c5b594edb8bb236"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "39d5ef8fe0e46c8843edce8c8dbfd73759a2b3e7cd3b5dcbc8ab3589251887fc"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "50f665429b589cb25bba2ef6b2679b4e93f61840ac78a77df8d1828a5fdc7f06"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "13e434d2ea8b0884284e5c09724db346e38badf4d1499756fac3b3c3558af263"
+        }
+      ]
+    },
+    {
+      "id": "EV-PB-TOOL-SCOPE",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root actual native/source/CAM inspection",
+      "artifact": "evidence/coordinator-review.json",
+      "sha256": "acd0f0b84e8c730ca87bb00aaa7b6849cbd370b1263ace7a63ec7018bb76c843",
+      "intent_digest": "bb1da4c4046083ae744c103b04ce4d001541576dfaa40b6c3f0ad879618d1046",
+      "inputs": [
+        {
+          "path": "Velluneo_driver.kicad_pcb",
+          "sha256": "05e08b6cafcf2a980c1dd7d66d020364d72356808b41bf197c5b594edb8bb236"
+        },
+        {
+          "path": "Velluneo_driver.kicad_pro",
+          "sha256": "39d5ef8fe0e46c8843edce8c8dbfd73759a2b3e7cd3b5dcbc8ab3589251887fc"
+        },
+        {
+          "path": "Velluneo_driver.kicad_sch",
+          "sha256": "50f665429b589cb25bba2ef6b2679b4e93f61840ac78a77df8d1828a5fdc7f06"
+        },
+        {
+          "path": "Velluneo_driver.kicad_dru",
+          "sha256": "13e434d2ea8b0884284e5c09724db346e38badf4d1499756fac3b3c3558af263"
+        },
+        {
+          "path": ".electronics-rules/config-state.json",
+          "sha256": "400088bf8e6f3128652e23a04df69e1112bf03d3524527974aa51a1dcc57be98"
+        },
+        {
+          "path": ".electronics-rules/migration-proof.json",
+          "sha256": "e0d07cffd725421ed990c2c879c0a2870d5fac4c529214112c2018afafa08ff6"
+        },
+        {
+          "path": "configuration-migration13.json",
+          "sha256": "ae81b08da4a8bbd67e11a8d985a33c3e34390948cb492137a5bf2cb7869bf340"
+        }
+      ]
+    }
+  ]
+}

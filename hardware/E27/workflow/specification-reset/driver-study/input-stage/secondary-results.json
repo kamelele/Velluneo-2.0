@@ -1,0 +1,56 @@
+{
+  "study": "VEL-INPUT-01-SECONDARY",
+  "date": "2026-11-17",
+  "assumptions": {
+    "turns_Np_Ns_Na": [
+      120,
+      30,
+      22
+    ],
+    "upper_input_peak_V": 357.7960312803931,
+    "OVP25_upper_rounded_sensitivity_V": 37.861,
+    "primary_peak_A_assumed": 0.345,
+    "demag_duty_assumed": 0.425,
+    "VDD_upper_example_V": 35,
+    "dynamic_spikes_not_bounded": true
+  },
+  "output_candidate": {
+    "MPN": "STTH2R02A",
+    "reverse_rating_V": 200,
+    "ideal_reverse_V": 127.31000782009826,
+    "ideal_reverse_arithmetic_headroom_V": 72.68999217990174,
+    "pulse_peak_A": 1.38,
+    "average_triangular_A": 0.29324999999999996,
+    "RMS_triangular_A": 0.5194131303692658,
+    "source_equation_conduction_estimate_W": 0.21559739999999997,
+    "not_recovery_or_temperature_or_physical_loss": true
+  },
+  "aux_candidate": {
+    "MPN": "STTH1R02A",
+    "reverse_rating_V": 200,
+    "ideal_reverse_at35V_VDD_V": 100.59593906807207,
+    "all_energy_to_aux_initial_current_A_proxy": 1.8818181818181818,
+    "actual_current_sharing_not_verified": true
+  },
+  "NTC_candidate": {
+    "MPN": "NTCS0603E3104FXT",
+    "R25_ohm": 100000,
+    "R25_tolerance": 0.01,
+    "B25_85_K": 4100,
+    "B_tolerance": 0.01,
+    "trip_resistance_ohm": [
+      7200.0,
+      11111.111111111111
+    ],
+    "nominal_beta_trip_C": 88.12171352539474,
+    "constant_beta_trip_sensitivity_C": [
+      80.72694496728923,
+      96.76088141555931
+    ],
+    "constant_beta_is_not_guaranteed_full_RT_curve": true,
+    "near_trip_self_heat_K_proxy": 0.041666666666666664,
+    "installed_sensor_lag_unverified": true,
+    "open_sensor_fault": "External thermal cutoff may be lost; do not claim fail-safe coverage",
+    "short_sensor_fault": "LowNTC is documented shutdown command; actual fault/restart behavior pending"
+  }
+}

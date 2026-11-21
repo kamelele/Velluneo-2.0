@@ -1,0 +1,32 @@
+{
+  "id":"ECO-03-THERMAL-BACKUP-CANDIDATE",
+  "base":"ea3b23fced193861c94637524d482b7c0e96d33e",
+  "status":"Unapplied proposal for technical review; not ready to apply until listed conditions close; no owner approval",
+  "purpose":"Independent close-on-overtemperature electronic shunt of UCC28711NTC so RT1open alone does not remove every external temperature channel",
+  "active_graph_changed":false,
+  "proposed_additions":[
+    {"ref":"U2","mpn":"TPS7A1650DGNR","function":"5V60VinputLDO","pins":{"1":"THERM_5V","2":"NC_DNC_FIXED_VERSION","3":"NC_PG_UNUSED","4":"PRIMARY_GND","5":"VDD","6":"NC_UNUSED","7":"NC_DELAY_UNUSED","8":"VDD","EP":"PRIMARY_GND"},"pin_basis":"TPS7A16p4actualDGNpinfunctions;EPdenotesunnumberedmanufacturerPowerPAD, not inventedpin9","conditions":"ExistingCDD must provide >=0.1uF effective local input bypass through sufficiently short connection; no new inputcap silentlyadded."},
+    {"ref":"U3","mpn":"TMP708AIDBVR","function":"Independent85Cnominaltemperaturechannel","pins":{"1":"THERM_SET","2":"PRIMARY_GND","3":"NTC","4":"THERM_SENSOR_5V","5":"THERM_SENSOR_5V"},"pin_basis":"TMP708p3DBVpinfunctions;OTconnects existingU1physicalNTCpin3","conditions":"Thermal attachment/gradient/lag must protect actualparts; OTleakage/supplyoff/poweron behavior with actualNTCnode must be established."},
+    {"ref":"R16","mpn":"CRCW060325K5FKEA","value":"25.5kohm1percent","pins":{"1":"THERM_SET","2":"PRIMARY_GND"},"conditions":"NativeCRCWfamily candidate; total2.1percent temperature/tolerance screen; exactprocurementandfootprintacceptancepending."},
+    {"ref":"R17","mpn":"CRCW0603475KFKEA","value":"475kohm1percent","pins":{"1":"THERM_5V","2":"PRIMARY_GND"},"conditions":"Ensures >=10uA LDOload at4.9V and+2.1percent resistance; not a newCDDbleeder."},
+    {"ref":"R18","mpn":"CRCW0603150RFKEA","value":"150ohm1percent","pins":{"1":"THERM_5V","2":"THERM_SENSOR_5V"},"conditions":"Source-recommended supplyfilter; checkvoltage/current/noise andphysicalrouting."},
+    {"ref":"C5","mpn_candidate":"GRM31CR71H475KA12L","qualification":"Unqualifiedcandidate; exactmanufacturer DCbias/temp/aging/ESR andlandsourcepending","value":"4.7uF50VX7R1206","pins":{"1":"THERM_5V","2":"PRIMARY_GND"},"required":"Actualeffectivecapacitance>=2.2uF throughout5.1Vbias/acceptedtemperature/aging; declared4.7u+10percent initial tolerance and+15percent X7Rtemperature plusC6upper gives6.10uF initialcharge screen. No vendor effectiveCguarantee is invented."},
+    {"ref":"C6","mpn_candidate":"GRM188R71H104KA93D","qualification":"Unqualifiedcandidate; exactsourceandnativeassignmentpending","value":"0.1uF50VX7R0603","pins":{"1":"THERM_SENSOR_5V","2":"PRIMARY_GND"},"required":"Local sensorbypass, ratedsupply/temperature; includedconservative0.13uFupper ininitialcharge screen."}
+  ],
+  "retained":"All31activeparts, values,physicalpins andnet memberships; RT1stillpresent andindependentlyfunctional whenbackupchannelopens",
+  "supplies_and_faults":[
+    "No supply fromaccessible secondary orprimary-to-secondary thermalmetalshort isintroduced.",
+    "C5/C6short cancollapseVDD throughregulator/currentlimiting; actualHVretry andICtemperatures stillrequirevalidation.",
+    "U2open orU3OTopen losesbackup butexistingRT1remains. RT1open plusindependentbackupfailure is not silentlyassessed assinglefault.",
+    "U3OTshort forcesinhibit; R16open/short orHYSTfault must beenumerated andcannotbeclaimed safeonlyfromnominalthreshold.",
+    "U2INOUTshort canoverstressnew5Vparts; assess resultingNTCloading andexistingprotection, notjustnominalLDOoperation.",
+    "SharedU1NTCinputfailure,commontrace/groundfailure andwrongplacementareunresolvedcommoncausecases; thisisnot aclaimoffullyfaulttolerantproduct."
+  ],
+  "before_application":[
+    "CloseactualHVsource/backupinputcurrentstartupcondition, notonlymatched85uAbehavioralwitness.",
+    "QualifyexactcapacitorMPNs/effectiveC/ESR andnativefootprints/pinmapping; independentproposedfullgraphreviewbeforeCADchange.",
+    "Confirmfull-temperatureOTinterface/leakage/poweronoff behavior andactualthreshold/hysteresis/lag/gradient.",
+    "Integratenewbias/heating/storage/faults intocorrelatedconverter/thermal/serviceanalysis.",
+    "Obtainactualaffectedintent/stagedecisionafterfourindependentreviews; donotmutateapprovedgraphinthissubtask."
+  ]
+}

@@ -1,6 +1,265 @@
 # E27 workflow index
 
-## Toolkit and tools
+## Current component efficiency ECO and compendium - E22 / COMPENDIUM23, 21 November 2026
+
+[E22](specification-reset/efficiency-22/README.md) appliesSTPS2200U/SMB D3,
+422kR16/R17 and84.5k0.1%25ppmR13; retainsR1/bulk/outputbleeders/current/fault
+parts and all3mm/10.7mm rules. FreshERC/DRC/parity/unconnected0,33positions80pads,
+333unchangedtrack-viaobjects; D3shift+.3mm and twofootprints updated. Conditional
+central76.17to76.58%/2.046to1.999Wheat; hotleak cases can be34mWworse. No all-case
+gain or measured no-regression.64DC/72rectifierstartupwitnesses pass declared
+corners; fullstartup/fault/retry/thermal/insulation/physical/process/humanholds remain.
+[UpdatedcompendiumZIP](specification-reset/compendium-23/README.md) includes E22
+renders/layers/CAD/BOM/calculations andfreshmatchingmanufacturingreferences.
+Do not use oldC17Gerbers/CPL/BOM for E22. Four actual roles review the joint body.
+No order, supplier action, physical measurement or manufacturing approval.
+
+## Current driver compendium - COMPENDIUM21, 21 November 2026
+
+[COMPENDIUM21](specification-reset/compendium-21/README.md) packages current
+C16/C17/VIS18/LED19/POWER20 in one153-member offline ZIP: Polish guide, both-face
+4Krenders, allfour copper layers individually inSVG/PNG, schematic/BOM/assembly,
+latest power/thermal study, native editable sources, transformer drawings,
+manufacturing-data reference and open holds. Bottom layer is physically mirrored.
+Archive/source hashes and link checks bind the copies. No CAD/BOM/rule, physical
+qualification, supplier/order or human release change; temperatures stay conditional.
+
+## Current power and cooling assessment - POWER20, 21 November 2026
+
+[POWER20](specification-reset/power-thermal-20/README.md) calculates currentC16
+input8.59W, LED6.54W, driverheat2.05W, LED efficiency76.2% at declared central
+assumptions;97selected cases span7.83..9.92Winput/1.49..3.17Wdriverheat.
+These are sensitivity scenarios, not measured performance or guaranteed bounds.
+The319mA totaloutput includes~2.06mA bleeder; LED current~316.94mA. Charge/energy
+accounting preserves etaXFMR bias/magnetics inclusion and avoids double counting.
+At room40C, selected-case heat requires effective cavity-to-room<=3.16K/W with
+zeroLEDcoupling, <=2.00K/W with25%LEDcoupling to respect MYRRA50C air condition.
+Componenttemperatures depend on explicitly assumed heatpaths/localresistances;
+actualT1/capacitorinternaltemperatures and physicalcooling remain unestablished.
+Four independent role reviews and exact source hashes bind this analytical packet.
+No C16/C17/VIS18/LED19 file, CAD/BOM/rule/approval or manufacturing gate changes.
+
+## Current LED/driver compatibility and higher-flux acceptance - LED19, 21 November 2026
+
+[LED19](specification-reset/led-compatibility-19/README.md) checks the currentC16
+319mA supply against exact CreeG-class candidates. Owner explicitly permits higher
+lumens; requirements-and-plan.md revision13 removes only the850lm rejectionceiling.
+Retain seven seriesH40/4000K as first verificationpanel: typical20.652V/6.588W,
+~959lm at assumedtau0.87 andcalculated85Cjunctionfluxreference. Conditionalcurrent
+points303.624..336.057mA give918..1004lm; this is not measured orguaranteed output.
+Thermalderating/actualVf/currentripple/bin/diffuser/CCT/CRI/life andfinishedpanel
+remain unqualified. SixLEDsbias andeightLEDsvoltage issues prevent blindcountchanges;
+R9-onlydimming does not pass the existingfrequency screen. No driverCAD/BOM/rule,
+C17manufacturing orapprovedstage change. Higherflux isnot a blocker; thermal/safety
+requirements remain. Eventual2700/6500familycompatibility is not closed.
+
+## Current native 3D and connection views - VIS18, 21 November 2026
+
+[VIS18](specification-reset/visualisation-18/README.md) presents currentC16/C17
+45x60mm4layerdriver: bothface4Kclass nativeKiCad raytraces with31electronicappearance
+models, plus currentouter/innercopperdiagrams. Native comparison retains33positions,
+80pads333copperobjects and exactsourcehash. Currentfactory74032 andstraightTO3PF
+envelopes replace historicalcustom/formedpartappearances. J1/J2remainwirepadswithout
+inventedharness. Generic/envelopemodels are visualization, not supplierSTEP/firstfit.
+ProductionCAD, C17manufacturingfiles, rules and allphysical/process/humanholds unchanged.
+
+## Current prototype manufacturing-data handoff - C17, 21 November 2026
+
+[C17](specification-reset/manufacturing-c17/README.md) packages unchanged C16 CAD
+for barePCB DFM/quotation plus separate assemblyfeasibility: fresh11Gerbers/oneSK/
+oneExcellon/map,24filledcappedvias,18opencomponentholes,33fullBOM/28SMTBOM-CPL/
+3THT/2wirepairs, fivepagefabrication/assemblydrawing, source and artifacthashes,
+portableKiCad and exactJLCinstructions. NativeERC/DRC/parity/unconnected0; independent
+CAM/pin graph passes. Six toolkit releaseartifact categories now pass in the mapped
+portablecopy; actual release gates remainheld. CurrentMYRRA74032makerbody
+26.5x22.5x26.5mm,9pins/absent4,15.24mmrows/5mmpitch/1.4mmholes documentchecked
+against savedCAD. Old21mmstock/sellerlot/firstfit not confirmed. Process/material/
+tighterholes/registration/rings/PCBApanel/sourcing/orientation and physical/human
+qualification remainOPEN. No suppliercontact/upload/order/payment or poweredtest.
+RFQ13/JLC14ZIPs remain invalid for this variant.
+
+## Current integrated catalogue PCB — C16, 21 November 2026
+
+[C16](specification-reset/catalogue-pcb-16/README.md) implements an actual revised45x60mm four-layer,33-position80-pad schematic and fully connected PCB. Factory-wound MYRRA74032 and straight-lead STFW2N105K5 replace CAT15 parts; R4/R5/R6/R9 updated. Native ERC/DRC/parity/unconnected all zero; projected P/S copper11.146726mm, Q1 nominal padgap3.10mm. New fault screen1.05252Apk assumes400ns total extra rise delay versus1.1Apk maker rating; actual fault/startup/clamp/shoulder/thermal/insulation/process/lamp qualification and revised human approvals remain OPEN. Toolkit retains3mm/10.7mm, reports truthful gate holds. See actual review packet and both-face copper preview. No order-ready Gerbers/CPL or physical test. RFQ13/JLC14 archives remain invalid for this variant.
+
+## Current catalogue sourcing redesign — CAT15, 20 November 2026
+
+[CAT15](specification-reset/catalogue-redesign-15/README.md) supersedes the old
+custom-wound transformer procurement basis. The owner requires all parts orderable,
+preferably JLCPCB, and a complete factory-wound transformer with no custom winding.
+The exact proposed33-position purchase map covers31 electronic positions and two
+wire-pad pairs;14 positions have observed JLCPCB stocked listings, the others have
+external stock/material routes. Selected T1 is MYRRA74215, not a core/bobbin kit.
+
+This is a sourcing/ECO proposal, not completed electrical selection or revised PCB.
+Fault-current versus T1 rating, Q1's1.8mm maker footprint versus3mm policy, new bias,
+clamp/leakage/thermal/insulation, optical/enclosure and actual assembly/harness remain
+open. Native RFQ13 CAD is retained only as historical geometric implementation;
+its old checks do not validate the new parts. **Do not order RFQ13/JLC14 archives for
+this variant.** No new Gerbers/CPL, supplier contact, order or physical test exists.
+Toolkit revision and3/10.7mm rules stay unchanged. See CAT15 frozen files, actual
+four-role reports and acceptance record for precise proposal/implementation status.
+
+## Historical JLCPCB quotation handoff — JLC14, 20 November 2026
+
+[JLC14](specification-reset/jlcpcb-quote-14/README.md) prepares the unchanged RFQ13
+isolated 45 × 60 mm driver for a JLCPCB bare-PCB quote plus a separate assembly
+feasibility quote, as explicitly selected by the owner. Official JLCPCB instructions
+were checked on 20 November 2026. The upload ZIP contains one GKO, four copper,
+two mask, two legend, two paste layers, one Excellon XLN, one human drill map and
+an auxiliary sk selecting all 17 epoxy-filled/capped vias; 25 insertion holes stay open.
+Fresh native ERC/DRC/parity are zero; independent CAM confirms the nine previous
+artwork layers are geometrically identical and all holes/SK coordinates agree.
+
+Full/short PCB Remark, exact form settings, a polished unsent support enquiry and
+11 technical response IDs are provided. The complete handoff is separate from the
+14-member automatic Gerber ZIP. The 33-part MPN list and matching 26-SMT BOM/CPL
+are manual quote references: no invented LCSC stock, centroid or feeder corrections.
+Standard two-sided PCBA needs a minimum 70 × 70 mm handling/panel proposal, rails
+and fiducials, while the finished board stays 45 × 60 mm. Tighter holes/registration,
+material/process, custom parts and prior physical/human release holds remain explicit.
+No account, upload, supplier message, charge, order, payment or main merge occurred.
+The RFQ13 design remains authoritative; toolkit manifest remains
+b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97.
+
+## Historical manufacturer enquiry — RFQ13, 20 November 2026
+
+[RFQ13](specification-reset/supplier-review-13/README.md) is the current selected
+45 × 60 mm isolated four-layer, 33-part driver. It reserves the requested finished
+30 × 30 × 18 mm T1 body, makes three documented local part moves and strengthens
+P/S rules to 10.7 mm through actual pinned-toolkit preview/apply. Fresh native and
+portable ERC/DRC/parity are zero; conservative projected P/S copper gap is at least
+10.725 mm. Pin/MPN/value identity, measurement copper and separate returns remain.
+The unchanged toolkit manifest is b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97.
+
+The seven-page dimensioned review, source-based forming/hole calculations,
+independently checked CAM, separate bare-PCB/transformer-assembly/engineering ZIPs,
+unsent enquiries, response checklist and both-side native component renders are
+supplied. See review-status.json for the actual final review disposition. This
+supports technical quotation/DFM, not an order: finished T1/formed-part drawings,
+first-article fit, accepted process/films, finished insulation and physical product
+qualification remain open. No supplier contact, order, payment, powered testing or
+main merge is authorized by this packet. Earlier entries retain historical scope.
+
+## Current selected driver and scoped toolkit extension — TOOLKIT11
+
+[TOOLKIT11](specification-reset/pcb-toolkit-11/README.md) supersedes the C10 automatic-adoption blocker. Use installed compatibility candidate0.7.2-velluneo.1/ruleset0.7.2, manifestb985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97/archive d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26, derived from public86614c3. The separate editable source checkout is work/toolkit-c11-source; distributable and changed sources are retained in this packet. Original source/cache is untouched. Actual clean-extracted Windows/KiCad10.0.6 validation:149unit passes/3symlink skips,101existing+6new native cases and installer/update/rollback/examples pass. No new Linux or upstream release acceptance is claimed.
+
+Actual configure preview/apply produces selective3/10mm exact-net rules and four-layer exclusions with no weakening, no conflicts and an841-pair proof. Independent policy comparison agrees across215296 layer/object parameters. Selected45x60mm/4layer/33part/81pad/304track/17via copper is unchanged. Native and extracted ERC/DRC/parity0; independent9layer/42holeCAM and native both-side4064x3056renders are current. Six prototype preparation criteria close; exact supplier process/films and genuine current human stage/connectivity/spatial approvals remain open. Parent31lamp findings remain preserved. No supplier message, order, payment, powered test or main merge.
+
+## Current driver routing cleanup and current-project mapping — CLEANUP10
+
+[CLEANUP10](specification-reset/pcb-cleanup-10/README.md) smooths the selected45×60mm4layerdriver from647to304segments (-53.0%), with shorter totalcopper and unchanged33parts/81pads/placement.17via lands now0.7mm/0.3mmholes meet0.20mmannularpreference; oneVDDvia moves0.05mm. Native/portable0DRC/0unconnected/0parity/ERC0; measurementcopper/topology/projection andactualnegativecontrols checked. Current design/hardware.json replaces stalehistoricalroot mapping;55managedJSONconflicts resolved manually afterpreview; two original error severities retained as explicit stronger-policy conflicts. Five actual prototype criteria close and routingrequirements pass. Scoped3/10mmDRU remainsunchanged; pinnedtoolkit cannot compose it/four-layerbarrier, so automaticadoption/formalrelease remainblocked, with genuineapproval/vendor/physicalgates retained. Parentlamp31findings are preserved, not hidden by prototype scope. CurrentCAM/nativepreview and twoREVIEWarchives supplied; noorder/contact/poweredtest or mainmerge.
+
+## Current prototype procurement preparation — PROTOTYPE09
+
+[PROTOTYPE09](specification-reset/pcb-prototype-09/README.md) prepares the selected four-layer45×60mm board for bare-board fabrication review. Same copper/pads/electrical basis as DRIVER08; corrected1mm/0.15mm silkscreen and same-land R14legend variant. Fresh native0/0/0/ERC0, independently parsed9CAMlayers/42PTH/0NPTH/45×60outline and explicit17filled-via map. Fabrication-review and separateengineeringZIPs/orderchecklist supplied. Files are prepared, but supplierDFM/process/productionfilm confirmation and formalrelease gates remain open; no order, PCBArelease or energizedqualification is claimed. Older entries below retain historical scope.
+
+## Current selected routed driver — DRIVER08,19November2026
+
+[DRIVER08](specification-reset/pcb-driver-08/README.md) is the one selected four-layer45×60mm driver under the owner's delegated choice. All33parts/81pads are retained; actual native0DRC/0unconnected/0parity and0ERC. DRV is14.467mm, no vias. Power/return copper is strengthened and measurement branches preserved. The single portable project, actual preview, stackup and designated filled/capped via map are supplied. Routed CAD is complete; operating/fault/thermal/finished-transformer-insulation/fit/process confirmation and human product/stage acceptance remain unqualified. No order or powered tests are represented. Older packets below retain historical decisions and are superseded only to the explicit DRIVER08 CAD scope.
+
+## Current routing development and unadopted process comparison — 19 November 2026
+
+[PCB-ROUTE-07](specification-reset/pcb-route-07/README.md) preserves the approved 33-part basis. The 43 x 60 mm two-layer trial has zero native violations, five unconnected items and zero parity findings. A separately named UNADOPTED four-layer comparison has complete geometric connectivity and native0/0/0; it is not an approved stackup/process. Protected measurement/local bypass, separate return trees, all-layer measurement projection screen and positive/negative native controls are checked. The approximately43.1mm DRV and operating/current/EMI, process, finished insulation, thermal, fit and stage gates remain open. No manufacturing or powered testing is authorized.
+
+## Current return-path development — 19 November2026
+
+[PCB-RETURN-06](specification-reset/pcb-return-06/README.md) extends the actual33-part exploratory study with bulk/IC/localground, gate/pulldown/VS branches and real layer transition. Explicit same-net powerstrap exclusion guards the C1junction; longreturn/coupling, oppositefaceDRV/VDD/NTC, faults, finishedT1/Qforming/material/process/fit remainopen. Numericalrules unchanged; see fresh native counts and actualreviews. No accepted routing/manufacturing/powertesting.
+
+## Current owner-selected33 basis and current-path development — 19 November2026
+
+[PCB-CONTROL-05](specification-reset/pcb-control-05/README.md) records the owner's genuine approval of exactr3/33as the basis for further work. Keeps33MPNs/values/81pins/23nets+4NC; six coupled moves eliminate prior3cross-facepadapproaches and namedQ1landrefinement improves conditionalannulus. Main41x60native0violations/54unconnected/0parity/ERC0. Separate real8-segment3-branchsense-study0violations/51unconnected, SENSE24.420mm/CS1.931mm/return2.7mm; driver/star/powerloops/coupling stilluncompleted, including2segmentapproaches tooneoppositeCLAMPpad. R6correctlytreatedasRLCcompensation;128conditionalcorners/newCV/UVLO/NTC/faultassessment andinsulation/tolerance study areexecuted. IsolatedovalT1couponunadopted; sourcepinfit/process/finishedinsulation/10.7tolerancebudget/thermal/fit and genuine technicalstageacceptance remainopen. Nativepositive/negativecontrols, portableZIP/preview/fourreviews supplied. No manufacturing/power-test authorization or assumed stage approval.
+
+## Current complete proposed spacing redesign — 19 November2026
+
+[PCB-CLOSURE-04-r3](specification-reset/pcb-closure-04/README.md) now contains a complete proposed33-part/81-pad41x60mm PCB under eco/, matched native schematic/libraries/models and full-board nativeDRC0violations/0parity/54unconnected, ERC0. Numeric3/10mm rules retained. TVS/C1return4.472mm andQchain20.997mm improve, but19.906mm sense connection needs dedicated Kelvin routing/review. Old31-part40x60comparison with8packagefindings is retained separately. New controller/startup/forming/T1lands are unapproved ECO; operating/fault/NTC/140kHz/thermal/finishedinsulation/process/fit and genuine affected-stage decisions remain open. Nominal58.029mm radial allocation is tight to outerØ60, not finished fit. See exact frozen reviews, portableZIP and actual native previews. No routing/manufacturing/power-test acceptance.
+
+## Current side-channel clamp alternate — 18 November2026
+
+[PCB-CLAMP-03](specification-reset/pcb-clamp-03/README.md) adds a checked40x60mm native alternate(+8mmwidth, old32mmtrial retained; Ø60x120lamptarget unchanged). D1/TVS1 move beside T1 on the samefrontface;29otherpositions/controlmetrics remain. T1clamp endpoint sum49.600→39.110mm/Qfeedshorter, butTVS-to-C1bulkreturn13.624→25.901mm andactualloop/parasitics remainopen. A namedlocalR9silk-onlyvariant eliminateslastartworkcollision withoutchanginglands. NativeDRC8packageclearance/0silk/53unconnected/0parity; rulesunrelaxed. Nominalradialscreen49.27mm isnotfinishedhousingfit. PortablematchedCAD/localdependencies/nativeviewsandfourreviewsare supplied. No electrical/insulation/thermal/placement/routing acceptance ormanufacturing/powertestapproval.
+
+## Current improved native PCB placement — 18 November 2026
+
+[PCB-PLACEMENT-02](specification-reset/pcb-placement-02/README.md) continues the actual rectangular 32x60 mm KiCad workspace. All 29 intercomponent clearance-screen findings are removed without changing rules or lands; 8 package-internal findings, 1 artwork overlap and 53 unrouted items remain. All 79 saved pad transforms/net memberships match; native schematic parity is zero. Sensitive pad-centre links improve, but clamp external-leg lower bound worsens 19.4% and remains open. Portable matched project and native views are included. Active circuit/libraries/requirements/approvals stay unchanged; no schematic/placement/routing, thermal, transformer, insulation or manufacturing acceptance is claimed.
+
+## Current native PCB engineering draft — 18 November 2026
+
+[PCB-DRAFT-01](specification-reset/pcb-draft-01/README.md) starts actual nativeKiCadPCBauthoring at the owner explicitrequest. Editable32x60board,31footprints/79pads,22functionalnets/4NCsingletons, real two-sided copper keepout, scoped provisional rules, native saved-board parity and actualKiCadSVG/3Dviews are supplied in a portableZIP. Native schematic/PCB parity is zero; DRC is openly failing with unrouted connections/functional-clearance/silkscreen findings. Current31graph/activeCAD/libraries/requirements/profile/approval remain unchanged. Earlier broad claims that supplier/physical/fullqualification evidence prevents anydraftauthoring are corrected; genuine schematic/placement/routing acceptance and fault/T1/insulation/thermal/process conditions remain open. No routed/qualified/manufacturing or powered-test approval is claimed.
+
+## Current driver-only preparation — 18 November 2026
+
+[DRIVER-ENTRY-02](specification-reset/driver-entry-02/README.md) addresses the owner request to focus on the rectangular supply only. It adds a topology-aware all31-position proposal with semiconductors clear of the finished-transformer allocation, finite three-port magnetic sensitivity model, source-bound safety-fusible input-resistor candidate and fresh graph/ERC/requirements checks. No native productPCB, trace, circuit/MPN/library/requirements/rule/profile/approval change or whole-lamp cooling redesign is included. Actual electrical, magnetic, insulation, thermal/interface/process and U05–U09 gates remain blocked; see exact acceptance ledger and independently reviewed packet.
+
+## Current complete assembly envelope proposal — 18 November 2026
+
+[ASSEMBLY-FIT-01](specification-reset/assembly-fit-01/README.md) adds a computed whole-lamp cutaway and all31installed-height envelopes for the rectangular32x60longitudinaldriver and round48mmLEDinsert. Source audit corrects C1bodymax22mm, C2/C3thickness1.85 andC4height6.1. A newunapplied positionproposal reserves full-faceC1ventspace and removes direct opposedR1/C1bodyprojection. Conditional design budget is118.5mm nominal/119.8mm with requiredtolerances, maximumallocatedOD59.7mm. Customannularfins surround theuppercup; no oldstockcoolerthermalresult is inherited. FinishedT1/F1/datums/mount/material/connector/vent-sourceconflict/thermal/process conditions remainunqualified; no fullproductPCB, route or stageapproval. Older correctedboardform remains binding; earlier disc study stayssuperseded.
+
+## Current corrected board form — 18 November 2026
+
+[RECT-01](specification-reset/rectangular-driver-01/README.md) records the actual owner correction: rectangularBASEpowerPCB, onlyroundPANELLEDinsert, wholelamp targetØ60x120mm unchanged. Root incorrectly assumed a rounddriver; the previousØ51mm circularpacking and its circle-specificcourtyardproposals are superseded as currentgeometry. A32x60mm longitudinalrectangulartrial assignsall31positions/79pads using unchangednativefootprints. Actualbody/joint/height/3Dfit, functionalrouting, thermal andallremainingelectrical/insulation/process closures stayopen. No productPCB/route/stageadvance; dimensionaltrial isnotowner-fixedsize or120mmfitproof.
+
+## Current owner-constrained compact direction — 18 November 2026
+
+[COMPACT-60](specification-reset/compact-60/README.md) implements the actual owner targetØ60x120mm and rejects the approximately170mm alternative. Typical LEDheat2.636–3.398W and driver scenario losses1.336–2.156W replace oversized working budgets for feasibility, not guaranteed heat bounds. Raw bobbin height12.9mm and invalid2mm spacer are established. A120mm conditional stack/cooler frontier and actual31part79pad inventory are supplied; the51mm circular packing diagnostic assigns31/31 with projected metal/edge checks, while fixed-anchor courtyard, height and complete3Dfit conditions remain open. R-SIZE and genuine coordinator scope-delta evidence change; electrical CAD/approved graph/library/rules do not. [Closure ledger](specification-reset/compact-60/closure-ledger.json) retains exact magnetic/fault/thermal/insulation/mechanical/process blockers. No PCB-entry approval or physical qualification is claimed. Previous larger-envelope proposals below are historical and superseded as the selected size direction.
+
+## Current controller, transformer and cooling proposals — 17 November 2026
+
+[DESIGN-CLOSURE-02](specification-reset/design-closure-02/README.md) obtains actual TI encrypted28710/noNTC model limitations, executes fault/reset/charge and256combinedbias/DCRcases, and proposes an unapplied seven-position electronic thermalbackup. A dimensioned interleaved transformer reduces the1Dslab leakage estimate74.25to14.06uH; no actual20uH guarantee or qualified build is inferred. Cooling now uses real supplier curves, dimensioned interface/envelope proposals and a90x173mm secondary-housing heat path; actual conditions/fit/material/insulation remain unverified. Active31-position CAD/graph/values/requirements stay unchanged. [Acceptance ledger](specification-reset/design-closure-02/acceptance-ledger.json) retains PCB blockers and exact owners; no stage, enclosure, ECO, measurement or manufacturing approval is fabricated.
+
+## Current startup, protection, thermal and insulation development — 17 November 2026
+
+[PCB-READINESS-01](specification-reset/pcb-readiness-01/README.md) adds executed coupled startup/clamp/NTC/thermal/life/discharge calculations and a source-conditioned transformer material/build candidate. Current31-position CAD/graph/values stay unchanged. New20uH leakage,4W/8W heat-removal and material/process conditions are proposed design inputs, not actual assembly performance or accepted norms. [Exact PCB-entry contract](specification-reset/pcb-readiness-01/pcb-entry-contract.json) retains startup/controller/fault/SOA, complete transformer/insulation and actual enclosure/thermal closures. The owner has no full standards; a discovered expired member rendering is not used to bypass access or establish normative limits. No schematic/placement approval, PCB or physical test is claimed.
+
+## Current library source confirmation — 17 November 2026
+
+[LIB-SOURCE-03](specification-reset/library-source-03/README.md) uses primary KEMET commercial C0G Table3 densityB lands for C2/C3 and confirms F1 copper directly against the downloaded official SCHURTER PDF/drawings. [Current KiCad draft ZIP](specification-reset/library-source-03/Velluneo_driver_LIB03_KiCad.zip) and [schematic PDF](specification-reset/library-source-03/Velluneo_driver_LIB03.pdf) supersede earlier native packages for the new assignment bytes. The owner-approved ECO-01 physical graph,31positions/79terminals/22nets/4NC, values, electrical types and rules are unchanged.19available modules include one retained historical KEMET pattern;18definitions are active.
+
+Actual pinned KiCad10.0.6/matching pcbnew doctor, all-module geometry, graph, MPN/BOM contract, enabled ERC and output/member checks pass at their stated scopes. Requirements U05-U09 and managed work-check configuration remain incomplete. Source confirmation does not qualify soldering, body tolerances, fuse coordination or any inherited electrical/model/thermal/insulation/process finding. No PCB, routing, DRC or physical measurement is created. The separately supplied toolkit-reference checkout was verified as exact86614c3; the unchanged installed manifest/lock remains authoritative. Prior capture packages and reports below are historical for their own source revisions.
+
+## Current electrical refinement evidence — 17 November 2026
+
+[ELEC-REFINE-02 r2](specification-reset/electrical-refinement/README.md) adds64actual finite-R switched-load endpoint cases with200ns/100ns convergence/KCL/RMS/FFT,48finite-auxiliaryloss/charge scenarios,100optical/metrologicalbudgetcases and clamp/winding commutationfrontiers. WorstmodeledbulkRMS127.135mA vssevere152mAcomparison supports retaining15uFcandidates; updatedactive-R13/noVFoutminimum startupwitnessVDD11.2246V supports retainedRAUX4.7underdeclaredhypotheses. Factory-onlyopticalcalibration is analyzed at the accepted230V50Hz/25±1°Ccomplete-lamp condition; no measuredflux orchangedR92.37value.
+
+[Fouractualreviews/integration](specification-reset/electrical-refinement/integration-record.md) support boundedanalysisdelivery only. All66previousnativecaptureinputs are unchanged, so the currentECO-01KiCadZIP/PDF below remainscurrent. No CAD/approvedgraph/partvalue/requirements/profile change ornewECOapprovalquestion. Actualcontroller/parasitic/clamp/fault/thermal/interface/lifetime/process evidence and U05–U09/fullconfiguration remainopen; no finishedsupply/PCB/DRC/physicalmeasurement claim. The smallrawprefix is identifiedaspreview; fullgeneratedwaveformhash/spectrum/replay arepreserved withoutversioning34MBofintermediatedata.
+
+## Current owner-approved ECO-01 native capture — 17 November 2026
+
+The owner accepted exactECO-01 graph5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8. [Current SCH-ECO01-02 packet](specification-reset/eco01-capture/README.md), [nativePDF](specification-reset/eco01-capture/Velluneo_driver_ECO01.pdf) and [editableKiCadZIP](specification-reset/eco01-capture/Velluneo_driver_ECO01_KiCad.zip) implement the four499k2512 dualbulkbleed/twoexistingpackagechanges, added1MVDDbleed and exactnumericreferencealiases.31positions/79physicalterminals/22nets/4NC now match the acceptedintent;18unchangedlocalfootprintdefinitions cover allpositions. Activeparts basis is electrical-integration/proposed-parts.json; old schematic-intent/parts.json is deliberately preserved as historicalhashboundbasis.
+
+ActualnativeKiCad10.0.6 doctor/geometry/graph/ERC/MPN-BOM-footprintchecks and PDF/SVGexports pass at documentedscopes. The previousannotationwarning is absent and SCH-ANN-001 narrowly independentlyclosed. [Fouractualreviews/integrationrecord](specification-reset/eco01-capture/integration-record.md) support thiscapturetransfer only. SchematicrequirementsU05–U09 and fullmanagedconfiguration stillfail. Prior startup/clamp/model/input/flux/capripple/magnetics/service/thermal/safety/process majors stayopen; no finishedsupply/PCB/routing/DRC/order or physicalmeasurement. AcceptedECOpermission is already recorded; no repeatdecision needed for its application. Earlier28component reports/packages and predecisionnullapprovalproposal below are historical for their ownrevisions.
+
+## Current electrical integration and passive ECO review — 17 November 2026
+
+The [ELEC-CLOSE-01 r2 packet](specification-reset/electrical-integration/README.md) adds source-backed startup analysis(128ramp/768residual-current cases), an authentic-core/bobbin winding-window diagnostic, hot copper-loss calculations and1152averaged input cases with timestep refinement. It identifies a bulk-bleeder one-open/one-short weakness and prepares a specific [31-position passive/numeric-reference ECO](specification-reset/electrical-integration/ECO-01.md), [proposed graph](specification-reset/electrical-integration/proposed-connectivity.json) digest5c2b5fdd0654805a576186adb8a9ccc0a041bd4809a9259e448574fd38adeba8. The changed graph is unapproved and unapplied; the existing approved28-position native schematic/local library remains byte-identical.
+
+[Four actual independent reviews and integration record](specification-reset/electrical-integration/integration-record.md) recommend exactECOintent human review only. Current native doctor/oldgraph/ERC checks pass in their limited scopes; schematic requirementsU05–U09 and fullmanagedconfiguration still fail. Newcapacitortotalripple and current/flux budget gaps are explicit, along with all earlier electrical/model/thermal/safety majors. Proposed40V openfault ceiling is illustrative/unapproved; no complete service wait is established. No finished supply/PCB/DRC/order or physical measurement is claimed.
+
+## Current all-position library candidates — 17 November 2026
+
+All28 physical component positions now have candidate footprints using18 unique definitions. The [current packet](specification-reset/transformer-footprint/README.md) resolves the earlier T1 view ambiguity through independently checked authentic STEP/PDF marking correlation. [Current editable ZIP](specification-reset/transformer-footprint/Velluneo_driver_all_footprints.zip) includes the complete local library. Current52-file source hashes and four targeted final reviews retain prior17 unchanged module scopes.
+
+Native KiCad10.0.6 checks pass for all18 module geometries/28 assignments/73 footprint terminals, unchanged full28-component graph and zero reported enabled ERC findings. Completing assignment does not qualify every part/process: F1 source-visual gap, KEMET/project copper, THT/wire construction and finished transformer insulation/envelope remain explicit. Schematic requirements U05–U09, full managed-configuration failure and all existing electrical/model/thermal/safety majors stay open. No productPCB, copper, DRC or manufacturing release exists.
+
+## Earlier three-part footprint library — 17 November 2026
+
+The [FOOTPRINT-01 packet](specification-reset/footprint-study/README.md) creates and assigns three actual native footprints for U1, BR1 and Q1, with source-backed copper and exact approved numbering. [Current ZIP](specification-reset/footprint-study/Velluneo_driver_3_footprints.zip) includes the local library and assignments. Four independent contexts reviewed the36-file candidate packet. Native15-pad geometry, unchanged28-component physical graph and ERC checks pass at their stated scopes; only3of28 footprints are addressed. Schematic-stage acceptance, remaining physical libraries/interfaces/process and all old electrical majors stay open. No productPCB exists. Earlier capture reports/packages below remain historical for their source revision.
+
+## Earlier native schematic capture — 17 November 2026
+
+The owner accepted the exact independently reviewed physical-pin map and instructed capture. [Actual decision](specification-reset/schematic-capture/owner-intent-approval.md) binds graphintent b6d094763fb4eaf2e45b79cafa76f0bc6f818af27c79d7736a2524f8d6c36c57 to prior commit0b79ac05d025fdcde1de0418874043a2d5f530b2. Graph topology/basis remains unchanged; only its approval is now recorded. This is not approval of the newly generated schematic stage.
+
+The [editable native schematic](specification-reset/Velluneo_specification_reset.kicad_sch), local library, [PDF](specification-reset/schematic-capture/Velluneo_driver.pdf), [KiCad ZIP](specification-reset/schematic-capture/Velluneo_driver_KiCad_draft.zip) and [capture packet](specification-reset/schematic-capture/README.md) now exist. Root is the sole CAD/library writer. Support/model contexts supplied bounded source/annotation investigations; separate Reality/Overengineering/Completeness/Change contexts review the frozen capture.
+
+Actual locked KiCad10.0.6 comparison passes28 physical components/73 terminals/21 nets/4NC against approved intent. Native ERC exits0 with no reported findings under the recorded default checks after three justified non-physical source declarations. U1 types, physical graph and ERC severities/exclusions are unchanged. Native export still reports the approved nonnumeric-reference annotation warning; SCH-ANN-001 remains open.
+
+[Requirements schematic check](specification-reset/schematic-capture/requirements-schematic.json) remains incomplete at U05–U09. [Full work check](specification-reset/schematic-capture/check-work.json) records configuration failure because managed profile/rules/ownership and a realPCB are absent; no DRC or full stage pass is claimed. Physical footprints, transformer insulation/build, LED/interface implementation and existing startup/clamp/model/thermal/safety majors remain open. No dummy PCB, order or physical test is created.
+
+The installed exact preview0.7.1-preview.3/ruleset0.7.1, manifest05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822/archive15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4, and supported Ubuntu26.10/KiCad10.0.6/pcbnew runtime remain pinned. Fresh doctor passes. Earlier tool qualification covers examples, not this product. Accepted r12 product scope and passing specification-level preflight remain valid at their limited content/evidence scope.
+
+The older toolkit/task entries below are historical provenance and must not override the above current preparation state or reactivate earlier approvals for this redesign.
+
+## Historical toolkit and tools
 
 - Workflow reference [pcb-agent-toolkit 0.7.1 at commit 86614c3](https://github.com/wiktor426/pcb-agent-toolkit/tree/86614c3b9b43713031e0ea481edbe26b71cd1b8f). Use the toolkit checkout outside the Velluneo source tree. Start with the existing-project guide and the project instructions in that revision.
 - The toolkit's tree verification passed against the files archived from the exact Git commit. Manifest SHA-256 is `05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822`. It is a candidate. Installed launcher and archive lock are pending.
@@ -12,7 +271,7 @@
 - On 2026-11-11 the project owner selected one series string of eight LEDs. The Rev K and Rev H pair and its JLCPCB files are the historical 2×8 prototype reference. The existing valley-fill study remains historical evidence for that design family.
 - The owner accepted the 8S specification and process proposal for design planning on 2026-11-12. Codex owns the interface preparation task. CAD and library write ownership will be assigned after the interface and independent pin intent review.
 
-## Active task
+## Historical 8S task (superseded by owner reset direction)
 
 - [E27-8S-SPEC task contract](8s/task-contract.md) and [current specification packet](8s/stage-packet.md). The candidate uses one isolated current-regulated output and targets one power PCB.
 - [Owner decision](8s/process-decision.md) and [passing specification check](8s/requirements-approved-check.json). Board-specific material and assembly evidence remains due at the later gates.

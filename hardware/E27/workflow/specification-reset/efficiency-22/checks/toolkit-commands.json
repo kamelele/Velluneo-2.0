@@ -1,0 +1,54 @@
+[
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "hardware/E27/workflow/specification-reset/efficiency-22/design"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "requirements-routing",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset/efficiency-22/design",
+      "--stage",
+      "routing"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "work",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset/efficiency-22/design",
+      "--mode",
+      "work",
+      "--stage",
+      "routing"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "release",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset/efficiency-22/design",
+      "--mode",
+      "release"
+    ],
+    "exit_code": 1
+  }
+]

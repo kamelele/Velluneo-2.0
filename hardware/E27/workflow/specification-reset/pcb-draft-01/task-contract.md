@@ -1,0 +1,11 @@
+# PCB-DRAFT-01 — native engineering workspace
+
+Base7b75131667252634584552b4094c608cd88b9f2a. The actual owner instruction in this conversation is: "No to działaj dalej, dopracuj rozruch, zabezpieczenia, transformator i izolację, żebyśmy mogli przejść do PCB. Stosuj toolkit, zapisuj wszystko na GitHubie i na koniec daj podgląd tutaj. CHCE ZACZAC PRACE NAD PCB".
+
+This authorizes preparation of a reversible native PCB engineering draft and further calculations. It is not recorded as technical schematic/placement acceptance, waiver, manufacturing release or authorization to energize/order hardware. Original stage decisions/unknowns remain unchanged. Earlier coordinator ledgers overgeneralized some acceptance prerequisites into a prohibition on authoring a draft; this packet corrects that distinction without marking the missing evidence passed.
+
+Root has exclusive write ownership of pcb-draft-01/**, additive source inventory and workflow header. Active schematic, parts, graph, libraries, requirements, profiles, rules and approvals are preserved. Three read-only implementers audit controller/reference options, transformer interface, and actual gates/insulation-source examples. Four separate final read-only roles inspect the frozen integrated packet.
+
+Deliverables: real editable KiCad10.0.6 PCB with the31 approved component positions/79 physical pads/22nets/4intentionalNC; actual native saved/reloaded graph parity and courtyard/pad transforms; rectangular32x60outline; explicit provisional copper keepout and scoped draft clearance rules; source-bound controller limits and transformer interface; native3Drender/SVGviews; portable ZIP and exact hashes; actual ERC/DRC/requirements/work reports and unclosed engineering conditions.
+
+Acceptance of this task means usable and honestly labelled draft evidence, not the parent's complete driver qualification. No routed copper, Gerbers, physical measurements, supplier confirmation or product stage approval is invented. Any failing DRC/requirements report remains visible; no suppression, global threshold relaxation or fake exemption is allowed. Follow actual toolkit stage gates before product acceptance/routing/release. No new TINA/full-standard question or unlicensed download is made.

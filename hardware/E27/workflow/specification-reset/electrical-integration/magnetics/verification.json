@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-17",
+  "checks": [
+    {
+      "result": "winding-results.json",
+      "byte_identical": true,
+      "sha256": "b4964267013eddb58fa4407792a57809e94894bf56bba8b1fd7a04c83bd78079"
+    },
+    {
+      "result": "window-results.json",
+      "byte_identical": true,
+      "sha256": "0e495f2bc4aa05baf09bcbad38f53a334d642f8ffdaf18956a97bf8eb7981935"
+    }
+  ],
+  "python_syntax_parse_passed": [
+    "calculate.py",
+    "check-window.py"
+  ],
+  "commands": [
+    "python calculate.py --output /external/temp/integrated-winding-results.json",
+    "python check-window.py --bobbin-step /external/source/tdk-efd25.step --core-step /external/source/core.step --output /external/temp/integrated-window-results.json"
+  ],
+  "verification": "Both adapted scripts executed against original pinned native inputs; outputs compared byte-for-byte against preserved original result JSON. No vendor files redistributed. No measurements, safety approval, CAD or stage advancement."
+}

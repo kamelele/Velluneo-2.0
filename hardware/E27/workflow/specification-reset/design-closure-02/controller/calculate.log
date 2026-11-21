@@ -1,0 +1,152 @@
+{
+  "reset_cases": 210,
+  "passive_35_to7p7_upper_s": 1.530404879812665,
+  "injection_ceiling_uA": 7.5416258570029395,
+  "backup_trip_C": [
+    81.5373649386901,
+    85.27392686173734,
+    89.01228627987744
+  ],
+  "startup_min_VDD_by_extra_steps": [
+    [
+      0.0,
+      160,
+      11.68389924615143
+    ],
+    [
+      0.0,
+      320,
+      11.683898275704212
+    ],
+    [
+      8.5e-05,
+      160,
+      11.557160149203117
+    ],
+    [
+      8.5e-05,
+      320,
+      11.557159192955385
+    ]
+  ],
+  "charge_sensitivities": [
+    {
+      "IHV_A_hypothesis": 0.0001,
+      "extra_bias_A_hypothesis": 8.5e-05,
+      "reaches19V": false,
+      "stall_or_unreachable_segment_V": [
+        3,
+        5.6
+      ],
+      "equilibrium_V": -14.684999999999999,
+      "time_before_failed_segment_s": 0.2669758769299231,
+      "uniform_source_values_not_guaranteed_by_TI": true
+    },
+    {
+      "IHV_A_hypothesis": 0.00025,
+      "extra_bias_A_hypothesis": 8.5e-05,
+      "reaches19V": true,
+      "time_s": 0.33308455084219324,
+      "segments": [
+        {
+          "VDD_segment_V": [
+            0,
+            0.5
+          ],
+          "effective_charge_capacitance_F": 9.89961e-07,
+          "duration_s": 0.0022525269726969975,
+          "backup_bias_applied": false
+        },
+        {
+          "VDD_segment_V": [
+            0.5,
+            3
+          ],
+          "effective_charge_capacitance_F": 7.089961e-06,
+          "duration_s": 0.08122865508617429,
+          "backup_bias_applied": false
+        },
+        {
+          "VDD_segment_V": [
+            3,
+            5.6
+          ],
+          "effective_charge_capacitance_F": 7.089961e-06,
+          "duration_s": 0.1411442426315157,
+          "backup_bias_applied": true
+        },
+        {
+          "VDD_segment_V": [
+            5.6,
+            19
+          ],
+          "effective_charge_capacitance_F": 9.89961e-07,
+          "duration_s": 0.10845912615180628,
+          "backup_bias_applied": true
+        }
+      ],
+      "source_charge_C": 8.327113771054832e-05,
+      "load_charge_C": 3.1208822871848165e-05,
+      "R13_charge_C": 2.1430558387001494e-06,
+      "capacitor_charge_port_C": 4.9919259e-05,
+      "charge_residual_C": 6.776263578034403e-21,
+      "VDD_port_energy_residual_J": -5.421010862427522e-20,
+      "regulator_output_capacitor_energy_at5p1V_J": 7.93305e-05,
+      "capacitor_charge_port_energy_J": 0.0002735734605,
+      "uniform_source_values_not_guaranteed_by_TI": true
+    },
+    {
+      "IHV_A_hypothesis": 0.0005,
+      "extra_bias_A_hypothesis": 8.5e-05,
+      "reaches19V": true,
+      "time_s": 0.12296548144002109,
+      "segments": [
+        {
+          "VDD_segment_V": [
+            0,
+            0.5
+          ],
+          "effective_charge_capacitance_F": 9.89961e-07,
+          "duration_s": 0.001053722617281469,
+          "backup_bias_applied": false
+        },
+        {
+          "VDD_segment_V": [
+            0.5,
+            3
+          ],
+          "effective_charge_capacitance_F": 7.089961e-06,
+          "duration_s": 0.03785663109669776,
+          "backup_bias_applied": false
+        },
+        {
+          "VDD_segment_V": [
+            3,
+            5.6
+          ],
+          "effective_charge_capacitance_F": 7.089961e-06,
+          "duration_s": 0.04843299371322743,
+          "backup_bias_applied": true
+        },
+        {
+          "VDD_segment_V": [
+            5.6,
+            19
+          ],
+          "effective_charge_capacitance_F": 9.89961e-07,
+          "duration_s": 0.03562213401281444,
+          "backup_bias_applied": true
+        }
+      ],
+      "source_charge_C": 6.148274072001055e-05,
+      "load_charge_C": 1.0833650299914191e-05,
+      "R13_charge_C": 7.298314200963627e-07,
+      "capacitor_charge_port_C": 4.9919259e-05,
+      "charge_residual_C": -6.776263578034403e-21,
+      "VDD_port_energy_residual_J": 0.0,
+      "regulator_output_capacitor_energy_at5p1V_J": 7.93305e-05,
+      "capacitor_charge_port_energy_J": 0.0002735734605,
+      "uniform_source_values_not_guaranteed_by_TI": true
+    }
+  ]
+}

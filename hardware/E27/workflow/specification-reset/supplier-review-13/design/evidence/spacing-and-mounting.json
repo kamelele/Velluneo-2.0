@@ -1,0 +1,228 @@
+{
+  "source_board_sha256": "05e08b6cafcf2a980c1dd7d66d020364d72356808b41bf197c5b594edb8bb236",
+  "baseline_source_sha256": "9371f0cb04eb08bac7e462b7553e250b212dc8a401e7068fdcb11cbe3448e0d4",
+  "parts": 33,
+  "pads": 81,
+  "copper_objects": 321,
+  "physical_pin_net_map_values_MPNs_sizes_drills_layers_unchanged": true,
+  "SENSE_CS_copper_identical": true,
+  "scopes": [
+    {
+      "id": "PRIMARY_SECONDARY",
+      "primary_objects": 364,
+      "other_objects": 38,
+      "projected_xy_conservative_mm": 10.725,
+      "common_copper_layer_conservative_mm": 10.725,
+      "projected_pair": [
+        {
+          "id": "R3.2",
+          "ref": "R3",
+          "pin": "2",
+          "net": "/PRIMARY_GND",
+          "x_mm": 93.5,
+          "y_mm": 94.2,
+          "output_x_mm": 16.0,
+          "output_y_mm": 35.8,
+          "size_mm": [
+            1.45,
+            3.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "rotation_deg": 90.0,
+          "attribute": 1,
+          "layers": [
+            "B.Cu"
+          ]
+        },
+        {
+          "id": "T1.9",
+          "ref": "T1",
+          "pin": "9",
+          "net": "unconnected-(T1-Pad9)",
+          "x_mm": 95.0,
+          "y_mm": 81.75,
+          "output_x_mm": 17.5,
+          "output_y_mm": 48.25,
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": [
+            1.35,
+            1.35
+          ],
+          "rotation_deg": 0.0,
+          "attribute": 0,
+          "layers": [
+            "F.Cu",
+            "B.Cu",
+            "In1.Cu",
+            "In2.Cu"
+          ]
+        }
+      ],
+      "common_pair": [
+        {
+          "id": "R3.2",
+          "ref": "R3",
+          "pin": "2",
+          "net": "/PRIMARY_GND",
+          "x_mm": 93.5,
+          "y_mm": 94.2,
+          "output_x_mm": 16.0,
+          "output_y_mm": 35.8,
+          "size_mm": [
+            1.45,
+            3.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "rotation_deg": 90.0,
+          "attribute": 1,
+          "layers": [
+            "B.Cu"
+          ]
+        },
+        {
+          "id": "T1.9",
+          "ref": "T1",
+          "pin": "9",
+          "net": "unconnected-(T1-Pad9)",
+          "x_mm": 95.0,
+          "y_mm": 81.75,
+          "output_x_mm": 17.5,
+          "output_y_mm": 48.25,
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": [
+            1.35,
+            1.35
+          ],
+          "rotation_deg": 0.0,
+          "attribute": 0,
+          "layers": [
+            "F.Cu",
+            "B.Cu",
+            "In1.Cu",
+            "In2.Cu"
+          ]
+        }
+      ],
+      "native_resolution_mm": 1e-06,
+      "required_same_layer_mm": 10.7
+    },
+    {
+      "id": "HV_QUIET",
+      "primary_objects": 130,
+      "other_objects": 219,
+      "projected_xy_conservative_mm": 0.0,
+      "common_copper_layer_conservative_mm": 3.0,
+      "projected_pair": [
+        {
+          "id": "track315",
+          "net": "/STARTUP_MID",
+          "layer": "B.Cu",
+          "start_mm": [
+            100.5,
+            94.2
+          ],
+          "end_mm": [
+            101.1,
+            94.8
+          ],
+          "width_mm": 0.4
+        },
+        {
+          "id": "track114",
+          "net": "/VDD",
+          "layer": "In2.Cu",
+          "start_mm": [
+            93.5,
+            94.0
+          ],
+          "end_mm": [
+            106.9,
+            94.0
+          ],
+          "width_mm": 0.4
+        }
+      ],
+      "common_pair": [
+        {
+          "id": "C1.1",
+          "ref": "C1",
+          "pin": "1",
+          "net": "/BULK_POS",
+          "x_mm": 90.51,
+          "y_mm": 124.25,
+          "output_x_mm": 13.010000000000005,
+          "output_y_mm": 5.75,
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ],
+          "rotation_deg": 180.0,
+          "attribute": 0,
+          "layers": [
+            "F.Cu",
+            "B.Cu",
+            "In1.Cu",
+            "In2.Cu"
+          ]
+        },
+        {
+          "id": "C1.2",
+          "ref": "C1",
+          "pin": "2",
+          "net": "/PRIMARY_GND",
+          "x_mm": 85.51,
+          "y_mm": 124.25,
+          "output_x_mm": 8.010000000000005,
+          "output_y_mm": 5.75,
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ],
+          "rotation_deg": 180.0,
+          "attribute": 0,
+          "layers": [
+            "F.Cu",
+            "B.Cu",
+            "In1.Cu",
+            "In2.Cu"
+          ]
+        }
+      ],
+      "native_resolution_mm": 1e-06,
+      "required_same_layer_mm": 3.0
+    }
+  ],
+  "PS_finished_budget_per_domain_mm": 0.35,
+  "PS_conservative_remainder_under_proposed_budget_mm": 10.025,
+  "C1_Bside_D10p5_circle_unrelated_copper": [],
+  "T1_fullbody_reserved_mm": [
+    30,
+    30,
+    18
+  ],
+  "T1_courtyard_mm": [
+    30.5,
+    30.5
+  ],
+  "scope": "Actualnative shape audit; XY/common-layer geometric screens plus explicitproposed finishingbudget, not normative clearance/creepage or finishedcore/leadout qualification. HVquietcrosslayeroverlapisprimaryfunctional-dielectric/couplingreview."
+}

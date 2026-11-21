@@ -1,0 +1,174 @@
+{
+  "status": "calculated screens and unapproved ECO proposal; noCAD/physicaltest/order",
+  "input_hashes": {
+    "support-results": "7b031346b2cf2c45744198094e863111ea0efcbaa1a992b4bde0ce05224d1314",
+    "CRCW": "773514dbb68319dd7a3b8d381a81798f8bb0a82cf65ecf440ec201dad810e7c5",
+    "Cree": "74d4261952c25e6833212a82b0f72e759f8297478627a368f4acff22378c92c8"
+  },
+  "existing_bleeder_findings": {
+    "normal_per_resistor_V": 178.89801564019655,
+    "one_short_remaining_resistor_V": 357.7960312803931,
+    "source1206_voltage_max_V": 200,
+    "one_short_exceeds_working_voltage": true,
+    "one_open_passive_discharge_bound": "absent, one series chain is broken",
+    "highline_nominal_bleed_W": 0.1282745490981964
+  },
+  "ECO_four2512_499k_branch_corner_cases": [
+    {
+      "initial_voltage_V": 357.7960312803931,
+      "state": "healthy",
+      "Req_ohm": [
+        488521.0,
+        509478.99999999994
+      ],
+      "passive_only_time_to5V_s": 39.16337204413162,
+      "max_element_V": 182.65487396864066,
+      "max_element_W": 0.06551304856904823,
+      "CRCW2512_voltage_screen500V": true,
+      "CRCW2512_P125_screen_W": 0.35294117647058826,
+      "power_screen_within_P125": true
+    },
+    {
+      "initial_voltage_V": 357.7960312803931,
+      "state": "one_resistor_open",
+      "Req_ohm": [
+        977042.0,
+        1018957.9999999999
+      ],
+      "passive_only_time_to5V_s": 78.32674408826324,
+      "max_element_V": 357.7960312803931,
+      "max_element_W": 0.06551304856904823,
+      "CRCW2512_voltage_screen500V": true,
+      "CRCW2512_P125_screen_W": 0.35294117647058826,
+      "power_screen_within_P125": true
+    },
+    {
+      "initial_voltage_V": 357.7960312803931,
+      "state": "one_resistor_short",
+      "Req_ohm": [
+        325680.6666666667,
+        339652.6666666666
+      ],
+      "passive_only_time_to5V_s": 26.10891469608774,
+      "max_element_V": 357.7960312803931,
+      "max_element_W": 0.2620521942761929,
+      "CRCW2512_voltage_screen500V": true,
+      "CRCW2512_P125_screen_W": 0.35294117647058826,
+      "power_screen_within_P125": true
+    },
+    {
+      "initial_voltage_V": 400.0,
+      "state": "healthy",
+      "Req_ohm": [
+        488521.0,
+        509478.99999999994
+      ],
+      "passive_only_time_to5V_s": 40.18590986052626,
+      "max_element_V": 204.19999999999996,
+      "max_element_W": 0.08187979636494644,
+      "CRCW2512_voltage_screen500V": true,
+      "CRCW2512_P125_screen_W": 0.35294117647058826,
+      "power_screen_within_P125": true
+    },
+    {
+      "initial_voltage_V": 400.0,
+      "state": "one_resistor_open",
+      "Req_ohm": [
+        977042.0,
+        1018957.9999999999
+      ],
+      "passive_only_time_to5V_s": 80.37181972105252,
+      "max_element_V": 400.0,
+      "max_element_W": 0.08187979636494644,
+      "CRCW2512_voltage_screen500V": true,
+      "CRCW2512_P125_screen_W": 0.35294117647058826,
+      "power_screen_within_P125": true
+    },
+    {
+      "initial_voltage_V": 400.0,
+      "state": "one_resistor_short",
+      "Req_ohm": [
+        325680.6666666667,
+        339652.6666666666
+      ],
+      "passive_only_time_to5V_s": 26.79060657368417,
+      "max_element_V": 400.0,
+      "max_element_W": 0.32751918545978576,
+      "CRCW2512_voltage_screen500V": true,
+      "CRCW2512_P125_screen_W": 0.35294117647058826,
+      "power_screen_within_P125": true
+    }
+  ],
+  "new_VDD_bleed": {
+    "proposed_R_ohm": 1000000.0,
+    "source0603_voltage_max_V": 75,
+    "worst_recommended_VDD35_draw_A": 3.575076608784474e-05,
+    "worst23V_start_draw_A": 2.3493360572012257e-05,
+    "power_at35V_W": 0.001251276813074566,
+    "RCmax_s_assuming_Cdd1uF": 1.021,
+    "passive_only23to5V_s": 1.558103485868445,
+    "internalHV_auxiliary_paths_not_modeled": true
+  },
+  "optics": {
+    "source_current_screen_A": [
+      0.21876295319202657,
+      0.2891944014593847
+    ],
+    "source_current_screen_not_actual_controller_guarantee": true,
+    "relative_typical_flux_at_screen_ends": [
+      3.7316609787530592,
+      4.809709371014377
+    ],
+    "relative_typical_flux250mA": 4.2156857538523935,
+    "typical_flux_ratio_due_to_current_screen": 1.2888923721633334,
+    "allowed_whole_lamp_ratio850over750": 1.1333333333333333,
+    "counterexample_to_guarantee_under_stated_screen": true,
+    "not_proof_all_hardware_fails": true,
+    "three_nominal_screens_lm": {
+      "2700": {
+        "count": 8,
+        "nominal250mA_lm": 798.0799014333043,
+        "current_screen_lm": [
+          706.448203209699,
+          910.5357004454737
+        ]
+      },
+      "4000": {
+        "count": 7,
+        "nominal250mA_lm": 770.2057872288323,
+        "current_screen_lm": [
+          681.7744608181839,
+          878.7339020843267
+        ]
+      },
+      "6500": {
+        "count": 7,
+        "nominal250mA_lm": 767.6384346047361,
+        "current_screen_lm": [
+          679.5018792821232,
+          875.8047890773788
+        ]
+      }
+    },
+    "manufacturing_bin_and_Tj_current_separability_not_guaranteed": true
+  },
+  "target_power_and_thermal_budgets": {
+    "proposed_panel_normal_V": [
+      18,
+      27
+    ],
+    "proposed_interface_max_normal_current_A": 0.3,
+    "panel_max_DC_power_target_W": 8.1,
+    "base_output_bleed_at27V_W": 0.07446373850868233,
+    "normal_base_bleed_old_at_highline_W": 0.1282745490981964,
+    "proposed_normal_primary_bleed_nominal_highline_W": 0.2565490981963928,
+    "added_normal_primary_bleed_W": 0.1282745490981964,
+    "LED_board_solder_temperature_goal_C": 85,
+    "ambient_max_C": 40,
+    "all_LED_power_as_heat_conservative_R_to_ambient_K_W": 5.555555555555555,
+    "proposed_driver_heat_budget_W": 2.5,
+    "whole10p6W_heat_path_budget_K_W": 4.245283018867925,
+    "not_a_measured_thermal_resistance_or_material_limit": true
+  },
+  "service_access_scope": "RC numbers concern the isolated passive subcircuit; upstream energy transfer, single faults elsewhere and cooling still prevent a measured complete-lamp waiting-time claim."
+}

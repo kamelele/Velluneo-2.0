@@ -1,0 +1,95 @@
+[
+  {
+    "name": "packing",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\rectangular-driver-01\\packing.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "geometry",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\rectangular-driver-01\\verify_geometry.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "native-projection",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\rectangular-driver-01\\native-projection-check.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "doctor",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "doctor"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "hardware/E27/workflow/specification-reset"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "requirements",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1
+  },
+  {
+    "name": "specification",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset",
+      "--stage",
+      "specification"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0
+  },
+  {
+    "name": "work-check",
+    "command": [
+      "C:\\Users\\kamil\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2
+  }
+]

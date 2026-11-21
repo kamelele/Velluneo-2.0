@@ -1,0 +1,65 @@
+{
+  "packet": "PCB-ROUTE-07",
+  "body_sha256": "49bbf2da1f6d630e76bd1ad26987b83be0ae166ddad329619a4d3cd52c610230",
+  "actual_final_roles": [
+    {
+      "role": "reality",
+      "actor": "/root/c2_reality",
+      "frozen_body": "49bbf2da1f6d630e76bd1ad26987b83be0ae166ddad329619a4d3cd52c610230",
+      "report": "reviews/reality.md",
+      "report_sha256": "fb3f00c5a255393b0f0802a930b218db0e5a01aaebba562b1c8e7859217dc407",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded engineering publication only; no technical stage/process/manufacturing/powered-test approval.",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "change",
+      "actor": "/root/c7_change",
+      "frozen_body": "49bbf2da1f6d630e76bd1ad26987b83be0ae166ddad329619a4d3cd52c610230",
+      "report": "reviews/change.md",
+      "report_sha256": "49aa33899acc36c3be55dcc243c9f63fffdb75779248ffa44f783b41a108b8cd",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded engineering publication only; no technical stage/process/manufacturing/powered-test approval.",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/c7_completeness",
+      "frozen_body": "49bbf2da1f6d630e76bd1ad26987b83be0ae166ddad329619a4d3cd52c610230",
+      "report": "reviews/completeness.md",
+      "report_sha256": "4794b125e44f1146d044340a4ae5a9d3f26572be37668ca23785d4348a708d66",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded engineering publication only; no technical stage/process/manufacturing/powered-test approval.",
+      "independent_of_implementation": true
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/c7_simplicity",
+      "frozen_body": "49bbf2da1f6d630e76bd1ad26987b83be0ae166ddad329619a4d3cd52c610230",
+      "report": "reviews/simplicity.md",
+      "report_sha256": "831dbdebbb46b6a9a0746f38269fdbcd9e4b8eb66f6297650341a2bd26dc487d",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bounded engineering publication only; no technical stage/process/manufacturing/powered-test approval.",
+      "independent_of_implementation": true
+    }
+  ],
+  "finding_history": [
+    {
+      "id": "C07-CR-01",
+      "original_body": "98296bd3506b573e2db102c2177af1ad8a8c200fda5db9ec8a0e4b71d95403c9",
+      "original_state": "major_publication_changes_requested",
+      "state": "verified_closed_for_publication",
+      "verified_by": "/root/c7_change",
+      "closed_against_body": "49bbf2da1f6d630e76bd1ad26987b83be0ae166ddad329619a4d3cd52c610230"
+    },
+    {
+      "id": "R-C07-01",
+      "original_state": "minor_numerical_publication_discrepancy",
+      "state": "verified_closed_for_publication",
+      "verified_by": "/root/c2_reality",
+      "closed_against_body": "49bbf2da1f6d630e76bd1ad26987b83be0ae166ddad329619a4d3cd52c610230"
+    }
+  ],
+  "technical_stage_approved": false,
+  "four_layer_process_approved": false
+}

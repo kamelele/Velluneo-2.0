@@ -1,0 +1,98 @@
+{
+  "scope": "Conditional algebra from inheritednormal-current and tempplateau proxies, unverified60mm125C winding screen. Independently combinedworstspatial/timeparameters are not a correlatedphysicaltrajectory.",
+  "input_sha256": {
+    "support": "7b031346b2cf2c45744198094e863111ea0efcbaa1a992b4bde0ce05224d1314",
+    "clamp": "29827b4ef38f66a4f11dde07d7410c1170753ebc86767e94fa52af6624690bcc",
+    "winding": "b4964267013eddb58fa4407792a57809e94894bf56bba8b1fd7a04c83bd78079"
+  },
+  "line_crest_V": 357.7960312803931,
+  "inherited_TVS_plateau_proxy_V": [
+    175.1164,
+    286.97200000000004
+  ],
+  "plateau_not_guaranteed_dynamic_hot_IV": true,
+  "clamp_diode_max_V_assumed": 1.7,
+  "zeroextra_drain_proxy_V": 646.4680312803932,
+  "engineering_target_V_not_product_limit": 700,
+  "MOS_native_absolute_rating_V_not_a_design_target": 800,
+  "allowed_total_extra_overshoot_to700V_proxy_V": 53.531968719606766,
+  "allowed_total_extra_to800V_proxy_V": 153.53196871960677,
+  "old50V_extra_witness_drain_V": 696.4680312803932,
+  "old50V_extra_remaining_to700_V": 3.531968719606766,
+  "single_inductor_allocation": [
+    {
+      "edge_time_ns_assumed": 1,
+      "maximum_loop_L_nH_if_this_is_only_extra_mechanism": 149.31302249614268
+    },
+    {
+      "edge_time_ns_assumed": 2,
+      "maximum_loop_L_nH_if_this_is_only_extra_mechanism": 298.62604499228536
+    },
+    {
+      "edge_time_ns_assumed": 5,
+      "maximum_loop_L_nH_if_this_is_only_extra_mechanism": 746.5651124807133
+    },
+    {
+      "edge_time_ns_assumed": 10,
+      "maximum_loop_L_nH_if_this_is_only_extra_mechanism": 1493.1302249614266
+    },
+    {
+      "edge_time_ns_assumed": 20,
+      "maximum_loop_L_nH_if_this_is_only_extra_mechanism": 2986.2604499228532
+    },
+    {
+      "edge_time_ns_assumed": 50,
+      "maximum_loop_L_nH_if_this_is_only_extra_mechanism": 7465.651124807134
+    }
+  ],
+  "secondary_hot_R_ohm": 0.7056328015000001,
+  "secondary_global_peak_A_proxy": 1.4340870695585766,
+  "clamp_exclusion_output_frontier_V_proxy": 41.74216112351245,
+  "frontier_without_secondary_R_V_proxy": 42.754099999999994,
+  "reflected_voltage_sensitivities": [
+    {
+      "output_V_sensitivity_not_operating_claim": 27.0,
+      "secondary_peak_IR_drop_V_proxy": 1.0119388764875439,
+      "reflected_voltage_with_maxsecIR_V_proxy": 116.84775550595018,
+      "minimum_clamp_threshold_proxy_V": 175.8164,
+      "proxy_clamp_margin_V": 58.96864449404981,
+      "positive_margin_required_to_keep_this_allocation_out_of_demag": true
+    },
+    {
+      "output_V_sensitivity_not_operating_claim": 37.4784,
+      "secondary_peak_IR_drop_V_proxy": 1.0119388764875439,
+      "reflected_voltage_with_maxsecIR_V_proxy": 158.76135550595018,
+      "minimum_clamp_threshold_proxy_V": 175.8164,
+      "proxy_clamp_margin_V": 17.05504449404981,
+      "positive_margin_required_to_keep_this_allocation_out_of_demag": true
+    },
+    {
+      "output_V_sensitivity_not_operating_claim": 40.0,
+      "secondary_peak_IR_drop_V_proxy": 1.0119388764875439,
+      "reflected_voltage_with_maxsecIR_V_proxy": 168.84775550595018,
+      "minimum_clamp_threshold_proxy_V": 175.8164,
+      "proxy_clamp_margin_V": 6.968644494049812,
+      "positive_margin_required_to_keep_this_allocation_out_of_demag": true
+    },
+    {
+      "output_V_sensitivity_not_operating_claim": 41.2266,
+      "secondary_peak_IR_drop_V_proxy": 1.0119388764875439,
+      "reflected_voltage_with_maxsecIR_V_proxy": 173.75415550595017,
+      "minimum_clamp_threshold_proxy_V": 175.8164,
+      "proxy_clamp_margin_V": 2.0622444940498212,
+      "positive_margin_required_to_keep_this_allocation_out_of_demag": true
+    },
+    {
+      "output_V_sensitivity_not_operating_claim": 42.0,
+      "secondary_peak_IR_drop_V_proxy": 1.0119388764875439,
+      "reflected_voltage_with_maxsecIR_V_proxy": 176.84775550595018,
+      "minimum_clamp_threshold_proxy_V": 175.8164,
+      "proxy_clamp_margin_V": -1.031355505950188,
+      "positive_margin_required_to_keep_this_allocation_out_of_demag": false
+    }
+  ],
+  "normal_TVS_power_proxy_max_W": 0.2385550505049757,
+  "thermal_R_limit_K_W_if_local85_target125_proxy": 167.6761817254659,
+  "no_component_value_or_CAD_change": true,
+  "conclusion": "No numerical margin justifies declaringRC-COMP-002 closed. Keep presentparts as candidates; actualdynamicclamp/commutation/leakage/fault/thermalbounds must satisfy all simultaneousconstraints. 40V remains an illustrative unapprovedfaultceiling;41.2266 is a samplecurrent sensitivity only."
+}

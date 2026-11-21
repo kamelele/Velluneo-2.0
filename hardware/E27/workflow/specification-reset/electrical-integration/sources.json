@@ -1,0 +1,25 @@
+{
+  "retrieved_date": "2026-11-17",
+  "vendor_originals_redistributed": false,
+  "sources": [
+    {
+      "id": "crcw",
+      "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "sha256": "773514dbb68319dd7a3b8d381a81798f8bb0a82cf65ecf440ec201dad810e7c5",
+      "basis": "Working-voltage/P70/family derating and local passive terminal contract; exact stock not confirmed"
+    },
+    {
+      "id": "Cree-G",
+      "url": "https://downloads.cree-led.com/files/ds/j/JSeries-2835-3V-Consolidated.pdf",
+      "sha256": "74d4261952c25e6833212a82b0f72e759f8297478627a368f4acff22378c92c8",
+      "basis": "CLJ-DS40Rev10B p4\u20136, native typical current-flux vector extraction; not guaranteed flux curve"
+    },
+    {
+      "id": "Rubycon-BXW",
+      "url": "https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/BXW.pdf",
+      "sha256": "9fb3a22e969e8244e135b7204aa46baa7b8a99d68803a6408fca20c3d8fd5fa6",
+      "basis": "Existing pinned source input-stage/source/bulk-bxw.pdf;15uF450V10x20 .190A@120Hz and low-frequency.8 conservative coefficient; not measured life or totalripple acceptance"
+    }
+  ],
+  "additional_sources": "startup/sources.json and magnetics/sources.json"
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "gerbers",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "gerbers",
+      "--layers",
+      "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,F.Paste,B.Paste,Edge.Cuts",
+      "--use-drill-file-origin",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\manufacturing\\gerbers/",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\design\\Velluneo_driver.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "drills",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "drill",
+      "--format",
+      "excellon",
+      "--excellon-units",
+      "mm",
+      "--excellon-zeros-format",
+      "decimal",
+      "--excellon-min-header",
+      "--excellon-separate-th",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\manufacturing\\gerbers/",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\design\\Velluneo_driver.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "positions",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "pos",
+      "--format",
+      "csv",
+      "--units",
+      "mm",
+      "--side",
+      "both",
+      "--use-drill-file-origin",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\manufacturing\\assembly\\positions-native.csv",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\design\\Velluneo_driver.kicad_pcb"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "assembly-pdf",
+    "command": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\kicad-cli.exe",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "F.Fab,B.Fab,F.Silkscreen,B.Silkscreen",
+      "--common-layers",
+      "Edge.Cuts",
+      "--mode-multipage",
+      "--output",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\manufacturing\\Velluneo_E22_assembly_layers.pdf",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\hardware\\E27\\workflow\\specification-reset\\efficiency-22\\design\\Velluneo_driver.kicad_pcb"
+    ],
+    "exit_code": 0
+  }
+]

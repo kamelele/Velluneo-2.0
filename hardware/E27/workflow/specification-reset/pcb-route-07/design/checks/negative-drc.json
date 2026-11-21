@@ -1,0 +1,200 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T19:38:21",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Velluneo_route07.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 81.27,
+                        "y": 114.5
+                    },
+                    "uuid": "45be3018-43b8-493d-b555-1b32df0cf983"
+                },
+                {
+                    "description": "Pad 2 [/DRAIN] of D1 on B.Cu",
+                    "pos": {
+                        "x": 95.4,
+                        "y": 117.65
+                    },
+                    "uuid": "5e0ff5e6-fdf6-436f-a016-d204f17f0dc6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/DRAIN] of D1 on B.Cu",
+                    "pos": {
+                        "x": 95.4,
+                        "y": 117.65
+                    },
+                    "uuid": "5e0ff5e6-fdf6-436f-a016-d204f17f0dc6"
+                },
+                {
+                    "description": "PTH pad 5 [/DRAIN] of T1",
+                    "pos": {
+                        "x": 110.0,
+                        "y": 104.25
+                    },
+                    "uuid": "d6462e54-e717-4eea-a03e-a12cc87c2552"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/BULK_POS] on B.Cu, length 0,7284 mm",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 102.8483
+                    },
+                    "uuid": "4e1265ae-fb66-4717-b55b-b54f805c8ce6"
+                },
+                {
+                    "description": "Track [/BULK_POS] on B.Cu, length 1,1267 mm",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 100.4
+                    },
+                    "uuid": "c977c2e6-766b-4b72-9425-d3e96f0efae9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/BULK_POS] on F.Cu, length 0,0986 mm",
+                    "pos": {
+                        "x": 93.215,
+                        "y": 120.85
+                    },
+                    "uuid": "89e5d6bd-40c5-4d95-b3ea-c62b4d5f1baa"
+                },
+                {
+                    "description": "Track [/BULK_POS] on B.Cu, length 1,4017 mm",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 104.25
+                    },
+                    "uuid": "4b6f1b1a-0330-4023-8ae7-a4bbbb2f4554"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/BULK_POS] on F.Cu, length 0,6000 mm",
+                    "pos": {
+                        "x": 93.3,
+                        "y": 120.8
+                    },
+                    "uuid": "4bd5e348-38f3-4c73-8d22-276ece563590"
+                },
+                {
+                    "description": "PTH pad 1 [/BULK_POS] of BR1",
+                    "pos": {
+                        "x": 110.4,
+                        "y": 127.15
+                    },
+                    "uuid": "ec438252-229a-4c80-8d98-d40c3c8d1aeb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets /SENSE and /DRAIN)",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on F.Cu, length 7,2497 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "459c1799-50fc-4ba1-a25d-3f2bb59e00f0"
+                },
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 81.27,
+                        "y": 114.5
+                    },
+                    "uuid": "45be3018-43b8-493d-b555-1b32df0cf983"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/SENSE] on F.Cu, length 7,2497 mm",
+                    "pos": {
+                        "x": 82.96,
+                        "y": 121.55
+                    },
+                    "uuid": "459c1799-50fc-4ba1-a25d-3f2bb59e00f0"
+                },
+                {
+                    "description": "PTH pad 2 [/DRAIN] of Q1",
+                    "pos": {
+                        "x": 81.27,
+                        "y": 114.5
+                    },
+                    "uuid": "45be3018-43b8-493d-b555-1b32df0cf983"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        }
+    ]
+}

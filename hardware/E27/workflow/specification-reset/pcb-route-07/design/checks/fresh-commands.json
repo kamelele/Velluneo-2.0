@@ -1,0 +1,106 @@
+[
+  {
+    "name": "doctor",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "doctor"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "requirements-schematic",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "work-schematic",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "schematic"
+    ],
+    "exit_code": 2
+  },
+  {
+    "name": "requirements-placement",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--stage",
+      "placement"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "work-placement",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "placement"
+    ],
+    "exit_code": 2
+  },
+  {
+    "name": "requirements-routing",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--stage",
+      "routing"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "work-routing",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware\\E27\\workflow\\specification-reset",
+      "--mode",
+      "work",
+      "--stage",
+      "routing"
+    ],
+    "exit_code": 2
+  },
+  {
+    "name": "configuration-preview",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "pcb-toolkit.py",
+      "run",
+      "configure",
+      "hardware\\E27\\workflow\\specification-reset"
+    ],
+    "exit_code": 0
+  }
+]

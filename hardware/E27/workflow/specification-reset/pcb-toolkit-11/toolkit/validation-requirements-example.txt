@@ -1,0 +1,162 @@
+{
+  "synthetic": true,
+  "not_human_approval": true,
+  "cases": [
+    {
+      "case": "valid",
+      "expected_pass": true,
+      "actual_pass": true,
+      "expectation_met": true,
+      "errors": [],
+      "blocked_stages": []
+    },
+    {
+      "case": "missing-requirement",
+      "expected_pass": false,
+      "actual_pass": false,
+      "expectation_met": true,
+      "errors": [
+        {
+          "id": "DOCUMENT",
+          "gate": "specification",
+          "message": "Interface needs existing requirement IDs: IF-POWER"
+        }
+      ],
+      "blocked_stages": [
+        "specification",
+        "schematic",
+        "placement",
+        "routing",
+        "release"
+      ]
+    },
+    {
+      "case": "interface-conflict",
+      "expected_pass": false,
+      "actual_pass": false,
+      "expectation_met": true,
+      "errors": [
+        {
+          "id": "IF-POWER",
+          "gate": "schematic",
+          "message": "Source voltage envelope exceeds sink acceptance"
+        }
+      ],
+      "blocked_stages": [
+        "schematic",
+        "placement",
+        "routing",
+        "release"
+      ]
+    },
+    {
+      "case": "stale-evidence",
+      "expected_pass": false,
+      "actual_pass": false,
+      "expectation_met": true,
+      "errors": [
+        {
+          "id": "REQ-PRODUCT",
+          "gate": "specification",
+          "message": "EV-REVIEW: Evidence refers to a different intent revision/digest"
+        },
+        {
+          "id": "REQ-PRODUCT",
+          "gate": "specification",
+          "message": "Required evidence kind absent: review"
+        },
+        {
+          "id": "REQ-POWER",
+          "gate": "schematic",
+          "message": "EV-REVIEW: Evidence refers to a different intent revision/digest"
+        },
+        {
+          "id": "REQ-POWER",
+          "gate": "schematic",
+          "message": "Required evidence kind absent: review"
+        },
+        {
+          "id": "REQ-COMMS",
+          "gate": "schematic",
+          "message": "EV-REVIEW: Evidence refers to a different intent revision/digest"
+        },
+        {
+          "id": "REQ-COMMS",
+          "gate": "schematic",
+          "message": "Required evidence kind absent: review"
+        },
+        {
+          "id": "REQ-FIT",
+          "gate": "placement",
+          "message": "EV-REVIEW: Evidence refers to a different intent revision/digest"
+        },
+        {
+          "id": "REQ-FIT",
+          "gate": "placement",
+          "message": "Required evidence kind absent: review"
+        },
+        {
+          "id": "IF-POWER",
+          "gate": "schematic",
+          "message": "EV-REVIEW: Evidence refers to a different intent revision/digest"
+        },
+        {
+          "id": "IF-POWER",
+          "gate": "schematic",
+          "message": "Required evidence kind absent: review"
+        },
+        {
+          "id": "IF-UART",
+          "gate": "schematic",
+          "message": "EV-REVIEW: Evidence refers to a different intent revision/digest"
+        },
+        {
+          "id": "IF-UART",
+          "gate": "schematic",
+          "message": "Required evidence kind absent: review"
+        },
+        {
+          "id": "IF-FIT",
+          "gate": "placement",
+          "message": "EV-REVIEW: Evidence refers to a different intent revision/digest"
+        },
+        {
+          "id": "IF-FIT",
+          "gate": "placement",
+          "message": "Required evidence kind absent: review"
+        }
+      ],
+      "blocked_stages": [
+        "specification",
+        "schematic",
+        "placement",
+        "routing",
+        "release"
+      ]
+    },
+    {
+      "case": "unknown-before-placement",
+      "expected_pass": false,
+      "actual_pass": false,
+      "expectation_met": true,
+      "errors": [
+        {
+          "id": "UNKNOWN-FIT",
+          "gate": "placement",
+          "message": "Unresolved: What tolerance is approved?"
+        },
+        {
+          "id": "IF-FIT",
+          "gate": "placement",
+          "message": "Missing/invalid mechanical value: tolerance_mm"
+        }
+      ],
+      "blocked_stages": [
+        "placement",
+        "routing",
+        "release"
+      ]
+    }
+  ],
+  "passed": true
+}

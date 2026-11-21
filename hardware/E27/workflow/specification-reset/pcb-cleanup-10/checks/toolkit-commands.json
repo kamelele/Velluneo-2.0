@@ -1,0 +1,67 @@
+[
+  {
+    "name": "connectivity",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "connectivity",
+      "hardware/E27/workflow/specification-reset/pcb-cleanup-10/design"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "requirements-routing",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset/pcb-cleanup-10/design",
+      "--stage",
+      "routing"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "requirements-release",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "requirements",
+      "hardware/E27/workflow/specification-reset/pcb-cleanup-10/design",
+      "--stage",
+      "release"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "current-work",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset/pcb-cleanup-10/design",
+      "--mode",
+      "work",
+      "--stage",
+      "routing"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "current-release",
+    "command": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\Velluneo-readiness\\pcb-toolkit.py",
+      "run",
+      "check",
+      "hardware/E27/workflow/specification-reset/pcb-cleanup-10/design",
+      "--mode",
+      "release"
+    ],
+    "exit_code": 1
+  }
+]

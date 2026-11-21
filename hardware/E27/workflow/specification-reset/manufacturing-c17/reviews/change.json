@@ -1,0 +1,22 @@
+{
+  "role": "change",
+  "actual_actor": "/root/c16_final_change",
+  "candidate_body_sha256": "39c2d9dbca07cdc1ac6628c0943d3f3cde22b02a7cc13a9b27a07b7ec3d67742",
+  "recommendation": "ready_for_human_review",
+  "scope": "Prepared manufacturing-data / DFM quotation handoff only; not manufacturing or PCBA release",
+  "read_only": true,
+  "other_reviewer_reports_inspected": false,
+  "independent_coverage": [
+    "All118frozen hashes and C16bindings unchanged",
+    "14CAM/76native/72handoff members CRC/currentbytes match",
+    "Every mappedartifact hash and solehardware.release_files delta checked",
+    "33BOM/28SMT positions, exactMPNs/XY/normalizedrotations/sides checked",
+    "Independent42hole Excellon and24viaSK reconciliation",
+    "23net/80pin freshnetlist graph; ERC/DRC/parity/unconnected0"
+  ],
+  "new_unresolved_task_blockers": [],
+  "verified_closed_findings": [
+    "C17-CHANGE-01"
+  ],
+  "manufacturing_qualification_not_granted": true
+}
