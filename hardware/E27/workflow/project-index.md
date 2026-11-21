@@ -1,5 +1,20 @@
 # E27 workflow index
 
+## Current prototype manufacturing-data handoff - C17, 21 November 2026
+
+[C17](specification-reset/manufacturing-c17/README.md) packages unchanged C16 CAD
+for barePCB DFM/quotation plus separate assemblyfeasibility: fresh11Gerbers/oneSK/
+oneExcellon/map,24filledcappedvias,18opencomponentholes,33fullBOM/28SMTBOM-CPL/
+3THT/2wirepairs, fivepagefabrication/assemblydrawing, source and artifacthashes,
+portableKiCad and exactJLCinstructions. NativeERC/DRC/parity/unconnected0; independent
+CAM/pin graph passes. Six toolkit releaseartifact categories now pass in the mapped
+portablecopy; actual release gates remainheld. CurrentMYRRA74032makerbody
+26.5x22.5x26.5mm,9pins/absent4,15.24mmrows/5mmpitch/1.4mmholes documentchecked
+against savedCAD. Old21mmstock/sellerlot/firstfit not confirmed. Process/material/
+tighterholes/registration/rings/PCBApanel/sourcing/orientation and physical/human
+qualification remainOPEN. No suppliercontact/upload/order/payment or poweredtest.
+RFQ13/JLC14ZIPs remain invalid for this variant.
+
 ## Current integrated catalogue PCB — C16, 21 November 2026
 
 [C16](specification-reset/catalogue-pcb-16/README.md) implements an actual revised45x60mm four-layer,33-position80-pad schematic and fully connected PCB. Factory-wound MYRRA74032 and straight-lead STFW2N105K5 replace CAT15 parts; R4/R5/R6/R9 updated. Native ERC/DRC/parity/unconnected all zero; projected P/S copper11.146726mm, Q1 nominal padgap3.10mm. New fault screen1.05252Apk assumes400ns total extra rise delay versus1.1Apk maker rating; actual fault/startup/clamp/shoulder/thermal/insulation/process/lamp qualification and revised human approvals remain OPEN. Toolkit retains3mm/10.7mm, reports truthful gate holds. See actual review packet and both-face copper preview. No order-ready Gerbers/CPL or physical test. RFQ13/JLC14 archives remain invalid for this variant.

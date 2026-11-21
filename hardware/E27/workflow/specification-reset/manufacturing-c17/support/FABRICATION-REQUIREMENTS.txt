@@ -1,0 +1,35 @@
+C17 fabrication / DFM acceptance request
+
+Gerber order GTL/G2L/G3L/GBL = F.Cu/In1.Cu/In2.Cu/B.Cu. OneGKO outline,
+two masks, two legends, two pastes. ExcellonXLN is FINISHED plated-hole targets,
+not uncompensated drill tools. One human drillmap and one auxiliarySK selection.
+All coordinates use nativeX-77.5,130-nativeY mm; board0..45x0..60. Do not mirror
+bottom manufacturing files. Human bottom assembly drawing alone is mirrored.
+
+24diameter0.300mm throughvias: NONconductive epoxy-fill and copper-cap BOTH ends;
+not tenting/ordinary mask plugging. All18componentholes must remain open.
+No plated/nonplated slots, blindvias or NPTH. All listed component holes are round.
+
+T1nine finishedholes1.400+/-0.050mm REQUIRED. Public standard+0.13/-0.08 would
+allow1.320..1.530mm, not acceptable to this request. Ask whether the advertised
+tighter-hole service can apply to these soldered insertionholes. They are not
+press-fit terminals. Maker recommends1.4mm; pitch/row tolerance and actual firstfit
+remain to be checked with a current-part sample before accepting assembly yield.
+
+T1landX1.950mm; declared minland1.925, maxhole1.450 and relative registration0.025
+give minimumring(1.925-1.450)/2-0.025=0.2125mm. Q1land2.350/hole1.700; declared
+minland2.325,maxhole1.830,registration0.025 gives0.2225mm. These are CONDITIONAL
+budgets, not manufacturer guarantees. Public holeposition+/-0.075mm does not
+establish0.025mm copper/hole registration. Return guaranteed finishedrings>=0.20mm
+on all component/via pads, registration, land/cap tolerances and any proposed changes.
+
+Protect all-layer no-copper band outputX0..45,Y37.865..47.100mm. No thieving,
+tooling/identification copper or modifications in band. FinishedP/Scopper and
+finished insulation remain subject to process/product review, not a Gerber certificate.
+Nominal CAD projected P/Scopper11.146726mm is not a guaranteed finished distance.
+
+Request exactJLC04161H-7628, FR4Tg155,1.6mm+/-10%, ENIG,green/white, outer35um/
+inner15.2um nominal source construction. Confirm laminate identity, CTI/RTI, pressed
+dielectric minimums and finishedcopper. Do not substitute stackup/material silently.
+Request full bare-board continuity/shorts test. Ask for prequoteDFM and later explicit
+productionfile review; a paid-order film service is not a claimed free prequote check.

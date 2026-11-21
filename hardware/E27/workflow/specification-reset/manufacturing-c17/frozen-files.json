@@ -1,0 +1,478 @@
+{
+  "base_commit": "a283213194bb16990d7614874d12336524f66fcf",
+  "body_sha256": "39c2d9dbca07cdc1ac6628c0943d3f3cde22b02a7cc13a9b27a07b7ec3d67742",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "b96ebae280491a1bb888d58011141ecebdbf8986a56b87bcdff157f79f38899f"
+    },
+    {
+      "path": "artifact-manifest.json",
+      "sha256": "164fcfd7ea9c7d0944e235c95026d7f9def72f7d46a552bcfedc094ac41a1999"
+    },
+    {
+      "path": "assembly/BOM_28_SMT.csv",
+      "sha256": "e5c52e2dcbd27d7951feabc571bfea520b61409b1fa2540e9bdceab06f38ecb9"
+    },
+    {
+      "path": "assembly/BOM_33_FULL.csv",
+      "sha256": "882f080145eae96abe58fd0d3cb9a8ff36e12fcbe8502ffe915e4a71dacea12e"
+    },
+    {
+      "path": "assembly/CPL_28_SMT.csv",
+      "sha256": "08ba49a805d18958228d218602ee38ba0caf5118a5d9f041299d76a6fb7b5939"
+    },
+    {
+      "path": "assembly/operations.csv",
+      "sha256": "88473a19700cae7e2271ed715ee0c63d7ba285bbf6eb07482ffe39f0e7ecaee1"
+    },
+    {
+      "path": "assembly/positions-native.csv",
+      "sha256": "cc418a2bff41f899c5c9f59eaf95818220dc5510b751a81c6bb79db8c5c50a77"
+    },
+    {
+      "path": "assembly/POSITIONS_33_REFERENCE.csv",
+      "sha256": "2dcf10f224b15181ba86e16d55f2d97a93eb111144d6ba960ec8899be785417d"
+    },
+    {
+      "path": "assembly/READ_BEFORE_ASSEMBLY.txt",
+      "sha256": "4a05591023595bb15f62df84f4c837f1b4da5c7e3282084642bba7d49012ad63"
+    },
+    {
+      "path": "checks/assembly-bottom.stderr.log",
+      "sha256": "e0e42a8db4b21ac568908c95eaffe6a8ad40350476ab5d1b328b0b27b1ad8d66"
+    },
+    {
+      "path": "checks/assembly-bottom.stdout.log",
+      "sha256": "35c0146537912a709de081f220e285719c47ae76721b8f565c36374ef8dbfc28"
+    },
+    {
+      "path": "checks/assembly-check.json",
+      "sha256": "13b170080dfd14183d376b15ffd5fef3026015f2f31ba8129a4652b705ce0765"
+    },
+    {
+      "path": "checks/assembly-top.stderr.log",
+      "sha256": "e0e42a8db4b21ac568908c95eaffe6a8ad40350476ab5d1b328b0b27b1ad8d66"
+    },
+    {
+      "path": "checks/assembly-top.stdout.log",
+      "sha256": "675e0a3e291861ef914275a0aa56c3d3fa11a647fd4f22a540e0f209bac3e4c0"
+    },
+    {
+      "path": "checks/CAM-validation.json",
+      "sha256": "1b0e8a9e445de648f6aa85aa3c4f0820014060963a54d5eee5394158292a1f7d"
+    },
+    {
+      "path": "checks/doctor.stderr.log",
+      "sha256": "4d6592bb554be7b8851daa01506e52048a2b4711909d76e95a01a48c8af152b5"
+    },
+    {
+      "path": "checks/doctor.stdout.log",
+      "sha256": "b66d31f8336f33a362320fcefdcf69fc2bfcde9b302c4ede0dc3be48be288e1f"
+    },
+    {
+      "path": "checks/document-check.json",
+      "sha256": "eeabb6e6247c4fc2134d9dfec65faae6f5a3536054849177a893a85e4133ebda"
+    },
+    {
+      "path": "checks/drc.json",
+      "sha256": "2d72141c35de0eb20fa844d3fc3f9bc8ae4cdfb6d4e2bd835226c5e8cc9b6079"
+    },
+    {
+      "path": "checks/drc.stderr.log",
+      "sha256": "5c78e9b97ab5e3a16444382700da5fe48171beb83535eb44536bd2b1a6199309"
+    },
+    {
+      "path": "checks/drc.stdout.log",
+      "sha256": "82dc76769126b8b6da8259a62cf5440db4be8fe7d66ceac582ec85aa4c6482a6"
+    },
+    {
+      "path": "checks/drill-report.txt",
+      "sha256": "545f64f66f8eec7bb2e2b6a9f724551f0b266caf32231cdd29c76b442d139812"
+    },
+    {
+      "path": "checks/drill.stderr.log",
+      "sha256": "40ea8386ad6f7452196b8d62ebad7e6158026557bcb45e13848a859c1c91d6a8"
+    },
+    {
+      "path": "checks/drill.stdout.log",
+      "sha256": "bd69518299c99c50032469b861638a02ddd3a43ecfbfaf8f431bff879e60d2b0"
+    },
+    {
+      "path": "checks/erc.json",
+      "sha256": "3951265ed492c615ed1d30622424b2ac5388bbb583740c3739f46eec3a00cfdc"
+    },
+    {
+      "path": "checks/erc.stderr.log",
+      "sha256": "5c78e9b97ab5e3a16444382700da5fe48171beb83535eb44536bd2b1a6199309"
+    },
+    {
+      "path": "checks/erc.stdout.log",
+      "sha256": "54c4b41886973a2a77054d8e93afb6913ed6f93f4dcb3e24a2195510dcf46f96"
+    },
+    {
+      "path": "checks/gerbers.stderr.log",
+      "sha256": "5c78e9b97ab5e3a16444382700da5fe48171beb83535eb44536bd2b1a6199309"
+    },
+    {
+      "path": "checks/gerbers.stdout.log",
+      "sha256": "97003ff9b60fc2cd157e406b4eab7c2263c3fbc392cd0a68ad31f714d551aab7"
+    },
+    {
+      "path": "checks/netlist.stderr.log",
+      "sha256": "e0e42a8db4b21ac568908c95eaffe6a8ad40350476ab5d1b328b0b27b1ad8d66"
+    },
+    {
+      "path": "checks/netlist.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/package-verification.json",
+      "sha256": "e909e55679f5cad8aae8e24a1f89273852fbefe8aad45774a7c82e0745a25a62"
+    },
+    {
+      "path": "checks/positions.stderr.log",
+      "sha256": "40ea8386ad6f7452196b8d62ebad7e6158026557bcb45e13848a859c1c91d6a8"
+    },
+    {
+      "path": "checks/positions.stdout.log",
+      "sha256": "ac63d1d8381f7c5f540259bd3e1aa6cb801a83d76e5da765c18d6bacb77261fb"
+    },
+    {
+      "path": "checks/requirements-release.json",
+      "sha256": "e77d996c1dd59fd10f6c4d2310bb9d10e2503a65928f10bada1a1572d4e61177"
+    },
+    {
+      "path": "checks/requirements-release.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/requirements-release.stdout.log",
+      "sha256": "e77d996c1dd59fd10f6c4d2310bb9d10e2503a65928f10bada1a1572d4e61177"
+    },
+    {
+      "path": "checks/schematic-pdf.stderr.log",
+      "sha256": "40ea8386ad6f7452196b8d62ebad7e6158026557bcb45e13848a859c1c91d6a8"
+    },
+    {
+      "path": "checks/schematic-pdf.stdout.log",
+      "sha256": "88c5abdb1ed6b88b6caac56ce7146b40fbff787d77369fea1eb90828b8a01d09"
+    },
+    {
+      "path": "checks/toolkit-impact.json",
+      "sha256": "5e7e1dc7323c17c3c47f4472be13b52b8275e6d18571404707972f8d7edb09a0"
+    },
+    {
+      "path": "checks/toolkit-mapped-release.json",
+      "sha256": "aa267a5510c1ba2b3a919bd1459427d70d5c69428098fa0a2f9c190992d5ef0f"
+    },
+    {
+      "path": "checks/toolkit-mapped-release.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/toolkit-mapped-release.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/toolkit-release.json",
+      "sha256": "2007f45755ed23c2a8a26b199790f4ccd6908988196fd3355fd887b544c042ba"
+    },
+    {
+      "path": "checks/toolkit-release.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/toolkit-release.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "drawings/assembly-bottom.svg",
+      "sha256": "24ca0195871591b59aa1da9dd05ecdb1292180833ff50ae12dd32f47fc2a7174"
+    },
+    {
+      "path": "drawings/assembly-top.svg",
+      "sha256": "01c630cc825fbda6b03f63e9d52aa9a7159056c2ef03e35642b58037a0ea7889"
+    },
+    {
+      "path": "drawings/Velluneo_C17_Fabrication_Assembly.pdf",
+      "sha256": "866f916beea4a9d10bfc4cb05460d5109783d813c1dad96bf78cdecb90abc0ce"
+    },
+    {
+      "path": "drawings/Velluneo_C17_schematic.pdf",
+      "sha256": "6c3a51d5087f5041298ff1043dfff4890445d57dfb7c657a9ade3e27c1557cd1"
+    },
+    {
+      "path": "gerbers/Velluneo_C17-drill_map.svg",
+      "sha256": "64d5235f6ce2c5665baf45943c2a073efe3b7e9ac2df13193917cfc96d6760a3"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.G2L",
+      "sha256": "96e41e702a65cd9b4b6c7f7328e716e8f907ed6ca18699c57bedd0a7c557cfa1"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.G3L",
+      "sha256": "774ee1a10a78501809df5bdaa795acbf585dc512b67075ef96b9ca78215d2410"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GBL",
+      "sha256": "032195f70ce6078381dff528c61d36a6b2f64e2c09d6b777aa98ed0993e9c613"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GBO",
+      "sha256": "c715f450cadc5e80a50aea1c867a66ff45150924974b261acfda3847c708942d"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GBP",
+      "sha256": "47eddc1de94d542c0f82ea76031faf2ab501f7da9ca5f25743031836115e58d8"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GBS",
+      "sha256": "8c80c2590a8b2d1eab28af05c35a27f394c1f6eace192db6604d232004703af6"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GKO",
+      "sha256": "0e5688fc36a677b8957d1deb4c313a6d51d6fc4fe4cffd0f7fa7ae65f60cc0f6"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GTL",
+      "sha256": "f85b8be37732cdcd6bd9933e5006aea4544c6f05c623a53fdb2cc3973e850ea7"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GTO",
+      "sha256": "ac31afefcdb9269b700a1a947d00ac4db35f77f3558aad9deb25b7911b1f4202"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GTP",
+      "sha256": "acbcbaed43ba2565e906c2bfcd23c8a50c3b750952a9c4b52318eced126559ae"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.GTS",
+      "sha256": "7c14873f6f5c02a037277e363f688b964257d37bfe68228fb8ca20cf35d81435"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.sk",
+      "sha256": "470d1290b734d42e345588a8f6aca3f1456352e2e57582e0097c10c656d0919c"
+    },
+    {
+      "path": "gerbers/Velluneo_C17.XLN",
+      "sha256": "913b271346a4efcb5834c69e74eacfaec141a6b513db5486c9471b2f469e9a5a"
+    },
+    {
+      "path": "implementation/build_c17.py",
+      "sha256": "2a90f12b45631839146a5f8c7064da9ae95f4dca6d944c25991e7dd793d3e224"
+    },
+    {
+      "path": "implementation/finish_c17.py",
+      "sha256": "b0ee2565bd75912fb52ec4c0bdf5c9bb16e0f29bc37d9819f4521f5d0b010f7b"
+    },
+    {
+      "path": "implementation/package_c17.py",
+      "sha256": "d8e8fef00fcda8b225dd172737bcbe1b4a537487f19aaf7bdc473330a50781df"
+    },
+    {
+      "path": "implementation/README.md",
+      "sha256": "7399bcaa4bd96704cc0a4f92ba0d0c29d80f850fa068db7810e9b9eac0c81f48"
+    },
+    {
+      "path": "JLCPCB-ENQUIRY-UNSENT.txt",
+      "sha256": "ce71e6836b254bd348870812ec87eba9784c5883ffca0e9d02435583d072d4c4"
+    },
+    {
+      "path": "jlcpcb-sources.json",
+      "sha256": "088329ea98c2a3e2919bb537e8708661661edeebf88618fa339cb22866a35e8e"
+    },
+    {
+      "path": "JLCPCB-TECHNICAL-RESPONSES.csv",
+      "sha256": "7accdb90d184861a45e5d4951af14210b188c3ac995ea9d74fe613b989759395"
+    },
+    {
+      "path": "PCB-REMARK-PASTE.txt",
+      "sha256": "efed667e503375da79dde718e52f14dc2a367ab9592a4bd30832e24662322c3d"
+    },
+    {
+      "path": "preview/C16_both_faces.png",
+      "sha256": "c112f1c14cad5ed88e1bf678a2a46850fb1fff14c8801d955cc886eab1f2a66e"
+    },
+    {
+      "path": "preview/C16_inner_layers.png",
+      "sha256": "ca11a37e083551a0cbebf043f334cb01ef6cf4b8b4dd8eb533bdc5958441ef4b"
+    },
+    {
+      "path": "preview/CAM-G2L.png",
+      "sha256": "b9706ffd00839ff8875698c7e483c96d0d600d33a365455ab0e8d0a081e97ea9"
+    },
+    {
+      "path": "preview/CAM-G2L.svg",
+      "sha256": "fe994b6105a03995a4cfafb3a1062b554ffd858af79c5629709a220e6a95a8c6"
+    },
+    {
+      "path": "preview/CAM-G3L.png",
+      "sha256": "69c4a4c186ab49a6ad5f0e1b39dc574827a613dd2064ac7de973a3d7ee4cd2d8"
+    },
+    {
+      "path": "preview/CAM-G3L.svg",
+      "sha256": "03d53121e6e172bd5ca9b639961be5c66a35cce3535489a9da3bf254c17aae32"
+    },
+    {
+      "path": "preview/CAM-GBL.png",
+      "sha256": "34c858234c50f52be955e5b9e15099817a4e0cab87c77e07a6eb3ee1c369ea17"
+    },
+    {
+      "path": "preview/CAM-GBL.svg",
+      "sha256": "c54e6a58d1979ee9f42b4b3f115a5ebb46b529e6d04552b2261982e0007cf540"
+    },
+    {
+      "path": "preview/CAM-GBO.png",
+      "sha256": "b911c48525816a0aca604902f47d0600948d21f1a0c22139ea780adbe1ef34c6"
+    },
+    {
+      "path": "preview/CAM-GBO.svg",
+      "sha256": "1c559ec052bbdea7571129d45cc845dc13386b4cdee73ce1d4ca6da14b79965c"
+    },
+    {
+      "path": "preview/CAM-GBP.png",
+      "sha256": "8736fe2b28a540f1318ca360b4bcf76de8ed04288fe91760dcf520f1d5fad73f"
+    },
+    {
+      "path": "preview/CAM-GBP.svg",
+      "sha256": "e7f3478622afe0605fa3c60f2085e7c93d9973d992a4dba02cc21427af5eddbb"
+    },
+    {
+      "path": "preview/CAM-GBS.png",
+      "sha256": "7c1731055d260ad86afbd8c3142bf8519fab01d98137135aeb333df237665da7"
+    },
+    {
+      "path": "preview/CAM-GBS.svg",
+      "sha256": "4a8ccf1def787360b343addb9fb20c551883ea4dd8da87aff161bf56638d071a"
+    },
+    {
+      "path": "preview/CAM-GKO.png",
+      "sha256": "700c127f78daab8ab955436f87b439ba94717c148a98c81ae1bd43d55246f001"
+    },
+    {
+      "path": "preview/CAM-GKO.svg",
+      "sha256": "9145b4ba0484d66b5b2d5878ae9dafba8e681a87ea4d9d994489e027b917351d"
+    },
+    {
+      "path": "preview/CAM-GTL.png",
+      "sha256": "0e177a9bb466143995b04d6aab8be6169fc0b795afd7379d4ae683964e19dc91"
+    },
+    {
+      "path": "preview/CAM-GTL.svg",
+      "sha256": "c0cb695350ca5c3f3b0bb3e336e6abe2ff4fbeff9c19e6f41f8170f01fbf9443"
+    },
+    {
+      "path": "preview/CAM-GTO.png",
+      "sha256": "ef859d5c0fec6da8abf880ad5d555f87d080bab11bdfc8eaca53cfa608dc0aac"
+    },
+    {
+      "path": "preview/CAM-GTO.svg",
+      "sha256": "81b01847272ae4d26b80d1c3633dcae048f7df001fab91ed9eb1009438283e31"
+    },
+    {
+      "path": "preview/CAM-GTP.png",
+      "sha256": "737dd12decb1905bb89fce780f55824328f71fb1bd274e2500fe29303cd66784"
+    },
+    {
+      "path": "preview/CAM-GTP.svg",
+      "sha256": "5398dd7a1e9493cf85690d10739783024a99599116c62ce31cc4bc1346580d2a"
+    },
+    {
+      "path": "preview/CAM-GTS.png",
+      "sha256": "35ac996035ffa8bc1f1e87e247f17e7b9e9f2f5546d3367c6e37ecf589e62467"
+    },
+    {
+      "path": "preview/CAM-GTS.svg",
+      "sha256": "5d0e084abcb2cbfb598199d1a50540a03d65df862b47aeecac010cadf1d4ed35"
+    },
+    {
+      "path": "quote-settings.json",
+      "sha256": "37ef2b56e49b2b64e50ec37d36c90024eabbf1eb8fedddf248cd2312e6c036b1"
+    },
+    {
+      "path": "README.md",
+      "sha256": "cee88ef017057c3da437270d338f1785d64560168e36196590d975842e4bf1e5"
+    },
+    {
+      "path": "release-artifacts.json",
+      "sha256": "4680d49be188ee1877e2d9ed3382a96dbf897f7a88c83c59e0e85ee84ded5eb9"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "2d4b092d21999f218ef539564c9f845d551aad81708c213341bf6f127fbf7054"
+    },
+    {
+      "path": "stage-packet.md",
+      "sha256": "e804e8b56507d101def6c8960b1339dab990b03204cd7871ef10f3f2de90a54a"
+    },
+    {
+      "path": "START_HERE_PL.txt",
+      "sha256": "454dc9a72b539d5d7aa1ec2669beb9ada3b7315bbc1feaf192395b0109bd0d74"
+    },
+    {
+      "path": "support/bring-up-and-assembly.md",
+      "sha256": "b17577c35d342b13e65a2c3933314a7ef04575886298f34d7b1d6cd59df91ebf"
+    },
+    {
+      "path": "support/component-holes.csv",
+      "sha256": "5aafc6c821d273a9068d1ba3115732e51432207abfc2b0fa6d64d4fe557ad4a0"
+    },
+    {
+      "path": "support/FABRICATION-REQUIREMENTS.txt",
+      "sha256": "ec01be0820291fd440008f2953010ecffb7e82c90aa8e4c544e9dfc207f4b6f4"
+    },
+    {
+      "path": "support/filled-vias.csv",
+      "sha256": "354bdf95e193709d873c95637b60791695553cffbc69623af72ad56f1787d919"
+    },
+    {
+      "path": "support/KICAD-SOURCE-NOTES.txt",
+      "sha256": "0b5468e5f3095345fbc2a398ad19af90dac2fb0ed60c5e8d87ae3079e6fab5d1"
+    },
+    {
+      "path": "support/MYRRA74032-PCN.pdf",
+      "sha256": "42a134ddab859a2d5dc266c423f318996dede4f7c42fcaf072af61d2c1f77006"
+    },
+    {
+      "path": "support/MYRRA74032.pdf",
+      "sha256": "6d7a697a6f153c651d30e094d2462f240d7eb9f92ec0f08e2b161259b0958fca"
+    },
+    {
+      "path": "support/netlist.xml",
+      "sha256": "e068f3ac9e65b83bcf073bf200e1ec8621fada2f469dd1633a209401e443e000"
+    },
+    {
+      "path": "support/open-engineering-holds.json",
+      "sha256": "feba02bff942417306b36d142d133035a30f74d9fb71845f74523fa6d6035c09"
+    },
+    {
+      "path": "support/sourcing-register-C16.json",
+      "sha256": "49636fb5ab2e8520fa868696567ffabee5a402c3e49e7ced8501240fe9fe6085"
+    },
+    {
+      "path": "support/transformer-dimensions.json",
+      "sha256": "0410618449bccb92872acbd2fc599de52eced574b03ff5c393c199b8030c20b5"
+    },
+    {
+      "path": "task-acceptance.json",
+      "sha256": "60c578fc7771959f184050138e2432a8468e9f0ec93f20cd42b9080874affb31"
+    },
+    {
+      "path": "task-contract.md",
+      "sha256": "4b261d0be6fb1ee7c357c5fd129645c2d421da0089c2f6450c8f20629c20f918"
+    },
+    {
+      "path": "Velluneo_C17_Gerber_Upload.zip",
+      "sha256": "e56f5c120a2b492b41e595904a4e4c123bb2df1ff175c85ba2d3d0a0375eada2"
+    },
+    {
+      "path": "Velluneo_C17_KiCad_Source.zip",
+      "sha256": "bf64983da944e5225800ef166fd34bbf570b4c735e553a1bf5dae12279a21a61"
+    },
+    {
+      "path": "Velluneo_C17_Prototype_Manufacturing_Package.zip",
+      "sha256": "c3f6f839e5230cc2069adbc3a565a10f393c06c5ea0359d018635ba389010c00"
+    }
+  ]
+}
