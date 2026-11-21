@@ -1,5 +1,20 @@
 # E27 workflow index
 
+## Current power and cooling assessment - POWER20, 21 November 2026
+
+[POWER20](specification-reset/power-thermal-20/README.md) calculates currentC16
+input8.59W, LED6.54W, driverheat2.05W, LED efficiency76.2% at declared central
+assumptions;97selected cases span7.83..9.92Winput/1.49..3.17Wdriverheat.
+These are sensitivity scenarios, not measured performance or guaranteed bounds.
+The319mA totaloutput includes~2.06mA bleeder; LED current~316.94mA. Charge/energy
+accounting preserves etaXFMR bias/magnetics inclusion and avoids double counting.
+At room40C, selected-case heat requires effective cavity-to-room<=3.16K/W with
+zeroLEDcoupling, <=2.00K/W with25%LEDcoupling to respect MYRRA50C air condition.
+Componenttemperatures depend on explicitly assumed heatpaths/localresistances;
+actualT1/capacitorinternaltemperatures and physicalcooling remain unestablished.
+Four independent role reviews and exact source hashes bind this analytical packet.
+No C16/C17/VIS18/LED19 file, CAD/BOM/rule/approval or manufacturing gate changes.
+
 ## Current LED/driver compatibility and higher-flux acceptance - LED19, 21 November 2026
 
 [LED19](specification-reset/led-compatibility-19/README.md) checks the currentC16

@@ -1,0 +1,70 @@
+{
+  "checked": "2026-11-21",
+  "sources": [
+    {
+      "id": "TI",
+      "url": "https://www.ti.com/lit/ds/symlink/ucc28700.pdf",
+      "revision": "SLUSB41A RevA",
+      "applied_facts": "Current law and eta includes copper/core/leakage/bias; RUN2.1/2.65mA at25V,no gate load; thetaJB44.4/thetaJA180/psiJT5.1; recommendedjunction<=125C."
+    },
+    {
+      "id": "Q1",
+      "url": "https://www.st.com/resource/en/datasheet/stfw2n105k5.pdf",
+      "revision": "DS10322 Rev2 March2026",
+      "applied_facts": "Rds8ohm max25C10V;Qg10nCtyp;energy-relatedCo6pF0..840V;thetaJC4.2/thetaJA50;Tj150C absolute. Thermal R values do not establish C16 cooling."
+    },
+    {
+      "id": "D3",
+      "url": "https://www.st.com/resource/en/datasheet/stth2r02.pdf",
+      "revision": "DS4744 Rev3",
+      "applied_facts": "Conduction P=.68Iavg+.06Irms²;thetaJL30max;175C absolute;2A requires lead90C under stated waveform."
+    },
+    {
+      "id": "T1",
+      "url": "https://www.atd-shop.com/www/prilohy/74032-datasheet.pdf",
+      "revision": "Manufacturer-authored MYRRA74032 sheet",
+      "applied_facts": "LP1.1mH+-10%;72:10:18;1.1Apk;ambient50C max;no published DCR/leakage/core-loss/thermal-rise model."
+    },
+    {
+      "id": "C1",
+      "url": "https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/BXW.pdf",
+      "revision": "BXW series",
+      "applied_facts": "450BXW15MEFR10X20;105C;10000h at105C forL<=20mm;190mA120Hz/475mA100kHz at105C;no exact core/case Rth or frequency-resolved ESR."
+    },
+    {
+      "id": "C4",
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDD0000/ABA0000C1221.pdf",
+      "revision": "ZA series",
+      "applied_facts": "EEHZA1J100P;ESR120mohm100kHz20C;1Arms100kHz105C;105C/10000h specified-condition endurance;no usable core Rth."
+    },
+    {
+      "id": "R1",
+      "url": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+      "revision": "Vishay28730",
+      "applied_facts": "AC05-AT WSZ47ohm;5W at40C/4.7W70C;family temperature-rise graph is not exact C16 hotspot Rth."
+    },
+    {
+      "id": "BR1",
+      "url": "https://www.mouser.com/datasheet/2/258/SDB101_SDB107_SDB_1_-2510779.pdf",
+      "revision": "Manufacturer-authored MCC Rev4-1-12072023 hosted by distributor",
+      "applied_facts": "SDB107;thetaJL15/thetaJA40typ with35x25x1.7mm test PCB;older sheets differ and say per-leg;not transferred as whole bridge thermal resistance."
+    },
+    {
+      "id": "CREE",
+      "url": "https://downloads.cree-led.com/files/ds/j/JSeries-2835-3V-Consolidated.pdf",
+      "revision": "CLJ-DS40 Rev10B",
+      "applied_facts": "Bound native typical Vf curve fromLED19;7xH40 at85C voltage reference;no new thermal-flux model."
+    },
+    {
+      "id": "THERMAL_METHOD",
+      "url": "https://www.ti.com/lit/an/spra953d/spra953d.pdf",
+      "revision": "SPRA953D",
+      "applied_facts": "Thermal metrics/test-board dependencies;psi values are characterization parameters,not thermal network resistors."
+    }
+  ],
+  "research_actors": [
+    "/root/thermal20_loss_research",
+    "/root/thermal20_component_research"
+  ],
+  "source_types": "Primary manufacturer documents; distributor-hosted manufacturer PDFs identified. Public datasheets not redistributed."
+}
