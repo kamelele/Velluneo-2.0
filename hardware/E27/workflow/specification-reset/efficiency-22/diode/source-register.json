@@ -1,0 +1,152 @@
+{
+  "task": "EFFICIENCY22-D3",
+  "base_commit": "63c7a3fed59d7807bd1b71cf9058175b04a22f4b",
+  "checked_date": "2026-11-21",
+  "author": "/root/eco22_diode",
+  "scope": "Component research and documentation only; root owns CAD and integration",
+  "selected_candidate": {
+    "ref": "D3",
+    "manufacturer": "STMicroelectronics",
+    "mpn": "STPS2200U",
+    "technology": "Schottky",
+    "package": "SMB",
+    "physical_pin_mapping": {
+      "1": "K",
+      "2": "A"
+    },
+    "polarity_mark": "Cathode band",
+    "prototype_candidate_not_physically_qualified": true,
+    "rated_reverse_V": 200,
+    "rated_average_A": 2,
+    "average_rating_conditions": "0.5 duty square wave, lead145C",
+    "junction_max_C": 175,
+    "surge_nonrepetitive_A": 100,
+    "surge_conditions": "10ms sinusoidal pulse, lead25C",
+    "junction_to_lead_K_per_W": 20,
+    "forward_table": {
+      "at_2A_25C_typical_V": 0.73,
+      "at_2A_25C_maximum_V": 0.8,
+      "at_2A_125C_typical_V": 0.58,
+      "at_2A_125C_maximum_V": 0.64
+    },
+    "reverse_table_at_200V": {
+      "at_25C_maximum_A": 5e-06,
+      "at_125C_typical_A": 0.0007,
+      "at_125C_maximum_A": 0.0025
+    },
+    "source_conduction_equation": "P_W = 0.58*IF_AV_A + 0.03*IF_RMS_A^2",
+    "equation_scope": "Maker conduction screen corresponding to125C maximum forward envelope; not an all-temperature IV model or a whole-diode loss bound",
+    "maker_land_geometry_mm": {
+      "pad_length_along_terminal_axis": 1.62,
+      "pad_width_transverse": 2.18,
+      "copper_gap": 2.6,
+      "pad_center_pitch": 4.22,
+      "outer_span": 5.84
+    },
+    "land_geometry_visual_review": {
+      "actor": "/root",
+      "source_pdf_page_1_based": 6,
+      "source_figure": "Figure10 SMB footprint",
+      "correction": "Initial text-only research transposed2.60gap and2.18width. Root visually inspected the actual drawing and corrected the source-derived module. This author does not claim to have performed that visual inspection."
+    }
+  },
+  "baseline": {
+    "mpn": "STTH2R02A",
+    "technology": "Ultrafast PN",
+    "package": "SMA",
+    "rated_reverse_V": 200,
+    "rated_average_A": 2,
+    "junction_max_C": 175,
+    "surge_nonrepetitive_A": 75,
+    "surge_conditions": "10ms sinusoidal pulse",
+    "junction_to_lead_K_per_W": 30,
+    "source_conduction_equation": "P_W = 0.68*IF_AV_A + 0.06*IF_RMS_A^2",
+    "equation_scope": "Maker hot conduction screen corresponding to150C maximum forward envelope; not directly the same junction reference as the new diode screen",
+    "reverse_at_200V_25C_maximum_A": 3e-06,
+    "reverse_at_200V_125C_maximum_A": 2e-05
+  },
+  "datasheets": [
+    {
+      "id": "STPS2200",
+      "url": "https://www.st.com/resource/en/datasheet/stps2200.pdf",
+      "document": "DocID024381 Rev1, April2013",
+      "local_source": "work/eco22-sources/stps2200.pdf",
+      "local_sha256": "9cacc9736041440b2980a1fcdb09664dbd00f01018389df2c2b138619eec72ea",
+      "local_bytes": 260431,
+      "acquisition": "Coordinator retained manufacturer-authored PDF through Comet; official manufacturer URL independently checked by this actor",
+      "relevant_pages_1_based": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "STTH2R02",
+      "url": "https://www.st.com/resource/en/datasheet/stth2r02.pdf",
+      "document": "DS4744 Rev3, December2018",
+      "relevant_pages_1_based": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        11
+      ]
+    }
+  ],
+  "lifecycle_and_purchase": {
+    "manufacturer_status_url": "https://www.st.com/en/diodes-and-rectifiers/stps2200.html",
+    "manufacturer_status": "Active / volume production",
+    "exact_purchase_url": "https://estore.st.com/en/stps2200u-cpn.html",
+    "seller": "STMicroelectronics factory store",
+    "snapshot_reported_in_stock": true,
+    "minimum_quantity": 1,
+    "snapshot_unit_price_USD": 0.77,
+    "freshness": "Public page retrieved2026-11-21; search cache indicated fourweeks old. No live inventory guarantee or reservation.",
+    "jlcpcb_exact_mpn_stock_confirmed": false,
+    "jlcpcb_assembly_source_acceptance_confirmed": false,
+    "clone_parts_not_substitutes": "A part namedSTPS2200U-MS from another maker is not the selected ST part"
+  },
+  "screening_and_retained_conditions": {
+    "same_current_formula_comparison": {
+      "IF_AV_A": 0.319,
+      "IF_RMS_surrogate_A": 0.5648008498577175,
+      "old_forward_screen_W": 0.23606000000000002,
+      "new_forward_screen_W": 0.19458999999999999,
+      "gross_forward_reduction_W": 0.041470000000000035,
+      "scope": "Conditional comparison of maker screening formulae at different hot references; not same-temperature proof, actual net saving, or a guaranteed part-to-part improvement"
+    },
+    "secondary_reverse_design_floor_V": 200,
+    "static_reverse_screen_before_ringing_V_approx": 117,
+    "VDD_19V_output_D3_nonnegative_D2_1V_screen_V": 9.555555555555555,
+    "healthy_VDD_goal_V": 9.45,
+    "VDD_screen_margin_V": 0.10555555555555556,
+    "VDD_equation": "VDD = (Vout + Vf_D3)*10/18 - Vf_D2; lowerD3drop lowersVDD by10/18 of the drop change",
+    "unclosed": [
+      "Reverse leakage at real voltage, temperature and duty; no all-temperature leakage guarantee inferred from125C table",
+      "Junction capacitance, ringing, reverse commutation and resulting input/clamp losses",
+      "Actual startup, auxiliary takeover/dropout, repeated fault/retry and PSR/no-load output after changed diode drop",
+      "SMB assembly, source/pad/rotation correspondence and actual lead/junction thermal path",
+      "Net efficiency and temperatures across all selected cases; the parent model does not improve every hot case",
+      "Existing C16/C17 isolation, fault, thermal, process and human approval holds"
+    ]
+  },
+  "auxiliary_ratio_screen_correction": {
+    "status": "Ideal lossless winding-ratio screen only, not physical lower bound",
+    "ideal_VDD_at19_V": 9.5555555556,
+    "healthy_allocation_V": 9.45,
+    "omitted_loss_budget_at19_V": 0.1055555556,
+    "R10_ohm": 4.7,
+    "R10_pulse_consuming_entire_budget_A": 0.02245862885106383,
+    "unbounded_losses": [
+      "R10 pulse drop",
+      "winding resistance",
+      "VDD ripple"
+    ],
+    "actual_VDD_takeover_no_regression": "OPEN; required physical or bounded waveform verification"
+  }
+}

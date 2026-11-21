@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "stage": "routing",
+  "errors": [
+    {
+      "id": "C16-FAULT",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "C16-Q1",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "C16-MAGNETIC",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "C16-PRODUCT",
+      "gate": "placement",
+      "message": "Required evidence kind absent: measurement"
+    }
+  ],
+  "matrix": [
+    {
+      "id": "PB-IDENTITY",
+      "revision": "E22-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "PB-IDENTITY",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [
+        "EV-E22-IDENTITY"
+      ],
+      "observed_levels": [
+        "reviewed"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "PB-ROUTING",
+      "revision": "E22-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "type": "requirement",
+      "gate": "routing",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "PB-ROUTING",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "DRC",
+      "evidence_ids": [
+        "EV-E22-DRC"
+      ],
+      "observed_levels": [
+        "DRC-checked"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "C16-FAULT",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-FAULT",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "C16-Q1",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-Q1",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "C16-MAGNETIC",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "type": "requirement",
+      "gate": "schematic",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-MAGNETIC",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    },
+    {
+      "id": "C16-PROCESS",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "type": "requirement",
+      "gate": "release",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-PROCESS",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "review",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "not_due"
+    },
+    {
+      "id": "C16-PRODUCT",
+      "revision": "C16-1",
+      "owner": "Engineering coordinator; physical verification by qualified prototype test operator",
+      "type": "requirement",
+      "gate": "placement",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "C16-PRODUCT",
+          "path": "Velluneo_driver.kicad_pcb"
+        }
+      ],
+      "required_kind": "measurement",
+      "evidence_ids": [],
+      "observed_levels": [],
+      "status": "blocked"
+    }
+  ],
+  "open_questions": [],
+  "passed": false,
+  "limitations": [
+    "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+    "Hashes establish freshness, not evidence truth or reviewer authority.",
+    "Electrical checks compare declared DC envelopes only, not complete operation."
+  ],
+  "intent_digest": "25cc924400e5c5abb9935287a3007d5ef782a6892cdd7fb4fe9ab9a21e079dac",
+  "product": "VelluneoE22 constrained component ECO; engineering prototype, parent owner targets retained",
+  "revision": "E22-1",
+  "document_sha256": "7b75052d5c7e36691473ca480406f7206c2c5293b5d785ee5095aa5dd4196a99",
+  "blockers": [
+    {
+      "id": "C16-FAULT",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "C16-Q1",
+      "gate": "placement",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "C16-MAGNETIC",
+      "gate": "schematic",
+      "message": "Required evidence kind absent: measurement"
+    },
+    {
+      "id": "C16-PROCESS",
+      "gate": "release",
+      "message": "Required evidence kind absent: review"
+    },
+    {
+      "id": "C16-PRODUCT",
+      "gate": "placement",
+      "message": "Required evidence kind absent: measurement"
+    }
+  ],
+  "blocked_stages": [
+    "schematic",
+    "placement",
+    "routing",
+    "release"
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "807c619ca5111d84904b52a3fcd7e2ff9c222e07913d817c57cf668476f022d4",
+    "archive_sha256": "d72938943718cfb830e22407bad481e024c7d38841d21c7d1e211ba9b125ff26",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "b985a9eeecaddc992dba2d7d78808b55441e206ca279b148bbc0b9351af14d97",
+    "package_version": "0.7.2-velluneo.1",
+    "publication_ready": false,
+    "ruleset_version": "0.7.2"
+  }
+}
+

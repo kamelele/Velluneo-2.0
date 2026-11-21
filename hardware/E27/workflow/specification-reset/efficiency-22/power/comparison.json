@@ -1,0 +1,1392 @@
+{
+  "old_nominal": {
+    "Vac": 230,
+    "eta_XFMR_assumed": 0.9,
+    "corner": "nom",
+    "preset": "central",
+    "Vf_model_Tj_C": 85,
+    "flux_model_used": false,
+    "revision": "old",
+    "total_secondary_A": 0.319,
+    "net_output_A": 0.319,
+    "diode_reverse_assumed_A": 0.0,
+    "diode_forward_W": 0.23606000000000002,
+    "diode_reverse_W": 0.0,
+    "extra_switch_energy_assumed_J": 0.0,
+    "LED_current_A": 0.3169364088395068,
+    "Vo_V": 20.63591160493202,
+    "LED_power_W": 6.540271717196657,
+    "total_DC_output_W": 6.582855801973314,
+    "input_W": 8.585985348680788,
+    "driver_heat_W": 2.0457136314841313,
+    "efficiency_to_LEDs": 0.7617380477130153,
+    "efficiency_to_total_output": 0.7666977678904088,
+    "line_current_RMS_A": 0.06973408081565667,
+    "PF_model": 0.535324631006528,
+    "bus_min_V": 302.84155229411925,
+    "bus_mean_V": 310.36319233213163,
+    "bus_max_V": 317.6018920360862,
+    "primary_RMS_surrogate_A": 0.08254327791961223,
+    "secondary_RMS_surrogate_A": 0.5648008498577175,
+    "C1_LF_RMS_A": 0.06440166656303938,
+    "C1_HF_RMS_surrogate_A": 0.0780904933676592,
+    "C4_RMS_surrogate_A": 0.46608904728603096,
+    "frequency_surrogate_Hz": 79708.91033568948,
+    "demag_duty_surrogate": 0.42533333333333334,
+    "primary_peak_assumed_A": 0.41666666666666663,
+    "VDD_surrogate_V": 11.131062002740011,
+    "aggregate_G_W": 7.611093868859237,
+    "aggregate_loss_W": 0.7611093868859236,
+    "net_aux_allocation_W": 0.036937036442411156,
+    "startup_branch_input_W": 0.1155352955922693,
+    "losses_W": {
+      "R1": 0.2285535752786132,
+      "F1": 0.021785532281876324,
+      "BR1": 0.03743900712321946,
+      "C1": 0.12505917751395174,
+      "bulk_bleeders_R2_R3_R14_R15": 0.19307625169018397,
+      "startup_R16_R17": 0.11139254509984586,
+      "Q1": 0.24117853342795106,
+      "R9": 0.01226410691348582,
+      "T1_assumed_allocation": 0.470712027788283,
+      "D1_TVS1_assumed_allocation": 0.25346032265522933,
+      "U1_aux_gate_R10_R13_VS_network": 0.041079786934834585,
+      "D3": 0.24106000000000002,
+      "C4": 0.02606868,
+      "output_bleeders_R11_R12": 0.0425840847766568
+    },
+    "line_energy_residual_W": -1.1876957994871873e-06,
+    "capacitor_storage_rate_W": -3.844045295409161e-08,
+    "charge_residual_A": 0.0,
+    "dt_s": 4e-06
+  },
+  "new_nominal": {
+    "Vac": 230,
+    "eta_XFMR_assumed": 0.9,
+    "corner": "nom",
+    "preset": "central",
+    "Vf_model_Tj_C": 85,
+    "flux_model_used": false,
+    "revision": "new",
+    "total_secondary_A": 0.319,
+    "net_output_A": 0.31894253333333333,
+    "diode_reverse_assumed_A": 0.0001,
+    "diode_forward_W": 0.19458999999999999,
+    "diode_reverse_W": 0.0020937567329047013,
+    "extra_switch_energy_assumed_J": 1e-07,
+    "LED_current_A": 0.31687898606507453,
+    "Vo_V": 20.635472682588272,
+    "LED_power_W": 6.5389476606321155,
+    "total_DC_output_W": 6.581529933915499,
+    "input_W": 8.538386809665418,
+    "driver_heat_W": 1.9994391490333034,
+    "efficiency_to_LEDs": 0.7658294015480833,
+    "efficiency_to_total_output": 0.7708165582830278,
+    "line_current_RMS_A": 0.06941054084068368,
+    "PF_model": 0.5348383755832886,
+    "bus_min_V": 302.9362827595528,
+    "bus_mean_V": 310.4180900512716,
+    "bus_max_V": 317.6195634852859,
+    "primary_RMS_surrogate_A": 0.08229033631583038,
+    "secondary_RMS_surrogate_A": 0.5648008498577175,
+    "C1_LF_RMS_A": 0.0641136376950291,
+    "C1_HF_RMS_surrogate_A": 0.07787447982557326,
+    "C4_RMS_surrogate_A": 0.46612837950245234,
+    "frequency_surrogate_Hz": 79235.33696686213,
+    "demag_duty_surrogate": 0.42533333333333334,
+    "primary_peak_assumed_A": 0.41666666666666663,
+    "VDD_surrogate_V": 11.053040379215707,
+    "aggregate_G_W": 7.565874189544126,
+    "aggregate_loss_W": 0.7565874189544124,
+    "net_aux_allocation_W": 0.036789806814624404,
+    "startup_branch_input_W": 0.11012779234654205,
+    "losses_W": {
+      "R1": 0.22643768945042222,
+      "F1": 0.021583847845487055,
+      "BR1": 0.037229005144639594,
+      "C1": 0.12414649617364248,
+      "bulk_bleeders_R2_R3_R14_R15": 0.19314412910672785,
+      "startup_R16_R17": 0.10620730184636296,
+      "Q1": 0.24765460104208012,
+      "R9": 0.01218905901175045,
+      "T1_assumed_allocation": 0.4678684478908622,
+      "D1_TVS1_assumed_allocation": 0.2519291642489258,
+      "U1_aux_gate_R10_R13_VS_network": 0.04071029731480349,
+      "D3": 0.2016837567329047,
+      "C4": 0.026073079941309862,
+      "output_bleeders_R11_R12": 0.04258227328338468
+    },
+    "line_energy_residual_W": -1.1770363030905173e-06,
+    "capacitor_storage_rate_W": -3.8656949982396337e-08,
+    "charge_residual_A": 0.0,
+    "dt_s": 4e-06
+  },
+  "nominal_input_change_W": -0.04759853901536992,
+  "nominal_heat_change_W": -0.04627448245082788,
+  "nominal_efficiency_change_pp": 0.4091353835067979,
+  "all_selected_cases_improved": false,
+  "paired_cases": [
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05162704295742149,
+      "heat_change_W": -0.05155911577619543,
+      "LED_power_change_W": -6.792718122650143e-05,
+      "efficiency_change_pp": 0.49134743616757737
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04522230244024783,
+      "heat_change_W": -0.043863786114286096,
+      "LED_power_change_W": -0.0013585163259612898,
+      "efficiency_change_pp": 0.3888620542673027
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.009121183161061808,
+      "heat_change_W": 0.024824483763874028,
+      "LED_power_change_W": -0.03394566692493495,
+      "efficiency_change_pp": -0.32688765292637756
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05400531586776047,
+      "heat_change_W": -0.05393959059933673,
+      "LED_power_change_W": -6.572526842507642e-05,
+      "efficiency_change_pp": 0.48710402385057083
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04633264545457472,
+      "heat_change_W": -0.04501816512811718,
+      "LED_power_change_W": -0.0013144803264566463,
+      "efficiency_change_pp": 0.37698463624196155
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0055565419743572875,
+      "heat_change_W": 0.027289650152357847,
+      "LED_power_change_W": -0.03284619212671469,
+      "efficiency_change_pp": -0.3229590784325165
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05650018466670126,
+      "heat_change_W": -0.05643805694104431,
+      "LED_power_change_W": -6.212772565739044e-05,
+      "efficiency_change_pp": 0.48134294614121664
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04687939233558147,
+      "heat_change_W": -0.04563685895370462,
+      "LED_power_change_W": -0.0012425333818768536,
+      "efficiency_change_pp": 0.35916223293988025
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": 0.0010371203400509899,
+      "heat_change_W": 0.03208710881002608,
+      "LED_power_change_W": -0.03104998846997553,
+      "efficiency_change_pp": -0.3304405996517823
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05225736425465222,
+      "heat_change_W": -0.05218894583007572,
+      "LED_power_change_W": -6.84184245764996e-05,
+      "efficiency_change_pp": 0.5233715426334662
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04586663605534547,
+      "heat_change_W": -0.04449829366530178,
+      "LED_power_change_W": -0.0013683423900436864,
+      "efficiency_change_pp": 0.4161348435099965
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.01089656901724112,
+      "heat_change_W": 0.023295505557439533,
+      "LED_power_change_W": -0.03419207457468154,
+      "efficiency_change_pp": -0.3083216274545886
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.054662061990471855,
+      "heat_change_W": -0.05459585796504718,
+      "LED_power_change_W": -6.620402542356629e-05,
+      "efficiency_change_pp": 0.5187879713704713
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.047007494549609063,
+      "heat_change_W": -0.045683437985068576,
+      "LED_power_change_W": -0.00132405656454182,
+      "efficiency_change_pp": 0.4034614330746811
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.007444207694025096,
+      "heat_change_W": 0.02564208393630585,
+      "LED_power_change_W": -0.03308629163033139,
+      "efficiency_change_pp": -0.3060617814301003
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.057177692555285375,
+      "heat_change_W": -0.057114795589712886,
+      "LED_power_change_W": -6.289696557360003e-05,
+      "efficiency_change_pp": 0.5124034707771119
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.047571307926260076,
+      "heat_change_W": -0.04631338974605592,
+      "LED_power_change_W": -0.0012579181802028216,
+      "efficiency_change_pp": 0.3842083380290462
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0011870845467463198,
+      "heat_change_W": 0.03024752388137708,
+      "LED_power_change_W": -0.031434608428122957,
+      "efficiency_change_pp": -0.3161960621849591
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.052633317298763416,
+      "heat_change_W": -0.05256443542108191,
+      "LED_power_change_W": -6.888187768172571e-05,
+      "efficiency_change_pp": 0.5427729754828525
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.046261123181379205,
+      "heat_change_W": -0.044883511729250314,
+      "LED_power_change_W": -0.0013776114521295568,
+      "efficiency_change_pp": 0.43274717202751445
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.012020009771809725,
+      "heat_change_W": 0.0224037913549906,
+      "LED_power_change_W": -0.03442380112679988,
+      "efficiency_change_pp": -0.2969994929931774
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.055059742164186076,
+      "heat_change_W": -0.05499307177447843,
+      "LED_power_change_W": -6.667038970764594e-05,
+      "efficiency_change_pp": 0.537966574642923
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0474097622831664,
+      "heat_change_W": -0.04607637843294121,
+      "LED_power_change_W": -0.0013333838502251893,
+      "efficiency_change_pp": 0.4194356686635037
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.008626560142575457,
+      "heat_change_W": 0.02469291362979753,
+      "LED_power_change_W": -0.03331947377237299,
+      "efficiency_change_pp": -0.2957931220022858
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05758796201618921,
+      "heat_change_W": -0.05752460350666633,
+      "LED_power_change_W": -6.335850952421396e-05,
+      "efficiency_change_pp": 0.5311919729564241
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.047979433663453364,
+      "heat_change_W": -0.046712284604254695,
+      "LED_power_change_W": -0.0012671490591973367,
+      "efficiency_change_pp": 0.39931623493427715
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0024322870835575827,
+      "heat_change_W": 0.029233093319453562,
+      "LED_power_change_W": -0.03166538040300981,
+      "efficiency_change_pp": -0.30753259882592143
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05230896475744462,
+      "heat_change_W": -0.052241037576217675,
+      "LED_power_change_W": -6.792718122650143e-05,
+      "efficiency_change_pp": 0.495816244545777
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.045852773877211206,
+      "heat_change_W": -0.04449425755124947,
+      "LED_power_change_W": -0.0013585163259612898,
+      "efficiency_change_pp": 0.3942925788353091
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.010154766126467152,
+      "heat_change_W": 0.02379090079846735,
+      "LED_power_change_W": -0.03394566692493495,
+      "efficiency_change_pp": -0.31884060743476716
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.054648898632079224,
+      "heat_change_W": -0.05458317336365326,
+      "LED_power_change_W": -6.572526842507642e-05,
+      "efficiency_change_pp": 0.49152531168883407
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04693500477681489,
+      "heat_change_W": -0.045620524450358246,
+      "LED_power_change_W": -0.0013144803264566463,
+      "efficiency_change_pp": 0.38240240647720025
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.006632795647679046,
+      "heat_change_W": 0.026213396479036977,
+      "LED_power_change_W": -0.03284619212671469,
+      "efficiency_change_pp": -0.31533747161810455
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05709647344678892,
+      "heat_change_W": -0.05703434572113064,
+      "LED_power_change_W": -6.212772565739044e-05,
+      "efficiency_change_pp": 0.48567402990571384
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04745054307887031,
+      "heat_change_W": -0.04620800969699301,
+      "LED_power_change_W": -0.0012425333818768536,
+      "efficiency_change_pp": 0.36452311512761293
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.00012876422605501148,
+      "heat_change_W": 0.030921224243921852,
+      "LED_power_change_W": -0.03104998846997553,
+      "efficiency_change_pp": -0.3231159760568758
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05293359916941309,
+      "heat_change_W": -0.05286518074483637,
+      "LED_power_change_W": -6.84184245764996e-05,
+      "efficiency_change_pp": 0.5280747281912967
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04649279741165557,
+      "heat_change_W": -0.04512445502161189,
+      "LED_power_change_W": -0.0013683423900436864,
+      "efficiency_change_pp": 0.42187736037840873
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.011902393450469617,
+      "heat_change_W": 0.02228968112421148,
+      "LED_power_change_W": -0.03419207457468154,
+      "efficiency_change_pp": -0.30004415569845344
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.055296384286871,
+      "heat_change_W": -0.05523018026144633,
+      "LED_power_change_W": -6.620402542356629e-05,
+      "efficiency_change_pp": 0.5234157749399837
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04759853901536992,
+      "heat_change_W": -0.04627448245082788,
+      "LED_power_change_W": -0.00132405656454182,
+      "efficiency_change_pp": 0.4091353835067979
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.00849052729622457,
+      "heat_change_W": 0.02459576433410593,
+      "LED_power_change_W": -0.03308629163033139,
+      "efficiency_change_pp": -0.2982032063865159
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05776763994002998,
+      "heat_change_W": -0.05770474297445638,
+      "LED_power_change_W": -6.289696557360003e-05,
+      "efficiency_change_pp": 0.5169748777535066
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.048130410811694446,
+      "heat_change_W": -0.046872492631490736,
+      "LED_power_change_W": -0.0012579181802028216,
+      "efficiency_change_pp": 0.38982716938302797
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0023159691724501386,
+      "heat_change_W": 0.029118639255673706,
+      "LED_power_change_W": -0.031434608428122957,
+      "efficiency_change_pp": -0.30865874958037054
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05330345753903387,
+      "heat_change_W": -0.05323457566135237,
+      "LED_power_change_W": -6.888187768172571e-05,
+      "efficiency_change_pp": 0.5475873289899402
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04688229869558569,
+      "heat_change_W": -0.045504687243456354,
+      "LED_power_change_W": -0.0013776114521295568,
+      "efficiency_change_pp": 0.4386526338721941
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.013005159545643963,
+      "heat_change_W": 0.021418641581156805,
+      "LED_power_change_W": -0.03442380112679988,
+      "efficiency_change_pp": -0.2886262879861934
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05568416120723896,
+      "heat_change_W": -0.055617490817530424,
+      "LED_power_change_W": -6.667038970764594e-05,
+      "efficiency_change_pp": 0.5426740546976228
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04799469037225457,
+      "heat_change_W": -0.04666130652202849,
+      "LED_power_change_W": -0.0013333838502251893,
+      "efficiency_change_pp": 0.42526712194876914
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.009653394922491287,
+      "heat_change_W": 0.023666078849882588,
+      "LED_power_change_W": -0.03331947377237299,
+      "efficiency_change_pp": -0.2878132983675674
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.058166427406938226,
+      "heat_change_W": -0.05810306889741401,
+      "LED_power_change_W": -6.335850952421396e-05,
+      "efficiency_change_pp": 0.5358363762170582
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.048530936619258114,
+      "heat_change_W": -0.04726378756006233,
+      "LED_power_change_W": -0.0012671490591973367,
+      "efficiency_change_pp": 0.40508425620743305
+    },
+    {
+      "case": {
+        "Vac": 230,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0035418175158170584,
+      "heat_change_W": 0.028123562887194087,
+      "LED_power_change_W": -0.03166538040300981,
+      "efficiency_change_pp": -0.299858463148317
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05322110083025411,
+      "heat_change_W": -0.05315317364902761,
+      "LED_power_change_W": -6.792718122650143e-05,
+      "efficiency_change_pp": 0.5002138566089331
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04673661182568978,
+      "heat_change_W": -0.045378095499729376,
+      "LED_power_change_W": -0.0013585163259612898,
+      "efficiency_change_pp": 0.3998941718230564
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.011337389528376818,
+      "heat_change_W": 0.02260827739655724,
+      "LED_power_change_W": -0.03394566692493495,
+      "efficiency_change_pp": -0.30891634224905484
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05552990727084861,
+      "heat_change_W": -0.055464182002422646,
+      "LED_power_change_W": -6.572526842507642e-05,
+      "efficiency_change_pp": 0.4958603952803786
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04779111653167689,
+      "heat_change_W": -0.04647663620522202,
+      "LED_power_change_W": -0.0013144803264566463,
+      "efficiency_change_pp": 0.38793926504249177
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.007849403703474422,
+      "heat_change_W": 0.024996788423240712,
+      "LED_power_change_W": -0.03284619212671469,
+      "efficiency_change_pp": -0.3058602267120847
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.057942670691252474,
+      "heat_change_W": -0.05788054296559375,
+      "LED_power_change_W": -6.212772565739044e-05,
+      "efficiency_change_pp": 0.4899447436302773
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.048277906180763,
+      "heat_change_W": -0.047035372798885255,
+      "LED_power_change_W": -0.0012425333818768536,
+      "efficiency_change_pp": 0.36999402282438254
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0014149713717550583,
+      "heat_change_W": 0.02963501709822003,
+      "LED_power_change_W": -0.03104998846997553,
+      "efficiency_change_pp": -0.3139451624600831
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05383782535851722,
+      "heat_change_W": -0.0537694069339405,
+      "LED_power_change_W": -6.84184245764996e-05,
+      "efficiency_change_pp": 0.5326551120940048
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.047364930817430206,
+      "heat_change_W": -0.04599658842738674,
+      "LED_power_change_W": -0.0013683423900436864,
+      "efficiency_change_pp": 0.42769718053459194
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.013063258839437708,
+      "heat_change_W": 0.02112881573524339,
+      "LED_power_change_W": -0.03419207457468154,
+      "efficiency_change_pp": -0.28988179557918325
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05616800196733429,
+      "heat_change_W": -0.05610179794191095,
+      "LED_power_change_W": -6.620402542356629e-05,
+      "efficiency_change_pp": 0.5279259143198378
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.048437202047322714,
+      "heat_change_W": -0.047113145482780894,
+      "LED_power_change_W": -0.00132405656454182,
+      "efficiency_change_pp": 0.41484756623877406
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.009683739107753553,
+      "heat_change_W": 0.02340255252257828,
+      "LED_power_change_W": -0.03308629163033139,
+      "efficiency_change_pp": -0.28847801777168725
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.058606768094595196,
+      "heat_change_W": -0.05854387112902293,
+      "LED_power_change_W": -6.289696557360003e-05,
+      "efficiency_change_pp": 0.5214496970066373
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.048952453924682615,
+      "heat_change_W": -0.04769453574447935,
+      "LED_power_change_W": -0.0012579181802028216,
+      "efficiency_change_pp": 0.3955859174219256
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.9,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.0035743902413205575,
+      "heat_change_W": 0.027860218186801067,
+      "LED_power_change_W": -0.031434608428122957,
+      "efficiency_change_pp": -0.2992478616680172
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.054204354704201485,
+      "heat_change_W": -0.05413547282651998,
+      "LED_power_change_W": -6.888187768172571e-05,
+      "efficiency_change_pp": 0.5522876609896366
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04774702249887319,
+      "heat_change_W": -0.04636941104674408,
+      "LED_power_change_W": -0.0013776114521295568,
+      "efficiency_change_pp": 0.4445943536039665
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.014158180364310269,
+      "heat_change_W": 0.020265620762488723,
+      "LED_power_change_W": -0.03442380112679988,
+      "efficiency_change_pp": -0.2782848754933287
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.056555756186419615,
+      "heat_change_W": -0.05648908579671352,
+      "LED_power_change_W": -6.667038970764594e-05,
+      "efficiency_change_pp": 0.5473398963039
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.048835388912445765,
+      "heat_change_W": -0.04750200506221969,
+      "LED_power_change_W": -0.0013333838502251893,
+      "efficiency_change_pp": 0.4311924795436739
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "nom",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.010831871340641896,
+      "heat_change_W": 0.022487602431730647,
+      "LED_power_change_W": -0.03331947377237299,
+      "efficiency_change_pp": -0.27795518086339843
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "low",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.05900112523150547,
+      "heat_change_W": -0.05893776672198103,
+      "LED_power_change_W": -6.335850952421396e-05,
+      "efficiency_change_pp": 0.5404303195212679
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "central",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.04934863516521837,
+      "heat_change_W": -0.04808148610602059,
+      "LED_power_change_W": -0.0012671490591973367,
+      "efficiency_change_pp": 0.41100482331194454
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 85
+      },
+      "input_change_W": -0.004784753645571627,
+      "heat_change_W": 0.026880626757436854,
+      "LED_power_change_W": -0.03166538040300981,
+      "efficiency_change_pp": -0.290304828783583
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": -0.007977282753449444,
+      "heat_change_W": 0.026675436536198305,
+      "LED_power_change_W": -0.03465271928964775,
+      "efficiency_change_pp": -0.33692223955458234
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": -0.009576580888905895,
+      "heat_change_W": 0.024086265090143666,
+      "LED_power_change_W": -0.033662845979050005,
+      "efficiency_change_pp": -0.3227694061329722
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": 0.002540310599096429,
+      "heat_change_W": 0.03422654838192907,
+      "LED_power_change_W": -0.03168623778283308,
+      "efficiency_change_pp": -0.3401309820876941
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": 0.00043654627597256024,
+      "heat_change_W": 0.031232035020806848,
+      "LED_power_change_W": -0.0307954887448334,
+      "efficiency_change_pp": -0.3264495898982589
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": -0.010933370372253393,
+      "heat_change_W": 0.024197557581531193,
+      "LED_power_change_W": -0.0351309279537837,
+      "efficiency_change_pp": -0.30791043660863826
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": -0.012454397797519334,
+      "heat_change_W": 0.02168655259848773,
+      "LED_power_change_W": -0.034140950396006176,
+      "efficiency_change_pp": -0.29250689788499207
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": -0.0009993178612646147,
+      "heat_change_W": 0.031302311854602305,
+      "LED_power_change_W": -0.032301629715867364,
+      "efficiency_change_pp": -0.318042082094816
+    },
+    {
+      "case": {
+        "Vac": 207,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": -0.0030039680147755377,
+      "heat_change_W": 0.028406912663092587,
+      "LED_power_change_W": -0.03141088067786857,
+      "efficiency_change_pp": -0.3032122769420553
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": -0.010216336341054344,
+      "heat_change_W": 0.02443638294859385,
+      "LED_power_change_W": -0.03465271928964775,
+      "efficiency_change_pp": -0.3192699942411559
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": -0.011784052236050613,
+      "heat_change_W": 0.021878793742999836,
+      "LED_power_change_W": -0.033662845979050005,
+      "efficiency_change_pp": -0.30467138627531254
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": 4.831736745103399e-05,
+      "heat_change_W": 0.031734555150284116,
+      "LED_power_change_W": -0.03168623778283308,
+      "efficiency_change_pp": -0.32395455396400097
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.85,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": -0.001999346538793745,
+      "heat_change_W": 0.02879614220603921,
+      "LED_power_change_W": -0.0307954887448334,
+      "efficiency_change_pp": -0.30983215189093194
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": -0.013093725489465413,
+      "heat_change_W": 0.02203720246431784,
+      "LED_power_change_W": -0.0351309279537837,
+      "efficiency_change_pp": -0.2894863799238756
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "min",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": -0.014581914107399285,
+      "heat_change_W": 0.019559036288605558,
+      "LED_power_change_W": -0.034140950396006176,
+      "efficiency_change_pp": -0.2736966401494123
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 10
+      },
+      "input_change_W": -0.003388313331223358,
+      "heat_change_W": 0.028913316384644894,
+      "LED_power_change_W": -0.032301629715867364,
+      "efficiency_change_pp": -0.301126925797468
+    },
+    {
+      "case": {
+        "Vac": 253,
+        "eta_XFMR_assumed": 0.93,
+        "corner": "max",
+        "preset": "high",
+        "Vf_model_Tj_C": 115
+      },
+      "input_change_W": -0.005342031548403625,
+      "heat_change_W": 0.026068849129464944,
+      "LED_power_change_W": -0.03141088067786857,
+      "efficiency_change_pp": -0.2858623783879022
+    }
+  ],
+  "caveat": "Source conduction envelopes at different hot-reference conditions; IR and incremental switching energy are sensitivities. Not measured same-temperature performance or guaranteed gain."
+}

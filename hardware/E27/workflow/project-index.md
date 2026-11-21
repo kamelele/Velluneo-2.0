@@ -1,5 +1,19 @@
 # E27 workflow index
 
+## Current component efficiency ECO and compendium - E22 / COMPENDIUM23, 21 November 2026
+
+[E22](specification-reset/efficiency-22/README.md) appliesSTPS2200U/SMB D3,
+422kR16/R17 and84.5k0.1%25ppmR13; retainsR1/bulk/outputbleeders/current/fault
+parts and all3mm/10.7mm rules. FreshERC/DRC/parity/unconnected0,33positions80pads,
+333unchangedtrack-viaobjects; D3shift+.3mm and twofootprints updated. Conditional
+central76.17to76.58%/2.046to1.999Wheat; hotleak cases can be34mWworse. No all-case
+gain or measured no-regression.64DC/72rectifierstartupwitnesses pass declared
+corners; fullstartup/fault/retry/thermal/insulation/physical/process/humanholds remain.
+[UpdatedcompendiumZIP](specification-reset/compendium-23/README.md) includes E22
+renders/layers/CAD/BOM/calculations andfreshmatchingmanufacturingreferences.
+Do not use oldC17Gerbers/CPL/BOM for E22. Four actual roles review the joint body.
+No order, supplier action, physical measurement or manufacturing approval.
+
 ## Current driver compendium - COMPENDIUM21, 21 November 2026
 
 [COMPENDIUM21](specification-reset/compendium-21/README.md) packages current
