@@ -1,0 +1,49 @@
+{
+  "candidate_body_sha256": "849abf775db52603c1a6e0968f3a03810017c18316c16cde21e6cf83304c94f9",
+  "actual_reviewers": {
+    "change": "/root/c16_final_change",
+    "completeness": "/root/c16_final_completeness",
+    "simplicity": "/root/c16_final_simplicity",
+    "reality": "/root/c17_reality"
+  },
+  "all_recommendations": "ready_for_human_review for analyticaldelivery only",
+  "reports": {
+    "change": "reviews/change.json",
+    "completeness": "reviews/completeness.json",
+    "simplicity": "reviews/simplicity.json",
+    "reality": "reviews/reality.json"
+  },
+  "findings": [
+    {
+      "id": "LED19-CHANGE-01",
+      "severity": "minor",
+      "status": "verified_closed",
+      "verified_by": "/root/c16_final_change",
+      "original_issue": "Parent specification prior LF bytes converted toCRLF",
+      "closure": "ExactHEADbytes preserved, onlyrevision13LFappend retained"
+    },
+    {
+      "id": "LED19-COMP-01",
+      "severity": "minor",
+      "status": "verified_closed",
+      "verified_by": "/root/c16_final_completeness",
+      "original_issue": "Executedpointshelper source omitted frominputbinding",
+      "closure": "compact-60/led-heat/calculate.py SHA256 ininputbinding andarchivedchecker"
+    },
+    {
+      "id": "LED19-REALITY-01",
+      "severity": "note",
+      "status": "tracked_optional_data_reuse_improvement",
+      "owner": "Engineering coordinator",
+      "due": "Before reusing rowdata as a temperature-dependent flux model",
+      "issue": "junction_reference_C controls voltage scenario; flux remains85Creference",
+      "evidence": "Everyrowflux_reference andREADME alreadyexplicitlydistinguish this",
+      "closure": "Later rename toVf_model_Tj_C oraddflux_reference_Tj_C=85; no newfluxmodelrequired",
+      "delivery_blocker": false
+    }
+  ],
+  "withdrawn_inspection_issue": "Simplicity reviewer initially read UTF8 JSON asWindowsANSI; re-read correct, no filedefect",
+  "higher_lumens_owner_accepted": true,
+  "physical_testing": false,
+  "human_stage_or_manufacturing_approval": false
+}

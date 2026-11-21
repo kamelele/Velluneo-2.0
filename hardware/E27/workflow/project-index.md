@@ -1,5 +1,19 @@
 # E27 workflow index
 
+## Current LED/driver compatibility and higher-flux acceptance - LED19, 21 November 2026
+
+[LED19](specification-reset/led-compatibility-19/README.md) checks the currentC16
+319mA supply against exact CreeG-class candidates. Owner explicitly permits higher
+lumens; requirements-and-plan.md revision13 removes only the850lm rejectionceiling.
+Retain seven seriesH40/4000K as first verificationpanel: typical20.652V/6.588W,
+~959lm at assumedtau0.87 andcalculated85Cjunctionfluxreference. Conditionalcurrent
+points303.624..336.057mA give918..1004lm; this is not measured orguaranteed output.
+Thermalderating/actualVf/currentripple/bin/diffuser/CCT/CRI/life andfinishedpanel
+remain unqualified. SixLEDsbias andeightLEDsvoltage issues prevent blindcountchanges;
+R9-onlydimming does not pass the existingfrequency screen. No driverCAD/BOM/rule,
+C17manufacturing orapprovedstage change. Higherflux isnot a blocker; thermal/safety
+requirements remain. Eventual2700/6500familycompatibility is not closed.
+
 ## Current native 3D and connection views - VIS18, 21 November 2026
 
 [VIS18](specification-reset/visualisation-18/README.md) presents currentC16/C17

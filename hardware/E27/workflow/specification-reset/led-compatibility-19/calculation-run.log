@@ -1,0 +1,141 @@
+{
+  "nominal": {
+    "H27": {
+      "key": "H27",
+      "MPN": "JB2835BWT-G-H27GA0000-N0000001",
+      "count": 8,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 23.601925797113616,
+      "per_LED_electrical_typ_W": 0.9411267911599054,
+      "panel_electrical_typ_W": 7.529014329279243,
+      "flux_typ_model_lm": 993.4900664226894,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": false,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 12.38995877617423,
+      "frequency_screen_Hz": 120909.50300421199
+    },
+    "H40": {
+      "key": "H40",
+      "MPN": "JB2835BWT-G-H40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 958.7909648380736,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    },
+    "H65": {
+      "key": "H65",
+      "MPN": "JB2835BWT-G-H65GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 955.5949949552798,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    },
+    "U40": {
+      "key": "U40",
+      "MPN": "JB2835BWT-G-U40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 824.5602297607431,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": true,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    }
+  },
+  "counts": [
+    {
+      "count": 6,
+      "voltage_range_typ_V": [
+        17.43870410919199,
+        18.21819871429358
+      ],
+      "aux_VDD_min_screen_V": 8.965946727328882
+    },
+    {
+      "count": 7,
+      "voltage_range_typ_V": [
+        20.345154794057322,
+        21.254565166675846
+      ],
+      "aux_VDD_min_screen_V": 10.580641552254068
+    },
+    {
+      "count": 8,
+      "voltage_range_typ_V": [
+        23.251605478922652,
+        24.29093161905811
+      ],
+      "aux_VDD_min_screen_V": 12.195336377179252
+    }
+  ],
+  "trim": [
+    {
+      "R9_ohm": 2.21,
+      "current_A": 0.2598190045248869,
+      "H40_7_model_lm": 797.7457543116402,
+      "panel_voltage_typ_V": 20.185197225630148,
+      "frequency_conservative_screen_Hz": 128403.56793896125,
+      "frequency_screen_below120k": false,
+      "scope": "UNADOPTED diagnostic. R9-only substitution cannot be approved from optical calculation: frequency/operatingbias/currentloop/startup recheck required."
+    },
+    {
+      "R9_ohm": 2.26,
+      "current_A": 0.25407079646017705,
+      "H40_7_model_lm": 781.6389562451908,
+      "panel_voltage_typ_V": 20.13924135807141,
+      "frequency_conservative_screen_Hz": 131032.89620178433,
+      "frequency_screen_below120k": false,
+      "scope": "UNADOPTED diagnostic. R9-only substitution cannot be approved from optical calculation: frequency/operatingbias/currentloop/startup recheck required."
+    }
+  ],
+  "assessment": {
+    "first_panel": "7series JB2835BWT-G-H40GA0000-N0000001",
+    "driver": "Unchanged C16 R9=1.80ohm, nominal319mA",
+    "nominal_DC_voltage_model_in_allocation": true,
+    "typical_19to22V_over_declared_current_temperature_grid": true,
+    "minimum750lm_at_declared_currentpoints_oldtau0p87": true,
+    "higher_flux_is_not_a_rejection": true,
+    "DC_current_below480mA_absolute_ceiling_only": true,
+    "thermal_performance_measured": false,
+    "actual_LED_peak_current_or_Vf_extremes_qualified": false,
+    "final_LED_panel_CAD_or_manufacturing_release": false
+  },
+  "thermal": {
+    "per_LED_typical_model_upper_W": 1.0203928118833143,
+    "seven_LED_typical_model_upper_W": 7.1427496831832,
+    "conditions": "Rectangular current303.624..336.057mA/Tj10..115C typicalVf model, NOT a guaranteed peak/binnedpower bound; all electricalinput budgeted as heat",
+    "assumed_solderpoint_C": 95,
+    "conditional_Tj_C_using7p6_typical": 102.7549853703132,
+    "conditional_Tj_C_using15_engineering_allowance": 110.30589217824972,
+    "illustrative_panel_Rth_to_ambient_max_K_per_W_for95C_at40C": 7.7001158432712975,
+    "thermal_path_or95C_target_not_measured": true,
+    "driver_heat_coupling_not_included": true
+  }
+}

@@ -197,3 +197,19 @@ Open/absent/hardshort panel outcomes include no base damage, no fuse/manualreset
 Proposeddriverfabrication2layerFR4/1.6mm/2oz/greenmask/leadfreeENIG and supplierSMDpopulation, agreedTHT/customtransformerroute, manualfallback; order-specificmaterial/CTI/stackup/assemblyconfirmation is due beforeplacement/processacceptance. No orderauthorized. Completeproductsemi-luminaireclassification and nativeIEC60598/61347/62031/CISPR15/61547/61000-3-2 sourcefamilies are identified in U04; fullclause/numericalinsulation/ENadoption/commercialqualification remain owned implementation gaps. This prototype scope does not assert compliance.
 
 Pre-CAD connectivity is schematic-intent/intended-connectivity.json, independent of oldCAD and not yet approved. Existing circuit/modelmajorfindings remain open at their original acceptance scope.
+
+
+## 2026-11-21 accepted-scope addendum (revision13 - higher flux permitted)
+
+The owner stated in the current conversation: "jak będzie wiecej lumenów to nie problem".
+No permanent message URL is available. Record the original wording rather than
+inventing an external approval link. The previous850lm upper target is no longer
+a rejection ceiling. Preserve the750lm minimum and all other colour/family matching,
+CCT/CRI, electrical, thermal, service, dimensional, insulation and life requirements.
+No new exact lumen maximum or higher electrical/thermal rating is invented.
+
+This supersedes only the old upper-flux criterion. Frozen historical packets retain
+their exact bytes; their850lm rejection conclusions do not override this owner decision.
+See led-compatibility-19 for the current319mA/sevenLED compatibility assessment.
+The message does not approve a circuit/panel revision, assembly process, manufacturing,
+ordering or physical qualification. Photometric and thermal methods remain as recorded.

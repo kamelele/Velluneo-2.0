@@ -1,0 +1,887 @@
+{
+  "scope": "LED19 analytical compatibility assessment, not CAD change, measured qualification, final LED selection or manufacturing release",
+  "source_commit": "7f4b7781f2178af5a57d42212a02ac1996ffcd2a",
+  "maker_SHA256": "74d4261952c25e6833212a82b0f72e759f8297478627a368f4acff22378c92c8",
+  "maker_revision": "CLJ-DS40 Rev10B",
+  "parts": {
+    "H27": {
+      "mpn": "JB2835BWT-G-H27GA0000-N0000001",
+      "CCT_K": 2700,
+      "CRI_test_min": 80,
+      "phi25": 29.1,
+      "phi85": 27.2,
+      "old_count": 8
+    },
+    "H40": {
+      "mpn": "JB2835BWT-G-H40GA0000-N0000001",
+      "CCT_K": 4000,
+      "CRI_test_min": 80,
+      "phi25": 32.1,
+      "phi85": 30.0,
+      "old_count": 7
+    },
+    "H65": {
+      "mpn": "JB2835BWT-G-H65GA0000-N0000001",
+      "CCT_K": 6500,
+      "CRI_test_min": 80,
+      "phi25": 32.0,
+      "phi85": 29.9,
+      "old_count": 7
+    },
+    "U40": {
+      "mpn": "JB2835BWT-G-U40GA0000-N0000001",
+      "CCT_K": 4000,
+      "CRI_test_min": 90,
+      "phi25": 27.6,
+      "phi85": 25.8,
+      "old_count": null
+    }
+  },
+  "driver_current_A": {
+    "nominal": 0.319,
+    "conditional_screen_min": 0.30362389813907936,
+    "conditional_screen_max": 0.33605720122574056,
+    "eta_assumed": 0.9,
+    "not_measured_or_full_bounds": true
+  },
+  "assumptions": [
+    "Nominal19..22V driverloadallocation, not testedcompliancerange",
+    "Flux85C reference and25C relativecurrentcurve assumedseparable",
+    "Diffusertransmission.87 unmeasured",
+    "No upperfluxbin guaranteed byMPN; minimumflux at55mA not a guaranteed hot/highcurrentminimum",
+    "125CabsoluteTj and480mAabsoluteDC requirederating; notlifetimeratings",
+    "No transfer of80CRI spectrum to90CRI; thermal uses noopticalcredit",
+    "CCT/CRI at319mA andwarm/coldreelvoltage spread notqualified",
+    "DC/average-current model; actual LED ripple, transient peaks and PstLM/SVM not characterized."
+  ],
+  "original_family_nominal": {
+    "H27": {
+      "key": "H27",
+      "MPN": "JB2835BWT-G-H27GA0000-N0000001",
+      "count": 8,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 23.601925797113616,
+      "per_LED_electrical_typ_W": 0.9411267911599054,
+      "panel_electrical_typ_W": 7.529014329279243,
+      "flux_typ_model_lm": 993.4900664226894,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": false,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 12.38995877617423,
+      "frequency_screen_Hz": 120909.50300421199
+    },
+    "H40": {
+      "key": "H40",
+      "MPN": "JB2835BWT-G-H40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 958.7909648380736,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    },
+    "H65": {
+      "key": "H65",
+      "MPN": "JB2835BWT-G-H65GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 955.5949949552798,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    },
+    "U40": {
+      "key": "U40",
+      "MPN": "JB2835BWT-G-U40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 824.5602297607431,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": true,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    }
+  },
+  "original_family_ratio": 1.0396559961777354,
+  "H40_7_current_screen": [
+    {
+      "key": "H40",
+      "MPN": "JB2835BWT-G-H40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.30362389813907936,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.9334506848653317,
+      "panel_voltage_typ_V": 20.534154794057322,
+      "per_LED_electrical_typ_W": 0.890665731937564,
+      "panel_electrical_typ_W": 6.234660123562948,
+      "flux_typ_model_lm": 917.6356444107582,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.685641552254067,
+      "frequency_screen_Hz": 106249.64389765405
+    },
+    {
+      "key": "H40",
+      "MPN": "JB2835BWT-G-H40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 958.7909648380736,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    },
+    {
+      "key": "H40",
+      "MPN": "JB2835BWT-G-H40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.33605720122574056,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.968866452382264,
+      "panel_voltage_typ_V": 20.782065166675846,
+      "per_LED_electrical_typ_W": 0.997708950800577,
+      "panel_electrical_typ_W": 6.983962655604039,
+      "flux_typ_model_lm": 1004.2152968427619,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.823369537042137,
+      "frequency_screen_Hz": 107434.32526077442
+    }
+  ],
+  "U40_7_current_screen": [
+    {
+      "key": "U40",
+      "MPN": "JB2835BWT-G-U40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.30362389813907936,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.9334506848653317,
+      "panel_voltage_typ_V": 20.534154794057322,
+      "per_LED_electrical_typ_W": 0.890665731937564,
+      "panel_electrical_typ_W": 6.234660123562948,
+      "flux_typ_model_lm": 789.166654193252,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": true,
+      "aux_VDD_low_screen_V": 10.685641552254067,
+      "frequency_screen_Hz": 106249.64389765405
+    },
+    {
+      "key": "U40",
+      "MPN": "JB2835BWT-G-U40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.319,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.950240724639202,
+      "panel_voltage_typ_V": 20.651685072474415,
+      "per_LED_electrical_typ_W": 0.9411267911599055,
+      "panel_electrical_typ_W": 6.587887538119339,
+      "flux_typ_model_lm": 824.5602297607431,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": true,
+      "aux_VDD_low_screen_V": 10.750936151374674,
+      "frequency_screen_Hz": 106811.28207750275
+    },
+    {
+      "key": "U40",
+      "MPN": "JB2835BWT-G-U40GA0000-N0000001",
+      "count": 7,
+      "current_A": 0.33605720122574056,
+      "junction_reference_C": 85,
+      "per_LED_Vf_typ_V": 2.968866452382264,
+      "panel_voltage_typ_V": 20.782065166675846,
+      "per_LED_electrical_typ_W": 0.997708950800577,
+      "panel_electrical_typ_W": 6.983962655604039,
+      "flux_typ_model_lm": 863.6251552847752,
+      "flux_reference": "85C manufacturer reference times25C currentcurve, assumedseparable; tau.87",
+      "within_19to22_typ": true,
+      "within_750to850_typ": false,
+      "aux_VDD_low_screen_V": 10.823369537042137,
+      "frequency_screen_Hz": 107434.32526077442
+    }
+  ],
+  "voltage_count_comparison": [
+    {
+      "count": 6,
+      "voltage_range_typ_V": [
+        17.43870410919199,
+        18.21819871429358
+      ],
+      "aux_VDD_min_screen_V": 8.965946727328882
+    },
+    {
+      "count": 7,
+      "voltage_range_typ_V": [
+        20.345154794057322,
+        21.254565166675846
+      ],
+      "aux_VDD_min_screen_V": 10.580641552254068
+    },
+    {
+      "count": 8,
+      "voltage_range_typ_V": [
+        23.251605478922652,
+        24.29093161905811
+      ],
+      "aux_VDD_min_screen_V": 12.195336377179252
+    }
+  ],
+  "thermal_solderpoint_scenarios": [
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 75,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 81.76905956272549,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 75,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 88.35998597906347,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 85,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 91.76905956272549,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 85,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 98.35998597906347,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 95,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 101.76905956272549,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 95,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 108.35998597906347,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 105,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 111.76905956272549,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "assumed_solderpoint_C": 105,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.890665731937564,
+      "Tj_no_optical_credit_C": 118.35998597906347,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 75,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 82.15256361281529,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 75,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 89.11690186739858,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 85,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 92.15256361281529,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 85,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 99.11690186739858,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 95,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 102.15256361281529,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 95,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 109.11690186739858,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 105,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 112.15256361281529,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.319,
+      "assumed_solderpoint_C": 105,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.9411267911599054,
+      "Tj_no_optical_credit_C": 119.11690186739858,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 75,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 82.58258802608438,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 75,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 89.96563426200865,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 85,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 92.58258802608438,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 85,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 99.96563426200865,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 95,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 102.58258802608438,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 95,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 109.96563426200865,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 105,
+      "R_junction_solder_K_per_W": 7.6,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 112.58258802608438,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "assumed_solderpoint_C": 105,
+      "R_junction_solder_K_per_W": 15.0,
+      "LED_electrical_model_W": 0.997708950800577,
+      "Tj_no_optical_credit_C": 119.96563426200865,
+      "Rjs_is_typical_or_hypothetical": "7.6makerTYPICAL;15engineeringallowanceNOTmakerbound"
+    }
+  ],
+  "derating_example": {
+    "source": "Cree p4 Rja40K/Wexample, linear64C480mA to105C180mA",
+    "allowed_mA_at85C_ambient": 326.3414634146342,
+    "ambient_threshold_C_at_currentmax": 83.67218249914879,
+    "not_actual_lamp_Rja": true
+  },
+  "R9_only_diagnostic_not_ECO": [
+    {
+      "R9_ohm": 2.21,
+      "current_A": 0.2598190045248869,
+      "H40_7_model_lm": 797.7457543116402,
+      "panel_voltage_typ_V": 20.185197225630148,
+      "frequency_conservative_screen_Hz": 128403.56793896125,
+      "frequency_screen_below120k": false,
+      "scope": "UNADOPTED diagnostic. R9-only substitution cannot be approved from optical calculation: frequency/operatingbias/currentloop/startup recheck required."
+    },
+    {
+      "R9_ohm": 2.26,
+      "current_A": 0.25407079646017705,
+      "H40_7_model_lm": 781.6389562451908,
+      "panel_voltage_typ_V": 20.13924135807141,
+      "frequency_conservative_screen_Hz": 131032.89620178433,
+      "frequency_screen_below120k": false,
+      "scope": "UNADOPTED diagnostic. R9-only substitution cannot be approved from optical calculation: frequency/operatingbias/currentloop/startup recheck required."
+    }
+  ],
+  "U40_flux_sensitivities": [
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 653.1034379530362
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.319,
+      "U40_7_model_lm": 682.3946729054427
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 714.7242664425727
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 725.6704866144846
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.319,
+      "U40_7_model_lm": 758.2163032282697
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 794.1380738250807
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 798.2375352759332
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.319,
+      "U40_7_model_lm": 834.0379335510967
+    },
+    {
+      "transmission": 0.8,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 873.5518812075888
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 710.2499887739268
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.319,
+      "U40_7_model_lm": 742.1042067846688
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 777.2626397562977
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 789.166654193252
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.319,
+      "U40_7_model_lm": 824.5602297607431
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 863.6251552847752
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 868.0833196125773
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.319,
+      "U40_7_model_lm": 907.0162527368175
+    },
+    {
+      "transmission": 0.87,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 949.9876708132529
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 734.7413676971657
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.319,
+      "U40_7_model_lm": 767.694007018623
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 0.9,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 804.0647997478942
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 816.3792974412952
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.319,
+      "U40_7_model_lm": 852.9933411318033
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 1.0,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 893.4053330532157
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.30362389813907936,
+      "U40_7_model_lm": 898.0172271854248
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.319,
+      "U40_7_model_lm": 938.2926752449837
+    },
+    {
+      "transmission": 0.9,
+      "relative_stabilized_gain": 1.1,
+      "current_A": 0.33605720122574056,
+      "U40_7_model_lm": 982.7458663585373
+    }
+  ],
+  "voltage_spread_sensitivities": [
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 21.006654794057322
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 21.91665479405732
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 22.40665479405732
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 20.534154794057322
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 21.444154794057322
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 21.934154794057324
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 20.345154794057322
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 21.25515479405732
+    },
+    {
+      "current_A": 0.30362389813907936,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 21.74515479405732
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 21.12418507247441
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 22.03418507247441
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 22.524185072474413
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 20.651685072474415
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 21.56168507247441
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 22.051685072474413
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 20.462685072474414
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 21.37268507247441
+    },
+    {
+      "current_A": 0.319,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 21.862685072474413
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 21.254565166675846
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 22.164565166675846
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 10,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 22.654565166675848
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 20.782065166675846
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 21.692065166675846
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 85,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 22.182065166675848
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.0,
+      "panel_V": 20.593065166675846
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.13,
+      "panel_V": 21.503065166675846
+    },
+    {
+      "current_A": 0.33605720122574056,
+      "Tj_C": 115,
+      "assumed_extra_Vf_per_LED": 0.2,
+      "panel_V": 21.993065166675848
+    }
+  ],
+  "U40_7_nominal_flux25C_reference_lm": 882.0876876510276,
+  "U40_7_tau_interval_all_three_conditional_currents": [
+    0.8268215547792457,
+    0.8562742707004108
+  ],
+  "decision": "Retain7seriesH40/4000K and unchangedC16current for firstverificationpanel. The owner now accepts higherlumens: old850lmexceedance is NOT a rejection and no opticalattenuation/R9/CRIchange is required merely to meet800lm. Nominal20.652V/6.588W/~959lm atassumedtau.87,Tj85Cfluxmodel. Currenttemperature/ripple/Vf/bin/diffuser/actualphotometry/CRI/CCT/life andwholelampsafety remainunqualified. Warm8LEDstring still exceedsallocated22V; eventualthreecolourfamily notclosed. U40 andR9/opticalattenuation rows retained as historical diagnostics only.",
+  "optical_throughput_diagnostics_not_selected": {
+    "H40": {
+      "assumed_tau_for800_at_nominal": 0.7259142248149415,
+      "tau_interval_for750to850_all_three_currentpoints": [
+        0.7110665371101513,
+        0.7363958728023534
+      ],
+      "model_lm_at_target_tau": [
+        765.660652270109,
+        800.0,
+        837.9013433964595
+      ],
+      "not_selected_or_measured": true,
+      "limits": "Only an allocated total stabilized opticalgain under typicalbin/Tj85C hypotheses; not a chosen diffuser or guaranteedacceptance. LEDgainspread, drivereta and actualTj unmeasured."
+    },
+    "U40": {
+      "assumed_tau_for800_at_nominal": 0.8440863079243507,
+      "tau_interval_for750to850_all_three_currentpoints": [
+        0.8268215547792457,
+        0.8562742707004108
+      ],
+      "model_lm_at_target_tau": [
+        765.660652270109,
+        800.0,
+        837.9013433964598
+      ],
+      "not_selected_or_measured": true,
+      "limits": "Only an allocated total stabilized opticalgain under typicalbin/Tj85C hypotheses; not a chosen diffuser or guaranteedacceptance. LEDgainspread, drivereta and actualTj unmeasured."
+    }
+  },
+  "numerical_verification": {
+    "prior_optical_model_replayed": true,
+    "prior_native_voltage_replayed": true,
+    "C16_frequency_equation_replayed": true,
+    "finite_screen_rows": 180,
+    "interpretation": "Numericalverification passes; engineering compatibility observations include failures."
+  },
+  "historical_band_diagnostics": {
+    "H40_7_above850_at_nominal": true,
+    "U40_7_inside_band_all_declared_current_screen": false,
+    "six_LED_aux_screen_below9p45": true,
+    "eight_LED_above22_typ": true,
+    "R9_only_frequency_not_closed": true
+  },
+  "owner_decision": {
+    "date": "2026-11-21",
+    "verbatim": "jak będzie wiecej lumenów to nie problem",
+    "evidence": "Actual owner message in this conversation; no permanent message URL available",
+    "accepted_scope": "850lm is no longer a rejection ceiling. Preserve750lm minimum, first4000K, other CCT/family/thermal/electrical/insulation/life requirements. Not approval of CAD, manufacturing or measured performance."
+  },
+  "current_assessment": {
+    "first_panel": "7series JB2835BWT-G-H40GA0000-N0000001",
+    "driver": "Unchanged C16 R9=1.80ohm, nominal319mA",
+    "nominal_DC_voltage_model_in_allocation": true,
+    "typical_19to22V_over_declared_current_temperature_grid": true,
+    "minimum750lm_at_declared_currentpoints_oldtau0p87": true,
+    "higher_flux_is_not_a_rejection": true,
+    "DC_current_below480mA_absolute_ceiling_only": true,
+    "thermal_performance_measured": false,
+    "actual_LED_peak_current_or_Vf_extremes_qualified": false,
+    "final_LED_panel_CAD_or_manufacturing_release": false
+  },
+  "thermal_no_optical_credit_budget": {
+    "per_LED_typical_model_upper_W": 1.0203928118833143,
+    "seven_LED_typical_model_upper_W": 7.1427496831832,
+    "conditions": "Rectangular current303.624..336.057mA/Tj10..115C typicalVf model, NOT a guaranteed peak/binnedpower bound; all electricalinput budgeted as heat",
+    "assumed_solderpoint_C": 95,
+    "conditional_Tj_C_using7p6_typical": 102.7549853703132,
+    "conditional_Tj_C_using15_engineering_allowance": 110.30589217824972,
+    "illustrative_panel_Rth_to_ambient_max_K_per_W_for95C_at40C": 7.7001158432712975,
+    "thermal_path_or95C_target_not_measured": true,
+    "driver_heat_coupling_not_included": true
+  }
+}
