@@ -490,22 +490,22 @@
       }
     ],
     "max_body_bbox_xy_mm": [
-      -5.4,
-      -5.4,
-      5.4,
-      5.4
+      -4.15,
+      -4.15,
+      4.15,
+      4.15
     ],
     "courtyard_bbox_xy_mm": [
-      -5.9,
-      -5.9,
-      5.9,
-      5.9
+      -4.65,
+      -4.65,
+      4.65,
+      4.65
     ],
-    "planned_max_above_PCB_mm": 11.93,
+    "planned_max_above_PCB_mm": 10.5,
     "sources": [
       "Renco_L1"
     ],
-    "design_basis": "ManufacturerF.197inleadformingpitch;bodydiammax(.375+.050)in=10.795mmrounded10.8,B11.43. Two1.2finishedholes/2.3pads/.5stand-off/.5courtyardareengineeringchoices.",
+    "design_basis": "Wurth768772332catalogue3.3mHHV400V,bodyD8.3/H10max+.5seating,P5±.5/freeleadforming;manufacturerrecommended1.2holes;compatibleP5.0038retained.",
     "notes": [
       "Wire.8128mmTYPnotguaranteedmax;actualsampleandformingjigrequired.",
       "Do not useC=.375inaspinpitch:itisminimumshortleadlength9.525mm.",
@@ -594,7 +594,7 @@
     "sources": [
       "TDK_C4"
     ],
-    "design_basis": "ManufacturerP10\u00b1.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
+    "design_basis": "ManufacturerP10±.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -824,7 +824,7 @@
     "sources": [
       "Samsung_C5"
     ],
-    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at\u00b11.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
+    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at±1.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
     "notes": [
       "Catalogmanualsolder0201..1206:350Cmax,preheat>=60s,contact<=3s,deltaT<=190C;actualprocessrequiresvalidation.",
       "Do not present numericland as a Samsung recommendation."
@@ -914,7 +914,7 @@
     "sources": [
       "Panasonic_R4"
     ],
-    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers\u00b11.15;courtyard.25frompad/bodyunion.",
+    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers±1.15;courtyard.25frompad/bodyunion.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -1260,74 +1260,61 @@
       {
         "number": "1",
         "center_mm": [
-          -3.85,
-          4
+          0,
+          4.75
         ],
         "size_mm": [
-          1.8,
-          1.8
+          5.5,
+          3.0
         ],
-        "drill_mm": 1.2,
-        "kind": "thru_hole",
+        "drill_mm": null,
+        "kind": "smd",
         "shape": "rect"
       },
       {
-        "number": "4",
+        "number": "2",
         "center_mm": [
-          3.85,
-          4
+          0,
+          -4.75
         ],
         "size_mm": [
-          1.8,
-          1.8
+          5.5,
+          3.0
         ],
-        "drill_mm": 1.2,
-        "kind": "thru_hole",
-        "shape": "circle"
-      },
-      {
-        "number": "8",
-        "center_mm": [
-          -3.85,
-          -4
-        ],
-        "size_mm": [
-          1.8,
-          1.8
-        ],
-        "drill_mm": 1.2,
-        "kind": "thru_hole",
-        "shape": "circle"
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
       }
     ],
     "max_body_bbox_xy_mm": [
-      -6,
-      -6,
-      6,
-      6
+      -6.15,
+      -6.15,
+      6.15,
+      6.15
     ],
-    "planned_max_above_PCB_mm": 13,
-    "design_basis": "CustomT1contract12x12x13;documentedouterterminal7.7x8;explicitours1/4/8marking/windingcontract\u2014not originalEE1016dimensions.",
+    "planned_max_above_PCB_mm": 10.3,
+    "body_height_manufacturer_max_mm": 10.2,
+    "proposed_solder_seating_allowance_mm": 0.1,
     "courtyard_polygon": [
       [
-        -6.25,
-        -6.25
+        -6.4,
+        -6.5
       ],
       [
-        6.25,
-        -6.25
+        6.4,
+        -6.5
       ],
       [
-        6.25,
-        6.25
+        6.4,
+        6.5
       ],
       [
-        -6.25,
-        6.25
+        -6.4,
+        6.5
       ]
     ],
     "footprint": "E27SC09:SC09_T1",
-    "root_hole_fit_revision": "All3finishedholes1.20mm; unchanged1.8mmlands,pincoordinates,nets. Radialcoilpositiontol.15; seeT1contract."
+    "design_basis": "ManufacturerMSS1210Hrecommendedlands,page2;nonpolarterminal1LED/2FBisexplicitdesignassignment.Notcustomcoil/3rdNC."
   },
   "C6": {
     "refs": [
@@ -1391,7 +1378,7 @@
       "Panasonic_C6",
       "Panasonic_C6_mount"
     ],
-    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5\u00b1.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y\u00b12.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
+    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5±.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y±2.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
     "notes": [
       "Pin1positive,pin2negative;verifynegativebodyband/positiveleadbeforeforming.",
       "ManufacturerdoesNOTsupplythishorizontalformingradius/offset;2.5straight/1.5bend/.5supportareexplicitengineeringchoices,notqualifiedmanufacturerforming.",
@@ -1457,7 +1444,7 @@
     "refs": [
       "R7"
     ],
-    "mpn": "VR25000003903FR500",
+    "mpn": "HVR2500003903FR500",
     "units": "mm",
     "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
     "pads": [
@@ -1502,11 +1489,11 @@
       1.5,
       6.05
     ],
-    "planned_max_above_PCB_mm": 10.15,
+    "planned_max_above_PCB_mm": 11.5,
     "sources": [
       "Vishay_R7"
     ],
-    "design_basis": "SameVR25MPN390k; customstandingP4.8forming. Rootassembled-envelopeproposal,physicaljig/inspectionremainunqualified.",
+    "design_basis": "CatalogueHVR2500003903FR500390k1%1600V/.25W;coatedL2max7.5,D2.5,leadmax.63. StandingP4.8normalmanualformingproposal:bodyseating.5,2mmstraightleadabovemaxbodybeforeR1bend,peak~11.315,maxbudget11.5. Actualformedpartinspectionrequired.",
     "notes": [
       "Noquantifiedmanufacturerminimumleadbenddistancefound. Do not claim1.5/1.0isvendorapproved.",
       "Actualcoil/resistorheatingandcase/sealforcesrequireprototypeverification."

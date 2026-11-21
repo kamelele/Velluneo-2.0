@@ -1,10 +1,8 @@
-# Current task — SC09 accepted50×32mm laboratory PCB
+# Current task: SC09-CAT01 catalogue-only driver
 
-Owner accepted50×32mm. [Current package](integrated-shade/compact-09/prototype-package/README.md), [specification](integrated-shade/compact-09/prototype-package/SC09_specification.pdf), [order-review inputs](integrated-shade/compact-09/order-review-inputs.json). Scope: barePCB for manual laboratory prototype assembly/measurements, not a finished lamp or qualified powered unit. Full Toolkit productreleaseFAIL remains explicit; scopedbare-board-readiness.json records actual manufacturing-preflight disposition.
+Current sources: variants/integrated-shade/SC09_compact. [Current package](integrated-shade/compact-09/catalogue-package/README.md); [purchasing guide](integrated-shade/compact-09/catalogue-package/SC09_catalogue_buy_list.pdf). Previous prototype-package/customT1 exports and orderreviewrecords are historical1705d20scope and must not be ordered for catalogueT1.
 
-Native currentboard has0.15mmlegend and1.20mmT1holes; pins/nets/outerlands unchanged. Source snapshot and six artifactclasses registered without hardware selfhashcycle. Exact native ERC/DRC/parity,graph/refill/spacing checks retained. Four current read-only reviewers assess the same frozen orderpacket; root is soleCADwriter. Earlier final-review-inputs/reviews are historical commit082ffdb scope.
-
-Branch concept/integrated-shade-nonisolated-buck; main outsidewrite scope. No purchase/suppliermessage/poweredtest performed. Pinned KiCad10.0.6,toolkitmanifest05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822.
+19references/46physicalpins/11nets,2terminalCoilcraftT1;50x32mm. RootsoleCADwriter. Fourrole reviewpacket: integrated-shade/compact-09/catalogue-review-inputs.json. FullToolkitproductreleaseFAIL remains explicit; stageapproval/physicalqualification absent. ExactCAT01graphapprovalnull. No purchase/suppliermessage/poweredtest. Branch concept/integrated-shade-nonisolated-buck;main outsidewrite scope.
 
 # E27 workflow index
 

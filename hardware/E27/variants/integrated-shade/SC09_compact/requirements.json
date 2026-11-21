@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo_SC09_compact",
-  "revision": "SC09-A",
+  "revision": "SC09-CAT01",
   "subsystems": [
     {
       "id": "DRIVER",
@@ -42,11 +42,11 @@
     },
     {
       "id": "C_ARCH",
-      "revision": "SC09-A",
+      "revision": "SC09-CAT01",
       "owner": "Kamil",
       "text": "Choose compactarchitecture with actual sources, not a shrink ofoldSC08.",
       "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
-      "acceptance": "Actualowner chooses reviewedRDR-derived19position47pinproposal, includingNRND/custommagnetics risks; no manufactured approval.",
+      "acceptance": "Catalogue nonisolated laboratory buck with19references46physicalpins11nets; no invented current human approval.",
       "gate": "specification",
       "implementation": [
         {
@@ -56,9 +56,8 @@
         }
       ],
       "method": "review",
-      "evidence_ids": [
-        "EV-OWNER-ARCH"
-      ]
+      "evidence_ids": [],
+      "previous_acceptance_historical": "Actualowner chooses reviewedRDR-derived19position47pinproposal, includingNRND/custommagnetics risks; no manufactured approval."
     },
     {
       "id": "C_SUPPLY",
@@ -162,11 +161,11 @@
     },
     {
       "id": "C_PARTS",
-      "revision": "SC09-A",
+      "revision": "SC09-CAT01",
       "owner": "Codex-root",
       "text": "Exactparts andratedstress/physicalpins.",
       "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
-      "acceptance": "Reviewall19positions includingactiveC1/C4/C5/C6replacements,HVdividerresistor andcustomsinglewinding.T1 finishedgeometry mustclosebeforeplacement.",
+      "acceptance": "17electronics/16unique catalogueMPNs with exact manufacturer ratings and individually graded supplier offers; live availability recheck before purchase. No custom-wound T1.",
       "gate": "schematic",
       "implementation": [
         {
@@ -176,15 +175,16 @@
         }
       ],
       "method": "review",
-      "evidence_ids": []
+      "evidence_ids": [],
+      "previous_acceptance_historical": "Reviewall19positions includingactiveC1/C4/C5/C6replacements,HVdividerresistor andcustomsinglewinding.T1 finishedgeometry mustclosebeforeplacement."
     },
     {
       "id": "C_GRAPH",
-      "revision": "SC09-A",
+      "revision": "SC09-CAT01",
       "owner": "Codex-root",
       "text": "Independent physicalpinintentbeforecapture.",
       "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
-      "acceptance": "Actualownerapproved47pins/11nets/1NCbasisandfreshschematicexportagreement; no SC08approvalreuse.",
+      "acceptance": "Independent CAT01 intent46pins0NC agrees with fresh schematic export and PCB; new graph approval remains null.",
       "gate": "schematic",
       "implementation": [
         {
@@ -194,15 +194,16 @@
         }
       ],
       "method": "review",
-      "evidence_ids": []
+      "evidence_ids": [],
+      "previous_acceptance_historical": "Actualownerapproved47pins/11nets/1NCbasisandfreshschematicexportagreement; no SC08approvalreuse."
     },
     {
       "id": "C_PROTECTION",
-      "revision": "SC09-A",
+      "revision": "SC09-CAT01",
       "owner": "Codex-root",
       "text": "Documentcomplete boundedprototypeprotectionstrategy.",
       "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
-      "acceptance": "IntegratedOVP/short/thermalandinputfuse/MOV,100VC6 andoneopenbleeder<=40sconditionalcalculation; no hotplug, sharedICindependence or allfaultpassclaimed.",
+      "acceptance": "Recalculate chosen catalogue magnetic/R7 corners, clearly separate paper screens from unperformed fault/surge/thermal qualification.",
       "gate": "schematic",
       "implementation": [
         {
@@ -212,9 +213,8 @@
         }
       ],
       "method": "calculation",
-      "evidence_ids": [
-        "EV-PROTECTION-CALC-02"
-      ]
+      "evidence_ids": [],
+      "previous_acceptance_historical": "IntegratedOVP/short/thermalandinputfuse/MOV,100VC6 andoneopenbleeder<=40sconditionalcalculation; no hotplug, sharedICindependence or allfaultpassclaimed."
     },
     {
       "id": "C_INTERFACE",
@@ -632,5 +632,6 @@
       ],
       "scope": "BoundedpaperOVP/discharge/energycalculationsonly;nosinglefaultsurgephysicalpass."
     }
-  ]
+  ],
+  "catalogue_revision_notice": "Existing EV-* and A/A1 approvals are historical and not approval of changed CAT01 pins/parts. Active current evidence: catalogue-engineering-status.json. Full product release is not passed."
 }

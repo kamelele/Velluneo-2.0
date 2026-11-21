@@ -1,0 +1,37 @@
+{
+  "revision": "SC09-CAT01",
+  "root_sole_CAD_writer": true,
+  "source_manifest_sha256": "119d24c7339acb26b38652f2965003e8f6e0848edbb760ce40db80df7856abf5",
+  "unchanged_frozen_inputs": true,
+  "reviews": [
+    {
+      "role": "Reality Checker",
+      "actual_actor": "/root/cat_reality_review",
+      "path": "reviews/reality.json",
+      "sha256": "c623502e42d683979ca49534e938a06f0488cda8886123ccdb0c5e8715b1a7d1"
+    },
+    {
+      "role": "Overengineering Reviewer / Simplicity",
+      "actual_actor": "/root/cat_simplicity_review",
+      "path": "reviews/simplicity.json",
+      "sha256": "40c6b2abaa52d3a1ee3df704c33219aa4876614ea9679ccf3f94fdc175aeb3f0"
+    },
+    {
+      "role": "Completeness reviewer of root final catalogue integration",
+      "actual_actor": "/root/final_completeness",
+      "path": "reviews/completeness.json",
+      "sha256": "3486bd9b2d545538ff10988446fe260592ef96acc559a0ff77d030d63577a99f"
+    },
+    {
+      "role": "Change Reviewer",
+      "actual_actor": "/root/final_change",
+      "path": "reviews/change.json",
+      "sha256": "225b705b63be760b49c324dfbf863c2cf5f8d78074325f7fc042bda9c5ec5858"
+    }
+  ],
+  "scope": "catalogue-only_engineering_package_prepared_for_review; NOT_full_product_or_unconditional_order_release",
+  "parent_remote_commit": "1705d20d981f35d77bf7230a2fe7ab4f0ca9260b",
+  "main_outside_scope": true,
+  "full_product_release": false,
+  "purchase": false
+}

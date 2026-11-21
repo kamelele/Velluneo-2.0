@@ -1,0 +1,101 @@
+{
+  "actor": "/root/final_completeness",
+  "role": "Completeness reviewer of root final catalogue integration",
+  "review_date": "2026-11-21",
+  "input_manifest": "work/Velluneo-2.0/hardware/E27/workflow/integrated-shade/compact-09/catalogue-review-inputs.json",
+  "input_manifest_sha256": "119d24c7339acb26b38652f2965003e8f6e0848edbb760ce40db80df7856abf5",
+  "source_snapshot_sha256": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec",
+  "independence_disclosure": {
+    "prior_contributions": [
+      "work/compact09/catalog-only/parts-procurement.json",
+      "work/compact09/catalog-only/capture-pin-review.json"
+    ],
+    "scope": "Independent inspection of root's final adoption, native/export consistency, artifact completeness and truthful preservation of limitations. This is not an independent re-audit of this actor's upstream procurement research or capture report. Root authored the final CAD, library, model and package integration.",
+    "not_performed": ["New independent live stock confirmation", "Physical measurements", "Supplier communication", "Purchase", "Supplier CAM acceptance"]
+  },
+  "manifest_verification": {
+    "files_checked": 232,
+    "missing_files": [],
+    "hash_mismatches": [],
+    "snapshot_independently_recomputed": true
+  },
+  "source_hashes": {
+    "pcb_sha256": "8aac351c09f351ce5a8f68e7e4a4cce23bb920bff34b63afa889307c5c242e6f",
+    "schematic_sha256": "41db1c8b4ba434f73a7fd6cf0366143a2c329cc383a754c857c80ce3dad38d8e",
+    "CAT01_intent_sha256": "f942fe226fe255f954e7bbcb729468f8151bea4560b14b8819f5e19ada83f1d2"
+  },
+  "coverage": {
+    "connectivity": "Fresh netlist independently compared to CAT01: 19 references, 46 physical pins, 11 identical physical net-member sets, zero NC. Electronic MPN fields match current BOM. CAT01 approval is null; prior A1 approval is not reused.",
+    "native_checks": "Current source-bound ERC has zero sheet violations. DRC has zero violations, zero unconnected and zero schematic parity issues. Native ignored checks remain disclosed. Bounded spacing passes; strict spacing fails with explicit package-land concessions. Saved-zone refill evidence reports exact polygon equality and unchanged original source.",
+    "geometry": "50 x 32 x 1.6 mm board, approximate populated envelope 50 x 32 x 19.5 mm. Owner's accepted 50 x 32 mm size is retained. No particular bulb cavity fit is demonstrated.",
+    "catalogue_parts": "17 electronic references / 16 distinct exact MPNs covered once by the purchase guide; R8/R9 share one row at quantity two. J1/J2 are bare-wire interfaces. Current BOM, exported netlist and guide MPNs agree. Each guide row contains direct HTTPS supplier URL, supplier identifier, MOQ/multiple and correctly rounded quantities for 1/5/10 boards.",
+    "current_parts": "T1 is standard Coilcraft MSS1210H-125KED, two SMD terminals with 5.5 x 3.0 mm pads at local y +/-4.75 mm; no T1 drill or custom winding remains. L1 is catalogue Wurth 768772332. R7 is HVR2500003903FR500 with normal manual lead forming and no inherited VR25 thermal resistance.",
+    "fabrication": "Upload ZIP contains exactly seven Gerbers and two drill files. All members byte-match current loose fabrication exports. Drill inventory is 25 PTH (11 vias and 14 component holes), zero NPTH and zero T1 holes. Current order metadata names the correct CAT archive, 50 x 32 mm centreline outline, 2-layer FR-4 / 1 oz / 1.6 mm / lead-free HASL and manual assembly with no stencil. Auxiliary gbrjob is excluded from upload.",
+    "portable_CAD": "130-member portable ZIP passes CRC; every member equals current source file. All 120 hardware.source_files are present, with local symbols, footprints, 17 WRL component models, experimental per-part STEP sources and registered candidate artifacts. Complete assembly WRL is supplied; STEP interoperability remains unqualified and no empty assembly STEP is represented as complete.",
+    "registered_artifacts": "All six release-candidate artifact classes exist and are hash-bound to current snapshot: Gerbers, drills, BOM, positions, front/back assembly drawings and bring-up plan. Registration reports stable true.",
+    "visual_inspection": "Actual current front/back native renders visually inspected: 17 electronic models, current two-terminal catalogue T1 and current upright R7, no apparent clipping or missing components. Two-page specification and four-page purchase-guide PDFs independently rendered and visually inspected; readable, unclipped and with explicit limitations. Native schematic, layer drawings and both assembly pages are present with board outline.",
+    "specification": "Input 207-253 VAC / 50 Hz, nonisolated output, 0-40 C laboratory ambient; nominal 60 V and 135.203 mA total regulated current, approximately 133.439 mA external LED current after bleeders. Proposed 52-68 V output, approximately 8.006 W LED power, 0.9-1.7 W assumed base losses and 82.49-89.89% calculated efficiency are labelled assumptions, not measurements. Assumed PF 0.9 is not a measured rating. T1 copper/core/thermal estimates, small minimum-on-time paper margin, HVR power screen, OVP and discharge estimates retain their uncertainty. Bring-up includes current catalogue-coil numerical checks and guarded later electrical tests; it is not energization approval. 800 lm / 4000 K / CRI80 is a target, not a measured result."
+  },
+  "archive_verification": {
+    "SC09_CAT_Gerbers_drills.zip": {
+      "sha256": "6b09789f91498fb02ba406aff433fe331e7799c65b4f89a71c6e478b3c04a5be",
+      "members": 9,
+      "crc_pass": true,
+      "loose_export_byte_parity": true
+    },
+    "SC09_KiCad.zip": {
+      "sha256": "e40d644aa452a33596b7ae8f9e5cd36cfc93211b6239354fc3467ae1755a51cd",
+      "members": 130,
+      "crc_pass": true,
+      "source_byte_parity": true,
+      "declared_sources_present": 120
+    }
+  },
+  "findings": [
+    {
+      "id": "COMP-CAT-01",
+      "severity": "major",
+      "status": "closed",
+      "issue": "Earlier current order metadata retained 27 PTH, drilled T1, custom winding and an obsolete upload filename.",
+      "closure": "Independently verified current 25 PTH / zero NPTH / zero T1 holes, two SMD lands, catalogue T1, current CAT ZIP and manual/no-stencil order scope against actual drill report and archive."
+    },
+    {
+      "id": "COMP-CAT-02",
+      "severity": "minor",
+      "status": "closed",
+      "issue": "Old VR25 upright contract could be read as current R7 assembly basis.",
+      "closure": "Old contract is explicitly historical; current HVR25 P4.8 normal lead forming, straight lead/bend and height budget are explicit. Old VR25 theta is not inherited."
+    },
+    {
+      "id": "COMP-CAT-03",
+      "severity": "minor",
+      "status": "closed",
+      "issue": "Current research package relative pointer did not resolve.",
+      "closure": "Corrected ../../../workflow pointer independently resolves from current source directory."
+    },
+    {
+      "id": "COMP-CAT-04",
+      "severity": "minor",
+      "status": "closed",
+      "issue": "Geometry/model metadata retained old R7 MPN and custom three-terminal T1 description.",
+      "closure": "Current geometry and model provenance identify HVR2500003903FR500 and catalogue Coilcraft two-SMD-terminal T1; illustrative model qualification remains explicit."
+    }
+  ],
+  "unresolved_release_gates_and_limitations": [
+    "Full Toolkit release remains FAIL with 44 reported errors; formal product, spatial/provider, stage and exact CAT01 approval requirements are not represented as passed. A complete engineering packet is not full process release.",
+    "T1 reported 1077-unit manufacturer feed/quantity-one price is dated, not a direct live checkout confirmation. U1 remains NRND with observed stock ten and separate JLC MOQ19; complete PCBA procurement is not established. Other non-LCSC offers retain indexed/cached provenance. Stock is not reserved or guaranteed.",
+    "Electrical current, losses, temperatures, dynamic OVP, faults, EMC, minimum-on-time operation and optical output require actual prototype measurements; supplier land fit and model dimensions are not physically qualified.",
+    "Strict spacing failure and package-specific bounded concessions do not establish regulatory insulation or safe assembled operation. This is a nonisolated laboratory candidate.",
+    "No supplier CAM acceptance or order was performed. Current operational order parameters explicitly exclude stencil; the historical hardware template stencil field is not an ordered stencil artifact.",
+    "Root owns subsequent master archive rebuilding, excluded derived readiness report, Git/remote publication and main-branch verification; those later outputs are outside this frozen manifest review."
+  ],
+  "current_open_artifact_completeness_findings": [],
+  "verdict": {
+    "engineering_package_completeness": "PASS_WITH_EXPLICIT_LIMITATIONS",
+    "recommendation": "Ready for root integration and human review of the complete laboratory engineering package. No remaining functional native/export/artifact completeness blocker found in this exact frozen packet.",
+    "full_toolkit_release_passed": false,
+    "qualified_power_supply_or_lamp": false,
+    "unconditional_order_release": false,
+    "all_parts_live_stock_guaranteed": false
+  }
+}

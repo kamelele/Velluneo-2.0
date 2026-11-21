@@ -1,0 +1,384 @@
+{
+  "actual_actor": "/root/final_reality",
+  "role": "Bounded catalogue inductor research implementer; no CAD or shared S/W write",
+  "date": "2026-11-21",
+  "owner_constraint": "Only catalogue/orderable supply components; previous custom-woundT1 rejected. Source only; root selects and regenerates actual two-pin circuit/map/PCB.",
+  "input_sources": [
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_pcb",
+      "sha256": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_sch",
+      "sha256": "a93749f626a98709d4b87fb0270bc2409db5944e04d367b65e31d102ac159b32"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/T1-custom-contract.json",
+      "sha256": "39d05506c010a810fb520bd5d18057c19b71f6f2d1212f9e4021412cf907790c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/bom-build.json",
+      "sha256": "054004f0328dcb34d369ee6459268d4d8a14b00ca71b4fed37a7caf3d2ea22af"
+    }
+  ],
+  "primary_cached_sources": [
+    {
+      "series": "MSS1210H",
+      "url": "https://www.coilcraft.com/getmedia/52078704-21eb-4c2b-9b72-1e07b4a2e252/mss1210h.pdf",
+      "file": "work/compact09/catalog-only/T1-sources/MSS1210H.pdf",
+      "sha256": "e82623c515ca4f3e92898593ddfd87aaee87f60d492c340808ce01316aa9f0ae",
+      "text_sha256": "bac2476e999acc90f944d43ef6e1ce381a727ef9fb65a37202395d131fd217b4"
+    },
+    {
+      "series": "MSS1260H",
+      "url": "https://www.coilcraft.com/getmedia/352767ff-7c30-4312-ab84-989443b4047e/mss1260h.pdf",
+      "file": "work/compact09/catalog-only/T1-sources/MSS1260H.pdf",
+      "sha256": "a372e92cc16b42739453c89cf4a98e876a9c049347885fd75d8b005efba0a296",
+      "text_sha256": "2aabb8c43035999f1e79634ff77ae6c1989b4034039159c5385f206e5da3e545"
+    },
+    {
+      "series": "MSS1260T",
+      "url": "https://www.coilcraft.com/getmedia/ce88ed45-272e-474e-a25e-981003944639/mss1260t.pdf",
+      "file": "work/compact09/catalog-only/T1-sources/MSS1260T.pdf",
+      "sha256": "936f2de0cd297bf1bb0ccd018fb7950021ccda2bfa721ec2e82036f2e28cdf9d",
+      "text_sha256": "adf12207cd01871b9ef788d165bde1c50bd0ce6c98cf33deb2497354cd2cf275"
+    },
+    {
+      "series": "MSS1278H",
+      "url": "https://www.coilcraft.com/getmedia/72ffd561-3941-457d-b0e7-bb55b1b2d1a7/MSS1278H.pdf",
+      "file": "work/compact09/catalog-only/T1-sources/MSS1278H.pdf",
+      "sha256": "7ca0d529db92729ada632d03b0753d48870e8edd98b1cb96478847305b5c2805",
+      "text_sha256": "aa40ed35b2dee51b3d5c63307e1a6fcf960e3e7357cc4eb40b586a8f1df0f95a"
+    },
+    {
+      "series": "MSS1583",
+      "url": "https://www.coilcraft.com/getmedia/fbfe8ea7-f5d8-4484-859e-2285f427326d/mss1583.pdf",
+      "file": "work/compact09/catalog-only/T1-sources/MSS1583.pdf",
+      "sha256": "dba193babcbf95881cc8995479ca6e99bb7ad9a431f2d6e8ce8a893cf2802d3f",
+      "text_sha256": "fbe284f72b48ba51919cdf5309336187a037951647950d869c17f00f285ef7d2"
+    }
+  ],
+  "evidence_method": "Exact primaryPDFs downloaded and parsed. MSS1210H page2 rendered and visually inspected for dimensions/land layout. Technical comparisons use only manufacturer evidence. Distributor/price observations separately identified. No primary webpage dynamic stock quantity or hot curve guaranteed bound was invented.",
+  "candidates": [
+    {
+      "mpn": "MSS1260H-105KED",
+      "requested_code_correction": "MSS1260H-105KL is not the current standard complete order code in primaryPDF. Standard Etermination,Dpackaging.",
+      "nominal_mH": 1,
+      "tolerance_percent": 10,
+      "DCR_max_25C_ohm": 1.224,
+      "voltage_max_V": 400,
+      "Isat_10_20_30percent_drop_A_at25C": [
+        0.55,
+        0.63,
+        0.69
+      ],
+      "Irms_20K_40K_rise_A": [
+        0.43,
+        0.61
+      ],
+      "nominal_body_mm": [
+        12,
+        12,
+        6
+      ],
+      "primary": "MSS1260H.pdf1671-1/2",
+      "accept_reject": "REJECT as a substantiated replacement for old.855mH@.6A hot requirement.0.6A already above25C10%Isat and below20%Isat; combined minimum0.9mH*0.9bias=.81mH below.855 even before hot reserve. Current~.487 healthy may be viable nominally but does not close corner.",
+      "procurement": {
+        "supplier": "DigiKey Marketplace,shipsfromCoilcraft",
+        "url": "https://www.digikey.com/en/products/detail/coilcraft/MSS1260H-105KED/16634609",
+        "observed_page_quantity": 533,
+        "search_index_quantity_different": 516,
+        "MOQ": 1,
+        "observed_price_USD": 4.23,
+        "page_status": "Browser-tool retrieved public page content, not checkout/reservation; count differs by cached result. Do not describe as confirmed live warehouse quantity."
+      }
+    },
+    {
+      "mpn": "MSS1260T-105KLD",
+      "nominal_mH": 1,
+      "tolerance_percent": 10,
+      "DCR_max_25C_ohm": 1.335,
+      "Isat_10_20_30percent_drop_A_at25C": [
+        0.588,
+        0.672,
+        0.726
+      ],
+      "Irms_20K_40K_rise_A": [
+        0.48,
+        0.68
+      ],
+      "voltage_max_V": null,
+      "primary": "MSS1260T.pdf599-1",
+      "accept_reject": "REJECT: no400V operating rating established in inspected primaryPDF; do not inheritH rating. At.6A the10%DCbias point is already exceeded; old hotL bound not established."
+    },
+    {
+      "mpn": "MSS1278-105KLD",
+      "nominal_mH": 1,
+      "tolerance_percent": 10,
+      "DCR_max_25C_ohm": 1.483,
+      "Isat_10_20_30percent_drop_A_at25C": [
+        0.97,
+        1.1,
+        1.1
+      ],
+      "voltage_max_V": null,
+      "primary_url": "https://www.coilcraft.com/en-us/products/power/shielded-inductors/ferrite-drum/mss-mos/mss1278/mss1278-105/",
+      "primary_download_note": "NativeMSS1278PDF endpoint challenged; primaryweb specification read. No fakecachedPDFhash.",
+      "accept_reject": "REJECT as immediately substantiated HV replacement: improved magnetic current numbers but no explicit400V rating located for this nonH version. Manufacturer confirmation would be required."
+    },
+    {
+      "mpn": "MSS1278H-105KED",
+      "nominal_mH": 1,
+      "tolerance_percent": 10,
+      "DCR_max_25C_ohm": 1.15,
+      "voltage_max_V": 400,
+      "Isat_10_20_30percent_drop_A_at25C": [
+        0.76,
+        0.87,
+        0.94
+      ],
+      "Irms_20K_40K_rise_A": [
+        0.54,
+        0.74
+      ],
+      "primary": "MSS1278H.pdf1511-1/2",
+      "accept_reject": "POSSIBLE NOMINAL candidate, but not unconditional old.855mH@.6Ahot replacement.1mH-10%=.9mH permits only5%additionaldrop to.855; neither single25CIsat table nor broadAECtemperature rating guarantees that at hot. Better than1260H, but1.2mH1210H gives clearer provisional inductance margin.",
+      "procurement": {
+        "supplier": "Mouser",
+        "url": "https://www.mouser.com/en/ProductDetail/Coilcraft/MSS1278H-105KED?qs=KUoIvG%2F9IlYjD23QVdZpNw%3D%3D",
+        "observed_indexed_quantity": 678,
+        "MOQ": 1,
+        "observed_price_USD": 2.66,
+        "alternate_supplier": "Farnell3639696,publicpage12stockcut-tapeMOQ1",
+        "alternate_url": "https://de.farnell.com/en-DE/coilcraft/mss1278h-105ked/inductor-1mh-shielded-0-74a/dp/3639696",
+        "status": "Public distributor-page observations, not reserved inventory."
+      }
+    },
+    {
+      "mpn": "MSS1583-105KED",
+      "requested_code_correction": "Manufacturer source series isMSS1583, notMSS1583H; noH part qualification assumed.",
+      "nominal_mH": 1,
+      "tolerance_percent": 10,
+      "DCR_max_25C_ohm": 0.99,
+      "voltage_max_V": 400,
+      "Isat_10_20_30percent_drop_A_at25C": [
+        1.1,
+        1.3,
+        1.4
+      ],
+      "Irms_20K_40K_rise_A": [
+        0.63,
+        0.86
+      ],
+      "published_footprint_height_mm": [
+        14.8,
+        14.8,
+        8.6
+      ],
+      "primary": "MSS1583.pdf1111-1/2",
+      "accept_reject": "Best magnetic margin among inspected1mH variants, and explicitHV rating. REJECT as envelope-preserving replacement:14.8square exceeds old12x12 area and needs new physical placement. Still does not make1.24Ahot fault safe by itself.",
+      "procurement": {
+        "supplier": "Mouser",
+        "url": "https://www.mouser.com/en/ProductDetail/Coilcraft/MSS1583-105KED?qs=ZYnrCdKdyedIGtEYD2Suyg%3D%3D",
+        "observed_indexed_quantity": 234,
+        "MOQ": 1,
+        "observed_price_USD": 3.17,
+        "alternate_supplier": "Farnell/element14code2457551",
+        "alternate_url": "https://au.element14.com/coilcraft/mss1583-105ked/inductor-1mh-10-0-86a-shld/dp/2457551",
+        "alternate_observed_page_quantity": 25,
+        "status": "Observed public distributor content; final checkout/live reservation not performed."
+      }
+    },
+    {
+      "mpn": "MSS1210H-125KED",
+      "nominal_mH": 1.2,
+      "tolerance_percent": 10,
+      "DCR_typ_max_25C_ohm": [
+        0.83,
+        1.013
+      ],
+      "voltage_max_V": 400,
+      "Isat_10_20_30percent_drop_A_at25C": [
+        0.69,
+        0.8,
+        0.86
+      ],
+      "Irms_20K_40K_rise_A": [
+        0.63,
+        0.86
+      ],
+      "SRF_typ_MHz": 1.1,
+      "primary": "MSS1210H.pdf1549-1/2Rev07/06/22",
+      "accept_reject": "PREFERRED CONDITIONAL ENGINEERING CANDIDATE if actual procurement path is confirmed. Catalogue400V component and1.2mH modestly raises timing margin; it is not pin-compatible or proven to meet hotL/fault guarantees.1.08mHminzero-bias*.9bias*.9extra-hot=.8748mH is an explicit engineering screen, not a manufacturer guaranteed minimum.",
+      "procurement": {
+        "manufacturer_url": "https://www.coilcraft.com/en-us/products/power/shielded-inductors/ferrite-drum/mss-mos/mss1210h/mss1210h-125/",
+        "manufacturer_MOQ_price_observed": {
+          "quantity": 1,
+          "USD": 3.68
+        },
+        "manufacturer_less_than_reel": "PrimaryPDF explicitly allows less-than-full-reel in tape; D denotes reel type, not forced300pcMOQ.",
+        "direct_live_stock_confirmed": false,
+        "manufacturer_dynamic_stock": "Web extraction only produced a blank quantity placeholder. Do not treat blank template as inventory. DirectHTTPpage challenged; ComputerUse stopped beforeinput because it could not determine browserURL confidently enough for policy. No bypass attempted.",
+        "third_party_index_url": "https://www.findchips.com/search/10h12",
+        "third_party_index_reported_CoilcraftDirect_quantity": 1077,
+        "third_party_index_MOQ": 1,
+        "third_party_index_USD": 3.68,
+        "stock_disposition": "Reported availability trace exists, but independent actual supplier live quantity remains unconfirmed; do not mark immediate-stock procurement closed.",
+        "other_termination_packaging": "KEB/KEC not verified; do not invent alternate completeMPN. StandardKED remains documentedpart."
+      }
+    },
+    {
+      "mpn": "MSS1210H-155KED",
+      "nominal_mH": 1.5,
+      "tolerance_percent": 10,
+      "DCR_typ_max_25C_ohm": [
+        0.97,
+        1.178
+      ],
+      "voltage_max_V": 400,
+      "Isat_10_20_30percent_drop_A_at25C": [
+        0.61,
+        0.71,
+        0.77
+      ],
+      "Irms_20K_40K_rise_A": [
+        0.58,
+        0.82
+      ],
+      "primary": "MSS1210H.pdf1549-1/2",
+      "accept_reject": "SECONDARY engineering candidate if125unavailable. MoreL timing margin but lesscurrent headroom and20%moreDCR than125; largerdeparturefromreferencecontrolfrequency. Not automatically better. Must reevaluate regulation/ZCD/minfrequency/ripple/fault behavior.",
+      "procurement": {
+        "manufacturer_url": "https://www.coilcraft.com/en-us/products/power/shielded-inductors/ferrite-drum/mss-mos/mss1210h/mss1210h-155/",
+        "manufacturer_single_qty_price_USD": 3.68,
+        "direct_live_stock_confirmed": false,
+        "third_party_index_url": "https://www.findchips.com/search/210",
+        "third_party_index_reported_CoilcraftDirect_quantity": 976,
+        "third_party_index_MOQ": 1,
+        "status": "Catalogue singlequantityoffer documented; live supplierquantity not independently confirmed."
+      }
+    }
+  ],
+  "MSS1210H_actual_geometry": {
+    "source": "MSS1210H.pdf1549-2, visually inspected renderedpage2",
+    "source_PDF_sha256": "e82623c515ca4f3e92898593ddfd87aaee87f60d492c340808ce01316aa9f0ae",
+    "render_sha256": "2e4da8f71727264d35dd2b1d4feda8f675f7e8eba1f7713351d1d6b93b60c7cf",
+    "body_nominal_xy_mm": [
+      12,
+      12
+    ],
+    "body_xy_tolerance_mm": 0.3,
+    "body_max_xy_mm": [
+      12.3,
+      12.3
+    ],
+    "height_nominal_mm": 10,
+    "height_tolerance_mm": 0.2,
+    "height_max_mm": 10.2,
+    "not_height": "10.3mm is tape pocket depth, not inductor height.",
+    "manufacturer_recommended_land_pattern": {
+      "count": 2,
+      "pad_size_xy_mm": [
+        5.5,
+        3.0
+      ],
+      "pad_centres_spacing_y_mm": 9.5,
+      "suggested_local_pad_centres_mm": {
+        "1": [
+          0,
+          -4.75
+        ],
+        "2": [
+          0,
+          4.75
+        ]
+      },
+      "inter_pad_copper_gap_mm": 6.5,
+      "view_note": "Top dot identifiespin1. Nonpolar2terminalinductor; do not assert an electrical polarity from dot. Root must bindactual chosen pins/nets and image/view convention in newintent."
+    },
+    "actual_terminals_mm": {
+      "width_x": 5.0,
+      "width_x_tolerance": 0.2,
+      "height_y": 2.4,
+      "height_y_tolerance": 0.2,
+      "between_inner_edges_y": 7.25,
+      "between_inner_edges_y_tolerance": 0.25,
+      "note": "Recommendedlandpadgeometry, not terminal-edge dimensions, should govern footprint. Only two SMD terminals; no NC pin4, no reused3-pinholes."
+    },
+    "implementation_requirements": [
+      "New2pinintendedconnectivity,schematic/library,actualfootprintandrerouting required. Not a drop-inoldEE10T1.",
+      "12.3squaremaxbody/courtyard must be repacked againstC4/C6/R7 andboardedge; height10.2doesnot includePCB/bottomparts.",
+      "Do not assume unknown componentcase provides a normative touch insulation barrier. Keep400Vworkingwindingrating separate from wholeproductinsulation."
+    ]
+  },
+  "normal_voltage_and_timing": {
+    "Vin_max_rms": 253,
+    "rectified_peak_no_drop_V": 357.7960312803931,
+    "max_coil_on_voltage_at52V_V": 305.7960312803931,
+    "startup_coil_voltage_screen_V": 357.7960312803931,
+    "rated_working_voltage_V": 400,
+    "startup_voltage_margin_V": 42.203968719606905,
+    "limit": "No overshoot/surge qualification inferred. At startup coil can see near entire rectified input; normal300Vdifference alone is insufficient.400Vrating is not a725Vsurge rating or SELV barrier.",
+    "sense_Rmax_screen_ohm": 0.589604338713728,
+    "Ipk_min25C_threshold_screen_A": 0.46302237292821274,
+    "sense_basis": "R5 .68ohm1%,200ppm/K; R6 3.65ohm1%,100ppm/K; declared100Krise; multiplicative tolerance/TCRscreen;VFBmin273mV at25C only.",
+    "TON_formula": "Lmin*Ipk_min/(253sqrt2-52); ignores bridge drops conservatively. CompareICmaxminimumON1.25us.",
+    "nominal_L_scenarios": [
+      {
+        "L_nom_mH": 1,
+        "zero_bias_L_min_mH": 0.9,
+        "assumed_bias_fraction": 0.9,
+        "assumed_additional_hot_fraction": 0.9,
+        "L_screen_mH": 0.7290000000000001,
+        "TON_screen_us": 1.1038184781252576,
+        "margin_to1p25us_percent": -11.694521749979392,
+        "L_ge_old0p855mH": false
+      },
+      {
+        "L_nom_mH": 1.2,
+        "zero_bias_L_min_mH": 1.08,
+        "assumed_bias_fraction": 0.9,
+        "assumed_additional_hot_fraction": 0.9,
+        "L_screen_mH": 0.8748000000000001,
+        "TON_screen_us": 1.324582173750309,
+        "margin_to1p25us_percent": 5.9665739000247076,
+        "L_ge_old0p855mH": true
+      },
+      {
+        "L_nom_mH": 1.5,
+        "zero_bias_L_min_mH": 1.35,
+        "assumed_bias_fraction": 0.9,
+        "assumed_additional_hot_fraction": 0.9,
+        "L_screen_mH": 1.0935000000000001,
+        "TON_screen_us": 1.6557277171878861,
+        "margin_to1p25us_percent": 32.4582173750309,
+        "L_ge_old0p855mH": true
+      }
+    ],
+    "L_for_exact1p25us_screen_mH": 0.8255433461738033,
+    "warnings": [
+      "Bias*.9 andadditionalhot*.9 are independent engineering screen choices, NOT supplied guaranteed bounds, nor a validated conversion fromIsattemperaturederating.",
+      "H125primaryPDFp2 plots representative1000uH, not guaranteed125cornercurves. Webtemperaturederatinglinkopensinteractiveanalyzer; no exact guaranteedhot125numericcurve captured.",
+      "Current nominal factor3.6 is approximate; changingL affectsswitchfrequency/ripple/EMI/dynamiccontrol. Validateoutputcurrent, ZCD/restart behavior and hotL on prototype."
+    ]
+  },
+  "thermal_and_fault_comparison": {
+    "proposed125_DCR_max_100C_ohm_copper_only_screen": 1.305827685970676,
+    "proposed125_Pcu_at0p281A_100C_W": 0.10312055990978831,
+    "old_custom_Pcu_at0p281A_R3p6_W": 0.28429020127512783,
+    "interpretation": "Catalogue125copperloss screen around.10W versus old.284W, but core/AC loss and effective thermal resistance still unknown. DatasheetIrmsrise is DCtest at25C, referenceonly/notabsolute; do not reuse it as exactbucktemperature guarantee.",
+    "fault": "Allsmallvariants have large inductance loss before1.24A, especiallyhot.1.24A itself is25CICautorestartlimit upperatstatedramp, not guaranteedalltemperature/maxdelay current. No part selection here closes single-fault safety or faultenergy. Comparepulse/saturation/draintiming in separately guarded qualification."
+  },
+  "recommendation": {
+    "primary": "UseMSS1210H-125KED only as a conditionalcatalogue-designchoice onceactualsupplieravailabilityconfirmed. Rootisauthorized1.2mHreengineeringandnew2pinCAD.",
+    "fallback": "MSS1583-105KED has stronger1mHmagneticmarginandobservedretailerstock,butlarger14.8square requiresplacementrework. H1278cataloguealternativefitsbetterbutmarginnotestablishedhottarget.",
+    "closed": "Primarycatalogueidentity,400Vrating,normal-voltageheadroom,exact125physicalmaxima/landpadsandprovisionaltimingmath.",
+    "not_closed": [
+      "Actuallive supplierquantity for125or155",
+      "Manufacturer-guaranteedhotL(I,T)andcoreloss",
+      "Faultsaturation/currentdelay/energy",
+      "New2pinintent/CAD/routing/checks/models"
+    ],
+    "no_order_or_supplier_message_sent": true
+  },
+  "computer_use_status": "Read-onlydesktoplease wasreleased afterpolicyhelperstoppedbeforeanyinput; no userbrowser/cart/login/contact state changed."
+}

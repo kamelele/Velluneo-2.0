@@ -1,0 +1,28 @@
+from pathlib import Path
+HERE=Path(__file__).resolve().parent;BASE=HERE.parent
+s=(BASE/'seed_hf.py').read_text()
+s=s.replace("R=Path(__file__).resolve().parents[1]/'Velluneo-2.0';S=R/'hardware/E27/variants/integrated-shade/SC09_compact';D=R/'hardware/E27/workflow/integrated-shade/compact-09/pcb';out=D/'routing';out.mkdir(exist_ok=True)","R=Path(__file__).resolve().parents[2]/'Velluneo-2.0';S=Path(__file__).resolve().parent/'project';D=Path(__file__).resolve().parent/'routing';out=D;out.mkdir(exist_ok=True)")
+s='\n'.join(line for line in s.splitlines() if not any(key in line for key in ['SOURCE_bypass_front','SOURCE_sense_star','Kelvin_tap_at_sense_pad','Kelvin_feedback_return_separate_from_power_pad','Kelvin_feedback_to_IC']))
+s=s.replace("[(40.5,7.605),(40.5,3.795),(41.0,3.295),(41.0,1.0)]","[(40.5,7.605),(40.5,3.795)]")
+s=s.replace("pos('T1',8)","(39.15,3)")
+s=s.replace("route('D1',1,[(39.15,3),(43.2,2.9)],k.F_Cu,.4,'power_cathode_to_inductor_front')","route('D1',1,[pos('T1',2),(43.2,2.9)],k.F_Cu,.4,'power_cathode_to_catalogue_inductor_front')")
+s=s.replace("(46.65,9.1)","(48.4,9.1)").replace("(44.8,4.35)","(44.8,4.5)")
+s=s.replace("(35,6),(48.5,6)","(35,6.5),(48.5,6.5)")
+s=s.replace("(45.7,19.8),(34,19.8)","(45.7,20.3),(35,20.3)")
+s=s.replace("(49.1,16.5)","(49.1,17)")
+extra="""via('R5',2,(39.15,3))
+route('R5',2,[(39.15,3),pos('T1',2)],k.F_Cu,.4,'sense_force_to_catalogue_coil')
+route('R5',2,[pos('R5',2),(37,2.4)],k.B_Cu,.3,'Kelvin_tap_at_R5_pad');via('R5',2,(37,2.4))
+route('R5',2,[(37,2.4),(37,4.5),(44.8,4.5)],k.F_Cu,.3,'Kelvin_separate_below_catalogue_power_pad')
+route('U1',5,[(31.5,3.5),(31.5,6),pos('R6',1)],k.B_Cu,.4,'SOURCE_sense_star_no_top_via')
+route('C5',2,[(48.85,2.9),(47.3,2.9),(47.3,5.6),(40,5.6)],k.F_Cu,.4,'SOURCE_bypass_between_new_pads');via('C5',2,(40,5.6))
+route('C5',2,[(40,5.6),(40.5,5.6)],k.B_Cu,.4,'SOURCE_bypass_to_common_IC_trunk')
+"""
+s=s.replace('# Save in a candidate first',extra+'# Save in a candidate first').replace('all47pad nets preserved','all46pad nets preserved')
+(HERE/'seed_stock.py').write_text(s+'\n')
+# Same physical field matrix/floors, private output ownership only.
+g=(BASE/'grid_expanded.py').read_text().replace("R=Path(__file__).resolve().parents[1]/'Velluneo-2.0'","R=Path(__file__).resolve().parents[2]/'Velluneo-2.0'").replace("D=R/'hardware/E27/workflow/integrated-shade/compact-09/pcb/routing'","D=Path(__file__).resolve().parent/'routing'")
+(HERE/'grid_stock.py').write_text(g)
+generic=(BASE/'generic_hf_outputs.py').read_text().replace("with_name('grid_expanded.py')","with_name('grid_stock.py')")
+(HERE/'generic_stock.py').write_text(generic)
+print('Privateprotectedseed/routerprepared;allmanufacturingand55pairtargetsunchanged')

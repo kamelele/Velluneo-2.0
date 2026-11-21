@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "role": "Change Reviewer",
+  "actual_actor": "/root/final_change",
+  "reviewed_revision": "SC09-CAT01",
+  "parent_commit": "1705d20d981f35d77bf7230a2fe7ab4f0ca9260b",
+  "reviewed_manifest": {
+    "path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\catalogue-review-inputs.json",
+    "sha256": "119d24c7339acb26b38652f2965003e8f6e0848edbb760ce40db80df7856abf5",
+    "files_verified": 232,
+    "hash_mismatches": []
+  },
+  "superseded_review_inputs": [
+    {
+      "sha256": "49001f5cd5862908fba58199c60f276e1453f59daf92abc6f32fe55240524bd5",
+      "scope": "Initial candidate; provenance/order metadata corrections required new freeze."
+    },
+    {
+      "sha256": "7d0c051ec575ad99a324a07ebec76a962ac76468e1d1e821786b4084f47beb24",
+      "scope": "Intermediate correction candidate; final order-parameters and metadata changes supersede it."
+    }
+  ],
+  "source_hashes": {
+    "PCB": "8aac351c09f351ce5a8f68e7e4a4cce23bb920bff34b63afa889307c5c242e6f",
+    "schematic": "41db1c8b4ba434f73a7fd6cf0366143a2c329cc383a754c857c80ce3dad38d8e",
+    "CAT01_intent": "f942fe226fe255f954e7bbcb729468f8151bea4560b14b8819f5e19ada83f1d2",
+    "pinned_toolkit_source_snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+  },
+  "scope": "Read-only review of actual root catalogue integration: selected stock T1/L1/R7, new two-terminal T1 graph, actual saved sources/exports/rules/configuration and authority boundaries. Not a human approval, unconditional order release, powered qualification or independent procurement review of this reviewers own research.",
+  "independence_disclosure": {
+    "prior_contribution": "This reviewer researched U1/L1 catalogue procurement and technical facts, authored U1-L1-procurement.json and cached its public sources. Also advised earlier lifecycle registration structure. Root alone selected/adopted parts and edited CAD/configuration/packet.",
+    "retained_independent_scope": "I independently inspected the actual root implementation, native physical graph, local footprint parity, current MPNs, source/report/artifact hashes, global rule/config state, actual order metadata and honest approval/release scope.",
+    "excluded_independence_claim": "Do not count this report as an independent origin or independent procurement validation of my own U1/L1 research. Other actual review contexts cover electrical/source adequacy and procurement coverage.",
+    "write_scope": "Only work/compact09/catalog-only/reviews/change.json; no CAD/source/package writes."
+  },
+  "checks": [
+    {
+      "id": "CC-C01",
+      "result": "pass",
+      "evidence": "Final 232 manifest file hashes all match. Current full-check source input files all match actual sources; actual pinned launcher snapshot independently returns 9a936306...a46ec, agreeing with final manifest and all release registration entries."
+    },
+    {
+      "id": "CC-C02",
+      "result": "pass",
+      "evidence": "Native pcbnew10.0.6 read-only load independently confirms 19 references, 46 physical pads, 11 intended nets, zero NC and zero native unconnected. Every pad reference/number/net exactly matches CAT01 expected graph, not a graph inferred from CAD."
+    },
+    {
+      "id": "CC-C03",
+      "result": "pass",
+      "evidence": "Independent comparison of A1 functional membership after only T1.8->T1.2 remap equals CAT01. T1.1 remains LED_PLUS; old unwound T1.4 is removed. All other reference/pin/net membership is unchanged. Fresh XML hash9eb6fc5b...d00d matches retained engineering comparison; pin sets equal."
+    },
+    {
+      "id": "CC-C04",
+      "result": "pass",
+      "evidence": "All19native PCB MPN fields equal bom-build.json. T1=MSS1210H-125KED, L1=768772332, R7=HVR2500003903FR500; current supplier BOM agrees. All19 native pad number/centre/size/drill/shape/layer geometries match canonical local footprints under actual side/pose transforms."
+    },
+    {
+      "id": "CC-C05",
+      "result": "pass_with_limits",
+      "evidence": "Actual T1 is SMD with two5.5x3.0mm lands centred at(143,111.7)/(143,102.2)mm, no drill/third pad. L1 retains two1.2mmholes/P5.0038 as nominal manufacturer-compatible catalogue pattern with manual free-lead fit inspection. Native inventory25PTH=14componentholes+11vias,0NPTH; retained drill report agrees."
+    },
+    {
+      "id": "CC-C06",
+      "result": "pass",
+      "evidence": "Global custom rules remain clearance.3/track.3/hole.3/annulus.2/edge.5mm, exactly unchanged prior config. Managed config-state SHA23c5c1b1...e11c2 unchanged; actual project DRC exclusions=[]; minimums/netclass preferences unchanged. Retained configure preview is empty(diff_bytes0), no apply or severity waiver introduced."
+    },
+    {
+      "id": "CC-C07",
+      "result": "pass_with_limits",
+      "evidence": "Current native ERC/DRC/parity reports have zero violations/unconnected/parity. Bounded55pair saved-copper screen passes for exact8aac351c...42e6f board; strict intrinsic package-spacing FAIL remains explicit. Two-pass native refill report shows exact saved/fresh polygons and source unchanged. No technical check implies normative insulation or measured thermal behavior."
+    },
+    {
+      "id": "CC-C08",
+      "result": "pass",
+      "evidence": "All six release artifact classes/seven entries are actual project-local files with correct SHA/current snapshot. Rawhardware and release outputs are excluded from source input list; design configuration remains hashed by pinned algorithm. PortableKiCadZIP CRC passes, all declared source inputs present, every archived file byte matches actual current source. Vendor archive CRC passes with exactly seven Gerber layers and two drill programs."
+    },
+    {
+      "id": "CC-C09",
+      "result": "pass_with_limits",
+      "evidence": "CAT01 approval is null, hardware connectivity_file points to CAT01 and hardware.approvals remains{}. Old A1 approval is explicitly historical and is not transferred. Full Toolkit check remains FAIL with44 retained findings including missing current graph approval, formal spatial/provider/stage approval/product evidence/physical gates. No agent-generated PASS or individual human acceptance is fabricated."
+    },
+    {
+      "id": "CC-C10",
+      "result": "pass_with_limits",
+      "evidence": "Current README distinguishes catalogue-only package from historical custom-T1 prototype package. Catalogue offers/current SSR stock/not-reserved paths are separated; U1NRND/limited10units/JLCMOQ mismatch remain explicit. No statement that every distributor quantity was verified live at checkout, or that a qualified product/order was released."
+    },
+    {
+      "id": "CC-C11",
+      "result": "pass_with_limits",
+      "evidence": "Viewed actual CAT front render: replaced T1 is a two-terminal moulded catalogue package with pin1 dot near assigned lower pad; L1 smaller catalogue appearance and current standing R7 are present. Source inventory17models/2bare-wire interfaces; generic appearances are not supplier/sample qualification."
+    }
+  ],
+  "findings": [
+    {
+      "id": "CC-01",
+      "severity": "minor_provenance_navigation",
+      "status": "closed",
+      "object": "catalogue-engineering-status.json.current_research_package",
+      "original_finding": "Path used four parent traversals, resolving outside E27/workflow to a missing directory.",
+      "root_correction": "Changed to ../../../workflow/integrated-shade/compact-09/catalogue-package/research.",
+      "independent_closure": "Final pointer resolves to the actual research directory and all4 research file hashes match source-basis.CAT01 references.",
+      "closure_manifest": "119d24c7339acb26b38652f2965003e8f6e0848edbb760ce40db80df7856abf5"
+    },
+    {
+      "id": "CC-02",
+      "severity": "major_before_manufacturing_packet_handoff",
+      "status": "closed",
+      "object": "catalogue-package/order-parameters.json",
+      "original_finding": "Copied historical metadata referred to absent old uploadZIP,27PTH, drilled T1 and custom coil despite new catalogue SMD T1.",
+      "root_correction": "Final parameters name SC09_CAT_Gerbers_drills.zip,25PTH/0NPTH,T1SMDtwo lands/zeroT1holes,stencilNone/manualcatalogueparts/no customwinding.",
+      "independent_closure": "Actual native14componentholes+11vias=25PTH and retained drill report agree. Exact named vendorZIP exists, has9correctlayers/drillfiles and CRC passes. Current parameters match final board/process.",
+      "closure_manifest": "119d24c7339acb26b38652f2965003e8f6e0848edbb760ce40db80df7856abf5"
+    },
+    {
+      "id": "CC-03",
+      "severity": "minor_metadata",
+      "status": "retained_historical_embedded_description_with_explicit_root_disposition",
+      "object": "Native PCB embedded R7 library description",
+      "finding": "Embedded description still says VR25/sameMPN and old11mm wording, while actual nativeMPN/value, canonicaldescription and current geometry/model metadata correctly identify HVR25 and11.5mm planned forming envelope.",
+      "impact": "No wrong pin/net/MPN selection or geometry was found; historical display string is not the current BOM/assembly authority.",
+      "disposition": "Root explicitly retains/discloses the embedded historical display description in integration; do not use it to purchase oldVR25 or infer old thermal data."
+    }
+  ],
+  "limits": [
+    "This is an engineering review recommendation, not a grant of CAT01 human graph/stage approval or manufacturing release.",
+    "Normal lead forming/support, actual sample fit, T1 magnetic/hot/fault behavior, R7 aging/derating, surge/EMC/insulation and all powered measurements remain unqualified. Stock catalogue selection does not supply those measurements.",
+    "T1 changes inductance to1.2mH and physical terminal map, so oldA1/customcoil stage/check claims are not inherited; retain CAT01-specific engineering evidence.",
+    "This reviewer does not independently validate original U1/L1 procurement research as its author; actual root adoption is independently inspected here.",
+    "Root still owns final derived integration/readiness record, exact delivery packaging and Git publication/main-preservation verification."
+  ],
+  "recommendation": "ready_for_human_review_of_SC09_CAT01_catalogue_engineering_packet; no unresolved blocking change-regression found within this stated engineering/artifact scope. Full physical product release and unconditional order approval are not granted.",
+  "blocking_findings_in_reviewed_engineering_scope": [],
+  "full_Toolkit_release_passed": false,
+  "exact_CAT01_human_graph_approval_claimed": false,
+  "physical_measurements_performed": false,
+  "purchase_or_supplier_message_performed": false,
+  "input_manifest_sha256": "119d24c7339acb26b38652f2965003e8f6e0848edbb760ce40db80df7856abf5"
+}

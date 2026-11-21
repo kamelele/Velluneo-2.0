@@ -451,12 +451,12 @@
       "wrl": "SC09_L1.wrl",
       "step": "SC09_L1.step",
       "mesh_bbox_mm": [
-        -5.4,
-        -5.4,
+        -4.15,
+        -4.15,
         -1.7,
-        5.4,
-        5.4,
-        11.93
+        4.15,
+        4.15,
+        10.469
       ],
       "geometry_source": {
         "refs": [
@@ -504,22 +504,22 @@
           }
         ],
         "max_body_bbox_xy_mm": [
-          -5.4,
-          -5.4,
-          5.4,
-          5.4
+          -4.15,
+          -4.15,
+          4.15,
+          4.15
         ],
         "courtyard_bbox_xy_mm": [
-          -5.9,
-          -5.9,
-          5.9,
-          5.9
+          -4.65,
+          -4.65,
+          4.65,
+          4.65
         ],
-        "planned_max_above_PCB_mm": 11.93,
+        "planned_max_above_PCB_mm": 10.5,
         "sources": [
           "Renco_L1"
         ],
-        "design_basis": "ManufacturerF.197inleadformingpitch;bodydiammax(.375+.050)in=10.795mmrounded10.8,B11.43. Two1.2finishedholes/2.3pads/.5stand-off/.5courtyardareengineeringchoices.",
+        "design_basis": "Wurth768772332catalogue3.3mHHV400V,bodyD8.3/H10max+.5seating,P5±.5/freeleadforming;manufacturerrecommended1.2holes;compatibleP5.0038retained.",
         "notes": [
           "Wire.8128mmTYPnotguaranteedmax;actualsampleandformingjigrequired.",
           "Do not useC=.375inaspinpitch:itisminimumshortleadlength9.525mm.",
@@ -547,12 +547,14 @@
         ],
         "footprint": "E27SC09:SC09_L1"
       },
-      "mesh_count": 67,
+      "mesh_count": 69,
       "kind": "Original custom illustrative package; not manufacturer-qualified model",
       "sha256": {
-        "wrl": "7a45d5f647994233b229a62ff8b5d81836a2cfe107f130e11e0965f315ebcf91",
-        "step": "c6155065cc97253fcbeccc6caef957ffb9cc709197eeb9046f6924c35b5d0c7d"
-      }
+        "wrl": "d9fe1356ae6e23b511eb692f1fbb425a0ecd74878e81b437214c516e63c6b506",
+        "step": "e85ca12258c34e303be61ef6e0279017cdf052e45a4a491a7ec3837e581db23c"
+      },
+      "actor": "/root",
+      "revision": "SC09-CAT01cataloguepackage"
     },
     {
       "ref": "C4",
@@ -1416,90 +1418,80 @@
       "mesh_bbox_mm": [
         -6.0,
         -6.0,
-        -1.7,
+        0.0,
         6.0,
         6.0,
-        13.0
+        10.033
       ],
       "geometry_source": {
         "pads": [
           {
             "number": "1",
             "center_mm": [
-              -3.85,
-              4
+              0,
+              4.75
             ],
             "size_mm": [
-              1.8,
-              1.8
+              5.5,
+              3.0
             ],
-            "drill_mm": 0.85,
-            "kind": "thru_hole",
+            "drill_mm": null,
+            "kind": "smd",
             "shape": "rect"
           },
           {
-            "number": "4",
+            "number": "2",
             "center_mm": [
-              3.85,
-              4
+              0,
+              -4.75
             ],
             "size_mm": [
-              1.8,
-              1.8
+              5.5,
+              3.0
             ],
-            "drill_mm": 0.85,
-            "kind": "thru_hole",
-            "shape": "circle"
-          },
-          {
-            "number": "8",
-            "center_mm": [
-              -3.85,
-              -4
-            ],
-            "size_mm": [
-              1.8,
-              1.8
-            ],
-            "drill_mm": 0.85,
-            "kind": "thru_hole",
-            "shape": "circle"
+            "drill_mm": null,
+            "kind": "smd",
+            "shape": "rect"
           }
         ],
         "max_body_bbox_xy_mm": [
-          -6,
-          -6,
-          6,
-          6
+          -6.15,
+          -6.15,
+          6.15,
+          6.15
         ],
-        "planned_max_above_PCB_mm": 13,
-        "design_basis": "CustomT1contract12x12x13;documentedouterterminal7.7x8;explicitours1/4/8marking/windingcontract—not originalEE1016dimensions.",
+        "planned_max_above_PCB_mm": 10.3,
+        "body_height_manufacturer_max_mm": 10.2,
+        "proposed_solder_seating_allowance_mm": 0.1,
         "courtyard_polygon": [
           [
-            -6.25,
-            -6.25
+            -6.4,
+            -6.5
           ],
           [
-            6.25,
-            -6.25
+            6.4,
+            -6.5
           ],
           [
-            6.25,
-            6.25
+            6.4,
+            6.5
           ],
           [
-            -6.25,
-            6.25
+            -6.4,
+            6.5
           ]
         ],
-        "footprint": "E27SC09:SC09_T1"
+        "footprint": "E27SC09:SC09_T1",
+        "design_basis": "ManufacturerMSS1210Hrecommendedlands,page2;nonpolarterminal1LED/2FBisexplicitdesignassignment.Notcustomcoil/3rdNC."
       },
-      "mesh_count": 88,
+      "mesh_count": 116,
       "kind": "Original custom illustrative package; not manufacturer-qualified model",
       "sha256": {
-        "wrl": "7384bcb2102f4e7d86be685dd66f965f5ff8c52126d5811fc33af7607dddfa2a",
-        "step": "8027445511bae742949d2d1785136c62dc867df29f1c93033363a4732177d4f5"
-      }
+        "wrl": "339baae6810958d13f7271e54672e2e3d60078b49b97a425946f1c7d22c6f2e8",
+        "step": "236f640d2a034ea3c264b4cccc0eff9b67292a43b0668e424579074f8c1c9774"
+      },
+      "actor": "/root",
+      "revision": "SC09-CAT01cataloguepackage"
     },
     {
       "ref": "C6",
@@ -1650,17 +1642,17 @@
       "step": "SC09_R7.step",
       "mesh_bbox_mm": [
         -1.25,
-        -5.1,
+        -5.115,
         -1.7,
         1.25,
         1.25,
-        10.099998721645306
+        11.31499865772757
       ],
       "geometry_source": {
         "refs": [
           "R7"
         ],
-        "mpn": "VR25000003903FR500",
+        "mpn": "HVR2500003903FR500",
         "units": "mm",
         "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
         "pads": [
@@ -1700,16 +1692,16 @@
           1.25
         ],
         "courtyard_bbox_xy_mm": [
-          -7.75,
-          -1.75,
-          7.75,
-          1.75
+          -1.5,
+          -1.5,
+          1.5,
+          6.05
         ],
-        "planned_max_above_PCB_mm": 10.15,
+        "planned_max_above_PCB_mm": 11.5,
         "sources": [
           "Vishay_R7"
         ],
-        "design_basis": "SameVR25MPN390k; customstandingP4.8forming. Rootassembled-envelopeproposal,physicaljig/inspectionremainunqualified.",
+        "design_basis": "CatalogueHVR2500003903FR500390k1%1600V/.25W;coatedL2max7.5,D2.5,leadmax.63. StandingP4.8normalmanualformingproposal:bodyseating.5,2mmstraightleadabovemaxbodybeforeR1bend,peak~11.315,maxbudget11.5. Actualformedpartinspectionrequired.",
         "notes": [
           "Noquantifiedmanufacturerminimumleadbenddistancefound. Do not claim1.5/1.0isvendorapproved.",
           "Actualcoil/resistorheatingandcase/sealforcesrequireprototypeverification."
@@ -1718,19 +1710,35 @@
         "electrical_clearance_claim": false,
         "courtyard_polygon": [
           [
-            -7.5,
+            -1.5,
             -1.5
           ],
           [
-            7.5,
+            1.5,
             -1.5
           ],
           [
-            7.5,
+            1.5,
             1.5
           ],
           [
-            -7.5,
+            1.25,
+            1.5
+          ],
+          [
+            1.25,
+            6.05
+          ],
+          [
+            -1.25,
+            6.05
+          ],
+          [
+            -1.25,
+            1.5
+          ],
+          [
+            -1.5,
             1.5
           ]
         ],
@@ -1739,11 +1747,11 @@
       "mesh_count": 8,
       "kind": "Original custom illustrative package; not manufacturer-qualified model",
       "sha256": {
-        "wrl": "b9343955269de8211ff71199f2e31c31a5c16132d6c68f87b262338201f10eaf",
-        "step": "1a9edbb8ec720eead0998642c405d278b3241b405e433fa720ba29a52be83e8b"
+        "wrl": "fe3dbba5a9476ac31a652c3701a0e9dc5005f46ac35558ce878c03b7d83aca2d",
+        "step": "f9b749dd77cfcd883697ff3ff146d020d51395eb4368647d9c292921985944d7"
       },
       "actor": "/root",
-      "revision": "StandingP4.8sameVR25part"
+      "revision": "SC09-CAT01cataloguepackage"
     },
     {
       "ref": "R8",
@@ -1973,14 +1981,18 @@
   },
   "limits": [
     "Colors, markings, copper winding appearance and number of visible turns are illustrative; no supplier marking or winding approval.",
-    "T1 is custom design contract12x12x13mm; not claimed as manufacturer-qualified EE10 geometry.",
     "C6/RF1/R7 lead forming is an engineering assembly proposal requiring actual jig/sample verification.",
     "These models do not establish clearances, touch protection, thermal behavior, electrical qualification, tolerances or approval.",
-    "STEP is a faceted visual mesh export, not a parametric supplier solid."
+    "STEP is a faceted visual mesh export, not a parametric supplier solid.",
+    "T1CAT01 models catalogueCoilcraftMSS1210H-125KED, two SMD terminals. Original illustrative geometry, not supplier-certified model."
   ],
   "provenance": "Original geometry authored for SC09; primitive/output utility patterns adapted from workspace work/sc08_make_3d.py without executing that historical CAD writer.",
-  "root_R7_change": "RootupdatedonlyR7afterstandingassemblyselection. Other16originalmeshesunchanged. Closedmeshchecked; nophysicalformingqualification.",
-  "root_current_geometry_sha256": "ce21b982a947856ff72ae33484da8cea931992ab5a6cf57ea1ddca6b121949df",
+  "root_R7_change": "CAT01HVR25 normalmanualformed cataloguepart; planned11.5mmheight, noVR25theta transfer.",
+  "root_current_geometry_sha256": "a8ccb85f8438c6610ae0cc17c6b4b692d7793d7b9da617da8cd2187e9487c018",
   "interoperability_limit": "Native10.0.6VRMLrender/exportverified. Experimentalper-partSTEPfacetswereNOTsuccessfullyconvertedtofullcomponentgeometrybythenativeSTEPexporter. NoqualifiedSTEPassemblydelivered.",
-  "root_current_geometry_note": "CurrentCADdrillsT1=1.20mm;17visualmeshesunchanged. Modelgeometry_sourcehistoricalauthoringrecordsarenotredefinedasnewmanufacturersamples."
+  "root_current_geometry_note": "CAT01: manufacturer two SMD lands forT1, normal manual leadforming for RF1/R7/C6; currentgeometryhashabove. No custom winding.",
+  "root_catalogue_change": "T1nowCoilcraft2terminalstockSMD,markerdotatmodelYnegativealignsfootprintpin1atpositiveY;L1stockWurthdrum;R7catalogueHVRconservativecoatedenvelope/2mmstraightleadforming. Other14WRLmeshesunchanged. NativeVRMLverified,STEPfacetsnotqualifiedinterchange.",
+  "limitations": [
+    "T1CAT01 is an original illustrative model of catalogueMSS1210H-125KED, not a manufacturer-certified STEP solid."
+  ]
 }

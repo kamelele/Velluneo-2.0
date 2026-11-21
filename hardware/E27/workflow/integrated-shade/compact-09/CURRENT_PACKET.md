@@ -1,5 +1,3 @@
-# CurrentSC09 accepted-size bare laboratory PCB
+# Current packet: SC09-CAT01 catalogue-only
 
-Current exactinputs: order-review-inputs.json; currentindependentroles: prototype-package/order-reviews; coordinatorintegration: order-integration.json; scopedresult: prototype-package/bare-board-readiness.json. Owneraccepts50x32. No knownblockingbare-artwork/drill/contract-fitdefectremainsafterlegend/T1hole/metadata/registrationcorrections. OrdinarysupplierCAMpreviewandprocessselectionremainbeforecheckout.
-
-SpecificationPDF/JSONcontainscorrectbleeder-inclusivearithmeticandexplicitunvalidatedtemperature/power/PFscenarios. FullToolkitproductreleaseFAIL,physicalassembly/poweredtestsandfinishedlampqualificationremainseparate. No actualpurchase/suppliermessage/poweredtest. Earlierfinal-review-inputs/final-integration/reviewsarehistorical082ffdbscope. Mainoutsidewrite scope.
+Use catalogue-package/README.md and current SC09_compact CAD. The older prototype-package, order-review-inputs, customT1 contracts and old SC09_Pakiet_prototyp_lab.zip are historical1705d20/customcoil scope and do not fit the new catalogueT1. CAT01 removes customwinding; changed physicalpin map requires fresh checks and does not inheritA1humanapproval. Root is soleCADwriter; main outsidewrite scope.

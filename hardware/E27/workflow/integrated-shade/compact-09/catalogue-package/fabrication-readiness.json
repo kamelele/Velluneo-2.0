@@ -1,0 +1,94 @@
+{
+  "revision": "SC09-CAT01",
+  "coordinator": "/root",
+  "status": "catalogue-only_engineering_package_prepared_for_review; NOT_full_product_or_unconditional_order_release",
+  "PCB_mm": [
+    50,
+    32
+  ],
+  "approximate_module_mm": [
+    50,
+    32,
+    19.5
+  ],
+  "electrical_positions": 17,
+  "unique_catalogue_MPNs": 16,
+  "custom_wound_parts": 0,
+  "all_parts_have_catalogue_purchase_paths": true,
+  "all_parts_live_stock_verified": false,
+  "T1_stock_note": "Manufacturer feed reports1077; direct live manufacturer checkout stock not verified. Recheck before committing to fabrication/purchase.",
+  "U1_note": "NRND; LCSC exactstock10observedMOQ1; JLCMOQ19 does not confirm fullPCBA path.",
+  "manufacturing_export": "SC09_CAT_Gerbers_drills.zip",
+  "manufacturing_archive_sha256": "6b09789f91498fb02ba406aff433fe331e7799c65b4f89a71c6e478b3c04a5be",
+  "upload_members": 9,
+  "PTH_count": 25,
+  "NPTH_count": 0,
+  "T1_mounting": "2SMDlands;zeroholes",
+  "board_sha256": "8aac351c09f351ce5a8f68e7e4a4cce23bb920bff34b63afa889307c5c242e6f",
+  "schematic_sha256": "41db1c8b4ba434f73a7fd6cf0366143a2c329cc383a754c857c80ce3dad38d8e",
+  "source_snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec",
+  "input_manifest_sha256": "119d24c7339acb26b38652f2965003e8f6e0848edbb760ce40db80df7856abf5",
+  "frozen_inputs": 232,
+  "frozen_hashes_verified": true,
+  "native_ERC": 0,
+  "native_DRC": 0,
+  "native_unconnected": 0,
+  "native_schematic_parity_errors": 0,
+  "independent_CAT01_pin_set_comparison": true,
+  "two_pass_fill_exact_polygon_equality": true,
+  "bounded_planar_spacing_pass": true,
+  "strict_spacing_pass": false,
+  "spacing_scope": "Bounded finite package-land/shortescape laboratory engineering assessment. Not a standards waiver or proof of3Dair/solder insulation.",
+  "adversarial_checker_controls_passed": 21,
+  "independent_reviews": [
+    {
+      "role": "Reality Checker",
+      "actual_actor": "/root/cat_reality_review",
+      "path": "reviews/reality.json",
+      "sha256": "c623502e42d683979ca49534e938a06f0488cda8886123ccdb0c5e8715b1a7d1"
+    },
+    {
+      "role": "Overengineering Reviewer / Simplicity",
+      "actual_actor": "/root/cat_simplicity_review",
+      "path": "reviews/simplicity.json",
+      "sha256": "40c6b2abaa52d3a1ee3df704c33219aa4876614ea9679ccf3f94fdc175aeb3f0"
+    },
+    {
+      "role": "Completeness reviewer of root final catalogue integration",
+      "actual_actor": "/root/final_completeness",
+      "path": "reviews/completeness.json",
+      "sha256": "3486bd9b2d545538ff10988446fe260592ef96acc559a0ff77d030d63577a99f"
+    },
+    {
+      "role": "Change Reviewer",
+      "actual_actor": "/root/final_change",
+      "path": "reviews/change.json",
+      "sha256": "225b705b63be760b49c324dfbf863c2cf5f8d78074325f7fc042bda9c5ec5858"
+    }
+  ],
+  "closed_findings": [
+    "BRINGUPold1mH/47pin/oldthermalcriteria replaced directly",
+    "R7standingcontractmarkedhistorical; activeHVRMPNmetadata corrected",
+    "ModelInfoactualoldcustomT1limitremoved",
+    "Currentresearchrelativepathcorrected",
+    "OrderparameterscurrentCATZIP/25PTH/T1SMD/no customwindingcorrected"
+  ],
+  "retained_minor_documentary_note": "EmbeddedboardR7librarydescriptioncontainslegacyVR25/11mm prose. ActualnativeMPN/value, canonicalfootprintdescription, currentgeometry/model, BOM and11.5mmplanningarecorrect. Treatembeddedproseashistoricaldisplaytext,notactivepart/heightauthority. No physicalpin/copper/modeldifference.",
+  "full_product_toolkit_release_passed": false,
+  "new_exact_human_graph_approval": null,
+  "supplier_CAM_acceptance_obtained": false,
+  "physical_measurements_performed": false,
+  "qualified_powered_use": false,
+  "order_placed": false,
+  "supplier_message_sent": false,
+  "conditions_before_bare_fabrication_commitment": [
+    "ConfirmactualsupplierstockforexactMPNs,especiallyT1/U1",
+    "ReviewactualsupplierCAM/process/price",
+    "EngineeringpacketdoesnotfabricatehumanstageapprovalorcompleteToolkitrelease"
+  ],
+  "conditions_before_power": [
+    "Sampleinspection/manualforming/support/vent/strainrelief",
+    "Qualifiedguardedfixture/operator/separatelydefinedtestlimits",
+    "Current/ripple/OVP/discharge/hotbias/loss/temperature/fault/surge/EMC/insulationvalidation"
+  ]
+}

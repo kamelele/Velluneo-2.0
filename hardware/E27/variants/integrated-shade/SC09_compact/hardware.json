@@ -18,7 +18,7 @@
   },
   "product": {
     "requirements_file": "requirements.json",
-    "connectivity_file": "intended-connectivity.A1.json",
+    "connectivity_file": "intended-connectivity.CAT01.json",
     "spatial_file": null,
     "domains": [
       {
@@ -52,7 +52,7 @@
       "NoSELVoutput",
       "Functional55pairmatrixindependentofglobalmanufacturingfloor",
       "NoautomaticIECcomplianceorsafetyapproval",
-      "CustomT1andRF1assemblycontractsrequiresupplier/physicalverification"
+      "SC09-CAT01catalogueT1;noone-offwinding;normalmanualaxialleadformingandsampleinspectionremain"
     ],
     "barriers": [],
     "standards_review_evidence": "functional-spacing-design.json (engineeringprototypebasis;notnormativequalification)"
@@ -134,6 +134,7 @@
     "Models/SC09_T1.wrl",
     "Models/SC09_U1.step",
     "Models/SC09_U1.wrl",
+    "Models/catalogue-model-checks.json",
     "Models/model-checks.json",
     "PowerFlags.kicad_sym",
     "R7-standing-contract.json",
@@ -148,12 +149,15 @@
     "bom-proposal.A1.json",
     "bom-proposal.json",
     "calculated-proposal.json",
+    "catalogue-design-calculations.json",
+    "catalogue-engineering-status.json",
     "driver-led-interface.proposed.json",
     "footprint-assignments.json",
     "footprint-geometry.json",
     "fp-lib-table",
     "functional-spacing-design.json",
     "intended-connectivity.A1.json",
+    "intended-connectivity.CAT01.json",
     "intended-connectivity.json",
     "intended-connectivity.toolkit.json",
     "mechanical-budget.proposed.json",
@@ -162,6 +166,7 @@
     "owner-A1-map-approval.json",
     "owner-SC09-direction-map-approval.json",
     "owner-autonomous-completion.json",
+    "owner-catalogue-only-request.json",
     "owner-current-brief.json",
     "owner-process-line-decision.json",
     "owner-prototype-scope.json",
@@ -183,6 +188,7 @@
     "reference/rdr464-verified-U1-pins.json",
     "requirements.json",
     "source-basis.A1.json",
+    "source-basis.CAT01.json",
     "source-basis.json",
     "spatial-constraints.json",
     "standards-and-test-plan.json",
@@ -197,48 +203,48 @@
     "gerbers": [
       {
         "path": "release-candidate/SC09_do_zamowienia_PCB.zip",
-        "sha256": "f3369e378bb58194369b153913f296249a5773ef63bd9332a0017ac1c433e71a",
-        "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+        "sha256": "6b09789f91498fb02ba406aff433fe331e7799c65b4f89a71c6e478b3c04a5be",
+        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
       }
     ],
     "drills": [
       {
         "path": "release-candidate/SC09_drills.zip",
-        "sha256": "9182996e7468dd7ee1144afdd4e81f1b9bf9a383d3989b9a5df509d92ee52d5c",
-        "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+        "sha256": "5ed387d2fc16e7dadb2cedc3afd69195ba835ab67c2dbcddde3d675b90f55fc5",
+        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
       }
     ],
     "bom": [
       {
         "path": "release-candidate/SC09_BOM.csv",
-        "sha256": "74e34c28bebff4249e1a1aa908273292e3526945093e887be591e2c7cf0cd843",
-        "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+        "sha256": "234548a3c34bfb821039a89f27e28aeeefc8a35d778539953b501f03ef6824ab",
+        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
       }
     ],
     "positions": [
       {
         "path": "release-candidate/SC09_positions_manual_reference.csv",
-        "sha256": "287b65321b11eccf70ace5a2af238245a1e387bff10fce431cf706c3da7f2225",
-        "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+        "sha256": "843e9dbb93360204f776ed3dcd0c4ecb8892dd99feaa085bfcfe2c7692a70df5",
+        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
       }
     ],
     "assembly_drawing": [
       {
         "path": "release-candidate/SC09_assembly_front.pdf",
-        "sha256": "020a88c41782eb7843e4e4e087794ee13053b453e7bbe6d5c4ad38c3912b4761",
-        "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+        "sha256": "bbc31460aaecc7a4585f664ffb438d82a972c075f1329af9ed9fae13074eb96d",
+        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
       },
       {
         "path": "release-candidate/SC09_assembly_back.pdf",
-        "sha256": "6e821ffce61471e9668afea82a921fce46efdd4c4ba1998e5525c9115c0a9899",
-        "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+        "sha256": "03efd6315168a5d238d855fcb84cd66c48e175113f856ec67a710bb650a684e8",
+        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
       }
     ],
     "bringup_plan": [
       {
         "path": "release-candidate/BRINGUP.md",
-        "sha256": "a0e22b338bee1c052b43a132e4c306845e3c44dc5b83cc6ecdd5b81d08fa20e1",
-        "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+        "sha256": "911ef6038fdfd020153d1ca8ac1b17f00824dcbf3b49195768a8d04df6c1e54f",
+        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
       }
     ]
   }

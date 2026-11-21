@@ -1,6 +1,6 @@
 {
   "kind": "Exact physicalpin symbols; not footprint or functionalqualification",
-  "actual_approved_intent_digest": "c4e0b928ce5b63c067f9eb6c36cc7d582f6852369da961d6b318686c97b6d9fd",
+  "engineering_intent_digest": "668539f2373d85b687f72dacc86a09e214f5f25a718d0684229e5493dc90abad",
   "symbols": {
     "J1": {
       "library_id": "E27SC09:SC09_J1",
@@ -274,7 +274,7 @@
     "T1": {
       "library_id": "E27SC09:SC09_T1",
       "pins": {
-        "8": {
+        "2": {
           "x": -7.62,
           "y": 0,
           "angle": 0,
@@ -285,12 +285,6 @@
           "y": 0,
           "angle": 180,
           "electrical_type": "passive"
-        },
-        "4": {
-          "x": 0,
-          "y": -7.62,
-          "angle": 90,
-          "electrical_type": "no_connect"
         }
       }
     },
@@ -382,12 +376,15 @@
   },
   "U1_type_basis": "Dpower_in startup/regulatorfeed;BPpower_out internalregulator;M/FBinputs;SpassivecommonMOSFET/referenceconductionterminals. Not allpassive and not overrides.",
   "PWR_FLAG_basis": "BR1rectifiedoutput through actualL1filter feedsU1D; one virtualflag BUS_FILTERED, not an invented externalrail.",
-  "footprints": "Assigned manufacturer lands and custom coil/forming contracts; physical qualification remains open.",
+  "footprints": "CatalogueT1manufacturerlands,stockWurthL1/HVR25; routine RF1/R7/C6leadforming and sampleinspection remain.",
   "parts_reports": {
     "active": "reference/active-parts-report.json",
     "passive": "reference/passive-parts-report.json"
   },
   "native_component_count": 19,
-  "physicalpins": 47,
-  "NC": 1
+  "physicalpins": 46,
+  "NC": 0,
+  "catalogue_revision": "SC09-CAT01",
+  "current_graph": "intended-connectivity.CAT01.json",
+  "historical_notes": "Any prior custom-winding contract statement is superseded. No new human graph approval claimed."
 }

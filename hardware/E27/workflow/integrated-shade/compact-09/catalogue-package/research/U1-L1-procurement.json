@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "actor": "/root/final_change",
+  "role": "Bounded U1/L1 procurement/technical research implementer; not independent reviewer of final design adopting these selections",
+  "checked_client_date": "2026-11-21",
+  "write_scope": "This report and explicitly authorized U1-L1-sources cache only. No S/CAD/library writes, supplier message, cart mutation or purchase.",
+  "constraint": "Use catalogue-orderable parts, preferJLC/LCSC but not mandatory. Exact buyability must be distinguished from RFQ/custom design and search snippets.",
+  "U1": {
+    "selected_mpn": "LYT1603D-TL",
+    "recommendation": "Retain for this laboratory build because actual LCSC live stock is confirmed; disclose active-NRND lifecycle and low current quantity. No controller redesign is triggered by lack of stock, because exact stock exists.",
+    "technical_primary": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+    "technical_primary_cached": "U1-L1-sources/PI-LYTSwitch1-family-primary.pdf",
+    "technical_primary_sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+    "package": "SO8 confirmed by manufacturer family PDF; marketing product table is not the pin/package authority.",
+    "manufacturer_lifecycle": {
+      "url": "https://www.power.com/products/lytswitch/lytswitch-1/lyt1603d",
+      "observed": "Active but not recommended for new designs",
+      "HTTP_status": 200,
+      "HTTP_date": "Sat,21Nov2026 11:22:03GMT",
+      "cached_sha256": "ddf3274bf833a43d9036b544e9f9b23eaee5149f076c9bea10b99c3190ab85b1"
+    },
+    "purchase_path": {
+      "distributor": "LCSC",
+      "url": "https://www.lcsc.com/product-detail/C567687.html",
+      "code": "C567687",
+      "exact_MPN_match": true,
+      "HTTP_status": 200,
+      "HTTP_date": "Sat,21Nov2026 11:22:02GMT",
+      "raw_HTML_sha256": "0b4f14c725c30a4e7761b920ddbc38fffe8b55dcf245cae2a536e8e8bc7db2ce",
+      "stock_units": 10,
+      "ship_immediately_units": 10,
+      "minimum_order_units": 1,
+      "multiple_units": 1,
+      "price_USD_qty1": 0.4976,
+      "price_USD_qty10": 0.4845,
+      "full_reel_standard_pack_units": 2500,
+      "method": "Fresh direct public HTTP response, parsed actual exact-part SSR stockNumber/minBuyNumber/split and price ladder; not search snippet.",
+      "limits": "Ten units observed, no reservation/checkout shipping/customs quote or multi-board yield guarantee; recheck before purchase."
+    },
+    "JLC": {
+      "url": "https://jlcpcb.com/partdetail/PowerIntegrations-LYT1603DTL/C567687",
+      "code": "C567687",
+      "library": "Extended SMT",
+      "HTTP_status": 200,
+      "HTTP_date": "Sat,21Nov2026 11:22:03GMT",
+      "raw_HTML_sha256": "d245234047d3d9eceba79c0b7f3a77e0e3b67860b64c4e8e872423971d11563d",
+      "overseasStockCount": 10,
+      "canPresaleNumber": 10,
+      "preMinPurchaseNum": 19,
+      "leastPatchNumber": 5,
+      "initialPrice_USD": 0.4958,
+      "disposition": "Do not advertise MOQ1 or confirmed usable PCBA/preorder path: actual SSR stock10/prepurchase minimum19 conflict. LCSC manual purchase is the confirmed path."
+    }
+  },
+  "L1": {
+    "former_mpn": "RL-5480-3-3300",
+    "former_state": "Exact reference part technical data existed, but no actual immediate catalogue checkout stock had been verified; prior path was manufacturer/RFQ. This did not satisfy the new all-parts-catalogue requirement.",
+    "selected_catalogue_candidate": "768772332",
+    "manufacturer": "Wurth Elektronik",
+    "series": "WE-TI HV8095",
+    "technical_primary": {
+      "manufacturer": "Wurth Elektronik",
+      "mpn": "768772332",
+      "source_url": "https://www.we-online.com/components/products/datasheet/768772332.pdf",
+      "observed_via": "Web tool direct primary PDF open; raw HTTP download denied403/initialweb503. Manufacturer-authored RS mirror006.000 cached separately, and actual2025primaryPCN confirms400V inclusion.",
+      "revision": "006.001",
+      "date": "2025-06-06",
+      "body_diameter_nominal_mm": 7.8,
+      "body_diameter_tolerance_mm": 0.5,
+      "body_height_nominal_mm": 9.5,
+      "body_height_tolerance_mm": 0.5,
+      "lead_pitch_mm": 5,
+      "lead_pitch_tolerance_mm": 0.5,
+      "lead_diameter_mm_reference_only": 0.7,
+      "lead_length_mm": 5,
+      "lead_length_tolerance_mm": 1,
+      "recommended_PCB_hole_mm": 1.2,
+      "recommended_PCB_pitch_mm": 5,
+      "inductance_mH": 3.3,
+      "tolerance_percent": 10,
+      "test": "10kHz/250mV",
+      "rated_RMS_current_A_at40K_rise": 0.25,
+      "Isat_10percent_A_typ": 0.27,
+      "Isat_30percent_A_typ": 0.39,
+      "DCR_max_20C_ohm": 7.08,
+      "DCR_typ_20C_ohm": 5.9,
+      "SRF_MHz_typ": 0.85,
+      "operating_voltage_max_DC_V": 400,
+      "voltage_qualification": "WE-STD1516",
+      "ambient_C": [
+        -40,
+        85
+      ],
+      "maximum_component_temperature_C": 125,
+      "warning": "Current/saturation are defined test conditions, not proof of actual surge/EMI/current/temperature qualification in SC09. Reference lead diameter is not a guaranteed maximum."
+    },
+    "electrical_selection": "400VDC defined working voltage is preferable to generic120V alternatives. Peak/thermal/surge/EMI in SC09 remain circuit qualification tasks, not inherited from the part listing.",
+    "DCR_tradeoff": {
+      "root_authority": "Root explicitly accepted7.08ohm max instead of6.72ohm as routine engineering tradeoff on2026-11-21. No user stage approval or physical qualification inferred.",
+      "old_Renco_max25C_ohm": 6.72,
+      "new_WE_max20C_ohm": 7.08,
+      "headline_delta_ohm": 0.36,
+      "headline_same_reference_proxy_extra_at60mA_W": 0.0012959999999999998,
+      "headline_same_reference_hot_proxy_W": 0.0017034624,
+      "temperature_reference_correction": "Old maximum is specified25C, new maximum20C; headline subtraction is a convenient proxy, not exact temperature-normalized comparison. Copper TCR.00393/K screen below is explicit.",
+      "new_max25C_ohm": 7.219122,
+      "old_max100C_ohm": 8.70072,
+      "new_max100C_ohm": 9.305952,
+      "normalized_extra25C_at60mA_W": 0.0017968391999999994,
+      "normalized_extra100C_at60mA_W": 0.0021788351999999967
+    },
+    "mechanical_impact": {
+      "fits_old_body_reservation": true,
+      "new_max_body_DH_mm": [
+        8.3,
+        10
+      ],
+      "old_reserved_body_DH_mm": [
+        10.8,
+        11.93
+      ],
+      "manufacturer_recommended_pattern": "Two1.2mmholes on5.0mmpitch. Current native L1 has1.2mmholes andapproximately5.0038mmpitch. Root owns any normalization/land/model/clearance changes.",
+      "rigid_worst_tolerance_fit_warning": "Actual leadpitch5±.5 and leadØ.7REFERENCE mean the nominal recommended pattern is not proof of a fully rigid all-tolerance fit. With centeredpitcherror.25 and assumedPCBposition.106radial, error~.356 exceeds(.1.12-.7)/2=.21radialclearance. Use ordinary controlled free-lead adjustment plus actual fit inspection, or independently justify enlargeddrills/annuli and a real pinmax bound. Do not invent.7mm as guaranteedmax.",
+      "actual_drawing_cache": "U1-L1-sources/WE-768772332-primary-mirror-RS.pdf",
+      "mirror_revision": "006.000,2021-04-25; identical declared geometry/electrical values. New primary006.001 explicitly lists400V.",
+      "mirror_sha256": "07d727fc2f65fa4a14a4c2479e7d3f6fd12def78b4e692413c0a069c7de6c1f7",
+      "primary_PCN_2025_400V_cache": "U1-L1-sources/WE-PCN-20250514-primary-authored.pdf",
+      "primary_PCN_sha256": "8840ee3559ca5f5e590f97b84f46c68a98e64c601da1e602c8bdc821ee6c4e6c",
+      "drawing_PNG": "U1-L1-sources/WE-768772332-drawing-page1.png"
+    },
+    "catalogue_purchase_paths": [
+      {
+        "distributor": "DigiKey",
+        "part_code": "732-768772332-ND",
+        "url": "https://www.digikey.de/en/products/detail/w%C3%BCrth-elektronik/768772332/16910471",
+        "observed_stock_units": 142,
+        "minimum_units": 1,
+        "observed_price_EUR_qty1": 1.31,
+        "evidence_level": "Indexed distributor exact product page; explicit opens cachemiss/directHTTP403, so not fresh live SSR confirmation."
+      },
+      {
+        "distributor": "Mouser",
+        "part_code": "710-768772332",
+        "url": "https://br.mouser.com/en/ProductDetail/Wurth-Elektronik/768772332?qs=sGAEpiMZZMv126LJFLh8ywQ8%252ByAE4SZkXLxZjGNYWac%3D",
+        "observed_stock_units": 373,
+        "minimum_units": 1,
+        "multiple_units": 1,
+        "observed_price_USD_qty1": 1.48,
+        "evidence_level": "Exact distributor listing indexed yesterday and category4days earlier. Productpage directHTTP200 was ACCESSDENIED, not successful inventory response. Earlier regionalcached page397 differs; stock is not reserved or independentlyliveconfirmed."
+      },
+      {
+        "distributor": "Newark",
+        "part_code": "47AK7795",
+        "url": "https://www.newark.com/wurth-elektronik/768772332/wirewound-inductor-3-3mh-0-25a/dp/47AK7795",
+        "observed_stock_units": 75,
+        "minimum_units": 1,
+        "multiple_units": 1,
+        "observed_price_USD_qty1": 1.68,
+        "evidence_level": "Opened full exact distributor product page shows75; searchindex showed85. Webpage cacheage exposed and freshrawHTTP403, so report observed listing rather than currentcheckoutguarantee."
+      },
+      {
+        "distributor": "RS",
+        "part_code": "259-1072",
+        "url": "https://uk.rs-online.com/web/p/leaded-inductors/2591072",
+        "observed_stock_units": 380,
+        "minimum_units": 1,
+        "observed_price_GBP_qty1": 1.14,
+        "evidence_level": "Opened exact productpage withstock andBuybutton. RawHTTP403/cacheage means no freshSSRconfirmation; supplier height14.5 is not bodyheight authority, use primarydrawing9.5±.5."
+      }
+    ],
+    "LCSC_JLC_exact_code": "Not established for this Wurth part. Do not invent a C-code or assume supplierstock is JLCassemblystock.",
+    "not_RFQ_only": true,
+    "inventory_evidence_grade": "Normal catalogue order paths with distributor-reported stock demonstrated on exact part listings. Fresh raw server stock independently confirmed only forU1; L1HTTPaccess/cachelimits prevent the same grade. This is not evidence thatL1isoutofstock, nor an RFQ/custom-onlypart. Recheck selectedvendor quantity/dispatch normally before purchase; no authenticated checkout or reservation attempted.",
+    "root_adoption_decision": "Root will adopt768772332cataloguepart with manufacturer nominalP5/1.2holepattern; existingP5.0038diff0.0038mm is nominally negligible. Ordinary manual adjustment of free catalogue leads and actual fit inspection accepted; no claim of guaranteed rigid all-tolerance fit and no customwindingorder. Root also accepts temperature-normalized extra~2.18mWat100C/60mARMS."
+  },
+  "other_candidates": [
+    {
+      "mpn": "RL895-332K-RC",
+      "manufacturer": "Bourns",
+      "technical_url": "https://www.bourns.com/docs/product-datasheets/rl895.pdf",
+      "facts": "3.3mH±10%,DCR6.16max,IDC.15A@10%Ldrop,Ø7.8±.5H9.5max,P5±.3,leadØ.7. Primary lacks explicitworkingvoltage.",
+      "stock_page": "https://www.digikey.com/en/products/detail/bourns-inc/RL895-332K-RC/3193299",
+      "stock_page_observed_units": 197,
+      "reason_not_preferred": "Workingvoltage not established; saturation criterion.15A@10% differs materially from original.225A@5%. No blind mainsinputsubstitution."
+    },
+    {
+      "mpn": "7447720332",
+      "manufacturer": "Wurth Elektronik",
+      "technical_url": "https://www.we-online.com/components/products/datasheet/7447720332.pdf",
+      "facts": "3.3mH±5%,6.7ohmmax,.24Arms,.29A@10%,samecompactbody; currentprimaryspecifies120VDCmax.",
+      "reason_not_selected": "Do not apply120Vpart across potentialmainsstartup/transientdifferentialvoltage without a rigorous bound. Preferexplicit400VHVpart."
+    },
+    {
+      "mpn": "RFB0810-332L",
+      "manufacturer": "Coilcraft",
+      "technical_url": "https://www.coilcraft.com/en-us/products/power/unshielded-inductors/radial-lead/rfc-rfb/rfb0810/rfb0810-332/",
+      "reason_not_selected": "Primary7.6ohmmax exceeds requestedDCR; dynamic stock countblank/selectedconfigurationnotavailable. No falsein-stock claim."
+    },
+    {
+      "mpn": "RFC0810B-335KE",
+      "manufacturer": "Coilcraft",
+      "technical_url": "https://www.coilcraft.com/en-us/products/power/unshielded-inductors/radial-lead/rfc-rfb/rfc0810b/rfc0810b-335/",
+      "reason_not_selected": "Primary7.1ohmmax, workingvoltage not verified, dynamicstockquantitynotestablished. Doesnot improve procurement evidence over400VWurth."
+    },
+    {
+      "mpn": "7687709332",
+      "manufacturer": "Wurth Elektronik",
+      "technical_url": "https://www.we-online.com/components/products/datasheet/7687709332.pdf",
+      "facts": "3.3mH±20%,5.2ohmmax,.37Arms,.52A@10%,400VDC; body12±.5square,H10.5max; SMDlandspan12.8.",
+      "reason_not_selected": "Exceeds10.8mmfootprintbodyreservation; requiresnewSMDlayout rather than near-nominalP5replacement."
+    }
+  ],
+  "conclusion": "Retain U1 LYT1603D-TL: genuine fresh LCSC stock10/MOQ1, with active-NRND and limitedquantity risk disclosed. Replace old RFQ-only L1 path with normal catalogue Wurth768772332, a documented compact400Vpart with several distributor purchase listings. Root accepts smallDCRincrease and normal manualfreeleadfit. Stock grades are explicit: U1freshSSRconfirmed; L1vendor-reported exact-listingstock, not fresh rawHTTP/checkoutreserved. No absence-of-stock conclusion is drawn from403. Actualcartpurchase, safetyqualification and fullallpartsBOMintegration are outside this research handoff.",
+  "files_cached": [
+    {
+      "path": "acquisition.json",
+      "sha256": "537add5b5ac8913039c0df99417b8a0cbad41282868f45dd15f39ba1d181da86",
+      "bytes": 4896,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "Mouser_WE_PL.html",
+      "sha256": "c0f64d8187c8eb4dc7151600ac4d61dc367998a8fe8e2ab512560a3f5d5b0eb1",
+      "bytes": 13897,
+      "classification": "Denied/challenge response, NOT inventory proof"
+    },
+    {
+      "path": "PI-LYTSwitch1-family-primary.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "bytes": 1368708,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "U1-JLC-live.html",
+      "sha256": "d245234047d3d9eceba79c0b7f3a77e0e3b67860b64c4e8e872423971d11563d",
+      "bytes": 351838,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "U1-LCSC-live.html",
+      "sha256": "0b4f14c725c30a4e7761b920ddbc38fffe8b55dcf245cae2a536e8e8bc7db2ce",
+      "bytes": 413597,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "U1-PI-status-live.html",
+      "sha256": "ddf3274bf833a43d9036b544e9f9b23eaee5149f076c9bea10b99c3190ab85b1",
+      "bytes": 99955,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "WE-768772332-current-primary-extract.json",
+      "sha256": "9fa94f4ede18f46bedcf162b15c0bf8c85585aa4c17884cb01ab93f9efc63c97",
+      "bytes": 1409,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "WE-768772332-drawing-page1.png",
+      "sha256": "e889b9fd062f1b258f114efc0e8e001ec840238a520b459a15b904b3c90b6d49",
+      "bytes": 335254,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "WE-768772332-primary-mirror-RS.pdf",
+      "sha256": "07d727fc2f65fa4a14a4c2479e7d3f6fd12def78b4e692413c0a069c7de6c1f7",
+      "bytes": 710671,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "WE-768772332-primary-mirror-RS.pdf.page1.txt",
+      "sha256": "844157d20e2790f22f637d8ab6f4d6b64792942c4bc7187bd5a216c97044485f",
+      "bytes": 2771,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "WE-PCN-20250514-primary-authored.pdf",
+      "sha256": "8840ee3559ca5f5e590f97b84f46c68a98e64c601da1e602c8bdc821ee6c4e6c",
+      "bytes": 192984,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "WE-PCN-20250514.txt",
+      "sha256": "fb98e3354611b48433ff0d206274946122107218a7c90e2dd0c1e63d58cd5f4f",
+      "bytes": 13675,
+      "classification": "Research source or extracted drawing; see acquisition and report scope"
+    },
+    {
+      "path": "WE_product.html",
+      "sha256": "5b7a95221629c91873ac6532ed48008ceb006dc2491bc54c2b9332324d3ef668",
+      "bytes": 1880,
+      "classification": "Denied/challenge response, NOT inventory proof"
+    }
+  ]
+}

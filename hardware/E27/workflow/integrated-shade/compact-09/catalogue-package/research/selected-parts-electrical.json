@@ -1,0 +1,234 @@
+{
+  "task": "Selected catalogue T1/R7 electrical recalculation",
+  "actual_actor": "/root/final_reality",
+  "date": "2026-11-21",
+  "scope": "Contributor calculations only. Root selected MSS1210H-125KED and HVR2500003903FR500 for engineering. No CAD/shared project edits or acceptance/measurements performed.",
+  "inputs": [
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/calculated-proposal.json",
+      "sha256": "45178e9c8cbdaffb8dc78271031383c3a4d820b4af408c20e9eb16f9c509b8de"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/thermal-planning.json",
+      "sha256": "a4a5dd86b044affb3016933fea477e5879f5c1745be0fc04d5c6910f3d9b1f47"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/bom-build.json",
+      "sha256": "054004f0328dcb34d369ee6459268d4d8a14b00ca71b4fed37a7caf3d2ea22af"
+    },
+    {
+      "path": "work/compact09/catalog-only/T1-research.json",
+      "sha256": "136e8861f6f4483b4fc0e20f3e0c5910d8f04eee213ce5ebae38ebfab83bf6fd"
+    },
+    {
+      "path": "work/compact09/catalog-only/T1-sources/MSS1210H.pdf",
+      "sha256": "e82623c515ca4f3e92898593ddfd87aaee87f60d492c340808ce01316aa9f0ae"
+    },
+    {
+      "path": "work/compact09/rdr-research/parameter_addendum.py",
+      "sha256": "d3f5e695442c2552a12b850fd24b0bae57fe8e5beb822b921057b69801a2aa23"
+    },
+    {
+      "path": "work/compact09/rdr-research/lytswitch-1_family_datasheet.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc"
+    }
+  ],
+  "selected_T1": {
+    "MPN": "MSS1210H-125KED",
+    "nominal_L_mH": 1.2,
+    "source_primary": "https://www.coilcraft.com/getmedia/52078704-21eb-4c2b-9b72-1e07b4a2e252/mss1210h.pdf",
+    "source_pages": "1549-1/2Rev07/06/22",
+    "provisional_Lmin_screen_mH": 0.8748,
+    "factors": {
+      "zero_bias_tolerance_min": 0.9,
+      "assumed_DC_bias_retention": 0.9,
+      "assumed_additional_hot_retention": 0.9
+    },
+    "factor_limit": "Only\u00b110%zero-bias is the selected supplier tolerance. Both.9retention factors are explicit engineering assumptions, not a guaranteed hotL(I,T) envelope. Root needs prototype validation rather than custom winding.",
+    "normal_current": {
+      "Rsense_nom_ohm": 0.5732101616628176,
+      "VFB_typ_V": 0.279,
+      "Ipk_nom_A": 0.4867324738114424,
+      "Ipk_max25C_static_threshold_with_Rs_min1percent_A": 0.5022220594339852,
+      "equivalent_triangle_Irms_A": 0.28101512477836876,
+      "Iout_total_estimate_A": 0.1352034649476229,
+      "important": "Ipk is the feedback-threshold peak estimate VFB/Rs. IncreasingL1mH\u21921.2mH does NOT reduce it automatically by1/sqrt1.2. The erroneous square-root rescale would give0.4443239256280326A and is not the selected control law. TriangleIrms is retained as a comparison screen, not measured mains waveform."
+    },
+    "normal_min_ON_screen": {
+      "equation": "TON=Lmin * (273mV/Rsense_max) / (253Vrms*sqrt(2)-VLEDmin)",
+      "VLED_min_V": 52,
+      "Vline_peak_V": 357.7960312803931,
+      "Rsense_max_ohm": 0.589604338713728,
+      "R5_tolerance_fraction": 0.01,
+      "R5_TCR_ppm_K": 200,
+      "R6_tolerance_fraction": 0.01,
+      "R6_TCR_ppm_K": 100,
+      "temperature_delta_K": 100,
+      "combination": "Multiplicative resistor tolerance/TCR bounds, same rbound() and parallel() structure as earlier parameter_addendum.py. R6 corrected to verified100ppm/K for exactCRCW12063R65FKEA; earlier200ppm proposal remains historical conservative research.",
+      "Ipk_min_threshold_screen_A": 0.46302237292821274,
+      "Lmin_mH": 0.8748,
+      "TON_us": 1.3245821737503087,
+      "IC_max_minimum_ON_us": 1.25,
+      "margin_percent": 5.966573900024685,
+      "screen_pass": true,
+      "limit": "Threshold273mV andminimumON1.25us are referenced25C specifications. PCB parasitics/delay, actual hot coil bias, startup and fault limits not closed. No energy-equivalent sqrtL rescaling used."
+    },
+    "copper_loss": {
+      "DCR_typ_25C_ohm": 0.83,
+      "DCR_max_25C_ohm": 1.013,
+      "DCR_max_100C_copper_only_screen_ohm": 1.305827685970676,
+      "copper_temperature_formula": "R100=R25*(1+.00393*(100-20))/(1+.00393*(25-20)); does not assume1.013is20Crating.",
+      "equivalent_Irms_A": 0.28101512477836876,
+      "Pcu_at_max25C_W": 0.07999610385880679,
+      "Pcu_at_hot_screen_W": 0.1031205599097883,
+      "old_custom_hot_DCR_ohm": 3.6,
+      "old_custom_Pcu_hot_W": 0.28429020127512783,
+      "modeled_copper_saving_W": 0.18116964136533953,
+      "core_AC_loss": "Unknown fromdatasheet table; same.1\u2013.4W comparison allocation may be used only as engineering scenario. Waveform/core loss andPCBthermalenvironment mustbe tested."
+    },
+    "comparative_thermal_scenarios": {
+      "method": "Same simplified triangleIrms and copperhot-screen; assumed core+extraAC allocation.1\u2013.4W and assumed effectivehotspotRtheta50\u2013100K/W held equal solely to compare. These are not datasheetthermalresistance or verifiedloss bounds.",
+      "ambient_C": 40,
+      "old_custom_loss_W": [
+        0.3842902012751278,
+        0.6842902012751279
+      ],
+      "old_custom_temperature_C": [
+        59.21451006375639,
+        108.42902012751279
+      ],
+      "catalogue_candidate_loss_W": [
+        0.2031205599097883,
+        0.5031205599097883
+      ],
+      "catalogue_candidate_temperature_C": [
+        50.15602799548942,
+        90.31205599097883
+      ],
+      "target_C": 90,
+      "target_guaranteed": false,
+      "interpretation": "Lower copperDCR improves scenario butupperT1scenario remains near/above90C. Do not replace this with an expectedtemperature guarantee. ActualeffectiveRtheta andcoreloss couldbeoutside assumptions."
+    },
+    "fault_status": "Small catalogueferrite still hasinductancelossbefore1.24A. 25CICautorestartupperthreshold1.24A atspecifiedramp isnotall-temperaturecurrentceiling. Coilcatalogstatus doesnotclose saturation/faultenergy/blanking/delay/singlefault safety."
+  },
+  "selected_R7": {
+    "MPN": "HVR2500003903FR500",
+    "R_nom_ohm": 390000,
+    "tolerance_fraction": 0.01,
+    "max_TCR_ppm_K": 200,
+    "P70_W": 0.25,
+    "max_DC_V": 1600,
+    "max_AC_RMS_V": 1150,
+    "endurance_1000h_70C_fraction_for1percent_part": 0.015,
+    "damp_heat56d_fraction_for1percent_part": 0.015,
+    "soldering_test_fraction": 0.01,
+    "source_primary": "https://www.vishay.com/docs/30260/hvr2537.pdf",
+    "source_revision": "14-Apr-2023Document30260,primaryPDFreadviaweb",
+    "source_pages": "p1technicaltable,p3derating,p4endurance/testconditions,p5dimensions",
+    "source_hash_status": "This task permitted only selected-parts-electrical.json writes; primaryPDFreadviaweb, not independently cached in this subtask. Do not invent physicalPDFhash. Root/partsresearch may bind downloaded source separately.",
+    "OVP": {
+      "formula": "Vtrip=VOOV*(1+R7/R4),R4=12.4kohm. Both legacy additive-envelope and independently recalculated multiplicative bounds are reported; neither is an assured joint lifetime/hotICguarantee.",
+      "nominal_V": 77.88387096774194,
+      "IC25C_VOOV_limits_V": [
+        2.3,
+        2.48
+      ],
+      "cases": [
+        {
+          "case": "multiplicative_declared_aging_screen",
+          "R7_additional_fraction": 0.015,
+          "R4_additional_fraction": 0.01,
+          "static_OVP_low_V": 69.39715984658538,
+          "static_OVP_high_V": 86.5375265974715,
+          "margin_below90V": 3.462473402528502,
+          "high_lt90": true
+        },
+        {
+          "case": "additional_combined_test_change_screen",
+          "R7_additional_fraction": 0.04,
+          "R4_additional_fraction": 0.01,
+          "static_OVP_low_V": 67.69418624641824,
+          "static_OVP_high_V": 88.60790902598065,
+          "margin_below90V": 1.3920909740193537,
+          "high_lt90": true
+        },
+        {
+          "case": "same_plus_R4_2percent_engineering_reserve",
+          "R7_additional_fraction": 0.04,
+          "R4_additional_fraction": 0.02,
+          "static_OVP_low_V": 67.05306677341414,
+          "static_OVP_high_V": 89.48676524053148,
+          "margin_below90V": 0.5132347594685172,
+          "high_lt90": true
+        }
+      ],
+      "interpretation": "Legacy additiveengineeringenvelope reproduces69.3713279\u201386.5109278V. Multiplicative rbound/life method yields69.3971598\u201386.5375266V: a slight numerical difference from combination convention, not changed nominal390k/12.4k values. Both static screens remainbelow90V. Do not falsely state multiplicative method exactly reproduces additive prior range.",
+      "combined_test_caveat": "The4%R7row sums1.5%endurance+1.5%dampheat+1%solder only as an extra engineering stress screen. Manufacturerindividualtests do not promise additive/sequentiallife guarantees. R4additional2%rowisalsoengineeringreserve,notnewapprovedrequirement. Do not callanyrowa full lifetime/temperatureguarantee.",
+      "not_proven": "DynamicovershootC6<=90V,hotICthreshold,dividerfailedopen/shortorfullsinglefaults remainunverified. ChangingcoilL can alterrestartenergy/timing;statictripdoesnotqualifydynamicC6limit.",
+      "legacy_additive_screen": {
+        "R7_initial_plus_T_plus_extra": 0.045,
+        "R4_initial_plus_T_plus_extra": 0.03,
+        "low_V": 69.37132790479173,
+        "high_V": 86.51092783505155,
+        "margin_below90V": 3.4890721649484533
+      }
+    },
+    "power_and_thermal": {
+      "same_resistance_screen": "New power upper bound integrates max(Vout,abs(Vrect-Vout))^2/R7min over the line, withR7min=390k*.99*.98*.985. Includes actual52Vlowerload endpoint and1.5%negative extra drift, omitted in earlier53.6V/no-extra-drift.11321Wscreen.100000midpointsteps; analytic waveform-envelope screen, not simulation or measuredduty.",
+      "derated_power_at100C_ambient_W": 0.16176470588235295,
+      "headroom_at100C_W": 0.045420349971535046,
+      "invalid_old_transfer": "VR25thermalresistance140K/W is NOT published for HVR25. Remove15.85K rise/55.85Cbodytemperaturederivedfromthatvalue; do not claimitfornewpart.",
+      "actual_HVR_thermal_resistance_K_per_W": null,
+      "temperature_forecast": "Not established fromavailableprimaryHVRPDF. Keep localambient<=100C/bodytarget<=125C as design targets separately fromactualforecast, and measure exactuprightassembly. Any substitutedassumedtheta mustbeexplicitlyunvalidated.",
+      "safety_recognition": "Do not automaticallytransferVR25ULrecognitionsorotherfamilycertificationstothisHVRpart.1600VDCworkingratingnotabasic/reinforcedtouchbarrier.",
+      "historical_power_screen_W": 0.11321,
+      "cycle_bound_recomputed_253VAC": [
+        {
+          "output_V": 52,
+          "cycle_power_upper_bound_W": 0.1163443559108179
+        },
+        {
+          "output_V": 53.6,
+          "cycle_power_upper_bound_W": 0.11492911425524494
+        },
+        {
+          "output_V": 60,
+          "cycle_power_upper_bound_W": 0.10946227082562045
+        },
+        {
+          "output_V": 68,
+          "cycle_power_upper_bound_W": 0.10307939615482427
+        },
+        {
+          "output_V": 90,
+          "cycle_power_upper_bound_W": 0.08830238264871602
+        }
+      ],
+      "active52to68V_worst_screen_W": 0.1163443559108179,
+      "R7min_including_declared1p5percent_extra_drift_ohm": 372702.33,
+      "ambient_at_which_derated_rating_equals_active_upper_screen_C": 115.44291899032191
+    }
+  },
+  "whole_driver_loss_disposition": {
+    "unchanged_planning_total_base_loss_W": [
+      0.9,
+      1.7
+    ],
+    "boundary": "AllbaseelectroniclossesincludingR8/R9bleeders,R7,input/filter/buck. LEDpanel excluded.",
+    "comparison_only_if_everything_else_held_equal_W": [
+      0.7188303586346605,
+      1.5188303586346605
+    ],
+    "do_not_publish_as_new_guaranteed_range": "Copperimprovementalone doesnotbounddifferentcore/switchfrequency/AC/switchinglosses ornewR7thermalbehavior. Retain.9\u20131.7Wallocationuntilmeasurement/modelverification; showcoppercomparisonseparately.",
+    "current_LED_only_nominal_estimate_mA": 133.43875906526995
+  },
+  "root_action_items": [
+    "UsecurrentthresholdIpk.4867A andsameequivalent.281A forcoilcomparison; delete sqrtL-scaledpeakclaims.",
+    "UpdateactualT1/R7MPNs, 2pinintent and nativeCAD; original3pincoilNC4doesnotcarryover.",
+    "UpdateOVPresistorbasisanddeleteVR25theta140-derivedR7temperaturestatements.",
+    "Keepconditionalhotbias/core/faultlimits explicit whileclosingcatalogueorderabilityscope. No power/housing/productqualificationis inferred.",
+    "UseupdatedR7normalpowerupper screen including52Vendpoint anddeclared1.5%drift; old.11321Wvalue omitted those additional corners. No newthermalresistance claimed."
+  ],
+  "commercial_status": "Root acceptsmanufacturerMOQ1pricingplusagedFindchipsmanufacturerfeed as catalogueorderabilityevidence; notliveconfirmed/notreserved. Checkoutorordersnotperformed.",
+  "no_CAD_or_shared_document_changes": true
+}
