@@ -1,5 +1,15 @@
 # E27 workflow index
 
+## Current driver compendium - COMPENDIUM21, 21 November 2026
+
+[COMPENDIUM21](specification-reset/compendium-21/README.md) packages current
+C16/C17/VIS18/LED19/POWER20 in one153-member offline ZIP: Polish guide, both-face
+4Krenders, allfour copper layers individually inSVG/PNG, schematic/BOM/assembly,
+latest power/thermal study, native editable sources, transformer drawings,
+manufacturing-data reference and open holds. Bottom layer is physically mirrored.
+Archive/source hashes and link checks bind the copies. No CAD/BOM/rule, physical
+qualification, supplier/order or human release change; temperatures stay conditional.
+
 ## Current power and cooling assessment - POWER20, 21 November 2026
 
 [POWER20](specification-reset/power-thermal-20/README.md) calculates currentC16
