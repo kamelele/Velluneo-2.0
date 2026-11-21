@@ -1,0 +1,148 @@
+{
+  "actor": "/root/final_completeness",
+  "role": "Independent read-only bare laboratory PCB fabrication audit",
+  "date": "2026-11-21",
+  "scope": "Unpopulated FR4 laboratory prototype fabrication and unpowered buildability preflight. No PCBA, energized tests, completed lamp, enclosure, certification or physical coil verification is inferred.",
+  "authority": "Root reports actual owner now explicitly accepts50x32mm and requests prototype ordering preparation. Earlier25mmwidth comparison is no longer a blocker for this newly accepted bare-board scope. Purchase is not performed by this reviewer.",
+  "status": "Completed independent final bare-PCB fabrication preflight; all3concrete findings corrected and verified.",
+  "initial_verified_board_sha256": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+  "initial_geometry_and_export_checks": {
+    "outline": "Gerber absolute metric centerlines form one closed8segment chamfered outline: X100..150mm,Y-132..-100mm. Centerline finished nominal size50x32mm. Native job50.05x32.05mm includes0.05mmprofile stroke and is not a different route centerline.",
+    "layers": "Exactly2copper layers, F.Cu andB.Cu; separate front/back mask/legend and Edge.Cuts.",
+    "stackup": "Native job1.6mm, FR4dielectric and0.035mmouter copper, selected manual prototype process1oz/leadfreeHASL.",
+    "native_holes": 27,
+    "drill_hits_PTH": 27,
+    "NPTH": 0,
+    "component_holes": 17,
+    "through_vias": 10,
+    "minimum_drill_mm": 0.3,
+    "minimum_track_width_mm": 0.3,
+    "track_widths_mm": [
+      0.3,
+      0.4,
+      0.6
+    ],
+    "minimum_nominal_annulus_mm": 0.225,
+    "minimum_component_hole_nominal_annulus_mm": 0.475,
+    "minimum_saved_same_face_different_net_spacing_screen_mm": 0.318461,
+    "minimum_saved_copper_to_board_edge_screen_mm": 0.549984,
+    "drill_registration": "All27nativeholes each match exactly one metric absolute Excellonhit. Maximum observed decimal output rounding0.0001mm on L1holeXcoordinates. No unmatched/extra holes.",
+    "copper_registration": "Every27drillcenter has a copper flash at the same position on BOTHF.Cu andB.Cu. F_Cu27flashes,B_Cu57flashes. No layer-specific offset or mirror mismatch identified.",
+    "native_clearances": "Current retained zero native DRC violations/unconnected/parity. Independent all55netpair screen scopedPASS retains bounded manufacturer-land concessions; strict FAIL is preserved. Manufacturing spacing does not establish functional insulation.",
+    "holes_or_special_processes_absent": "No slots,NPTH,blind/buriedvias,edgeplating,castellations,impedancecontrolledlines,via-in-padfillingorpaneltooling required by actual candidate geometry."
+  },
+  "manufacturer_primary_source": {
+    "url": "https://jlcpcb.com/capabilities/pcb-capabilities",
+    "checked": "2026-11-21",
+    "observed_relevant_capabilities": "FR4,2layers,1.6mm,1oz andlead-freeHASL supported. 1oz2layer minimumtrace/space0.10mm; PTHnominalring>=0.20mm,0.25mmrecommended. Routededgecopperclearance>=0.20mm. Silkscreenstroke>=0.15mm,height>=1.0mm. Through-hole tolerance+0.13/-0.08mm andposition±0.075mm.",
+    "scope_limit": "Capabilities are manufacturer process information, not PCB service acceptance, quoted cost or electrical safety qualification. Actual supplier CAM preview and selected order fields must agree."
+  },
+  "findings": [
+    {
+      "id": "FAB-01",
+      "severity": "minor fabrication/identification quality correction before vendor upload",
+      "finding": "Actual8visible native silkscreen texts are1.0mmheight but0.12mmstroke, below current stated0.15mmJLClegendminimum.",
+      "root_disposition": "Root changed all8to0.15mm; no pad/track/net/copper zone geometry changed. Fresh nativeDRC0reported.",
+      "status": "closed_by_independent_actual_native_and_artwork_verification",
+      "closure": "Readactualnative8legendtexts: height1.0mm,stroke0.15mm. BothfinalsilkscreenGerberscontain0.150000mmtextstrokeaperture. FreshnativeDRCzero."
+    },
+    {
+      "id": "FAB-02",
+      "severity": "order metadata clarification before vendor upload",
+      "finding": "Optional nativegbrjobFinishNone conflicts with selected lead-freeHASL. Job size50.05x32.05 is profile-stroke bound, whereas routecenterline is50x32mm.",
+      "root_disposition": "SupplierZIPwill contain only7Gerbers+2drills; optionaljob stays diagnostic outsideupload. Actualorderfinish/nominalsize must be explicitlyleadfreeHASL/50x32.",
+      "status": "closed_by_independent_actual_native_and_artwork_verification",
+      "closure": "ActualSC09_do_zamowienia_PCB.ziphasexactly7Gerbers+2drillfiles,nojob/maps/READMEorotherfiles;CRCpassandallmemberbytesmatchfinalfabricationfiles. order-parameters.jsonexplicit50x32centreline/Lead-freeHASL."
+    },
+    {
+      "id": "FAB-03",
+      "severity": "major declared unpowered-fit tolerance correction before bare-board freeze",
+      "finding": "InitialT1finishedholes0.85mm have minimum0.77mm under declared suppliernegativehole tolerance; maxterminal0.55mm leaves0.11mmradialspace, insufficient for contractterminalposition0.15mm even before PCBholeposition tolerance.",
+      "root_disposition": "Root selects all3T1finishedholes1.20mm, unchanged1.8mmpad/pincoordinates; explicitlydefinescustomcoilterminalpositionRADIAL<=0.15mm. Will update nativePCB,canonicalfootprint andmetadata andrerunholeDRC/export.",
+      "independent_math": {
+        "nominal_hole_mm": 1.2,
+        "minimum_finished_hole_mm": 1.12,
+        "maximum_terminal_diameter_mm": 0.55,
+        "minimum_radial_free_space_mm": 0.285,
+        "coil_position_radial_max_mm": 0.15,
+        "PCB_position_per_axis_max_mm": 0.075,
+        "conservative_PCB_position_radial_max_mm": 0.1060660172,
+        "combined_radial_offset_screen_mm": 0.2560660172,
+        "remaining_radial_fit_reserve_mm": 0.0289339828,
+        "nominal_annulus_after_change_mm": 0.3,
+        "limits": "Typed radial coil convention is essential. This is fit arithmetic for a proposed custom contract, not measured supplied-pin accuracy or a guaranteed physical annulus after unrelated process tolerance stacks. Supplier/sample gauge verification remains necessary before assembly."
+      },
+      "status": "closed_by_independent_actual_native_and_artwork_verification",
+      "closure": "All3actualnativeT1holes1.20mm,canonicalSC09_T1.kicad_modhas3drills1.2,andfootprintgeometrymetadataagrees. Allouter1.8mmlandsandcoordinatesunchanged. ActualT1contractdefinesRADIALposition<=.15mm. ActualExcellonT1centresuse1.2mmtool. Rechecked27holebijectionandbothcopperflashregistrationwithnoneunmatched. NativeDRCzero."
+    }
+  ],
+  "assembly_and_test_gates_that_do_not_by_themselves_prevent_bare_PCB_fabrication": [
+    "Custom180Tcoil supplier feasibility, winding insulation, DCbias/hotloss and actual pin-gauge fit; no completedstockcoil is claimed.",
+    "PhysicalR7/RF1/C6leadforming, insulating support, solder protrusion/vent volume and strain relief; inspect actual parts before assembly acceptance.",
+    "Regulation tolerance, dynamicOVP, storedenergy/discharge, surge/fault coordination, temperatures, optical output andEMC/safety measurement. These need later qualified physical procedures and must not be claimed from bare artwork.",
+    "Finishedbulbcavity/enclosure acceptance is outside this currently requested board-only experiment. Accepted50x32board dimensions do not prove a particular lamp cavity fit.",
+    "FullToolkit productrelease/spatial/provider/stage registration remains a separate failing record. An honest bare-board fabrication audit does not convert that fullrelease report toPASS."
+  ],
+  "concrete_unpowered_preflight": [
+    "Before upload verify supplier ZIP shows50x32nominalclosedoutline,2copperlayers,27PTH/0NPTH,oneboard,1.6mmFR4/1oz/greenmask/whitelegend andexplicitleadfreeHASL. NoPCBA orstencilorder is implied.",
+    "Print a1:1nativefab/pad drawing or exact3pinT1gauge with a dimensional ruler crosscheck; compare actual supplier bobbin/RF1/R7/C6 formed leads. A drawing or paper check is not a passed supplier sample, but can catch wrong orientation/pitch before assembly.",
+    "Supplier should acknowledge customT1top-viewpincontract and removablepins; do not force an arbitrary EE10 bobbin into this board."
+  ],
+  "scoped_verdict": "Ready for normal supplier upload/CAM preview and bare laboratory prototype order selection within accepted50x32mmmanual-prototype scope: no known blocking bare-board artwork,drill-registrationorcontract-hole-fit defect remains after FAB01/02/03 corrections. This is a technical bare-PCB audit,not supplierCAMacceptance,paidorder,PCBAreadiness,physicalsuppliercoilfitqualification,powered-testapprovalor a passed full Toolkit product release. Normal supplier layer/outline/finish confirmation is still required during order processing.",
+  "final_checks": {
+    "board_sha256": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c",
+    "canonical_T1_sha256": "0ba5e46f41d2ed0f70fcc6f6aac6d8816561ddf2bea421ea4fefeacc79533ec1",
+    "geometry_metadata_sha256": "ce21b982a947856ff72ae33484da8cea931992ab5a6cf57ea1ddca6b121949df",
+    "T1_contract_sha256": "033180e0029ef03db922bb44420762bba761638a596897c9ac2188d9ea4fbd57",
+    "order_parameters_sha256": "f07d001238071750b5cbd4c6292e3cfc36299ce9de1def5396566a93be924abd",
+    "supplier_archive_sha256": "f3369e378bb58194369b153913f296249a5773ef63bd9332a0017ac1c433e71a",
+    "supplier_archive_members": 9,
+    "supplier_archive_contents": "F/B copper,F/Bmask,F/Blegend,Edge.Cuts,PTHdrill,NPTHdrill",
+    "CRC_and_loose_byte_parity": "pass",
+    "outline_bounds_mm": [
+      100,
+      -132,
+      150,
+      -100
+    ],
+    "nominal_outline_dimensions_mm": [
+      50,
+      32
+    ],
+    "closed_chamfered_outline_segments": 8,
+    "copper_layers": 2,
+    "PTH": 27,
+    "NPTH": 0,
+    "native_component_holes": 17,
+    "through_vias": 10,
+    "minimum_drill_mm": 0.3,
+    "minimum_nominal_annulus_mm": 0.225,
+    "minimum_component_nominal_annulus_mm": 0.3,
+    "actual_T1_holes_mm": [
+      1.2,
+      1.2,
+      1.2
+    ],
+    "actual_T1_outer_land_size_mm": 1.8,
+    "native_to_drill_matching": "27uniqueone-to-onehitswithin0.00051mm;maximumobservedrounding0.0001mm",
+    "both_copper_flash_matching": "27of27holecentresmatchonbothfaces;nooffsetormirroringerror",
+    "front_copper_flashes": 27,
+    "back_copper_flashes": 57,
+    "native_legend_texts": 8,
+    "native_text_height_mm": 1,
+    "native_text_stroke_mm": 0.15,
+    "current_DRC": "zeroerrors,warnings,unconnected,schematicparityissues;defaultignoredchecksretained",
+    "current_scoped_spacing_report_board_matches": true,
+    "current_scoped_spacing_passed": true,
+    "artifact_hashes": {
+      "fabrication/SC09_compact-Edge_Cuts.gm1": "b02c6491c1c4cdbe65c8a73b89530a94337870570ad878d5a524c2110ab3aeef",
+      "fabrication/SC09_compact-F_Cu.gtl": "e3b5ac429ced9db4d8a63243e8dbfa08f9a6e20534fb23a2c7077c1ab2da46a9",
+      "fabrication/SC09_compact-B_Cu.gbl": "1add2c9278b7ffe1a211441ec31deb271af527b5c8263f9ada433362b7826f60",
+      "fabrication/SC09_compact-PTH.drl": "3c26530c055faf8fdc4a7efd1076271b5b3258bee1b959ee321f7f34a1c16f76",
+      "fabrication/SC09_compact-NPTH.drl": "aacf89a8e36b254e8fa6b783f542beeea7108eac45233507365a0e392ff15b56",
+      "fabrication/SC09_compact-F_Silkscreen.gto": "a487ccf77b48fc91c9e2d3894f0f4e42a8463b89db7c5c073d2119888a548d1a",
+      "fabrication/SC09_compact-B_Silkscreen.gbo": "f5cdde0f8d4775a0b8669ad4b2f99aca6e4cf6dcf9ebd2021db0ae103a9efd7d"
+    }
+  },
+  "blocking_bare_board_fabrication_findings_remaining": []
+}

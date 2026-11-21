@@ -1,10 +1,10 @@
-# Current task — SC09 routed laboratory prototype (2026-11-21)
+# Current task — SC09 accepted50×32mm laboratory PCB
 
-Current [complete review/manufacturing-candidate packet](integrated-shade/compact-09/prototype-package/README.md), [open items](integrated-shade/compact-09/prototype-package/OPEN_ITEMS.md). Board50x32mm, approximate assembled envelope50x32x19.5mm; earlier25mmwidth target not met. Native schematic/PCB, routing,17models and front/back3D now exist. ERC/DRC/parity0; approvedA1connectivity matched. Full Toolkit release NOT passed; no purchase or energized tests performed.
+Owner accepted50×32mm. [Current package](integrated-shade/compact-09/prototype-package/README.md), [specification](integrated-shade/compact-09/prototype-package/SC09_specification.pdf), [order-review inputs](integrated-shade/compact-09/order-review-inputs.json). Scope: barePCB for manual laboratory prototype assembly/measurements, not a finished lamp or qualified powered unit. Full Toolkit productreleaseFAIL remains explicit; scopedbare-board-readiness.json records actual manufacturing-preflight disposition.
 
-Branch concept/integrated-shade-nonisolated-buck; main outside write scope. Root sole CAD writer; four fresh independent role reports accompany final packet. Historical pre-CAD and SC08 entries below do not represent current acceptance.
+Native currentboard has0.15mmlegend and1.20mmT1holes; pins/nets/outerlands unchanged. Source snapshot and six artifactclasses registered without hardware selfhashcycle. Exact native ERC/DRC/parity,graph/refill/spacing checks retained. Four current read-only reviewers assess the same frozen orderpacket; root is soleCADwriter. Earlier final-review-inputs/reviews are historical commit082ffdb scope.
 
-Pinned toolkit manifest05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822, package0.7.1-preview.3/ruleset0.7.1, KiCad10.0.6. Doctor passed.
+Branch concept/integrated-shade-nonisolated-buck; main outsidewrite scope. No purchase/suppliermessage/poweredtest performed. Pinned KiCad10.0.6,toolkitmanifest05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822.
 
 # E27 workflow index
 

@@ -1,0 +1,1 @@
+Generated release-candidate outputs deliberately excluded from design source_files to prevent self-hash cycles. Actual six artifact classes are registered in hardware.release_files with exact source snapshot and hashes. This closes file registration only; actual human approval, product physical gates and supplier CAM acceptance are not fabricated.

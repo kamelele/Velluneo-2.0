@@ -1,0 +1,113 @@
+{
+  "role": "Completeness Reviewer",
+  "actor": "/root/final_completeness",
+  "date": "2026-11-21",
+  "independence": "Separate read-only reviewer context. No customer CAD, libraries, contracts, requirements, exports or package documentation edited. Only this reviewer report written.",
+  "scope": "Final202file accepted-size UNPOPULATED laboratory PCB manufacturing packet for later manual assembly and measurements. Completeness and technical bare-board fabrication readiness are distinct from qualified assembled operation, powered tests, PCBA, full product release and actual purchase.",
+  "frozen_inputs": {
+    "path": "hardware/E27/workflow/integrated-shade/compact-09/order-review-inputs.json",
+    "revision": "SC09-lab-order-02",
+    "sha256": "e238bc95429a362bd6a028a79bf64185f09eab5478cb01f1e34378e00772325a",
+    "files_independently_checked": 202,
+    "missing_or_hash_mismatched_files": [],
+    "base_remote_commit": "082ffdb3e994a0d7c307325bc42dd6f1db1e27cc",
+    "native_PCB_sha256": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c",
+    "native_schematic_sha256": "a93749f626a98709d4b87fb0270bc2409db5944e04d367b65e31d102ac159b32",
+    "toolkit_snapshot_independently_recomputed_through_pinned_launcher": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+  },
+  "authority_and_scope_review": {
+    "owner_size_record": "owner-size-50x32-approval.json retains actual owner quote accepting50x32mm. Earlier25mmwidth deviation is closed for this current scope; no specific lamp cavity fit is inferred.",
+    "routine_completion_authority": "Actual owner autonomy instructions retained. No fictitious per-stage snapshot approvals, physical measurements, supplier acceptance, PCBA service or paid order inferred.",
+    "requirements_preservation": "Original17product obligations and current20SC09requirement catalog remain retained. A separate bare-board scope does not silently remove later product obligations.",
+    "historical_reviews": "Earlier final-review-inputs/final-integration/reviews concern prior082ffdb scope. This report binds current order-review-inputs and does not carry old acceptance forward."
+  },
+  "artifact_integrity": {
+    "artifact_source_binding": "Every listed export exists and matches its current SHA256; PCB/schematic/snapshot identifiers match actual reviewed sources.",
+    "supplier_upload_archive": {
+      "name": "SC09_do_zamowienia_PCB.zip",
+      "sha256": "f3369e378bb58194369b153913f296249a5773ef63bd9332a0017ac1c433e71a",
+      "members": 9,
+      "CRC_test": "pass",
+      "member_bytes_equal_loose_final_files": true,
+      "coverage": "Exactly7Gerbers: F/Bcopper,F/Bmask,F/Blegend,Edge.Cuts;2ExcellonPTH/NPTHfiles. No optionaljob/maps/README mixed into upload."
+    },
+    "portable_KiCad_archive": {
+      "name": "SC09_KiCad.zip",
+      "sha256": "65a97917fd703d2066df50227793fa6e63411d8c9ea1cb7f1f71a7f6138172f7",
+      "members": 124,
+      "CRC_test": "pass",
+      "member_bytes_equal_current_S_files": true,
+      "hardware_source_files_declared": 114,
+      "missing_declared_sources": [],
+      "local_models": "17actualWRLpackages and experimental per-partSTEPsources included; nativeCAD/libraries and registered release-candidate artifacts present. Interoperability limitation is explicit; no empty assembledSTEP presented as complete."
+    },
+    "registered_release_artifact_classes": {
+      "gerbers": "Actual supplierZIP registered with matching hash and current6ccsnapshot.",
+      "drills": "Separate drillZIP registered with matching hash/current6ccsnapshot.",
+      "bom": "Exact19referenceCSV registered with matching hash/current6ccsnapshot.",
+      "positions": "19nativeorigins/sides/angles manual-referenceCSV registered with matching hash/current6ccsnapshot; not claimed vendor-qualifiedPnP.",
+      "assembly_drawing": "Both nativefront/backPDFs registered with matching hashes/current6ccsnapshot.",
+      "bringup_plan": "Actual BRINGUP.md registered with matching hash/current6ccsnapshot; explicitly a later qualified-test plan, not tests performed."
+    },
+    "registration_mismatches": [],
+    "expected_derived_outputs_excluded_from_own_input_cycle": "Root will create bare-board-readiness.json from actual four role reports and rebuild the master deliveryZIP after reviews. These future derived files were not falsely marked independently inspected in this report. Their content must preserve scope and actual review conclusions."
+  },
+  "deliverable_coverage": [
+    {"requirement_scope":"Accepted board geometry/process","evidence":"Owner-size acceptance, actual50x32outline,order-parameters.json,2LFR4/1oz/1.6mm/lead-freeHASL/manualassembly declaration.","result":"covered for bareprototype"},
+    {"requirement_scope":"Editable schematic/PCB and libraries","evidence":"Complete native project and local symbols/footprints in124fileportableZIP; all114declaredsources present.","result":"covered"},
+    {"requirement_scope":"Connectivity and routing","evidence":"19references,47physicalpads,11intendednets,1explicitNC; fresh approvedA1connectivity,ERC/DRC/parity and actual saved/refilled copper checks.","result":"covered within stated CAD scope; physical operation not inferred"},
+    {"requirement_scope":"Manufacturing artwork/drill consistency","evidence":"Exact9fileuploadZIP; independent previous detailed audit verified50x32closedoutline,27PTH/0NPTH,all27holecentres aligned with bothcopperfaces and corrected1.20mmT1tool.","result":"covered; ordinary supplierCAMpreview still needed"},
+    {"requirement_scope":"BOM/pins/manual assembly","evidence":"ExactMPNs,BOM19,47pinCSV,positions19,nativeassemblyPDFs,DNPnone,polarity/leadforming/customcoilcontracts and current1:1fitgauge.","result":"covered for manual experimental assembly planning; actualpartqualification later"},
+    {"requirement_scope":"3Dviews/model","evidence":"Both final nativePNGfront/back independently viewed; all17physicalelectronics modeled, J1/J2barewireports have no inventedconnectorbody. Complete embeddedWRL and editableKiCadprovided.","result":"covered; appearance not manufacturing/thermal qualification"},
+    {"requirement_scope":"Input/output/current/efficiency specification","evidence":"SC09_specification.json/PDF and README clearly separate nominal/calculated values, PFassumption and unmeasured thermal scenarios from ratings.","result":"covered with appropriate uncertainty"},
+    {"requirement_scope":"Thermal/protection and later testing","evidence":"Loss/temperature scenarios,OVP/discharge/energy calculations,OPEN_ITEMS andBRINGUP retain qualifiedtest requirements and stoplimits.","result":"complete as a plan; no actual performance qualification"},
+    {"requirement_scope":"PCBA/stencil/panel","evidence":"Manualsingleboardprocess; noPCBA/stencil/panelpurchase implied and no vendorPnPqualificationclaimed.","result":"explicitly outside present scope, not silently missing"},
+    {"requirement_scope":"FullToolkit/finishedproductrelease","evidence":"Complete currentToolkitreleaseFAIL26gates retained; no fakeindividualsnapshotapprovalorphysicaltest.","result":"not passed; not automatically a barefabricationblocker"}
+  ],
+  "independent_visual_review": {
+    "specification_PDF": "All3pages independently rendered in memory withpypdfium2 and visually inspected. Tables/captions/ranges fit pages without clipping; unmeasured/scenario/nonSELV/lab scope clear.",
+    "fit_gauge_PDF": "Singlepage independently rendered and inspected.1:1/100percentprint instruction,50mmruler,nominal50x32board andT1pin labels/1.20holes shown. Not a supplier sample qualification.",
+    "native_3D_renders": "Finalfront/backactualPNGs viewed. Components/leadforms and bottom parts visible, no board clipping;17real package appearances correspond to sourceinventory.",
+    "assembly_PDF_retained_scope": "Prior independent correctedfront/backoutlinevisualQA retained; currentregisteredPDFs updated for actual T1holechange and source-bound. No current absence of an assemblyview detected."
+  },
+  "specification_arithmetic_and_boundaries": {
+    "first_order_total_current_mA": 135.2034649476229,
+    "bleeder_current_at60V_mA": 1.7647058823529413,
+    "external_LED_current_at60V_mA": 133.43875906526995,
+    "external_LED_power_at60V_W": 8.006325543916196,
+    "all_base_loss_planning_W": [0.9,1.7],
+    "input_power_scenario_W": [8.906325543916196,9.706325543916195],
+    "efficiency_to_external_LED_scenario_percent": [82.48564822693858,89.89482255547262],
+    "input_RMS_at230V_assumed_truePF0p90_mA": [43.025727265295636,46.89046156481253],
+    "calculation_review": "These values agree with explicit displayed formulas.135.2mA is first-order total regulator current, not exact externalLED current.60V is nominal operatingpoint of constant-current load, not regulatedvoltage.0.9–1.7W andPF0.90 are planning assumptions, not measured extrema or guaranteed efficiency/inputcurrent ratings.",
+    "thermal_review": "40Cambient U1junction58–110C andT1body59–108C are explicitly unvalidated sensitivityscenarios. T1uppervalue exceeds90Ctarget and this is disclosed. C6case75Ctarget/85Cstop are not invented predictedtemperatures.",
+    "protection_review": "StaticOVP69.37–86.51V paper screen,90VdynamicC6target,.729Jstoredenergy and36.45sone-openbleeder model stay distinct from measured fault/surge/thermal protection. All nodes remain mainsreferenced."
+  },
+  "actual_preorder_finding_closure": {
+    "FAB-01": "Closed: all8actuallegendtexts1.0mmheight/.15mmstroke; finallegendGerberstroke.15 verified in detailed fabrication audit.",
+    "FAB-02": "Closed: finaluploadZIP excludes incompatibleoptionaljob; explicitorderparameters setLead-freeHASL and50x32centreline.",
+    "FAB-03": "Closed: native/canonical/metadata3T1holes1.20mm andexplicitcoilRADIAL<=.15mmconvention verified. Minimumhole/pin/PCBposition fitreserve~.028934mm is calculated, not supplier sample evidence. Finalcontract correctly sayssquarepin1land andround4/8lands.",
+    "current_T1_contract_sha256": "39d05506c010a810fb520bd5d18057c19b71f6f2d1212f9e4021412cf907790c",
+    "older_fabrication_audit_retained_scope": "Detailed barePCB geometry/export audit remains current for unchangedc28board andf336uploadZIP; finalcorrectedcontractwording was independently reread here. No physicalsupplierpin/coilmeasurement inferred."
+  },
+  "findings": [],
+  "remaining_gates_outside_bare_fabrication_acceptance": [
+    "SupplierCAMpreview/quote/orderfieldconfirmation is normal next vendorprocessing; no actual supplieracceptance or paid order has occurred.",
+    "Customcoil/samplepin-gauge,inductance/hotDCbias/coreloss/insulation andformedR7/RF1/C6/support/vent/solder clearance must be inspected before accepting an assembled unit.",
+    "Current/ripple/OVP/restart/surge/fault/thermal/optical/EMC/safety behavior needs later qualified tests; no measurements were fabricated.",
+    "FullproductToolkit26gatesFAIL and absent individuallyboundhumanstageacceptance remain truthful separate records; this report does not waive or rewrite them."
+  ],
+  "recommendation": {
+    "scope_verdict": "Complete and technically ready for ordinary supplierCAMpreview and ordering of the accepted50x32mmUNPOPULATED laboratory prototype board. No known unresolved blocking bare-board artifact,registrationorcontract-hole-fit defect remains in this frozen packet.",
+    "ready_for_root_integration_of_scoped_readiness_record": true,
+    "full_product_Toolkit_release_pass": false,
+    "assembled_unit_or_powered_test_qualification_granted": false,
+    "supplier_CAM_acceptance_or_purchase_claimed": false,
+    "human_approval_fabricated": false
+  },
+  "limitations": [
+    "No real supplierCAMreview,partmeasurement,poweredtest or purchase performed.",
+    "Futurederivedreadiness/masterZIP and actualGitpublication cannot be declared inspected before integration; root must verify their final hashes and no-main-change scope.",
+    "Modelappearance,CRC,sourcehashes,reviewer count and native DRC are not certificates of functional electrical safety."
+  ]
+}

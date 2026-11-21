@@ -1,16 +1,23 @@
-# Open items and disposition
+# Current stage dispositions
 
-These prevent a claim of a passed complete-product/assembled-unit release. They are not disguised as measured results.
+## Closed design/fabrication preparation issues
 
-1. SIZE — 50 x32 actual PCB exceeds proposed25mm width. Owner owns cavity/size acceptance; root owns any future redesign. No bulb-fit claim.
-2. T1 — custom180T/AWG32 sample, pin gauge, inductance/DC bias/hot loss, insulation and dimensions. Coil supplier/qualified electrical designer; before assembled-unit release.
-3. FORMED_PARTS — physical RF1/R7/C6 lead forming, solder protrusion, support and actual vent volume. Assembly operator/qualified mechanical review; before assembly acceptance. Illustrative models are insufficient.
-4. CURRENT/OVP — line/LED/hot corners, min-on-time margin, LED ripple/current, start/restart, open load and dynamic C6 voltage. Qualified electrical investigator; physical measurements required.
-5. FAULT/SURGE — MOV/RF1 coordination, shorted IC, failed sense/bleeders/diode, coil saturation at1.24A maximum IC fault limit, input transient and high-temperature protection. Qualified laboratory; no claim of safe single-fault operation.
-6. THERMAL — actual temperatures, ripple/ESR, hot DCR, loss total and lifetime. Qualified laboratory; native copper area does not close this.
-7. INSULATION/EMC — qualified numerical safety basis, component package clearances, actual soldered spacing, external guard fixture, LED/contact accessibility, emission/immunity. Product obligations remain retained. Instructions cannot replace touch protection.
-8. FORMAL_WORKFLOW — Toolkit spatial contract/approval not adopted; full product requirements/evidence and release/provider approval gates not passed. Actual autonomy authorization is retained separately; no hash-bound stage decision invented.
-9. SUPPLY/COST — NRND IC, custom coil and catalogue inductor availability, complete basket and quote not verified. Procurement owner. Manual prototype process does not imply Economic/Standard PCBA capability.
-10. OPTICAL — stabilized800lm, LED junction temperature/bin/diffuser acceptance and complete LED-board endpoint characterization remain unmeasured. LED module is outside this driver PCB.
+- SIZE: actual owner accepts50×32mmPCB. Earlier25mmwidth deviation is closed; actual bulb cavity fit is still not claimed.
+- LEGEND: eight texts changed to0.15mmstroke/1mmheight to match the checked fabrication basis.
+- T1HOLE: all three native/canonical/declared holes1.20mm, same1.8mmlands and pin centres. Radialcoilposition tolerance≤0.15mm explicitly stated; residual declared fit screen≈0.029mm. Actual sample gauging still required before assembly acceptance.
+- UPLOAD:9file supplierZIP excludes optional mismatching .gbrjob metadata. Lead-freeHASL, material/layers/thickness/copper/outline are explicit.
+- REGISTRATION: existing six manufacturing artifact classes are registered with exact source snapshot and hashes. Raw hardware.json is excluded from source_files to avoid a self-hash cycle; its complete design configuration is still automatically bound by the pinned Toolkit. No approvals are invented.
 
-Files are published for review and prototype planning on the feature branch. There is no automatic purchase or powered test authorization.
+See final scoped bare-board-readiness.json for actual independent closure evidence. Supplier CAM preview/quote/order are not performed by this repository work.
+
+## Later assembly, powered investigation and product obligations retained
+
+1. Coil supplier/sample:180turnAWG32EE10, geometry/gauge, inductance, hotDCbias, DCR, insulation and core loss. NRND IC availability and complete parts basket remain procurement risks.
+2. Actual formed R7/RF1/C6 and soldered lead fit, support, vent volume and wire strain relief. The drawing contract is not an inspected assembly.
+3. LED current/ripple/line/temperature regulation and actual optical output; nominal133.4mALED is a calculation.
+4. DynamicOVP/C6peak, discharge, shorted IC/sense/diode/bleeder faults, coil saturation and MOV/RF1 surge/fusing coordination. No physicalPASS.
+5. Component temperatures/losses and life. T1 thermal sensitivity can exceed90°C target at40°Cambient; change design if measurements fail.
+6. Guarded test fixture/operator/probe limits, qualified insulation/EMC/safety basis and finished lamp contact/enclosure/cavity obligations. Instructions do not replace access barriers.
+7. Full Toolkit product release retains unresolved spatial/provider/exactstage/evidence gates. A separate bare-board fabrication audit does not relabel that report as PASS.
+
+No purchase, supplier message or powered test was performed. These remaining obligations prevent assembled-product or powered-use acceptance; they are not falsely declared measured before a barePCB prototype exists.

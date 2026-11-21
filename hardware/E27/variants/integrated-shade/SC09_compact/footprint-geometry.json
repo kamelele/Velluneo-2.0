@@ -594,7 +594,7 @@
     "sources": [
       "TDK_C4"
     ],
-    "design_basis": "ManufacturerP10±.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
+    "design_basis": "ManufacturerP10\u00b1.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -824,7 +824,7 @@
     "sources": [
       "Samsung_C5"
     ],
-    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at±1.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
+    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at\u00b11.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
     "notes": [
       "Catalogmanualsolder0201..1206:350Cmax,preheat>=60s,contact<=3s,deltaT<=190C;actualprocessrequiresvalidation.",
       "Do not present numericland as a Samsung recommendation."
@@ -914,7 +914,7 @@
     "sources": [
       "Panasonic_R4"
     ],
-    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers±1.15;courtyard.25frompad/bodyunion.",
+    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers\u00b11.15;courtyard.25frompad/bodyunion.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -1267,7 +1267,7 @@
           1.8,
           1.8
         ],
-        "drill_mm": 0.85,
+        "drill_mm": 1.2,
         "kind": "thru_hole",
         "shape": "rect"
       },
@@ -1281,7 +1281,7 @@
           1.8,
           1.8
         ],
-        "drill_mm": 0.85,
+        "drill_mm": 1.2,
         "kind": "thru_hole",
         "shape": "circle"
       },
@@ -1295,7 +1295,7 @@
           1.8,
           1.8
         ],
-        "drill_mm": 0.85,
+        "drill_mm": 1.2,
         "kind": "thru_hole",
         "shape": "circle"
       }
@@ -1307,7 +1307,7 @@
       6
     ],
     "planned_max_above_PCB_mm": 13,
-    "design_basis": "CustomT1contract12x12x13;documentedouterterminal7.7x8;explicitours1/4/8marking/windingcontract—not originalEE1016dimensions.",
+    "design_basis": "CustomT1contract12x12x13;documentedouterterminal7.7x8;explicitours1/4/8marking/windingcontract\u2014not originalEE1016dimensions.",
     "courtyard_polygon": [
       [
         -6.25,
@@ -1326,7 +1326,8 @@
         6.25
       ]
     ],
-    "footprint": "E27SC09:SC09_T1"
+    "footprint": "E27SC09:SC09_T1",
+    "root_hole_fit_revision": "All3finishedholes1.20mm; unchanged1.8mmlands,pincoordinates,nets. Radialcoilpositiontol.15; seeT1contract."
   },
   "C6": {
     "refs": [
@@ -1390,7 +1391,7 @@
       "Panasonic_C6",
       "Panasonic_C6_mount"
     ],
-    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5±.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y±2.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
+    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5\u00b1.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y\u00b12.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
     "notes": [
       "Pin1positive,pin2negative;verifynegativebodyband/positiveleadbeforeforming.",
       "ManufacturerdoesNOTsupplythishorizontalformingradius/offset;2.5straight/1.5bend/.5supportareexplicitengineeringchoices,notqualifiedmanufacturerforming.",

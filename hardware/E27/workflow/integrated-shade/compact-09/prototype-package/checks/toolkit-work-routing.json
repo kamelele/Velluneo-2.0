@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "work",
-  "time_utc": "2026-11-21T10:13:14.137954+00:00",
+  "time_utc": "2026-11-21T10:49:10.118255+00:00",
   "ruleset_version": "0.7.1",
   "errors": [
     "Requirements: OPEN_CAVITY: Unresolved: Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement.",
@@ -10,10 +10,8 @@
     "Requirements: OPEN_C_OPTICAL_INPUT: Unresolved: 4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance.",
     "Requirements: OPEN_C_SAFETY_BASIS: Unresolved: Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier.",
     "Requirements: OPEN_IFC_ACCEPTANCE: Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints.",
-    "Requirements: C_EFFICIENCY: Required evidence kind absent: calculation",
     "Requirements: C_PARTS: Required evidence kind absent: review",
     "Requirements: C_GRAPH: Required evidence kind absent: review",
-    "Requirements: C_PROTECTION: Required evidence kind absent: calculation",
     "Requirements: C_INTERFACE: Required evidence kind absent: review",
     "Requirements: C_PACKING: Required evidence kind absent: review",
     "Requirements: C_ROUTING: Required evidence kind absent: DRC",
@@ -130,11 +128,6 @@
         "message": "Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints."
       },
       {
-        "id": "C_EFFICIENCY",
-        "gate": "schematic",
-        "message": "Required evidence kind absent: calculation"
-      },
-      {
         "id": "C_PARTS",
         "gate": "schematic",
         "message": "Required evidence kind absent: review"
@@ -143,11 +136,6 @@
         "id": "C_GRAPH",
         "gate": "schematic",
         "message": "Required evidence kind absent: review"
-      },
-      {
-        "id": "C_PROTECTION",
-        "gate": "schematic",
-        "message": "Required evidence kind absent: calculation"
       },
       {
         "id": "C_INTERFACE",
@@ -271,7 +259,7 @@
       },
       {
         "id": "C_SIZE",
-        "revision": "SC09-A",
+        "revision": "SC09-owner-50x32",
         "owner": "Kamil",
         "type": "requirement",
         "gate": "specification",
@@ -282,12 +270,12 @@
             "path": "mechanical-budget.proposed.json"
           }
         ],
-        "required_kind": "design",
+        "required_kind": "review",
         "evidence_ids": [
-          "EV-SIZE"
+          "EV-SIZE-50X32"
         ],
         "observed_levels": [
-          "designed"
+          "reviewed"
         ],
         "status": "verified"
       },
@@ -315,7 +303,7 @@
       },
       {
         "id": "C_EFFICIENCY",
-        "revision": "SC09-A",
+        "revision": "SC09-current-arithmetic-02",
         "owner": "Codex-root",
         "type": "requirement",
         "gate": "schematic",
@@ -327,9 +315,13 @@
           }
         ],
         "required_kind": "calculation",
-        "evidence_ids": [],
-        "observed_levels": [],
-        "status": "blocked"
+        "evidence_ids": [
+          "EV-EFFICIENCY-02"
+        ],
+        "observed_levels": [
+          "calculated"
+        ],
+        "status": "verified"
       },
       {
         "id": "C_PARTS",
@@ -381,9 +373,13 @@
           }
         ],
         "required_kind": "calculation",
-        "evidence_ids": [],
-        "observed_levels": [],
-        "status": "blocked"
+        "evidence_ids": [
+          "EV-PROTECTION-CALC-02"
+        ],
+        "observed_levels": [
+          "calculated"
+        ],
+        "status": "verified"
       },
       {
         "id": "C_INTERFACE",
@@ -634,10 +630,10 @@
       "Hashes establish freshness, not evidence truth or reviewer authority.",
       "Electrical checks compare declared DC envelopes only, not complete operation."
     ],
-    "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+    "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
     "product": "Velluneo_SC09_compact",
     "revision": "SC09-A",
-    "document_sha256": "0690f2937455a0f5387e1d707a34ed781f3766af9d1d9c7d219c183c8b8591f9",
+    "document_sha256": "b97a6fe7f51a50aa7a07b43bb507df876f32ba4a065edc8981aaa665561043f5",
     "blockers": [
       {
         "id": "OPEN_CAVITY",
@@ -670,11 +666,6 @@
         "message": "Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints."
       },
       {
-        "id": "C_EFFICIENCY",
-        "gate": "schematic",
-        "message": "Required evidence kind absent: calculation"
-      },
-      {
         "id": "C_PARTS",
         "gate": "schematic",
         "message": "Required evidence kind absent: review"
@@ -683,11 +674,6 @@
         "id": "C_GRAPH",
         "gate": "schematic",
         "message": "Required evidence kind absent: review"
-      },
-      {
-        "id": "C_PROTECTION",
-        "gate": "schematic",
-        "message": "Required evidence kind absent: calculation"
       },
       {
         "id": "C_INTERFACE",
@@ -747,7 +733,7 @@
       "release"
     ]
   },
-  "snapshot": "9bfbc64f7cffe8e553e2814eb32f7eec968c3e2be076f13c8d9b76428c6c91ae",
+  "snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a",
   "input_hashes": {
     ".electronics-rules/config-state.json": "23c5c1b1dd93db7a7c8bc43847c9062f15e3c57bd381ad2d4c61a67a60ce11c2",
     "AGENTS.md": "e8971c6193d982f58dc368d80748a934067b11401d1dc0529d02302a141d6634",
@@ -755,8 +741,8 @@
     "bom-build.json": "054004f0328dcb34d369ee6459268d4d8a14b00ca71b4fed37a7caf3d2ea22af",
     "bom-proposal.A1.json": "99f8bb7ef6c92f759304b146b912bb800e8be83a031833910da27359e0f9b448",
     "bom-proposal.json": "025faa70aa2d439b89c803d120ae6a37f9edab99ec4f1112ba9893aefd88da30",
-    "calculated-proposal.json": "c2f0fd1172e4eddad8dbce6a9bfcf6585e7c1be20e004a7c8a03c9717722b841",
-    "driver-led-interface.proposed.json": "e55ac49af515bb460264768d8683a6f073f59ca70b4e28db915a7469d3e69df6",
+    "calculated-proposal.json": "45178e9c8cbdaffb8dc78271031383c3a4d820b4af408c20e9eb16f9c509b8de",
+    "driver-led-interface.proposed.json": "43f447a7aa29a41099efe7c89ba3e400428ad9df92b03e103a7437c1e4acb61e",
     "E27SC09.kicad_sym": "437d35e40499cf3c77b92952058b2b9bff30a3317757beabdc8ef58bd448adc5",
     "E27SC09.pretty/SC09_BR1.kicad_mod": "55574b3cafb6d6c4e572febe2efbaf22b30586f8aeee398f7689467b3e03d17f",
     "E27SC09.pretty/SC09_C1.kicad_mod": "a192362ecfea57e86561e5b3ee42412d0efcf8e43b6fdd2967efffc146acf714",
@@ -775,21 +761,20 @@
     "E27SC09.pretty/SC09_R9.kicad_mod": "07eaecde236567a2d8acdb968630ea4cd1e210ad962a52aa39b452acb9b9895e",
     "E27SC09.pretty/SC09_RF1.kicad_mod": "cd0a6a2fc0a9c5d0724ef92e511d8f2e220542753cedbf906c64d34f02c5c121",
     "E27SC09.pretty/SC09_RV1.kicad_mod": "999c8fc6ff64b2cf93b2bbd91de11cdb256b0c0e8ac4060da7bd8ec0c397eea8",
-    "E27SC09.pretty/SC09_T1.kicad_mod": "51ab83fcc10c5bad7cd8155ae69dcbb2c808705bb5f59344df8c858c6fa8866b",
+    "E27SC09.pretty/SC09_T1.kicad_mod": "0ba5e46f41d2ed0f70fcc6f6aac6d8816561ddf2bea421ea4fefeacc79533ec1",
     "E27SC09.pretty/SC09_U1.kicad_mod": "075f17e3046f2d67476e00dbeb5a96f11d6d01e4022c2eb0a8c71333c420fb71",
     "footprint-assignments.json": "216de453e2b3d6c6f78c8d4459abde80b3beb0fce13c3cd039d5d1c563e45831",
-    "footprint-geometry.json": "7252796a8d020e83b346b9be39ecb78e0e461bd8ad7847853603ccd72c5bee4a",
+    "footprint-geometry.json": "ce21b982a947856ff72ae33484da8cea931992ab5a6cf57ea1ddca6b121949df",
     "fp-lib-table": "bc92eb83e53b679cc5a77e3aaeca9a9c3b3ecd4118f10740841f4310222ee232",
     "functional-spacing-design.json": "a97abda6399a3706b57c9268eb1e54ebfb7e9ca7e9fd64bbd90bd052366230c4",
-    "hardware.json": "0ce860329f9c7fb95607e794fb89e298159a6f4a2881a741d9a87e30bc55e14e",
     "intended-connectivity.A1.json": "b0803bf46f12463e8710831891f12a443556b816ee8683307a0def57d6702799",
     "intended-connectivity.json": "138f807a2e72218608904feb9c141002d554adec6c0e9f4b7b0e721d3c0fda87",
     "intended-connectivity.toolkit.json": "d688024527b7ebb2516fa377e89a127f4e0d9f91bd9906706e2a6760aa4e2db9",
-    "mechanical-budget.proposed.json": "cbce063e385780520e87a8448fc87a60a42f8ed8f27a9cd7b99feba81b4d843a",
-    "model-attachment.json": "2c2553466ee01c400dbae1bfd62836e7b24cf629ad6c9342a56ec5ab34a3dba9",
+    "mechanical-budget.proposed.json": "e385abf9fc1a32cfd6b174c5a19683b3794ad4172ce76b9796a304cba9186e53",
+    "model-attachment.json": "415780770bb8265ac133969aa178b957a55f4dda4c8ac0037bd56dbd6d552bf6",
     "Models/model-checks.json": "51f3aae0a79e3feacf20ffd77593156dd57c99aefea79f790f33b8045dc05d86",
     "Models/MODEL_CREDITS.txt": "985676099358d1d84df0d3ac98cb92d8825032e4914ba2f9adfa69974c7c0000",
-    "Models/MODEL_INFO.json": "119996e3488d6c18e71b059a5613fb534779468e07b67b5c412d43b7543a6972",
+    "Models/MODEL_INFO.json": "16541c78b1e34ee235a690b4b502210bf8e5905cbedcbba7a3a8af7596f5b4b7",
     "Models/R7-standing-check.json": "18afa995c0275b0d3a565b34b222f4fbbb474429437476dac266c110e3ac3798",
     "Models/SC09_BR1.step": "cde35d2e511334f7b76fbf095a2059e6450804f2418b73c9fb90530efa800989",
     "Models/SC09_BR1.wrl": "5f82df351f029b6fd63e07dc219091768d8fb70c48e93f0778ee936aeb81e2f1",
@@ -832,9 +817,11 @@
     "owner-process-line-decision.json": "430648e1b471d9aa3fede9aa34134bb94fe95150c138cb2d5948d0886afaab47",
     "owner-prototype-scope.json": "6491988d16217c36ca1519eb1b358ec1b201469389301840d973146a850343ac",
     "owner-SC09-direction-map-approval.json": "bf0280e5e38fb07dd4ef20e327f985a74be45dd963f60e09af30e63190a3b1a2",
+    "owner-size-50x32-approval.json": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e",
+    "power-supply-specification.json": "b75318f16ef66c0d715294ec5a75dee595e5209cb3f4790c873528c8c8b4817b",
     "PowerFlags.kicad_sym": "b6b7b927b1a790c249425e0116068b8c3ea9a67778fe3fa6e0eb775221977649",
     "R7-standing-contract.json": "173e5951c6a28a0ccd82cb25253a9ad2469840113e07d572e66d2595d38007aa",
-    "README.md": "2a000254a9a5f90c5c536d79221ff8cf8e8b10383a0a9b34dc62b78dbd802784",
+    "README.md": "1627dcdb588208e5851988743583a13fc143d558a621d0ae8c4b217b7dfc5c5b",
     "reference/active-land-correction.json": "9b021d0a45738238a7b84d1cdf51aaf9c95ea769ec3e200df5660806b607745a",
     "reference/active-parts-report.json": "10790e30a541a8b2f05dbf62307100dc5d4be431cf4044e1805b820025c924aa",
     "reference/alternatives.json": "341756937253aaf6c6e64920b1973d8c617324923685088f3e3a8aa48465c05a",
@@ -849,21 +836,21 @@
     "reference/rdr464-research.json": "af1da3440e55a01ccfe27747ea7168ff37585fe87c815b3e8d769f8ba2240ec2",
     "reference/rdr464-verified-U1-pins.json": "67fddba5bde24c83b497235c3ca706e896caaf11e12c609cf5b07d729b73efe7",
     "reference/T1-magnetic-design.json": "8ddde32c4185bbdcbf7975577118975dba95249633663cf54f959b014ac5f27d",
-    "requirements.json": "0690f2937455a0f5387e1d707a34ed781f3766af9d1d9c7d219c183c8b8591f9",
+    "requirements.json": "b97a6fe7f51a50aa7a07b43bb507df876f32ba4a065edc8981aaa665561043f5",
     "SC09_compact.kicad_dru": "6cc0b1c920097196b552b2fe23bb6480f08702ef836f4ad73f0a39df9f426412",
-    "SC09_compact.kicad_pcb": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+    "SC09_compact.kicad_pcb": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c",
     "SC09_compact.kicad_pro": "9c0bc6c2616975830e483ad3bc4a04b943e8f4b5eab3d533148cb6d49f6c6a5b",
-    "SC09_compact.kicad_sch": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+    "SC09_compact.kicad_sch": "a93749f626a98709d4b87fb0270bc2409db5944e04d367b65e31d102ac159b32",
     "source-basis.A1.json": "4a8e1a947af8dd806f7c0594b91d053c5b1464f127382516bd872590f9d15a64",
     "source-basis.json": "e6313109856fc7fa0fa54772050c32134f8fd21109a0d568bfa1d5a55936b6eb",
     "spatial-constraints.json": "163fe9f2227a03bb3350a283ae5d5bebe77d53500743aa185f23fe9f593692ab",
     "standards-and-test-plan.json": "3e4a244c67f2619d591d7f170a443250bf8c758e7e10db1ae35431ea5c2b13b4",
     "sym-lib-table": "89df9f9762889b20a645be209dda6cc4dd7339fd314f61f20ecd079aced8ad9b",
     "symbol-pin-verification.json": "8a1ebc3af3dc5de914fa8e9845af996b6358aa46267dda9c50a3ebdebefbee3f",
-    "T1-custom-contract.json": "2656e459d3a6b1a5343b444ac9bca545a7277de258865f91d0e445f366b229b9",
-    "thermal-planning.json": "fb254a80e9016d28d06455841e26d6941860290f2fa10dae776519be3d8c4fc1",
+    "T1-custom-contract.json": "39d05506c010a810fb520bd5d18057c19b71f6f2d1212f9e4021412cf907790c",
+    "thermal-planning.json": "a4a5dd86b044affb3016933fea477e5879f5c1745be0fc04d5c6910f3d9b1f47",
     "two-endpoint-interface.proposed.json": "11daa08b06f38753ffaedc683095fe6116c6a9ee0fbbfc94033ee6c36e15c51c",
-    "project-design-config": "c3abaa4f2a501f528ffc008edaa3ae0986d3a3ce5ae755e75ad3534297c6e961",
+    "project-design-config": "e9bd1ad28714e4a993fab1057a5ff3e3ac84857969ab690c4a506ca27f3bbaea",
     "toolkit:identity": "e261a411929278425cca528b66bb84add3b1e4261d2935da8cf3aeef78f27a66",
     "ruleset:VERSION": "902311c7bb38fa1658ff403def6158ee7378fe9d6e2e284fa1c38735c31bd30b",
     "ruleset:rules/catalog.json": "d1edf261c5686376ea86122b07d0c511a250ed6e6ffdb79413e1b0ae294a4e3d",
@@ -923,15 +910,15 @@
       "Approval fields record evidence; hashes do not authenticate a human."
     ],
     "intent_sha256": "b0803bf46f12463e8710831891f12a443556b816ee8683307a0def57d6702799",
-    "export_sha256": "2eb5fa6cfe93be044ba92e053793abf6adddd24b255677d8d9fa8ee2012228fc",
+    "export_sha256": "081265302e004e9039ebffa79e755555b836214ae8cba4a70f741d204200859d",
     "export_tool": "Eeschema 10.0.6"
   },
   "erc": {
-    "report_sha256": "5e7e6aba7c059d91e12092736243d218663392085d1dcf0d396fab07a4cf3e61",
+    "report_sha256": "95e3391e2ef6402f7c34b459d6bb5a9816dc42221f729b8b1bbec3c31797c4ac",
     "findings": []
   },
   "drc": {
-    "report_sha256": "470d7f18dbfd85942670e39d640e0cbc53569644672a8c097304703b1a0e150d",
+    "report_sha256": "e179af94045463c7d2d48b5fadf94ac242fe97febb127cbf7d9c1bd46865b722",
     "findings": []
   },
   "passed": false

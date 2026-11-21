@@ -1,0 +1,39 @@
+{
+  "revision": "SC09-lab-order-02",
+  "coordinator": "/root",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "parent_remote_commit": "082ffdb3e994a0d7c307325bc42dd6f1db1e27cc",
+  "main_outside_scope": true,
+  "source_manifest_sha256": "e238bc95429a362bd6a028a79bf64185f09eab5478cb01f1e34378e00772325a",
+  "review_records": [
+    {
+      "role": "Reality Checker",
+      "actor": "/root/order_reality_review",
+      "path": "order-reviews/reality.json",
+      "sha256": "364f75ddcaa3f9b5b5a341681c468ad6320e77309abfc3c4a46f06cce07a37da"
+    },
+    {
+      "role": "Overengineering Reviewer",
+      "actor": "/root/order_simplicity_review",
+      "path": "order-reviews/simplicity.json",
+      "sha256": "8757e1a366f288caa687b2058eb8514293bc6e3886345a6fc838a4c171f52f7e"
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actor": "/root/final_completeness",
+      "path": "order-reviews/completeness.json",
+      "sha256": "8a673dbef60668639858d61d77428744202a6396296f45a553d08fabf256bac0"
+    },
+    {
+      "role": "Change Reviewer",
+      "actor": "/root/final_change",
+      "path": "order-reviews/change.json",
+      "sha256": "a9e5d57ab8aaacb14572b4dc02de8e58843f6a83646a9e58e0f15515146ad991"
+    }
+  ],
+  "readiness_record_sha256": "6435a63e2a2e00995eeca99ce1f36de8ff46836b06057581a020d438a211a2e5",
+  "reviewed_frozen_sources_unchanged_after_integration": true,
+  "result": "technically_ready_for_supplier_CAM_preview_and_unpopulated_laboratory_PCB_order_selection",
+  "full_product_release": false,
+  "actual_purchase": false
+}

@@ -102,11 +102,11 @@
     },
     {
       "id": "C_SIZE",
-      "revision": "SC09-A",
+      "revision": "SC09-owner-50x32",
       "owner": "Kamil",
-      "text": "Ordinarybulb-sizebudget governs architecture beforeCAD.",
-      "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
-      "acceptance": "Propose maximum50x25x20mm andfirst45x25x19bodyexperiment; no actualPCB/bulbfitclaimuntilpads/routing/cavityverified.",
+      "text": "Owneraccepted50x32mmPCBforlaboratoryprototype.",
+      "basis": "owner-size-50x32-approval.json:actualownerlatestdecision",
+      "acceptance": "PCBoutercentreline50x32mm;declaredassemblyheight~19.5mmnotmeasured.No25mmwidthdeviationremains;finishedlampcavityfitstillnotclaimed.",
       "gate": "specification",
       "implementation": [
         {
@@ -115,9 +115,9 @@
           "path": "mechanical-budget.proposed.json"
         }
       ],
-      "method": "design",
+      "method": "review",
       "evidence_ids": [
-        "EV-SIZE"
+        "EV-SIZE-50X32"
       ]
     },
     {
@@ -142,11 +142,11 @@
     },
     {
       "id": "C_EFFICIENCY",
-      "revision": "SC09-A",
+      "revision": "SC09-current-arithmetic-02",
       "owner": "Codex-root",
       "text": "Avoid previouslarge resistor/auxiliary losses.",
       "basis": "Actual compact-bulb and4000KCRI>=80owner brief; candidatearchitecture/limits explicitly proposed for review",
-      "acceptance": "Show ownnominalcurrent135mA andreference0.79Wloss; newdriverplanning.7..1.2W mustbeverifiedlater.",
+      "acceptance": "Showapprox135.2mAtotal/133.4mALEDat60V,reference0.79Wandowninclusivebase-lossplanning0.9..1.7W;efficiencyconditional,nomeasuredperformanceclaimed.",
       "gate": "schematic",
       "implementation": [
         {
@@ -156,7 +156,9 @@
         }
       ],
       "method": "calculation",
-      "evidence_ids": []
+      "evidence_ids": [
+        "EV-EFFICIENCY-02"
+      ]
     },
     {
       "id": "C_PARTS",
@@ -210,7 +212,9 @@
         }
       ],
       "method": "calculation",
-      "evidence_ids": []
+      "evidence_ids": [
+        "EV-PROTECTION-CALC-02"
+      ]
     },
     {
       "id": "C_INTERFACE",
@@ -475,7 +479,7 @@
       "kind": "review",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
       "artifact": "owner-current-brief.json",
       "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0",
       "inputs": [
@@ -484,30 +488,34 @@
           "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
         }
       ],
-      "scope": "Root review of actual owner constraints only, not new architecture approval."
+      "scope": "Root review of actual owner constraints only, not new architecture approval.",
+      "retained_from_intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "retained_scope_assessment": "Rootretainsoriginalspecificdocumentevidenceforunchangedrecordcriteriaonlyafter50x32ownerupdate;notnewindividualhumanstageapproval."
     },
     {
       "id": "EV-SUPPLY",
       "kind": "design",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
       "artifact": "driver-led-interface.proposed.json",
-      "sha256": "e55ac49af515bb460264768d8683a6f073f59ca70b4e28db915a7469d3e69df6",
+      "sha256": "43f447a7aa29a41099efe7c89ba3e400428ad9df92b03e103a7437c1e4acb61e",
       "inputs": [
         {
           "path": "owner-current-brief.json",
           "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
         }
       ],
-      "scope": "Proposed port and line definition; no measured qualification."
+      "scope": "Proposed port and line definition; no measured qualification.",
+      "retained_from_intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "retained_scope_assessment": "Rootretainsoriginalspecificdocumentevidenceforunchangedrecordcriteriaonlyafter50x32ownerupdate;notnewindividualhumanstageapproval."
     },
     {
       "id": "EV-LIGHT",
       "kind": "design",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
       "artifact": "reference/LED-primary-research.json",
       "sha256": "cb6055d0e7dde703bd02d0c3197307b9c0831b32a4a759c1cdcccf80742a40b0",
       "inputs": [
@@ -516,30 +524,16 @@
           "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
         }
       ],
-      "scope": "Owner4000KCRI80 and exact LED candidate; not measured flux guarantee."
-    },
-    {
-      "id": "EV-SIZE",
-      "kind": "design",
-      "result": "pass",
-      "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
-      "artifact": "mechanical-budget.proposed.json",
-      "sha256": "cbce063e385780520e87a8448fc87a60a42f8ed8f27a9cd7b99feba81b4d843a",
-      "inputs": [
-        {
-          "path": "owner-current-brief.json",
-          "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
-        }
-      ],
-      "scope": "Explicit proposed dimension stop budget; body-only study not PCB fit."
+      "scope": "Owner4000KCRI80 and exact LED candidate; not measured flux guarantee.",
+      "retained_from_intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "retained_scope_assessment": "Rootretainsoriginalspecificdocumentevidenceforunchangedrecordcriteriaonlyafter50x32ownerupdate;notnewindividualhumanstageapproval."
     },
     {
       "id": "EV-PROCESS",
       "kind": "review",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
       "artifact": "owner-process-line-decision.json",
       "sha256": "430648e1b471d9aa3fede9aa34134bb94fe95150c138cb2d5948d0886afaab47",
       "inputs": [
@@ -548,7 +542,9 @@
           "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
         }
       ],
-      "scope": "Retained actual manual prototype process acceptance only; no new architecture approval."
+      "scope": "Retained actual manual prototype process acceptance only; no new architecture approval.",
+      "retained_from_intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "retained_scope_assessment": "Rootretainsoriginalspecificdocumentevidenceforunchangedrecordcriteriaonlyafter50x32ownerupdate;notnewindividualhumanstageapproval."
     },
     {
       "id": "EV-OWNER-ARCH",
@@ -568,7 +564,73 @@
         }
       ],
       "scope": "Actual human accepts specific proposal/map atcommit4434b04. No future schematic/product/PCB/release approval.",
-      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf"
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
+      "retained_from_intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+      "retained_scope_assessment": "Rootretainsoriginalspecificdocumentevidenceforunchangedrecordcriteriaonlyafter50x32ownerupdate;notnewindividualhumanstageapproval."
+    },
+    {
+      "id": "EV-SIZE-50X32",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Codexrootactualrecordreview/calculation;Kamilactualsizequoteonly",
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
+      "artifact": "owner-size-50x32-approval.json",
+      "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e",
+      "inputs": [
+        {
+          "path": "owner-size-50x32-approval.json",
+          "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e"
+        }
+      ],
+      "scope": "Actualowneraccepts50x32PCB;rootnativeboundscheck,notfinishedlampfit."
+    },
+    {
+      "id": "EV-EFFICIENCY-02",
+      "kind": "calculation",
+      "result": "pass",
+      "verified_by": "Codexrootactualrecordreview/calculation;Kamilactualsizequoteonly",
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
+      "artifact": "power-supply-specification.json",
+      "sha256": "b75318f16ef66c0d715294ec5a75dee595e5209cb3f4790c873528c8c8b4817b",
+      "inputs": [
+        {
+          "path": "calculated-proposal.json",
+          "sha256": "45178e9c8cbdaffb8dc78271031383c3a4d820b4af408c20e9eb16f9c509b8de"
+        },
+        {
+          "path": "bom-build.json",
+          "sha256": "054004f0328dcb34d369ee6459268d4d8a14b00ca71b4fed37a7caf3d2ea22af"
+        },
+        {
+          "path": "owner-size-50x32-approval.json",
+          "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e"
+        }
+      ],
+      "scope": "RecalculatedtotalvsLEDcurrent,inclusivebase-lossboundary,conditionalPin/efficiency/PFinputs;notmeasurement."
+    },
+    {
+      "id": "EV-PROTECTION-CALC-02",
+      "kind": "calculation",
+      "result": "pass",
+      "verified_by": "Codexrootactualrecordreview/calculation;Kamilactualsizequoteonly",
+      "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
+      "artifact": "calculated-proposal.json",
+      "sha256": "45178e9c8cbdaffb8dc78271031383c3a4d820b4af408c20e9eb16f9c509b8de",
+      "inputs": [
+        {
+          "path": "calculated-proposal.json",
+          "sha256": "45178e9c8cbdaffb8dc78271031383c3a4d820b4af408c20e9eb16f9c509b8de"
+        },
+        {
+          "path": "bom-build.json",
+          "sha256": "054004f0328dcb34d369ee6459268d4d8a14b00ca71b4fed37a7caf3d2ea22af"
+        },
+        {
+          "path": "owner-size-50x32-approval.json",
+          "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e"
+        }
+      ],
+      "scope": "BoundedpaperOVP/discharge/energycalculationsonly;nosinglefaultsurgephysicalpass."
     }
   ]
 }

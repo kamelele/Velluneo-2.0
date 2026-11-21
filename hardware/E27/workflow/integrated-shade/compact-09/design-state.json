@@ -1,19 +1,40 @@
 {
-  "revision": "SC09-routed-50x32",
-  "state": "complete_candidate_packet_not_released",
-  "board_sha256": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
-  "schematic_sha256": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
-  "native_ERC_DRC_parity": "0 errors/0 unconnected/0 parity issues",
-  "formal_release": "FAIL; see prototype-package/checks/toolkit-release.json",
-  "size_mm": [
-    50,
-    32,
-    19.5
-  ],
-  "proposed_25mm_width_met": false,
-  "branch": "concept/integrated-shade-nonisolated-buck",
-  "main_write_authorized": false,
+  "revision": "SC09-lab-order-02",
+  "scope": "accepted50x32unpopulatedlaboratoryPCB",
+  "current_manifest": "order-review-inputs.json",
+  "PCB_sha256": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c",
+  "schematic_sha256": "a93749f626a98709d4b87fb0270bc2409db5944e04d367b65e31d102ac159b32",
+  "dimensions_accepted": true,
+  "specification": "prototype-package/SC09_specification.pdf",
+  "readiness": "prototype-package/bare-board-readiness.json",
+  "full_product_toolkit_release": false,
   "physical_measurements_performed": false,
   "order_placed": false,
-  "actual_authority": "owner-autonomous-completion.json; no individual stage approvals fabricated"
+  "bare_board_technical_status": "technically_ready_for_supplier_CAM_preview_and_unpopulated_laboratory_PCB_order_selection",
+  "current_four_role_reports": [
+    {
+      "role": "Reality Checker",
+      "actor": "/root/order_reality_review",
+      "path": "order-reviews/reality.json",
+      "sha256": "364f75ddcaa3f9b5b5a341681c468ad6320e77309abfc3c4a46f06cce07a37da"
+    },
+    {
+      "role": "Overengineering Reviewer",
+      "actor": "/root/order_simplicity_review",
+      "path": "order-reviews/simplicity.json",
+      "sha256": "8757e1a366f288caa687b2058eb8514293bc6e3886345a6fc838a4c171f52f7e"
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actor": "/root/final_completeness",
+      "path": "order-reviews/completeness.json",
+      "sha256": "8a673dbef60668639858d61d77428744202a6396296f45a553d08fabf256bac0"
+    },
+    {
+      "role": "Change Reviewer",
+      "actor": "/root/final_change",
+      "path": "order-reviews/change.json",
+      "sha256": "a9e5d57ab8aaacb14572b4dc02de8e58843f6a83646a9e58e0f15515146ad991"
+    }
+  ]
 }

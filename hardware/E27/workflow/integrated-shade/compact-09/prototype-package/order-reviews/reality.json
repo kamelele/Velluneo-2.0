@@ -1,0 +1,145 @@
+{
+  "role": "Reality Checker",
+  "actual_actor": "/root/order_reality_review",
+  "independence": "Separate inspection/calculation context from root implementation and final_reality calculation contributor; source/criteria and arithmetic checked directly, not accepted by votes.",
+  "manifest": {
+    "path": "work/Velluneo-2.0/hardware/E27/workflow/integrated-shade/compact-09/order-review-inputs.json",
+    "sha256": "e238bc95429a362bd6a028a79bf64185f09eab5478cb01f1e34378e00772325a",
+    "files_verified": 202,
+    "mismatches": []
+  },
+  "scope": "Accepted-size UNPOPULATED laboratory PCB fabrication and truthful specification only; not assembled operation, powered test authorization, ordinary-bulb fit or finished-product release.",
+  "source_hashes": {
+    "PCB": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c",
+    "schematic": "a93749f626a98709d4b87fb0270bc2409db5944e04d367b65e31d102ac159b32",
+    "specification": "b75318f16ef66c0d715294ec5a75dee595e5209cb3f4790c873528c8c8b4817b",
+    "T1_contract": "39d05506c010a810fb520bd5d18057c19b71f6f2d1212f9e4021412cf907790c",
+    "LYT1_primary_pdf": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc"
+  },
+  "independent_recalculation": {
+    "Rsense_ohm": 0.5732101616628176,
+    "total_estimated_current_mA": 135.2034649476229,
+    "bleed_mA": 1.7647058823529413,
+    "external_LED_mA": 133.43875906526995,
+    "external_LED_W": 8.006325543916196,
+    "all_inclusive_base_loss_W": [
+      0.9,
+      1.7
+    ],
+    "input_power_W": [
+      8.906325543916196,
+      9.706325543916195
+    ],
+    "LED_efficiency_percent": [
+      82.48564822693858,
+      89.89482255547262
+    ],
+    "RMS_input_230V_assuming_true_PF0p9_mA": [
+      43.025727265295636,
+      46.89046156481253
+    ],
+    "U1_junction_unvalidated_scenario_at40C": [
+      58.0,
+      110.0
+    ],
+    "T1_body_unvalidated_scenario_at40C": [
+      59.21451006375639,
+      108.42902012751279
+    ],
+    "T1_radial_fit_arithmetic_reserve_mm": 0.028933982822017798
+  },
+  "checks": {
+    "SC09_ERC.json": {
+      "sha256": "22a412fa00591d8aaf30a77acd9f3d4824112c72313fa8a67caf6ab7b4e22716",
+      "passed": null,
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0
+    },
+    "SC09_DRC.json": {
+      "sha256": "0e4f10b2a944b8047c952996aaf549cacf8bc6abb18b3250f42a89d767604e86",
+      "passed": null,
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0
+    },
+    "toolkit-connectivity.json": {
+      "sha256": "81d66a68757302cf3066cdd006fc4a705ee952512e9fe33224fbfa106f05477c",
+      "passed": true,
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0
+    },
+    "spacing-scoped.json": {
+      "sha256": "cee5f9ed8255df0da1a1cbf1fa23cfd1ab7da440142e5a2b3c8ac750b7f8d279",
+      "passed": true,
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0
+    },
+    "spacing-strict.json": {
+      "sha256": "11daa833c6f1a7fe91bb1685610ced84d5fa275e3d6d0099a6305e76bac38e6f",
+      "passed": false,
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0
+    },
+    "refill.json": {
+      "sha256": "07f4dcfceae8b4c07fc99566bcd2340b26c1b233a3864036855cb55ae0db34c2",
+      "passed": null,
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0
+    },
+    "toolkit-release.json": {
+      "sha256": "a441033a000bb329fe25de28488e97af746b6a8ee339aa4b58b1b77934b45bbd",
+      "passed": false,
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0
+    },
+    "SC09_do_zamowienia_PCB.zip": {
+      "sha256": "f3369e378bb58194369b153913f296249a5773ef63bd9332a0017ac1c433e71a",
+      "CRC_pass": true,
+      "entries": 9
+    },
+    "SC09_KiCad.zip": {
+      "sha256": "65a97917fd703d2066df50227793fa6e63411d8c9ea1cb7f1f71a7f6138172f7",
+      "CRC_pass": true,
+      "entries": 124
+    }
+  },
+  "findings": [
+    {
+      "id": "OR-REAL-01",
+      "severity": "major_before_powered_assembly_acceptance",
+      "status": "open_disclosed_not_bare_fabrication_blocker",
+      "object": "T1 thermal/inductor qualification",
+      "basis": "Explicit sensitivity model gives upper108.43C at40C ambient vs90Ctarget; coreloss/thermalresistance/hotDCbias/currentlimit saturation not established. T1 contract also discloses maximum IC fault-current flux ~0.682T.",
+      "consequence": "Cannot claim rated hot operation or safe fault behavior. Prototype measurements may require coil/layout redesign.",
+      "closure": "Qualified supplied coil and guarded electrical/thermal/fault investigation with accepted stop limits and actual records."
+    },
+    {
+      "id": "OR-REAL-02",
+      "severity": "major_before_powered_or_finished_product_acceptance",
+      "status": "open_disclosed_not_bare_fabrication_blocker",
+      "object": "Mains referenced output, finite package spacing concessions, surge/fault/EMC/OVP",
+      "basis": "All terminals mainsreferenced; strict package surface screen FAIL retained, bounded geometry PASS not normative insulation; dynamic90V C6 target unmeasured. FullToolkit release remainsFAIL.",
+      "consequence": "Bare board cannot be presented as safe finished lamp or qualified powered unit.",
+      "closure": "Qualified safety/access/fixture/stress review and physical testing, not CAD or instruction-only touch barrier."
+    },
+    {
+      "id": "OR-REAL-03",
+      "severity": "minor_documentation_or_later_efficiency_review",
+      "status": "disclosed_here_optional_annotation",
+      "object": "R8/R9 dual68k preload",
+      "basis": "Primary LYT1 RevB p4 recommends preload dissipation<=0.5% output; this pair consumes0.10588W/8.1122W=1.3052%.",
+      "consequence": "Explicit faster-discharge tradeoff increases loading relative to guidance/reference; does not invalidate bare artwork or make the current spec false.",
+      "closure": "Retain deliberate tradeoff and measure actual regulation/efficiency; do not silently assign reference efficiency."
+    }
+  ],
+  "primary_basis": "LYT1 cached RevB source current formula k3.6 and preload guidance verified directly; actual hardware parameter tolerance remains unmeasured.",
+  "recommendation": "ready_for_human_review",
+  "scoped_verdict": "No additional known physics/specification defect blocks ordinary supplier CAM preview and ordering the unpopulated laboratory PCB under the declared scope. Real assembly/powered/product gates remain open; no supplier CAM acceptance, actual purchase, physical measurement or stage certification is granted.",
+  "approvals_fabricated": false
+}

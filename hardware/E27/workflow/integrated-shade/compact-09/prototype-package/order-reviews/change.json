@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "role": "Change Reviewer",
+  "actual_actor": "/root/final_change",
+  "reviewed_revision": "SC09-lab-order-02",
+  "reviewed_manifest": {
+    "path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\order-review-inputs.json",
+    "sha256": "e238bc95429a362bd6a028a79bf64185f09eab5478cb01f1e34378e00772325a",
+    "verified_files": 202,
+    "hash_mismatches": []
+  },
+  "source_CAD": {
+    "PCB_sha256": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c",
+    "schematic_sha256": "a93749f626a98709d4b87fb0270bc2409db5944e04d367b65e31d102ac159b32",
+    "pinned_toolkit_snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a"
+  },
+  "scope": "Independent inspection of implemented source/configuration/artifact changes for the now owner-accepted50x32 UNPOPULATED laboratory PCB fabrication package; no assembled-function, safety, powered-test, supplier CAM acceptance or product release approval.",
+  "independence_disclosure": {
+    "prior_contribution": "This reviewer authored workflow-audit.json recommending the lifecycle/rawhardware self-cycle remedy and separation of bare-board readiness from full-product release. Root independently implemented all changes; reviewer wrote no CAD/configuration/package files.",
+    "limit": "Do not count my re-evaluation as an independent origin/review of the abstract advisory method itself. This report independently verifies actual root implementation, exact source/artifact identities, actual native pin/library/MPN consistency and read-only snapshot invariance. Other final roles should retain oversight of workflow-method adequacy.",
+    "sole_write_scope": "work/compact09/order-closure/final-reviews/change.json"
+  },
+  "independent_checks": [
+    {
+      "id": "OCHG-C01",
+      "result": "pass",
+      "evidence": "All202exact frozen input hashes verified; all current artifact-source-binding export hashes match. No source changed during final inspection."
+    },
+    {
+      "id": "OCHG-C02",
+      "result": "pass",
+      "evidence": "Actual pinned pcb-toolkit.py run snapshot returns6cc37f6a...d486a, matching retained final full-release report and each registered artifact entry. Actual hardware.design minus approvals/waivers/release_files hashes toe9bd1ad28714e4a993fab1057a5ff3e3ac84857969ab690c4a506ca27f3bbaea, exactly report project-design-config. Rawhardware andrelease-candidate outputs are absent from declared source_files and actual report input_hashes. No design configuration is silently unbound."
+    },
+    {
+      "id": "OCHG-C03",
+      "result": "pass",
+      "evidence": "Allsix required artifact classes populated, seven exact file entries exist insideS and have correct SHA/snapshot. Fullrelease26errors retain releaseapproval coverage failure, but no artifactmissing/stalefile error remains. hardware.approvals={} and waivers=[]; no exact-stageapproval fabricated."
+    },
+    {
+      "id": "OCHG-C04",
+      "result": "pass",
+      "evidence": "PortableKiCadZIP124entries independently checked: no missing declaredsources, allpresententrybytesmatchcurrentS, allregisteredartifacts included. No recursiveportableZIP/selfhashcycle introduced."
+    },
+    {
+      "id": "OCHG-C05",
+      "result": "pass",
+      "evidence": "Independently fetched actualPCB from remote base082ffdb3e994a0d7c307325bc42dd6f1db1e27cc. Compared236top-levelS-expressionblocks:0added/removed, onlyT1footprint exactly3drill0.85->1.20 replacements and8gr_text exactlythickness0.12->0.15. Everyotherblock unchanged, including copper/keepouts/routes/positions/netassignments."
+    },
+    {
+      "id": "OCHG-C06",
+      "result": "pass",
+      "evidence": "Independently fetched actualSCH from same remote base. Compared128top-levelblocks:0added/removed, onlytwoTEXTnotes changed to distinguish total135mA from externalLED~133.4mA. No electricalsymbol/wire/net change."
+    },
+    {
+      "id": "OCHG-C07",
+      "result": "pass",
+      "evidence": "Native read-only pcbnew10.0.6 independently verifies all47pin-net assignments exactly approvedA1,19refs,11nets/1NC and0nativeunconnected. All19PCBMPNs exactlybom-build.json. All19actualfootprint padnumber/position/size/drill/shape/layergeometry exactly localcanonical library atnative side/pose; T1hasthree1.20mmdrills/1.8mmlands. DRCexclusions=[]; globalrule/configstateunchanged."
+    },
+    {
+      "id": "OCHG-C08",
+      "result": "pass_with_scope_limits",
+      "evidence": "RetainedfreshorderERC/DRC/parity allzero, actualindependentA1exportpass, scoped55pairpass andstrictFAILbothretained. Exactnative two-pass refill equality bound toc28e88...373c. These are correct technical checks, not physical insulation or powered operation proof. Actual8nativelegends areheight1.0mm/stroke0.15mm."
+    },
+    {
+      "id": "OCHG-C09",
+      "result": "pass_with_scope_limits",
+      "evidence": "Owner-size-50x32-approval.json retains actuallatestquote accepting50x32; C_SIZE revision nowtracks that labscope. C_EFFICIENCY explicitlycalculatedplanningandC_PROTECTION remainsconditionalcalculation/noallfaultPASS. Fullthermalmeasurement, cavity/geometry/environment/optical/safety/interface, formalspatial/provider/stageapproval obligations remain open. No measurement method replaced byreview/calculation to falsify qualification."
+    },
+    {
+      "id": "OCHG-C10",
+      "result": "pass_with_scope_limits",
+      "evidence": "Independent nominalarithmetic Rsense=.5732101617ohm, total135.2034649mA, dualbleeder1.7647059mA at60V, externalLED133.4387591mA/8.0063255W agrees spec/correctednote. PF/efficiency/temp values are explicitly planning/scenarios rather than ratings or measurements."
+    }
+  ],
+  "findings": [],
+  "retained_nonblocking_document_notes": [
+    {
+      "id": "OCHG-N01",
+      "object": "README/OPEN_ITEMS references bare-board-readiness.json",
+      "status": "Expected coordinator-derived post-review output, not yet among202inputs",
+      "disposition": "Root explicitly confirms creation AFTERfourreviews with exact202manifest/reviewhashes/currentCAD/ZIPhashes and6ccsnapshot; deliver it and verify finalarchive/Gitbytes. This report does not pretend the derived decision file was already inspected."
+    },
+    {
+      "id": "OCHG-N02",
+      "object": "Manualbottomassemblylabeldensity",
+      "status": "Minor retained assembly-document readability note from priorreview; no new electrical/padregression",
+      "disposition": "PinCSV/nativeCAD provide exactcross-reference. This does not block unpopulatedPCBfabrication."
+    }
+  ],
+  "full_release_retained": {
+    "passed": false,
+    "error_count": 26,
+    "release_file_missing_or_stale_errors": [],
+    "true_remaining_artifact_approval_error": "Release approval does not cover current artifacts",
+    "do_not_relabel": "FullToolkitFAILisnotautomaticallyclosed by bare-boardreadiness. Actualphysicaltest/assembly/productgates remain retained."
+  },
+  "scoped_fabrication_verdict": "No blocking change-regression or implemented artifact-registration defect found for the owner-accepted50x32 UNPOPULATED laboratory PCB fabrication package. Recommend ready_for_scoped_bare_board_fabrication_review/preparation, with finalcoordinatorderivedreadiness/outputbinding and supplierpreview handled separately. This is not an agentgrant of stageapproval or permission to energize/purchase.",
+  "qualification_limits": [
+    "Custom180Tcoil supplier/sample andformedR7/RF1/C6 verification remain assembly gates; actual hole arithmetic is not inspected supplierpinaccuracy.",
+    "Native manufacturinggeometry andboundedfunctionalspacingconcessions do not establish soldered/3D/normativeinsulation.",
+    "Electricalfault/current/OVP/surge/EMC/temperature/lifetime/opticalperformance remain unmeasured; thermal sensitivity can exceedtarget.",
+    "No supplierCAMacceptance, actualorder, orderpayment or finalpublication verified by this report."
+  ],
+  "manufacturing_full_product_release_approved": false,
+  "bare_board_actual_order_placed": false,
+  "physical_tests_performed": false,
+  "toolkit_code_or_rules_changed_by_reviewer": false,
+  "pending_integration": "Root must include derivedbare-board-readiness output, bind finaldelivery, publish intendedfeaturebranch and independently verify remote tree/main unchanged."
+}

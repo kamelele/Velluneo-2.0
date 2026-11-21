@@ -1,7 +1,5 @@
-# SC09 compact nonisolated LED driver
+# SC09 accepted-size laboratory driver PCB
 
-Current native CAD: fully routed laboratory candidate, 50 x 32 mm, approximately19.5 mm total component envelope. Nominal230VAC /135.2mA at60V. All terminals are mains referenced.
+PCB50×32mm explicitly accepted by owner; approximate declared assemblyheight19.5mm, not measured. Current total135.2mAestimate includesbleeders: externalLED≈133.4mA/8.01Wat60V. Input230VAC50Hz,screen207–253V. All nodes mainsreferenced.
 
-The complete current packet is [prototype-package](../../../workflow/integrated-shade/compact-09/prototype-package/README.md). It includes native CAD, manufacturing candidate exports, front/back3D renders, connectivity and physical spacing evidence, assembly details and open qualification items. The earlier25mm width target is not met. No passed Toolkit release, bulb-cavity fit, physical qualification or order is claimed.
-
-Approved A1 intent is preserved independently; owner autonomy authorizes completion without repeated routine questions. Historical pre-CAD and SC08 packets are not final CAD verification. See owner decisions and current package reports.
+See [current packet](../../../workflow/integrated-shade/compact-09/prototype-package/README.md), specificationPDF/JSON,9filebarePCBupload and scopedbare-board-readiness report. Nativelegend0.15mm and threeT1holes1.20mmclose fabricationdesignissues; noelectricalgraphchange. Actualcoil/forming/thermal/fault/EMCqualification remains required before assembly/energized/productacceptance. FullToolkit productreleaseFAIL is retained independently. No order or powered test was performed.

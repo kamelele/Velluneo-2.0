@@ -33,11 +33,6 @@
       "message": "Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints."
     },
     {
-      "id": "C_EFFICIENCY",
-      "gate": "schematic",
-      "message": "Required evidence kind absent: calculation"
-    },
-    {
       "id": "C_PARTS",
       "gate": "schematic",
       "message": "Required evidence kind absent: review"
@@ -46,11 +41,6 @@
       "id": "C_GRAPH",
       "gate": "schematic",
       "message": "Required evidence kind absent: review"
-    },
-    {
-      "id": "C_PROTECTION",
-      "gate": "schematic",
-      "message": "Required evidence kind absent: calculation"
     },
     {
       "id": "C_INTERFACE",
@@ -194,7 +184,7 @@
     },
     {
       "id": "C_SIZE",
-      "revision": "SC09-A",
+      "revision": "SC09-owner-50x32",
       "owner": "Kamil",
       "type": "requirement",
       "gate": "specification",
@@ -205,12 +195,12 @@
           "path": "mechanical-budget.proposed.json"
         }
       ],
-      "required_kind": "design",
+      "required_kind": "review",
       "evidence_ids": [
-        "EV-SIZE"
+        "EV-SIZE-50X32"
       ],
       "observed_levels": [
-        "designed"
+        "reviewed"
       ],
       "status": "verified"
     },
@@ -238,7 +228,7 @@
     },
     {
       "id": "C_EFFICIENCY",
-      "revision": "SC09-A",
+      "revision": "SC09-current-arithmetic-02",
       "owner": "Codex-root",
       "type": "requirement",
       "gate": "schematic",
@@ -250,9 +240,13 @@
         }
       ],
       "required_kind": "calculation",
-      "evidence_ids": [],
-      "observed_levels": [],
-      "status": "blocked"
+      "evidence_ids": [
+        "EV-EFFICIENCY-02"
+      ],
+      "observed_levels": [
+        "calculated"
+      ],
+      "status": "verified"
     },
     {
       "id": "C_PARTS",
@@ -304,9 +298,13 @@
         }
       ],
       "required_kind": "calculation",
-      "evidence_ids": [],
-      "observed_levels": [],
-      "status": "blocked"
+      "evidence_ids": [
+        "EV-PROTECTION-CALC-02"
+      ],
+      "observed_levels": [
+        "calculated"
+      ],
+      "status": "verified"
     },
     {
       "id": "C_INTERFACE",
@@ -557,10 +555,10 @@
     "Hashes establish freshness, not evidence truth or reviewer authority.",
     "Electrical checks compare declared DC envelopes only, not complete operation."
   ],
-  "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+  "intent_digest": "a800a3f2afe86fe38ec553aaa0e2ac3702497799f54dabcc1e4d9dda6f9d8a71",
   "product": "Velluneo_SC09_compact",
   "revision": "SC09-A",
-  "document_sha256": "0690f2937455a0f5387e1d707a34ed781f3766af9d1d9c7d219c183c8b8591f9",
+  "document_sha256": "b97a6fe7f51a50aa7a07b43bb507df876f32ba4a065edc8981aaa665561043f5",
   "blockers": [
     {
       "id": "OPEN_CAVITY",
@@ -593,11 +591,6 @@
       "message": "Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints."
     },
     {
-      "id": "C_EFFICIENCY",
-      "gate": "schematic",
-      "message": "Required evidence kind absent: calculation"
-    },
-    {
       "id": "C_PARTS",
       "gate": "schematic",
       "message": "Required evidence kind absent: review"
@@ -606,11 +599,6 @@
       "id": "C_GRAPH",
       "gate": "schematic",
       "message": "Required evidence kind absent: review"
-    },
-    {
-      "id": "C_PROTECTION",
-      "gate": "schematic",
-      "message": "Required evidence kind absent: calculation"
     },
     {
       "id": "C_INTERFACE",

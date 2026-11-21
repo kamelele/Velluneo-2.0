@@ -1,43 +1,35 @@
-# SC09 routed laboratory prototype — manufacturing review packet
+# SC09 — accepted-size bare laboratory PCB package
 
-**Candidate files are complete for review, not a passed Toolkit release or a qualified lamp.**
-Board: **50 x 32 x 1.6 mm**, two copper layers, 1 oz, lead-free HASL, green mask, white legends, manual assembly. Combined component envelope: **approximately 50 x 32 x 19.5 mm**, based on declared maxima, not a measured assembly. The earlier proposed 50 x 25 x 20 mm envelope is **not met**; width is 7 mm greater. No ordinary-bulb cavity fit is demonstrated. No enclosure is designed here.
+**Current scope: unpopulated laboratory PCB for manual prototype assembly and later measurements.** The owner explicitly accepts50×32mm. This closes the earlier25mm width deviation. It does not prove fit in a particular bulb cavity or qualified operation. The actual scoped fabrication disposition is in `bare-board-readiness.json`; full product Toolkit release remains a separate failing report.
 
-Input: 230 VAC / 50 Hz, calculations screened at 207–253 VAC. Output: nominal 135.203 mA at 60 V, 8.112 W; proposed LED range 52–68 V, 20 series Lumileds L128-4080CA3500001, 4000 K / CRI >=80. Approximately 800 lm is a lamp target, not measured output. All output terminals and internal copper are mains-referenced; this is not SELV. No dimming or powered LED replacement.
+## Download and ordering parameters
 
-## Files
+Use **SC09_do_zamowienia_PCB.zip** (or equivalent SC09_Gerbers_drills.zip): exactly7Gerber layers and2Excellon drill files. CRC/file hashes and coordinates are checked against native CAD. FR-4,2copperlayers,1oz,1.6mm, **lead-free HASL**, green mask, white legends, one board per closed50×32mm outline. No PCBA/stencil/panel or order payment is implied. Review the actual supplier preview before checkout; no supplier CAM acceptance has been obtained here.
 
-- `SC09_Gerbers_drills.zip`: bare-board artwork and Excellon drills. Exported with one shared absolute coordinate system; no mirroring or separate offsets.
-- `fabrication/`: individual F/B copper, mask, silkscreen, Edge.Cuts, X2 job, plated/nonplated drill files, maps and report. Empty NPTH file is expected (zero NPTH). 27 plated holes, including 10 vias; minimum drill 0.30 mm. No slots or mounting holes. Single board; no panel tooling.
-- `SC09_KiCad.zip`: portable native schematic, PCB, project, local symbols/footprints and the 17 actual WRL package models.
-- `SC09_schematic.pdf`, `SC09_layers.pdf`: native schematic and copper/silkscreen layers.
-- `SC09_assembly_front.pdf`, `SC09_assembly_back.pdf`: native assembly views; back view mirrored for underside assembly. Add pin-position CSV when identifying lands.
-- `SC09_BOM.csv/json`: 19 references, 17 electrical parts plus 2 bare-wire interfaces. No populated DNP positions. LED board and external wiring/fixture are not this PCB's BOM.
-- `SC09_pin_connections.csv`: actual 47 native pin locations/net membership. Expected intent is independently retained in the KiCad source package, not inferred from this CSV.
-- `SC09_positions_manual_reference.csv`: all 19 origins/sides/angles for manual reference. Coordinates are X from left, Y down from top in mm, angles are native KiCad footprint angles. This is NOT a vendor-qualified PCBA pick-and-place file.
-- `SC09_assembly.wrl`: complete embedded native 3D visual model, millimetres; generic package appearances. No empty STEP assembly is presented as a full model. See `checks/3D-export-status.json`.
-- `views/`: actual native front/back 3D renders; no AI-generated substitute.
-- `checks/`: fresh ERC, DRC/parity, independent approved-intent comparison, all-55-pair strict and bounded laboratory spacing screens, two-pass refill equality and native inventory. Complete Toolkit release result is retained even though it fails.
-- `validation/`: read-only native saved-copper validator, matrix and bounded package-land assessment. Run with matching KiCad10.0.6 pcbnew. Test controls are retained; no global spacing waiver is introduced.
+27PTH/0NPTH, minimum drill0.30mm; T1 now has three1.20mm holes. Empty NPTH program is intentional. Milling path centreline is50×32mm;0.05mm outline stroke does not increase the intended routed size. Optional native .gbrjob has Finish=None and stroke-size metadata, so it is deliberately excluded from the upload ZIP. The explicit HASL order parameter controls the finish. The loose fabrication directory also retains drill maps/report and native auxiliary job for traceability.
 
-## Ordering and assembly status
+`SC09_KiCad.zip` is the complete portable editable project with local symbols, footprints,17WRL model packages, experimental per-part STEP sources and registered fabrication artifacts. STEP interchange remains unqualified; no empty assembled STEP is delivered. `SC09_assembly.wrl` is the actual embedded visual model. Both native front/back renders are under `views/`.
 
-The artwork is an engineering candidate. Do not describe this packet as a passed production release: `checks/toolkit-release.json` is **FAIL**. Remaining product/physical qualification and formal spatial/approval/provider gates are listed there and in `OPEN_ITEMS.md`. Existing owner instructions authorize autonomous design/export/publication, not fabricated individual stage acceptance, purchase or energized tests. No order or supplier message was sent.
+## Supply specification
 
-For a later authorized bare-board quotation: JLCPCB FR-4, 2 layers, 1.6 mm, 1 oz outer copper, lead-free HASL; one board per outline; do not substitute aluminium PCB, add panel tabs or scale artwork. Confirm layer assignment, 50 x 32 mm outline and PTH/NPTH separation in the supplier preview. No controlled impedance or blind/buried vias. Not an Economic/Standard PCBA upload: prototype assembly is manual. No stencil is required for the hand-solder plan; paste/stencil files are intentionally excluded. A production PCBA change needs a separate process review and quotation.
+Read **SC09_specification.pdf/json**. Input230VAC50Hz, calculations207–253V. Proposed output52–68V LED load, nominal60V. Regulated total current estimate135.2mA includes dual68k discharge resistors; at60V externalLED estimate is133.4mA /8.01W. No accuracy/ripple guarantee is established. This is a constant-current supply, not a regulated60V voltage source.
 
-Assembly: solder bottom SMD parts first, inspect polarity/bridges; install formed R7 and RF1 and other THT parts using their contracts. Verify T1 with a three-pin gauge before installation. Fit C6 horizontally on an appropriate insulating support, keep its 5 mm vent-direction reserve, and avoid damaging its sleeve. Sleeve insulation is not a safety barrier. Trim leads below the board so they cannot contact bottom parts or copper; keep within the declared underside envelope. Check clearances after trimming and soldering. Support insulated wires independently: J1/J2 have bare solder lands, no selected connector or strain relief.
+All-inclusive base loss allocation0.9–1.7W gives input8.91–9.71W and82.5–89.9% efficiency to externalLED at the nominal60V operating point. These are planning scenarios, not measured extrema. At230V and ASSUMED truePF0.90, input is43.0–46.9mARMS. PF/current must be measured. Reference-board91.51% efficiency is not assigned to SC09.
 
-J1 pin1 = L, pin2 = N. J2 pin1 = LED_PLUS, pin2 = DC_RETURN. Exact land locations are in the pin CSV (both interfaces are on B.Cu). C6 pin1 positive; BR1 pin1 positive/pin3 negative; D1 pin1 cathode/pin2 anode; T1 pin1 LED_PLUS, pin8 FB_INDUCTOR, pin4 deliberately unwound/floating. Remove bobbin pins2/3/5/6/7 as contracted. U1 dot/pin1 = BP. Confirm all against native schematic and manufacturer data before soldering.
+Ambient design scope0–40°C. Explicitly unvalidated temperature scenarios at40°C: U1 junction58–110°C, T1 body59–108°C. The latter can exceed the90°C target: test hot behavior before treating the assembly as rated. C6 can≤75°C is a target,85°C a proposed lab stop; neither is a predicted measured result. Full assumptions and other targets are in the specification.
 
-T1 is the custom 180-turn AWG32, 1 mH EE10 design, NOT an immediately orderable catalogue inductor. Supplier feasibility, winding insulation, DC bias, core loss and finished dimensions require verification. LYT1603D-TL is NRND; no lifecycle/supply guarantee or complete priced basket is claimed. Exact RF1/R7/C6 forming remains an unqualified assembly proposal. A render does not validate supplier fit.
+## Current physical design and checks
 
-## Electrical and thermal scope
+PCB50×32×1.6mm; approximate declared assembly envelope50×32×19.5mm. Eight legend strokes were corrected0.12→0.15mm with text height1.0mm. ThreeT1holes were enlarged0.85→1.20mm without changing pin centres, outer lands, nets or circuit. Coil-terminal position is explicitly RADIAL≤0.15mm; nominal fit arithmetic includes conservativePCBposition/hole tolerance. This closes a design fit-envelope problem, not actual supplier sample qualification.
 
-Nominal current is calculated from R5 || R6. Static OVP screening is approximately 69.37–86.51 V with 25 C IC threshold limits; dynamic C6 target <=90 V is unmeasured. C6 is 150 uF / 100 V (screen maximum 180 uF); maximum stored-energy screen 0.729 J at90V. Each 68k bleeder is screened at approximately0.123 W at90V; one open bleeder gives a calculated90-to5V time of36.45s. Verify discharge; do not rely on elapsed time alone.
+19references,47physicalpads,11intendednets,1explicitNC. Fresh native ERC/DRC/parity, approvedA1graph, two-pass refill and independent all55pair screens are retained. The strict spacing screen fails intrinsic package-land distances; the separate bounded laboratory screen retains finite SO8/bridge/SMA concessions. No soldermask/SELV or normative insulation qualification is claimed. No check exclusion or global floor is relaxed.
 
-Planning loss allocation is0.9–1.7 W, **not a guaranteed interval**. Source-connected thermal copper is241.90 mm2 across both layers; D1 DC_RETURN copper is80.99 mm2. Copper area does not establish component temperatures. At0–40 C ambient characterize C6 can (target<=75 C, stop85 C), T1 (target<=90 C), SOURCE pin (target<=100 C), D1 case (target<=100 C), R7 local ambient/body and bleeders. Manufacturer junction/derating limits and the test operator's lower stop limits control. No published reference-board efficiency, surge or EMI result is inherited.
+Existing older reviews/final-review-inputs belong to commit082ffdb. Current order-stage reviews and exact inputs are separate; see current workflow index and `order-review-inputs.json`. Documents, calculations, scenarios and measurements are distinct.
 
-The high-frequency loop is kept around C4/U1/D1/T1 and R5/R6, with a separate sense branch to U1 FB. The long BUS_FILTERED feed is upstream of local C4 and is not the commutation return. SOURCE thermal pours have native pour-only high-voltage guards, not DRC exclusions. The strict all-pair screen fails intrinsic manufacturer package-land gaps; the separate scoped screen passes only explicitly bounded SO8/bridge/SMA land/escape concessions. These are engineering prototype assessments, not normative insulation waivers.
+## Assembly and physical testing remain controlled later steps
 
-See `BRINGUP.md` before planning any powered investigation. No physical test is recorded as performed.
+Solder bottomSMD first, inspect bridges/polarity, then install THT parts according to exact native schematic/BOM and custom contracts. T1 needs supplier/sample gauge and inductance/DCbias/thermal qualification. R7/RF1/C6 leadforming, insulation support, vent clearance and solder protrusion need actual part inspection. A1:1print gauge is provided in SC09_fit_gauge_1to1.pdf; print100% and verify its50mm ruler. A paper gauge is not a qualified supplied coil.
+
+J1.1=L,J1.2=N; J2.1=LED_PLUS,J2.2=DC_RETURN, both bare-wire interfaces on B.Cu. Pins/coordinates are in SC09_pin_connections.csv, and sides/angles in SC09_positions_manual_reference.csv (native KiCad angles, Xfromleft/Ydownfromtop; not vendor-qualified PnP). No DNP population positions. External LED board, wire strain relief and guarded fixture are outside this PCB.
+
+All internal/output nodes remain MAINS REFERENCED, notSELV. No dimming or hotplug. Isolate power and verify discharge before replacing/reconnecting the LED module. Integrated protection, MOV and bleeders do not provide a touch barrier or demonstrate safe single-fault behavior. BRINGUP.md identifies later qualified-test prerequisites; no powered results or actual order are claimed.

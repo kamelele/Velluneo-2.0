@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "actor": "/root/final_change",
+  "role": "Independent workflow/configuration auditor; read-only inputs, sole output this report",
+  "task": "Close actual prototype fabrication packet registration gaps without forging full Toolkit release or moving physical obligations out of view",
+  "input_hashes": {
+    "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\hardware.json": "0ce860329f9c7fb95607e794fb89e298159a6f4a2881a741d9a87e30bc55e14e",
+    "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\requirements.json": "0690f2937455a0f5387e1d707a34ed781f3766af9d1d9c7d219c183c8b8591f9",
+    "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_pcb": "feab494acc789a88f03461f3b15526fa84a86f2f7053647262585ccaf770178b",
+    "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_sch": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+    "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\checks\\toolkit-release.json": "0a4ddb87707d56190bbcaa98cead6a64caeedffbbf6b23fb0b7d17a18b5aaa1f",
+    "work\\Velluneo-2.0\\.pcb-toolkit\\versions\\05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\\scripts\\pcb_rules.py": "36dab64eb723841b5cbc454f353fab5482bfce795252f09bd857281ddfd94955",
+    "work\\Velluneo-2.0\\.pcb-toolkit\\versions\\05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\\scripts\\product_contracts.py": "1c95b8d5e9cf88f606d33270414407fe2565cda0e8ca7999ec3d53601ae56d3c",
+    "work\\Velluneo-2.0\\.pcb-toolkit\\versions\\05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\\docs\\product-requirements.md": "7620017b60b717dfe258641627c6d32f6d051b0dd005062dd6b54998d357ce4f",
+    "work\\Velluneo-2.0\\.pcb-toolkit\\versions\\05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822\\profiles\\assembly-inhouse.json": "842ef8a87ec249443f3659a5d1d6c21c77ba5743c921492c5e009bee6fabdf48"
+  },
+  "baseline_toolkit_snapshot": "9bfbc64f7cffe8e553e2814eb32f7eec968c3e2be076f13c8d9b76428c6c91ae",
+  "baseline_full_release_passed": false,
+  "actual_readonly_launcher_snapshot_result": "9bfbc64f7cffe8e553e2814eb32f7eec968c3e2be076f13c8d9b76428c6c91ae",
+  "key_findings": [
+    {
+      "id": "WF-01",
+      "severity": "documentation_registration_gap",
+      "object": "hardware.release_files",
+      "evidence": "Empty mapping currently yields six missing-artifact classes despite actual exports existing in workflow/prototype-package. These administrative gaps can be closed now."
+    },
+    {
+      "id": "WF-02",
+      "severity": "self_hash_cycle_if_unfixed",
+      "object": "hardware.source_files contains hardware.json",
+      "evidence": "Pinned snapshot() excludes approvals/waivers/release_files from project-design-config but also raw-hashes every source_file. Therefore raw hardware.json defeats intended lifecycle exclusion. Adding snapshot-bound release records changes rawhardware hash and current snapshot.",
+      "numeric_demonstration": {
+        "before": "9bfbc64f7cffe8e553e2814eb32f7eec968c3e2be076f13c8d9b76428c6c91ae",
+        "after_inmemory_added_actual_gerber_record_with_raw_hardware_still_hashed": "94b2e7b293ebf1fb628a5e5f11ae9b82089b4b908bc0e5b0bae2e0e49c822584"
+      }
+    },
+    {
+      "id": "WF-03",
+      "severity": "path_scope",
+      "object": "release artifact paths",
+      "evidence": "safe_path requires release artifacts inside the project directory S, not ../workflow. Existing P outputs must be copied into a project-local output subtree for native registration."
+    },
+    {
+      "id": "WF-04",
+      "severity": "retained_release_blocker",
+      "object": "Full product release",
+      "evidence": "Current full release has actual spatial/provider/stage approval/product requirement/physical qualification gaps. Registering files cannot resolve those. A new title or assembly-profile change is not evidence of electronics safety."
+    }
+  ],
+  "recommended_registration_procedure": [
+    "Preserve source/project/rules/libraries and all full-product obligations. Record the actual latest owner acceptance of50x32 for the laboratory board and autonomous scope without inventing exact-stage approval or qualified lamp/cavity fit.",
+    "Remove only raw hardware.json from hardware.source_files. Keep the file in Git and outer freeze manifests. Its entire design configuration remains automatically included as project-design-config; approvals/waivers/release_files are intentionally excluded by pinned snapshot. Do not omit actual CAD/libraries/requirements/basis/evidence.",
+    "Create S/release-candidate/ (or another named project-local output subtree). Copy the six required artifact classes listed in existing_artifacts below. Exclude this output subtree from source_files generators. Keep source master BOM/assembly contracts tracked. Avoid copying a portableKiCadZIP that recursively includes release-candidate or hardware registration into itself.",
+    "Finish true source/configuration/evidence changes first. Run pinned launcher snapshot and retain actual output. Do not use the arithmetic demonstration hash as a new real snapshot after further edits.",
+    "For each hardware.release_files class, set list entries containing relative path, actual SHA256 and exact current snapshot. Example fields are provided below. These are truthful artifact bindings, not acceptance.",
+    "Rerun pinned snapshot after filling release_files; assert equality. With rawhardware excluded and outputs not sources, adding only lifecycle registration cannot change project-design-config or other source hashes.",
+    "Rerun full release checker. Verify the six missing-artifact and artifact stale findings disappear, while unresolved physical/product/spatial/provider/realapproval gates remain honestly reported. Do not populate hardware.approvals with agent decisions.",
+    "Register genuine existing calculation/review/DRC evidence for productrequirements where that exact method and acceptance really are met. Record technical implementation paths plus nonempty hashed inputs and artifacts. Setting status=resolved or changing gate/method alone is not evidence. Any requirement/unknown revision changes intent_digest across document, so legitimate prior evidence must be rereviewed/refreshed against new digest.",
+    "Create a separate explicit bare-board laboratory fabrication brief and scoped readiness report referencing the same unchanged CAD, selected fab profile, actual exports and actual current owner scope. This is a supplemental assessment, not another fake Toolkit profile or a renamed fullreleasePASS.",
+    "Freeze final sources/artifacts and obtain four read-only role reports on that exact final packet. Publish samefeaturebranch and independently verify remote tree scope/main unchanged."
+  ],
+  "self_cycle_resolution_proof": {
+    "method": "Independent arithmetic reproduction of exact pinned snapshot algorithm using retained verified source/tool records, no Toolkit code modification and no design writes. Ordinary retained snapshot exactly reproduced first.",
+    "proposed_rawhardware_removal_snapshot_for_unchanged_remaining_inputs": "f24316e1633a993c63b68b0e552590429e7518b38c68a079e61d15d1cc5b318d",
+    "after_adding_only_release_files_record": "f24316e1633a993c63b68b0e552590429e7518b38c68a079e61d15d1cc5b318d",
+    "invariant": true,
+    "limits": "Demonstrates absence of cycle for that in-memory configuration. Root must rerun real pinned launcher for final config and compare before/after registration; no newPASS or approval implied. An attempted direct native import was refused by installed dispatcher identity; no bypass or code change was used."
+  },
+  "existing_artifacts": {
+    "gerbers": [
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\SC09_Gerbers_drills.zip",
+        "current_sha256": "e69bd68986728d9a8c2ce2f77e5048da19cad6628c81dc483e424eab74193760",
+        "bytes": 39524,
+        "suggested_project_local_path": "release-candidate/SC09_Gerbers_drills.zip"
+      }
+    ],
+    "drills": [
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\fabrication\\SC09_compact-PTH.drl",
+        "current_sha256": "b52acc1bfad1192b3db19f06d2892d0560ce790e0739996134a1cc53756624a6",
+        "bytes": 1064,
+        "suggested_project_local_path": "release-candidate/SC09_compact-PTH.drl"
+      },
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\fabrication\\SC09_compact-NPTH.drl",
+        "current_sha256": "6fe687284055cec3b7c2e46daed2c5b42fff2d0d95fc34d26d48c69c43fc5323",
+        "bytes": 276,
+        "suggested_project_local_path": "release-candidate/SC09_compact-NPTH.drl"
+      }
+    ],
+    "bom": [
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\SC09_BOM.csv",
+        "current_sha256": "74e34c28bebff4249e1a1aa908273292e3526945093e887be591e2c7cf0cd843",
+        "bytes": 2795,
+        "suggested_project_local_path": "release-candidate/SC09_BOM.csv"
+      }
+    ],
+    "positions": [
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\SC09_positions_manual_reference.csv",
+        "current_sha256": "287b65321b11eccf70ace5a2af238245a1e387bff10fce431cf706c3da7f2225",
+        "bytes": 1028,
+        "suggested_project_local_path": "release-candidate/SC09_positions_manual_reference.csv"
+      }
+    ],
+    "assembly_drawing": [
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\SC09_assembly_front.pdf",
+        "current_sha256": "b2f842431f920b30b46ed83e7bfac22857aa162fb9378d957c9c24090b766fd5",
+        "bytes": 28583,
+        "suggested_project_local_path": "release-candidate/SC09_assembly_front.pdf"
+      },
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\SC09_assembly_back.pdf",
+        "current_sha256": "d276df2a3cecad5e653315ede847237ffe21e6ca629b427f4ad7ae65ee5f4450",
+        "bytes": 45529,
+        "suggested_project_local_path": "release-candidate/SC09_assembly_back.pdf"
+      }
+    ],
+    "bringup_plan": [
+      {
+        "current_path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\prototype-package\\BRINGUP.md",
+        "current_sha256": "01f57ebd7bdbb1ed4267fc53ed4f960ca4ea9e2a7f1ae957782b1399aec4a940",
+        "bytes": 3286,
+        "suggested_project_local_path": "release-candidate/BRINGUP.md"
+      }
+    ]
+  },
+  "example_record_shape": {
+    "gerbers": [
+      {
+        "path": "release-candidate/SC09_Gerbers_drills.zip",
+        "sha256": "ACTUAL_FINAL_FILE_SHA256",
+        "snapshot": "ACTUAL_FINAL_PINNED_SNAPSHOT"
+      }
+    ]
+  },
+  "bare_board_scope": {
+    "object": "Unpopulated FR4 two-layer laboratory test board, no assembly, soldered leads, current-carrying operation, consumer use or complete-lamp fit acceptance",
+    "genuine_pre_fabrication_checks": [
+      "Actual accepted boarddimensions/outline and selected2L1oz1.6mmleadfreeHASLprocess",
+      "ActualnativeERC/DRC/schematicparity/approvedA1graph plus all47pad mapping; no hiddenCADexclusions",
+      "Nativefilledcopper geometry/freshness and manufacturing minima/annular ring/drill/edge check",
+      "Matching artwork/layer count/absoluteorigin/closedoutline/drilltoolcounts and allsource/artifacthashes",
+      "No use of unsupportedSTEPassembly as mechanical fit proof; declaredpartenvelopes/formation contract and unresolvedsamplevalidation explicit",
+      "Review boundedpackage-spacingconcessions as functionalengineeringgeometry, not regulatoryinsulationwaivers",
+      "Actual orderableblankboardfilepackage and vendorpreview/quoteparameters complete; no supplierorder executed without authority"
+    ],
+    "not_bare_board_pass_evidence": [
+      "Measured LED current/ripple/OVP/discharge/temperature/EMC/surge/singlefaultprotection",
+      "Supplier validation of customT1/R7/RF1/C6form and procurementbasket",
+      "Assembledmoduletouchprotection/solderedclearance/consumerlampcavityandopticaloutput",
+      "Real exacthash human stage/releaseacceptance orPCBAproviderlinequalification"
+    ],
+    "allowed_verdict_wording": "Bare-board laboratory fabrication files ready for scoped review/quotation after actual listed checks; full Toolkit assembled-product release remains FAIL. If actual selected-provider manufacturinggeometry limits are not checked, list that as a real barefabblocker instead of declaringPASS.",
+    "prohibited_shortcuts": [
+      "Change assembly from inhouse to supplier merely to suppress providerconfirmation failure",
+      "Remove retained productrequirements or move theirgates to make fullreleasegreen",
+      "Replace required measurements with calculation/reviewmethods",
+      "Treat current owner autonomy as forged approval of every unseen snapshot/stage",
+      "Register nonexistent files or arbitrarysnapshots",
+      "Modify pinnedToolkitcode/globalrulefloors or add undocmentedDRCexclusions"
+    ]
+  },
+  "recommendation": "Use truthful supplemental bare-board readiness brief + correct native artifact registration. Do not fork or weaken full-product requirements/profile to claim universalreleasePASS. User-selected laboratory bareboard scope can support useful fabrication readiness while preserving actual future assembly/energized/product obligations.",
+  "files_changed_by_auditor": [
+    "work/compact09/order-closure/workflow-audit.json"
+  ],
+  "toolkit_modified": false,
+  "CAD_modified": false
+}

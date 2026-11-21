@@ -1,0 +1,127 @@
+{
+  "revision": "SC09-lab-order-02",
+  "coordinator": "/root",
+  "status": "technically_ready_for_supplier_CAM_preview_and_unpopulated_laboratory_PCB_order_selection",
+  "scope": "Bare50x32mmFR4PCBforlatermanualassemblyandqualifiedmeasurements. ThisisNOTaqualifiedassembledsupply/finishedlamprelease,noranactualpurchase.",
+  "known_unresolved_bare_artwork_drill_contract_fit_blockers": [],
+  "source_manifest_sha256": "e238bc95429a362bd6a028a79bf64185f09eab5478cb01f1e34378e00772325a",
+  "source_files_verified": 202,
+  "all_frozen_hashes_match": true,
+  "PCB_sha256": "c28e88f5afbe3ba3906cea9fba86cf727461cfb267cf00b33d0a62dee761373c",
+  "schematic_sha256": "a93749f626a98709d4b87fb0270bc2409db5944e04d367b65e31d102ac159b32",
+  "pinned_toolkit_source_snapshot": "6cc37f6a5b49631091d330e00db70835632ce36df34e721c05cdbb1d305d486a",
+  "registered_output_classes": 6,
+  "snapshot_stable_before_after_registration": true,
+  "independent_reviews": [
+    {
+      "role": "Reality Checker",
+      "actor": "/root/order_reality_review",
+      "path": "order-reviews/reality.json",
+      "sha256": "364f75ddcaa3f9b5b5a341681c468ad6320e77309abfc3c4a46f06cce07a37da"
+    },
+    {
+      "role": "Overengineering Reviewer",
+      "actor": "/root/order_simplicity_review",
+      "path": "order-reviews/simplicity.json",
+      "sha256": "8757e1a366f288caa687b2058eb8514293bc6e3886345a6fc838a4c171f52f7e"
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actor": "/root/final_completeness",
+      "path": "order-reviews/completeness.json",
+      "sha256": "8a673dbef60668639858d61d77428744202a6396296f45a553d08fabf256bac0"
+    },
+    {
+      "role": "Change Reviewer",
+      "actor": "/root/final_change",
+      "path": "order-reviews/change.json",
+      "sha256": "a9e5d57ab8aaacb14572b4dc02de8e58843f6a83646a9e58e0f15515146ad991"
+    }
+  ],
+  "closed_pre_fabrication_issues": [
+    {
+      "id": "SIZE",
+      "evidence": "Actualownerquoteaccepts50x32mm;C_SIZEcurrentreviewevidenceverified."
+    },
+    {
+      "id": "FAB-01",
+      "evidence": "Eightlegendtexts1.0mmheight/.15mmstroke;actualnativefreshDRC0."
+    },
+    {
+      "id": "FAB-02",
+      "evidence": "SupplierZIP9filesonly,optionaljobexcluded;explicitHASL/50x32centreline/material/layers/thickness/copperdefined."
+    },
+    {
+      "id": "FAB-03",
+      "evidence": "ThreeT1PTH1.20mm,1.80mmlands,radialcoilposition≤.15mm;fitmath0.029mmreserveand27native/drill/copperregistrationsverified."
+    },
+    {
+      "id": "WF-01",
+      "evidence": "Sixactualartifactclasses/sevenentriesregisteredwithhashesandstablesnapshot;rawhardwareexcludedfromsource_filesbutentiredesignconfigurationstillbound."
+    },
+    {
+      "id": "SPEC-01",
+      "evidence": "Nominaltotal135.2mAisnotexternalLEDcurrent;bleedersubtractedonce,lossboundaryinclusive,Pin/efficiency/PF/thermalassumptionsdistinctfrommeasurements."
+    }
+  ],
+  "CAD_checks": {
+    "native_ERC_errors": 0,
+    "native_DRC_errors": 0,
+    "unconnected": 0,
+    "schematic_parity_errors": 0,
+    "independent_A1_graph_match": true,
+    "native_refill_exact_polygon_match": true,
+    "bounded_lab_spacing_screen": true,
+    "strict_package_spacing_screen": false,
+    "strict_failure_scope": "Intrinsicpackage-landdistances;finitelabengineeringassessmentretained,notnormativeinsulationwaiver."
+  },
+  "actual_order_parameters": {
+    "scope": "UnpopulatedlaboratoryPCBonly;notPCBA,finishedlamporpoweredtestapproval",
+    "board_mm": [
+      50,
+      32
+    ],
+    "layers": 2,
+    "material": "FR4",
+    "thickness_mm": 1.6,
+    "copper_oz": 1,
+    "finish": "Lead-freeHASL",
+    "mask": "Green",
+    "silkscreen": "White,stroke>=0.15mm,height>=1.0mm",
+    "assembly": "Manualafterreceipt;customcoilneedsqualification",
+    "upload_archive": "SC09_do_zamowienia_PCB.zip",
+    "do_not_use_job_finish": "Optionalnative.gbrjobshowsFinishNone;excludedfromsupplierupload. ExplicitLead-freeHASLorderparametercontrols.",
+    "outline_note": "Dimensionismillingpathcentreline50x32mm,not50.05x32.05drawing-strokeextent.",
+    "PTH_holes": 27,
+    "NPTH_holes": 0,
+    "minimum_finished_drill_mm": 0.3,
+    "T1_finished_drill_mm": 1.2,
+    "order_placed": false,
+    "supplier_CAM_acceptance_obtained": false
+  },
+  "supplier_upload": {
+    "path": "SC09_do_zamowienia_PCB.zip",
+    "sha256": "f3369e378bb58194369b153913f296249a5773ef63bd9332a0017ac1c433e71a",
+    "members": 9,
+    "CRC_pass": true
+  },
+  "required_normal_order_step": "CheckactualsupplierCAMpreviewandselectedprocessbeforecheckout. SupplierCAMacceptance/price/paymentarenotobtainedorclaimed.",
+  "retained_before_assembly_or_powered_use": [
+    "QualifiedcustomT1sample/inductance/DCbias/hotloss/insulationandactual3pingaugefit",
+    "RF1/R7/C6forming,support,vent,solderprotrusionandwirestrainreliefinspection",
+    "Qualifiedguardedtestoperator/fixture/probes/stresslimitsandphysicalmeasurements",
+    "Current/ripple/OVP/discharge,hot/fault/surge/EMC/insulationandlampqualification"
+  ],
+  "thermal_scope": "NoSC09temperaturesmeasured.T1scenario59–108Cat40Cambientcanexceed90Ctarget;mayrequireroutes/coilredesignaftermeasurement. U1junction58–110Cscenariowithunvalidatedthermalresistance.",
+  "retained_design_tradeoffs": [
+    "Dual68kpreloadis1.305%ofregulatedoutputvsmanufacturerrecommended≤.5%;deliberatefasterone-open36.45sdischargetradeoff.Measureactualregulation/efficiency;donotinheritreference91.51%.",
+    "Legacyhardwarestencilframelesscandidateisnotastencilorder;actualmanualbare-boardparametersrequestnone.",
+    "Originalspatial-review25mmwidthdeviationand082ffdbreviewsarehistorical;actualowner-size-50x32-approvalsupersedesthatoldlimit."
+  ],
+  "full_product_toolkit_release_passed": false,
+  "full_product_release_report": "checks/toolkit-release.json",
+  "individual_human_stage_approvals_fabricated": false,
+  "order_placed": false,
+  "supplier_message_sent": false,
+  "physical_measurements_performed": false
+}
