@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "role": "Change Reviewer",
+  "actor": "/root/final_change",
+  "independence": "Separate read-only review context; no CAD/library/implementation writes. Only this report is owned by reviewer.",
+  "base_commit": "4434b042fe962cc764c77a08f337da7acb885a26",
+  "source_hashes": {
+    "pcb": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+    "schematic": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641"
+  },
+  "scope": "Review complete laboratory engineering/manufacturing-CANDIDATE packet, not passed Toolkit/product/manufacturing release or physical safety acceptance. Native CAD retained unchanged during review; PDF-only export amendment announced separately.",
+  "checks": [
+    {
+      "id": "CHG-C01",
+      "result": "pass",
+      "evidence": "All168 manifest file SHA256 values and every artifact-source-binding export SHA matched at initial inspection."
+    },
+    {
+      "id": "CHG-C02",
+      "result": "pass",
+      "evidence": "Independent native pcbnew10.0.6 read-only load:47physical pin/net assignments exactly equal independently approved A1 graph,11nets/1NC/19refs;0nativeunconnected."
+    },
+    {
+      "id": "CHG-C03",
+      "result": "pass",
+      "evidence": "All19native PCB MPN fields exactly equal bom-build.json; all19native pad numbers/centres/sizes/drills/shapes/layers equal canonical local footprint libraries under actual side/pose transforms."
+    },
+    {
+      "id": "CHG-C04",
+      "result": "pass_with_limits",
+      "evidence": "Fresh retained approved-intent export report passes; native ERC/DRC/parity0. Refill report exact saved/fresh polygon equality and scoped spacing report are bound to exact current PCB SHA. Not a new reviewer-run ERC/DRC or physical test."
+    },
+    {
+      "id": "CHG-C05",
+      "result": "pass",
+      "evidence": "Remote4434 base tree and SC09 intended-connectivity.json inspected via connectedGitHub. Base had no nativePCB/SCH. Normalizing onlyR8A/R8B references toR8/R9 yields identical11net pin memberships."
+    },
+    {
+      "id": "CHG-C06",
+      "result": "pass_with_limits",
+      "evidence": "Remote4434 generated global floors.2mmclearance/.2mmtrack/.4mmedge are strengthened to candidate.3/.3/.5. Last local configuration preview changes onlyPOWERpreferred.4\u2192.3mm and config-state counterpart, global.3floors retained in that local step. Actual boardtrack widths.3/.4/.6. No DRC exclusions."
+    },
+    {
+      "id": "CHG-C07",
+      "result": "pass_with_limits",
+      "evidence": "Scoped package assessment uses finite B.Cu nativepad/ownedshorttrack regions and explicit pair floors; no via/zone concession or global IECwaiver. Strict FAIL and scoped PASS are both retained with actual limitations. Formal spatial contract remains null and is disclosed."
+    },
+    {
+      "id": "CHG-C08",
+      "result": "pass_with_limits",
+      "evidence": "Actual owner A1 map answer and autonomy scope retained separately. No individual exactCADstage/manufacturing/poweredtest approval is fabricated in hardware.approvals. Main independently read at377fc0a08e74043e255b732f7c2beb63134a3576 beforepublication; finalpublication/scope verification remains root responsibility."
+    },
+    {
+      "id": "CHG-C09",
+      "result": "pass",
+      "evidence": "Final169-file manifest011050... and artifact-source-binding reverified after export/ZIP/reproductionnote corrections. All114portableZIPfiles byte-matchsources;17experimentalSTEPfiles included with interoperability warning. No empty STEPassembly delivered."
+    }
+  ],
+  "findings": [
+    {
+      "id": "CHG-01",
+      "severity": "minor",
+      "status": "closed",
+      "object": "prototype-package/SC09_KiCad.zip/hardware.json.source_files",
+      "before_after": "Source hardware.json lists17experimental Models/*.step inputs; portable archive omits those17files. Native KiCad/WRL is portable but declared Toolkit source inventory is incomplete when unzipped.",
+      "evidence": [
+        "Original package-generation code excluded17STEP files while hardware.source_files declared them. Root corrected finalarchive; independently verified all114zipentries byte-matchsource and all declaredsourcefiles present, including17experimentalSTEPs."
+      ],
+      "closure": "Include the originals with existing interoperability warning, or explicitly scope/edit only packaged source inventory and record different snapshot. Do not represent the archive as identical complete Toolkit source snapshot while declared files are missing.",
+      "invalidation": "Portable source archive/hash and artifact binding/final manifest must refresh. NativeCADchecks can retain exact unchanged CAD scope.",
+      "closure_verified_by": "/root/final_change",
+      "closure_manifest": "0110503251b67f8165513668c0487cb97e12d576e20da0da33ea6eed0ddd6566"
+    },
+    {
+      "id": "CHG-02",
+      "severity": "minor",
+      "status": "open_document_readability",
+      "object": "SC09_assembly_back.pdf B.Fab reference labels near R4/R5/R6/C5",
+      "evidence": "Independent in-memory PDF rendering confirms actual outline and blackwhite geometry. Small reference labels near several bottomSMD parts are cramped/partly overlap neighboring graphics.",
+      "closure": "Optional assembly-document annotation improvement; use exact pin-position CSV/nativeKiCad cross-reference in the present manualprototypepacket. No unverified CADmove requested.",
+      "invalidation": "Document export/presentation only; no detected electrical/pad-library defect."
+    }
+  ],
+  "known_blocking_release_limits": [
+    {
+      "id": "CHG-L01",
+      "severity": "major_for_manufacturing_acceptance",
+      "object": "50x32PCBvs50x25proposedmaximum",
+      "status": "disclosed_open",
+      "owner": "Root designer and product owner",
+      "closure": "Actual cavity/sizeacceptance or compact redesign; candidate artifacts alone do not meet originalwidthtarget."
+    },
+    {
+      "id": "CHG-L02",
+      "severity": "major_for_manufacturing_or_energized_acceptance",
+      "object": "Toolkit release / spatial/provider/productphysicalqualification",
+      "status": "disclosed_open",
+      "owner": "Root coordinator, qualified laboratory/supplier and product owner",
+      "closure": "Full Toolkit check remainsFAIL. Custom coil/forming, electrical fault/thermal/surge/EMC and qualified isolation review remain open. No acceptance recommendation for assembled-unit release or energization."
+    }
+  ],
+  "recommendation": "ready_for_human_review_of_engineering_candidate_with_minor_document_readability_note; NOT ready for manufacturing release or energized tests",
+  "manufacturing_release_approved": false,
+  "physical_tests_performed": false,
+  "published_commit_verified": false,
+  "pending": "Final GitHub publication/tree scope and main preservation verification belongs to root after commit publication.",
+  "initial_reviewed_manifest": {
+    "path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\final-review-inputs.json",
+    "sha256": "0fb6c7d7f835d50bdca12324fc67bccd5bddd30b0dd95c7ee24215c60adc811e",
+    "revision": "SC09-routed-lab-final-01",
+    "file_count": 168,
+    "hash_mismatches": []
+  },
+  "reviewed_manifest": {
+    "path": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\final-review-inputs.json",
+    "sha256": "0110503251b67f8165513668c0487cb97e12d576e20da0da33ea6eed0ddd6566",
+    "file_count": 169,
+    "hash_mismatches": []
+  },
+  "final_addendum": {
+    "actor": "/root/final_change",
+    "final_manifest_sha256": "0110503251b67f8165513668c0487cb97e12d576e20da0da33ea6eed0ddd6566",
+    "source_CAD_retained_unchanged": true,
+    "frozen_files_verified": 169,
+    "artifact_binding_all_exports_match": true,
+    "portable_zip_source_content_match": true,
+    "portable_zip_declared_source_missing": [],
+    "portable_zip_experimental_step_count": 17,
+    "assembly_front_back_visually_rendered": true,
+    "assembly_outline_blackwhite_correction_verified": true,
+    "reproduction_scope_note_present": true,
+    "note": "Input-hash dictionary also contains deliberate pseudoentries(project-design-config/toolkit/ruleset), not filesystem paths. Every ordinary source-file input present on disk matches the report hash. Reproduction README separates private workspace authoring scripts from the actual standalone native validator/export instructions."
+  },
+  "manufacturing_acceptance": "HOLD: known retained release-stage limits remain unresolved; no formal release PASS is inferred."
+}

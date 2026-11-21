@@ -1,0 +1,28 @@
+{
+  "status": "Engineering forming proposal for manual laboratory assembly; manufacturer approval, process repeatability and physical verification remain open",
+  "part_unchanged": "Vishay VR25000003903FR500, 390 kohm",
+  "physical_pin_net_map_unchanged": {"1": "M", "2": "LED_PLUS"},
+  "footprint_proposal": {
+    "side": "F",
+    "orientation_degrees": 0,
+    "origin_board_mm": [35, 9],
+    "pad_1_local_mm": [0, 0],
+    "pad_2_local_mm": [0, 4.8],
+    "pad_copper_geometry": "Preserve existing verified R7 pin1 square2x2/pin2 circular2mm and existing drill; change only centers and upright assembly representation"
+  },
+  "body_contract": {"max_diameter_mm": 2.5, "max_body_length_mm": 7.5, "seating_gap_mm": 0.5, "body_bbox_board_xy_mm": [33.75, 7.75, 36.25, 10.25]},
+  "return_lead_concept": {"upper_straight_mm": 0.8, "proposed_bend_center_radius_mm": 1.0, "lead_center_horizontal_z_mm": 9.8, "max_finished_height_target_mm": 10.15, "warning": "Radius and height are proposed jig acceptance limits, not a manufacturer minimum bend radius or process qualification. Check exact terminal diameter/tolerance before mechanical release."},
+  "surroundings": {"C6_vent_xmax_mm": 33.5, "nominal_body_gap_to_vent_mm": 0.25, "T1_body_xmin_mm": 37, "nominal_body_gap_to_T1_mm": 0.75},
+  "validated_local_copper_reservation": {
+    "width_mm": 0.3,
+    "M_F_Cu_board_mm": [[35,9],[35,6],[48.5,6],[48.5,5.065]],
+    "LED_PLUS_F_Cu_board_mm": [[35,13.8],[39.15,11]],
+    "evidence": "standing-r7-current-simulation.json: native in-memory full55pair checkerPASS with other current nets retained and affected generatedFB/LED retired; on-disk source unchanged"
+  },
+  "required_implementation_checks": [
+    "Root creates actual native footprint with final drawings/courtyard and dimensioned forming model; current source footprint not modified by reviewer.",
+    "Reroute affected generated FB_INDUCTOR and LED_PLUS paths; do not preserve old crossing copper.",
+    "Repeat native ERC/DRC, pin-map parity, full55pair geometry, C6keepout, mechanical/courtyard and actual3D reviews against the final saved revision.",
+    "No claim of certified insulation, supplier forming approval, measured temperature or permission to energize follows from this geometry screen."
+  ]
+}

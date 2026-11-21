@@ -1,0 +1,938 @@
+{
+  "schema_version": 1,
+  "mode": "work",
+  "time_utc": "2026-11-21T10:13:14.137954+00:00",
+  "ruleset_version": "0.7.1",
+  "errors": [
+    "Requirements: OPEN_CAVITY: Unresolved: Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement.",
+    "Requirements: OPEN_GEOMETRY: Unresolved: ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking.",
+    "Requirements: OPEN_C_ENV: Unresolved: Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release.",
+    "Requirements: OPEN_C_OPTICAL_INPUT: Unresolved: 4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance.",
+    "Requirements: OPEN_C_SAFETY_BASIS: Unresolved: Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier.",
+    "Requirements: OPEN_IFC_ACCEPTANCE: Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints.",
+    "Requirements: C_EFFICIENCY: Required evidence kind absent: calculation",
+    "Requirements: C_PARTS: Required evidence kind absent: review",
+    "Requirements: C_GRAPH: Required evidence kind absent: review",
+    "Requirements: C_PROTECTION: Required evidence kind absent: calculation",
+    "Requirements: C_INTERFACE: Required evidence kind absent: review",
+    "Requirements: C_PACKING: Required evidence kind absent: review",
+    "Requirements: C_ROUTING: Required evidence kind absent: DRC",
+    "Requirements: C_ENV: Required evidence kind absent: review",
+    "Requirements: C_OPTICAL_INPUT: Required evidence kind absent: review",
+    "Requirements: C_SAFETY_BASIS: Required evidence kind absent: review"
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\.work\\erc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/.work/erc.json\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\.work\\drc.json",
+        "--refill-zones",
+        "--schematic-parity",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/.work/drc.json\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  },
+  "requirements": {
+    "schema_version": 1,
+    "stage": "routing",
+    "errors": [
+      {
+        "id": "OPEN_CAVITY",
+        "gate": "placement",
+        "message": "Unresolved: Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement."
+      },
+      {
+        "id": "OPEN_GEOMETRY",
+        "gate": "placement",
+        "message": "Unresolved: ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking."
+      },
+      {
+        "id": "OPEN_C_ENV",
+        "gate": "schematic",
+        "message": "Unresolved: Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release."
+      },
+      {
+        "id": "OPEN_C_OPTICAL_INPUT",
+        "gate": "schematic",
+        "message": "Unresolved: 4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance."
+      },
+      {
+        "id": "OPEN_C_SAFETY_BASIS",
+        "gate": "schematic",
+        "message": "Unresolved: Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier."
+      },
+      {
+        "id": "OPEN_IFC_ACCEPTANCE",
+        "gate": "schematic",
+        "message": "Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints."
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: calculation"
+      },
+      {
+        "id": "C_PARTS",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_GRAPH",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_PROTECTION",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: calculation"
+      },
+      {
+        "id": "C_INTERFACE",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_PACKING",
+        "gate": "placement",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_ROUTING",
+        "gate": "routing",
+        "message": "Required evidence kind absent: DRC"
+      },
+      {
+        "id": "C_ENV",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_OPTICAL_INPUT",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_SAFETY_BASIS",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "matrix": [
+      {
+        "id": "C_SCOPE",
+        "revision": "SC09-A",
+        "owner": "Kamil",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_SCOPE",
+            "path": "owner-current-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-SCOPE"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "C_ARCH",
+        "revision": "SC09-A",
+        "owner": "Kamil",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_ARCH",
+            "path": "bom-proposal.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-OWNER-ARCH"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "C_SUPPLY",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_SUPPLY",
+            "path": "driver-led-interface.proposed.json"
+          }
+        ],
+        "required_kind": "design",
+        "evidence_ids": [
+          "EV-SUPPLY"
+        ],
+        "observed_levels": [
+          "designed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "C_LIGHT",
+        "revision": "SC09-A",
+        "owner": "Kamil",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_LIGHT",
+            "path": "reference/LED-primary-research.json"
+          }
+        ],
+        "required_kind": "design",
+        "evidence_ids": [
+          "EV-LIGHT"
+        ],
+        "observed_levels": [
+          "designed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "C_SIZE",
+        "revision": "SC09-A",
+        "owner": "Kamil",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_SIZE",
+            "path": "mechanical-budget.proposed.json"
+          }
+        ],
+        "required_kind": "design",
+        "evidence_ids": [
+          "EV-SIZE"
+        ],
+        "observed_levels": [
+          "designed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "C_PROCESS",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_PROCESS",
+            "path": "owner-process-line-decision.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [
+          "EV-PROCESS"
+        ],
+        "observed_levels": [
+          "reviewed"
+        ],
+        "status": "verified"
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_EFFICIENCY",
+            "path": "calculated-proposal.json"
+          }
+        ],
+        "required_kind": "calculation",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_PARTS",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_PARTS",
+            "path": "bom-proposal.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_GRAPH",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_GRAPH",
+            "path": "intended-connectivity.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_PROTECTION",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_PROTECTION",
+            "path": "calculated-proposal.json"
+          }
+        ],
+        "required_kind": "calculation",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_INTERFACE",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_INTERFACE",
+            "path": "driver-led-interface.proposed.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_PACKING",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "placement",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_PACKING",
+            "path": "mechanical-budget.proposed.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_ROUTING",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_ROUTING",
+            "path": "intended-connectivity.json"
+          }
+        ],
+        "required_kind": "DRC",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_THERMAL",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_THERMAL",
+            "path": "standards-and-test-plan.json"
+          }
+        ],
+        "required_kind": "measurement",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      },
+      {
+        "id": "C_COMPLIANCE",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_COMPLIANCE",
+            "path": "standards-and-test-plan.json"
+          }
+        ],
+        "required_kind": "measurement",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      },
+      {
+        "id": "C_RELEASE",
+        "revision": "SC09-A",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_RELEASE",
+            "path": "hardware.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      },
+      {
+        "id": "C_ENV",
+        "revision": "SC09-A",
+        "owner": "Kamil and root designer",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_ENV",
+            "path": "original-requirements-crosswalk.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_OPTICAL_INPUT",
+        "revision": "SC09-A",
+        "owner": "Kamil and root designer",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_OPTICAL_INPUT",
+            "path": "original-requirements-crosswalk.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_SAFETY_BASIS",
+        "revision": "SC09-A",
+        "owner": "Kamil and root designer",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_SAFETY_BASIS",
+            "path": "original-requirements-crosswalk.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "C_COST",
+        "revision": "SC09-A",
+        "owner": "Kamil and root designer",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "C_COST",
+            "path": "original-requirements-crosswalk.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      }
+    ],
+    "open_questions": [
+      {
+        "id": "OPEN_CAVITY",
+        "record_id": "C_PACKING",
+        "field": "acceptance",
+        "owner": "Kamil and designer",
+        "question": "Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement.",
+        "blocks_stage": "placement",
+        "status": "open",
+        "evidence_ids": []
+      },
+      {
+        "id": "OPEN_GEOMETRY",
+        "record_id": "C_PACKING",
+        "field": "acceptance",
+        "owner": "Codex-root",
+        "question": "ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking.",
+        "blocks_stage": "placement",
+        "status": "open",
+        "evidence_ids": []
+      },
+      {
+        "id": "OPEN_C_ENV",
+        "record_id": "C_ENV",
+        "field": "acceptance",
+        "owner": "Kamil and root designer",
+        "question": "Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release.",
+        "blocks_stage": "schematic",
+        "status": "open",
+        "evidence_ids": []
+      },
+      {
+        "id": "OPEN_C_OPTICAL_INPUT",
+        "record_id": "C_OPTICAL_INPUT",
+        "field": "acceptance",
+        "owner": "Kamil and root designer",
+        "question": "4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance.",
+        "blocks_stage": "schematic",
+        "status": "open",
+        "evidence_ids": []
+      },
+      {
+        "id": "OPEN_C_SAFETY_BASIS",
+        "record_id": "C_SAFETY_BASIS",
+        "field": "acceptance",
+        "owner": "Kamil and root designer",
+        "question": "Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier.",
+        "blocks_stage": "schematic",
+        "status": "open",
+        "evidence_ids": []
+      },
+      {
+        "id": "OPEN_IFC_ACCEPTANCE",
+        "record_id": "C_INTERFACE",
+        "field": "acceptance",
+        "owner": "Kamil and root designer",
+        "question": "Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints.",
+        "blocks_stage": "schematic",
+        "status": "open",
+        "evidence_ids": []
+      }
+    ],
+    "passed": false,
+    "limitations": [
+      "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+      "Hashes establish freshness, not evidence truth or reviewer authority.",
+      "Electrical checks compare declared DC envelopes only, not complete operation."
+    ],
+    "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
+    "product": "Velluneo_SC09_compact",
+    "revision": "SC09-A",
+    "document_sha256": "0690f2937455a0f5387e1d707a34ed781f3766af9d1d9c7d219c183c8b8591f9",
+    "blockers": [
+      {
+        "id": "OPEN_CAVITY",
+        "gate": "placement",
+        "message": "Unresolved: Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement."
+      },
+      {
+        "id": "OPEN_GEOMETRY",
+        "gate": "placement",
+        "message": "Unresolved: ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking."
+      },
+      {
+        "id": "OPEN_C_ENV",
+        "gate": "schematic",
+        "message": "Unresolved: Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release."
+      },
+      {
+        "id": "OPEN_C_OPTICAL_INPUT",
+        "gate": "schematic",
+        "message": "Unresolved: 4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance."
+      },
+      {
+        "id": "OPEN_C_SAFETY_BASIS",
+        "gate": "schematic",
+        "message": "Unresolved: Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier."
+      },
+      {
+        "id": "OPEN_IFC_ACCEPTANCE",
+        "gate": "schematic",
+        "message": "Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints."
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: calculation"
+      },
+      {
+        "id": "C_PARTS",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_GRAPH",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_PROTECTION",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: calculation"
+      },
+      {
+        "id": "C_INTERFACE",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_PACKING",
+        "gate": "placement",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_ROUTING",
+        "gate": "routing",
+        "message": "Required evidence kind absent: DRC"
+      },
+      {
+        "id": "C_THERMAL",
+        "gate": "release",
+        "message": "Required evidence kind absent: measurement"
+      },
+      {
+        "id": "C_COMPLIANCE",
+        "gate": "release",
+        "message": "Required evidence kind absent: measurement"
+      },
+      {
+        "id": "C_RELEASE",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_ENV",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_OPTICAL_INPUT",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_SAFETY_BASIS",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_COST",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "blocked_stages": [
+      "schematic",
+      "placement",
+      "routing",
+      "release"
+    ]
+  },
+  "snapshot": "9bfbc64f7cffe8e553e2814eb32f7eec968c3e2be076f13c8d9b76428c6c91ae",
+  "input_hashes": {
+    ".electronics-rules/config-state.json": "23c5c1b1dd93db7a7c8bc43847c9062f15e3c57bd381ad2d4c61a67a60ce11c2",
+    "AGENTS.md": "e8971c6193d982f58dc368d80748a934067b11401d1dc0529d02302a141d6634",
+    "bom-build.csv": "74e34c28bebff4249e1a1aa908273292e3526945093e887be591e2c7cf0cd843",
+    "bom-build.json": "054004f0328dcb34d369ee6459268d4d8a14b00ca71b4fed37a7caf3d2ea22af",
+    "bom-proposal.A1.json": "99f8bb7ef6c92f759304b146b912bb800e8be83a031833910da27359e0f9b448",
+    "bom-proposal.json": "025faa70aa2d439b89c803d120ae6a37f9edab99ec4f1112ba9893aefd88da30",
+    "calculated-proposal.json": "c2f0fd1172e4eddad8dbce6a9bfcf6585e7c1be20e004a7c8a03c9717722b841",
+    "driver-led-interface.proposed.json": "e55ac49af515bb460264768d8683a6f073f59ca70b4e28db915a7469d3e69df6",
+    "E27SC09.kicad_sym": "437d35e40499cf3c77b92952058b2b9bff30a3317757beabdc8ef58bd448adc5",
+    "E27SC09.pretty/SC09_BR1.kicad_mod": "55574b3cafb6d6c4e572febe2efbaf22b30586f8aeee398f7689467b3e03d17f",
+    "E27SC09.pretty/SC09_C1.kicad_mod": "a192362ecfea57e86561e5b3ee42412d0efcf8e43b6fdd2967efffc146acf714",
+    "E27SC09.pretty/SC09_C4.kicad_mod": "084f1e3251b62ddbea78aab4234f1ae42e9f55300b97af33b308476ac6c31c15",
+    "E27SC09.pretty/SC09_C5.kicad_mod": "6eec974d33f5ad2c0dd428161f1d538863c6eec14d977db98b76b69ee7042f06",
+    "E27SC09.pretty/SC09_C6.kicad_mod": "ceb8744337eeb916f5eff022eded25ee6249cde7e8f3bda4be33dfd0bc932db6",
+    "E27SC09.pretty/SC09_D1.kicad_mod": "e52ed2ed82ca3799ff29272b0559d6d3f69500fa4c5ef1b05a9598dabad8d6ca",
+    "E27SC09.pretty/SC09_J1.kicad_mod": "0afd3d51b0dccd2f36b34d489e86bcf857490f339f757aec684648b5ecb6195a",
+    "E27SC09.pretty/SC09_J2.kicad_mod": "7198ee67411badb1f8996d9a56bb918e4fa722f162f9ce29748b8bc4255979a2",
+    "E27SC09.pretty/SC09_L1.kicad_mod": "543c279d04d6922402d5dd1b0328d4e897981d2e57a1234b8a9d841908e657ab",
+    "E27SC09.pretty/SC09_R4.kicad_mod": "fa424d7efab65b2141801c0249cd4f36f41c9bd10d75b8ab82862e0f1155c537",
+    "E27SC09.pretty/SC09_R5.kicad_mod": "6dc4e57471b9ecbbb3dd975b9a35fe5e51eef7b5b587be0b53c5c1f0fba41b14",
+    "E27SC09.pretty/SC09_R6.kicad_mod": "6ad6d2a8c0d46023ffe16ca7bf517cb54512457e7b06ee0037a78070706178d3",
+    "E27SC09.pretty/SC09_R7.kicad_mod": "c298e6e3247d0877107818c826401deb4adc000de084c8e8aea811a67f8ad755",
+    "E27SC09.pretty/SC09_R8.kicad_mod": "48800dfeefb5118405897a9b1556e31fdd1ec1cb8df1b4168babcb147cde6a71",
+    "E27SC09.pretty/SC09_R9.kicad_mod": "07eaecde236567a2d8acdb968630ea4cd1e210ad962a52aa39b452acb9b9895e",
+    "E27SC09.pretty/SC09_RF1.kicad_mod": "cd0a6a2fc0a9c5d0724ef92e511d8f2e220542753cedbf906c64d34f02c5c121",
+    "E27SC09.pretty/SC09_RV1.kicad_mod": "999c8fc6ff64b2cf93b2bbd91de11cdb256b0c0e8ac4060da7bd8ec0c397eea8",
+    "E27SC09.pretty/SC09_T1.kicad_mod": "51ab83fcc10c5bad7cd8155ae69dcbb2c808705bb5f59344df8c858c6fa8866b",
+    "E27SC09.pretty/SC09_U1.kicad_mod": "075f17e3046f2d67476e00dbeb5a96f11d6d01e4022c2eb0a8c71333c420fb71",
+    "footprint-assignments.json": "216de453e2b3d6c6f78c8d4459abde80b3beb0fce13c3cd039d5d1c563e45831",
+    "footprint-geometry.json": "7252796a8d020e83b346b9be39ecb78e0e461bd8ad7847853603ccd72c5bee4a",
+    "fp-lib-table": "bc92eb83e53b679cc5a77e3aaeca9a9c3b3ecd4118f10740841f4310222ee232",
+    "functional-spacing-design.json": "a97abda6399a3706b57c9268eb1e54ebfb7e9ca7e9fd64bbd90bd052366230c4",
+    "hardware.json": "0ce860329f9c7fb95607e794fb89e298159a6f4a2881a741d9a87e30bc55e14e",
+    "intended-connectivity.A1.json": "b0803bf46f12463e8710831891f12a443556b816ee8683307a0def57d6702799",
+    "intended-connectivity.json": "138f807a2e72218608904feb9c141002d554adec6c0e9f4b7b0e721d3c0fda87",
+    "intended-connectivity.toolkit.json": "d688024527b7ebb2516fa377e89a127f4e0d9f91bd9906706e2a6760aa4e2db9",
+    "mechanical-budget.proposed.json": "cbce063e385780520e87a8448fc87a60a42f8ed8f27a9cd7b99feba81b4d843a",
+    "model-attachment.json": "2c2553466ee01c400dbae1bfd62836e7b24cf629ad6c9342a56ec5ab34a3dba9",
+    "Models/model-checks.json": "51f3aae0a79e3feacf20ffd77593156dd57c99aefea79f790f33b8045dc05d86",
+    "Models/MODEL_CREDITS.txt": "985676099358d1d84df0d3ac98cb92d8825032e4914ba2f9adfa69974c7c0000",
+    "Models/MODEL_INFO.json": "119996e3488d6c18e71b059a5613fb534779468e07b67b5c412d43b7543a6972",
+    "Models/R7-standing-check.json": "18afa995c0275b0d3a565b34b222f4fbbb474429437476dac266c110e3ac3798",
+    "Models/SC09_BR1.step": "cde35d2e511334f7b76fbf095a2059e6450804f2418b73c9fb90530efa800989",
+    "Models/SC09_BR1.wrl": "5f82df351f029b6fd63e07dc219091768d8fb70c48e93f0778ee936aeb81e2f1",
+    "Models/SC09_C1.step": "223ba1b012f6861b374716ae1dcec83953e3bf5e49bb14830338f5176ad650ed",
+    "Models/SC09_C1.wrl": "8624e85f636b3b54842ce0000cfc5df38e5e9a8a05dbfaefb6647eb9bc4e4ab3",
+    "Models/SC09_C4.step": "72ba7507945fc930cafb8d5458507159891b48cea5f49f1cdc2647290c3149c1",
+    "Models/SC09_C4.wrl": "9044f94d6b2b58b075422e8882af7921988e239f38a6a5c0161ad20ad874ae0e",
+    "Models/SC09_C5.step": "6ce863d8a7b21e4f50ecf9cc12c5b93f09bcb8c987f75e5c8543602882932b47",
+    "Models/SC09_C5.wrl": "bd8eb58f3b2cb8452cb25db0c54741a39673320212ddef2e3c17e58bd2f83564",
+    "Models/SC09_C6.step": "2f59da198250284bd98bb06179d73e8f703c909c3a9a7c7e8fbb5a0a3ee108ce",
+    "Models/SC09_C6.wrl": "3edb63da220fa35801d5321a5af70dc197ee87ec5ddf8549c980ee3426a74dc8",
+    "Models/SC09_D1.step": "a93c8b977ec16681cf2306a817883c58fbdc7ccf97f2bc9cfe3b67aad27f184b",
+    "Models/SC09_D1.wrl": "c652f95e7a8ddf3f73bfce6e28c257ec94c8871badf48973532cafea9d339d38",
+    "Models/SC09_L1.step": "c6155065cc97253fcbeccc6caef957ffb9cc709197eeb9046f6924c35b5d0c7d",
+    "Models/SC09_L1.wrl": "7a45d5f647994233b229a62ff8b5d81836a2cfe107f130e11e0965f315ebcf91",
+    "Models/SC09_R4.step": "cf34849f8725feb8365d30ba0470ec5f1343cfb06f7e1486898785811faa3536",
+    "Models/SC09_R4.wrl": "ba760614a022deb954449f21948960a7a217aad6429a81210ab4d033e386ab81",
+    "Models/SC09_R5.step": "0a9097f645a411704dc89621c55892fc24c8368146530b461c71bda72a46a81a",
+    "Models/SC09_R5.wrl": "91a1287293cccaa41814d09c149527486535daf6e4e03c356806b75b01de0b2c",
+    "Models/SC09_R6.step": "70e5564d6aea2f82104e0ba4e2c55afa9ab482f2290ca6e4f59a7f53b10a01c8",
+    "Models/SC09_R6.wrl": "fd12e6fa026df2a2e204f4892f6a9d234e0ab1747a91237fb94e681ac40dc700",
+    "Models/SC09_R7.step": "1a9edbb8ec720eead0998642c405d278b3241b405e433fa720ba29a52be83e8b",
+    "Models/SC09_R7.wrl": "b9343955269de8211ff71199f2e31c31a5c16132d6c68f87b262338201f10eaf",
+    "Models/SC09_R8.step": "a6d560ed9828fe2ae9edcf4eb9202bd49fdba1c592121e9aad7fd777bbab19da",
+    "Models/SC09_R8.wrl": "5c9e8c4394ddf28d48b3cda4f8466a444a82bd0406bfad544cad542edfa3e084",
+    "Models/SC09_R9.step": "f9bb63679dbb2e5e6c66b602eff26d00e404fc1d05b3fabb95b8e09371bdb6b4",
+    "Models/SC09_R9.wrl": "5c9e8c4394ddf28d48b3cda4f8466a444a82bd0406bfad544cad542edfa3e084",
+    "Models/SC09_RF1.step": "b73f5217b302ffd32ce6333c3bee84ccd97f28b8580e67ef0589102819c5ab3c",
+    "Models/SC09_RF1.wrl": "c2550a13157c7891629a43a0bfeb08302ffecb8f36153f0af95605529cda8a13",
+    "Models/SC09_RV1.step": "bfc2423df865a70188961a7e9265a98c3d1a9b32e7bd5392640dea649985677c",
+    "Models/SC09_RV1.wrl": "b4c86275b560f01758f17e9f57ecc10d4cea57fffd2a3ff169890e25ebdd71b7",
+    "Models/SC09_T1.step": "8027445511bae742949d2d1785136c62dc867df29f1c93033363a4732177d4f5",
+    "Models/SC09_T1.wrl": "7384bcb2102f4e7d86be685dd66f965f5ff8c52126d5811fc33af7607dddfa2a",
+    "Models/SC09_U1.step": "cfd6002595e92d357104afdb5d04eec7ec8c3a04a1073870127c3ef175c5e96b",
+    "Models/SC09_U1.wrl": "1e1dbafe226d4ee02434dbc20b4005c897e69b03fe0d6a43fee5246bbec7af03",
+    "original-requirements-crosswalk.json": "e272579323a8b96be67c9f789203202cbcef459fd2c914e73a20c3b4f11cb0e8",
+    "owner-A1-map-approval.json": "9d0e7ca43921b24c06363a0686492455a0ae3035c41037b7790077b94dcdbb55",
+    "owner-autonomous-completion.json": "122f8d79c320614d63abac65b1c616e17dca7f4fba7555f8b2d027995419ddce",
+    "owner-current-brief.json": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0",
+    "owner-process-line-decision.json": "430648e1b471d9aa3fede9aa34134bb94fe95150c138cb2d5948d0886afaab47",
+    "owner-prototype-scope.json": "6491988d16217c36ca1519eb1b358ec1b201469389301840d973146a850343ac",
+    "owner-SC09-direction-map-approval.json": "bf0280e5e38fb07dd4ef20e327f985a74be45dd963f60e09af30e63190a3b1a2",
+    "PowerFlags.kicad_sym": "b6b7b927b1a790c249425e0116068b8c3ea9a67778fe3fa6e0eb775221977649",
+    "R7-standing-contract.json": "173e5951c6a28a0ccd82cb25253a9ad2469840113e07d572e66d2595d38007aa",
+    "README.md": "2a000254a9a5f90c5c536d79221ff8cf8e8b10383a0a9b34dc62b78dbd802784",
+    "reference/active-land-correction.json": "9b021d0a45738238a7b84d1cdf51aaf9c95ea769ec3e200df5660806b607745a",
+    "reference/active-parts-report.json": "10790e30a541a8b2f05dbf62307100dc5d4be431cf4044e1805b820025c924aa",
+    "reference/alternatives.json": "341756937253aaf6c6e64920b1973d8c617324923685088f3e3a8aa48465c05a",
+    "reference/body-packing-study.json": "d769d0c6b06068c083988f6020917393f14e1c46a42b3c11345a426812f1efb0",
+    "reference/C6-mounting-interpretation.json": "43ebce32840f85a6b49bf09a84bc6f79b444f1ea156f77c1a8d1f0ca890c4314",
+    "reference/LED-primary-research.json": "cb6055d0e7dde703bd02d0c3197307b9c0831b32a4a759c1cdcccf80742a40b0",
+    "reference/package-addendum.json": "916e0888d23c1f37af8c51b27e769941c551206b82a2334a8138ea204901e48c",
+    "reference/package-research.json": "309bfd7dc9de1d187bdeb42a992f1b9f40b35915981164d4aecaedf9702be578",
+    "reference/parameter-research.json": "e00a0803ca5c0b379129e93cba080dfe1a001725c28d57ae1d8086e6007e99d7",
+    "reference/passive-footprints.json": "8535e0fb328d6df4b255d50c6b2f563fb2e629e69a7840ff7eb74f6c60a54e6b",
+    "reference/passive-parts-report.json": "9e8813f4ef2bb9b9c3db28a997942a7cff26a7e83e1d1b905bcbceaed1a34301",
+    "reference/rdr464-research.json": "af1da3440e55a01ccfe27747ea7168ff37585fe87c815b3e8d769f8ba2240ec2",
+    "reference/rdr464-verified-U1-pins.json": "67fddba5bde24c83b497235c3ca706e896caaf11e12c609cf5b07d729b73efe7",
+    "reference/T1-magnetic-design.json": "8ddde32c4185bbdcbf7975577118975dba95249633663cf54f959b014ac5f27d",
+    "requirements.json": "0690f2937455a0f5387e1d707a34ed781f3766af9d1d9c7d219c183c8b8591f9",
+    "SC09_compact.kicad_dru": "6cc0b1c920097196b552b2fe23bb6480f08702ef836f4ad73f0a39df9f426412",
+    "SC09_compact.kicad_pcb": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+    "SC09_compact.kicad_pro": "9c0bc6c2616975830e483ad3bc4a04b943e8f4b5eab3d533148cb6d49f6c6a5b",
+    "SC09_compact.kicad_sch": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+    "source-basis.A1.json": "4a8e1a947af8dd806f7c0594b91d053c5b1464f127382516bd872590f9d15a64",
+    "source-basis.json": "e6313109856fc7fa0fa54772050c32134f8fd21109a0d568bfa1d5a55936b6eb",
+    "spatial-constraints.json": "163fe9f2227a03bb3350a283ae5d5bebe77d53500743aa185f23fe9f593692ab",
+    "standards-and-test-plan.json": "3e4a244c67f2619d591d7f170a443250bf8c758e7e10db1ae35431ea5c2b13b4",
+    "sym-lib-table": "89df9f9762889b20a645be209dda6cc4dd7339fd314f61f20ecd079aced8ad9b",
+    "symbol-pin-verification.json": "8a1ebc3af3dc5de914fa8e9845af996b6358aa46267dda9c50a3ebdebefbee3f",
+    "T1-custom-contract.json": "2656e459d3a6b1a5343b444ac9bca545a7277de258865f91d0e445f366b229b9",
+    "thermal-planning.json": "fb254a80e9016d28d06455841e26d6941860290f2fa10dae776519be3d8c4fc1",
+    "two-endpoint-interface.proposed.json": "11daa08b06f38753ffaedc683095fe6116c6a9ee0fbbfc94033ee6c36e15c51c",
+    "project-design-config": "c3abaa4f2a501f528ffc008edaa3ae0986d3a3ce5ae755e75ad3534297c6e961",
+    "toolkit:identity": "e261a411929278425cca528b66bb84add3b1e4261d2935da8cf3aeef78f27a66",
+    "ruleset:VERSION": "902311c7bb38fa1658ff403def6158ee7378fe9d6e2e284fa1c38735c31bd30b",
+    "ruleset:rules/catalog.json": "d1edf261c5686376ea86122b07d0c511a250ed6e6ffdb79413e1b0ae294a4e3d",
+    "ruleset:profiles/jlcpcb.json": "831daf5e4d36796b45661c35001af8971c2a3849791fe8d6216f5a5390683d83",
+    "ruleset:profiles/assembly-inhouse.json": "842ef8a87ec249443f3659a5d1d6c21c77ba5743c921492c5e009bee6fabdf48",
+    "ruleset:scripts/pcb_rules.py": "36dab64eb723841b5cbc454f353fab5482bfce795252f09bd857281ddfd94955",
+    "ruleset:scripts/configuration.py": "2698a03b6545262811eee3d6f9ea7325d762ec587afc763928fa495e27e4f1de",
+    "ruleset:scripts/product_contracts.py": "1c95b8d5e9cf88f606d33270414407fe2565cda0e8ca7999ec3d53601ae56d3c",
+    "ruleset:scripts/connectivity.py": "3cbe0e9b8e136c72aac386cfa9cead056572e91f6abf538cb4b0c415ebce7abc",
+    "ruleset:scripts/spatial.py": "87c94556e3f62540cc4d40bfb61672f04655942a8ec21bf24bc144c26bd2da98",
+    "ruleset:scripts/spatial_cad.py": "48642fe3b9474a0578914cc6f964c5117be55ef22d0f0994600bae94952678f4",
+    "ruleset:scripts/toolkit_install.py": "f306aabc8ea5ba5d80ca6d096d360e4a80988fc0368c767a5a8bd7b51fab6d50",
+    "ruleset:scripts/package_toolkit.py": "a41db64afa483389a159c74bd64d643dd9956f9b7de3895998d985a68bc9c6cb",
+    "ruleset:templates/kicad/board.kicad_pro": "6fa5d1285727ba111efebce5f199d5b39573ef62ba331ec0c177b4f201adcc32"
+  },
+  "resolved_minimums_mm": {
+    "clearance": 0.3,
+    "track_width": 0.3,
+    "hole_size": 0.3,
+    "annular_width": 0.2,
+    "edge_clearance": 0.5
+  },
+  "spatial": {
+    "status": "not_configured",
+    "release_blocked": true
+  },
+  "kicad_version": "10.0.6",
+  "connectivity": {
+    "schema_version": 1,
+    "passed": true,
+    "errors": [],
+    "commands": [
+      {
+        "command": [
+          "kicad-cli.EXE",
+          "sch",
+          "export",
+          "netlist",
+          "--format",
+          "kicadxml",
+          "--output",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\.work\\connectivity-netlist.xml",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_sch"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+      }
+    ],
+    "intent_digest": "c4e0b928ce5b63c067f9eb6c36cc7d582f6852369da961d6b318686c97b6d9fd",
+    "intent_revision": "SC09-A1",
+    "physical_pins": 47,
+    "intended_nets": 11,
+    "no_connects": 1,
+    "limitations": [
+      "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+      "Approval fields record evidence; hashes do not authenticate a human."
+    ],
+    "intent_sha256": "b0803bf46f12463e8710831891f12a443556b816ee8683307a0def57d6702799",
+    "export_sha256": "2eb5fa6cfe93be044ba92e053793abf6adddd24b255677d8d9fa8ee2012228fc",
+    "export_tool": "Eeschema 10.0.6"
+  },
+  "erc": {
+    "report_sha256": "5e7e6aba7c059d91e12092736243d218663392085d1dcf0d396fab07a4cf3e61",
+    "findings": []
+  },
+  "drc": {
+    "report_sha256": "470d7f18dbfd85942670e39d640e0cbc53569644672a8c097304703b1a0e150d",
+    "findings": []
+  },
+  "passed": false
+}

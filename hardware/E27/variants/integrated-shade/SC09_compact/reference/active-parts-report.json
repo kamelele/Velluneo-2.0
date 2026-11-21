@@ -1,0 +1,387 @@
+{
+  "task": "SC09 active-part verification before capture",
+  "actual_actor": "/root/sc09_active_parts",
+  "role": "Bounded research implementer, not independent reviewer of future CAD",
+  "scope": "U1 LYT1603D-TL, D1 US1J-13-F, BR1 MB10S-13 only; no substitutions, CAD or approved-source edits",
+  "input_commit": "4434b042fe962cc764c77a08f337da7acb885a26",
+  "approved_graph_intent_digest": "75cb77cbd64d600ea379d74567c6b6d6ca78cb280badf1d029dc165fbe274afe",
+  "date": "2026-11-21",
+  "sources": [
+    {
+      "id": "U1-primary",
+      "url": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "local": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\rdr-research\\lytswitch-1_family_datasheet.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "revision": "Rev B July 2016",
+      "pages": 14,
+      "visually_inspected": [
+        2,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "D1-primary",
+      "url": "https://www.diodes.com/datasheet/download/US1J.pdf",
+      "local": "US1J.pdf",
+      "sha256": "d50b2773c0300d97a77f5125419098c8130ecaf967202a44be2b182de8a15c1f",
+      "revision": "DS16008 Rev11-2 December2014",
+      "pages": 5,
+      "visually_inspected": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "BR1-primary",
+      "url": "https://www.diodes.com/_files/datasheets/MB10S.pdf",
+      "redirect_url": "https://www.diodes.com/assets/Datasheets/MB10S.pdf",
+      "local": "MB10S.pdf",
+      "sha256": "a46066843f6b010bffdb85fe3162573330e70bd481df3c5ef9000eeb59e6a77c",
+      "revision": "DS39045 Rev3-2 March2017",
+      "pages": 5,
+      "visually_inspected": [
+        1,
+        4
+      ]
+    }
+  ],
+  "electrical_pin_type_basis": "Manufacturer gives physical functions, not KiCad ERC categories. Suggested types below are explicit engineering interpretation for root review. Do not turn M/FB into passive to suppress errors; do not add unexplained PWR_FLAG. DRAIN supplies the internal startup/regulator and is proposed power_in; SOURCE pins are common MOSFET/reference conduction terminals proposed passive; diode terminals passive. BP is the internal regulator output rail. These choices follow functions, not an attempt to clear ERC.",
+  "components": [
+    {
+      "ref": "U1",
+      "mpn": "LYT1603D-TL",
+      "manufacturer": "Power Integrations",
+      "source_pin_page": 2,
+      "pins": [
+        {
+          "number": "1",
+          "function": "BYPASS BP, internal5.25V regulator/supply rail",
+          "approved_net": "BP",
+          "suggested_ERC_type": "power_out"
+        },
+        {
+          "number": "2",
+          "function": "MULTIFUNCTION M: zero-current/demagnetization, outputOVP; lineOVP duringON",
+          "approved_net": "M",
+          "suggested_ERC_type": "input"
+        },
+        {
+          "number": "3",
+          "function": "FEEDBACK FB: external-resistor MOSFET current sense",
+          "approved_net": "FB_INDUCTOR",
+          "suggested_ERC_type": "input"
+        },
+        {
+          "number": "4",
+          "function": "DRAIN D, high-voltage MOSFET terminal",
+          "approved_net": "BUS_FILTERED",
+          "suggested_ERC_type": "power_in, DRAIN supplies internal startup/regulator and MOSFET power path"
+        },
+        {
+          "number": "5",
+          "function": "SOURCE S, internal MOSFET and power/signal reference",
+          "approved_net": "SW_SOURCE",
+          "suggested_ERC_type": "passive, physical MOSFET/reference terminal"
+        },
+        {
+          "number": "6",
+          "function": "SOURCE S, internal MOSFET and power/signal reference",
+          "approved_net": "SW_SOURCE",
+          "suggested_ERC_type": "passive, physical MOSFET/reference terminal"
+        },
+        {
+          "number": "7",
+          "function": "SOURCE S, internal MOSFET and power/signal reference",
+          "approved_net": "SW_SOURCE",
+          "suggested_ERC_type": "passive, physical MOSFET/reference terminal"
+        },
+        {
+          "number": "8",
+          "function": "SOURCE S, internal MOSFET and power/signal reference",
+          "approved_net": "SW_SOURCE",
+          "suggested_ERC_type": "passive, physical MOSFET/reference terminal"
+        }
+      ],
+      "all_pins_physical": true,
+      "source_pins_all_connected_required": true,
+      "package": {
+        "name": "D08A SO-8 / JEDEC MS-012",
+        "source_page": 11,
+        "body_BSC_mm": [
+          4.9,
+          3.9
+        ],
+        "overall_lead_span_BSC_mm": 6.0,
+        "pitch_BSC_mm": 1.27,
+        "seated_height_mm": [
+          1.35,
+          1.75
+        ],
+        "body_height_mm": [
+          1.25,
+          1.65
+        ],
+        "standoff_mm": [
+          0.1,
+          0.25
+        ],
+        "pin_width_mm": [
+          0.31,
+          0.51
+        ],
+        "reference_pad_mm": {
+          "width": 0.6,
+          "length": 1.45,
+          "row_centres": 4.0,
+          "overall_row_span": 5.45,
+          "pitch": 1.27
+        },
+        "notes": "BSC nominal controlled drawing dimensions; package excludes mold flash/burr. Do not invent these as tolerance-complete finished enclosure maxima."
+      },
+      "ordering": {
+        "source_page": 12,
+        "D": "SO-8",
+        "TL": "Tape and Reel2500manufacturer minimum/multiple; distributor can supply cut tape",
+        "blank": "Standardconfiguration100pcs; TME listing withoutTLisnotexactselectedsuffix"
+      },
+      "lifecycle": "Official product page search states active but not recommended for new designs; exact selected part still not obsoleted claim. Owner accepted this risk, not new physical qualification."
+    },
+    {
+      "ref": "D1",
+      "mpn": "US1J-13-F",
+      "manufacturer": "Diodes Incorporated",
+      "source_pin_page": 1,
+      "pins": [
+        {
+          "number": "1",
+          "function": "Cathode K",
+          "approved_net": "FB_INDUCTOR",
+          "suggested_ERC_type": "passive"
+        },
+        {
+          "number": "2",
+          "function": "Anode A",
+          "approved_net": "DC_RETURN",
+          "suggested_ERC_type": "passive"
+        }
+      ],
+      "numeric_pin_basis": "Manufacturer identifies cathode band/notch but does NOT number the two terminals. Project convention assigns pad1 to banded cathode and pad2 to anode, matching the approved graph; footprint must put the band at pad1. Do not describe 1K/2A as literal numeric manufacturer pin table.",
+      "package": {
+        "name": "SMA DO-214AC",
+        "source_page": 4,
+        "body_length_max_mm": 4.6,
+        "body_width_max_mm": 2.92,
+        "overall_lead_length_max_mm": 5.59,
+        "overall_height_J_max_mm": 2.4,
+        "suggested_pads_mm": {
+          "pad_length_X": 2.5,
+          "pad_width_Y": 1.7,
+          "pad_center_distance_C": 4.0,
+          "gap_G": 1.5,
+          "overall_length_X1": 6.5
+        },
+        "note": "6x3.5mm preliminary reservation covers body, not the6.5mm manufacturer land extent/courtyard."
+      },
+      "limits_from_primary": {
+        "VRRM_V": 600,
+        "IO_A": 1.0,
+        "IO_condition": "terminal75C, datasheet singlephasehalf-wave60Hz rating; capacitorload derate20%",
+        "IFSM_A": 30,
+        "IFSM_condition": "nonrepetitive8.3ms halfsine",
+        "trr_ns": 75,
+        "Vf_max_at1A_V": 1.7,
+        "Tj_max_C": 150
+      },
+      "ordering": {
+        "source_page": 1,
+        "US1x-13-F": "SMA5000tape/reel; x=J exact600Vmember"
+      }
+    },
+    {
+      "ref": "BR1",
+      "mpn": "MB10S-13",
+      "manufacturer": "Diodes Incorporated",
+      "source_pin_page": 1,
+      "pins": [
+        {
+          "number": "1",
+          "function": "DC+",
+          "approved_net": "BUS_RECT",
+          "suggested_ERC_type": "passive"
+        },
+        {
+          "number": "2",
+          "function": "AC~",
+          "approved_net": "AC_FUSED",
+          "suggested_ERC_type": "passive"
+        },
+        {
+          "number": "3",
+          "function": "DC−",
+          "approved_net": "DC_RETURN",
+          "suggested_ERC_type": "passive"
+        },
+        {
+          "number": "4",
+          "function": "AC~",
+          "approved_net": "AC_N",
+          "suggested_ERC_type": "passive"
+        }
+      ],
+      "orientation": "Viewed from above with package notch/right side:upperleft3(−),upperright1(+),lowerleft4(~),lowerright2(~). Verified visually against primary diagram, not Comchip B10S numeric mapping.",
+      "package": {
+        "name": "MBS",
+        "source_page": 4,
+        "body_D_mm": [
+          4.5,
+          4.95
+        ],
+        "body_E1_mm": [
+          3.6,
+          4.1
+        ],
+        "overall_lead_span_E_max_mm": 7.0,
+        "body_height_A2_mm": [
+          2.3,
+          2.7
+        ],
+        "standoff_A1_max_mm": 0.2,
+        "conservative_sum_seated_height_mm": 2.9,
+        "lead_pitch_e_mm": [
+          2.3,
+          2.7
+        ],
+        "suggested_pads_mm": {
+          "pad_X": 1.0,
+          "pad_Y": 2.15,
+          "column_centres_C": 2.5,
+          "overall_width_X1": 3.5,
+          "overall_height_Y1": 7.5
+        }
+      },
+      "limits_from_primary": {
+        "VRRM_V": 1000,
+        "IO_at40C_A": [
+          0.5,
+          0.8
+        ],
+        "IO_condition": "Different datasheet board copper conditions;0.8A is not unconditional; capacitorload derate20%",
+        "IFSM_A": 30,
+        "I2t_A2s": 3.74,
+        "I2t_interval_ms": [
+          1,
+          8.3
+        ],
+        "Vf_max_at0p8A_per_leg_V": 1.1,
+        "Tj_max_C": 150
+      },
+      "ordering": {
+        "source_page": 1,
+        "MB10S-13": "Commercial MBS3000tape/reel"
+      }
+    }
+  ],
+  "procurement": [
+    {
+      "ref": "U1",
+      "supplier": "LCSC",
+      "exact_mpn": "LYT1603D-TL",
+      "sku": "C567687",
+      "url": "https://www.lcsc.com/product-detail/C567687.html",
+      "verification": "Fresh direct HTTPS HTML download in this task;stockNumber10,stockSz10,shipImmediately10,and Product schema inventoryLevel10. ExactMPN confirmed.",
+      "html_file": "LYT-LCSC.html",
+      "html_sha256": "cf9148a01161ff0d1a56b5b9e7fce6eb5d804b7c23f98d4b1c2dbdeed42bee1a",
+      "stock_reported": 10,
+      "MOQ": 1,
+      "status": "Credible small-prototype procurement route at time of observation, not reserved or ordered. Manufacturer-authorized-channel status not verified here.",
+      "price_scope": "Fresh page Product schema advertises USD0.4681 starting price; quantity tier not proven, so not a1piece quote."
+    },
+    {
+      "ref": "U1",
+      "supplier": "DigiKey",
+      "exact_mpn": "LYT1603D-TL",
+      "url": "https://www.digikey.com/en/products/detail/power-integrations/LYT1603D-TL/6621683",
+      "verification": "Web tool retrieved listing; rawdirectHTTPS403. Webstock0/backorder,18weekmanufacturerleadtime,estimated2500Jan11,2027; date/stock not promise.",
+      "stock_reported": 0,
+      "status": "Credible backorder route, not immediate stock; no substitution to1604."
+    },
+    {
+      "ref": "U1",
+      "supplier": "TME",
+      "listed_mpn": "LYT1603D (withoutTL)",
+      "url": "https://www.tme.eu/en/details/lyt1603d/led-drivers/power-integrations/",
+      "stock_reported_by_web": 80,
+      "status": "Different packaging suffix. Not counted as exactTL route and no automatic substitution; listed tillstocklasts."
+    },
+    {
+      "ref": "D1",
+      "supplier": "DigiKey",
+      "exact_mpn": "US1J-13-F",
+      "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/US1J-13-F/816184",
+      "verification": "Web tool retrieved exactmanufacturer/part product listing;directHTTPS403",
+      "stock_reported": 34855,
+      "MOQ": 1,
+      "one_piece_USD_reported": 0.44,
+      "status": "Credible exactpartcut-tape route; website observation only, not reserved stock or complete landed quote."
+    },
+    {
+      "ref": "BR1",
+      "supplier": "DigiKey",
+      "exact_mpn": "MB10S-13",
+      "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/MB10S-13/7241385",
+      "verification": "Web tool search/retrieval exactmanufacturer/part listing;directHTTPS403",
+      "stock_reported": 323107,
+      "MOQ": 1,
+      "one_piece_USD_reported": 0.6,
+      "status": "Credible exactpartcut-tape route; dynamicwebsiteobservation, not reserved stock or quote."
+    },
+    {
+      "ref": "BR1",
+      "supplier": "TME",
+      "exact_mpn": "MB10S-13",
+      "url": "https://www.tme.eu/en/details/mb10s-13/smd-tht-sing-phase-diode-bridge-rectif/diodes-incorporated/",
+      "stock_reported_by_web": 27,
+      "MOQ": 1,
+      "status": "Additional exactpart smallquantity route reported byweb."
+    }
+  ],
+  "findings": [
+    {
+      "id": "ACTIVE-GEO-01",
+      "severity": "major before PCB placement, not connectivity error",
+      "ref": "BR1",
+      "finding": "Approved proposal6.2x4.9x2.7mm reservation underestimates7.0mm leadspan; manufacturerlandextent7.5mm. Actualbodymax4.95x4.10; conservative2.9mmseatedheight versusbody2.7.",
+      "required_action": "Use independently verified exact mechanical/land envelope in footprint and actual bottomsidepacking before spatial acceptance. Preserve approved graph identity; any basis/source revision handled explicitly byroot."
+    },
+    {
+      "id": "ACTIVE-GEO-02",
+      "severity": "minor before PCB placement",
+      "ref": "D1",
+      "finding": "Manufacturerlandextent6.5mm exceeds6mmbodyreservation; no bodypackingresult proves bottomsidepadfit.",
+      "required_action": "Reserve6.5x1.7mm lands plus courtyard/assembly allowances and verifybandatpad1."
+    },
+    {
+      "id": "ACTIVE-PIN-01",
+      "severity": "documentation clarification",
+      "ref": "D1",
+      "finding": "Cathode band is manufacturer primary identity;numeric1K2A is project pad convention, not literal numberedmanufacturerpinout.",
+      "required_action": "Record this explicitly in local symbol/footprint verification without alteringapprovednetmembers."
+    }
+  ],
+  "result": "No active-part physical pin or electrical identity mismatch found versus approved graph. Exactparts have credible supplier routes for prototypeplanning, with NRND/smallU1stock risk retained. Geometry corrections are real prerequisites before placement; no CAD or physical qualification performed.",
+  "requirements_mapping": [
+    "C_PARTS",
+    "C_GRAPH",
+    "C_PACKING",
+    "C_PROTECTION",
+    "C_COST"
+  ],
+  "limitations": [
+    "No supplier messages or orders sent.",
+    "No lifecycle or stock quantities guaranteed.",
+    "No electrical measurements, ERC, DRC or footprint qualification performed.",
+    "Supplier cachedwebobservations are distinguished from freshdirectLCSC HTML.",
+    "Root remains soleCADwriter and must independently review this implementer output."
+  ]
+}

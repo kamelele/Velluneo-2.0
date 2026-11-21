@@ -1,0 +1,6 @@
+{
+  "change": "POWER preferred track width .4 to .3 mm; global floor unchanged .3 mm",
+  "basis": "35 um copper, .3 mm width -> .0105 mm2. A 100 mm trace has approximately .164 ohm at 20C, .213 ohm at 100C. At .1352 A approximately 3.9 mW/100mm hot. At planning .3 A RMS approximately 19.2 mW/100mm hot. Pulse/fault limits remain component/prototype qualification questions.",
+  "calculation": "rho_Cu=.01724 ohm mm2/m; alpha=.00393/K. Not an IPC temperature-rise certification.",
+  "critical_paths": "Wider .4/.6 mm SOURCE branches retained; exact widths captured from native PCB."
+}

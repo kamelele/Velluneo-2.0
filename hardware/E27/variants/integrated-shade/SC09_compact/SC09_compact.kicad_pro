@@ -65,10 +65,10 @@
         "zones_intersect": "error"
       },
       "rules": {
-        "min_clearance": 0.2,
-        "min_copper_edge_clearance": 0.4,
+        "min_clearance": 0.3,
+        "min_copper_edge_clearance": 0.5,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_track_width": 0.3,
         "min_via_annular_width": 0.2
       },
       "track_widths": [],
@@ -309,7 +309,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.3,
         "diff_pair_gap": 0.254,
         "diff_pair_via_gap": 0.254,
         "diff_pair_width": 0.254,
@@ -317,7 +317,22 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.254,
+        "track_width": 0.3,
+        "via_diameter": 0.8,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.254,
+        "diff_pair_via_gap": 0.254,
+        "diff_pair_width": 0.254,
+        "line_style": 0,
+        "name": "POWER",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
         "via_diameter": 1.27,
         "via_drill": 0.7112,
         "wire_width": 6
@@ -326,7 +341,44 @@
     "meta": {
       "version": 3
     },
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "POWER",
+        "pattern": "/AC_L"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/AC_N"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/AC_FUSED"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/BUS_RECT"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/BUS_FILTERED"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/SW_SOURCE"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/FB_INDUCTOR"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/LED_PLUS"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC_RETURN"
+      }
+    ]
   },
   "sheets": [],
   "text_variables": {}

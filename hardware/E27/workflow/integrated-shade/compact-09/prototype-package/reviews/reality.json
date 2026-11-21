@@ -1,0 +1,84 @@
+{
+  "role": "Reality Checker",
+  "actual_actor": "/root/final_reality",
+  "date": "2026-11-21",
+  "independence": "Distinct read-only review context; no shared CAD, library or electrical design edits. Report is sole owned write.",
+  "status": "changes_requested",
+  "scope": "Saved native compact laboratory PCB and stated electrical/thermal/mechanical assumptions. Not authority to purchase or energize. Final manufacturing packet review awaits frozen manifest.",
+  "input_sha256": {
+    "SC09_compact.kicad_pcb": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+    "SC09_compact.kicad_sch": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+    "SC09_compact.kicad_pro": "9c0bc6c2616975830e483ad3bc4a04b943e8f4b5eab3d533148cb6d49f6c6a5b",
+    "SC09_compact.kicad_dru": "6cc0b1c920097196b552b2fe23bb6480f08702ef836f4ad73f0a39df9f426412",
+    "T1-custom-contract.json": "2656e459d3a6b1a5343b444ac9bca545a7277de258865f91d0e445f366b229b9",
+    "R7-standing-contract.json": "173e5951c6a28a0ccd82cb25253a9ad2469840113e07d572e66d2595d38007aa",
+    "thermal-planning.json": "fb254a80e9016d28d06455841e26d6941860290f2fa10dae776519be3d8c4fc1",
+    "calculated-proposal.json": "a47f455b3eff7d49d0e47d771e50b788593bd978bb219258551aa645e67de263",
+    "bom-build.json": "054004f0328dcb34d369ee6459268d4d8a14b00ca71b4fed37a7caf3d2ea22af",
+    "owner-autonomous-completion.json": "122f8d79c320614d63abac65b1c616e17dca7f4fba7555f8b2d027995419ddce",
+    "mechanical-budget.proposed.json": "cbce063e385780520e87a8448fc87a60a42f8ed8f27a9cd7b99feba81b4d843a"
+  },
+  "checks": [
+    {
+      "method": "native KiCad10.0.6 read-only raw PCB loader and BuildConnectivity",
+      "result": "19 footprints,47pads,0unconnected,17one-model physical packages and2bare-wire interfaces. Native track widths .3/.4/.6mm. SOURCE filled areas77.6738036+164.2292843=241.9030879mm2; D1DC48.5315997+32.4608161=80.9924158mm2. No thermal measurements implied."
+    },
+    {
+      "method": "Independent arithmetic review",
+      "result": "0.68||3.65=.573210ohm; .279/.573210/3.6=.135203A nominal.60V output8.112W. At180uF90V storedenergy.729J, direct LED reconnection is not current-limited by upstreamIC."
+    },
+    {
+      "method": "Native packet source and drawing review",
+      "result": "All nodes are mains-referenced; source/BP decoupling and high-frequency C4/U1/Rsense/T1/D1 loop deliberately placed. No basis for claiming low-voltage touch safety or IEC compliance."
+    }
+  ],
+  "findings": [
+    {
+      "id": "REAL-01",
+      "severity": "major",
+      "object": "T1-custom-contract.json custom_part_name and calculated_winding_screen_not_measurement",
+      "observation": "Active selected winding is180turnAWG32, but custom_part_name says150T and the calculation block still uses25turn/layer,.260wire,sixlayers,3.57m and old flux screen without an explicit block-level superseded marker.",
+      "consequence": "Supplier or manual builder can select conflicting winding recipes from the same manufacturing contract.",
+      "closure": "Provide one authoritative180T drawing/recipe; explicitly move150T arithmetic under a superseded/history key or update active calculations. Keep unknown supplier qualification explicit.",
+      "owner": "root designer"
+    },
+    {
+      "id": "REAL-02",
+      "severity": "minor",
+      "object": "calculated-proposal.json versus thermal-planning.json",
+      "observation": "calculated-proposal retains.7\u20131.2W planning while thermal-planning now.9\u20131.7W after changed coil.",
+      "consequence": "Packet reader may choose stale total-loss/temperature expectation.",
+      "closure": "Synchronize active planning range and reasoning or label the older arithmetic superseded; do not turn either into a guaranteed loss bound.",
+      "owner": "root designer"
+    },
+    {
+      "id": "REAL-03",
+      "severity": "major",
+      "object": "50x32mm PCB versus mechanical-budget.proposed.json and owner-autonomous-completion.json",
+      "observation": "Current width exceeds proposed50x25x20mm stop envelope by7mm. At32x19.5 cross section, rectangular diagonal is37.47mm before enclosure/assembly clearance, versus31.7mm for25x19.5.",
+      "consequence": "Native routing proves a compact lab board, not fit to the ordinary bulb target.",
+      "closure": "Explicitly classify this as a50x32 laboratory candidate with size deviation and unproven bulb fit; do not mark C_SIZE satisfied or describe whole user target as completed. A compliant25mm redesign or actual accepted cavity remains separate.",
+      "owner": "root designer/product owner"
+    },
+    {
+      "id": "REAL-04",
+      "severity": "major",
+      "object": "Custom T1, RF1/R7 lead forming, C6 mounting",
+      "observation": "Three-pin custom coil envelope/polarity, finished hot inductance and DCR remain unsourced/unmeasured. Formed resistor/capacitor leads and saddle are proposed, not jig/sample qualified.",
+      "consequence": "CAD/3D demonstrates declared shapes only; assembly procurement may fail without an actual fit/build sample.",
+      "closure": "Keep laboratory-candidate status and exact forming drawings/contracts visible. For an order-ready assembled unit obtain coil feasibility/sample gauge and actual formed-part fit. Bare PCB artwork can be reviewed separately from successful assembly.",
+      "owner": "root designer and coil maker"
+    },
+    {
+      "id": "REAL-05",
+      "severity": "major",
+      "object": "Fault, surge, OVP/current and temperature qualification",
+      "observation": "Small minimum-ON screen margin3.568% depends on unmeasured hot/bias inductance. IC threshold bounds cited at25C; dynamicCOUT<=90V not demonstrated. Coil saturation at possible1.24A fault, MOV/RF coordination, drain peaks, LED current extrema and all component temperatures remain open.",
+      "consequence": "No defensible claim of complete electrical/safety release or permission for unguarded operation follows from zeroDRC.",
+      "closure": "Retain blocked product/powered-test status. Bring-up requires a named qualified operator, contained fixture, explicit test limits and stop conditions; measurement records must close actual operating envelope. These are not pre-fabrication measurement claims.",
+      "owner": "qualified electrical reviewer/test owner"
+    }
+  ],
+  "recommendation": "Suitable to present as a routed laboratory design candidate after documentation corrections; not approved for product manufacturing, consumer integration or powered testing. No human approval is recorded by this reviewer.",
+  "final_packet_addendum": null
+}

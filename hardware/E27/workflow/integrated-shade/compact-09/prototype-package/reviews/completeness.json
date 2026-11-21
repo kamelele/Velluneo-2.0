@@ -1,0 +1,245 @@
+{
+  "role": "Completeness Reviewer",
+  "actor": "/root/final_completeness",
+  "date": "2026-11-21",
+  "independence": "Separate read-only reviewer context; no CAD, library, BOM, package or requirement edits performed. Only this reviewer report is written.",
+  "initial_manifest": {
+    "path": "hardware/E27/workflow/integrated-shade/compact-09/final-review-inputs.json",
+    "revision": "SC09-routed-lab-final-01",
+    "sha256": "0fb6c7d7f835d50bdca12324fc67bccd5bddd30b0dd95c7ee24215c60adc811e",
+    "files_checked": 168,
+    "missing_or_mismatched_files": []
+  },
+  "scope": "Independent completeness audit of actual deliverables against user intent, retained product requirements, current manual laboratory prototype scope and Toolkit stages. A complete engineering candidate packet is distinct from the requested order-ready release.",
+  "initial_candidate_artifact_checks": {
+    "artifact_source_binding": "Every listed artifact existed and matched its SHA-256 when reviewed.",
+    "gerber_zip": {
+      "members": 14,
+      "CRC_test": "pass",
+      "member_bytes_equal_loose_fabrication_files": true,
+      "coverage": "F/B copper, F/B solder mask, F/B silkscreen, Edge.Cuts, X2 job, PTH and empty NPTH, both drill maps, drill report and fabrication README."
+    },
+    "portable_KiCad_zip": {
+      "members": 97,
+      "CRC_test": "pass",
+      "member_bytes_equal_source_files": true,
+      "native_CAD_and_local_libraries": "present",
+      "actual_WRL_package_models": 17,
+      "note": "Experimental component STEP meshes intentionally excluded. Hardware source manifest still lists experimental STEP files in the full repository; native KiCad uses WRL. Do not describe this ZIP as a complete standalone Toolkit installation."
+    },
+    "BOM_rows": 19,
+    "manual_position_rows": 19,
+    "actual_pin_connection_rows": 47,
+    "netlist_MPNs_match_build_BOM": "All 19 exact MPN fields independently compared and match, including custom180Tcoil.",
+    "PDF_content": "Front assembly contains all8front references and pin labels; back assembly contains all11back references and pin labels. Schematic1page and copper/silkscreen5pages are readable by PDF parser. Root is correcting missing assembly Edge.Cuts before final freeze.",
+    "whole_assembly_WRL_bytes": 5347778,
+    "whole_WRL_external_Inline_references": false,
+    "renders": "Both actual native PNG files are present and hash-bound. No assembled STEP claimed as complete after empty imported component geometry was detected.",
+    "DNP": "No DNP references, consistent with native inventory and19reference build BOM.",
+    "stencil_and_panel": "Explicitly absent for manual single-board prototype process, not silently promised as PCBA deliverables."
+  },
+  "verification_coverage": {
+    "native_board_sha256": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+    "native_schematic_sha256": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+    "ERC": "Fresh retained report has zero violations on its sheet, no ignored checks.",
+    "DRC_parity": "Retained report has zero violations, zero unconnected items and zero schematic parity issues. Default ignored checks are explicitly retained in report, not described as no checks ignored.",
+    "approved_intent": "Fresh Toolkit connectivity passed c4e0b928ce5b63c067f9eb6c36cc7d582f6852369da961d6b318686c97b6d9fd,47physicalpins,11nets,1NC.",
+    "native_refill": "Exact saved polygon equality to two-pass native refill is true and original source unchanged.",
+    "spacing": "Same current board hash in strict FAIL and bounded laboratory scoped PASS. The distinction and package-land concession limitations are explicit; neither is normative insulation qualification.",
+    "validator_controls": "19 synthetic controls passed; not treated as physical testing.",
+    "full_Toolkit_release": "FAIL,34 errors retained, including actual qualification/formal workflow gaps and six unregistered release artifact categories despite actual candidate exports existing."
+  },
+  "requirement_to_deliverable_coverage": [
+    {
+      "id": "C_SCOPE",
+      "coverage": "Owner brief, current native driver CAD and README preserve nonisolated/no dimming/whole-module cold replacement intent.",
+      "status": "candidate documented"
+    },
+    {
+      "id": "C_ARCH",
+      "coverage": "Actual owner-approved RDR-derived19reference direction and immutable A1 map retained.",
+      "status": "direction approved; final release not approved"
+    },
+    {
+      "id": "C_SUPPLY",
+      "coverage": "230VAC50Hz/207–253VAC calculation envelope in README/interface/calculated-proposal.",
+      "status": "design documented, not measured"
+    },
+    {
+      "id": "C_LIGHT",
+      "coverage": "20S4000KCRI>=80 exact LED candidate;800lm explicitly a product target.",
+      "status": "optical performance unmeasured"
+    },
+    {
+      "id": "C_SIZE",
+      "coverage": "Actual50x32x1.6mm board and approximate19.5mm moduleheight clearly disclosed against proposed50x25x20mm.",
+      "status": "earlier width target NOT met"
+    },
+    {
+      "id": "C_PROCESS",
+      "coverage": "Approved manual prototype, FR42L1oz1.6mm leadfreeHASL; no unsupported Economic/StandardPCBA claim.",
+      "status": "process declaration retained; provider formal gate open"
+    },
+    {
+      "id": "C_EFFICIENCY",
+      "coverage": "Current0.9–1.7W conditional planning allocation, reference-board0.79W kept separate.",
+      "status": "calculation/design allocation only; physical loss unknown; formal evidence registration incomplete"
+    },
+    {
+      "id": "C_PARTS",
+      "coverage": "BOM19MPNs equals fresh native netlist, footprints and custom contracts provided.",
+      "status": "candidate parts explicit; supplier/sample qualification and availability open"
+    },
+    {
+      "id": "C_GRAPH",
+      "coverage": "Independent approved A1 intent and fresh passing Toolkit graph comparison47pins/11nets/1NC.",
+      "status": "actual connectivity evidence present; requirement evidence registration incomplete"
+    },
+    {
+      "id": "C_PROTECTION",
+      "coverage": "Calculations/staticOVP/bleeders/energy screens, MOV/RF1/IC architecture, OPEN_ITEMS and BRINGUP.",
+      "status": "bounded proposal documented; faults/surge/hot behavior unqualified"
+    },
+    {
+      "id": "C_INTERFACE",
+      "coverage": "J1L/N and J2LED+/DC_RETURN pin locations/polarity, cold replacement requirement and noSELV explicit.",
+      "status": "candidate ports defined; final endpoint/fixture contract open"
+    },
+    {
+      "id": "C_PACKING",
+      "coverage": "Real routed PCB,17modelattachments, spatial engineering review and render views.",
+      "status": "declared geometry exists;25mm target and actual formed/supplier fit not achieved/verified"
+    },
+    {
+      "id": "C_ROUTING",
+      "coverage": "Fresh native DRC/parity zero, approved graph match, all55pair geometry screen strict/scoped plus refill.",
+      "status": "candidate CAD verified within stated scope; formal spatial contract not adopted"
+    },
+    {
+      "id": "C_THERMAL",
+      "coverage": "Actual connected copper areas, conditional thermal plan and measurement stop criteria.",
+      "status": "no physical temperature measurements; release blocked"
+    },
+    {
+      "id": "C_COMPLIANCE",
+      "coverage": "Retained original17obligations, standards/test plan and explicit no inherited EMI/surge compliance statement.",
+      "status": "no physical compliance evidence; release blocked"
+    },
+    {
+      "id": "C_RELEASE",
+      "coverage": "Gerbers/drills, BOM, manual positions, assembly PDFs, native sources,3Dviews/model, bringup, hashes and full failing check report.",
+      "status": "candidate exports complete; passed Toolkit release and exact owner acceptance absent"
+    },
+    {
+      "id": "C_ENV",
+      "coverage": "Owner lab scope0–40C and guarded test plan retained.",
+      "status": "product fixture/orientation/thermal path qualification open"
+    },
+    {
+      "id": "C_OPTICAL_INPUT",
+      "coverage": "4000KCRI80 input and LED source data retained; unmeasured flux/bin/diffuser/junction conditions exposed.",
+      "status": "full accepted optical/temperature envelope open"
+    },
+    {
+      "id": "C_SAFETY_BASIS",
+      "coverage": "Mains-referenced warning, noSELV, strict/scoped spacing distinction, qualified review/test obligations.",
+      "status": "qualified numerical safety/standard basis and physical evidence open"
+    },
+    {
+      "id": "C_COST",
+      "coverage": "NRND and custom coil procurement risks documented, no fabricated complete quote.",
+      "status": "complete priced basket/quotation absent"
+    }
+  ],
+  "retained_original_product_obligations": 17,
+  "findings": [
+    {
+      "id": "COMP-01",
+      "severity": "blocker_for_release",
+      "stage": "release",
+      "owner": "Root coordinator and qualified product reviewers",
+      "finding": "Full Toolkit release fails and current candidate is not the complete order-ready release requested by the user. Do not use candidate-file completeness as a manufacturing acceptance claim.",
+      "evidence": "checks/toolkit-release.json, OPEN_ITEMS.md, hardware.json",
+      "candidate_scope_disposition": "Clearly exposed; does not invalidate preservation/publication of engineering candidate files."
+    },
+    {
+      "id": "COMP-02",
+      "severity": "major_for_size_acceptance",
+      "stage": "placement",
+      "owner": "Root designer/owner",
+      "finding": "Actual width32mm exceeds earlier proposed25mm by7mm. A reduced-size ordinary-bulb fit has not been established.",
+      "evidence": "C_SIZE,C_PACKING,spatial-review.json,README.md",
+      "candidate_scope_disposition": "Correctly disclosed; requirement remains unmet."
+    },
+    {
+      "id": "COMP-03",
+      "severity": "major_for_assembled_unit_release",
+      "stage": "release",
+      "owner": "Coil supplier, assembly operator and qualified electrical reviewer",
+      "finding": "Custom180Tcoil and formed RF1/R7/C6 are not verified by supplier/sample; render and footprint contract are not manufacturing feasibility evidence.",
+      "evidence": "T1-custom-contract.json,R7-standing-contract.json,OPEN_ITEMS.md",
+      "candidate_scope_disposition": "Open with owners; do not claim immediately procurable assembled unit."
+    },
+    {
+      "id": "COMP-04",
+      "severity": "major_for_functional_qualification",
+      "stage": "release",
+      "owner": "Qualified laboratory/product reviewers",
+      "finding": "Current regulation, dynamic OVP, surge/fault coordination, temperatures and optical performance have no actual measurements. Formal spatial/endpoint/safety basis and other retained requirements remain open.",
+      "evidence": "requirements.json,BRINGUP.md,OPEN_ITEMS.md",
+      "candidate_scope_disposition": "No invented measurements found; appropriately exposed."
+    },
+    {
+      "id": "COMP-05",
+      "severity": "minor_for_candidate_metadata_major_for_formal_release",
+      "stage": "release",
+      "owner": "Root coordinator",
+      "finding": "Formal requirements/release registration still does not bind several actual available current files. Toolkit reports missing evidence/artifact categories, while manual inspection confirms the exports exist. Do not confuse registration gaps with physically absent files.",
+      "evidence": "requirements.json,hardware.json.release_files,checks/toolkit-release.json",
+      "candidate_scope_disposition": "Full failing report retained, so no false pass. Formal gate remains open."
+    },
+    {
+      "id": "COMP-06",
+      "severity": "minor",
+      "stage": "release export review",
+      "owner": "Root coordinator",
+      "finding": "Initial native assembly PDFs omitted board outline. Root is correcting export-only Edge.Cuts coverage before finalfreeze.",
+      "evidence": "Initial01 assembly PDFs/native export command scope",
+      "status": "closed_by_independent_final_export_review",
+      "closure": "Final front/back native assembly PDFs independently rendered in memory with pypdfium2 and visually inspected. Both contain the closed chamfered board outline and black-white package/reference/pad views. Back orientation is mirrored for underside assembly. Native source hashes unchanged."
+    }
+  ],
+  "recommendation": {
+    "candidate_packet": "ready_for_human_review_of_engineering_candidate_files_only; final169file manifest and artifact bindings match, complete native CAD/manual prototype exports and3D deliverables present.",
+    "full_release_or_order_ready": "not_ready",
+    "human_approval_or_purchase_granted": false,
+    "physical_measurements_claimed": false
+  },
+  "limitations": [
+    "This reviewer performed file/hash/archive/native export text/content checks, not a new physical electrical test.",
+    "GerberZIP layer/drill inventory and exact loose-file byte identity were checked; independent supplier CAM acceptance is not claimed.",
+    "No authority inferred from hashes, number of reviewers, rendered appearance or passing native DRC."
+  ],
+  "final_packet_addendum": {
+    "manifest_sha256": "0110503251b67f8165513668c0487cb97e12d576e20da0da33ea6eed0ddd6566",
+    "files_checked": 169,
+    "manifest_mismatches": [],
+    "artifact_binding_mismatches": [],
+    "CAD_hashes_unchanged": true,
+    "portable_KiCad_ZIP": {
+      "members": 114,
+      "CRC_test": "pass",
+      "all_member_bytes_equal_source_files": true,
+      "all_hardware_source_files_present": true,
+      "experimental_per_part_STEP_files": 17,
+      "interoperability_limitation": "Experimental STEP files included for exact source completeness, not claimed validated full assembly interchange. Empty assembled STEP is not delivered."
+    },
+    "reproduction_README": "Clearly distinguishes workspace-dependent authoring provenance from standalone native KiCad exports and read-only validator invocation.",
+    "PDF_front_sha256": "b2f842431f920b30b46ed83e7bfac22857aa162fb9378d957c9c24090b766fd5",
+    "PDF_back_sha256": "d276df2a3cecad5e653315ede847237ffe21e6ca629b427f4ad7ae65ee5f4450",
+    "independent_visual_QA": "Both assembly PDFs rendered and visually inspected, closed outline visible, no page clipping. COMP-06 closed.",
+    "remaining_findings": "COMP-01..05 remain substantive full release/size/qualification/formal registration limitations. None is misrepresented as a passed stage; user order-ready outcome remains unmet.",
+    "candidate_file_defects_remaining": "No additional missing/corrupt candidate artifact found within reviewed scope.",
+    "scope_verdict": "Final candidate is complete for review/publication. Not a passed Toolkit release, qualified assembled unit, verified bulb fit, order authorization or powered-test approval."
+  }
+}

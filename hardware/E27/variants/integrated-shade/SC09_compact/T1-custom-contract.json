@@ -1,0 +1,170 @@
+{
+  "actor": "/root/compact_fit_research",
+  "revision": "T1-EE10-CONTRACT-02-180T",
+  "status": "Proposed explicit custom mechanical and electrical acceptance contract for PCB integration; supplier feasibility and prototype qualification remain open",
+  "not_an_EE1016_manufacturer_drawing": true,
+  "custom_part_name": "Velluneo T1 EE10 180T AWG32 1mH 3-terminal laboratory prototype",
+  "mechanical_basis": {
+    "bobbin": "TDK BE10-118CPSFR or supplier-made exact mechanical equivalent to this contract",
+    "matched_core": "TDK PC40EE10/11-Z, controlled center-leg gap to final inductance",
+    "source": "Manufacturer-authored TDK e140 July2003 catalog, native pages19/20/23/24; archived primary PI two-page bobbin extract and full catalog mirror",
+    "local_primary_bobbin_extract": "tdk-bobbin-catalog.pdf",
+    "local_matched_core_catalog": "tdk-core-greenroof.pdf",
+    "source_bobbin_body_XYZ_mm": [
+      10.2,
+      10.2,
+      9.0
+    ],
+    "source_catalog_assembly_WDH_mm": [
+      10.4,
+      10.2,
+      11.2
+    ],
+    "source_bobbin_winding_width_mm": 6.6,
+    "source_bobbin_Aw_mm2": 12.2,
+    "source_bobbin_mean_turn_length_mm": 23.8,
+    "source_pin_diameter_mm": 0.5,
+    "source_outer_terminal_span_mm": 7.7,
+    "source_row_spacing_mm": 8.0,
+    "intermediate_pins": "Not used in PCB. Archived source P1 varies2.5/2.6; retain only explicitly dimensioned outer terminal positions, do not derive outer span from three pitch intervals.",
+    "source_pin_numbers": "Generic TDK bobbin drawing does not assign electrical terminal numbers; this custom part's labels are explicitly defined below, not asserted to be verified original EE1016 numbering"
+  },
+  "designed_mechanical_requirements": {
+    "finished_max_body_xyz_mm": [
+      12.0,
+      12.0,
+      13.0
+    ],
+    "finished_envelope_basis": "New design acceptance requirement around documented catalog envelope with tape/varnish/process reserve; not measured or supplier-confirmed finished maximum",
+    "PCB_coordinate_system": "Top/component-side view looking down toward PCB; x right,y down; body origin centered. These labels form the custom winding/assembly contract.",
+    "top_view_pin_centres_mm": {
+      "1": [
+        -3.85,
+        4.0
+      ],
+      "4": [
+        3.85,
+        4.0
+      ],
+      "8": [
+        -3.85,
+        -4.0
+      ]
+    },
+    "bottom_view_pin_centres_mm": {
+      "1": [
+        3.85,
+        4.0
+      ],
+      "4": [
+        -3.85,
+        4.0
+      ],
+      "8": [
+        3.85,
+        -4.0
+      ]
+    },
+    "bottom_view_convention": "Mirror top view about x=0; preserves y-down convention. Mechanical drawing must state the view to avoid mistaken mirroring.",
+    "terminal_position_tolerance_required_mm": 0.15,
+    "terminal_diameter_requirement_mm": [
+      0.45,
+      0.55
+    ],
+    "terminal_protrusion_below_seating_plane_requirement_mm": [
+      3.0,
+      3.8
+    ],
+    "terminal_1_identification": "Permanent visible dot/mark on component top adjacent to pin1 corner; mark must remain after varnish",
+    "removed_terminals": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "retained_floating_terminal": 4,
+    "supplier_fit_acceptance": "Three-pin go/no-go gauge at contract coordinates plus12x12x13mm envelope gauge. No clipping or bending to force a supplied nonmatching bobbin into PCB. Supplier must approve feasibility before coil procurement.",
+    "PCB_pad_selection": "Root to select actual hole/annular ring and floating-pin clearance. This contract does not authorize a clearance relaxation."
+  },
+  "custom_winding_requirements": {
+    "turns": 180,
+    "wire": "AWG32,enamelled,finishedOD<=0.225mm",
+    "winding": "Start8finish1,7layers[27,27,27,27,27,27,18],samepolarityandphysicalpincontract",
+    "terminal4": "No winding or internal electrical connection",
+    "insulation": "One layer6.5mm winding tape and two layers4mm assembly tape per original reference intent; exact tape thickness, voltage and thermal class must be specified by coil maker",
+    "final_inductance_mH": [
+      0.95,
+      1.05
+    ],
+    "inductance_test": "Across1/8,100kHz,1Vpp,zeroDC at25C, matchingRDR acceptance basis",
+    "required_gapped_AL_nominal_nH_per_turn2": 30.864197530864196,
+    "required_gapped_AL_range_nH_per_turn2": [
+      29.320987654320987,
+      32.407407407407405
+    ],
+    "gapping": "Set by final wound inductance measurement; not by an unverified nominal gap dimension",
+    "root_requested_hot_DC_bias_Lmin_mH": 0.855,
+    "hot_DC_bias_test_current_A": 0.6,
+    "hot_DC_bias_requirement_status": "Proposed root requirement; maximum winding temperature/test method must be set by electrical coordinator; not a sourced tested result",
+    "DCR": "Proposed acceptance<=2.7ohm25C,<=3.6ohm100C; supplier and measurement required",
+    "thermal_core_loss": "Unknown until material/coil build and switching waveform are confirmed. Catalog core loss at100kHz,200mT,100C is not this circuit's measured loss.",
+    "nonisolated": true
+  },
+  "procurement_state": {
+    "type": "Custom coil RFQ/build path; no immediate-stock finished coil claimed",
+    "bobbin_current_stock": "Not verified",
+    "core_current_stock": "Not verified for exactPC40EE10/11-Z",
+    "supplier_contact_sent": false,
+    "order_placed": false
+  },
+  "integration_notes": [
+    "This is an explicit custom mechanical substitution retaining electrical logicalpins1/4/8. It does not certify the originalEE1016 geometry.",
+    "Root may capture a PCB candidate using this contract and must expose customcomponent procurement/buildability as an open requirement before purchase.",
+    "A finished PCBroute or rendered3Dmodel verifies only thatdeclared envelope, not actualunsourcedcoil fit.",
+    "Do not substituteE10/5/5 or arbitraryEE10core; matchedwindingwindow and magneticproperties differ."
+  ],
+  "root_selected_design_revision": "SC09-EE10-1mH-180T-AWG32",
+  "superseded_150T_screen": "Original150turn31AWGnominalstudyretainedashistoryinreference;180T32selectedbyrootautonomousdesigniteration toreduceflux. Thesearecustommanufacturingrequirements,notqualifiedstock.",
+  "historical_150T_winding_screen_superseded": {
+    "turns_per_layer": 25,
+    "axial_occupation_at0p260_wire_mm": 6.5,
+    "axial_nominal_remaining_mm": 0.1,
+    "six_layers_radial_mm": 1.56,
+    "nominal_radial_space_Aw_div_width_mm": 1.8484848485,
+    "nominal_radial_remaining_before_tape_and_tolerances_mm": 0.2884848485,
+    "circular_wire_area_occupied_mm2": 7.9639373763,
+    "square_envelope_fill_percent": 83.1147540984,
+    "screen_limit": "Nominal geometry only. Wire outerdiameter, end packing, crossover, layer placement, tape, actualwindowminimum and tolerances must be confirmed.0.1mm axial margin is small and is not proof of supplier manufacturability.",
+    "mean_wire_length_m_excluding_leads": 3.57,
+    "core_Ae_mm2": 12.1,
+    "core_le_mm": 26.1,
+    "core_Ve_mm3": 315,
+    "flux_screen_at1p05mH_0p60A_T": 0.347107438,
+    "flux_screen_limit": "Using nominalAe; this is a warning for saturation review, not a guaranteed operating point or thermal qualification. Actualminimumcrosssection andhot materialB-H must be reviewed."
+  },
+  "calculated_winding_screen_not_measurement": {
+    "turns": 180,
+    "finished_wire_OD_max_mm": 0.225,
+    "turns_per_full_layer": 27,
+    "layers": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      18
+    ],
+    "axial_occupation_mm": 6.075,
+    "axial_remaining_before_tolerances_mm": 0.5249999999999995,
+    "seven_layers_radial_mm": 1.575,
+    "radial_remaining_before_tape_tolerances_mm": 0.27348484848484844,
+    "wire_envelope_fill_percent": 74.69262295081968,
+    "mean_wire_length_m_excluding_leads": 4.284000000000001,
+    "minimum_cross_section_mm2": 10.6,
+    "flux_at_1p05mH_0p6A_T": 0.330188679245283,
+    "flux_at_1p05mH_1p24A_T": 0.6823899371069182,
+    "limits": "Nominal packing only. Gap/fringing, winding tape, actual minimum window and supplier manufacturing not confirmed. Fault saturation at maximum IC limit unresolved; no safe fault qualification."
+  }
+}

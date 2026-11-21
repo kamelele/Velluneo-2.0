@@ -1,0 +1,706 @@
+{
+  "actor": "/root/sc09_reality, bounded research implementer; not independent reviewer of this new research",
+  "kind": "Proposed laboratory functional-spacing and thermal CAD inputs; not certified insulation coordination",
+  "input_graph": {
+    "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\intended-connectivity.A1.json",
+    "sha256": "b0803bf46f12463e8710831891f12a443556b816ee8683307a0def57d6702799"
+  },
+  "scope": {
+    "input_Vac": [
+      207,
+      253
+    ],
+    "frequency_Hz": 50,
+    "lab_ambient_C": [
+      0,
+      40
+    ],
+    "prototype_only": true,
+    "mains_referenced_nets": [
+      "AC_L",
+      "AC_N",
+      "AC_FUSED",
+      "BUS_RECT",
+      "DC_RETURN",
+      "BUS_FILTERED",
+      "BP",
+      "M",
+      "FB_INDUCTOR",
+      "SW_SOURCE",
+      "LED_PLUS"
+    ],
+    "max_module_budget_mm": [
+      50,
+      25,
+      20
+    ],
+    "all_new_measurements": false
+  },
+  "classification_and_limits": [
+    "No net is SELV. Output voltage does not remove shock risk. Functional spacing between live nets is different from protective insulation to touchable surfaces.",
+    "Dry indoor laboratory, no condensation or conductive contamination, altitude<=2000m are explicit proposed operating restrictions. Board clean after assembly; no assumed conformal coating.",
+    "Do not claim PD1 simply because board is indoors. Use PD2 as a review assumption and require actual microenvironment/CTI confirmation before normative claims. FR4 is not an exact CTI/material-group declaration.",
+    "All numeric spacings below are engineering CAD targets for bounded lab prototype. They are NOT extracted minimum distances from an applicable lamp standard; no access to full current normative tables.",
+    "Soldermask receives zero credit as protective or creepage-reducing insulation. No slots, coating or 1.6mm FR4 assigned a protective safety rating without actual system evidence.",
+    "400V normal waveform screen does not establish any IEC surge level. MOV clamping, pulse currents, inductor ringing and device peak voltages need actual tests before declaring operation.",
+    "Prototype may be drawn/assembled unpowered using this research only after owner/toolkit stage decisions. No manufacture, energizing or compliance approval follows from this report."
+  ],
+  "pair_matrix": [
+    {
+      "net_a": "AC_L",
+      "net_b": "AC_N",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "AC_FUSED",
+      "category": "FUSIBLE_PATH",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 2.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal differential only RF1 drop, but across an opened RF1 the mains may appear. Do not bridge or bypass the fusible path with close copper; retain400V screen."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "BUS_RECT",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "DC_RETURN",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "BUS_FILTERED",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "BP",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "M",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "FB_INDUCTOR",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "SW_SOURCE",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_L",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "AC_FUSED",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "BUS_RECT",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "DC_RETURN",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "BUS_FILTERED",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "BP",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "M",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "FB_INDUCTOR",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "SW_SOURCE",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_N",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "BUS_RECT",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "DC_RETURN",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "BUS_FILTERED",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "BP",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "M",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "FB_INDUCTOR",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "SW_SOURCE",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "AC_FUSED",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_RECT",
+      "net_b": "DC_RETURN",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_RECT",
+      "net_b": "BUS_FILTERED",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Differential across EMI L1 nominally small; input LC ringing/transient difference is uncharacterized. Retain HVscreen until waveform evidence supports a smaller class."
+    },
+    {
+      "net_a": "BUS_RECT",
+      "net_b": "BP",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_RECT",
+      "net_b": "M",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_RECT",
+      "net_b": "FB_INDUCTOR",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_RECT",
+      "net_b": "SW_SOURCE",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_RECT",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "DC_RETURN",
+      "net_b": "BUS_FILTERED",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "DC_RETURN",
+      "net_b": "BP",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "DC_RETURN",
+      "net_b": "M",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "DC_RETURN",
+      "net_b": "FB_INDUCTOR",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "DC_RETURN",
+      "net_b": "SW_SOURCE",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "DC_RETURN",
+      "net_b": "LED_PLUS",
+      "category": "OUTPUT_DIFFERENTIAL",
+      "functional_repetitive_peak_screen_V": 90.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 1.0,
+      "basis": "90V proposed dynamic COUT target;100V capacitor. Actual startup/open-output waveform unmeasured; no SELV or touch barrier."
+    },
+    {
+      "net_a": "BUS_FILTERED",
+      "net_b": "BP",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_FILTERED",
+      "net_b": "M",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_FILTERED",
+      "net_b": "FB_INDUCTOR",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_FILTERED",
+      "net_b": "SW_SOURCE",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BUS_FILTERED",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "BP",
+      "net_b": "M",
+      "category": "LOCAL_BIAS",
+      "functional_repetitive_peak_screen_V": 20.0,
+      "route_clearance_target_mm": 0.25,
+      "surface_creepage_target_mm": 0.25,
+      "basis": "Locally referenced BP/M/FB versus SOURCE; healthy IC clamps M to SOURCE during on-time.20V conservative screen only, all remain mains-referenced. IC short faults not included."
+    },
+    {
+      "net_a": "BP",
+      "net_b": "FB_INDUCTOR",
+      "category": "LOCAL_BIAS",
+      "functional_repetitive_peak_screen_V": 20.0,
+      "route_clearance_target_mm": 0.25,
+      "surface_creepage_target_mm": 0.25,
+      "basis": "Locally referenced BP/M/FB versus SOURCE; healthy IC clamps M to SOURCE during on-time.20V conservative screen only, all remain mains-referenced. IC short faults not included."
+    },
+    {
+      "net_a": "BP",
+      "net_b": "SW_SOURCE",
+      "category": "LOCAL_BIAS",
+      "functional_repetitive_peak_screen_V": 20.0,
+      "route_clearance_target_mm": 0.25,
+      "surface_creepage_target_mm": 0.25,
+      "basis": "Locally referenced BP/M/FB versus SOURCE; healthy IC clamps M to SOURCE during on-time.20V conservative screen only, all remain mains-referenced. IC short faults not included."
+    },
+    {
+      "net_a": "BP",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "M",
+      "net_b": "FB_INDUCTOR",
+      "category": "LOCAL_BIAS",
+      "functional_repetitive_peak_screen_V": 20.0,
+      "route_clearance_target_mm": 0.25,
+      "surface_creepage_target_mm": 0.25,
+      "basis": "Locally referenced BP/M/FB versus SOURCE; healthy IC clamps M to SOURCE during on-time.20V conservative screen only, all remain mains-referenced. IC short faults not included."
+    },
+    {
+      "net_a": "M",
+      "net_b": "SW_SOURCE",
+      "category": "LOCAL_BIAS",
+      "functional_repetitive_peak_screen_V": 20.0,
+      "route_clearance_target_mm": 0.25,
+      "surface_creepage_target_mm": 0.25,
+      "basis": "Locally referenced BP/M/FB versus SOURCE; healthy IC clamps M to SOURCE during on-time.20V conservative screen only, all remain mains-referenced. IC short faults not included."
+    },
+    {
+      "net_a": "M",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "FB_INDUCTOR",
+      "net_b": "SW_SOURCE",
+      "category": "LOCAL_BIAS",
+      "functional_repetitive_peak_screen_V": 20.0,
+      "route_clearance_target_mm": 0.25,
+      "surface_creepage_target_mm": 0.25,
+      "basis": "Locally referenced BP/M/FB versus SOURCE; healthy IC clamps M to SOURCE during on-time.20V conservative screen only, all remain mains-referenced. IC short faults not included."
+    },
+    {
+      "net_a": "FB_INDUCTOR",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    },
+    {
+      "net_a": "SW_SOURCE",
+      "net_b": "LED_PLUS",
+      "category": "HV_FUNCTIONAL",
+      "functional_repetitive_peak_screen_V": 400.0,
+      "route_clearance_target_mm": 1.0,
+      "surface_creepage_target_mm": 2.0,
+      "basis": "Normal 253Vac rectified peak357.8V plus declared engineering reserve; switching-waveform/ringing not measured.400V is a design-screen ceiling, not a surge withstand qualification."
+    }
+  ],
+  "package_local_conflicts": [
+    {
+      "ref": "U1",
+      "pins": [
+        "3",
+        "4"
+      ],
+      "nets": [
+        "FB_INDUCTOR",
+        "BUS_FILTERED"
+      ],
+      "issue": "SO8pitch1.27mm, typical padwidth0.6mm leaves0.67mm air/surface distance. This cannot meet the1mm/2mm HVfield targets at package exit. Pin3 carries switched high potential; not a harmless low-voltage neighbor of drain.",
+      "allowed_auto_exception": false,
+      "required_action": "Measure actual land/pin/solder distances. Keep only component landing conductors in local neck. Explicit scoped manufacturer-reference/functional abnormal-risk review required for this location; do not silently lower full-board matrix or label a .67mmgap2mm. If acceptance unavailable, change package/control architecture rather than fabricate a standards PASS."
+    },
+    {
+      "ref": "BR1",
+      "issue": "MBS bridge neighboring pads may meet1mm clearance but fall below2mm creepage depending on exact geometry; package body/underbody path also matters.",
+      "allowed_auto_exception": false,
+      "required_action": "Measure exact MB10S13 lands and component geometry; separately flag any short path and review analogous to U1. Manufacturer part rating does not certify our PCB footprint."
+    },
+    {
+      "ref": "All TH parts",
+      "issue": "Bare clipped leads/solder menisci reduce distances compared with nominal pad centers; RV1 leads are staggered.",
+      "allowed_auto_exception": false,
+      "required_action": "Use finalbody/lead/hole/pad/soldergeometry, and inspect 3Dair and actual2Dsurfacepaths. No creepage claim from DRCclearance alone."
+    }
+  ],
+  "spatial_block_cards": [
+    {
+      "id": "BIAS",
+      "parts": [
+        "U1",
+        "C5",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "constraints": "C5 pad-to-U1BP/SOURCE copper length<=3mm each,target<=2mm; no vias in preferred capacitor loop. R5/R6 Kelvin sense tap directly from resistor terminals to U1FB/SOURCE, eachsenselead<=3mm. No loadcurrent shared in sense stub. R4Mlead<=3mm. These are engineering layout targets from source guidance, not manufacturer specified numeric limits."
+    },
+    {
+      "id": "COMMUTATION",
+      "parts": [
+        "C4",
+        "U1",
+        "R5",
+        "R6",
+        "D1"
+      ],
+      "constraints": "Put C4return/D1anode together; short C4positive-to-U1D path and U1S/sense/D1cathode path. Enclosed projected copper loop target<=100mm2 with longest important interconnect<=10mm, measured actualgeometry. Review both layers/return continuity; looparea calculation not substitute for ringingmeasurement."
+    },
+    {
+      "id": "FREEWHEEL",
+      "parts": [
+        "D1",
+        "T1",
+        "C6"
+      ],
+      "constraints": "D1anode to C6negative direct, T1betweenD1cathode and C6positive; target projectedloop<=180mm2. Output positive/return pairs depart together. No FB/M traces through T1fringingfield."
+    },
+    {
+      "id": "INPUT_FILTER",
+      "parts": [
+        "J1",
+        "RF1",
+        "RV1",
+        "BR1",
+        "C1",
+        "L1"
+      ],
+      "constraints": "Group atinputend. Keep C1/L1 and incoming AC away from SW_SOURCE/FB_INDUCTOR/T1/D1; target>=3mm body/copperfunctionalEMI separation from switchisland wherepossible, with no broad switchcopper belowfilter. This is couplingtarget, not blanket3mm electrical isolation."
+    },
+    {
+      "id": "HEAT",
+      "parts": [
+        "U1",
+        "D1",
+        "C6",
+        "R7",
+        "RF1",
+        "T1",
+        "L1"
+      ],
+      "constraints": "Target SW_SOURCE thermalisland actualtotaltop+bottom copper>=150mm2, with>=100mm2 contiguousbottom island iffit. Keep copperclosed aroundcriticalcurrent return, no exported floatingantenna. One or more SOURCEthermalvias mayjoin same net if not violating localHVspacing. D1total anode+cathode spreading coppertarget>=30mm2; it does not share a net with SOURCEnor can those islands be joined for cooling. These areas are proposedplanningtargets, not validated thermalresistances."
+    },
+    {
+      "id": "C6_MECHANICAL",
+      "parts": [
+        "C6"
+      ],
+      "constraints": "HorizontalbodyØ13x22max plusleadformingreserved.5mmventextension clear of other bodies/adhesive as existingproposal; exactventgeometrymanualreview. Topsurface copper/lead keepout beneath can unless actualratedsolidspacer preventscontact; sleeve alone not protective insulation. Bottomlayerfunctional coppermaypass underFR4only afterclearance/stressreview. Body-to-RF1target>=3mm,body-to-R7/T1>=2mm; replace old10mmblanket heatgap with actualthermalmeasurement."
+    },
+    {
+      "id": "BOUNDARY",
+      "parts": [
+        "J1",
+        "J2"
+      ],
+      "constraints": "Boardedge copper setback>=1mm engineeringassemblyrule, not shockbarrier. Output wire pads separate1mm differentialminimum, all treated live. No offboardaccessiblemetal/componentcan/fixtureground barrier is approved by this matrix. Lab containment and finalprotectivetouch construction require separateactualdesign."
+    }
+  ],
+  "sources": [
+    {
+      "id": "LYT1",
+      "url": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "file": "../rdr-research/lytswitch-1_family_datasheet.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "basis": "RevBJuly2016; PCB-layout guidance and SO8 pinout/thermal conditions. Source and sense nodes switch; local bias is not isolated."
+    },
+    {
+      "id": "AN67",
+      "url": "https://www.power.com/sites/default/files/documents/an67.pdf",
+      "file": "../rdr-research/an67.pdf",
+      "sha256": "53069f49b53917459c150a5f8afc2073499a08b3adce4588bcd2e1869d2d68db",
+      "basis": "RevAJune2016 layout sectionp9: local feedback/decoupling, compact commutation loops, input filter away from switching field."
+    },
+    {
+      "id": "RDR464",
+      "url": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "file": "../sources/rdr464.pdf",
+      "sha256": "c71ee568ae0c797061deebce5aa8e3d65cc7394d6da323566a3cf0ddc80a1f6d",
+      "basis": "Original geometry/layout/thermal measurements, not our board qualification."
+    },
+    {
+      "id": "TI-SLUAAR5",
+      "url": "https://www.ti.com/lit/wp/sluaar5/sluaar5.pdf",
+      "basis": "Manufacturer explanation of functional versus protective insulation and voltage/environment dependence. Motor-drive example is not a lamp spacing approval."
+    },
+    {
+      "id": "TI-SDAA268",
+      "url": "https://www.ti.com/lit/an/sdaa268/sdaa268.pdf",
+      "basis": "June2026 manufacturer note: material/altitude/pollution and component versus PCB paths; slots alone do not change component geometry."
+    },
+    {
+      "id": "IEC60664-1",
+      "url": "https://webstore.iec.ch/en/publication/59671",
+      "basis": "Catalog confirms2020+AMD1:2025, ≤2000m baseline, frequency scopeup30kHz. Full normative tables not accessed; no clause minimum asserted."
+    },
+    {
+      "id": "IEC60664-4",
+      "url": "https://webstore.iec.ch/en/publication/2804",
+      "basis": "Catalog high-frequency stress scopeabove30kHz; switched stress cannot be fully qualified from50Hz table alone."
+    },
+    {
+      "id": "IEC61347-2-13",
+      "url": "https://webstore.iec.ch/en/publication/64713",
+      "basis": "2024edition current controlgear-specific candidate; applicability to this replaceable integrated-module product requires actual classification."
+    },
+    {
+      "id": "IEC62560",
+      "url": "https://webstore.iec.ch/en/publication/7199",
+      "basis": "Self-ballasted lamp safety candidate, not automatic classification of this lab PCB."
+    },
+    {
+      "id": "VR25",
+      "url": "https://www.vishay.com/docs/28907/vr25vr37vr68.pdf",
+      "file": "../rdr-research/VR25.pdf",
+      "sha256": "eaffa53e04b875c64a4e5dd6c3dafa976d0fd667822632e6b9c8e01fbdaa3d7b",
+      "basis": "R7 thermal resistance140K/W,0.25W70C, derating towards155C; voltage rating does not remove power limit."
+    }
+  ]
+}

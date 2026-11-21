@@ -1,0 +1,49 @@
+{
+  "revision": "SC09-routed-lab-50x32",
+  "status": "Engineering placement review, NOT an approved Toolkit spatial contract",
+  "outline_mm": [
+    50,
+    32
+  ],
+  "board_thickness_mm": 1.6,
+  "front_contract_max_mm": 15,
+  "bottom_contract_max_mm": 2.9,
+  "overall_contract_max_mm": 19.5,
+  "original_target_mm": [
+    50,
+    25,
+    20
+  ],
+  "size_deviation": "Width is 7 mm greater than the earlier proposed maximum. Ordinary bulb cavity fit is NOT demonstrated; do not claim target met.",
+  "C6": {
+    "body_projection_relative_mm": [
+      6.5,
+      0.25,
+      28.5,
+      13.25
+    ],
+    "vent_reserve_mm": 5,
+    "front_no_copper_projection_relative_mm": [
+      6.5,
+      0.25,
+      33.5,
+      13.25
+    ],
+    "interpretation": "Back copper behind intact FR4 is allowed only as documented engineering interpretation. No sleeve insulation credit. Verify formed leads, support and vent volume physically."
+  },
+  "power_loop": [
+    "C4.1",
+    "U1.4",
+    "U1 SOURCE",
+    "R5/R6",
+    "T1.8",
+    "D1.1",
+    "D1.2",
+    "C4.2"
+  ],
+  "kelvin": "Separate R5/R6 sense branch to U1.3; power-current branch to T1/D1 remains separate until sense resistor junction. See critical-routing.json.",
+  "returns": "C5 BP/SOURCE local bypass, SOURCE connected thermal planes and dedicated through via, D1 anode/DC_RETURN planes. No SELV return.",
+  "spacing": "All 55 net pairs independently screened; finite SO8/bridge/SMA package-land concessions explicitly bounded and not IEC insulation qualification.",
+  "assembly": "Manual prototype; two bare-wire interfaces, custom formed R7/RF1/C6 and custom T1 require actual jig/sample fit verification.",
+  "formal_spatial_gate": "hardware.product.spatial_file remains null. No fabricated approval digest or unsupported chamfered-outline contract."
+}

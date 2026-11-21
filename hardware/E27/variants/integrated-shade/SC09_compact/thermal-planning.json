@@ -1,0 +1,133 @@
+{
+  "actor": "/root/sc09_reality, bounded research implementer; not independent reviewer of this new research",
+  "kind": "Own conditional thermal arithmetic and proposed layout/bringup limits; not measurement",
+  "total_driver_loss_planning_W": [
+    0.9,
+    1.7
+  ],
+  "not_additive_guarantee": "Updated planning allocation after custom 180-turn T1. Not a proven upper bound; RF1 RMS input, magnetics core loss, switching loss and capacitor ripple require measurement. Reference-board efficiency is not inherited.",
+  "component_screens": [
+    {
+      "ref": "RF1",
+      "screen": "IinRMS60mA planning,10ohm+5%tol+2%TCR100K =>0.03856W normal; inputpulse/fusingnotcovered",
+      "normal_power_W": 0.038556,
+      "local_body_target_C": 100,
+      "placement": "3mm bodygapfromC6target; no heatblanket10mm or2Wratednormaldissipationassumption."
+    },
+    {
+      "ref": "L1",
+      "screen": "IinRMS60mA,DCR6.72ohm plus40%copperhotreserve =>0.03387W DCcopper; core/ripple notcovered",
+      "normal_power_W": 0.0338688,
+      "local_body_target_C": 90,
+      "placement": "Atinput,keepawayfromswitchingisland; no saturation/coretemp guarantee."
+    },
+    {
+      "ref": "T1",
+      "screen": "Healthy equivalent triangularcurrent Ipk~0.4867A, fulltriangle Irms~0.2810A. Actualenvelope/line modulation/hotDCR/coreloss mustbe measured; custom part DCR notbound. Copperlossformula0.07897*Rdc_hot_W.",
+      "triangle_Ipk_A": 0.4867324738114424,
+      "triangle_Irms_A": 0.28101512477836876,
+      "copper_coefficient_A2": 0.07896950035420217,
+      "local_body_target_C": 90,
+      "proposed_DCR_max_25C_ohm": 2.7,
+      "proposed_DCR_max_100C_ohm": 3.6,
+      "proposed_core_loss_budget_W": 0.4,
+      "copper_screen_at_300mA_W": 0.324,
+      "total_planning_budget_W": 0.724,
+      "qualification": "Supplier-built custom 180-turn AWG32 coil is not measured; saturation during IC maximum fault current remains unresolved."
+    },
+    {
+      "ref": "R5_R6",
+      "screen": "FulltriangularIrms screenacross0.57321ohm =>~0.0453Wtotal. ActualMOSFETonintervalmakeshealthyaverage smaller; no startup/faultpowerguarantee.",
+      "normal_power_W": 0.045266120064464156,
+      "local_body_target_C": 100
+    },
+    {
+      "ref": "D1",
+      "screen": "Conservativewhole135mA throughdiode at1.7V =>0.230W conductionplanning, not exactwaveform. Addreverse-recovery/switchloss separately.",
+      "normal_power_planning_W": 0.22983999999999996,
+      "local_case_target_C": 100,
+      "junction_design_target_C": 125,
+      "placement": ">=30mm2combinedpadcopper; actualTJestimateusingdatasheet30K/Wjunctiontoterminalwithcase/sourceappropriate measurement, not ambient."
+    },
+    {
+      "ref": "U1",
+      "screen": "Planningallocation0.15..0.35W tobeclosed; measureddrain/sourcewaveformandlossbudgetneeded. DatasheetRDSonmax5.2ohm25C/7.8ohm100C; publishedthetaJA100/80K/Wrequires232/645mm2of2ozcopper,notour1oz150mm2.",
+      "power_allocation_W": [
+        0.15,
+        0.35
+      ],
+      "source_pin_target_C": 100,
+      "junction_design_target_C": 120,
+      "placement": "SOURCEisland>=150mm2planningonly. PublishedthetaJC30K/W measurednearSOURCEpin givesconditionaljunctionestimate,not validatedsamecaseambientmodel."
+    },
+    {
+      "ref": "R7",
+      "screen": "Normal253Vconservativecyclebound~0.113W frompriorresearch;140K/W=>~15.8Kfilm-toambientriseunderthatmodel;0.25Wat70Cderateslinearlytozero155C.",
+      "normal_power_upper_screen_W": 0.11321,
+      "power_allowable_at100C_W": 0.16176470588235295,
+      "local_ambient_max_proposal_C": 100,
+      "body_target_C": 125,
+      "placement": ">=2mm bodygapfromC6target; airflowactualmeasurement."
+    },
+    {
+      "ref": "R8_R9",
+      "screen": "60Vpairloss0.10588W,68Vpair0.136Wnominal;90Vworstdeclaredresistancescreen~0.12276Wperpart.0.25Wheadline nothotrating.",
+      "nominal_pair60V_W": 0.10588235294117647,
+      "nominal_pair68V_W": 0.136,
+      "per_part90V_screen_W": 0.12276385635646696,
+      "body_target_C": 100,
+      "placement": "Check exactYageoderatingagainstmeasuredlocaltemperatureandOVPhiccupduty."
+    },
+    {
+      "ref": "C6",
+      "screen": "ActualESR/ripplecurrentnotclosed;temperatureofcanandventzoneimportant.105Crating/lifetimecatalogisnotactualbulblife.",
+      "case_design_target_C": 75,
+      "lab_characterization_stop_case_C": 85,
+      "placement": "5mmventreserve; no heaterdirectcontact; lifeestimatecannotbeclaimedfrom2xper10Cwithoutactualmanufacturerconditions."
+    },
+    {
+      "ref": "C1_C4_C5",
+      "screen": "Check current/ripple/dVdt; C4deratesabove85C. C5effectiveC/BPdrooptemperaturemustbeverified.",
+      "case_design_target_C": 85,
+      "placement": "C4closecommutationloop,C1closefilter,C5directU1BP/S."
+    }
+  ],
+  "measurement_plan": [
+    "No energizedworkis authorized bythisreport. Beforetest aqualifiedpersondefinesfullycontainedfixture, correctlyrateddifferentialprobes/currentmeasurement,currentlimitedsourceandisolationstrategy. Isolationtransformerdoesnotmaketheoutputsafe.",
+    "Measureat207/230/253VAC50Hz,ambient0/25/40C,repeatedcold/hotrestartandopen/shortoutputwithcontrolledfaultfixture. Logsteady-statePin,Pout,currentavg/peak,COUTpeak,VDSpeak,BPmin/hotL,allnamedparttemps. Includeuncertaintyandprobe loading.",
+    "StopifCOUT>90V, VDSapproaches725VabsoluteorD1reverse600Vabsolute, sustainedinputcurrentabove60mAplanningwithoutreview, anytemperaturelimitabove, abnormalnoise/smoke/visiblearcing orunexpectedcurrentgrowth. Numerical400Vnormalnetstressscreenalsorequiresreviewifwaveformexceedsit; do not reinterpretasguaranteedtransientlimit.",
+    "Biasmax/minthresholds andhotLareunproven; failing135mAregulationor>specifiedoptical/currentinterface meansredesign,notautomaticresistortrimmingwithoutnewmapreview.",
+    "Closedbulbthermalpathisaseparatelaterqualification. The0..40Clabtargetdoesnotjustifyarbitrarysealedfixtureoperation."
+  ],
+  "sources": [
+    {
+      "id": "LYT1",
+      "url": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "file": "../rdr-research/lytswitch-1_family_datasheet.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "basis": "RevBJuly2016; PCB-layout guidance and SO8 pinout/thermal conditions. Source and sense nodes switch; local bias is not isolated."
+    },
+    {
+      "id": "AN67",
+      "url": "https://www.power.com/sites/default/files/documents/an67.pdf",
+      "file": "../rdr-research/an67.pdf",
+      "sha256": "53069f49b53917459c150a5f8afc2073499a08b3adce4588bcd2e1869d2d68db",
+      "basis": "RevAJune2016 layout sectionp9: local feedback/decoupling, compact commutation loops, input filter away from switching field."
+    },
+    {
+      "id": "RDR464",
+      "url": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "file": "../sources/rdr464.pdf",
+      "sha256": "c71ee568ae0c797061deebce5aa8e3d65cc7394d6da323566a3cf0ddc80a1f6d",
+      "basis": "Original geometry/layout/thermal measurements, not our board qualification."
+    },
+    {
+      "id": "VR25",
+      "url": "https://www.vishay.com/docs/28907/vr25vr37vr68.pdf",
+      "file": "../rdr-research/VR25.pdf",
+      "sha256": "eaffa53e04b875c64a4e5dd6c3dafa976d0fd667822632e6b9c8e01fbdaa3d7b",
+      "basis": "R7 thermal resistance140K/W,0.25W70C, derating towards155C; voltage rating does not remove power limit."
+    }
+  ],
+  "all_new_measurements_performed": false
+}

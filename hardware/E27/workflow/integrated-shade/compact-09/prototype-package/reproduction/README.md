@@ -1,0 +1,5 @@
+Authoring scripts are retained as provenance and depend on the original workspace layout; they are not standalone CAD generators. SC09_KiCad.zip contains the exact editable source and local libraries. Export with KiCad10.0.6 using native pcb export gerbers (F.Cu,B.Cu,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,Edge.Cuts), pcb export drill (absolute origin, mm, separate PTH/NPTH), and pcb drc --schematic-parity.
+
+The read-only validator accepts --project EXTRACTED_SOURCE --board EXTRACTED_SOURCE/SC09_compact.kicad_pcb --matrix validation/spacing-matrix.json --exceptions validation/package-land-assessment.json --report report.json. Run with matching KiCad10.0.6 pcbnew Python. Omitting --exceptions runs the separate strict screen; it is expected to fail intrinsic package-land distances and uses its strict edge target.
+
+Full source package includes experimental per-part STEP files for source-hash completeness. Their interchange is explicitly unqualified. The empty-component native STEP assembly was detected and rejected; use the complete WRL visual model and KiCad sources.

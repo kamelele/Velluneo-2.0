@@ -1,0 +1,154 @@
+{
+  "role": "Overengineering Reviewer",
+  "actor": "/root/final_simplicity",
+  "independence": "Distinct read-only review context; no CAD/library/document implementation by this reviewer. Only this report is written.",
+  "input_manifest": "hardware/E27/workflow/integrated-shade/compact-09/final-review-inputs.json",
+  "input_manifest_sha256": "5342e957afa1a47a77ebbf832beb79f5bea8f059a35b2efe7a43c06378828556",
+  "verified_manifest_file_count": 168,
+  "manifest_mismatches": [],
+  "board_sha256": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+  "schematic_sha256": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+  "review_scope": "Complete routed manufacturing-CANDIDATE laboratory prototype documentation; not full product release, assembled-unit qualification, order authorization or powered tests.",
+  "coverage": [
+    {
+      "area": "Requirements and interfaces",
+      "inspected": [
+        "owner-current-brief.json",
+        "requirements.json",
+        "driver-led-interface.proposed.json",
+        "prototype-package/README.md"
+      ],
+      "assessment": "About800lm230VAC,4000KCRI80,no dimming,mostlybaseelectronics,capacitorinbase,manualprototype0..40C. Mainsreference andnohotplug retained. Productobligations not replaced by CAD completion."
+    },
+    {
+      "area": "Component and rail simplicity",
+      "inspected": [
+        "bom-build.json",
+        "SC09_schematic.pdf",
+        "reference/alternatives.json"
+      ],
+      "assessment": "17 electrical parts plus2barewire interfaces; one nonisolated buck rail; no extra firmware,dimming,isolatedsupply or PhotoMOS chain. IC integrates the switching/control/protection functions; inputMOV/fusibleresistor/filter, localbypass, regulation/OVP and outputbleeders each have a clear purpose."
+    },
+    {
+      "area": "Physical/layout implementation",
+      "inspected": [
+        "spatial-review.json",
+        "checks/native-inventory.json",
+        "views/SC09_przod_3D.png"
+      ],
+      "assessment": "Two copper layers,170straightsegments,10throughvias,.3/.4/.6mmtracks,17models,all19referencespopulated. C6horizontal/verticalRF1andR7/customT1 supportcompactness but transfer risk to forming/supplierfit. SeparateKelvin and connected thermalcopper are purposeful,notgratuitousfeatures."
+    },
+    {
+      "area": "Reuse and substitutions",
+      "inspected": [
+        "T1-custom-contract.json",
+        "bom-build.json",
+        "prototype-package/OPEN_ITEMS.md"
+      ],
+      "assessment": "RDR-derived electrical block is reused with explicit changedcoil/cap/filter/current values. Reference efficiency/EMI/surge is not asserted for SC09. No unverified pin-compatible or magnetics substitution is approved."
+    },
+    {
+      "area": "Procurement, assembly and maintenance",
+      "inspected": [
+        "prototype-package/README.md",
+        "T1-custom-contract.json",
+        "checks/3D-export-status.json"
+      ],
+      "assessment": "Manual assembly is appropriately selected for a mixedTHT/SMDprototype. NRNDIC,customcoil andthreeformedpart contracts remain real supply/buildability costs. SourceWRL/nativeCAD and explicitSTEPinteroperability limitation are appropriate; a render cannot close fit or electrical qualification."
+    }
+  ],
+  "findings": [
+    {
+      "id": "SIMPLE-01",
+      "severity": "major",
+      "scope": "Original compact-product/assembled-unit release; not a new defect in truthful candidate-file publication",
+      "requirement_ids": [
+        "C_SIZE",
+        "C_PACKING"
+      ],
+      "objects": [
+        "PCB outline",
+        "C6",
+        "T1",
+        "RF1",
+        "R7"
+      ],
+      "finding": "Actual50x32mm width exceeds the previously proposed50x25mm limit by7mm. This is explicitly disclosed in current packet, but ordinary-bulb fit and originalsizeacceptance are not achieved.",
+      "disposition": "Retain open with ownerKamil and root designer. No recommendation to remove spacing/protection merely to recover7mm. Further compact redesign/cavity acceptance is a separate engineering iteration, not an assumed completion."
+    },
+    {
+      "id": "SIMPLE-02",
+      "severity": "major",
+      "scope": "Assembled-unit/procurement and later powered-test release; not blocker to publishing candidate files",
+      "requirement_ids": [
+        "C_PARTS",
+        "C_PACKING",
+        "C_PROTECTION",
+        "C_THERMAL"
+      ],
+      "objects": [
+        "U1 LYT1603D-TL",
+        "customT1",
+        "RF1/R7/C6formedleads"
+      ],
+      "finding": "Low part count does not equal low ongoing manufacturing burden: selectedICisNRND,coil iscustom180T/AWG32, and compactfit relies on handforming. Finishedcoil stock/quote and samples are not verified.",
+      "disposition": "Already explicit in OPEN_ITEMS. Suppliercoil feasibility/gauge and actualforming samples needed before assembled acceptance. Retain20Sload/current/OVP/thermal/faultrequirements on anyfuturepartsreselection."
+    }
+  ],
+  "simplification_assessment": [
+    {
+      "objects": [
+        "RV1",
+        "RF1",
+        "C1/L1/C4",
+        "C5"
+      ],
+      "proposal": "Retain",
+      "benefit": "Preserves intended surge/fault coordination,EMIfilter/localbuscharge andICbypass functions.",
+      "verification": "Physicalsurge/EMI/faultqualification stillrequired; no part removals recommended."
+    },
+    {
+      "objects": [
+        "R8",
+        "R9"
+      ],
+      "proposal": "Retain both bleeders",
+      "benefit": "Oneopen-resistor discharge model is an intentional robustness requirement. Droppingone wouldinvalidate thatmodel.",
+      "verification": "Actualdischarge andhotderating must be measured."
+    },
+    {
+      "objects": [
+        "R5",
+        "R6"
+      ],
+      "proposal": "Retain current reviewedparallelpair for thisprototype",
+      "benefit": "Avoids changingapprovednetintent/currentsetpoint for negligibleonepart saving.",
+      "verification": "Anyfuture singleprecisionresistor option needs exactMPN,power/TCR,nominalcurrent andfault/currentcorner rechecks, not assumed equivalence."
+    },
+    {
+      "objects": [
+        "C6",
+        "T1",
+        "U1"
+      ],
+      "proposal": "Optional later production redesign only after current characterization",
+      "benefit": "A current-productionIC/catalogmagnetics and alternate outputcap geometry could reduce sourcing/assembly burden and possiblywidth. No exactequivalent is claimed now.",
+      "preserved_conditions": "230VAC207\u2013253,approximately135mA/52\u201368V,noisolationclaim,nohotplug,OVP/bleed,faultsurgeandthermalbasis",
+      "verification": "Exactsource/data,completecircuitandintent update,layoutchecks andlaboratorycharacterization; not required to publish this explicitly conditional candidate."
+    }
+  ],
+  "recommendation": "ready_for_human_review_of_candidate_packet_only",
+  "full_product_release": "NOT ready; knownformal/size/sourcing/physicalqualification gates remain. Reviewer does not authorize orders or poweredtests.",
+  "new_candidate_file_defects": [],
+  "final_retained_scope_addendum": {
+    "manifest_sha256": "0110503251b67f8165513668c0487cb97e12d576e20da0da33ea6eed0ddd6566",
+    "verified_file_count": 169,
+    "manifest_mismatches": [],
+    "portable_zip_crc_error": null,
+    "per_part_experimental_STEP_count": 17,
+    "board_sha256": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+    "schematic_sha256": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+    "delta_review": "Portable sourceZIP now includes17 declared experimental per-part STEP files with explicit interoperability warning; no empty assembly STEP is delivered. ReproductionREADME distinguishes historical authoring from portable validation. This improves package consistency without changing CAD, circuit complexity, sourcing, thermal assumptions or review recommendation.",
+    "recommendation_retained": true
+  }
+}

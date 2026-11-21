@@ -56,7 +56,9 @@
         }
       ],
       "method": "review",
-      "evidence_ids": []
+      "evidence_ids": [
+        "EV-OWNER-ARCH"
+      ]
     },
     {
       "id": "C_SUPPLY",
@@ -400,8 +402,11 @@
       "owner": "Kamil",
       "question": "Accept thisexactcompactprototypearchitecture/mapafteractualindependentreview; activeNRNDICandcustominductorareexplicitrisks.",
       "blocks_stage": "specification",
-      "status": "open",
-      "evidence_ids": []
+      "status": "resolved",
+      "evidence_ids": [
+        "EV-OWNER-ARCH"
+      ],
+      "resolution": "Kamil actual answer approves SC09-A proposal and exact map at4434b04; owner-SC09-direction-map-approval.json retains scope and later gates."
     },
     {
       "id": "OPEN_CAVITY",
@@ -470,7 +475,7 @@
       "kind": "review",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
       "artifact": "owner-current-brief.json",
       "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0",
       "inputs": [
@@ -486,7 +491,7 @@
       "kind": "design",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
       "artifact": "driver-led-interface.proposed.json",
       "sha256": "e55ac49af515bb460264768d8683a6f073f59ca70b4e28db915a7469d3e69df6",
       "inputs": [
@@ -502,7 +507,7 @@
       "kind": "design",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
       "artifact": "reference/LED-primary-research.json",
       "sha256": "cb6055d0e7dde703bd02d0c3197307b9c0831b32a4a759c1cdcccf80742a40b0",
       "inputs": [
@@ -518,7 +523,7 @@
       "kind": "design",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
       "artifact": "mechanical-budget.proposed.json",
       "sha256": "cbce063e385780520e87a8448fc87a60a42f8ed8f27a9cd7b99feba81b4d843a",
       "inputs": [
@@ -534,7 +539,7 @@
       "kind": "review",
       "result": "pass",
       "verified_by": "Codex root, actual document review/design author",
-      "intent_digest": "649ce74185f02787e0919c3192ec8bd04e46b74b0aecbf9e07620c7cb917cb7a",
+      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf",
       "artifact": "owner-process-line-decision.json",
       "sha256": "430648e1b471d9aa3fede9aa34134bb94fe95150c138cb2d5948d0886afaab47",
       "inputs": [
@@ -544,6 +549,26 @@
         }
       ],
       "scope": "Retained actual manual prototype process acceptance only; no new architecture approval."
+    },
+    {
+      "id": "EV-OWNER-ARCH",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "Kamil actualanswer; rootrecordsprovenance",
+      "artifact": "owner-SC09-direction-map-approval.json",
+      "sha256": "bf0280e5e38fb07dd4ef20e327f985a74be45dd963f60e09af30e63190a3b1a2",
+      "inputs": [
+        {
+          "path": "bom-proposal.json",
+          "sha256": "025faa70aa2d439b89c803d120ae6a37f9edab99ec4f1112ba9893aefd88da30"
+        },
+        {
+          "path": "owner-current-brief.json",
+          "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+        }
+      ],
+      "scope": "Actual human accepts specific proposal/map atcommit4434b04. No future schematic/product/PCB/release approval.",
+      "intent_digest": "f86ef6ffcca017340742c216d0d0c400a403c900273020d009efdfaae66bc2bf"
     }
   ]
 }

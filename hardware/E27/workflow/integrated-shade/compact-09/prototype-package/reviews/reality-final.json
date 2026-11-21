@@ -1,0 +1,83 @@
+{
+  "role": "Reality Checker final addendum",
+  "actual_actor": "/root/final_reality",
+  "date": "2026-11-21",
+  "recommendation": "ready_for_human_review",
+  "scope": "Complete manufacturing-CANDIDATE documentation/artwork for manual laboratory prototype only. NOT manufacturing acceptance, ordinary-bulb fit, powered-test authorization or product qualification. Formal release remains blocked.",
+  "manifest": {
+    "path": "work/Velluneo-2.0/hardware/E27/workflow/integrated-shade/compact-09/final-review-inputs.json",
+    "sha256": "0110503251b67f8165513668c0487cb97e12d576e20da0da33ea6eed0ddd6566",
+    "files_verified": 169,
+    "mismatches": []
+  },
+  "retained_native_review": {
+    "pcb_sha256": "2f0d2eac1d7c654372e6cd9fa1b6196ba4a38226ee23ffeb78315b7006446f53",
+    "schematic_sha256": "9ce3cb4476ab28d415ea849f088f9fa4942198ec2a432b884934935d50b0d641",
+    "unchanged_from_initial_review": true,
+    "initial_report": "work/compact09/final-reviews/reality.json"
+  },
+  "finding_dispositions": [
+    {
+      "id": "REAL-01",
+      "status": "closed_documentation_defect",
+      "evidence": "180T/AWG32 active name/recipe/packing/flux arithmetic consistent;150T block explicitly historical. Supplier feasibility not thereby proved."
+    },
+    {
+      "id": "REAL-02",
+      "status": "closed_documentation_defect",
+      "evidence": "Active loss planning is.9\u20131.7W consistently in calculated-proposal, thermal-planning and package; not a guaranteed bound."
+    },
+    {
+      "id": "REAL-03",
+      "status": "open_product_size_deviation_disclosed",
+      "owner": "root designer/product owner",
+      "evidence": "README/OPEN_ITEMS explicitly say50x32 PCB,19.5mm declared height; earlier25mm width not met and ordinary-bulb fit not demonstrated. C_SIZE not declared satisfied."
+    },
+    {
+      "id": "REAL-04",
+      "status": "open_physical_assembly_qualification",
+      "owner": "coil maker/assembly operator/qualified designer",
+      "evidence": "T1 gauge,hot-bias inductance,DCR and physical R7/RF1/C6 forming/support/vent qualification explicitly open. Not order-ready assembled unit."
+    },
+    {
+      "id": "REAL-05",
+      "status": "open_powered_test_product_release_qualification",
+      "owner": "qualified investigator/safety reviewer",
+      "evidence": "BRINGUP requires actual named operator/fixture/current limits/stress boundaries. C6peak90V target and85C thermal stop explicit; current tolerance,fault/surge/EMC and temperatures unverified. Full Toolkit releaseFAIL retained."
+    }
+  ],
+  "checks": {
+    "native_ERC_violations": 0,
+    "native_DRC_violations": 0,
+    "native_unconnected": 0,
+    "native_parity": 0,
+    "approved_intent_graph_passed": true,
+    "scoped_spacing_passed": true,
+    "strict_spacing_passed": false,
+    "two_pass_refill_polygon_equality": true,
+    "Toolkit_release_passed": false,
+    "zip_CRC": [
+      {
+        "file": "SC09_Gerbers_drills.zip",
+        "bad_entry": null
+      },
+      {
+        "file": "SC09_KiCad.zip",
+        "bad_entry": null
+      }
+    ]
+  },
+  "3D_review": "Native front/back PNGs visually inspected;17actual package model attachments checked. Complete embedded WRL delivered. Empty imported STEP assembly omitted with explicit interoperability limitation, not falsely accepted as mechanical model.",
+  "independence": "Read-only frozen inputs; only reviewer-owned reports written. No physical tests,supplier communication,purchase,approval or certification by reviewer.",
+  "previous_manifest_review": {
+    "path": "work/Velluneo-2.0/hardware/E27/workflow/integrated-shade/compact-09/final-review-inputs.json",
+    "sha256": "0fb6c7d7f835d50bdca12324fc67bccd5bddd30b0dd95c7ee24215c60adc811e",
+    "files_verified": 168,
+    "mismatches": []
+  },
+  "retained_scope_addendum": {
+    "basis": "Root declared candidate refresh: assembly PDFs now black/white plus outline; native CAD/electrical values unchanged; portable source ZIP adds17experimental per-part STEP with interoperability warning; reproduction guidance distinguishes authoring from standalone validator.",
+    "verified": "All169 exact frozen file hashes rechecked. PCB/schematic match original independently reviewed native hashes. Portable ZIP CRC clean,17WRL+17STEP. Prior CAD/electrical Reality conclusions retained; no new manufacturing/physical qualification inferred.",
+    "final_packet_recommendation": "ready_for_human_review for limited candidate/documentation scope; prior open product/size/assembly/powered-test gates retained."
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "checker_sha256": "807bba075397257e3d92c105a090c787997d74d0ee91685ce5a36f52d9888dfd",
+  "kernel_sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+  "tests_sha256": "9279e283964fb6e054582f6fc2cca130306c28685df51e0ae2c7f9ad0db4dedc",
+  "scope": "Synthetic disposable native boards only; positive all47pad/55matrix identities and adversarial geometry/native-net/unsupported-copper controls. Not validation of customer routing or a replacement for native DRC.",
+  "tests": [
+    {
+      "name": "native-positive-47-pad-55-pair",
+      "passed": true,
+      "expected_finding": null,
+      "expected_stop": null,
+      "board_sha256": "0ea8ce763f2ff4d88901b9b0821fbb116ca48f6280ae8b965209da51d2fe73c7",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\native-positive-47-pad-55-pair.json"
+    },
+    {
+      "name": "different-net-track-crosses-pad",
+      "passed": true,
+      "expected_finding": "copper_spacing",
+      "expected_stop": null,
+      "board_sha256": "f115341ca773811304e1c4e069bbf3b1f522571b81c5f79dd98b5dc9530598fe",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\different-net-track-crosses-pad.json"
+    },
+    {
+      "name": "rotated-pad-native-shape",
+      "passed": true,
+      "expected_finding": "copper_spacing",
+      "expected_stop": null,
+      "board_sha256": "10a98b8c40cca8fefb487b796a84cea8fce198857202dcdf9efd4fa177aca27d",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\rotated-pad-native-shape.json"
+    },
+    {
+      "name": "chamfer-copper-corner",
+      "passed": true,
+      "expected_finding": "copper_edge_setback",
+      "expected_stop": null,
+      "board_sha256": "ef2a6238871d5541317f327878731b66eccd0fb56e54e3c5f99fe58cc433ce88",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\chamfer-copper-corner.json"
+    },
+    {
+      "name": "throughvia-pad-invasion",
+      "passed": true,
+      "expected_finding": "copper_spacing",
+      "expected_stop": null,
+      "board_sha256": "4298e493cd5d579b8225066f7e81fea63fa964900d034c8ad91246c9ba4c0c64",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\throughvia-pad-invasion.json"
+    },
+    {
+      "name": "wrong-native-pin-identity",
+      "passed": true,
+      "expected_finding": null,
+      "expected_stop": "Exact native pad/net binding mismatch",
+      "board_sha256": "39b05a5c57959e00779d7142c980c31fcf7fe752d18db9d3ea7e7c6f2f7a45a7",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\wrong-native-pin-identity.json"
+    },
+    {
+      "name": "unsupported-arc-stops",
+      "passed": true,
+      "expected_finding": null,
+      "expected_stop": "Only straight PCB_TRACK",
+      "board_sha256": "9e6d910970b3b5538fbac6cdb8a153d069099b35d05c1b116a8e01fdc5661eea",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\unsupported-arc-stops.json"
+    },
+    {
+      "name": "unbound-free-copper-stops",
+      "passed": true,
+      "expected_finding": null,
+      "expected_stop": "Free copper graphics/text",
+      "board_sha256": "f33fa02780eaaabaa4698d3102641b711b1dd15b4baa113c42f611876dc46818",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\unbound-free-copper-stops.json"
+    },
+    {
+      "name": "saved-filled-zone-positive",
+      "passed": true,
+      "expected_finding": null,
+      "expected_stop": null,
+      "board_sha256": "821dd5c24353ddb13df482fcb520643a60386319a542fea208bb0797d8a1a178",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\saved-filled-zone-positive.json"
+    },
+    {
+      "name": "saved-zone-foreign-pad-invasion",
+      "passed": true,
+      "expected_finding": "copper_spacing",
+      "expected_stop": null,
+      "board_sha256": "a61101937ff330960a29931734242305735042c4e2f56e0ef7ebeae66f20e559",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\saved-zone-foreign-pad-invasion.json"
+    },
+    {
+      "name": "saved-zone-outside-outline-stops",
+      "passed": true,
+      "expected_finding": null,
+      "expected_stop": "outside actual zone outline",
+      "board_sha256": "b6672e4438597b2d35313d997f556c44783065816bf545102098c14ca60defb3",
+      "report": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\checker\\fixtures\\saved-zone-outside-outline-stops.json"
+    },
+    {
+      "name": "exception-local-pads-positive",
+      "passed": true,
+      "board_sha256": "b06cf6549c5a680dde379615338bbf636f19c6a07495355009fb5d8eb660cab7"
+    },
+    {
+      "name": "exception-outside-region-still-fails",
+      "passed": true,
+      "board_sha256": "89c6264c3da561d2e67bb48d94ab0c26ee3126d8dac5356d36461796aca8df99"
+    },
+    {
+      "name": "exception-does-not-exempt-via",
+      "passed": true,
+      "board_sha256": "fcd17309d49c9416839c8d4dffd3e8180cf32fb218c2c0077ffb49a4a932207a"
+    },
+    {
+      "name": "exception-does-not-exempt-zone",
+      "passed": true,
+      "board_sha256": "9bdbcd5a73d4bff9ce339cf4c541ee11e6aeb69f8c2d3145844f4de5a3777c8a"
+    },
+    {
+      "name": "exception-expanded-region-rejected",
+      "passed": true,
+      "error": "Unsupported: Exception pad-bbox margin exceeds explicit 1.0mm bound"
+    },
+    {
+      "name": "v2-one-mm-not-allowed-on-other-U1-pair",
+      "passed": true,
+      "error": "Unsupported: Exception pad-bbox margin exceeds explicit 0.3mm bound"
+    },
+    {
+      "name": "stale-frozen-exception-region-rejected",
+      "passed": true,
+      "error": "Unsupported: Frozen package exception region differs from actual transformed paired pads U1['3', '4']"
+    },
+    {
+      "name": "missing-one-of55-matrix-pairs-rejected",
+      "passed": true,
+      "error": "Unsupported: Missing/extra matrix pairs"
+    }
+  ]
+}

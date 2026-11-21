@@ -1,0 +1,58 @@
+{
+  "coordinator": "/root",
+  "sole_CAD_writer": "/root",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "base_commit": "4434b042fe962cc764c77a08f337da7acb885a26",
+  "main_before": "377fc0a08e74043e255b732f7c2beb63134a3576",
+  "main_outside_write_scope": true,
+  "frozen_manifest_sha256": "0110503251b67f8165513668c0487cb97e12d576e20da0da33ea6eed0ddd6566",
+  "frozen_files": 169,
+  "all_frozen_hashes_rechecked": true,
+  "actual_independent_review_actors": [
+    "/root/final_reality",
+    "/root/final_completeness",
+    "/root/final_simplicity",
+    "/root/final_change"
+  ],
+  "reviews": [
+    {
+      "path": "prototype-package/reviews/change.json",
+      "sha256": "97e2404eb02d4106dc1394071d9e81a7fdb800d4b4e7b1750abd4c120d69ecd9"
+    },
+    {
+      "path": "prototype-package/reviews/completeness.json",
+      "sha256": "b2316b32f4d6e4c2120a37e8fed0955e26d8bd78cf58a786e53faec9c1cff093"
+    },
+    {
+      "path": "prototype-package/reviews/reality-final.json",
+      "sha256": "dba759b19bdc76bdc671cb0b0b6bf45d99d6bf545473c3bebcdbab217077f1ab"
+    },
+    {
+      "path": "prototype-package/reviews/reality.json",
+      "sha256": "54bcd9ac6ecd7a9d1ba5e851152b4e5c7249be25b9741f8e60d0d8c2be5924e9"
+    },
+    {
+      "path": "prototype-package/reviews/simplicity.json",
+      "sha256": "ed52127f000ce0c24cb28dc60e93e9534a05c792a990b2ad48993c545949e1d4"
+    }
+  ],
+  "closed_findings": [
+    "Conflicting active150T/180Tcoil descriptions corrected and independently verified",
+    "Active loss planning ranges made consistent .9–1.7W, explicitly not guaranteed",
+    "Assembly PDFs now include outline/black-white and independently visually verified",
+    "PortableZIP now contains all114entries, including17experimentalSTEPsources, with no missing declared source_files"
+  ],
+  "retained_minor": "Bottom assembly references around R4/R5/R6/C5 are cramped; actual pin CSV and native PCB allow identification. No electrical/CAD topology effect.",
+  "candidate_verdict": "Complete reviewable engineering laboratory manufacturing candidate; publication authorized.",
+  "full_release": "NOT PASSED; qualified product/physical/formal spatial/process/approval gates retained, see complete Toolkit report.",
+  "unresolved_major_gates": [
+    "50x32width exceeds earlier25mm proposal; bulb-cavity fit not established",
+    "Custom T1 and formed RF1/R7/C6 require supplier/sample qualification",
+    "LED current,OVP,surge,faults,hot protection,thermal/EMC/insulation remain unmeasured",
+    "Full Toolkit release/source-artifact registration and exact stage/provider approval gaps retained; no fabricated PASS"
+  ],
+  "measurements_performed": false,
+  "order_placed": false,
+  "supplier_message_sent": false,
+  "authority": "Actual owner autonomy permits design/export/publication without repeated routine questions; does not create individual stage or manufacturing approval."
+}
