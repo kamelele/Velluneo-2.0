@@ -2,7 +2,7 @@
   "constraints": {
     "areas": [
       {
-        "basis": "Board intersection of max can [-.25,2.5,12.75,24.5] plus .5mm packing margin, both copper faces.",
+        "basis": "BoardintersectionofC6maxcan[.25,0,13.25,22] plus.5mm packingmargin. Bothfacesprotected; entire5mm vent outsidePCBtop requiresfixtureair.",
         "disallow": [
           "track",
           "via",
@@ -17,30 +17,9 @@
         ],
         "rectangle_mm": [
           100,
-          102,
-          113.25,
-          125
-        ]
-      },
-      {
-        "basis": "Board intersection of vent [-.25,-2.5,12.75,2.5]; additional 2.5mm external free air above board required.",
-        "disallow": [
-          "track",
-          "via",
-          "pad",
-          "zone"
-        ],
-        "exceptions": [],
-        "id": "C6_VENT",
-        "layers": [
-          "F.Cu",
-          "B.Cu"
-        ],
-        "rectangle_mm": [
           100,
-          100,
-          113.25,
-          102.5
+          113.75,
+          122.5
         ]
       }
     ],
@@ -110,7 +89,7 @@
         }
       }
     ],
-    "intent_digest": "82f4cf3776e5267a7e7f808ee2f61b63b0f798d2e0b7a1042896407702d8b5c2",
+    "intent_digest": "6ed1f228326c7314413ec450e70ef15faa1fe8881849890f0966211147f54e41",
     "kicad_version": "10.0.6",
     "minimums_mm": {
       "annular_width": 0.2,
@@ -202,5 +181,5 @@
     ],
     "schema_version": 1
   },
-  "constraints_digest": "ee7b1f6cf115827b3cfa2b83505c3bf986e99090ecadc0f78ef72862076245ee"
+  "constraints_digest": "998c72be2210e7a57131e627e2c0e62128d31ab9e2c0ef09bd397a2aee28e749"
 }

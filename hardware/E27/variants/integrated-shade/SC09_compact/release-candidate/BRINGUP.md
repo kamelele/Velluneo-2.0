@@ -20,4 +20,4 @@ Current specification clarifies inclusivebase-loss accounting and thermal sensit
 CAT01 supersedes every customT1 sample/winding task with factoryMSS1210H-125KED sample/rating/fit inspection. Use currentcatalogue-part electricalreport; noVR25thermalresistance transfer toHVR25. No poweredtestsperformed or authorizedbythisdocument.
 
 
-ROUTE01: Use the current corrected layout and both-face C6body/vent contract. Can material extends0.25mmleft, fixture vent requires2.5mmfreeair abovePCB. BroadSOURCEpours are removed; do not transfer earlier source-copper thermal predictions. Inspect the physicalR5Kelvinjoin and actual soldered geometry. All listed measurements remain unperformed.
+ROUTE02: J1mains input is at the RIGHTedge, J2LED output at the LEFTedge. Use actual pin CSV/assembly-back drawing; never infer polarity from an old layout. C6maximumcan fitsPCB, but5mmfree vent air is required above its upperedge. Inspect manually formed leads/support and wire strain relief. Close C6/T1placement requires actual temperature measurement. No previous copper-dependent U1temperature prediction transfers. No tests have been performed.

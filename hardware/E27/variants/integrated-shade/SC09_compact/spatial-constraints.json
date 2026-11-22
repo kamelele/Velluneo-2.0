@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "revision": "SC09-ROUTE01-V2",
-  "basis": "Private 50x32 PCB, C6 maximum 22x13 mm can axis -Y, both-face body and vent restriction, .25 mm left body overhang and 2.5 mm external upper vent fixture condition.",
+  "revision": "SC09-ROUTE02",
+  "basis": "MaximumC6can and both-face body reserve, left/right edge ports declared before capture.",
   "basis_sources": [
     {
       "path": "routing-improvement-basis.json",
-      "sha256": "820e01fb7b3d97af1be974022eec72339a18b5556f8725ca00cb1a4d6e738e67"
+      "sha256": "b736fd36083b0b23e79b7286edf37628a53d011d6c2f86860556af32c15b252a"
     },
     {
       "path": "footprint-geometry.json",
-      "sha256": "a8ccb85f8438c6610ae0cc17c6b4b692d7793d7b9da617da8cd2187e9487c018"
+      "sha256": "556086457cd606e479a83423723d5038306512a8717f43b3b2fdedd736105e0f"
     }
   ],
   "outline_mm": [
@@ -23,9 +23,9 @@
       "id": "C6_BODY",
       "rectangle_mm": [
         100,
-        102,
-        113.25,
-        125
+        100,
+        113.75,
+        122.5
       ],
       "layers": [
         "F.Cu",
@@ -37,28 +37,7 @@
         "pad",
         "zone"
       ],
-      "basis": "Board intersection of max can [-.25,2.5,12.75,24.5] plus .5mm packing margin, both copper faces.",
-      "exceptions": []
-    },
-    {
-      "id": "C6_VENT",
-      "rectangle_mm": [
-        100,
-        100,
-        113.25,
-        102.5
-      ],
-      "layers": [
-        "F.Cu",
-        "B.Cu"
-      ],
-      "disallow": [
-        "track",
-        "via",
-        "pad",
-        "zone"
-      ],
-      "basis": "Board intersection of vent [-.25,-2.5,12.75,2.5]; additional 2.5mm external free air above board required.",
+      "basis": "BoardintersectionofC6maxcan[.25,0,13.25,22] plus.5mm packingmargin. Bothfacesprotected; entire5mm vent outsidePCBtop requiresfixtureair.",
       "exceptions": []
     }
   ],

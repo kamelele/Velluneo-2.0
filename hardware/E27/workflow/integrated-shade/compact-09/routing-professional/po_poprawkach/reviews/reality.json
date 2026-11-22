@@ -1,0 +1,89 @@
+{
+  "role": "Reality Checker",
+  "actual_actor": "/root/route02_final_reality",
+  "date": "2026-11-22",
+  "revision": "SC09-ROUTE02",
+  "manifest_sha256": "083ad145268ab580a4252d767de050d2fbe1d77dbc9bd36251b0c398d8837912",
+  "initial_manifest_reviewed_sha256": "6b9341b08623ed41c3a2b6a71b105690c489eadfc4d2ea198f0a0fdffa988c44",
+  "source_snapshot": "eacf1bc065575b5aa8937d5aba1fd5dd63c413455328a785277d6cda15231f26",
+  "PCB_sha256": "1dd12e13bf94125f6eff2c59fd72c46a02c56de0f31db9287050db983ddf5bee",
+  "scope": "Independent read-only assessment of the opposite-edge-port and orderly-routing engineering correction. Not an unconditional manufacturing, powered-use or finished-product release.",
+  "all_frozen_input_hashes_verified": 215,
+  "retained_review_scope": "Independently inspected native CAD and all215 hashes under initial6b9341... manifest. Coordinator then corrected only K01 closure prose from16.8 to the actual16.5mm takeoff-via x coordinate. Reverified all215 final hashes under083ad1...; native PCB, source snapshot, electrical calculations, geometry and test artifacts are unchanged. Native findings remain applicable.",
+  "checked_files": [
+    "pinned Toolkit docs/roles/reality-checker.md",
+    "routing-professional/task-contract.json",
+    "routing-professional/assessment-and-plan.md",
+    "routing-professional/findings.json",
+    "SC09_compact/requirements.json",
+    "SC09_compact/SC09_compact.kicad_pcb",
+    "SC09_compact/routing-improvement-basis.json",
+    "SC09_compact/spatial-constraints.json",
+    "SC09_compact/power-supply-specification.ROUTE02.json",
+    "SC09_compact/thermal-and-spacing-basis.ROUTE02.md",
+    "po_poprawkach/BRINGUP.md",
+    "po_poprawkach/checks/writer-HANDOFF.md",
+    "po_poprawkach/checks/writer-seed-authoring.json",
+    "po_poprawkach/checks/ERC.json",
+    "po_poprawkach/checks/DRC.json",
+    "po_poprawkach/checks/bounded-spacing.json",
+    "po_poprawkach/checks/strict-spacing.json",
+    "po_poprawkach/checks/refill.json",
+    "po_poprawkach/checks/before-after-metrics.json",
+    "po_poprawkach/checks/geometry-current.json",
+    "po_poprawkach/checks/Kelvin-negative-controls.json"
+  ],
+  "actual_checks": [
+    {
+      "basis": "Independent saved native CAD read, pinnedKiCad10.0.6 raw PCB_IO_MGR loader, no source writes",
+      "result": "19references,46physicalpads,2copperlayers,1.6mm,128tracks,10throughvias. All128 actual segment directions are axis/45degree within1um. No SOURCEpours; only the neutral HW-SPATIAL-C6_BODY rule area remains."
+    },
+    {
+      "basis": "Independent saved native pad coordinates and recorded port intent",
+      "result": "J1 AC_L/AC_N centresx48.4,y30/24.5mm atRIGHTedge; J2 LED_PLUS/DC_RETURN centresx1.6,y24.5/30mm atLEFTedge. Minimum pad-centre separation46.8mm; this is not an electrical-clearance measurement."
+    },
+    {
+      "basis": "Independent saved native protected-route UUID/length inspection",
+      "result": "All declared critical UUIDs are present. C5 BP and SOURCE legs are direct B.Cu paths, each2.91956890mm with no bypass-return vias. R5.2-to-D1.1 force branch is7.40832611mm onB.Cu. SOURCE remains a floating switching reference distinct from DC_RETURN."
+    },
+    {
+      "basis": "Independent recomputation of saved-copper same-net Kelvin intersection audit",
+      "result": "PASS:14 per-face Kelvin objects, no missing UUIDs and no additional force/sense join outside allowed physicalR5.2. Two contacts with other FB objects are confined to the permitted pad. Actual takeoff via UUIDc9c99396-baba-4e5d-a76e-d5d22eb32db8 is(16.5,5.2); receiver via is(22.2,6.2)."
+    },
+    {
+      "basis": "Inspected source-bound actual check reports and adversarial fixtures, independently verified their final file hashes",
+      "result": "NativeERC0,DRC0,unconnected0,schematicparity0; two-pass refill exact. Full55-pair bounded screenPASS. Strict screen remainsFAIL:11copper-edge findings against its1mm target plus18different-net spacing findings without finite package concessions. Recorded missing-UUID and same-net force-join controls correctly reject their deliberately invalid fixtures. No strict/standards PASS is inferred."
+    },
+    {
+      "basis": "Selected spatial/consumer contract and actual native geometry",
+      "result": "Consumerdigest998c72be2210e7a57131e627e2c0e62128d31ab9e2c0ef09bd397a2aee28e749 agrees with recorded adapter input. C6maximumcan[.25,0,13.25,22]mm is insidePCB; full5mm external vent air above its upperedge is a fixture requirement. Body projection is protected on bothfaces. Removing an entirely external vent area does not waive internal copper clearance. Approval remains null."
+    },
+    {
+      "basis": "Read current paper specification and bring-up/thermal limits; no measurements performed",
+      "result": "207/230/253VAC50Hz, nonisolated/noSELV, proposed52-68VLEDload and roughly133mAexternalLED remain the unchanged circuit planning scope. C6dynamicOVP<=90V, T1hot-bias/minimum-on-time and0.9-1.7Wloss scenarios remain explicitly unmeasured assumptions. No inherited U1thetaJA or source-copper temperature prediction qualifies this layout. Bring-up retains explicit current/OVP/discharge/temperature observations and stop targets. CloseC6/T1placement requires actual thermal and sample-fit inspection."
+    }
+  ],
+  "findings": [
+    {
+      "id": "R02-REAL-01",
+      "severity": "minor",
+      "status": "independently_closed",
+      "object": "routing-professional/findings.json R02-K01.closure_result.correction",
+      "original_evidence": "Initial frozen closure prose said takeoffvia(16.8,5.2), whereas independently loaded native CAD and exact seed map show(16.5,5.2).",
+      "consequence": "Incorrect documentary coordinate could misdirect later physical inspection; actual copper topology was already correct.",
+      "closure": "Coordinator corrected prose to(16.5,5.2). Reviewer independently verified final215hashes, corrected text and unchangedPCB/source snapshot under final083ad1...manifest."
+    }
+  ],
+  "new_major_or_blocker_routing_findings": 0,
+  "retained_gates": [
+    "Exact genuine intent/spatial/stage human decisions and provider/process confirmation remain open; agent recommendations are not those decisions.",
+    "Physical current/ripple/startup/OVP/discharge/hot-bias/loss/temperature/fault/surge/EMC/insulation and soldered/three-dimensional clearance qualification remain outstanding.",
+    "Guarded mains-referenced fixture, capacitor vent/support, wire strain relief and actual sample fit are required before any separately authorized powered use. C6/coil proximity is not thermally qualified.",
+    "The unchanged strict-screen failures and bounded finite package concessions are engineering limitations, not normative waivers or safety certification."
+  ],
+  "recommendation": "ready_for_human_review",
+  "unconditional_product_or_order_release": "blocked",
+  "human_stage_approval_given": false,
+  "physical_measurements_performed": false,
+  "source_or_package_files_modified": false
+}

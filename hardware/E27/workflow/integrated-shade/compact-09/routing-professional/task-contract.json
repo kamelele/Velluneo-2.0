@@ -1,0 +1,23 @@
+{
+  "id":"SC09-ROUTE02",
+  "date":"2026-11-22",
+  "owner":"Kamil",
+  "coordinator":"/root",
+  "base_commit":"2327c0c2a86f98fac59d7e93f4e6a222c44ef444",
+  "branch":"concept/integrated-shade-nonisolated-buck",
+  "request":"Correct visibly unnecessary irregular track bends; improve placement so230VAC input and DCLED output are at opposite physical board edges, with orderly professional routing.",
+  "scope":"Engineering placement and routing correction. Preserve50x32mm PCB,2copper layers, existing catalogue electronics and46-pin/11-net circuit. Bare-wire terminal footprints may change physical spacing/orientation without changing pin membership.",
+  "baseline":"before.json; complete previous packet preserved in immutable base commit",
+  "requirements":[
+    {"id":"R02-PORTS","acceptance":"ACinput lands at right edge and LEDoutput lands at left edge, both pairs near their declared edge; readable polarity/voltage labels, wire exits outward. Document exact pad centres and separation; do not merely move them to adjacent areas on the same edge."},
+    {"id":"R02-ANGLES","acceptance":"Use deliberate horizontal/vertical/45degree routing. Remove free-angle shortcut kinks, redundant collinear pieces and grid stair steps. Any non45 anchor escape must be explicitly justified and bounded within actual terminal/package geometry; do not hide it by calling the board professional."},
+    {"id":"R02-POWER","acceptance":"Maintain compact high-side switching copper, no broad SOURCE pours, direct same-face C5 paths and R5-only Kelvin force/sense join. Verify actual topology separately from same-net DRC."},
+    {"id":"R02-SPACING","acceptance":"Unchanged55-pair targets and finite package floors/margins; manufacturing clearance/width/hole0.3mm, annulus0.2mm, edge0.5mm. No weakening/exclusion to force pass."},
+    {"id":"R02-SPATIAL","acceptance":"Update maximum C6body/vent projection and port geometry from independent declared intent; preserve both-face restrictions and explicit external fixture clearance. Preview/apply pinnedToolkit configuration and record actual adapter consumer digests."},
+    {"id":"R02-VERIFY","acceptance":"Fresh native ERC/DRC/parity/unconnected0; independent46pin/11net equality, bounded55pair spacing, Kelvin audit, saved-fill freshness, angle/port audit and native views. Retain full strict FAIL where applicable."},
+    {"id":"R02-PACKET","acceptance":"Native project, current layer/assembly views and front/back3D renders, source-bound fabrication review exports, before/after assessment, four distinct read-only role reports against final frozen inputs, branch publication with main unchanged."}
+  ],
+  "ownership":{"active_customer_sources":"/root","private_candidate":"/root/routing02_writer","private_candidate_path":".work/routing02","private_scratch":"external work/routing02/writer","geometry_contributor":"/root/routing02_geometry","one_writer_per_CAD":true},
+  "authority":{"engineering_work":true,"invented_human_stage_approval":false,"supplier_message":false,"purchase":false,"powered_test":false,"main_write":false},
+  "retained_gates":"Actual exact human decisions, provider/process confirmation, physical electrical/thermal/insulation/EMC/fault tests remain separate. No unconditional order/product release is inferred."
+}

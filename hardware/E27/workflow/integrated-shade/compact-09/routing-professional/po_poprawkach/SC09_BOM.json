@@ -1,0 +1,366 @@
+{
+  "revision": "SC09-CAT01",
+  "status": "Engineering catalogue-only revision. Source offers have individually graded freshness; no reservation/cart/order claimed.",
+  "components": [
+    {
+      "ref": "J1",
+      "value": "230V AC input",
+      "mpn": "Direct insulated-wire solder pads",
+      "kind": "wirepads",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_N"
+      },
+      "source": "Actual owner board-only interface",
+      "package": "2wirepads",
+      "body_or_reservation_mm": null,
+      "notes": "No mechanical connector or consumer contact barrier selected."
+    },
+    {
+      "ref": "RF1",
+      "value": "10 ohm 2W fusible",
+      "mpn": "FW20A10R0JA",
+      "kind": "fusible resistor",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_FUSED"
+      },
+      "source": "https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
+      "package": "axial",
+      "body_or_reservation_mm": [
+        12,
+        6,
+        6
+      ],
+      "notes": "Exact lead forming and abnormal fusing/pulse behavior need qualification.",
+      "assembly": "UprightP6.8customforming; max14.85mmabovePCB; supplierforming/fusingverificationremainopen."
+    },
+    {
+      "ref": "RV1",
+      "value": "275V AC MOV",
+      "mpn": "V275LA4P",
+      "kind": "MOV",
+      "pins": {
+        "1": "AC_FUSED",
+        "2": "AC_N"
+      },
+      "source": "https://www.littelfuse.com/assetdocs/varistors-la-datasheet?assetguid=f7c547ce-c2fa-4789-86cc-ec39a5060afb",
+      "package": "radial staggered",
+      "body_or_reservation_mm": [
+        9,
+        5.6,
+        12
+      ],
+      "notes": "Lead offsets nominal5x2.5mm;7mmdiscclass is not finishedbodydiameter. Thermal/abnormal coordination unqualified."
+    },
+    {
+      "ref": "BR1",
+      "value": "1000V 0.8A bridge",
+      "mpn": "MB10S-13",
+      "kind": "bridge",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "AC_FUSED",
+        "3": "DC_RETURN",
+        "4": "AC_N"
+      },
+      "source": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+      "package": "MBS/SO4",
+      "body_or_reservation_mm": [
+        6.2,
+        4.9,
+        2.7
+      ],
+      "notes": "Reuse exact Diodes pin map from separately verifiedSC08part; not Comchip numeric identity."
+    },
+    {
+      "ref": "C1",
+      "value": "47nF 400V 10%",
+      "mpn": "B32529E6473K189",
+      "kind": "film",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "DC_RETURN"
+      },
+      "source": "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529E6473K189",
+      "package": "radial P5",
+      "body_or_reservation_mm": [
+        7.3,
+        4.5,
+        9.5
+      ],
+      "notes": "Postrectifier only; not an X capacitor. Actual ripple/surge remains to be checked."
+    },
+    {
+      "ref": "L1",
+      "value": "3.3mH 10% 400V",
+      "mpn": "768772332",
+      "kind": "inductor",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "BUS_FILTERED"
+      },
+      "source": "https://www.we-online.com/components/products/datasheet/768772332.pdf",
+      "package": "radialP5,8.3diameterx10max",
+      "body_or_reservation_mm": [
+        8.3,
+        8.3,
+        10.5
+      ],
+      "notes": "WurthWE-TIHVcatalogue400V;DCR7.08ohmmax@20C,Irms.25A,Isat.27A@10%;normalmanualfreeleadformingandfitinspection. DCRlossdelta~2.18mW@100C60mARMSvsoldRenco.",
+      "assembly": "P5manufacturerrecommended1.2holes;retaincompatibleP5.0038landpattern. Leadpitchtolerancehandledbygentlefreeleadadjustment,notrigidguarantee."
+    },
+    {
+      "ref": "C4",
+      "value": "150nF 630V 10%",
+      "mpn": "B32671P6154K000",
+      "kind": "film",
+      "pins": {
+        "1": "BUS_FILTERED",
+        "2": "DC_RETURN"
+      },
+      "source": "https://product.tdk.com/en/search/capacitor/film/snubbering_pfc/info?part_no=B32671P6154K000",
+      "package": "radial P10",
+      "body_or_reservation_mm": [
+        13,
+        6,
+        12
+      ],
+      "notes": "Production part; AC/repetitive pulse curves and derating still apply.450VECWFEcandidate rejected for240Vp-p limitation."
+    },
+    {
+      "ref": "U1",
+      "value": "LYTSwitch-1",
+      "mpn": "LYT1603D-TL",
+      "kind": "IC",
+      "pins": {
+        "1": "BP",
+        "2": "M",
+        "3": "FB_INDUCTOR",
+        "4": "BUS_FILTERED",
+        "5": "SW_SOURCE",
+        "6": "SW_SOURCE",
+        "7": "SW_SOURCE",
+        "8": "SW_SOURCE"
+      },
+      "source": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "package": "SO8",
+      "body_or_reservation_mm": [
+        6,
+        4.9,
+        1.75
+      ],
+      "notes": "Active but NRND. Prototype direction only pending actual owner selection and verified procurement. All8pins physical."
+    },
+    {
+      "ref": "C5",
+      "value": "4.7uF 25V X7R",
+      "mpn": "CL21B475KAFNNNE",
+      "kind": "MLCC",
+      "pins": {
+        "1": "BP",
+        "2": "SW_SOURCE"
+      },
+      "source": "https://product.samsungsem.com/mlcc/CL21B475KAFNNN.do",
+      "package": "0805",
+      "body_or_reservation_mm": [
+        2.1,
+        1.35,
+        1.35
+      ],
+      "notes": "Effective capacitance at5.55V is ~3.14uF typical per Samsung curve, not guaranteed; BPdroop to measure."
+    },
+    {
+      "ref": "R4",
+      "value": "12.4kohm 1%",
+      "mpn": "ERJ-6ENF1242V",
+      "kind": "resistor",
+      "pins": {
+        "1": "M",
+        "2": "SW_SOURCE"
+      },
+      "source": "https://industrial.panasonic.com/ww/products/pt/general-purpose-chip-resistors/models/ERJ6ENF1242V",
+      "package": "0805",
+      "body_or_reservation_mm": [
+        2.1,
+        1.35,
+        0.65
+      ],
+      "notes": "Retainreference lowerdivider;13.3kohm rejected asprimary due cold/high-bin OVPheadroom risk."
+    },
+    {
+      "ref": "R5",
+      "value": "0.68ohm 1% 0.5W",
+      "mpn": "RL1206FR-7W0R68L",
+      "kind": "sense resistor",
+      "pins": {
+        "1": "SW_SOURCE",
+        "2": "FB_INDUCTOR"
+      },
+      "source": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Reference exact part;200ppm/K retained in screens."
+    },
+    {
+      "ref": "R6",
+      "value": "3.65ohm 1%",
+      "mpn": "CRCW12063R65FKEA",
+      "kind": "sense resistor",
+      "pins": {
+        "1": "SW_SOURCE",
+        "2": "FB_INDUCTOR"
+      },
+      "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "0.68||3.65=>0.57321ohm. Nominal135.2mA by datasheet ratio3.6, not inconsistent RDR ratio4.666."
+    },
+    {
+      "ref": "D1",
+      "value": "600V 1A ultrafast",
+      "mpn": "US1J-13-F",
+      "kind": "diode",
+      "pins": {
+        "1": "FB_INDUCTOR",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.diodes.com/assets/Datasheets/ds16008.pdf",
+      "package": "SMA",
+      "body_or_reservation_mm": [
+        6,
+        3.5,
+        2.7
+      ],
+      "notes": "Pin1cathode,pin2anode; actual land geometry due before capture/placement."
+    },
+    {
+      "ref": "T1",
+      "value": "1.2mH 10% 400V",
+      "mpn": "MSS1210H-125KED",
+      "kind": "inductor",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "FB_INDUCTOR"
+      },
+      "source": "https://www.coilcraft.com/getmedia/52078704-21eb-4c2b-9b72-1e07b4a2e252/mss1210h.pdf",
+      "package": "2-terminal SMD,12.3x12.3x10.2max",
+      "body_or_reservation_mm": [
+        12.3,
+        12.3,
+        10.2
+      ],
+      "notes": "Standard catalogue Coilcraft part; no custom winding. ManufacturerMOQ1price$3.68;Findchipsmanufacturerfeedreports1077,notdirectliveconfirmed/reserved. Confirm actualvendoravailabilityatcheckout. ±10%L/bias/hotpaper assumptionsnotmeasurement.",
+      "reference_design_mpn": "RDR464 EE10 150turn build",
+      "assembly": "Manufacturerrecommendedtwo5.5x3.0mmpadsat0,±4.75;nonpolarcoil;designpin1LED/pin2FB.No3rdpinorNC."
+    },
+    {
+      "ref": "C6",
+      "value": "150uF 100V 20%",
+      "mpn": "EEUFS2A151",
+      "kind": "electrolytic",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://industrial.panasonic.com/sa/products/pt/aluminum-cap-lead/models/EEUFS2A151",
+      "package": "radial P5 mounted horizontal",
+      "body_or_reservation_mm": [
+        13,
+        22,
+        13
+      ],
+      "notes": "12.5diam nominal(+0.5),20nom length22max;26x13 formedlead/body reservation +separate5mmventzone.105C10000h catalograting; not achievedlife.",
+      "assembly": "Horizontal100V150uFcan;max13diameterx22length; can/vent topcopperkeepout. Nojacketinsulationcredit."
+    },
+    {
+      "ref": "R7",
+      "value": "390kohm 1% 1.6kV",
+      "mpn": "HVR2500003903FR500",
+      "kind": "HV resistor",
+      "pins": {
+        "1": "M",
+        "2": "LED_PLUS"
+      },
+      "source": "https://www.vishay.com/docs/30260/hvr2537.pdf",
+      "package": "axial",
+      "body_or_reservation_mm": [
+        7.5,
+        2.5,
+        2.5
+      ],
+      "notes": "StandardcatalogueHVR25replacement390k1%/.25W/1600VDC/200ppm;bodyL2max7.5,D2.5,lead.58±.05. RetainstandingP4.8forming. UseHVRaging/deratingdata;doNOTtransferVR25theta140K/W.",
+      "assembly": "StandingP4.8manualleadformingfromcataloguepart;existingphysicalenvelopeconservative. Sampleinspectionbeforeassemblyacceptance."
+    },
+    {
+      "ref": "R8",
+      "value": "68kohm 1% 0.25W",
+      "mpn": "RC1206FR-0768KL",
+      "kind": "bleeder",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Two parallel bleeders; one-open discharge calculated to5Vwithin40s from90V. No accessiblecontact barrier or energizedhotplug guarantee."
+    },
+    {
+      "ref": "R9",
+      "value": "68kohm 1% 0.25W",
+      "mpn": "RC1206FR-0768KL",
+      "kind": "bleeder",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Two parallel bleeders; one-open discharge calculated to5Vwithin40s from90V. No accessiblecontact barrier or energizedhotplug guarantee."
+    },
+    {
+      "ref": "J2",
+      "value": "LED module output",
+      "mpn": "Direct insulated-wire solder pads",
+      "kind": "wirepads",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "Actual owner integratedLED+shade module",
+      "package": "2wirepads",
+      "body_or_reservation_mm": null,
+      "notes": "Nonisolated, mainsreferenced. Cold replacement only after deenergizing and verified discharge; final contact mechanism separate."
+    }
+  ],
+  "electrical_positions_excludingwirepads": 17,
+  "wire_pad_positions": 2,
+  "LED_module_candidate": {
+    "count": 20,
+    "series": true,
+    "mpn": "L128-4080CA3500001",
+    "CCT_K": 4000,
+    "minimum_CRI": 80,
+    "source": "https://lumileds.com/DS216-LUXEON-2835-Architectural-Datasheet",
+    "qualification": "Current datasheet20261112 and procured flux/Vfbin, stabilized temperature and diffuser must be checked; no800lm guarantee from coldpulse data."
+  },
+  "kind": "Current laboratory assembly BOM; approvedA1connectivity retained, custommanufacturingdetailsupdatedunderownerautonomouscompletion. Notindividualhumanacceptanceofeverypart."
+}

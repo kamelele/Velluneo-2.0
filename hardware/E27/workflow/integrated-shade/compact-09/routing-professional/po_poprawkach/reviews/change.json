@@ -1,0 +1,140 @@
+{
+  "role": "Change Reviewer",
+  "actual_actor": "/root/routing_final_change",
+  "date": "2026-11-22",
+  "revision": "SC09-ROUTE02",
+  "manifest_sha256": "083ad145268ab580a4252d767de050d2fbe1d77dbc9bd36251b0c398d8837912",
+  "source_snapshot": "eacf1bc065575b5aa8937d5aba1fd5dd63c413455328a785277d6cda15231f26",
+  "PCB_sha256": "1dd12e13bf94125f6eff2c59fd72c46a02c56de0f31db9287050db983ddf5bee",
+  "scope": "Independent read-only comparison with immutable ROUTE01/2327c0c baseline and final ROUTE02 engineering routing packet. This is not a human stage decision, product qualification or unconditional order release.",
+  "checked_files": [
+    "Pinned Toolkit docs/roles/change-reviewer.md",
+    "routing-professional/task-contract.json and adoption.json",
+    "All215 frozen input hashes",
+    "Native before/current PCB, project settings and generated DRC rules",
+    "Functional schematic, BOM, physical intent and its basis",
+    "Local footprint library and model files; only canonical J1/J2 bare-land geometry changes",
+    "Current selected spatial/basis/consumer records and actual adapter records",
+    "Fresh native DRC and independent angle/port reruns",
+    "Independent saved-copper Kelvin rerun and meaningful negative controls",
+    "Current native layer/assembly/render exports and9-member fabrication archive",
+    "Artifact registration, current order parameters and24-hole drill report"
+  ],
+  "checks": {
+    "frozen_hashes_verified": 215,
+    "same_physical_pin_net_map": true,
+    "same_values_FPID_DNP_model_count": true,
+    "functional_schematic_symbols_BOM_graph_basis_byteidentical": true,
+    "local_library_model_files_compared": 58,
+    "changed_library_files": [
+      "E27SC09.pretty/SC09_J1.kicad_mod",
+      "E27SC09.pretty/SC09_J2.kicad_mod"
+    ],
+    "native_project_settings_unchanged": true,
+    "native_global_rules_unchanged_except_removed_external_vent_area": true,
+    "bounded_package_floors_margins_types_preserved": true,
+    "independent_expected_XML_pinsets_equal": true,
+    "intent_and_spatial_basis_hashes_match": true,
+    "raw_saved_native_track_net_parity": true,
+    "before_segments": 148,
+    "after_segments": 128,
+    "before_vias": 13,
+    "after_vias": 10,
+    "before_track_length_mm": 343.81663634139244,
+    "after_track_length_mm": 332.80879047873464,
+    "SOURCE_pour_mm2": 0,
+    "layers": 2,
+    "board_thickness_mm": 1.6,
+    "physical_pads": 46,
+    "fresh_DRC": {
+      "report_sha256": "135ff3016089083fea7268504a2d786b5dd30411bbe320f849bcc1617fa80630",
+      "violations": 0,
+      "unconnected": 0,
+      "schematic_parity": 0
+    },
+    "fresh_geometry": {
+      "report_sha256": "f12fe7e427730e20f4b1b6051a72e885a49f9cbc22bde67aaf6574e5d0ff796b",
+      "axis45_irregularities": 0,
+      "acute_two_track_tips": 0,
+      "exact_duplicates": 0,
+      "collinear_candidates": 0,
+      "ports": {
+        "J1": {
+          "1": {
+            "net": "/AC_L",
+            "x_mm": 48.400000000000006,
+            "y_mm": 30.0
+          },
+          "2": {
+            "net": "/AC_N",
+            "x_mm": 48.400000000000006,
+            "y_mm": 24.5
+          }
+        },
+        "J2": {
+          "1": {
+            "net": "/LED_PLUS",
+            "x_mm": 1.5999999999999943,
+            "y_mm": 24.5
+          },
+          "2": {
+            "net": "/DC_RETURN",
+            "x_mm": 1.5999999999999943,
+            "y_mm": 30.0
+          }
+        }
+      },
+      "AC_right_LED_left": true,
+      "minimum_AC_LED_pad_center_separation_mm": 46.80000000000001
+    },
+    "fresh_spatial": "FAIL only: Spatial contract lacks current human approval. Native geometry and actual998c...consumer digest match.",
+    "actual_consumer_digest": "998c72be2210e7a57131e627e2c0e62128d31ab9e2c0ef09bd397a2aee28e749",
+    "supplementary_execution_records": [
+      {
+        "path": "work\\routing02\\writer\\manual-polish-proof.json",
+        "sha256": "370079473d67935262a0f184ef692bd90e8eb63e9afcfa44f7df91ab63aef455",
+        "digest": "998c72be2210e7a57131e627e2c0e62128d31ab9e2c0ef09bd397a2aee28e749",
+        "scope": "Supplementary actual execution record; source-bound frozen handoff records the same digest."
+      },
+      {
+        "path": "work\\routing02\\writer\\routing\\generic-results.json",
+        "sha256": "a2b275059704de1a55726d31aa7ebc62f798c6751a11a0c0b6c9ede3e00b6c89",
+        "digest": "998c72be2210e7a57131e627e2c0e62128d31ab9e2c0ef09bd397a2aee28e749",
+        "scope": "Supplementary actual execution record; source-bound frozen handoff records the same digest."
+      }
+    ],
+    "Kelvin_saved_copper_independent_rerun": {
+      "passed": true,
+      "Kelvin_native_objects": 14,
+      "missing_declared_UUIDs": [],
+      "other_FB_intersections_checked": 2,
+      "findings": [],
+      "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+    },
+    "Kelvin_negative_controls_reject_faults": true,
+    "strict_findings_by_type": {
+      "copper_edge_setback": 11,
+      "copper_spacing": 18
+    },
+    "bounded55pair_pass": true,
+    "registered_artifact_hashes_match": true,
+    "fabrication_members": 9,
+    "fabrication_CRC_error": null,
+    "current_PTH_count": 24,
+    "current_NPTH_count": 0
+  },
+  "findings": [],
+  "retained_release_gates": [
+    "Exact CAT01 connectivity/spatial/stage human approvals remain absent; engineering authorization is not substituted for acceptance.",
+    "Strict no-concession screen retains original1.0mm copper-edge target:11edge findings and18spacing findings. Bounded lab/native edge remains unchanged0.5mm; strictFAIL is not hidden or relabelled compliance.",
+    "C6can now lies withinPCB outline, but its full5mm upper external vent reserve and wire support/strain relief require actual fixture/sample inspection.",
+    "Current/loss/temperature/ripple/OVP/fault/surge/EMC/insulation operation and provider/process confirmation remain unqualified. No measured performance, fullToolkitPASS or safe powered use is inferred."
+  ],
+  "invalidation_impact": "ROUTE01 terminal layout, C6 placement/vent extent, spatial contract and routing exports are historical. ROUTE02 geometry and fabrication exports require current stage review and physical qualification. Physical pin graph, circuit values and catalogue electronics identities are unchanged.",
+  "major_or_blocker_change_regressions": 0,
+  "recommendation": "ready_for_human_review",
+  "approval_fabricated": false,
+  "supplier_message": false,
+  "purchase": false,
+  "physical_measurements": false
+}

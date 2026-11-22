@@ -1,0 +1,124 @@
+{
+  "actual_actor": "/root/routing02_geometry",
+  "scope": "Read-only engineering contributor; in-memory proposed-placement PAD screen only. No saved candidate CAD, native DRC, routing or physical fit approval.",
+  "source_PCB_sha256": "29d4fa9950f369fdfa1998309926c05d54f65da9112df21d09abc5cb2c67df02",
+  "source_unchanged": true,
+  "source_graph": "19references46physicalpins11netsCAT01unchanged",
+  "method": "PinnedKiCad10.0.6 rawPCB_IO_MGR loader; modify proposed anchors/padpositions only in RAM; collect actual native pad polygons; apply unchanged independent55pairmatrix and exactfinitepackageassessments to all different-net same-face pad pairs.",
+  "proposed_anchors_mm": {
+    "C6": [
+      6.75,
+      26
+    ],
+    "R5": [
+      16.2,
+      6
+    ],
+    "R6": [
+      16.5,
+      9
+    ],
+    "RF1": [
+      44.3,
+      28.4
+    ]
+  },
+  "same_other_component_positions": true,
+  "proposed_ports": {
+    "J1": {
+      "side": "B.Cu",
+      "wire_exit": "RIGHT",
+      "global_pad_size_mm": [
+        1.3,
+        2.5
+      ],
+      "pad1_AC_L": [
+        48.4,
+        23.5
+      ],
+      "pad2_AC_N": [
+        48.4,
+        30.1
+      ]
+    },
+    "J2": {
+      "side": "B.Cu",
+      "wire_exit": "LEFT",
+      "global_pad_size_mm": [
+        2,
+        2.5
+      ],
+      "pad1_LED_PLUS": [
+        1.6,
+        24.5
+      ],
+      "pad2_DC_RETURN": [
+        1.6,
+        30
+      ]
+    }
+  },
+  "nominal_port_x_separation_mm": 46.8,
+  "pad_screen": {
+    "passed": true,
+    "findings": [],
+    "routing_checked": false
+  },
+  "C6": {
+    "native_angle_deg": 90,
+    "max_can_bbox_mm": [
+      0.25,
+      0,
+      13.25,
+      22
+    ],
+    "max_vent_bbox_mm": [
+      0.25,
+      -5,
+      13.25,
+      0
+    ],
+    "proposed_body_margin_board_intersection_mm": [
+      0,
+      0,
+      13.75,
+      22.5
+    ],
+    "external_vent_above_PCB_mm": 5,
+    "actual_native_front_courtyard_stroked_bbox_mm": [
+      -0.025,
+      -0.275,
+      13.525,
+      27.425
+    ],
+    "body_inside_board": true,
+    "native_courtyard_includes_formed_leads_as_one_rectangle": true
+  },
+  "packing_notes": [
+    "T1 unchanged strokedFcourtyard startsx13.575; C6strokedFcourtyard ends13.525:nominal0.05mmcourtgap. Maxcanright13.25 vsT1maxbodymin~13.85 gives~0.6mmphysicalbodygap. This is tight and not thermal qualification.",
+    "R5+.5mm givescourtyardleft13.825 beyondC6bodyguard13.75. R6+.5mm keepsbody/padclearance. Bothfaces mustretainbody/ventprojection, notfront-only.",
+    "J2top pad startsy23.25 aboveproposedbodyguardbottom22.5. RearJ2isunderfrontformedleadcourtyardregion, notthecan. VerifyrealPTHsolder/wireaccess and actualnativecourtyardchecking; crossfacecourtyardbboxoverlapalone doesnotprovecollision.",
+    "J1rightedgex48.4 conflictswithRF1x45.7 inoriginalplacement: nativepadgaps1.000mm and1.153mm versusrequired2mm. ProposedRF1x44.3 closespadspacingfailures withoutchangingMPN/orientation.",
+    "RF1movedleftretainssamefrontyextent20.275..31.675; L1endsy20.175:nominal0.10mmcourtyardgap. Worstcasebody/samplefit and leadforming mustbeinspected.",
+    "CanonicalJ1/J2geometry mustbechangeddeliberatelytostraightinlineports and embeddedpads/courts/geometrymetadataupdated. ThisRAMscreenusedglobalpadangle0; keepglobalphysicalpadsizeasdeclared.",
+    "Seedshortoutputroutesbeforegenericrouting soJ2LEDconnectsC6positive andJ2DCconnectsnegative withoutcrossing orcreatingcanescapecloses. RoutingmustremainclearofbothfaceC6guard."
+  ],
+  "requirements_preserved": [
+    "PCB50x32mm2L",
+    "samecataloguepartsandphysicalpingraph",
+    "55matrixfloorsandnativefloorsunchanged",
+    "bothfaceC6bodyandventrestriction",
+    "noSOURCEpours",
+    "directC5andphysicalR5Kelvinjoin"
+  ],
+  "next_checks": [
+    "actualnativecourtyard/edge/wholeboardDRC",
+    "completeallnetswith45degreeorthogonalnominalrouting",
+    "independentfullsavedcopper55matrix",
+    "exactgraphparity/Kelvinsemanticcheck",
+    "3Dformedlead/fixtureinspection"
+  ],
+  "human_approval": null,
+  "physical_measurements": false,
+  "CAD_saved_or_mutated": false
+}

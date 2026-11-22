@@ -1,0 +1,47 @@
+{
+  "revision": "SC09-ROUTE02",
+  "actual_coordinator": "/root",
+  "parent_remote_commit": "2327c0c2a86f98fac59d7e93f4e6a222c44ef444",
+  "frozen_manifest_sha256": "083ad145268ab580a4252d767de050d2fbe1d77dbc9bd36251b0c398d8837912",
+  "all_frozen_input_hashes_verified": 215,
+  "source_snapshot": "eacf1bc065575b5aa8937d5aba1fd5dd63c413455328a785277d6cda15231f26",
+  "one_active_customer_CAD_writer": true,
+  "private_implementer_lease_relinquished_before_root_adoption": true,
+  "reviews": [
+    {
+      "role": "Reality Checker",
+      "actual_actor": "/root/route02_final_reality",
+      "path": "po_poprawkach/reviews/reality.json",
+      "sha256": "b9bac0cd9ad9b4e86e37833070164bf0d8a8584c8bcc820b1d9019846c8d3fd1",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Overengineering / Simplicity Reviewer",
+      "actual_actor": "/root/route02_final_simplicity",
+      "path": "po_poprawkach/reviews/simplicity.json",
+      "sha256": "6a4b7e4d77f7ac75160e16b9c9d142d260d405c503c55eac9dd1ac02c61ecc51",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actual_actor": "/root/route02_final_completeness",
+      "path": "po_poprawkach/reviews/completeness.json",
+      "sha256": "fbd748488a45ed2e7d6ceeb7ca4c9f702a9847cb83570502bd3f2e9f8fffcf8a",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Change Reviewer",
+      "actual_actor": "/root/routing_final_change",
+      "path": "po_poprawkach/reviews/change.json",
+      "sha256": "038d58dc3f3e11e2805fcab27655498720ec6586539a8213cedf0d080e66a3df",
+      "recommendation": "ready_for_human_review"
+    }
+  ],
+  "unresolved_major_blocker_routing_findings": 0,
+  "status": "Corrected engineering routing packet ready for human review; NOT unconditional manufacture/order/product release",
+  "strict_scope_note": "Unmodified strict screen has1.0mm copper-edge target and no finite package assessments:edge and different-net spacing failures (actual counts in strict_findings). Bounded lab screen preserves prior0.5mm native/engineering edge floor and exact finite U1/BR1/D1 package floors/margins. No floor relaxed for this correction, no normative waiver claimed.",
+  "thermal": "No SOURCE heatplane or inherited U1temperature prediction. Qualified physical measurement remains required.",
+  "four_role_receipt_is_human_approval": false,
+  "order": false,
+  "powered_test": false
+}

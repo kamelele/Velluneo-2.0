@@ -1,9 +1,7 @@
-# SC09-ROUTE01 laboratory driver
+# SC09-ROUTE02: opposite-edge ports and axis/45degree routing
 
-Current functional circuit remains SC09-CAT01:19references/46pins/11nets, same17electronicpositions/16catalogueMPNs. Current routing revision is SC09-ROUTE01,50x32mm,2layers. See layout-revision.json and routing-improvement-basis.json.
+Current engineering packet: hardware/E27/workflow/integrated-shade/compact-09/routing-professional/po_poprawkach. Prior ROUTE01 routing-improvement packet and earlier catalogue/prototype packages are historical. Before commit2327c0c2a86f98fac59d7e93f4e6a222c44ef444 is preserved.
 
-The current corrected engineering packet is hardware/E27/workflow/integrated-shade/compact-09/routing-improvement/po_poprawkach. Earlier catalogue-package is the preserved pre-correction layout; its exports are historical. The owner-requested exact before checkpoint is f7074024129f5b7890427ed463ec0c085617ace0.
+SameCAT01circuit:19references/46pins/11nets and unchanged catalogue electronics. PCB50x32mm,2layers. Barewire solder lands are inline: J1mainsinput atRIGHTedge; J2LEDoutput atLEFTedge. Selected spatial contract and routing-improvement-basis.json define actual maximum C6geometry/fixture vent conditions.
 
-C6maximumcan extends0.25mmleft ofPCB;5mmvent reserve needs2.5mmfreeair abovePCB. Both copperfaces respect declared body/vent areas. No finishedlamp/fixturefit approval is claimed. SOURCE is a floating switching node; broadSOURCEpours removed. Earlier copper-dependent U1temperature estimates do not qualify this layout.
-
-Native CAD and bounded laboratory geometry checks are separate from the strict intrinsicpackage spacing result, genuine human stage decisions, providerprocess confirmation and physical tests. Full Toolkit product release remainsFAIL until those gates are actually closed. No order, supplier communication or powered testing has been performed.
+Fresh native and independent engineering checks are source-bound in the current packet. No broad SOURCEpours; direct C5 and physicalR5 Kelvin join retained. Angle/port checks do not replace electrical clearance, thermal or physical insulation qualification. FullToolkitproductrelease remainsFAIL with exacthuman/physical/process gates explicit. No order, supplier message or powered test.
