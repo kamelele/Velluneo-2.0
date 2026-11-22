@@ -1,0 +1,82 @@
+{
+  "role": "Reality Checker",
+  "actual_actor": "/root/route02_final_reality",
+  "revision": "SC09-ROUTE04",
+  "date": "2026-11-22",
+  "manifest_sha256": "826ee8c787fbbfb5317bd4a06d0196bc3a2cdcdb7ece29e62b86ce43bd42a783",
+  "source_snapshot": "a713c25d4a04ca41a3723e1a3e01df1c6eed60a3302e9054cc0639208d010db1",
+  "PCB_sha256": "9b73c61c34dc28fceff2e9d2265fcfb1280053245c9840f4e7c0bb39d782fa87",
+  "base_commit": "27674de71c9e1eec702d3ba235e44f3229676547",
+  "scope": "Independent read-only review of bounded endpoint/whole-board corner simplification, not circuit, placement or finished-product qualification redesign.",
+  "all_frozen_input_hashes_verified": 230,
+  "checks": [
+    {
+      "basis": "Independent exact manifest SHA256 and all230 frozen file hashes",
+      "result": "All match. Native final PCB is9b73c61c... and the declared source snapshot is unchanged during this review. No frozen source/configuration/package input was modified by this reviewer."
+    },
+    {
+      "basis": "Independent pinnedKiCad10.0.6 raw PCB_IO_MGR before/after reads and raw source comparison",
+      "result": "All19 complete footprint blocks are exactly equal, preserving pads, values, fields/MPNs, models/transforms and placement. All58 local footprint/model assets and12 explicitly compared circuit/configuration/spatial/consumer files are byte-identical. All10 via UUIDs, positions, nets, diameters, drills and layers are unchanged. All5 explicit multi-track branch junctions remain at their original coordinates."
+    },
+    {
+      "basis": "Independent mathematical corner classification from saved native endpoints, branch membership and actual terminal polygons",
+      "result": "Baseline has17 true two-track90degree junctions:12exposed and5inside terminal pads. Current has5, all inside actual terminal pads;0exposed elbows. Functional branches and terminal-contained joins are correctly excluded from cosmetic chamfer targets."
+    },
+    {
+      "basis": "Independent native inventory and track direction calculation",
+      "result": "125tracksegments,10throughvias and329.33173458mm total track length. All actual trace directions are axis/45degree within1um. Segment count rises because chamfers add diagonal segments while total path length decreases. SOURCE pours remain0."
+    },
+    {
+      "basis": "Independent recomputation of saved-copper same-net Kelvin intersection audit using the current complete UUID/purpose map",
+      "result": "PASS:18per-face native Kelvin objects,0missing declared UUIDs and0extra force/sense joins outside permitted physicalR5.2. Two contacts with other FB copper are confined to that allowed pad. The receiver's new F45approach ends at the same via centre(22.2,6.2); the isolated sense path remains distinct from coil force. Both direct B.Cu C5legs remain2.91956890mm without bypass-return vias."
+    },
+    {
+      "basis": "Actual native magnified before/after copper views and current source geometry",
+      "result": "SC09_detale_przed_po.png shows the lower Kelvin-via approach, opposite Kelvin elbow, source-reference corner and lower DC corner changed to deliberate45approaches. The images are consistent with inspected native endpoints. Required SOURCE branch topology, mains-spacing detour, via centres and component positions are preserved."
+    },
+    {
+      "basis": "Source-bound native and independent reports, all independently hash-verified",
+      "result": "ERC0,DRC0,unconnected0,schematicparity0; full55pair bounded laboratory screenPASS; saved two-pass refill exactly matches. Geometry/junction reports retain0non45outsidepads,0acute tips,0duplicates,0collinear candidates,0off-centreviafaces,0microsteps and0side-spurvias. Negative-control baseline passes and deliberately missing-UUID/same-net force-join fixtures are rejected."
+    },
+    {
+      "basis": "Review of strict screen and unchanged physical/electrical limits",
+      "result": "Strict screen remainsFAIL:12edge and23different-net spacing object-pair findings under the stricter original edge/no-concession scope. Bounded package floors/margins and native minima are unchanged; chamfer leg adjustment0.3to0.2mm is not trace-width reduction. No standards waiver or physical qualification is inferred. This is the same nonisolated mains-referenced laboratory circuit with unmeasured current, OVP, magnetic/thermal and EMC behavior. The C6 external5mm vent and close coil/capacitor thermal coupling remain fixture/sample conditions."
+    }
+  ],
+  "checked_files": [
+    "routing-approaches/review-inputs.json",
+    "routing-approaches/assessment-and-plan.md",
+    "SC09_compact/SC09_compact.kicad_pcb",
+    "routing04/baseline-source/SC09_compact.kicad_pcb",
+    "SC09_compact/spatial-constraints.json",
+    "SC09_compact/.electronics-rules/routing-input.json",
+    "po_poprawkach/checks/writer-HANDOFF.md",
+    "po_poprawkach/checks/writer-seed-authoring.json",
+    "po_poprawkach/checks/corners-current.json",
+    "po_poprawkach/checks/baseline-corner-audit.json",
+    "po_poprawkach/checks/junction-current.json",
+    "po_poprawkach/checks/before-after-metrics.json",
+    "po_poprawkach/checks/geometry-current.json",
+    "po_poprawkach/checks/ERC.json",
+    "po_poprawkach/checks/DRC.json",
+    "po_poprawkach/checks/bounded-spacing.json",
+    "po_poprawkach/checks/strict-spacing.json",
+    "po_poprawkach/checks/refill.json",
+    "po_poprawkach/checks/Kelvin-negative-controls.json",
+    "po_poprawkach/SC09_detale_przed_po.png",
+    "po_poprawkach/BRINGUP.md"
+  ],
+  "findings": [],
+  "new_major_or_blocker_routing_findings": 0,
+  "retained_gates": [
+    "Genuine exact human stage decisions, provider/process/CAM confirmation and full Toolkit product release remain open.",
+    "Physical current/ripple/startup/OVP/discharge/hot-bias/loss/temperature/fault/surge/EMC/insulation and actual soldered/three-dimensional clearance qualification remain outstanding.",
+    "Guarded mains-referenced fixture, capacitor vent/support, wire strain relief and actual sample fit/thermal coupling require separate review before any separately authorized powered test.",
+    "Geometry and bounded finite package checks are not safety certification or qualification of protective coordination."
+  ],
+  "recommendation": "ready_for_human_review",
+  "unconditional_product_or_order_release": "blocked",
+  "human_stage_approval_given": false,
+  "physical_measurements_performed": false,
+  "source_or_package_files_modified": false
+}

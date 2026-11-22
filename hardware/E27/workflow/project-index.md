@@ -1,8 +1,8 @@
-# Current task: SC09-ROUTE03 routing correction
+# Current task: SC09-ROUTE04 routing correction
 
-Current sources: variants/integrated-shade/SC09_compact. [Current corrected packet](integrated-shade/compact-09/routing-junctions/po_poprawkach/README.md), [assessment and plan](integrated-shade/compact-09/routing-junctions/assessment-and-plan.md). PreviousCAT01catalogue-package is historical; exact before checkpoint is c04198ded93a3d8e1f3ca725176ef723da32d461.
+Current sources: variants/integrated-shade/SC09_compact. [Current corrected packet](integrated-shade/compact-09/routing-approaches/po_poprawkach/README.md), [assessment and plan](integrated-shade/compact-09/routing-approaches/assessment-and-plan.md). PreviousCAT01catalogue-package is historical; exact before checkpoint is 27674de71c9e1eec702d3ba235e44f3229676547.
 
-SameCAT01circuit:19references/46pins/11nets,17electronicpositions/16catalogueMPNs. PCB50x32mm/2L. RootsoleactiveCADwriter after privateimplementerhandoff. Current finalreview manifest: integrated-shade/compact-09/routing-junctions/review-inputs.json. FullToolkitproductreleaseFAIL; exactstage decisions and physicalqualification absent. No purchase/suppliermessage/poweredtest. Branchconcept/integrated-shade-nonisolated-buck;mainoutsidewrite scope.
+SameCAT01circuit:19references/46pins/11nets,17electronicpositions/16catalogueMPNs. PCB50x32mm/2L. RootsoleactiveCADwriter after privateimplementerhandoff. Current finalreview manifest: integrated-shade/compact-09/routing-approaches/review-inputs.json. FullToolkitproductreleaseFAIL; exactstage decisions and physicalqualification absent. No purchase/suppliermessage/poweredtest. Branchconcept/integrated-shade-nonisolated-buck;mainoutsidewrite scope.
 
 # E27 workflow index
 

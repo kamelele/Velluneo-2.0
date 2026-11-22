@@ -1,0 +1,116 @@
+{
+  "role": "Change Reviewer",
+  "actual_actor": "/root/routing_final_change",
+  "date": "2026-11-22",
+  "revision": "SC09-ROUTE04",
+  "manifest_sha256": "826ee8c787fbbfb5317bd4a06d0196bc3a2cdcdb7ece29e62b86ce43bd42a783",
+  "source_snapshot": "a713c25d4a04ca41a3723e1a3e01df1c6eed60a3302e9054cc0639208d010db1",
+  "PCB_sha256": "9b73c61c34dc28fceff2e9d2265fcfb1280053245c9840f4e7c0bb39d782fa87",
+  "scope": "Independent read-only bounded approach/chamfer review against immutable27674de baseline; no circuit redesign, human stage approval, physical qualification or unconditional order release.",
+  "checked_files": [
+    "Pinned Toolkit Change Reviewer role and R04 task contract",
+    "All230 frozen final inputs",
+    "Actual before/current nativePCB raw blocks and unchangedlibrary/model/rule/project/spatial files",
+    "Fresh independent nativeDRC,corner,junction,axis/port reruns",
+    "Current complete nativecopper map and independent same-net Kelvin audit",
+    "Sourcebound graph,spacing,fill,negativecontrol and releaseartifact records",
+    "Current fullcopper/layer/assembly/3D and approachdetail exports"
+  ],
+  "checks": {
+    "frozen_hashes_verified": 230,
+    "native19footprint_blocks_byteidentical": true,
+    "native10via_blocks_byteidentical": true,
+    "actual_PCB_diff_only_track_blocks_and_front_R03_to_R04_text": true,
+    "unchanged_source_files": [
+      "SC09_compact.kicad_pro",
+      "SC09_compact.kicad_dru",
+      "E27SC09.kicad_sym",
+      "PowerFlags.kicad_sym",
+      "SC09_compact.kicad_sch",
+      "bom-build.json",
+      "bom-build.csv",
+      "intended-connectivity.CAT01.json",
+      "source-basis.CAT01.json",
+      "footprint-geometry.json",
+      "routing-improvement-basis.json",
+      "spatial-constraints.json",
+      ".electronics-rules/config-state.json",
+      ".electronics-rules/routing-input.json",
+      ".electronics-rules/placement-input.json"
+    ],
+    "unchanged_local_library_model_files": 58,
+    "unchanged55pair_matrix_and_finite_package_assessment": true,
+    "physical_pin_sets_equal_fresh_XML": true,
+    "actual_consumer_digest_unchanged": "998c72be2210e7a57131e627e2c0e62128d31ab9e2c0ef09bd397a2aee28e749",
+    "current135native_copper_UUID_map_complete": true,
+    "native_saved_track_net_identity": true,
+    "before_track_segments": 114,
+    "after_track_segments": 125,
+    "vias": 10,
+    "track_length_mm": 329.3317345843603,
+    "SOURCE_pour_mm2": 0,
+    "fresh_native_DRC": {
+      "violations": 0,
+      "unconnected": 0,
+      "schematic_parity": 0,
+      "report_sha256": "255870476c3ec1ba5c9a22b4543ae78db0e6a7b29e8f611900f7c173ea37bb7f"
+    },
+    "fresh_corner_audit": {
+      "baseline_exposed90junctions": 12,
+      "current_exposed90junctions": 0,
+      "retained_junction_points_in_or_on_terminals": 5,
+      "report_sha256": "5040849dbe72ea2cf01a266b8a0e6b07b4f33fe6da58e1c5b6f47e5368ae27d5",
+      "interpretation": "Membership tests concern the junction point against outward native pad/via polygons. They do not prove the entire copper bend or stroke lies within the pad. Necessary branch topology is separately retained."
+    },
+    "fresh_junction_audit": {
+      "offcentre_via_faces": 0,
+      "short_parallel_stairs": 0,
+      "short_side_spurs": 0,
+      "trace_contacting_faces": 19,
+      "all19trace_faces_centred": true,
+      "remaining_face": "D1.2 direct pad connection on B.Cu; not claimed a20th trace-centred face.",
+      "retained_width_step": "Intentional SOURCE0.4/0.6mm R5.1pad-centre power branch, not a parallel microstair.",
+      "report_sha256": "ac60d52ac2d2cc13e3e8e6cfe966126e9d681f99ee639b4b968de46f73152393"
+    },
+    "fresh_axis_port_audit": {
+      "non45_outside_pads": 0,
+      "acute_tips": 0,
+      "duplicates": 0,
+      "collinear_candidates": 0,
+      "ACright_LEDleft": true,
+      "minimum_port_centre_separation_mm": 46.80000000000001,
+      "report_sha256": "bd21d6d3d404b290bc0af7d73af13aac9b347f5efdc8af9561f961c809997001"
+    },
+    "independent_Kelvin_saved_copper": {
+      "passed": true,
+      "Kelvin_native_objects": 18,
+      "missing_declared_UUIDs": [],
+      "other_FB_intersections_checked": 2,
+      "findings": [],
+      "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+    },
+    "Kelvin_negative_controls_reject_faults": true,
+    "bounded55pair_pass": true,
+    "strict_failures_by_type": {
+      "copper_edge_setback": 12,
+      "copper_spacing": 23
+    },
+    "registered_artifact_hashes_match": true,
+    "fabrication_members": 9,
+    "fabrication_CRC_error": null
+  },
+  "findings": [],
+  "retained_scope_notes": [
+    "Five residual90degree junction points are in/on actual terminals; neither this review nor the point-membership audit claims complete copper-bend containment.",
+    "Additional diagonal segments implement the requested chamfers; count125vs114 is expected while totalroute length reduces329.3317vs331.9678mm. Necessary Y/Tconnections and ACclearance offset remain.",
+    "Exact human graph/spatial/stage approvals, provider/process confirmation and physical current/thermal/fault/surge/EMC/insulation qualification remain open. FullToolkitFAIL is not relabelled a manufacturing release.",
+    "C6external5mmvent and sample forming/support/strain relief require actual fixture qualification. No order or powered test is authorized by this report."
+  ],
+  "invalidation_impact": "ROUTE03 copper/export review is historical for modifiedapproaches. Component/via placements, circuit, MPNs, libraries, rules and spatial intent are retained unchanged; current ROUTE04 nativecopper/exports require their own engineering/human stage review.",
+  "major_or_blocker_change_regressions": 0,
+  "recommendation": "ready_for_human_review",
+  "approval_fabricated": false,
+  "physical_measurements": false,
+  "order": false,
+  "supplier_message": false
+}

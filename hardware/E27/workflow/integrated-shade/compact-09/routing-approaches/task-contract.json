@@ -1,0 +1,18 @@
+{
+ "id":"SC09-ROUTE04",
+ "date":"2026-11-22",
+ "owner":"Kamil",
+ "coordinator":"/root",
+ "base_commit":"27674de71c9e1eec702d3ba235e44f3229676547",
+ "branch":"concept/integrated-shade-nonisolated-buck",
+ "request":"Simplify the lower Kelvin via approach shown by the owner, inspect the entire PCB for analogous avoidable endpoint elbows, preserve connections, save on the same branch without changing main, and show complete copper layers.",
+ "requirements":[
+  {"id":"R04-APPROACH","acceptance":"Replace the F.Cu receiver-via short90degree endpoint elbow by a deliberate shorter45degree approach with the via unchanged; inspect and simplify analogous avoidable two-track elbows where electrical/space conditions allow."},
+  {"id":"R04-INVARIANTS","acceptance":"Preserve component/pad/via placement, circuit/MPNs/models,50x32mm/2L geometry, inputRIGHT/outputLEFT, rule floors and selected spatial/consumer intent. Preserve necessary Y/Tjunctions and clearance detours; do not disconnect branches for appearance."},
+  {"id":"R04-VERIFY","acceptance":"Fresh nativeERC/DRC/parity/unrouted0, exact physical-pin/placement invariance,55pair bounded spacing, centre/junction/axis45 checks, current Kelvin purpose map and no extra force/sense join outside physicalR5. Negative Kelvin controls remain meaningful."},
+  {"id":"R04-DELIVER","acceptance":"Current whole-board copper layers shown inline, nativeKiCad, source-bound fabrication/assembly/3D exports, before/after approach detail and four distinct read-only role reviews of final frozen inputs. Branch publication verified with main/unrelated files unchanged."}
+ ],
+ "ownership":{"active_customer_CAD":"/root","private_implementer":"/root/route04_writer","private_paths":[".work/routing04","external work/routing04/writer"],"one_active_CAD_writer":true},
+ "authority":{"engineering_correction":true,"fabricated_human_stage_approval":false,"supplier_message":false,"order":false,"powered_test":false,"main_write":false},
+ "retained_gates":"Physical qualification and genuine human/process decisions remain explicit; clean CAD is not unconditional product/manufacturing release."
+}
