@@ -21,3 +21,6 @@ CAT01 supersedes every customT1 sample/winding task with factoryMSS1210H-125KED 
 
 
 ROUTE02: J1mains input is at the RIGHTedge, J2LED output at the LEFTedge. Use actual pin CSV/assembly-back drawing; never infer polarity from an old layout. C6maximumcan fitsPCB, but5mmfree vent air is required above its upperedge. Inspect manually formed leads/support and wire strain relief. Close C6/T1placement requires actual temperature measurement. No previous copper-dependent U1temperature prediction transfers. No tests have been performed.
+
+
+ROUTE03onlychangestracejunctions/viaattachments. Usecurrent pinCSV, assembly drawings and manufacturedrevision; do not reuseolderGerbers/drills. Electronics/placement/physicaltestlimitsremainunchanged. No testsperformed.

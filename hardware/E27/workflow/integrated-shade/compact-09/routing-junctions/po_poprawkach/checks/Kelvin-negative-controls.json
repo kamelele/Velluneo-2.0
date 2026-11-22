@@ -1,0 +1,59 @@
+{
+  "actual_actor": "/root",
+  "source_sha256": "fc2bf0f2e865e23579180fee47f635079a686d576bb84a882f9e91ac462f29fc",
+  "source_unchanged": true,
+  "baseline": {
+    "passed": true,
+    "Kelvin_native_objects": 14,
+    "missing_declared_UUIDs": [],
+    "other_FB_intersections_checked": 2,
+    "findings": [],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "missing_UUID_control": {
+    "passed": false,
+    "Kelvin_native_objects": 14,
+    "missing_declared_UUIDs": [
+      "00000000-0000-4000-8000-000000000001"
+    ],
+    "other_FB_intersections_checked": 2,
+    "findings": [],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "same_net_force_join_control": {
+    "passed": false,
+    "Kelvin_native_objects": 14,
+    "missing_declared_UUIDs": [],
+    "other_FB_intersections_checked": 6,
+    "findings": [
+      {
+        "Kelvin": "1fb4428d-51f4-4f94-bb55-786253a9c06d",
+        "other_FB": "4a08f39a-277a-43e1-93e6-f2e09f698421",
+        "layer": "B.Cu",
+        "overlap_outside_R5_mm2": 0.1094124
+      },
+      {
+        "Kelvin": "8e43e883-c5a1-492c-8f5a-7df850a83250",
+        "other_FB": "4a08f39a-277a-43e1-93e6-f2e09f698421",
+        "layer": "B.Cu",
+        "overlap_outside_R5_mm2": 0.114668565613
+      },
+      {
+        "Kelvin": "cb79fa3e-48ad-4c2d-bf70-7d4c5d62f1dc",
+        "other_FB": "4a08f39a-277a-43e1-93e6-f2e09f698421",
+        "layer": "B.Cu",
+        "overlap_outside_R5_mm2": 0.0047707112935
+      },
+      {
+        "Kelvin": "f303f056-dadc-4bfb-83a7-0282c540b648",
+        "other_FB": "4a08f39a-277a-43e1-93e6-f2e09f698421",
+        "layer": "B.Cu",
+        "overlap_outside_R5_mm2": 0.15826695
+      }
+    ],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "invalid_fixture_sha256": "408cccd2f057022d4a379fb3f9048c44bbda4bc6292e202b86f3e5ce74d03cbd",
+  "added_track_uuid": "4a08f39a-277a-43e1-93e6-f2e09f698421",
+  "scope": "Deliberately invalid isolated fixtures validate missing-object and same-net intersection detection. Native different-net DRC is not claimed clean for these fixtures. They are never adopted into customer CAD."
+}

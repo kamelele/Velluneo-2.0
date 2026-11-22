@@ -1,0 +1,81 @@
+{
+  "role": "Reality Checker",
+  "actual_actor": "/root/route02_final_reality",
+  "revision": "SC09-ROUTE03",
+  "date": "2026-11-22",
+  "manifest_sha256": "0ec22fec1419021eb3501a1e2c4ecd8a6d7636c5c3c514a6eb1f34d0d52a7107",
+  "source_snapshot": "57393578f6e9afabbf727836a167629fc79a24b8111609efeb443acf4ce156be",
+  "PCB_sha256": "fc2bf0f2e865e23579180fee47f635079a686d576bb84a882f9e91ac462f29fc",
+  "base_commit": "c04198ded93a3d8e1f3ca725176ef723da32d461",
+  "scope": "Independent read-only assessment of actual trace-junction and via-attachment correction. Existing circuit, placement and product qualification are outside the redesign scope; their retained limits are still reviewed for truthful disposition.",
+  "all_frozen_input_hashes_verified": 228,
+  "actual_checks": [
+    {
+      "basis": "Independent SHA256 verification of all228 files against the exact frozen manifest",
+      "result": "All hashes match. Final native PCB isfc2bf0f2...; no CAD/configuration/package file was written by this reviewer."
+    },
+    {
+      "basis": "Independent pinnedKiCad10.0.6 rawPCB_IO_MGR native read and semantic before/after comparison",
+      "result": "19references/46pads unchanged. Footprint positions, pad positions/nets/sizes/shapes/layers/angles/drills, fields includingMPNs, values, FPIDs,DNP and model assignments are equal. All19 complete raw footprint blocks are exactly equal, including model transforms. All58 local footprint/model assets are byte-identical. Schematic,BOM,CAT01intent/sourcebasis,.kicad_pro/.dru, spatial basis/contract and generated consumers/config-state are byte-identical."
+    },
+    {
+      "basis": "Independent native track/via inventory and raw saved-net parity",
+      "result": "114tracksegments,10throughvias,331.96777355mm total tracks. All114 actual segment directions are axis/45degree within1um. Saved track/via net identities match the raw file. SOURCE pours remain0. Current widths are0.3/0.4/0.6mm; the intentionally retained SOURCE width transition is not misreported as a defect."
+    },
+    {
+      "basis": "Independent mathematical recomputation of per-face via centreline distances and short parallel-run steps from saved native tracks, on baseline and current boards",
+      "result": "Baseline has2 offset via faces: BUS_RECT B.Cu distance0.025mm and DC_RETURN F.Cu distance0.2828427mm. Current has0 offset contacted faces. Current has0 short parallel-run steps; baseline has6 visible steps after excluding the additional0.282843mm AC_FUSED piece wholly insideRV1.1. The reviewer independently checked that exclusion with native copper polygons."
+    },
+    {
+      "basis": "Actual native before/after closeups and saved via/trunk geometry",
+      "result": "SC09_detale_przed_po.png shows the real C1 approaches and via/rectifier runs without their former tiny parallel steps. D1 DC via is now on the F horizontal trunk at(21.2,16.2), replacing its former0.2mm side attachment. BUS_RECT via matches the BR1escape at(33,2.325); DC diagonal via is centred at(16.5,20.1). A centred two-leg Kelvin receiver endpoint is correctly retained rather than flattened as a false passing-trunk spur."
+    },
+    {
+      "basis": "Independent recomputation of actual saved-copper same-net Kelvin intersections against the current full UUID/purpose map",
+      "result": "PASS:14per-face Kelvin objects,0missing declared UUIDs, no extra force/sense join outside permitted physicalR5.2. Two contacts with other FB copper are confined to that pad. Placement and original protected Kelvin geometry are unchanged by this junction correction."
+    },
+    {
+      "basis": "Inspected source-bound actual native and independent reports, with independently verified artifact hashes",
+      "result": "ERC0,DRC0,unconnected0,schematicparity0; exact two-pass refill match. Full55-pair bounded laboratory screenPASS. Strict screen remainsFAIL with11edge and19different-net spacing findings under its stricter original edge/no-concession scope. Negative-control baseline passes and deliberately missing-UUID/same-net force-join fixtures are rejected. No strict or standards approval is inferred."
+    },
+    {
+      "basis": "Review of declared electrical/thermal/process conditions and unchanged selected spatial contract",
+      "result": "230V/50Hz laboratory circuit and its207-253VAC screen remain unchanged; output remains nonisolated and notSELV. Direct C5 bypass, compact floating SOURCE and physicalR5 Kelvin branch are retained. Neutral branch now consistently matches the already0.3mm trunk and unchanged POWER minimum; this does not newly qualify protective/fault coordination. C6 external5mm vent and close coil/capacitor thermal coupling remain unqualified fixture/sample conditions. No new current, efficiency, temperature, EMC or insulation measurement is claimed."
+    }
+  ],
+  "checked_files": [
+    "routing-junctions/review-inputs.json",
+    "routing-junctions/assessment-and-plan.md",
+    "SC09_compact/SC09_compact.kicad_pcb",
+    "routing03/baseline-source/SC09_compact.kicad_pcb",
+    "SC09_compact/spatial-constraints.json",
+    "SC09_compact/.electronics-rules/routing-input.json",
+    "po_poprawkach/checks/writer-HANDOFF.md",
+    "po_poprawkach/checks/writer-seed-authoring.json",
+    "po_poprawkach/checks/placement-invariance.json",
+    "po_poprawkach/checks/junction-current.json",
+    "po_poprawkach/checks/baseline-junction-audit.json",
+    "po_poprawkach/checks/before-after-metrics.json",
+    "po_poprawkach/checks/geometry-current.json",
+    "po_poprawkach/checks/ERC.json",
+    "po_poprawkach/checks/DRC.json",
+    "po_poprawkach/checks/bounded-spacing.json",
+    "po_poprawkach/checks/strict-spacing.json",
+    "po_poprawkach/checks/refill.json",
+    "po_poprawkach/checks/Kelvin-negative-controls.json",
+    "po_poprawkach/SC09_detale_przed_po.png"
+  ],
+  "findings": [],
+  "new_major_or_blocker_routing_findings": 0,
+  "retained_gates": [
+    "Exact genuine human stage decisions, provider/process/CAM confirmation and full Toolkit product release are still open; a review recommendation does not approve them.",
+    "Current/ripple/startup/OVP/discharge/hot-bias/loss/temperature/fault/surge/EMC/insulation and actual soldered/three-dimensional clearance tests remain outstanding.",
+    "Guarded mains-referenced fixture, capacitor vent/support, wire strain relief and sample fit/thermal coupling need separate physical qualification before any separately authorized powered test.",
+    "The bounded finite package geometry assessment is not a normative insulation waiver or qualification of protective coordination."
+  ],
+  "recommendation": "ready_for_human_review",
+  "unconditional_product_or_order_release": "blocked",
+  "human_stage_approval_given": false,
+  "physical_measurements_performed": false,
+  "source_or_package_files_modified": false
+}

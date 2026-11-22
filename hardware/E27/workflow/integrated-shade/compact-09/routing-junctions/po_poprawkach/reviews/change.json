@@ -1,0 +1,160 @@
+{
+  "role": "Change Reviewer",
+  "actual_actor": "/root/routing_final_change",
+  "date": "2026-11-22",
+  "revision": "SC09-ROUTE03",
+  "manifest_sha256": "0ec22fec1419021eb3501a1e2c4ecd8a6d7636c5c3c514a6eb1f34d0d52a7107",
+  "source_snapshot": "57393578f6e9afabbf727836a167629fc79a24b8111609efeb443acf4ce156be",
+  "PCB_sha256": "fc2bf0f2e865e23579180fee47f635079a686d576bb84a882f9e91ac462f29fc",
+  "scope": "Independent read-only surgical routing/junction change review against immutable c04198ded ROUTE02. Not human stage approval, product qualification or unconditional order release.",
+  "checked_files": [
+    "All228 final frozen inputs",
+    "Pinned Toolkit Change Reviewer role/task contract",
+    "Native before/current PCB and exact19embeddedfootprint blocks",
+    "Allsourcefootprints/models, unchanged functional schematic/BOM/intent/rules/project/spatial/consumer files",
+    "Fresh independent nativeDRC, junction and angle/port reruns",
+    "Independent saved-copper Kelvin audit and critical geometry comparison",
+    "Current native closeup collage, full layer/assembly/3Dexports",
+    "Current sourcebound9-member Gerber/drill archive and artifact registration"
+  ],
+  "checks": {
+    "frozen_hashes_verified": 228,
+    "native19footprints_byteidentical": true,
+    "native46pad_geometry_fields_values_MPN_model_transforms_identical": true,
+    "outline_exactly_unchanged": true,
+    "unchanged_source_files": [
+      "SC09_compact.kicad_pro",
+      "SC09_compact.kicad_dru",
+      "E27SC09.kicad_sym",
+      "PowerFlags.kicad_sym",
+      "SC09_compact.kicad_sch",
+      "bom-build.json",
+      "bom-build.csv",
+      "intended-connectivity.CAT01.json",
+      "source-basis.CAT01.json",
+      "footprint-geometry.json",
+      "routing-improvement-basis.json",
+      "spatial-constraints.json",
+      ".electronics-rules/config-state.json",
+      ".electronics-rules/routing-input.json",
+      ".electronics-rules/placement-input.json"
+    ],
+    "all_local_library_model_files_unchanged": 58,
+    "native_via_UUIDs_nets_diameters_drills_layers_unchanged": true,
+    "four_via_centre_changes": {
+      "16adb991-3e74-4cf8-84ad-1a62abdd4fe2": {
+        "net": "/BUS_RECT",
+        "before": [
+          33.19999899999999,
+          2.299999999999997
+        ],
+        "after": [
+          33.0,
+          2.325000000000003
+        ]
+      },
+      "8c91fc85-362f-40a6-8303-0340e39b2c74": {
+        "net": "/BUS_FILTERED",
+        "before": [
+          26.900000000000006,
+          9.575000000000003
+        ],
+        "after": [
+          27.099999999999994,
+          9.599999999999994
+        ]
+      },
+      "cb0de63c-eb06-40d4-aa7d-69b994080126": {
+        "net": "/DC_RETURN",
+        "before": [
+          16.700000000000003,
+          20.299999999999997
+        ],
+        "after": [
+          16.5,
+          20.099999999999994
+        ]
+      },
+      "d355cf10-6774-48cf-99c2-adaaa67f5a00": {
+        "net": "/DC_RETURN",
+        "before": [
+          21.200000000000003,
+          16.0
+        ],
+        "after": [
+          21.200000000000003,
+          16.200000000000003
+        ]
+      }
+    },
+    "before_segments": 128,
+    "after_segments": 114,
+    "through_vias": 10,
+    "track_length_mm": 331.9677735536811,
+    "widths_mm": [
+      0.3,
+      0.4,
+      0.6
+    ],
+    "exact_full_copper_map_UUIDs_match": true,
+    "Kelvin_saved_copper_independent_rerun": {
+      "passed": true,
+      "Kelvin_native_objects": 14,
+      "missing_declared_UUIDs": [],
+      "other_FB_intersections_checked": 2,
+      "findings": [],
+      "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+    },
+    "original_Kelvin_geometry_unchanged": true,
+    "Kelvin_negative_controls_reject_faults": true,
+    "SOURCE_pour_mm2": 0,
+    "native_saved_track_net_identity_preserved": true,
+    "fresh_native_DRC": {
+      "violations": 0,
+      "unconnected": 0,
+      "schematic_parity": 0,
+      "report_sha256": "0ed865721c1434b938f3f11b56cbd8a64ba7b5c46fdfbdb1c9c59f1ab0221511"
+    },
+    "fresh_junction_audit": {
+      "offcentre_via_faces": 0,
+      "short_parallel_stairs": 0,
+      "short_side_spurs": 0,
+      "track_contacting_faces": 19,
+      "all_track_contacting_faces_centerline_through_via_centre": true,
+      "pad_only_face": "D1.2 directly feeds B.Cu of DC via d355cf10 at21.2,16.2; this is not claimed a20th trace-centred face.",
+      "intentional_width_transition": "0.4/0.6mm SOURCE junction at14.6,6 is exactly physical R5.1 padcentre; retained current-branch geometry, not a microscopic parallel-run stair.",
+      "report_sha256": "03c11592650553285656658612c3195a5e88bb6ece04c614de77acb0fd86ee21"
+    },
+    "fresh_axis_port_audit": {
+      "non45_outside_pads": 0,
+      "acute_tips": 0,
+      "duplicates": 0,
+      "collinear_candidates": 0,
+      "opposite_ports_unchanged": true,
+      "report_sha256": "af1acf6a210cfab4b93c4d33b4d34475c8ff5b84ec9e2b1b9816b25b7682ef5d"
+    },
+    "expected_XML_pinsets_equal": true,
+    "bounded55pairs_pass": true,
+    "strict_findings": {
+      "copper_edge_setback": 11,
+      "copper_spacing": 19
+    },
+    "artifact_registration_hashes_match": true,
+    "Gerber_drill_members": 9,
+    "Gerber_drill_CRC_error": null,
+    "native_four_region_closeups_visually_reviewed": true
+  },
+  "findings": [],
+  "retained_release_gates": [
+    "Unchanged exact human graph/spatial/stage decisions, provider/process confirmation and physical electrical/thermal/fault/surge/EMC/insulation validation remain open. Full Toolkit productreleaseFAIL is retained.",
+    "Strict no-concession1mm-edge screen remainsFAIL; bounded native/lab0.5mm-edge and exact finite package scopes are not standards waivers.",
+    "C6full5mmexternalvent, sample leadforming/support/solderclearance/wirestrainrelief require actual guarded fixture review. No measurements or certified fit are inferred."
+  ],
+  "invalidation_impact": "ROUTE02 copper/manufacturing exports are historical. New currentPCB andsourceboundexports require their own stage review; unchanged placements, circuitry, catalogue parts and spatial intent are retained explicitly.",
+  "major_or_blocker_change_regressions": 0,
+  "recommendation": "ready_for_human_review",
+  "physical_measurements": false,
+  "approval_fabricated": false,
+  "order": false,
+  "supplier_message": false
+}

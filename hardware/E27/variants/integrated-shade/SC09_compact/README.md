@@ -1,7 +1,5 @@
-# SC09-ROUTE02: opposite-edge ports and axis/45degree routing
+# SC09-ROUTE03 junction cleanup
 
-Current engineering packet: hardware/E27/workflow/integrated-shade/compact-09/routing-professional/po_poprawkach. Prior ROUTE01 routing-improvement packet and earlier catalogue/prototype packages are historical. Before commit2327c0c2a86f98fac59d7e93f4e6a222c44ef444 is preserved.
+Current packet: hardware/E27/workflow/integrated-shade/compact-09/routing-junctions/po_poprawkach. Same CAT01circuit and ROUTE02component placements, models, inline opposite-edge ports and mechanical/spatial basis. Current corrected native PCB has rebuilt clean terminal/via junctions; the current packet includes magnified actual before/after plots and independent junction checks. Previous full packet remains at commitc04198ded93a3d8e1f3ca725176ef723da32d461.
 
-SameCAT01circuit:19references/46pins/11nets and unchanged catalogue electronics. PCB50x32mm,2layers. Barewire solder lands are inline: J1mainsinput atRIGHTedge; J2LEDoutput atLEFTedge. Selected spatial contract and routing-improvement-basis.json define actual maximum C6geometry/fixture vent conditions.
-
-Fresh native and independent engineering checks are source-bound in the current packet. No broad SOURCEpours; direct C5 and physicalR5 Kelvin join retained. Angle/port checks do not replace electrical clearance, thermal or physical insulation qualification. FullToolkitproductrelease remainsFAIL with exacthuman/physical/process gates explicit. No order, supplier message or powered test.
+PCB50x32mm/2layers; mains inputRIGHT and LEDoutputLEFT in common top CAD coordinates. C6caninsidePCB with5mmexternalvent air abovePCB; fixture/thermal qualification remains open. Compact SOURCE and physicalR5 Kelvin topology are retained. Existing electronic calculation assumptions remain unmeasured. FullToolkitproductreleaseFAIL/human/physical/process gates remain explicit. No order, supplier communication or powered test.

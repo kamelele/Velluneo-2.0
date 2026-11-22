@@ -1,0 +1,382 @@
+{
+  "actual_actor": "/root",
+  "date": "2026-11-22",
+  "before": {
+    "PCB_sha256": "1dd12e13bf94125f6eff2c59fd72c46a02c56de0f31db9287050db983ddf5bee",
+    "footprints": 19,
+    "physical_pads": 46,
+    "track_segments": 128,
+    "vias": 10,
+    "track_length_sum_mm": 332.80879047873464,
+    "shorter_than_0_30_mm": 14,
+    "at_most_0_10_mm_tolerance_1nm": 3,
+    "exact_duplicate_track_pairs": [],
+    "net_track_statistics": {
+      "/BUS_RECT": {
+        "length_mm": 22.482086117392118,
+        "segments": 7
+      },
+      "/BUS_FILTERED": {
+        "length_mm": 44.34422074112307,
+        "segments": 15
+      },
+      "/DC_RETURN": {
+        "length_mm": 72.44528855298852,
+        "segments": 20
+      },
+      "/AC_FUSED": {
+        "length_mm": 29.036753943922378,
+        "segments": 12
+      },
+      "/AC_N": {
+        "length_mm": 36.13454544295049,
+        "segments": 17
+      },
+      "/LED_PLUS": {
+        "length_mm": 48.35056633785213,
+        "segments": 13
+      },
+      "/FB_INDUCTOR": {
+        "length_mm": 36.116296885077716,
+        "segments": 22
+      },
+      "/M": {
+        "length_mm": 8.17826947828331,
+        "segments": 6
+      },
+      "/AC_L": {
+        "length_mm": 6.062741699796952,
+        "segments": 2
+      },
+      "/SW_SOURCE": {
+        "length_mm": 26.73845237791561,
+        "segments": 11
+      },
+      "/BP": {
+        "length_mm": 2.9195689014324224,
+        "segments": 3
+      }
+    },
+    "SOURCE_area": [
+      {
+        "layer": "F.Cu",
+        "SOURCE_saved_copper_union_mm2": 0.0
+      },
+      {
+        "layer": "B.Cu",
+        "SOURCE_saved_copper_union_mm2": 18.2800552255155
+      }
+    ],
+    "SOURCE_pour_mm2": 0,
+    "endpoint_proxies": [
+      {
+        "pair": "C6.1 to T1.1",
+        "a_mm": [
+          4.25,
+          26.0
+        ],
+        "b_mm": [
+          20.0,
+          12.75
+        ],
+        "pad_center_distance_mm": 20.582152462752774
+      },
+      {
+        "pair": "C6.2 to D1.2",
+        "a_mm": [
+          9.25,
+          26.0
+        ],
+        "b_mm": [
+          21.200000000000003,
+          16.0
+        ],
+        "pad_center_distance_mm": 15.582121164976225
+      },
+      {
+        "pair": "C5.1 to U1.1",
+        "a_mm": [
+          23.5,
+          2.0
+        ],
+        "b_mm": [
+          25.224999999999994,
+          3.7950000000000017
+        ],
+        "pad_center_distance_mm": 2.489507983518026
+      },
+      {
+        "pair": "C5.2 to nearest U1 SOURCE",
+        "pad_center_distance_mm": 2.489507983518026
+      }
+    ],
+    "pad_net_map": {
+      "L1.1": "/BUS_RECT",
+      "L1.2": "/BUS_FILTERED",
+      "C1.1": "/BUS_RECT",
+      "C1.2": "/DC_RETURN",
+      "C4.1": "/BUS_FILTERED",
+      "C4.2": "/DC_RETURN",
+      "RV1.1": "/AC_FUSED",
+      "RV1.2": "/AC_N",
+      "T1.1": "/LED_PLUS",
+      "T1.2": "/FB_INDUCTOR",
+      "R7.1": "/M",
+      "R7.2": "/LED_PLUS",
+      "RF1.1": "/AC_L",
+      "RF1.2": "/AC_FUSED",
+      "C6.1": "/LED_PLUS",
+      "C6.2": "/DC_RETURN",
+      "J1.1": "/AC_L",
+      "J1.2": "/AC_N",
+      "R4.1": "/M",
+      "R4.2": "/SW_SOURCE",
+      "R8.1": "/LED_PLUS",
+      "R8.2": "/DC_RETURN",
+      "BR1.1": "/BUS_RECT",
+      "BR1.2": "/AC_FUSED",
+      "BR1.3": "/DC_RETURN",
+      "BR1.4": "/AC_N",
+      "R6.1": "/SW_SOURCE",
+      "R6.2": "/FB_INDUCTOR",
+      "R9.1": "/LED_PLUS",
+      "R9.2": "/DC_RETURN",
+      "U1.1": "/BP",
+      "U1.2": "/M",
+      "U1.3": "/FB_INDUCTOR",
+      "U1.4": "/BUS_FILTERED",
+      "U1.5": "/SW_SOURCE",
+      "U1.6": "/SW_SOURCE",
+      "U1.7": "/SW_SOURCE",
+      "U1.8": "/SW_SOURCE",
+      "D1.1": "/FB_INDUCTOR",
+      "D1.2": "/DC_RETURN",
+      "J2.1": "/LED_PLUS",
+      "J2.2": "/DC_RETURN",
+      "C5.1": "/BP",
+      "C5.2": "/SW_SOURCE",
+      "R5.1": "/SW_SOURCE",
+      "R5.2": "/FB_INDUCTOR"
+    },
+    "MPNs": {
+      "L1": "3m3 / EMI",
+      "C1": "47n / 400V",
+      "C4": "150n / 630V",
+      "RV1": "275 VAC",
+      "T1": "1m2 / 400V catalogue",
+      "R7": "390k / HVR25",
+      "RF1": "10R / 2W FUSIBLE",
+      "C6": "150u / 100V",
+      "J1": "230 VAC",
+      "R4": "12k4",
+      "R8": "68k",
+      "BR1": "MB10S-13",
+      "R6": "3R65",
+      "R9": "68k",
+      "U1": "LYT1603D",
+      "D1": "US1J / 600V",
+      "J2": "20S LED MODULE",
+      "C5": "4u7 / 25V",
+      "R5": "0R68 / 0.5W"
+    },
+    "layer_count": 2,
+    "board_thickness_mm": 1.6,
+    "native_loaded_track_net_parity": true,
+    "source_unchanged": true
+  },
+  "after": {
+    "PCB_sha256": "fc2bf0f2e865e23579180fee47f635079a686d576bb84a882f9e91ac462f29fc",
+    "footprints": 19,
+    "physical_pads": 46,
+    "track_segments": 114,
+    "vias": 10,
+    "track_length_sum_mm": 331.9677735536811,
+    "shorter_than_0_30_mm": 3,
+    "at_most_0_10_mm_tolerance_1nm": 1,
+    "exact_duplicate_track_pairs": [],
+    "net_track_statistics": {
+      "/BUS_RECT": {
+        "length_mm": 22.67172977833279,
+        "segments": 6
+      },
+      "/BUS_FILTERED": {
+        "length_mm": 44.24170811453836,
+        "segments": 12
+      },
+      "/DC_RETURN": {
+        "length_mm": 73.02782672563593,
+        "segments": 19
+      },
+      "/AC_FUSED": {
+        "length_mm": 29.041042558696056,
+        "segments": 8
+      },
+      "/AC_N": {
+        "length_mm": 35.96028137423857,
+        "segments": 14
+      },
+      "/LED_PLUS": {
+        "length_mm": 48.42985565973347,
+        "segments": 14
+      },
+      "/FB_INDUCTOR": {
+        "length_mm": 36.116296885077716,
+        "segments": 19
+      },
+      "/M": {
+        "length_mm": 7.528269478283311,
+        "segments": 6
+      },
+      "/AC_L": {
+        "length_mm": 6.062741699796952,
+        "segments": 2
+      },
+      "/SW_SOURCE": {
+        "length_mm": 25.968452377915607,
+        "segments": 11
+      },
+      "/BP": {
+        "length_mm": 2.9195689014324224,
+        "segments": 3
+      }
+    },
+    "SOURCE_area": [
+      {
+        "layer": "F.Cu",
+        "SOURCE_saved_copper_union_mm2": 0.0
+      },
+      {
+        "layer": "B.Cu",
+        "SOURCE_saved_copper_union_mm2": 18.2800552255155
+      }
+    ],
+    "SOURCE_pour_mm2": 0,
+    "endpoint_proxies": [
+      {
+        "pair": "C6.1 to T1.1",
+        "a_mm": [
+          4.25,
+          26.0
+        ],
+        "b_mm": [
+          20.0,
+          12.75
+        ],
+        "pad_center_distance_mm": 20.582152462752774
+      },
+      {
+        "pair": "C6.2 to D1.2",
+        "a_mm": [
+          9.25,
+          26.0
+        ],
+        "b_mm": [
+          21.200000000000003,
+          16.0
+        ],
+        "pad_center_distance_mm": 15.582121164976225
+      },
+      {
+        "pair": "C5.1 to U1.1",
+        "a_mm": [
+          23.5,
+          2.0
+        ],
+        "b_mm": [
+          25.224999999999994,
+          3.7950000000000017
+        ],
+        "pad_center_distance_mm": 2.489507983518026
+      },
+      {
+        "pair": "C5.2 to nearest U1 SOURCE",
+        "pad_center_distance_mm": 2.489507983518026
+      }
+    ],
+    "pad_net_map": {
+      "L1.1": "/BUS_RECT",
+      "L1.2": "/BUS_FILTERED",
+      "C1.1": "/BUS_RECT",
+      "C1.2": "/DC_RETURN",
+      "C4.1": "/BUS_FILTERED",
+      "C4.2": "/DC_RETURN",
+      "RV1.1": "/AC_FUSED",
+      "RV1.2": "/AC_N",
+      "T1.1": "/LED_PLUS",
+      "T1.2": "/FB_INDUCTOR",
+      "R7.1": "/M",
+      "R7.2": "/LED_PLUS",
+      "RF1.1": "/AC_L",
+      "RF1.2": "/AC_FUSED",
+      "C6.1": "/LED_PLUS",
+      "C6.2": "/DC_RETURN",
+      "J1.1": "/AC_L",
+      "J1.2": "/AC_N",
+      "R4.1": "/M",
+      "R4.2": "/SW_SOURCE",
+      "R8.1": "/LED_PLUS",
+      "R8.2": "/DC_RETURN",
+      "BR1.1": "/BUS_RECT",
+      "BR1.2": "/AC_FUSED",
+      "BR1.3": "/DC_RETURN",
+      "BR1.4": "/AC_N",
+      "R6.1": "/SW_SOURCE",
+      "R6.2": "/FB_INDUCTOR",
+      "R9.1": "/LED_PLUS",
+      "R9.2": "/DC_RETURN",
+      "U1.1": "/BP",
+      "U1.2": "/M",
+      "U1.3": "/FB_INDUCTOR",
+      "U1.4": "/BUS_FILTERED",
+      "U1.5": "/SW_SOURCE",
+      "U1.6": "/SW_SOURCE",
+      "U1.7": "/SW_SOURCE",
+      "U1.8": "/SW_SOURCE",
+      "D1.1": "/FB_INDUCTOR",
+      "D1.2": "/DC_RETURN",
+      "J2.1": "/LED_PLUS",
+      "J2.2": "/DC_RETURN",
+      "C5.1": "/BP",
+      "C5.2": "/SW_SOURCE",
+      "R5.1": "/SW_SOURCE",
+      "R5.2": "/FB_INDUCTOR"
+    },
+    "MPNs": {
+      "L1": "3m3 / EMI",
+      "C1": "47n / 400V",
+      "C4": "150n / 630V",
+      "RV1": "275 VAC",
+      "T1": "1m2 / 400V catalogue",
+      "R7": "390k / HVR25",
+      "RF1": "10R / 2W FUSIBLE",
+      "C6": "150u / 100V",
+      "J1": "230 VAC",
+      "R4": "12k4",
+      "R8": "68k",
+      "BR1": "MB10S-13",
+      "R6": "3R65",
+      "R9": "68k",
+      "U1": "LYT1603D",
+      "D1": "US1J / 600V",
+      "J2": "20S LED MODULE",
+      "C5": "4u7 / 25V",
+      "R5": "0R68 / 0.5W"
+    },
+    "layer_count": 2,
+    "board_thickness_mm": 1.6,
+    "native_loaded_track_net_parity": true,
+    "source_unchanged": true
+  },
+  "same_pad_net_graph": true,
+  "same_component_values": true,
+  "Kelvin_audit": {
+    "passed": true,
+    "Kelvin_native_objects": 14,
+    "missing_declared_UUIDs": [],
+    "other_FB_intersections_checked": 2,
+    "findings": [],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "physical_measurements": false,
+  "metric_limits": "SOURCEcopperareas include allsaved copper perfaceunion. Endpointdistances are geometricproxies only. Tracksum includes allbranches; neither is commutation-loop inductance or EMI/thermal qualification."
+}

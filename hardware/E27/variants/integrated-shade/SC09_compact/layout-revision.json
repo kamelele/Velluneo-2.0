@@ -1,9 +1,9 @@
 {
-  "revision": "SC09-ROUTE02",
+  "revision": "SC09-ROUTE03",
   "functional_revision": "SC09-CAT01",
   "coordinator": "/root",
-  "implementer": "/root/routing02_writer",
-  "base_commit": "2327c0c2a86f98fac59d7e93f4e6a222c44ef444",
+  "implementer": "/root/route03_writer",
+  "base_commit": "c04198ded93a3d8e1f3ca725176ef723da32d461",
   "PCB_mm": [
     50,
     32,
@@ -61,9 +61,10 @@
     ],
     "fixture_condition": "Can entirely within PCB footprint;5mm free vent air required beyond upperedge."
   },
-  "current_workflow": "routing-professional/po_poprawkach",
+  "current_workflow": "routing-junctions/po_poprawkach",
   "physical_measurements": false,
   "exact_human_spatial_approval": null,
   "full_product_release": false,
-  "thermal": "Compact SOURCE still floats with switching; no generic thetaJA or previous copper-dependent temperature prediction qualifies this layout."
+  "thermal": "Compact SOURCE still floats with switching; no generic thetaJA or previous copper-dependent temperature prediction qualifies this layout.",
+  "routing_only_notice": "Microscopic stair steps and off-centre via/trunk connections corrected; previous ROUTE02placement/spatial intent reused unchanged. No physical qualification inferred."
 }
