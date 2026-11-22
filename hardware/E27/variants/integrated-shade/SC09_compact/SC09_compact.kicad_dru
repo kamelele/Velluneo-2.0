@@ -3,6 +3,6 @@
 (rule "HW-track_width" (constraint track_width (min 0.300000mm)))
 (rule "HW-hole_size" (constraint hole_size (min 0.300000mm)))
 (rule "HW-annular_width" (constraint annular_width (min 0.200000mm)))
-(rule "HW-edge_clearance" (constraint edge_clearance (min 0.500000mm)))
+(rule "HW-edge_clearance" (constraint edge_clearance (min 1.000000mm)))
 (rule "HW-NETCLASS-POWER" (condition "A.NetClass == 'POWER'") (constraint track_width (min 0.3mm)))
 (rule "HW-SPATIAL-C6_BODY" (condition "A.intersectsArea('HW-SPATIAL-C6_BODY')") (constraint disallow track via pad zone))

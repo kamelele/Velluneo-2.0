@@ -1,0 +1,101 @@
+{
+  "role": "Reality Checker",
+  "actual_actor": "/root/route02_final_reality",
+  "revision": "SC09-ROUTE05",
+  "date": "2026-11-22",
+  "manifest_sha256": "f33c1329e1ea28b864957357e83632e65e0661fbd8715b7b4e87e48d1932073c",
+  "initial_manifest_reviewed_sha256": "cc9773d93e37b8e0050feb5b07e43ce8a17b776106eaa68967a7a06af27d708c",
+  "source_snapshot": "68c1f87df0d1cb4525005c53cc2bc047f8c49221373fbcf83770dbe550e89fdc",
+  "PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "base_commit": "d011ef6a865f6dd7f06825f233b2465238ecba27",
+  "scope": "Fresh independent reality review of the concrete bare-JLCPCB, manual-assembly laboratory prototype fabrication candidate. Not approval of an assembled/energized lamp, unconditional product release or an actual purchase.",
+  "all_frozen_input_hashes_verified": 238,
+  "retained_review_scope": "All238 initial hashes and native hardware were independently verified. A minor C1 bring-up checklist omission was then corrected without changing PCB, circuit or source snapshot. All238 final hashes underf33c13... were independently reverified; the updated BRINGUP, artifact registry and current KiCad archive were included. Native/DFM/topology findings remain applicable.",
+  "checks": [
+    {
+      "basis": "Read projectAGENTS and pinned Toolkit Reality Checker role; independently verified the exact manifest and all frozen inputs",
+      "result": "Final238hashes match. The candidate is explicitly an engineering bare-board/manual prototype packet with exact final human review still pending; full Toolkit failure reports are retained rather than relabelled PASS."
+    },
+    {
+      "basis": "Independent pinnedKiCad10.0.6 raw native reads and exact baseline footprint-block comparison",
+      "result": "All19 complete raw footprint blocks are unchanged, preserving46pads, placement, values, fields/MPNs, pin nets, footprint geometry and attached model transforms. Board is now51.2x33x1.6mm,2copperlayers, with actual rectangular vertices99.4..150.6/99.4..132.4mm. This larger outline requires final review as stated; no old50x32mm fit acceptance is silently inherited."
+    },
+    {
+      "basis": "Independent native via and routing inventory, saved/raw net identity comparison",
+      "result": "Exactly one of10 via centres changed: D1return/DC_RETURN viaUUIDd355cf10... moved from(21.2,16.2) to(22.6,16.2)mm in original board-relative coordinates, away from the SMA land. Via diameter0.75mm/drill0.3mm and other vias remain unchanged. Current inventory is126segments/10vias/330.73173458mm total tracks. SOURCEpours remain0; native saved net identities match raw file."
+    },
+    {
+      "basis": "Independent recomputation of saved-copper same-net Kelvin intersection audit on the final board",
+      "result": "PASS with18per-face sense objects,0missing declared UUIDs and0additional force/sense join outside physicalR5.2. Two contacts with other FB copper remain confined to that allowed pad. Direct same-face C5 bypass and the unchanged high-side floating SOURCE topology are retained."
+    },
+    {
+      "basis": "Independent read-only rerun of the native manufacturing checker body in memory, with file-output line suppressed, on the actual finalPCB and currentZIP/exportdirectory",
+      "result": "PASS with0fabrication findings. Actual dimensions51.2x33mm,24drills comprising14componentholes and10vias, minimum viaannulus0.225mm, componentannulus0.5mm, minimumhole-wallgap0.689949mm. Minimumcopperedge1.10mm and minimumsilk-to-maskgap0.226956mm. No open via hole intersects an SMDland. The9memberGerber/drillZIP has validCRC and every member exactly matches the export directory. This is a manufacturing capability screen, not supplierCAM acceptance."
+    },
+    {
+      "basis": "Read actual project settings/generated rule and independent source-bound reports",
+      "result": "Native .kicad_pro and HW-edge_clearance rule enforce1.0mm. Independent strict edge findings are0; bounded polygon minimum is1.099992mm. A standalone raw-loader default is not substituted for the actual project/rule setting. NativeERC/DRC/unconnected/parity counts are0. Full55pair bounded screenPASS; strict screen stillFAIL with23intrinsic-package/local-escape spacing findings and0edge failures. Saved two-pass refill exactly matches. Both meaningful Kelvin negative controls reject their deliberately invalid fixtures."
+    },
+    {
+      "basis": "Review of actual parts/native-land audit, dated acquisition grades, primary manufacturer basis and corrected active specification",
+      "result": "Same16catalogueMPNs cover17electronicpositions; no custom winding or electronic substitution is introduced. ExactU1/R5/D1 and other recorded fresh offers are distinguished from cached/indexed routes; not all16 have live checkout confirmation and no stock is reserved. LYT1603D standard-pack alternative is packaging-only per primaryPIp12, not permission to useLYT1604. Current T1 is catalogueMSS1210H-125KED; old custom-winding contract is explicitly superseded and forbidden for current procurement/assembly. Native parts audit agrees on19references/46pins and critical manufacturer land identities."
+    },
+    {
+      "basis": "Independent current TDK primary product/datasheet read, paper arithmetic and updated master/bring-up instructions",
+      "result": "C1 B32529E6473K189 is47nF/400VDC; full category rating applies through85C. The manufacturer's above85C formula gives325V at100C, below the253VAC sinusoidal peak357.796V. The current master specification and corrected BRINGUP therefore explicitly require instrumenting C1case and stopping at the proposed80C prototype ceiling. This does not establish actual ripple or operating temperature. Other nominal voltage/current/power screens remain paper bounds, not transient/fault qualification."
+    },
+    {
+      "basis": "Manual-assembly disposition and source-bound process scope",
+      "result": "The R4.1/R7.1 M-net shared solder opening is explicitly a common-net hand-soldered junction with inspection, not a claimed mask dam or insulation credit. Bare PCB/manual process requires neither JLCPCBA line confirmation nor an assembled-boardCPL. Ordinary throughvias are used; no filled/capped via-in-pad process is needed. Sample leadforming/gauging, C6support/vent-face clearance and strain relief remain preassembly/fixture checks."
+    }
+  ],
+  "primary_sources_independently_consulted": [
+    {
+      "title": "TDK exact C1 product record",
+      "url": "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529E6473K189",
+      "scope": "Exact47nF400VDC/200Vrms category and package identification; no X-capacitor approval inferred."
+    },
+    {
+      "title": "TDK B3252*C/D/E/N/Q/R/T, June2026, technical data page19",
+      "url": "https://www.tdk-electronics.tdk.com/inf/20/20/db/fc_2009/B32520_529.pdf",
+      "scope": "85C rated temperature and category-voltage derating above85C;325V at100C is the reviewer's arithmetic from the stated formula."
+    },
+    {
+      "title": "Power Integrations LYTSwitch-1 primary datasheet, part ordering page12",
+      "local_evidence": "work/routing05/parts-evidence/PI-primary.pdf",
+      "scope": "Same1603die/SO8 with blank standard package versus-TLtape/reel;1604 is not a packaging substitute."
+    },
+    {
+      "title": "Bourns FW primary datasheet",
+      "local_evidence": "work/routing05/parts-evidence/Bourns-primary.pdf",
+      "scope": "Fusing conditions and normal resistor identity; no blanket253VAC/surge/protection coordination guarantee inferred."
+    }
+  ],
+  "findings": [
+    {
+      "id": "R05-REAL-01",
+      "severity": "minor",
+      "gate": "bringup_plan_consistency_before_any_powered_test",
+      "status": "independently_closed",
+      "object": "po_poprawkach/BRINGUP.md C1thermal measurement/stop list",
+      "initial_evidence": "Initial frozen master specification correctly gave C1case80Cstop and the new parts review explained its85C/400V derating basis, but BRINGUP's named thermal measurement list omittedC1.",
+      "consequence": "A later test operator could miss the controlling capacitor temperature/voltage derating if following the bring-up list alone. This was not an unpowered bare-PCB fabrication defect.",
+      "closure": "Coordinator added an explicit C1case instrument/80Cstop paragraph,85Cfullrating/100C325V explanation and no-temperature-extrapolation instruction. Reviewer independently read it and reverified all238 final frozen hashes, unchangedPCB and source snapshot."
+    }
+  ],
+  "new_bare_fabrication_engineering_blockers": 0,
+  "retained_gates": [
+    "Final human fabrication acceptance must cover exact51.2x33mm geometry, local package-spacing assessment, manufacturing artifacts and prototype-only scope. No such decision is fabricated by this review.",
+    "SupplierCAM acceptance, exact checkout stock/MOQ/shipping confirmation, actual sample leadforming/support and solder inspection remain separate from this desk review.",
+    "Nonisolated output remains mains referenced. Current/ripple/startup/OVP/discharge/hot-bias/loss/temperature/fault/surge/EMC/insulation and actual three-dimensional/soldered clearances remain controlled post-fabrication qualification gates.",
+    "MOV710Vclamp versus725Vswitch limit, RF1fault/surge coordination and magnetic/OVP/hot behavior are not guaranteed by nominal ratings or DFM0. No powered-operation or finished-lamp qualification is inferred.",
+    "Full Toolkit product release remainsFAIL with genuine human/physical requirements open; bounded package screening is not normative insulation approval."
+  ],
+  "recommendation": "ready_for_human_review",
+  "bare_fabrication_review_scope": "Concrete bare-PCB/manual laboratory prototype candidate, pending actual final human acceptance",
+  "unconditional_product_or_powered_use_release": "blocked",
+  "human_stage_approval_given": false,
+  "supplier_order_or_upload_performed": false,
+  "physical_measurements_performed": false,
+  "source_or_package_files_modified": false
+}

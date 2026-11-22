@@ -1,171 +1,195 @@
 {
-  "revision": "SC09-lab-order-02",
-  "kind": "Calculated/planned laboratoryprototype specification; no physical measurement performed",
-  "dimensions": {
-    "PCB_mm": [
-      50,
-      32,
-      1.6
-    ],
-    "declared_assembled_max_mm": [
-      50,
-      32,
-      19.5
-    ],
-    "owner_accepted_PCB": true,
-    "assembly_and_bulb_fit_measured": false
-  },
-  "input": {
-    "nominal_VAC_RMS": 230,
-    "screen_VAC_RMS": [
-      207,
-      253
-    ],
-    "frequency_Hz": 50,
-    "rectified_peak_ideal_V": [
-      292.7422074112307,
-      325.2691193458119,
-      357.7960312803931
-    ],
-    "nominal_60V_load_input_power_planning_W": [
-      8.906325543916196,
-      9.706325543916195
-    ],
-    "input_RMS_at_230V_assuming_true_PF_0p90_mA": [
-      43.025727265295636,
-      46.89046156481253
-    ],
-    "input_RMS_at_207V_assuming_true_PF_0p90_mA": [
-      47.80636362810626,
-      52.100512849791706
-    ],
-    "input_RMS_equation": "IinRMS=Pin/(VinRMS*TRUE_PF);PF0.90isassumed,notmeasured. Inputpower/voltagealoneisNOTtrueRMScurrent.",
-    "input_current_design_planning_mA_RMS": 60,
-    "planning_is_not_rating": true
-  },
-  "output": {
-    "topology": "Nonisolatedconstant-currentbuck;allterminalsaremainsreferenced,notSELV",
-    "nominal_VDC": 60,
-    "proposed_LED_load_window_V": [
-      52,
-      68
-    ],
-    "regulator_total_estimated_mA": 135.2034649476229,
-    "dual68k_bleeder_draw_at60V_mA": 1.7647058823529413,
-    "external_LED_estimated_at60V_mA": 133.43875906526995,
-    "external_LED_estimated_power_at60V_W": 8.006325543916196,
-    "external_LED_power_at52_and68V_W": [
-      6.951050765511684,
-      9.057835616438357
-    ],
-    "regulation_accuracy": "Notguaranteed;ICthreshold,tolerances,line/ripple/hotL,modesandmonitorcurrentsrequiremeasurements.",
-    "LED_string": "20seriesLumiledsL128-4080CA3500001,4000K,CRI>=80;800lmlamptargetnotmeasured",
-    "dimming": false,
-    "hot_plug": false
-  },
-  "efficiency": {
-    "all_base_loss_planning_W": [
+  "revision": "SC09-CAT01",
+  "input_VAC_RMS": [
+    207,
+    230,
+    253
+  ],
+  "frequency_Hz": 50,
+  "nonisolated": true,
+  "SELV": false,
+  "ambient_design_C": [
+    0,
+    40
+  ],
+  "nominal_output_V": 60,
+  "proposed_LED_voltage_window_V": [
+    52,
+    68
+  ],
+  "regulated_total_current_mA": 135.203447,
+  "bleeder_current_mA_at60V": 1.7647058823529413,
+  "external_LED_current_mA_at60V": 133.438741,
+  "external_LED_power_W_at60V": 8.00632446,
+  "LED_count_series": 20,
+  "LED_MPN": "L128-4080CA3500001",
+  "CCT_K": 4000,
+  "CRI_min": 80,
+  "optical_target_lm": 800,
+  "optical_measurement_performed": false,
+  "base_loss_inclusive_of_bleeders_W": [
+    0.9,
+    1.7
+  ],
+  "estimated_input_power_W": [
+    8.90632446,
+    9.70632446
+  ],
+  "estimated_LED_efficiency_percent": [
+    82.4856,
+    89.8948
+  ],
+  "assumed_PF_not_measured": 0.9,
+  "estimated_input_current_mA_230V_assumedPF": [
+    43.026,
+    46.89
+  ],
+  "T1": {
+    "MPN": "MSS1210H-125KED",
+    "L_mH": 1.2,
+    "tolerance_percent": 10,
+    "operating_voltage_V": 400,
+    "DCR_max_25C_ohm": 1.013,
+    "Isat_10percent_25C_A": 0.69,
+    "paper_peak_current_A": 0.486732,
+    "paper_equivalent_triangle_RMS_A": 0.281015,
+    "paper_hot_bias_screen_L_mH": 0.8748,
+    "paper_min_ON_us": 1.324582,
+    "minimum_ON_reference_us": 1.25,
+    "margin_percent": 5.9666,
+    "assumed_independent_L_factors": [
       0.9,
-      1.7
+      0.9,
+      0.9
     ],
-    "boundary": "Includesbleeders,inputstage,buck,sense/OVP,magneticsandcapacitorloss. ExternalLEDboardexcluded.",
-    "planned_efficiency_to_external_LED_percent": [
-      82.48564822693858,
-      89.89482255547262
+    "Cu_only_DCR_at100C_ohm": 1.305828,
+    "conditional_Cu_loss_W": 0.103121,
+    "core_loss_assumption_W": [
+      0.1,
+      0.4
     ],
-    "central_example_loss_W": 1.3,
-    "central_example_efficiency_percent": 86.03100661087612,
-    "bounds_guaranteed": false,
-    "reference_board_not_ours": {
-      "RDR464_Pout_W": 8.45,
-      "Pin_W": 9.24,
-      "efficiency_percent": 91.51,
-      "loss_W": 0.79
+    "thermal_resistance_assumption_K_per_W": [
+      50,
+      100
+    ],
+    "conditional_temperature_at40ambient_C": [
+      50.16,
+      90.31
+    ],
+    "temperature_qualified": false
+  },
+  "L1": {
+    "MPN": "768772332",
+    "L_mH": 3.3,
+    "voltage_VDC": 400,
+    "DCRmax20C_ohm": 7.08,
+    "RMS_rating_A_at40K_rise": 0.25,
+    "Isat10percent_A": 0.27,
+    "normalized_incremental_DCR_loss_at100C_60mA_W": 0.00218
+  },
+  "R7": {
+    "MPN": "HVR2500003903FR500",
+    "R_ohm": 390000,
+    "tolerance_percent": 1,
+    "rated_W_at70C": 0.25,
+    "max_operating_VDC": 1600,
+    "screen_power_W_at253VAC_52V_negativeDrift": 0.116344,
+    "allowable_W_at100C_local_ambient": 0.161765,
+    "theta_K_per_W": null,
+    "reason_no_theta": "VR25 theta140K/W is not qualified for newHVR25; no absolute R7 temperature prediction."
+  },
+  "OVP": {
+    "nominal_static_V": 77.88,
+    "legacy_additive_screen_V": [
+      69.371328,
+      86.510928
+    ],
+    "systematic_multiplicative_screen_V": [
+      69.39716,
+      86.537527
+    ],
+    "extended_engineering_R7_4percent_andR4_2percent_high_V": 89.486765,
+    "dynamic_target_V_max": 90,
+    "dynamic_measured": false,
+    "notes": "25C ICthreshold corners; resistor drift screens are assumptions, not guaranteed full life/high-temperature dynamic bounds."
+  },
+  "discharge": {
+    "COUT_nominal_uF": 150,
+    "COUT_max_uF": 180,
+    "one_open_bleeder_ohm": 68000,
+    "screen_90V_to5V_s": 36.45,
+    "energy_J_at90V_Cmax": 0.729,
+    "hotplug_allowed": false
+  },
+  "envelope_mm": null,
+  "all_physical_temperatures_efficiency_fault_and_surge_unmeasured": true,
+  "layout_revision": "SC09-ROUTE05",
+  "PCB_mm": [
+    51.2,
+    33,
+    1.6
+  ],
+  "assembly_height_planning_mm": 19.5,
+  "C6_geometry": {
+    "anchor_mm": [
+      6.75,
+      26
+    ],
+    "native_angle": 90,
+    "can_bbox_mm": [
+      0.25,
+      0,
+      13.25,
+      22
+    ],
+    "vent_bbox_mm": [
+      0.25,
+      -5,
+      13.25,
+      0
+    ],
+    "fixture_condition": "5mm free air measured from actual vent face. New PCB edge extends0.6mm beyond former edge; no sleeve insulation credit.",
+    "coordinate_basis": "Historical geometry offsets from100,100CAD reference, not new board edge"
+  },
+  "ports": {
+    "J1": {
+      "1": {
+        "net": "/AC_L",
+        "x_mm": 49.00000000000001,
+        "y_mm": 30.6
+      },
+      "2": {
+        "net": "/AC_N",
+        "x_mm": 49.00000000000001,
+        "y_mm": 25.1
+      }
+    },
+    "J2": {
+      "1": {
+        "net": "/LED_PLUS",
+        "x_mm": 2.1999999999999944,
+        "y_mm": 25.1
+      },
+      "2": {
+        "net": "/DC_RETURN",
+        "x_mm": 2.1999999999999944,
+        "y_mm": 30.6
+      }
     }
   },
-  "temperatures": {
-    "ambient_design_C": [
-      0,
-      40
-    ],
-    "SC09_measured": false,
-    "prediction_model_validated": false,
-    "U1_junction_scenario": {
-      "assumed_unvalidated_theta_JA_K_per_W": [
-        120,
-        200
-      ],
-      "assumed_loss_W": [
-        0.15,
-        0.35
-      ],
-      "at_25C_ambient_C": [
-        43,
-        95
-      ],
-      "at_40C_ambient_C": [
-        58,
-        110
-      ],
-      "meaning": "Sensitivityscenario,notexpectedorguaranteedtemperatures. DatasheetthetaJAforothercoppercannotbetransferredtoourPCB."
-    },
-    "T1_body_scenario": {
-      "assumed_unvalidated_theta_K_per_W": [
-        50,
-        100
-      ],
-      "assumed_Irms_A": 0.28101512477836876,
-      "proposed_hot_DCR_ohm": 3.6,
-      "assumed_core_loss_W": [
-        0.1,
-        0.4
-      ],
-      "total_loss_scenario_W": [
-        0.3842902012751278,
-        0.6842902012751279
-      ],
-      "at_40C_ambient_C": [
-        59.21451006375639,
-        108.42902012751279
-      ],
-      "meaning": "Conditionalthermalsensitivityrange; uppervalueexceeds90Ctarget. Actualcoreloss/thermalpathunknown;musttestbeforeratedoperation."
-    },
-    "design_targets_not_forecasts_C": {
-      "C6_can": 75,
-      "C6_lab_stop": 85,
-      "T1_body": 90,
-      "U1_SOURCE_pin": 100,
-      "D1_case": 100,
-      "R7_body": 125,
-      "C1_C4_C5_case": 85
-    },
-    "C6_absolute_forecast": "NotavailablewithoutverifiedESR/rippleandthermalcoupling;75Cistargetnotestimatedoutcome."
-  },
-  "protections": {
-    "RF1": "10ohm2Wfusibleresistor;coordinationnotphysicallyqualified",
-    "RV1": "V275LA4P275VACMOV;notproofsurgepass",
-    "IC": "LYT1603D-TLfunctionsincludeopenload/short/current/thermalprotection;doesnotproveindependentfaultsafety",
-    "static_OVP_nominal_V": 77.88387096774194,
-    "static_OVP_paper_screen_V": [
-      69.37132790479173,
-      86.51092783505155
-    ],
-    "dynamic_C6_peak_target_V": 90,
-    "C6": "150uF100V;20percentCscreenmax180uF",
-    "maximum_energy_screen_J": 0.729,
-    "one_bleeder_open_90_to5V_model_s": 36.450143649393844,
-    "fault_and_surge_tests_performed": false
-  },
-  "procurement": {
-    "PCB_process": "FR4,2layers,1oz,1.6mm,leadfreeHASL,greenmask,whitesilk,manualassembly",
-    "custom_T1": "180TAWG32EE10;3pin1.2mmholes;physicalsupplier/samplequalificationrequiredbeforeassemblyacceptance",
-    "U1_lifecycle": "NRND;notaguaranteedlongtermsupply",
-    "complete_priced_basket": false
-  },
-  "sources": [
-    "https://www.power.com/sites/default/files/documents/rdr464.pdf",
-    "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
-    "https://jlcpcb.com/capabilities/pcb-capabilities"
+  "thermal_layout_status": "No physical temperature, efficiency or EMC qualification. Earlier conditional magnetic scenarios are sensitivity assumptions, not this layout temperatures. No inherited U1thetaJA/copper-dependent prediction.",
+  "routing_only_revision": "ROUTE05 expands outline to51.2x33mm withorigin99.4,99.4, extends C6 spatial keepout and moves D1 return via; electronics and component/pad placements unchanged.",
+  "PCB_origin_absolute_mm": [
+    99.4,
+    99.4
   ],
-  "calculation_contributor": "/root/final_reality;rootintegrationandrecalculation;notpresentedasindependentreviewofownarithmetic"
+  "current_T1": "MSS1210H-125KED, catalogue2-terminal1.2mH400V; no custom winding",
+  "final_PCB_release_accepted": false,
+  "source_scope": "Laboratory prototype fabrication review candidate; all electrical/thermal values are design/calculation assumptions, not measurements.",
+  "historical_preCAT01_file": "power-supply-specification.pre-CAT01-historical.json",
+  "prototype_temperature_stops": {
+    "C1_case_C": 80,
+    "basis": "Conservative proposed prototype stop ceiling below85C full400V rating; ripple/waveforms still require measured qualification.",
+    "measurements_performed": false
+  }
 }

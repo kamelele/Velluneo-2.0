@@ -1,0 +1,9 @@
+# Manual assembly and inspection
+
+Order only the bare2-layer board from JLCPCB. Buy the exact BOM parts separately using the current parts-review report; stock is observed, not reserved. Ordinary PTH vias are used; no filled/capped via-in-pad is required. Do not substitute a different LYTSwitch die (for example1604) solely because its SO-8 footprint matches. A tube/reel packaging-only1603 alternative is permissible only as documented in the parts review.
+
+Use the current front and mirrored-back assembly PDFs and physical pin CSV. The positions CSV is a manual reference, not a qualified JLCPCBA CPL. Confirm U1 and bridge orientation, D1 cathode, C6 polarity and exact resistor values before soldering. Fit and inspect small bottom-side SMD parts before tall top-side parts, keeping access for hand soldering. R4.1 and R7.1 intentionally share an M-net copper/solder opening; solder as one common-net junction and inspect that it does not bridge neighbouring nets. There is no claimed solder-mask dam between these same-net terminals.
+
+RF1 and R7 require ordinary manual axial lead forming to the documented pitch. Do not bend at the body seal; inspect mechanical support and avoid loading component terminations. The horizontal C6 needs support independent of its leads, no sleeve-insulation credit, and5mm free vent-face air. Inspect actual sample dimensions and clearance before accepting the assembly. Leads/wires must not bypass the fusible path or the two-wire interface; external strain relief belongs to the guarded fixture.
+
+Before any separately authorized powered test: inspect magnified joints and polarity; clean flux/contamination, verify expected unpowered pin connectivity and no unexpected shorts, and review the current BRINGUP limits/fixture/responsible person. All conductors including LED output are mains referenced. These instructions are an assembly/test plan, not a record of performed measurements or acceptance of the finished lamp.

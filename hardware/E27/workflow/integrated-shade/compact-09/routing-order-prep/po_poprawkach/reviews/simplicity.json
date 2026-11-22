@@ -1,0 +1,64 @@
+{
+  "role": "Overengineering / Simplicity Reviewer",
+  "actual_actor": "/root/route02_final_simplicity",
+  "date": "2026-11-22",
+  "revision": "SC09-ROUTE05",
+  "manifest_sha256": "f33c1329e1ea28b864957357e83632e65e0661fbd8715b7b4e87e48d1932073c",
+  "initial_manifest_reviewed_sha256": "cc9773d93e37b8e0050feb5b07e43ce8a17b776106eaa68967a7a06af27d708c",
+  "source_snapshot": "68c1f87df0d1cb4525005c53cc2bc047f8c49221373fbcf83770dbe550e89fdc",
+  "PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "scope": "Independent read-only simplicity review of a bare-PCB, manually assembled laboratory prototype fabrication-review packet. Not final supplier acceptance, a PCBA line qualification, energized operation or finished-product certification.",
+  "recommendation": "ready_for_human_review",
+  "all_frozen_input_hashes_verified": 238,
+  "retained_review_scope": "All238 initial frozen hashes and the actual native before/after board were independently inspected. The final manifest adds the explicit C1 thermal stop to BRINGUP and refreshes its release-candidate copy, registration, KiCad archive and report timestamps. All238 final hashes were independently reverified; the source snapshot and PCB are unchanged. The added C1 instrumentation/80C stop text was read directly.",
+  "checks": [
+    {
+      "kind": "Requirements and process scope",
+      "files": ["routing-order-prep/task-contract.json", "po_poprawkach/README.md", "po_poprawkach/MANUAL_ASSEMBLY.md", "po_poprawkach/order-parameters.json"],
+      "result": "The task permits a minimal outline increase and ordinary via relocation to close avoidable bare-board DFM issues while preserving components and the circuit. Ordering parameters select an individual2-layer1.6mm1ozFR4 board, lead-freeHASL, ordinary through vias, PCB AssemblyOFF and manual assembly. No stencil, qualified CPL or generic automated-PCBA line is required for this declared process."
+    },
+    {
+      "kind": "Independent native before/after read",
+      "method": "Pinned KiCad10.0.6 raw PCB_IO_MGR loader without saving",
+      "result": "Before50x32mm/125segments/10vias/329.33173458mm; after51.2x33mm/126segments/10vias/330.73173458mm. Both19references,46physical pads,2copper layers and17models. Exact component/pad/net/value/MPN/footprint/DNP/model-count/placement/orientation/side maps remain equal."
+    },
+    {
+      "kind": "Functional and sourcing invariance",
+      "result": "BOM CSV/JSON, schematic, CAT01 intent and its source-basis are byte-identical to the baseline. The16 selected catalogue MPNs still cover17electronic positions. No added part, winding, rail, connector or assembly technology is needed. Read the current dated parts-review report and its distinctions between freshHTTP, indexed and manufacturer-feed availability; no independent stock reservation or live checkout is claimed by this review."
+    },
+    {
+      "kind": "Outline and effective edge constraint",
+      "files": ["SC09_compact.kicad_dru", "checks/fabrication-current.json", "checks/spacing-analysis.md"],
+      "result": "Native outline is51.2x33mm. The active managed HW-edge_clearance rule requires1.0mm; the source-bound manufacturing screen reports approximately1.1mm nominal minimum. The small material reserve increases area by5.6% while preserving every component position and avoiding a broad power-stage reroute or additional layer. This is a nominal CAD clearance result, not a measured fabricated-board tolerance or standards certificate."
+    },
+    {
+      "kind": "Ordinary D1 via process",
+      "method": "Independent native via-map comparison and D1pad bounding-box separation calculation",
+      "result": "Only the D1DC_RETURN via centre changes:21.2,16.2 to22.6,16.2mm; diameter0.75mm and drill0.3mm remain unchanged. The moved via annulus has0.175mm clearance from the conservative D1pad bounding box. The new short centred approach avoids needing a filled/capped via-in-pad process; no additional hole or electronic component is introduced."
+    },
+    {
+      "kind": "Actual layer and assembly review",
+      "files": ["SC09_sciezki_przod.png", "SC09_sciezki_tyl.png", "MANUAL_ASSEMBLY.md", "BRINGUP.md"],
+      "result": "Viewed both full native copper layers. The opposite-edge ports and simple axis/45 routing remain intact. Manual instructions identify the common-net R4/R7 solder opening, bottom-side-first access, exact die/value/polarity checks, ordinary axial forming, capacitor support, vent air and wire strain relief. These are appropriate retained manual operations rather than unqualified automatic-assembly assumptions."
+    },
+    {
+      "kind": "Verification and retained strict scope",
+      "result": "Reviewed native DRC/unrouted/parity0, bounded55PASS, current18-object Kelvin auditPASS and source-bound DFM checks. The strict report retains23copper-spacing entries and no edge entries; the accompanying analysis distinguishes intrinsic manufacturer-land gaps and associated finite escapes. Do not add manufacturing complexity, shrink manufacturer lands or weaken a rule merely to reduce that strict-report count."
+    },
+    {
+      "kind": "Final BRINGUP correction",
+      "result": "Read the new explicit C1 case instrumentation and80C stop, with its85C/full400V and100C/325V context. It is correctly described as a proposed controlled-test limit, not a measured temperature. This closes a documentation omission without adding parts or pretending pre-fabrication measurements exist."
+    }
+  ],
+  "findings": [],
+  "optional_simplifications": [],
+  "complexity_assessment": "The minimal outline reserve, one relocated ordinary via, short trace extension and legend adjustment directly address avoidable fabrication/manual-assembly issues. They preserve the catalogue circuit and existing placements. A wholesale architecture/footprint redesign or added via-fill/automated-PCBA process would expand scope without closing the controlling intrinsic package spacing condition.",
+  "retained_gates": [
+    "A final exact bare-PCB fabrication decision and supplierCAM acceptance are still separate from this review; no order or upload has been performed.",
+    "Reconfirm exact MPN stock, minimum quantities and shipping at checkout. Dated indexed/feed evidence is not a reserved basket or guaranteed availability.",
+    "Physical electrical/thermal/fault/surge/EMC/insulation testing and genuine product-stage decisions remain open before their respective powered-use/product gates.",
+    "Manual assembly inspections and guarded bring-up remain necessary. Clean bare-board exports do not certify a finished lamp or imply a full Toolkit product-releasePASS."
+  ],
+  "writes": ["work/routing05/reviews/simplicity.json"],
+  "CAD_config_package_edited": false
+}

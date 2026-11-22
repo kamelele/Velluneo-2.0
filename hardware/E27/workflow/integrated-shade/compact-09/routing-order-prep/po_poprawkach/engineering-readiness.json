@@ -1,0 +1,65 @@
+{
+  "revision": "SC09-ROUTE05",
+  "status": "Bare-PCB/manual laboratory prototype candidate ready for final human fabrication review; not an accepted order or finished product",
+  "input_manifest_sha256": "f33c1329e1ea28b864957357e83632e65e0661fbd8715b7b4e87e48d1932073c",
+  "frozen_inputs_verified": 238,
+  "source_snapshot": "68c1f87df0d1cb4525005c53cc2bc047f8c49221373fbcf83770dbe550e89fdc",
+  "PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "PCB_mm": [
+    51.2,
+    33,
+    1.6
+  ],
+  "layers": 2,
+  "native_ERC_DRC_parity_unconnected": 0,
+  "physical_pins": 46,
+  "nets": 11,
+  "catalogue_parts_positions": 17,
+  "unique_catalogue_MPNs": 16,
+  "parts_substituted": false,
+  "bounded_55_pair_screen_pass": true,
+  "strict_screen_pass": false,
+  "strict_findings": {
+    "copper_spacing": 23
+  },
+  "strict_scope": "No edge findings remain. Package lands and finite escapes retain their explicit unapproved local engineering assessment; this is not a standards waiver.",
+  "native_edge_floor_mm": 1.0,
+  "supplier_manufacturing_screen_pass": true,
+  "supplier_CAM_accepted": false,
+  "D1_open_via_in_pad_removed": true,
+  "same_M_net_shared_mask_window_manual_disposition": true,
+  "full_Toolkit_product_release_pass": false,
+  "exact_final_human_release": false,
+  "measurement_performed": false,
+  "order_placed": false,
+  "four_independent_reviews": [
+    {
+      "role": "Reality Checker",
+      "actual_actor": "/root/route02_final_reality",
+      "path": "po_poprawkach/reviews/reality.json",
+      "sha256": "f386b0966b6658e9f98f866a622587be67e6faf9e5f315cbf04423dfa2dc1f42",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Overengineering / Simplicity Reviewer",
+      "actual_actor": "/root/route02_final_simplicity",
+      "path": "po_poprawkach/reviews/simplicity.json",
+      "sha256": "855b32bc5d63dadb5d22c3725e7028fa5ff992de0f17e2caa2e8ac66bc3fdd16",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actual_actor": "/root/route02_final_completeness",
+      "path": "po_poprawkach/reviews/completeness.json",
+      "sha256": "3b335030817b6fc741e2f99a4ac7a38eb44e5f3fa85cc3b1955ac2d96f875114",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Change Reviewer",
+      "actual_actor": "/root/routing_final_change",
+      "path": "po_poprawkach/reviews/change.json",
+      "sha256": "403ca6aec8b01518c37c232eff90a1f6b86b2c9920ce7c94757951498558467f",
+      "recommendation": "ready_for_human_review"
+    }
+  ]
+}

@@ -24,3 +24,9 @@ ROUTE02: J1mains input is at the RIGHTedge, J2LED output at the LEFTedge. Use ac
 
 
 ROUTE03onlychangestracejunctions/viaattachments. Usecurrent pinCSV, assembly drawings and manufacturedrevision; do not reuseolderGerbers/drills. Electronics/placement/physicaltestlimitsremainunchanged. No testsperformed.
+
+
+ROUTE05 supersedes the old fabrication files. PCB51.2x33mm. Use current assembly/pin drawings and separate ordering approval. This packet records no energized test or physical qualification. Capacitor vent clearance is measured from the actual vent face, not the revised board edge.
+
+
+ROUTE05 explicit C1 thermal stop: instrument the B32529E6473K189 film-capacitor case as well as the listed U1/D1/T1/C6 and resistor locations. Stop the controlled prototype test at C1 case80C; its full400V rating applies only through85C and its325V category rating at100C is below the357.8V maximum-line sinusoidal peak. The80C stop is a conservative proposed limit, not a measured operating temperature or a substitute for ripple/waveform qualification. Do not extrapolate another component temperature to C1. This supplements the existing pre-power responsible-person/fixture/instrument review and stops.

@@ -1,0 +1,7 @@
+# Final prototype fabrication decision
+
+This exact ROUTE05 packet proposes51.2x33mm,2-layer1.6mm FR4/1oz/lead-free HASL bare boards from JLCPCB, followed by manual assembly. Native electrical/geometry checks and the separate supplier fabrication screen pass. The strict functional surface screen remainsFAIL at intrinsic package lands/short escapes; exact pairs, actual minima and finite local engineering assessments are disclosed. A2mm surface target cannot physically be achieved between adjacent1.27mm-pitch SO-8 terminals without changing the circuit/package architecture. No automatic standards waiver is asserted.
+
+The final decision must cover the size increase, unchanged CAT01 circuit, this local package assessment and bare-prototype-only scope. All powered tests and final lamp qualification remain separate. User authorization to prepare this packet is not invented acceptance of its final snapshot. Supplier CAM review and real part checkout availability remain vendor controlled. No supplier upload, order, cart, message, reservation or powered test occurred.
+
+The inherited full-product Toolkit reports are retained intact. Their provider-line check describes an inhousePCBAprofile rather than a barePCB/manual order; no provider capability confirmation was fabricated. Their physical/optical/enclosure/test gates remain obligations for the later product, not simulated measurements needed to create an unpowered board. The manual process and limits are documented explicitly; final human fabrication acceptance remains pending.

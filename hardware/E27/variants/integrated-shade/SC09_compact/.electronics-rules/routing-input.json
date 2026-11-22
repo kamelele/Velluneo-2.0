@@ -2,7 +2,7 @@
   "constraints": {
     "areas": [
       {
-        "basis": "BoardintersectionofC6maxcan[.25,0,13.25,22] plus.5mm packingmargin. Bothfacesprotected; entire5mm vent outsidePCBtop requiresfixtureair.",
+        "basis": "Same C6 maximum body and0.5mm packing reserve asROUTE02, extended to99.4mm topPCBedge so added top strip remains copperfree onbothfaces. Maintain5mm free vent-air space measured from actual can vent face at y100, not from shifted board edge. No physical fit qualification implied.",
         "disallow": [
           "track",
           "via",
@@ -17,7 +17,7 @@
         ],
         "rectangle_mm": [
           100,
-          100,
+          99.4,
           113.75,
           122.5
         ]
@@ -89,12 +89,12 @@
         }
       }
     ],
-    "intent_digest": "6ed1f228326c7314413ec450e70ef15faa1fe8881849890f0966211147f54e41",
+    "intent_digest": "483d3dbaa10c70ebd7f3ce571bac1fe566bdb2df74f5d22c4290783990989222",
     "kicad_version": "10.0.6",
     "minimums_mm": {
       "annular_width": 0.2,
       "clearance": 0.3,
-      "edge_clearance": 0.5,
+      "edge_clearance": 1.0,
       "hole_size": 0.3,
       "track_width": 0.3
     },
@@ -174,12 +174,12 @@
       ]
     },
     "outline_mm": [
-      100,
-      100,
-      150,
-      132
+      99.4,
+      99.4,
+      150.6,
+      132.4
     ],
     "schema_version": 1
   },
-  "constraints_digest": "998c72be2210e7a57131e627e2c0e62128d31ab9e2c0ef09bd397a2aee28e749"
+  "constraints_digest": "ff06e4dbac18c87bcd33a5044f1794c10051b680092b1126fefca1ba245716c4"
 }

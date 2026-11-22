@@ -1,0 +1,233 @@
+{
+  "role": "Bounded fabrication implementer audit",
+  "actual_actor": "/root/r05_fabrication",
+  "date": "2026-11-22",
+  "input_revision": "SC09-ROUTE04",
+  "input_commit": "d011ef6a865f6dd7f06825f233b2465238ecba27",
+  "PCB_sha256": "9b73c61c34dc28fceff2e9d2265fcfb1280053245c9840f4e7c0bb39d782fa87",
+  "scope": "Bare JLCPCB FR-4 two-layer, 1 oz, 1.6 mm, lead-free HASL, manual assembly laboratory prototype. Read-only engineering fabrication desk audit; no upload, purchase, CAM acceptance, physical measurement or product certification.",
+  "sources": [
+    {
+      "url": "https://jlcpcb.com/capabilities/pcb-capabilities",
+      "accessed": "2026-11-22",
+      "kind": "Official current rigid-PCB fabrication capability page",
+      "facts": "2L 1oz line/space0.10/0.10; PTH nominal tolerance+0.13/-0.08; via0.3 not premium drill; PTH annular-ring table0.20 and recommended0.25, absolute0.18; green1oz maskbridge0.10; maskopening to neighboringtrace0.09; silk1.0height/.15stroke/.15padclearance; routededgecopper.2; VIPfilled/cappedcompatiblevia.15..55."
+    }
+  ],
+  "native_checks": {
+    "tool": "KiCad10.0.6 raw PCB_IO_MGR loader, no saved source mutation; independent native outward polygons max0.002 mm approximation for mask/text gaps",
+    "layers": 2,
+    "outline_mm": [
+      50,
+      32
+    ],
+    "board_thickness_mm": 1.6,
+    "closed_outline": "4 straight contiguous Edge.Cuts segments",
+    "track_widths_mm": [
+      0.3,
+      0.4,
+      0.6
+    ],
+    "through_vias": 10,
+    "via_mm": [
+      0.75,
+      0.3
+    ],
+    "minimum_via_annulus_mm": 0.225,
+    "component_PTH_count": 14,
+    "component_drills_mm": [
+      0.9,
+      1,
+      1.1,
+      1.2
+    ],
+    "minimum_component_annulus_mm": 0.5,
+    "total_drills": 24,
+    "NPTH_count": 0,
+    "minimum_hole_edge_to_hole_edge_mm": 0.6899494936611705,
+    "hole_spacing_status": "Exceeds published via0.2 and PTH0.45 without needing hole-class concession.",
+    "minimum_copper_edge_mm": 0.499988,
+    "copper_edge_status": "Above JLCPCB0.2 minimum, below project strict1mm screen. Source approximation explains slight below0.5; subsequent candidate can add real margin.",
+    "visible_silk_count": 8,
+    "visible_silk_height_mm": 1,
+    "visible_silk_stroke_mm": 0.15,
+    "minimum_silk_to_pad_opening_mm": 0.017318,
+    "minimum_silk_pair": [
+      "B.Silkscreen 230 V",
+      "RF1.1"
+    ],
+    "mask_expansion_mm": 0,
+    "distinct_pad_mask_bridge_min_mm": 0,
+    "mask_aperture_pair": [
+      "R7.1",
+      "R4.1"
+    ],
+    "mask_aperture_pair_net": "/M",
+    "mask_aperture_overlap_mm": "Approximately0.2x1.0 same-net copper/aperture intersection; no insulating mask bridge is drawable in this intersection.",
+    "project_configured_silk_clearance_mm": 0,
+    "project_configured_mask_min_bridge_mm": 0,
+    "project_configured_mask_to_copper_mm": 0,
+    "configured_min_text_height_stroke_mm": [
+      0.8,
+      0.08
+    ],
+    "configuration_limit": "Existing native DRC0 does not independently prove JLCPCB legend/mask published minima because these settings are zero or lower. Actual visible text height/stroke passes; bottom230V pad spacing does not."
+  },
+  "archive_checks": {
+    "archive": "routing-approaches/po_poprawkach/SC09_ROUTE04_Gerbers_drills.zip",
+    "files": 9,
+    "CRC_pass": true,
+    "all_members_byte_equal_export_directory": true,
+    "members": [
+      "SC09_compact-B_Cu.gbl",
+      "SC09_compact-B_Mask.gbs",
+      "SC09_compact-B_Silkscreen.gbo",
+      "SC09_compact-Edge_Cuts.gm1",
+      "SC09_compact-F_Cu.gtl",
+      "SC09_compact-F_Mask.gts",
+      "SC09_compact-F_Silkscreen.gto",
+      "SC09_compact-NPTH.drl",
+      "SC09_compact-PTH.drl"
+    ],
+    "units": "Gerber mm absolute4.6; drill metric absolute decimal",
+    "polarity": "Copper positive, soldermask negative X2 FilePolarity, dark aperture geometry; expected KiCad mask convention",
+    "coordinate_frame": "All source-generated exports use same native coordinate origin",
+    "drill_tools_mm": [
+      0.3,
+      0.9,
+      1,
+      1.1,
+      1.2
+    ],
+    "plating": "PTH file explicit Plated,1,2,PTH; NPTH file explicit and empty",
+    "edge_gerber": "100..150mm X, -132..-100mm Y,4 closed profile segments",
+    "snapshot_binding": "Existing artifact-registration source snapshot a713c25d4a04ca41a3723e1a3e01df1c6eed60a3302e9054cc0639208d010db1; new CAD invalidates these exports and requires complete fresh set."
+  },
+  "hole_fit_desk_checks": [
+    {
+      "ref": "C4",
+      "nominal_hole_mm": 1.1,
+      "worst_min_hole_mm": 1.02,
+      "max_lead_mm": 0.65,
+      "min_diametral_margin_mm": 0.37
+    },
+    {
+      "ref": "C6",
+      "nominal_hole_mm": 1.2,
+      "worst_min_hole_mm": 1.12,
+      "max_lead_mm": 0.65,
+      "min_diametral_margin_mm": 0.47
+    },
+    {
+      "ref": "RF1",
+      "nominal_hole_mm": 1.1,
+      "worst_min_hole_mm": 1.02,
+      "max_lead_mm": 0.7,
+      "min_diametral_margin_mm": 0.32
+    },
+    {
+      "ref": "RV1",
+      "nominal_hole_mm": 1.1,
+      "worst_min_hole_mm": 1.02,
+      "max_lead_mm": 0.685,
+      "min_diametral_margin_mm": 0.335
+    },
+    {
+      "ref": "R7",
+      "nominal_hole_mm": 0.9,
+      "worst_min_hole_mm": 0.82,
+      "max_lead_mm": 0.63,
+      "min_diametral_margin_mm": 0.19,
+      "primary": "Vishay HVR25 30260; reported independently by parts actor current review"
+    },
+    {
+      "ref": "L1",
+      "nominal_hole_mm": 1.2,
+      "worst_min_hole_mm": 1.12,
+      "lead_mm_REF": 0.7,
+      "max_lead_mm": null,
+      "primary": "Wurth768772332 primary006.001 2025-06-06; reported independently by parts actor current review",
+      "status": "Matches manufacturer recommended1.2mm hole/P5. Lead diameter0.7REF only, so no invented worst-case dimensional guarantee; gauge sample before hand assembly. This is not a reason to demand sample measurement before ordering bare copper."
+    }
+  ],
+  "findings": [
+    {
+      "id": "FAB05-01",
+      "severity": "major",
+      "status": "independently_closed_on_private_cc54c7_candidate_only",
+      "object": "B.Silkscreen 230 V at(145,126.8)",
+      "problem": "Conservative native text-to-RF1.1 opening gap0.017318mm below official0.15mm legend-to-pad requirement.",
+      "fix": "Relocate this bottom text; achieve at least0.16mm native geometric gap for approximation margin, preserve label polarity and readability. Re-export Gerbers and independently verify."
+    },
+    {
+      "id": "FAB05-02",
+      "severity": "major",
+      "status": "independently_closed_on_private_cc54c7_candidate_only",
+      "object": "D1.2 via at(121.2,116.2), diameter0.75/drill0.3",
+      "problem": "Via hole overlaps SMD solderable pad. Global tenting does not cover an overlapping SMD opening. Can wick solder during manual SMA soldering and current0.75 via is outside published0.55max filled/capped VIP offering.",
+      "fix": "Private writer proposed via(122.6,116.2), outside D1pad bboxx120.35..122.05,y114.75..117.25; short centred B trace plus unchanged F trunk connection. Verify all electrical, gap, loop and mask checks. Avoid paid filled/capped VIP by ordinary external via."
+    },
+    {
+      "id": "FAB05-03",
+      "severity": "minor",
+      "status": "retained_intentional_same_M_solderable_window_with_explicit_manual_assembly_disposition",
+      "object": "Same-net R7.1/R4.1 mask/copper overlap",
+      "problem": "Two component pad openings merge on M net; no0.1mm mask bridge exists. Electrical connection itself is intended and current design can be made with a merged opening, but accidental solder coupling of THT joint and adjacent0805 assembly needs explicit manual instruction/inspection.",
+      "fix": "Prefer create physical spacing only if within authorized topology/placement scope; otherwise document intentional same-net merged opening and manual solder order/inspection. Do not claim a mask-bridge check passed globally or set a fictitious exception tosilencefindings."
+    },
+    {
+      "id": "FAB05-04",
+      "severity": "note",
+      "status": "documented",
+      "object": "Process selection and release criteria",
+      "problem": "Current hardware assembly.mode=inhouse/stencil=frameless invokes provider-line concerns although user selected manual soldered bare-board prototype.",
+      "fix": "Use the toolkit-supported truthful manual/bare-board process if one exists; otherwise record unsupported profile limitation explicitly. No JLCPCB PCBA stock, pick-and-place, stencil, tooling rails, fiducials or local PCBA-provider qualification is required to fabricate this bare PCB. Do not waive genuine prototype release decisions, safety review, CAM findings or later powered-test limits."
+    }
+  ],
+  "recommended_order_settings": {
+    "service": "PCB only; assembly OFF",
+    "quantity": "User chooses at checkout; no purchase performed",
+    "material": "FR-4",
+    "layers": 2,
+    "thickness_mm": 1.6,
+    "copper_oz": 1,
+    "soldermask": "Green",
+    "finish": "Lead-free HASL",
+    "outline": "Individual CNC-routed board, no V-score/panel/tooling rails",
+    "via_processing": "Ordinary through vias; tented if mask design allows. No filled/capped VIP after recommended D1 reroute",
+    "electrical_test": "Manufacturer standard flying-probe electrical test",
+    "stencil": "None for selected hand-solder assembly; optional separate future aid not required to order bare PCB",
+    "files": "Updated9-file Gerber/drill ZIP ONLY; do not upload BOM/positions as PCBA order"
+  },
+  "remaining_physical_scope": "Leadforming, C6 can support/vent clearance, wire strain relief, solder fillets, samples, powered current/temperature/fault/surge/EMC/insulation require separately controlled hand assembly/bring-up; these are not fabricated measurements or JLCPCB-fabrication capabilities.",
+  "recommendation": "Private corrected engineering candidate passes declared bare-board manufacturing screen; rerun after final adoption and export. This is not human release or supplier CAM approval.",
+  "source_modified": false,
+  "order": false,
+  "followup_private_candidate": {
+    "PCB_sha256": "2cc4d9eae05300d8ef0b49c4874bb57fe77007d3c7097187c64b18b7996971f3",
+    "report": "work/routing05/writer/dfm-current.json",
+    "report_sha256": "4800210c8bc23f8fd3c6165701c625f7bf8c70c0f79afe13cece4b2ceedfd253",
+    "passed": true,
+    "minimum_silk_pad_mm": [
+      0.226956,
+      [
+        "LED",
+        "C6.1",
+        "B.Cu"
+      ]
+    ],
+    "open_via_holes_inside_SMD_pads": [],
+    "minimum_copper_edge_mm": [
+      1.0999999999999943,
+      [
+        "0cb27bbb-fd54-49ae-a35f-8dd37e6196ec",
+        "B.Cu"
+      ]
+    ],
+    "baseline_control_findings": [
+      "FAB_OPEN_VIA_IN_PAD",
+      "FAB_SILK_PAD_CLEARANCE"
+    ],
+    "scope": "Independent read-only verification of private candidate cc54c7...; root must rerun after final CAD/config integration and bind new fabrication exports."
+  }
+}

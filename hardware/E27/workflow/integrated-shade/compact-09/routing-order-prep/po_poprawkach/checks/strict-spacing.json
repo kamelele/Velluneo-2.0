@@ -1,0 +1,1888 @@
+{
+  "board_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "checker_sha256": "0b459d0d0877d1838318067b16710c98433c9ee85c2cd91adf21f2f85a26123e",
+  "kernel_sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+  "kicad_version": "10.0.6",
+  "limits": [
+    "Planar same-face saved-copper surface-distance screen, no soldermask credit; not three-dimensional air/solder creepage, component-body qualification or IEC compliance.",
+    "Conservative outward native polygons max approximation error0.002mm; fail may be conservative near exact target.",
+    "Only straight tracks, throughvias, native supported pad polygons, saved filled zones and one closed straight native outline; unsupported copper stops.",
+    "DRC, refill freshness, schematic parity, accessibility, solder joints, thermal tests and actual inspection remain separate.",
+    "Package concessions, if explicitly supplied with actor and hashes, are bounded laboratory geometric assessments, not standards waivers."
+  ],
+  "raw_native_track_net_parity": true,
+  "input_hashes": {
+    "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\intended-connectivity.CAT01.json": "f942fe226fe255f954e7bbcb729468f8151bea4560b14b8819f5e19ada83f1d2",
+    "work/routing05/writer/spacing-matrix.CAT01.json": "7e270a5a44aed90970d4ea1010bbf4b383506a21932691d7ca01feb5b571a2d4"
+  },
+  "exceptions_applied": false,
+  "passed": false,
+  "findings": [
+    {
+      "type": "copper_spacing",
+      "a": "BR1.1",
+      "b": "BR1.3",
+      "kinds": [
+        "pad",
+        "pad"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_RECT",
+        "DC_RETURN"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.500002,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "BR1.1",
+      "b": "7535eb11-1a7a-494f-97e2-ed77b6200ed9",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_RECT",
+        "DC_RETURN"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.800001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "BR1.1",
+      "b": "d1440246-7f84-473f-83dc-a1c2967f75ef",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_RECT",
+        "DC_RETURN"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.800001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "BR1.2",
+      "b": "BR1.4",
+      "kinds": [
+        "pad",
+        "pad"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "AC_FUSED",
+        "AC_N"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.500002,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "BR1.2",
+      "b": "8d0c7570-ff5f-493d-9d4c-a559d5cc4f17",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "AC_FUSED",
+        "AC_N"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.850001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "BR1.2",
+      "b": "ea9ff752-d711-4da8-b63f-f01faa735df7",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "AC_FUSED",
+        "AC_N"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.850001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "BR1.3",
+      "b": "c8141864-b109-4a31-8d5a-4101a1fb9722",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "DC_RETURN",
+        "BUS_RECT"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.800001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "BR1.4",
+      "b": "2d57e176-938d-497c-8be3-603b183158f0",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "AC_N",
+        "AC_FUSED"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.800001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.2",
+      "b": "U1.4",
+      "kinds": [
+        "pad",
+        "pad"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "M",
+        "BUS_FILTERED"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.940002,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.3",
+      "b": "U1.4",
+      "kinds": [
+        "pad",
+        "pad"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "FB_INDUCTOR",
+        "BUS_FILTERED"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 0.670002,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.3",
+      "b": "547c854c-9a3d-4f0e-806f-57855ea45f5d",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "FB_INDUCTOR",
+        "BUS_FILTERED"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 0.770001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.3",
+      "b": "feafeda2-1f97-46de-bbf6-79039b02f9c5",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "FB_INDUCTOR",
+        "BUS_FILTERED"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 0.890001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.4",
+      "b": "1fb4428d-51f4-4f94-bb55-786253a9c06d",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.384307,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.4",
+      "b": "8e43e883-c5a1-492c-8f5a-7df850a83250",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 0.820001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.4",
+      "b": "97657426-148e-4b26-8510-1a7767037827",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.85083,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "U1.4",
+      "b": "980e4dca-995f-4452-bb3a-93a0cca643e5",
+      "kinds": [
+        "pad",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 0.97201,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "D1.1",
+      "b": "D1.2",
+      "kinds": [
+        "pad",
+        "pad"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "FB_INDUCTOR",
+        "DC_RETURN"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.500002,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "547c854c-9a3d-4f0e-806f-57855ea45f5d",
+      "b": "1fb4428d-51f4-4f94-bb55-786253a9c06d",
+      "kinds": [
+        "track",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.838496,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "547c854c-9a3d-4f0e-806f-57855ea45f5d",
+      "b": "8e43e883-c5a1-492c-8f5a-7df850a83250",
+      "kinds": [
+        "track",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 0.920001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "547c854c-9a3d-4f0e-806f-57855ea45f5d",
+      "b": "980e4dca-995f-4452-bb3a-93a0cca643e5",
+      "kinds": [
+        "track",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.414232,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "feafeda2-1f97-46de-bbf6-79039b02f9c5",
+      "b": "1fb4428d-51f4-4f94-bb55-786253a9c06d",
+      "kinds": [
+        "track",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.924644,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "feafeda2-1f97-46de-bbf6-79039b02f9c5",
+      "b": "8e43e883-c5a1-492c-8f5a-7df850a83250",
+      "kinds": [
+        "track",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.040001,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    },
+    {
+      "type": "copper_spacing",
+      "a": "feafeda2-1f97-46de-bbf6-79039b02f9c5",
+      "b": "980e4dca-995f-4452-bb3a-93a0cca643e5",
+      "kinds": [
+        "track",
+        "track"
+      ],
+      "layer": "B.Cu",
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "target_mm": 2.0,
+      "conservative_gap_mm": 1.500746,
+      "exception_ids": [],
+      "generic_target_mm": 2.0,
+      "ownership_ambiguities": []
+    }
+  ],
+  "stats": {
+    "per_face_objects": {
+      "pad": 60,
+      "track": 126,
+      "via": 20
+    },
+    "different_net_face_pairs": 11015,
+    "clipped_piece_pairs": 23
+  },
+  "all_55_pair_minima": [
+    {
+      "nets": [
+        "AC_FUSED",
+        "AC_L"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 2.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 4.700001,
+          "a": "RF1.1",
+          "b": "RF1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 4.700001,
+          "a": "RF1.1",
+          "b": "RF1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "AC_N"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.050001,
+          "a": "RV1.1",
+          "b": "691888b2-5e28-4c0e-88be-271f7012a074",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 1.500001,
+          "a": "BR1.2",
+          "b": "BR1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "BP"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 7.496847,
+          "a": "U1.1",
+          "b": "10470e6a-8220-4a10-a9c3-305a580d6a9e",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "BUS_FILTERED"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.038316,
+          "a": "RV1.1",
+          "b": "6877fd9c-4119-45c8-9f93-03e941c2357e",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.038316,
+          "a": "RV1.1",
+          "b": "6877fd9c-4119-45c8-9f93-03e941c2357e",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "BUS_RECT"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 5.22171,
+          "a": "L1.1",
+          "b": "RF1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 3.2,
+          "a": "BR1.1",
+          "b": "BR1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "DC_RETURN"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.099999,
+          "a": "RV1.1",
+          "b": "c8b1e810-efc8-4bf9-825f-c9535d83776d",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 3.635045,
+          "a": "BR1.2",
+          "b": "BR1.3",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "FB_INDUCTOR"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 13.2639,
+          "a": "RV1.1",
+          "b": "a5a54216-c342-4e22-b988-ba9ca9a946ed",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 6.522689,
+          "a": "U1.3",
+          "b": "10470e6a-8220-4a10-a9c3-305a580d6a9e",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 6.880588,
+          "a": "RV1.1",
+          "b": "T1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.523286,
+          "a": "R7.2",
+          "b": "10470e6a-8220-4a10-a9c3-305a580d6a9e",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "M"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 15.449998,
+          "a": "RV1.1",
+          "b": "R7.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 4.910855,
+          "a": "R7.1",
+          "b": "BR1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_FUSED",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 8.786818,
+          "a": "R4.2",
+          "b": "BR1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "AC_N"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 9.539062,
+          "a": "RV1.2",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.2,
+          "a": "RF1.1",
+          "b": "24e4c90b-f8a6-4cb5-a3e9-5b5cff5fbc6c",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "BP"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 28.262479,
+          "a": "RF1.1",
+          "b": "U1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "BUS_FILTERED"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 5.577564,
+          "a": "RF1.1",
+          "b": "e4f506c4-e44a-4f49-9108-5088579e0499",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 10.700001,
+          "a": "L1.2",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "BUS_RECT"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 11.060767,
+          "a": "L1.1",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 11.060767,
+          "a": "L1.1",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "DC_RETURN"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 15.070673,
+          "a": "C4.2",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 15.070673,
+          "a": "C4.2",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "FB_INDUCTOR"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 28.56157,
+          "a": "RF1.1",
+          "b": "a5a54216-c342-4e22-b988-ba9ca9a946ed",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 24.487685,
+          "a": "RF1.1",
+          "b": "D1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 23.243272,
+          "a": "T1.1",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 19.925743,
+          "a": "RF1.1",
+          "b": "R9.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "M"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 27.124246,
+          "a": "R7.1",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 27.124246,
+          "a": "R7.1",
+          "b": "RF1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_L",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 28.987336,
+          "a": "RF1.1",
+          "b": "U1.5",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "BP"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 10.165424,
+          "a": "BR1.4",
+          "b": "U1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "BUS_FILTERED"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.158756,
+          "a": "RV1.2",
+          "b": "e8c20ec9-2291-4dad-973b-7c183856b1eb",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 3.559104,
+          "a": "RV1.2",
+          "b": "6877fd9c-4119-45c8-9f93-03e941c2357e",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "BUS_RECT"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 7.606728,
+          "a": "8b520d22-5b0f-42ed-b613-a84549027b95",
+          "b": "1eae47cb-df6d-4dbf-96ad-3fd090db008e",
+          "kinds": [
+            "track",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.760089,
+          "a": "C1.1",
+          "b": "BR1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "DC_RETURN"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.075001,
+          "a": "758739f7-8ebe-43e9-b03a-68b0efe175aa",
+          "b": "1eae47cb-df6d-4dbf-96ad-3fd090db008e",
+          "kinds": [
+            "track",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.00029,
+          "a": "C4.2",
+          "b": "93686e79-77fe-445e-b4f5-5e006223bd35",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "FB_INDUCTOR"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 14.607082,
+          "a": "794f6327-7883-4280-ac84-75d2bcc370f6",
+          "b": "a5a54216-c342-4e22-b988-ba9ca9a946ed",
+          "kinds": [
+            "track",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 9.801688,
+          "a": "BR1.4",
+          "b": "U1.3",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 8.530925,
+          "a": "R7.2",
+          "b": "1eae47cb-df6d-4dbf-96ad-3fd090db008e",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 5.75,
+          "a": "R7.2",
+          "b": "BR1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "M"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 12.101217,
+          "a": "R7.1",
+          "b": "1eae47cb-df6d-4dbf-96ad-3fd090db008e",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 6.839037,
+          "a": "R7.1",
+          "b": "BR1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "AC_N",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 10.975386,
+          "a": "R4.2",
+          "b": "BR1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BP",
+        "BUS_FILTERED"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 3.210001,
+          "a": "U1.1",
+          "b": "U1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BP",
+        "BUS_RECT"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 6.784536,
+          "a": "U1.1",
+          "b": "16adb991-3e74-4cf8-84ad-1a62abdd4fe2",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BP",
+        "DC_RETURN"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 9.804964,
+          "a": "BR1.3",
+          "b": "U1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BP",
+        "FB_INDUCTOR"
+      ],
+      "surface_target_mm": 0.25,
+      "route_air_target_mm": 0.25,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 1.450103,
+          "a": "U1.1",
+          "b": "97657426-148e-4b26-8510-1a7767037827",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BP",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 3.110589,
+          "a": "R7.2",
+          "b": "U1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BP",
+        "M"
+      ],
+      "surface_target_mm": 0.25,
+      "route_air_target_mm": 0.25,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 0.305001,
+          "a": "U1.1",
+          "b": "87af18c2-fa7c-48f7-969f-8ccedcacb022",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BP",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 0.25,
+      "route_air_target_mm": 0.25,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 0.342609,
+          "a": "R4.2",
+          "b": "f05308bd-1c06-4b29-8d25-86868318dec4",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_FILTERED",
+        "BUS_RECT"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.66114,
+          "a": "L1.2",
+          "b": "8b520d22-5b0f-42ed-b613-a84549027b95",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.703801,
+          "a": "L1.1",
+          "b": "L1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_FILTERED",
+        "DC_RETURN"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.04203,
+          "a": "C4.1",
+          "b": "c8b1e810-efc8-4bf9-825f-c9535d83776d",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.875,
+          "a": "806d10a0-a33c-47ea-be78-cff022738d02",
+          "b": "d355cf10-6774-48cf-99c2-adaaa67f5a00",
+          "kinds": [
+            "track",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_FILTERED",
+        "FB_INDUCTOR"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 5.213233,
+          "a": "8c91fc85-362f-40a6-8303-0340e39b2c74",
+          "b": "a5a54216-c342-4e22-b988-ba9ca9a946ed",
+          "kinds": [
+            "via",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 0.670002,
+          "a": "U1.3",
+          "b": "U1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_FILTERED",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.007517,
+          "a": "R7.2",
+          "b": "8c91fc85-362f-40a6-8303-0340e39b2c74",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.007517,
+          "a": "R7.2",
+          "b": "8c91fc85-362f-40a6-8303-0340e39b2c74",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_FILTERED",
+        "M"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 6.284544,
+          "a": "R7.1",
+          "b": "8c91fc85-362f-40a6-8303-0340e39b2c74",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 1.940001,
+          "a": "U1.2",
+          "b": "U1.4",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_FILTERED",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 4.0,
+          "a": "U1.4",
+          "b": "U1.5",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_RECT",
+        "DC_RETURN"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.759799,
+          "a": "C4.2",
+          "b": "8b520d22-5b0f-42ed-b613-a84549027b95",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 1.500001,
+          "a": "BR1.1",
+          "b": "BR1.3",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_RECT",
+        "FB_INDUCTOR"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 9.875,
+          "a": "T1.2",
+          "b": "16adb991-3e74-4cf8-84ad-1a62abdd4fe2",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 7.620092,
+          "a": "U1.3",
+          "b": "16adb991-3e74-4cf8-84ad-1a62abdd4fe2",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_RECT",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 4.624107,
+          "a": "R7.2",
+          "b": "16adb991-3e74-4cf8-84ad-1a62abdd4fe2",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 4.501587,
+          "a": "R7.2",
+          "b": "BR1.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_RECT",
+        "M"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.625001,
+          "a": "R7.1",
+          "b": "16adb991-3e74-4cf8-84ad-1a62abdd4fe2",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.625001,
+          "a": "R7.1",
+          "b": "16adb991-3e74-4cf8-84ad-1a62abdd4fe2",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "BUS_RECT",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 6.739383,
+          "a": "R4.2",
+          "b": "16adb991-3e74-4cf8-84ad-1a62abdd4fe2",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "DC_RETURN",
+        "FB_INDUCTOR"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 9.105391,
+          "a": "d355cf10-6774-48cf-99c2-adaaa67f5a00",
+          "b": "b4e2e3a6-2876-408a-842a-d2407c2276fe",
+          "kinds": [
+            "via",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 1.500002,
+          "a": "D1.1",
+          "b": "D1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "DC_RETURN",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 1.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 1.575,
+          "a": "T1.1",
+          "b": "d355cf10-6774-48cf-99c2-adaaa67f5a00",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 1.29099,
+          "a": "R8.2",
+          "b": "42de9d20-8b46-43b9-8319-d89dae4cf29a",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "DC_RETURN",
+        "M"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 9.330075,
+          "a": "R7.1",
+          "b": "758739f7-8ebe-43e9-b03a-68b0efe175aa",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 5.750001,
+          "a": "R7.1",
+          "b": "BR1.3",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "DC_RETURN",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 6.846879,
+          "a": "U1.5",
+          "b": "D1.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "FB_INDUCTOR",
+        "LED_PLUS"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.550915,
+          "a": "4a874f4c-cec1-42cb-a2bd-ad915f7d1d95",
+          "b": "a5a54216-c342-4e22-b988-ba9ca9a946ed",
+          "kinds": [
+            "track",
+            "via"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.058784,
+          "a": "R7.2",
+          "b": "U1.3",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "FB_INDUCTOR",
+        "M"
+      ],
+      "surface_target_mm": 0.25,
+      "route_air_target_mm": 0.25,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 5.249999,
+          "a": "T1.2",
+          "b": "R7.1",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 0.670002,
+          "a": "U1.2",
+          "b": "U1.3",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "FB_INDUCTOR",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 0.25,
+      "route_air_target_mm": 0.25,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 0.647951,
+          "a": "U1.7",
+          "b": "f2a61eed-87f3-4d99-a37e-f480de9fbc7b",
+          "kinds": [
+            "pad",
+            "via"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "LED_PLUS",
+        "M"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": {
+          "conservative_gap_mm": 2.8,
+          "a": "R7.1",
+          "b": "R7.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        },
+        "B.Cu": {
+          "conservative_gap_mm": 2.208756,
+          "a": "R7.2",
+          "b": "c3b98f44-9f10-4dcb-9662-f3245d44b9e2",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "LED_PLUS",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 2.0,
+      "route_air_target_mm": 1.0,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 4.774716,
+          "a": "R7.2",
+          "b": "R4.2",
+          "kinds": [
+            "pad",
+            "pad"
+          ]
+        }
+      }
+    },
+    {
+      "nets": [
+        "M",
+        "SW_SOURCE"
+      ],
+      "surface_target_mm": 0.25,
+      "route_air_target_mm": 0.25,
+      "by_layer": {
+        "F.Cu": null,
+        "B.Cu": {
+          "conservative_gap_mm": 0.755099,
+          "a": "R4.2",
+          "b": "9a6550f5-fe39-449b-b5e7-18280170d428",
+          "kinds": [
+            "pad",
+            "track"
+          ]
+        }
+      }
+    }
+  ],
+  "nc_pair_minima": [],
+  "copper_edge_target_mm": 1.0,
+  "copper_edge_minimum": {
+    "id": "552a336e-7b8d-4bcb-aeb5-1b9080e1b206",
+    "layer": "B.Cu",
+    "net": "SW_SOURCE",
+    "conservative_gap_mm": 1.099992
+  },
+  "actual_outline_vertices_mm": [
+    [
+      150.6,
+      132.4
+    ],
+    [
+      99.4,
+      132.4
+    ],
+    [
+      99.4,
+      99.4
+    ],
+    [
+      150.6,
+      99.4
+    ]
+  ],
+  "finite_exception_ids_used": [],
+  "actual_finite_exception_regions": [],
+  "board_sha256_after": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "input_unchanged": true
+}

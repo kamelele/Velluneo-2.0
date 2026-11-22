@@ -1,0 +1,963 @@
+{
+  "revision": "SC09-ROUTE05",
+  "functional_revision": "SC09-CAT01",
+  "actual_coordinator": "/root",
+  "parent_commit": "d011ef6a865f6dd7f06825f233b2465238ecba27",
+  "source_snapshot": "68c1f87df0d1cb4525005c53cc2bc047f8c49221373fbcf83770dbe550e89fdc",
+  "scope": "Bare-PCB/manual laboratory prototype fabrication review packet, not unconditional manufacturing/product release. Exact human approvals and physical tests are not fabricated.",
+  "PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "files": [
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/.electronics-rules/config-state.json",
+      "sha256": "d469fac38ebd014d7f3d37f7c12d03571d4760658fb94503486d1593bcdc7248"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/.electronics-rules/placement-input.json",
+      "sha256": "23a9f18dbc78df09410c3795b1c7418a1eff758c9bae7050ef38f05ce58e4edf"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/.electronics-rules/routing-input.json",
+      "sha256": "23a9f18dbc78df09410c3795b1c7418a1eff758c9bae7050ef38f05ce58e4edf"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/AGENTS.md",
+      "sha256": "e8971c6193d982f58dc368d80748a934067b11401d1dc0529d02302a141d6634"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/bom-build.csv",
+      "sha256": "234548a3c34bfb821039a89f27e28aeeefc8a35d778539953b501f03ef6824ab"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/bom-build.json",
+      "sha256": "8daede552d32517f6af42ace3ef049bb9a9122670a2fe401ae9d716c727023bd"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/bom-proposal.A1.json",
+      "sha256": "99f8bb7ef6c92f759304b146b912bb800e8be83a031833910da27359e0f9b448"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/bom-proposal.json",
+      "sha256": "3cf8097a9424a7dbb77683184414cc8a4bc00aecbe552051b99991654aed043d"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/calculated-proposal.json",
+      "sha256": "b8f01c7d5ae56bdca2c495a05bbca06fc13889f9588b7e57a4ef781bfb3bbd2c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/catalogue-design-calculations.json",
+      "sha256": "0cda048670d499e3d6310ce3ffd73f1966e0de24dd6b3d8bb997ab10711502a5"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/catalogue-engineering-status.json",
+      "sha256": "45ff61e83ccf9b9ac0643bcfbf5cbcf174dbdee3b6f1b1331764ed301ec34f98"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/driver-led-interface.proposed.json",
+      "sha256": "43f447a7aa29a41099efe7c89ba3e400428ad9df92b03e103a7437c1e4acb61e"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.kicad_sym",
+      "sha256": "e5381001125b37a39bb37c0239a79e7e45d63d144f486d1cf73e57be360d254d"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_BR1.kicad_mod",
+      "sha256": "55574b3cafb6d6c4e572febe2efbaf22b30586f8aeee398f7689467b3e03d17f"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C1.kicad_mod",
+      "sha256": "a192362ecfea57e86561e5b3ee42412d0efcf8e43b6fdd2967efffc146acf714"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C4.kicad_mod",
+      "sha256": "084f1e3251b62ddbea78aab4234f1ae42e9f55300b97af33b308476ac6c31c15"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C5.kicad_mod",
+      "sha256": "6eec974d33f5ad2c0dd428161f1d538863c6eec14d977db98b76b69ee7042f06"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C6.kicad_mod",
+      "sha256": "ceb8744337eeb916f5eff022eded25ee6249cde7e8f3bda4be33dfd0bc932db6"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_D1.kicad_mod",
+      "sha256": "e52ed2ed82ca3799ff29272b0559d6d3f69500fa4c5ef1b05a9598dabad8d6ca"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_J1.kicad_mod",
+      "sha256": "163b0501ce503528ad879f0efcd97d8c93c9dbb4bf47fdffad29fbac7938fdeb"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_J2.kicad_mod",
+      "sha256": "154226bd737340ae99430ef2060721e766f0ccd9aeea046b9d04c4498d723c74"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_L1.kicad_mod",
+      "sha256": "e0be0f976f46b2463d2fd1442dd2de88c0336d20cfb559d7fef06d7962d25aaf"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R4.kicad_mod",
+      "sha256": "fa424d7efab65b2141801c0249cd4f36f41c9bd10d75b8ab82862e0f1155c537"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R5.kicad_mod",
+      "sha256": "6dc4e57471b9ecbbb3dd975b9a35fe5e51eef7b5b587be0b53c5c1f0fba41b14"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R6.kicad_mod",
+      "sha256": "6ad6d2a8c0d46023ffe16ca7bf517cb54512457e7b06ee0037a78070706178d3"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R7.kicad_mod",
+      "sha256": "cf077e9f19c790456acd239144a4a163fb79d7b41e4583d2911d8a7f12158869"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R8.kicad_mod",
+      "sha256": "48800dfeefb5118405897a9b1556e31fdd1ec1cb8df1b4168babcb147cde6a71"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R9.kicad_mod",
+      "sha256": "07eaecde236567a2d8acdb968630ea4cd1e210ad962a52aa39b452acb9b9895e"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_RF1.kicad_mod",
+      "sha256": "cd0a6a2fc0a9c5d0724ef92e511d8f2e220542753cedbf906c64d34f02c5c121"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_RV1.kicad_mod",
+      "sha256": "999c8fc6ff64b2cf93b2bbd91de11cdb256b0c0e8ac4060da7bd8ec0c397eea8"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_T1.kicad_mod",
+      "sha256": "1391053a4f3c2906fa0f71645f22e20fc9ec48b55f9e39ce41a0ec26c371f4f8"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_U1.kicad_mod",
+      "sha256": "075f17e3046f2d67476e00dbeb5a96f11d6d01e4022c2eb0a8c71333c420fb71"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/footprint-assignments.json",
+      "sha256": "216de453e2b3d6c6f78c8d4459abde80b3beb0fce13c3cd039d5d1c563e45831"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/footprint-geometry.json",
+      "sha256": "556086457cd606e479a83423723d5038306512a8717f43b3b2fdedd736105e0f"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/fp-lib-table",
+      "sha256": "bc92eb83e53b679cc5a77e3aaeca9a9c3b3ecd4118f10740841f4310222ee232"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/functional-spacing-design.json",
+      "sha256": "013ddeb0316c1c8e3745cf5b70466d8e2bed23871dadbd69b086dea2c2c3e4b7"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/hardware.json",
+      "sha256": "1af24b4260c599425ae96cfd971418a496efd8efed73a61ccdd36862804ba608"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.A1.json",
+      "sha256": "b0803bf46f12463e8710831891f12a443556b816ee8683307a0def57d6702799"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.CAT01.json",
+      "sha256": "f942fe226fe255f954e7bbcb729468f8151bea4560b14b8819f5e19ada83f1d2"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.json",
+      "sha256": "138f807a2e72218608904feb9c141002d554adec6c0e9f4b7b0e721d3c0fda87"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.toolkit.json",
+      "sha256": "d688024527b7ebb2516fa377e89a127f4e0d9f91bd9906706e2a6760aa4e2db9"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/layout-revision.json",
+      "sha256": "e0f0f44e5563ba8e1f59b1451f947325951b83520c3e360b964a79a56a0a7b3d"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/manual-prototype-fabrication-scope.json",
+      "sha256": "03d8a9353f305cf9bed63d4e7960ff9b86490c07f984ae5c1c066d996843a847"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/mechanical-budget.proposed.json",
+      "sha256": "ab7506fea8b1361f1b5bb82b2091ec71b0e9fccbc7a4bc716e3016010afc4d87"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/model-attachment.json",
+      "sha256": "415780770bb8265ac133969aa178b957a55f4dda4c8ac0037bd56dbd6d552bf6"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/catalogue-model-checks.json",
+      "sha256": "d4b12417e72cb70da17056573f8041193f7fd503c54fb56c9958873a390a6422"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/model-checks.json",
+      "sha256": "51f3aae0a79e3feacf20ffd77593156dd57c99aefea79f790f33b8045dc05d86"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/MODEL_CREDITS.txt",
+      "sha256": "985676099358d1d84df0d3ac98cb92d8825032e4914ba2f9adfa69974c7c0000"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/MODEL_INFO.json",
+      "sha256": "6593126bc7d9a9e6fe221fba55d247accc238ef8a2c973564e7fdeb019003bf0"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/R7-standing-check.json",
+      "sha256": "18afa995c0275b0d3a565b34b222f4fbbb474429437476dac266c110e3ac3798"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_BR1.step",
+      "sha256": "cde35d2e511334f7b76fbf095a2059e6450804f2418b73c9fb90530efa800989"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_BR1.wrl",
+      "sha256": "5f82df351f029b6fd63e07dc219091768d8fb70c48e93f0778ee936aeb81e2f1"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C1.step",
+      "sha256": "223ba1b012f6861b374716ae1dcec83953e3bf5e49bb14830338f5176ad650ed"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C1.wrl",
+      "sha256": "8624e85f636b3b54842ce0000cfc5df38e5e9a8a05dbfaefb6647eb9bc4e4ab3"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C4.step",
+      "sha256": "72ba7507945fc930cafb8d5458507159891b48cea5f49f1cdc2647290c3149c1"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C4.wrl",
+      "sha256": "9044f94d6b2b58b075422e8882af7921988e239f38a6a5c0161ad20ad874ae0e"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C5.step",
+      "sha256": "6ce863d8a7b21e4f50ecf9cc12c5b93f09bcb8c987f75e5c8543602882932b47"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C5.wrl",
+      "sha256": "bd8eb58f3b2cb8452cb25db0c54741a39673320212ddef2e3c17e58bd2f83564"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C6.step",
+      "sha256": "2f59da198250284bd98bb06179d73e8f703c909c3a9a7c7e8fbb5a0a3ee108ce"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C6.wrl",
+      "sha256": "3edb63da220fa35801d5321a5af70dc197ee87ec5ddf8549c980ee3426a74dc8"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_D1.step",
+      "sha256": "a93c8b977ec16681cf2306a817883c58fbdc7ccf97f2bc9cfe3b67aad27f184b"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_D1.wrl",
+      "sha256": "c652f95e7a8ddf3f73bfce6e28c257ec94c8871badf48973532cafea9d339d38"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_L1.step",
+      "sha256": "e85ca12258c34e303be61ef6e0279017cdf052e45a4a491a7ec3837e581db23c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_L1.wrl",
+      "sha256": "d9fe1356ae6e23b511eb692f1fbb425a0ecd74878e81b437214c516e63c6b506"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R4.step",
+      "sha256": "cf34849f8725feb8365d30ba0470ec5f1343cfb06f7e1486898785811faa3536"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R4.wrl",
+      "sha256": "ba760614a022deb954449f21948960a7a217aad6429a81210ab4d033e386ab81"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R5.step",
+      "sha256": "0a9097f645a411704dc89621c55892fc24c8368146530b461c71bda72a46a81a"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R5.wrl",
+      "sha256": "91a1287293cccaa41814d09c149527486535daf6e4e03c356806b75b01de0b2c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R6.step",
+      "sha256": "70e5564d6aea2f82104e0ba4e2c55afa9ab482f2290ca6e4f59a7f53b10a01c8"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R6.wrl",
+      "sha256": "fd12e6fa026df2a2e204f4892f6a9d234e0ab1747a91237fb94e681ac40dc700"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R7.step",
+      "sha256": "f9b749dd77cfcd883697ff3ff146d020d51395eb4368647d9c292921985944d7"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R7.wrl",
+      "sha256": "fe3dbba5a9476ac31a652c3701a0e9dc5005f46ac35558ce878c03b7d83aca2d"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R8.step",
+      "sha256": "a6d560ed9828fe2ae9edcf4eb9202bd49fdba1c592121e9aad7fd777bbab19da"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R8.wrl",
+      "sha256": "5c9e8c4394ddf28d48b3cda4f8466a444a82bd0406bfad544cad542edfa3e084"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R9.step",
+      "sha256": "f9bb63679dbb2e5e6c66b602eff26d00e404fc1d05b3fabb95b8e09371bdb6b4"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R9.wrl",
+      "sha256": "5c9e8c4394ddf28d48b3cda4f8466a444a82bd0406bfad544cad542edfa3e084"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RF1.step",
+      "sha256": "b73f5217b302ffd32ce6333c3bee84ccd97f28b8580e67ef0589102819c5ab3c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RF1.wrl",
+      "sha256": "c2550a13157c7891629a43a0bfeb08302ffecb8f36153f0af95605529cda8a13"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RV1.step",
+      "sha256": "bfc2423df865a70188961a7e9265a98c3d1a9b32e7bd5392640dea649985677c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RV1.wrl",
+      "sha256": "b4c86275b560f01758f17e9f57ecc10d4cea57fffd2a3ff169890e25ebdd71b7"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_T1.step",
+      "sha256": "236f640d2a034ea3c264b4cccc0eff9b67292a43b0668e424579074f8c1c9774"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_T1.wrl",
+      "sha256": "339baae6810958d13f7271e54672e2e3d60078b49b97a425946f1c7d22c6f2e8"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_U1.step",
+      "sha256": "cfd6002595e92d357104afdb5d04eec7ec8c3a04a1073870127c3ef175c5e96b"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_U1.wrl",
+      "sha256": "1e1dbafe226d4ee02434dbc20b4005c897e69b03fe0d6a43fee5246bbec7af03"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/original-requirements-crosswalk.json",
+      "sha256": "e272579323a8b96be67c9f789203202cbcef459fd2c914e73a20c3b4f11cb0e8"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-A1-map-approval.json",
+      "sha256": "9d0e7ca43921b24c06363a0686492455a0ae3035c41037b7790077b94dcdbb55"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-autonomous-completion.json",
+      "sha256": "122f8d79c320614d63abac65b1c616e17dca7f4fba7555f8b2d027995419ddce"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-catalogue-only-request.json",
+      "sha256": "028a5bf700eda3480731e0badaff65c21b63f561a4f8876749b7448f95ed714f"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-current-brief.json",
+      "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-process-line-decision.json",
+      "sha256": "430648e1b471d9aa3fede9aa34134bb94fe95150c138cb2d5948d0886afaab47"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-prototype-scope.json",
+      "sha256": "6491988d16217c36ca1519eb1b358ec1b201469389301840d973146a850343ac"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-SC09-direction-map-approval.json",
+      "sha256": "bf0280e5e38fb07dd4ef20e327f985a74be45dd963f60e09af30e63190a3b1a2"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/owner-size-50x32-approval.json",
+      "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.json",
+      "sha256": "3d735b07595f74699186825a0fa1b6ddf658b8abb4bb4293586b9cc57a5af266"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.pre-CAT01-historical.json",
+      "sha256": "b75318f16ef66c0d715294ec5a75dee595e5209cb3f4790c873528c8c8b4817b"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.ROUTE01.json",
+      "sha256": "d7418778c1b4b9ed938f7ae3a56e47d2f922dbe8dbd29c4baca074933332617f"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.ROUTE02.json",
+      "sha256": "fa4aeb39d61a650a942fea6af06c070a0f0ac9f5423f53d7c4d039112dc6a276"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/PowerFlags.kicad_sym",
+      "sha256": "b6b7b927b1a790c249425e0116068b8c3ea9a67778fe3fa6e0eb775221977649"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/R7-standing-contract.json",
+      "sha256": "f97430519a7e893c79b77f2eeb2ea59f4615491ac35e2fac5fb99dccb2b4fc4a"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/README.md",
+      "sha256": "f50a5f484624d6d222fccafca1f2e7c1621d4ba8a2e733ad9ce14b421ffdfb8f"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/active-land-correction.json",
+      "sha256": "9b021d0a45738238a7b84d1cdf51aaf9c95ea769ec3e200df5660806b607745a"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/active-parts-report.json",
+      "sha256": "10790e30a541a8b2f05dbf62307100dc5d4be431cf4044e1805b820025c924aa"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/alternatives.json",
+      "sha256": "341756937253aaf6c6e64920b1973d8c617324923685088f3e3a8aa48465c05a"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/body-packing-study.json",
+      "sha256": "d769d0c6b06068c083988f6020917393f14e1c46a42b3c11345a426812f1efb0"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/C6-mounting-interpretation.json",
+      "sha256": "43ebce32840f85a6b49bf09a84bc6f79b444f1ea156f77c1a8d1f0ca890c4314"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/LED-primary-research.json",
+      "sha256": "cb6055d0e7dde703bd02d0c3197307b9c0831b32a4a759c1cdcccf80742a40b0"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/package-addendum.json",
+      "sha256": "916e0888d23c1f37af8c51b27e769941c551206b82a2334a8138ea204901e48c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/package-research.json",
+      "sha256": "309bfd7dc9de1d187bdeb42a992f1b9f40b35915981164d4aecaedf9702be578"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/parameter-research.json",
+      "sha256": "e00a0803ca5c0b379129e93cba080dfe1a001725c28d57ae1d8086e6007e99d7"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/passive-footprints.json",
+      "sha256": "8535e0fb328d6df4b255d50c6b2f563fb2e629e69a7840ff7eb74f6c60a54e6b"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/passive-parts-report.json",
+      "sha256": "9e8813f4ef2bb9b9c3db28a997942a7cff26a7e83e1d1b905bcbceaed1a34301"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/rdr464-research.json",
+      "sha256": "af1da3440e55a01ccfe27747ea7168ff37585fe87c815b3e8d769f8ba2240ec2"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/rdr464-verified-U1-pins.json",
+      "sha256": "67fddba5bde24c83b497235c3ca706e896caaf11e12c609cf5b07d729b73efe7"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/reference/T1-magnetic-design.json",
+      "sha256": "8ddde32c4185bbdcbf7975577118975dba95249633663cf54f959b014ac5f27d"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/BRINGUP.md",
+      "sha256": "a478092d0e6c85c7e216dfcf3ac12b656421bef6137e949f4fea61b08f865e62"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/README.md",
+      "sha256": "5b4c9f22dee61d826f38578b1010d597dc4a69da99d7b18f3a1878f2e8c1f346"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/SC09_assembly_back.pdf",
+      "sha256": "25e176dcf34a78e344f6d48fa1fe98ec5e6e1f7ed157a6326099176acff8deec"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/SC09_assembly_front.pdf",
+      "sha256": "ffac4bb63b559bc1b9339ec18e5b7228a1adba4dbcd5cd9dd5279e0f871b0f2f"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/SC09_BOM.csv",
+      "sha256": "234548a3c34bfb821039a89f27e28aeeefc8a35d778539953b501f03ef6824ab"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/SC09_do_zamowienia_PCB.zip",
+      "sha256": "c6fe02af21d9f2fff38ac7e96eafeee09ca4d7c5a9a894cd339c5ebf59742fb7"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/SC09_drills.zip",
+      "sha256": "52acc6836f9e4d584aa03b77a8eb8a00c25c75e6b57baf2a551f27d25773d8c1"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/release-candidate/SC09_positions_manual_reference.csv",
+      "sha256": "731301282f4ea9ec629610b31b0c73f549fcf3340cce4300b492b310137f9dff"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/requirements.json",
+      "sha256": "b3bc259ce6e59fca84726907d41798fa00a9b3bcc16ce695c046539b47cf9a82"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/routing-improvement-basis.json",
+      "sha256": "b736fd36083b0b23e79b7286edf37628a53d011d6c2f86860556af32c15b252a"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_dru",
+      "sha256": "980789aef3fb935c0a965f28e33106e95639f3bfe653092931a91b01dc5aa8fe"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_pcb",
+      "sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_pro",
+      "sha256": "d74058d2e0f1e7a0e73a89c4af72a4e0d25f70aac5327f658921bf08f373461c"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_sch",
+      "sha256": "41db1c8b4ba434f73a7fd6cf0366143a2c329cc383a754c857c80ce3dad38d8e"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/source-basis.A1.json",
+      "sha256": "4a8e1a947af8dd806f7c0594b91d053c5b1464f127382516bd872590f9d15a64"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/source-basis.CAT01.json",
+      "sha256": "beabb0ce49b0bd27cfa061045dcc83fa5fcb260c983f4a4993b88bf1f4594447"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/source-basis.json",
+      "sha256": "7f9e79ec220bc5fa4671b1a8a6bc881548895415321cc635b6757e6cded545ad"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/spatial-constraints.json",
+      "sha256": "b5b4fe56bb840886d8f05f7fc31653ed27127c3fda664954342822bd58f010db"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/standards-and-test-plan.json",
+      "sha256": "3e4a244c67f2619d591d7f170a443250bf8c758e7e10db1ae35431ea5c2b13b4"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/sym-lib-table",
+      "sha256": "89df9f9762889b20a645be209dda6cc4dd7339fd314f61f20ecd079aced8ad9b"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/symbol-pin-verification.json",
+      "sha256": "6fbf3ccb9922950faac5562a2e0a5d898d52a9a8bfd298be09b5405eaaae91bf"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/T1-custom-contract.json",
+      "sha256": "06be18b15fe3750f61a7ee7fd31416a3da7b48327166657b1fb6bfa62415da13"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/thermal-and-spacing-basis.ROUTE01.md",
+      "sha256": "173841aa2699695f227cd85fbcd4137cf82d87a4907c997494ab46f5446fd999"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/thermal-and-spacing-basis.ROUTE02.md",
+      "sha256": "73aab8b1acc2c0c890f89900e82a1cd8d9d5d77a135d34d791e6d4b929693287"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/thermal-planning.json",
+      "sha256": "6f391a99eedf3cd27701730e666d26c69010a991f256679c808cb0650c5c4445"
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC09_compact/two-endpoint-interface.proposed.json",
+      "sha256": "11daa08b06f38753ffaedc683095fe6116c6a9ee0fbbfc94033ee6c36e15c51c"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/adoption.json",
+      "sha256": "093a8db08de935fedf57626087cdd53531fcde58013eb3f0e21eed6253c550fe"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/assessment-and-plan.md",
+      "sha256": "2f81fb3314e465930b6e1a8f21a0eb997fb3e52c647ed1df5246fc0a3b876da7"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/before.json",
+      "sha256": "c630223c63f6f74ad5c6fb8178217028427d0e261d665d160cfba259357136cd"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/findings.json",
+      "sha256": "30c04dbfd0518484f1232fba98bc4df8ed71c259592d382905a3d6cdc0808530"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/BRINGUP.md",
+      "sha256": "a478092d0e6c85c7e216dfcf3ac12b656421bef6137e949f4fea61b08f865e62"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/artifact-registration.json",
+      "sha256": "d446f63077231cb153a4fe50a1aaeffd3cbcc69a29bbd566e999a04175b7db0e"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/artifact_lint.py",
+      "sha256": "9b577d3e73755899e31a280001ff3a2ce199b7e7ba8b4c22c88ace68ec559aef"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/before-after-metrics.json",
+      "sha256": "723b7262852c69c3c8607d0e5c19b5bae7b84527570ddebba94bd06ae75813d4"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/bounded-spacing.json",
+      "sha256": "f837cd52f77cfc1e5db4ac5b1f512ef62d016d0441b50c4ac5e6ee3210b87d43"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/checker.py",
+      "sha256": "0b459d0d0877d1838318067b16710c98433c9ee85c2cd91adf21f2f85a26123e"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/configure-adoption.json",
+      "sha256": "53b440fa7417ed7aaa87d6d4b2ab55b09cae2e529514752f5764141938afade7"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/corner_audit.py",
+      "sha256": "85ce7969a5ddc68ee08dc1f7041e82ef332941174009c8966ae7b31855339321"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/corners-current.json",
+      "sha256": "db2e49117a41f3320708105c5c0433d9f3cbb8b1985f6c1d430f6d6caf99ed7e"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/DRC.json",
+      "sha256": "769b6c496b007cb0d796f8f6a1292a5a541ec008eb5c7c305463900a6cdd77c7"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/drill-report.txt",
+      "sha256": "1af5f8f81c8be58d3d7259c7bb335d00474d1ab447579eb5091501127d01712d"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/ERC.json",
+      "sha256": "10677d05e5c73ffc66ea00df72009c5d6784a3d7a749369a47d7f67a2e943d57"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/fabrication-analysis.json",
+      "sha256": "4f6071a78884c0ec254f60e768d2a9163a382d8f4afb76b5788990c5f7994e9a"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/fabrication-analysis.md",
+      "sha256": "4cb32242b6b894606603206db5009588b5141993fe2adc9753371152ac084aab"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/fabrication-current.json",
+      "sha256": "e89743de0a0d8d0fc3214d7b47cdc1c1a4d7ef59fa3ffa004dcad1d0e1f35c90"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/fabrication_check.py",
+      "sha256": "fd4389aabd82cb9deb4ce8707ddefbb720a61cd8d1c901920aa1b5938e18eca4"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/geometry-current.json",
+      "sha256": "636b0ed2dca6d9cd8d7b19fe4571735bc6b56c3505f1a6d801d6627c287225d5"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/geometry_audit.py",
+      "sha256": "82fe97e1a9135d653ef374e8ca5fd8f2b97e55d98ecb361598454606c12dead7"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/independent-connectivity.json",
+      "sha256": "25c4063bfc9dcc97970dc2d5d6324397f498a82a77b930b5a703fe7a41847395"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/independent_metrics.py",
+      "sha256": "300d84da941f9d0891aa91f5fb4de5a65c1edeb987fc6ba4daf19154dd0ec350"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/jlcpcb-capabilities-2026-11-22.json",
+      "sha256": "5b21e10266a82979965cfae1243404632b8935380ac19e74ba66191393edb432"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/junction-current.json",
+      "sha256": "9492ae1fd65d260489cfe4603ec5dd4e83ee26d1958254ea9ee87e328c7c0b7c"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/junction_audit.py",
+      "sha256": "eac7feecd2a1d2e5b75079724730d8abefa3e8957835813eaabeccaecffa497f"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/Kelvin-negative-controls.json",
+      "sha256": "a58a4ecd4433eb149706590ecfc324a918d5e6cc2ea9115a6d6ad446ad5fd17e"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/kelvin_negative_controls.py",
+      "sha256": "117f4c2cef1a91c0d0f4ac4756e1aca8db54b778c0992e0a3a517b02d29ff95f"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/kernel_sc08.py",
+      "sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/manufacturing-file-lint.json",
+      "sha256": "62eb9bfb62caf8bcebdfa5bfa4c3f2439a6a422ce6ab16be749c9f5879d743cd"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/native-inventory.json",
+      "sha256": "7ed2edaba439c95319a4b4fa28a7061bccfc81d6a886ad1ba00afbece2fa9369"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/native-part-audit.json",
+      "sha256": "eea1d06d0c016789fbc7c3ae2961c1cd9998be3a9664a145b96d93009bb959b6"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/netlist.xml",
+      "sha256": "cac5b83a8a8b29f8323373323ff537e78e813eb07bd0efe3a51704fbdd5b4a96"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/package-assessment.CAT01.json",
+      "sha256": "d2c65f2779219a2202569f7dba3729d141ba80164a3f4c0610add4dd8b3884ac"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/parts-review.json",
+      "sha256": "24e94192ade04b7e3981a1769dec70a64af6e554094dbd61d8fe511ba7791029"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/parts-review.md",
+      "sha256": "5ae36b9d8702f5ac19856e723c95859e4c6c570e3dc92d8b7b91f62de98adcc1"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/placement-invariance.json",
+      "sha256": "acc68e1bbb7abfc0c988d88d5927ba21177b88521fc21b4b9d415e8b8979eb4f"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/placement_invariance.py",
+      "sha256": "3c406e516a3ba93e09f097db1c986229148bfdbbc29006102619810ba42a045a"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/public-acquisition-summary.json",
+      "sha256": "3e3a4f9cd176f5c43b676a620d0d5e03bb18e1be227932a0b204ccbab42fb089"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/refill.json",
+      "sha256": "830e817c180894fad9e63c6c94e84b4617f6cf2a4acc05e3963e04bf12fccd0f"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/spacing-analysis.json",
+      "sha256": "673bb13a164d0c8da061ec394b5a53d947f0cece05b6b5e4fc7495af78f4d0d8"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/spacing-analysis.md",
+      "sha256": "6d4671b7884e7b554c26caa94bdbb14a8acea208af6cf5e202a5bc47d670d556"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/spacing-matrix.CAT01.json",
+      "sha256": "7e270a5a44aed90970d4ea1010bbf4b383506a21932691d7ca01feb5b571a2d4"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/strict-spacing.json",
+      "sha256": "a523853b00bc2a024aae4187e03123980791d9e6c7951c3ab4d904b8e4ecf324"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-check.json",
+      "sha256": "41a9e141eb026fd2a149f703c9dd6269c655e9a0ca3f235cba086fb1abab1dbb"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-connectivity.json",
+      "sha256": "e5da98bf0f4a9d6527a2f23a849b8671b4c5158bf1d782f4936a3eccc454cfbd"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-connectivity.log",
+      "sha256": "e5da98bf0f4a9d6527a2f23a849b8671b4c5158bf1d782f4936a3eccc454cfbd"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-doctor.log",
+      "sha256": "28defb195d101b546bc874f02044152ed3013733bdddb422fcad2247305ab521"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-release.json",
+      "sha256": "41a9e141eb026fd2a149f703c9dd6269c655e9a0ca3f235cba086fb1abab1dbb"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-release.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-requirements-routing.log",
+      "sha256": "bc6087b1592e67edc6e8fd0c3ee85bec4b63a11a520a88e32b1b7d02b551a791"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-requirements.json",
+      "sha256": "bc6087b1592e67edc6e8fd0c3ee85bec4b63a11a520a88e32b1b7d02b551a791"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-spatial.log",
+      "sha256": "c18b1b9644e81fae7a6980df1ead149bf5ec71af324d0ea27c8beccce1b4030b"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-work.json",
+      "sha256": "d54a9c33335d88768a2fa4ea30942d8a84ac5fbc4d42ebaf3217e0307f8e155d"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/toolkit-work.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/writer-change-proof.json",
+      "sha256": "2631a451b34b337dea3659c2ec5d28454dce7ef1aa647394dc16316f3e3dcab8"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/writer-geometry-migration.json",
+      "sha256": "ae1f1567f1bf2d671eb7423d3b1adf5fe50d7316b73ae2c2f292a9cfbf7034ef"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/writer-HANDOFF.json",
+      "sha256": "e33b682f4ce55603a758364ac6cbdf1a2b210031eeae0334064c054ccbbd6363"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/writer-HANDOFF.md",
+      "sha256": "b1a6082bc1860dd894b6f50b86cb72d16eeb0f227a26bb2b02a461d7e4f768a2"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/writer-package-assessment.CAT01.json",
+      "sha256": "d2c65f2779219a2202569f7dba3729d141ba80164a3f4c0610add4dd8b3884ac"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/writer-seed-authoring.json",
+      "sha256": "48aa55455e39b518e74b43604249fd5ff74d9f0c52c0b304a6dccd45de19ad66"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/checks/writer-spacing-matrix.CAT01.json",
+      "sha256": "7e270a5a44aed90970d4ea1010bbf4b383506a21932691d7ca01feb5b571a2d4"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-B_Cu.gbl",
+      "sha256": "9e40c76a8cb517c7f045600c830ca788efe08f9826f574d6e5628a51884c6e3b"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-B_Mask.gbs",
+      "sha256": "bb3ac2d67c8487ba4af80f771ef7b774cb6296eb3f6e9fbdb2cc931798057f88"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-B_Silkscreen.gbo",
+      "sha256": "2787f4e424ed7339e8b382de29a5d2c4156a8e30fa6d55a7da6a9e8f777da4a2"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-Edge_Cuts.gm1",
+      "sha256": "8b947f73b15a254d82d125797e03fc05661871f99dfa2f98e377ecea29ce025e"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-F_Cu.gtl",
+      "sha256": "22017714759ec0481bf811841ec3f35eeec00b230dd3aaf40f50d9b808b3e0a4"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-F_Mask.gts",
+      "sha256": "fdf8c94f23da1c86f1d6bd5f398f86a59cbc6635342386955c0c22324b825a05"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-F_Silkscreen.gto",
+      "sha256": "95196fd290e430829dd3a509842cbc9df6db39791ba679aebdf6a44ef770dc65"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-job.gbrjob",
+      "sha256": "16b0cbc3cf40fa2305a80a9ca87460b514e5a366d822da4b99dac576b10e9111"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-NPTH.drl",
+      "sha256": "ff6c541467003eeac5def5acab08282b2ec68a281f5538b9d686a81234a1940e"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/fabrication/SC09_compact-PTH.drl",
+      "sha256": "fc168452bcde01804852fff58835ce6ad28f44ecfc08419af4700ad803a70be0"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/MANUAL_ASSEMBLY.md",
+      "sha256": "6c1b27165c12995df72c9b80ac18b4b42056f964ee9a5168a3954aa440a77104"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/order-parameters.json",
+      "sha256": "f6e0e42ce680592c4f810d2097b2eb98e96634f809201d78cc28bc907a8d67c8"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/README.md",
+      "sha256": "78f3ddce32a28c768c3d41002ae5b1ef3909b32172fab40b7927bc144bfa6855"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_3D_przod.png",
+      "sha256": "8e25ae685bd462ee7a6169e93424a45e4adf0a45128fda0a2d9a0d1bda97c796"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_3D_tyl.png",
+      "sha256": "cf3e19ce8d98b4e6f7aa2ae3c4197bda139a85cc92a215d077641fef13a7ea6f"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_assembly.wrl",
+      "sha256": "eb397d0e319777d7dcef48a20f880f8ff73efd58d96b05b2e9754b21e3cacae7"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_assembly_back.pdf",
+      "sha256": "25e176dcf34a78e344f6d48fa1fe98ec5e6e1f7ed157a6326099176acff8deec"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_assembly_front.pdf",
+      "sha256": "ffac4bb63b559bc1b9339ec18e5b7228a1adba4dbcd5cd9dd5279e0f871b0f2f"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_BOM.csv",
+      "sha256": "234548a3c34bfb821039a89f27e28aeeefc8a35d778539953b501f03ef6824ab"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_BOM.json",
+      "sha256": "8daede552d32517f6af42ace3ef049bb9a9122670a2fe401ae9d716c727023bd"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_catalogue_buy_list.csv",
+      "sha256": "e9712eab38c3bc7605c9ff981396584ac97fd4a15391cf03e2cdb7875659b2db"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_catalogue_buy_list.json",
+      "sha256": "5dc70ca7698d2361d5209432b4f53281d4309fe92f373cce4cf8af5c7253e970"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_catalogue_buy_list.pdf",
+      "sha256": "74656be70387a3a308a3ff99bc7611b7ecbf209fb190704a19d158a8683d96c5"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_fabrication_review.pdf",
+      "sha256": "000ea0382e82daaba7c2c44522d33b2f31baf8a5e908896b52d93660b9ee10bc"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_KiCad.zip",
+      "sha256": "7505dfc10fd3d410ddafeb0d5bda8d5fcb333469a3532513b4436642c3ac8904"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_layers.pdf",
+      "sha256": "679d2dbf3923813f296b7d73ed3840ae25fdc29b29f42f919d68fbbec380a314"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_pin_connections.csv",
+      "sha256": "8b54bcbf2a53d0f114731350a2b7ad14ea1401ab23e867726239a48993509c12"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_positions_manual_reference.csv",
+      "sha256": "731301282f4ea9ec629610b31b0c73f549fcf3340cce4300b492b310137f9dff"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_ROUTE05_Gerbers_drills.zip",
+      "sha256": "c6fe02af21d9f2fff38ac7e96eafeee09ca4d7c5a9a894cd339c5ebf59742fb7"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_schematic.pdf",
+      "sha256": "9f6ca29b91907c89e4f297f762fb75802ae799ac794fab3ea895f0770abb0edb"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_sciezki_przod.png",
+      "sha256": "fabad45110b6d062e48077b6f53c73e3a2b44759f4ff0db89796dfe354ce47d7"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_sciezki_tyl.png",
+      "sha256": "72056370c259ca2db39dd67176d4968963e6c83dc5a5f1d3a0da0201b979f2b9"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_specification.json",
+      "sha256": "0679fbc23aa12fd57e173048d89500681da5b9175d87c0611edf1bdb8efb2618"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/task-contract.json",
+      "sha256": "1852317415ae5493e6222ce15d408c51dbf69cfafba5f89226bc64e6b8e21469"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/thermal-and-spacing-basis.md",
+      "sha256": "19999640332fb0074f7d61065e6d8cfa645752b1123349199bf02d58e97f9bb2"
+    }
+  ]
+}

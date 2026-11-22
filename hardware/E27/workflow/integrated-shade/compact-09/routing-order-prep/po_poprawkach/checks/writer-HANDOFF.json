@@ -1,0 +1,94 @@
+{
+  "actual_actor": "/root/r05_spacing",
+  "base_commit": "d011ef6a865f6dd7f06825f233b2465238ecba27",
+  "base_PCB_sha256": "9b73c61c34dc28fceff2e9d2265fcfb1280053245c9840f4e7c0bb39d782fa87",
+  "candidate_PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "candidate_path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\.work\\routing05",
+  "CAD_lease": "relinquished; root may adopt and verify",
+  "changed_files": [
+    "hardware.json",
+    "SC09_compact.kicad_dru",
+    "SC09_compact.kicad_pcb",
+    "SC09_compact.kicad_pro",
+    "spatial-constraints.json",
+    ".electronics-rules/config-state.json",
+    ".electronics-rules/placement-input.json",
+    ".electronics-rules/routing-input.json"
+  ],
+  "byte_identical_other_files": 130,
+  "raw_19_footprint_blocks_equal": true,
+  "requirements": [
+    "C_ROUTING",
+    "C_SCOPE",
+    "C_SIZE",
+    "manual laboratory prototype fabrication"
+  ],
+  "dimensions_mm": [
+    51.2,
+    33.0,
+    1.6
+  ],
+  "absolute_origin_mm": [
+    99.4,
+    99.4
+  ],
+  "all_footprint_pad_model_positions_unchanged": true,
+  "ordinary_via_relocated": {
+    "uuid": "d355cf10-6774-48cf-99c2-adaaa67f5a00",
+    "from_absolute_mm": [
+      121.2,
+      116.2
+    ],
+    "to_absolute_mm": [
+      122.6,
+      116.2
+    ],
+    "diameter_mm": 0.75,
+    "drill_mm": 0.3
+  },
+  "single_straight_B_escape": true,
+  "original_F_trunk_copper_path_unchanged": true,
+  "native_tracks": 126,
+  "native_vias": 10,
+  "total_track_length_mm": 330.73173458436025,
+  "native_ERC_DRC_unconnected_parity": 0,
+  "Kelvin": {
+    "passed": true,
+    "Kelvin_native_objects": 18,
+    "missing_declared_UUIDs": [],
+    "other_FB_intersections_checked": 2,
+    "findings": [],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "bounded_55_pass": true,
+  "strict_pass": false,
+  "strict_findings": {
+    "copper_spacing": 23
+  },
+  "strict_edge_findings": 0,
+  "strict_minimum_edge_mm": {
+    "id": "552a336e-7b8d-4bcb-aeb5-1b9080e1b206",
+    "layer": "B.Cu",
+    "net": "SW_SOURCE",
+    "conservative_gap_mm": 1.099992
+  },
+  "bare_manufacturing_screen_pass": true,
+  "actual_constraints_digest_supplied_final": "ff06e4dbac18c87bcd33a5044f1794c10051b680092b1126fefca1ba245716c4",
+  "authoring_constraints_digest": "58746ab9f405d8ef6c5238957be090d191a90cb46632e4c17f9afd1d7a6c71e3",
+  "configure_initial_plan": "dfa635451503b08c345437c7787bf2c7595ed844b7909c2577f044afbb2d5efd",
+  "configure_initial_transaction": "537f23ed6f4ad738669d3f8b84419edef3a7c3e6803630da2e824cf53d47267f",
+  "stricter_edge_plan": "b6107e2667bf44a03b0718b8b82ad821336f342f3693c2935341d1285ce908be",
+  "stricter_edge_transaction": "38bc6a0aa73a8c1cb64ede4f51278520594b1e9f28519a54a08c58705c35311d",
+  "final_noop_preview": "fb05cc64a8f1cb234022a9d7529a02c76ce0d4a7ccdac530a70fedd531223777",
+  "final_noop_diff_bytes": 0,
+  "full_product_release_pass": false,
+  "human_approval_fabricated": false,
+  "physical_measurements": false,
+  "active_customer_source_changed": false,
+  "root_actions_required": [
+    "Independently adopt allowed8files and verify fresh actualS artifacts.",
+    "Update visible final dimensions/positions origin99.4mm; obsolete size assumptions remain historical and do not imply the new51.2x33mm budget approved.",
+    "Freeze completepacket and obtain independent final reviews; all physical/human/process gates must remain explicit.",
+    "Re-export fabrication/source archives and 3D from integratedS, do notreuseolderexporthashes."
+  ]
+}

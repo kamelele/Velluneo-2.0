@@ -1,0 +1,36 @@
+{
+  "task": "SC09-ROUTE05 prototype fabrication preparation",
+  "actual_coordinator": "/root",
+  "base_commit": "d011ef6a865f6dd7f06825f233b2465238ecba27",
+  "user_instruction": "Close blockers and prepare the board for JLCPCB bare fabrication, manual assembly; correct spacing, check parts and production files; same branch, do not change main.",
+  "requirements": [
+    "C_PROCESS",
+    "C_PARTS",
+    "C_GRAPH",
+    "C_PACKING",
+    "C_ROUTING",
+    "C_RELEASE"
+  ],
+  "scope": "Laboratory prototype only, not completed lamp qualification. Fabrication, manual assembly, powered testing and finished-product qualification remain distinct.",
+  "source_writer": "/root/r05_spacing private .work/routing05 only, root adoption after lease release",
+  "other_actors": {
+    "parts": "/root/r05_parts",
+    "fabrication": "/root/r05_fabrication"
+  },
+  "allowed_geometry_changes": "Minimal outline increase to obtain >=1mm edge setback, D1 output-via relocation out of SMD land and centred short routing, no arbitrary floor reductions. Same circuit, placements, catalogue MPNs unless separately documented packaging-only alternative.",
+  "acceptance": [
+    "Native ERC/DRC/parity/unconnected zero",
+    "Exact 46pin/11net graph",
+    "Full 55pair strict and scoped results retained, all avoidable geometric issues corrected; intrinsic package conflicts explicitly assessed, not falsely waived",
+    "Fresh source-bound Gerbers/drills, dimensions/counts/units/polarities inspected",
+    "Manual assembly guide and exact supplier MPN list; current availability evidence qualified",
+    "Four independent roles review same frozen packet",
+    "Verify same remote branch, main and unrelated repository files unchanged"
+  ],
+  "authority": "This is authorization to prepare a concrete review packet. No invented final acceptance, supplier upload, order, powered test or physical measurement.",
+  "open_inputs": [
+    "Final exact fabrication release decision after complete evidence",
+    "Intrinsic package spacing basis cannot be turned into a standards waiver",
+    "Actual tests belong to guarded bring-up, not claimed completed"
+  ]
+}

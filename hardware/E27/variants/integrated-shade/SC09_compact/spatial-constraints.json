@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": "SC09-ROUTE02",
-  "basis": "MaximumC6can and both-face body reserve, left/right edge ports declared before capture.",
+  "revision": "SC09-ROUTE05",
+  "basis": "ROUTE05 engineering layout proposal: 51.2x33mm outline adds min0.6mm side/top and0.4mm bottom material to bring all saved copper beyond1mm edge target without changing parts or placement. Expanded both-face C6 reserve covers added top strip. Owner has not approved this exact new source snapshot.",
   "basis_sources": [
     {
       "path": "routing-improvement-basis.json",
@@ -13,17 +13,17 @@
     }
   ],
   "outline_mm": [
-    100,
-    100,
-    150,
-    132
+    99.4,
+    99.4,
+    150.6,
+    132.4
   ],
   "areas": [
     {
       "id": "C6_BODY",
       "rectangle_mm": [
         100,
-        100,
+        99.4,
         113.75,
         122.5
       ],
@@ -37,7 +37,7 @@
         "pad",
         "zone"
       ],
-      "basis": "BoardintersectionofC6maxcan[.25,0,13.25,22] plus.5mm packingmargin. Bothfacesprotected; entire5mm vent outsidePCBtop requiresfixtureair.",
+      "basis": "Same C6 maximum body and0.5mm packing reserve asROUTE02, extended to99.4mm topPCBedge so added top strip remains copperfree onbothfaces. Maintain5mm free vent-air space measured from actual can vent face at y100, not from shifted board edge. No physical fit qualification implied.",
       "exceptions": []
     }
   ],

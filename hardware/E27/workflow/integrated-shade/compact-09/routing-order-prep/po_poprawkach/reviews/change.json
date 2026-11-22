@@ -1,0 +1,150 @@
+{
+  "role": "Change Reviewer",
+  "actual_actor": "/root/routing_final_change",
+  "date": "2026-11-22",
+  "revision": "SC09-ROUTE05",
+  "manifest_sha256": "f33c1329e1ea28b864957357e83632e65e0661fbd8715b7b4e87e48d1932073c",
+  "source_snapshot": "68c1f87df0d1cb4525005c53cc2bc047f8c49221373fbcf83770dbe550e89fdc",
+  "PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "scope": "Bounded read-only final change review for bare JLCPCB fabrication and manual laboratory assembly. Actual native baseline/current diff and source-bound evidence reviewed. No finishedlamp qualification, final human release, supplier upload/order or powered-use approval.",
+  "checked_files": [
+    "All238 final frozen hashes",
+    "Actual before/current nativePCB footprint/pad/via/outline and settings/rules diff",
+    "Unchanged functional schematic/BOM/intent/local footprints/models",
+    "Actual current spatial/consumer provenance",
+    "Current graph/ERC/DRC/DFM/filelint/spacing/negativecontrol/registration evidence",
+    "Current manual guide,parts acquisition evidence,BRINGUP and corrected active specification",
+    "Current native views,99.4-origin positions and9-member fabrication upload"
+  ],
+  "checks": {
+    "frozen_hashes_verified": 238,
+    "actual19nativefootprintblocks_byteidentical": true,
+    "46pin11net_graph_unchanged_and_XML_matches_expected": true,
+    "functional_schematic_BOM_MPNs_intent_unchanged": true,
+    "all58local_library_model_files_unchanged": true,
+    "actual_outline_absolute_mm": [
+      99.4,
+      99.4,
+      150.6,
+      132.4
+    ],
+    "actual_dimensions_mm": [
+      51.2,
+      33,
+      1.6
+    ],
+    "actual_single_via_change": {
+      "UUID": "d355cf10-6774-48cf-99c2-adaaa67f5a00",
+      "net": "/DC_RETURN",
+      "before_absolute_mm": [
+        121.2,
+        116.2
+      ],
+      "after_absolute_mm": [
+        122.6,
+        116.2
+      ],
+      "diameter_drill_mm": [
+        0.75,
+        0.3
+      ],
+      "other9vias_unchanged": true,
+      "same_UUID_net_layers_drill_diameter_preserved": true
+    },
+    "native_project_changes": [
+      {
+        "field": "/board/design_settings/rules/min_copper_edge_clearance",
+        "before": 0.5,
+        "after": 1.0
+      },
+      {
+        "field": "/board/design_settings/rules/min_silk_clearance",
+        "before": null,
+        "after": 0.15
+      },
+      {
+        "field": "/board/design_settings/rules/min_text_height",
+        "before": null,
+        "after": 1.0
+      },
+      {
+        "field": "/board/design_settings/rules/min_text_thickness",
+        "before": null,
+        "after": 0.15
+      },
+      {
+        "field": "/board/design_settings/rules/solder_mask_to_copper_clearance",
+        "before": null,
+        "after": 0.09
+      }
+    ],
+    "check_severities_unchanged": true,
+    "customrules_only_edge0_5_to1mm_strengthened": true,
+    "55pair_targets_and_finite_package_scopes_unchanged": true,
+    "native_edge_floor_mm": 1,
+    "strict_edge_target_mm": 1,
+    "strict_edge_failures": 0,
+    "retained_bounded_checker_edge_target_mm": 0.5,
+    "strict_remaining_findings": {
+      "copper_spacing": 23
+    },
+    "bounded55pair_pass": true,
+    "actual_final_consumer_digest": "ff06e4dbac18c87bcd33a5044f1794c10051b680092b1126fefca1ba245716c4",
+    "authoring_consumer_digest": "58746ab9f405d8ef6c5238957be090d191a90cb46632e4c17f9afd1d7a6c71e3",
+    "authoring_and_final_revalidation_truthfully_distinguished": true,
+    "tracks": 126,
+    "vias": 10,
+    "track_length_mm": 330.7317345843603,
+    "independent_native_Kelvin_rerun_pass": true,
+    "Kelvin_face_objects": 18,
+    "Kelvin_missing_UUIDs": 0,
+    "Kelvin_extra_force_sense_join_outside_R5": 0,
+    "negative_controls_reject_missing_uuid_and_bad_same_net_join": true,
+    "native_raw_saved_track_net_identity_unchanged": true,
+    "SOURCE_pours": 0,
+    "current_sourcebound_native_ERC_DRC_parity_unconnected": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "current_sourcebound_DFM_pass": true,
+    "current_sourcebound_filelint_pass": true,
+    "new99_4origin_positions_CSV_native_verified": true,
+    "registered_source_artifact_hashes_match": true,
+    "fabrication_archive_CRC_pass": true,
+    "fabrication_members": 9,
+    "PTH_count": 24,
+    "NPTH_count": 0
+  },
+  "findings": [],
+  "retained_gates": [
+    {
+      "gate": "final_bare_prototype_release",
+      "status": "open",
+      "condition": "Exact owner final fabrication acceptance and actual supplier CAM/order confirmation remain separate; no supplier upload or purchase inferred."
+    },
+    {
+      "gate": "functional_insulation_and_powered_bringup",
+      "status": "open",
+      "condition": "Strict23package/escape findings remain explicit; finite laboratory assessment is not a standards waiver, isolation or finishedlamp approval."
+    },
+    {
+      "gate": "manual_sample_assembly",
+      "status": "open",
+      "condition": "Actual exact-part sample,forming/support/solder/fixture inspection required. SharedR4.1/R7.1M solderable opening is intentional same-net manualjoint; no maskdam claimed."
+    },
+    {
+      "gate": "physical_qualification",
+      "status": "open",
+      "condition": "Current/ripple/OVP/thermal/fault/surge/EMC/insulation unmeasured. BRINGUPC1case80Cstop is a plan, not data. Parts stock observations are not reservations."
+    }
+  ],
+  "invalidation_impact": "Prior50x32outline, oldD1via-in-SMDland and previous export/position hashes are historical. Current51.2x33bareprototype packet requires exact final acceptance. Circuit/catalogueparts/componentplacements remain retained.",
+  "major_or_blocker_change_regressions": 0,
+  "recommendation": "ready_for_human_review",
+  "approval_fabricated": false,
+  "physical_measurements": false,
+  "order": false,
+  "supplier_message": false
+}

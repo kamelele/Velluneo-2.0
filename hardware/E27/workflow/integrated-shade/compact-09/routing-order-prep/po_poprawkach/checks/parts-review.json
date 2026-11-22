@@ -1,0 +1,799 @@
+{
+  "actual_actor": "/root/r05_parts",
+  "role": "Bounded parts research implementer; not final independent reviewer or human approver",
+  "date": "2026-11-22",
+  "input_branch": "concept/integrated-shade-nonisolated-buck",
+  "input_commit": "d011ef6a865f6dd7f06825f233b2465238ecba27",
+  "input_PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "input_BOM_sha256": "8daede552d32517f6af42ace3ef049bb9a9122670a2fe401ae9d716c727023bd",
+  "scope": "ExistingCAT01 circuit andmanualassembly sourcing/land/rating deskchecks for barePCBprototype procurement planning. NoCAD/BOM edits, purchase orpoweredtest.",
+  "outcome": "No part substitution required for the scoped barePCB prototype. Six uniqueMPNs have fresh exact publicHTTP positive stock; remaining ten have manufacturer/catalogue or indexeddistributor routes, explicitly lower freshness. Currentavailability at checkout never guaranteed.",
+  "parts": [
+    {
+      "refs": [
+        "RF1"
+      ],
+      "MPN": "FW20A10R0JA",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "10ohm5%2W fusible",
+        "primary": "https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
+        "check": "NormalI=60mAassumption gives.036W vs2W. Cataloguefusing is specified120/240VAC; complete253VAC MOV/fault coordination remains a laboratory test, not proven by fusible label.",
+        "body_max_mm": [
+          12,
+          6
+        ],
+        "lead_max_mm": 0.7
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.com/en/products/detail/bourns-inc/FW20A10R0JA/3777398",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 81699,
+          "crawl_age_displayed": "2 months",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "RV1"
+      ],
+      "MPN": "V275LA4P",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "275VAC,369VDC,23J MOV",
+        "primary": "https://www.littelfuse.com/assetdocs/varistors-la-datasheet?assetguid=f7c547ce-c2fa-4789-86cc-ec39a5060afb",
+        "check": "253VAC below275VAC rating;710Vclamp at10A is not a guaranteed bound for arbitrary surge, wiring overshoot orMOVfault.",
+        "body_max_mm": [
+          9,
+          5.6,
+          12
+        ],
+        "stagger_nominal_mm": [
+          5,
+          2.5
+        ],
+        "lead_max_mm": 0.685
+      },
+      "sources": [
+        {
+          "vendor": "LCSC",
+          "url": "https://www.lcsc.com/product-detail/C129558.html",
+          "MPN": "V275LA4P",
+          "evidence_grade": "fresh_public_HTTP_product_offer",
+          "HTTP_date": "Sun, 22 Nov 2026 18:01:08 GMT",
+          "HTML_sha256": "078f5abd9d477846ab6cfd67c875f6fb4b8eb9ed82e7d21d895bacacef353db9",
+          "stock": 3970,
+          "availability": "http://schema.org/InStock",
+          "not_reserved": true,
+          "live_API_or_checkout_confirmation": false,
+          "MOQ": 5,
+          "multiple": 5,
+          "price_breaks_USD": [
+            [
+              5,
+              0.134
+            ],
+            [
+              50,
+              0.1072
+            ],
+            [
+              150,
+              0.0938
+            ],
+            [
+              1500,
+              0.0838
+            ],
+            [
+              3000,
+              0.0757
+            ],
+            [
+              4500,
+              0.0717
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "refs": [
+        "BR1"
+      ],
+      "MPN": "MB10S-13",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "1000V,.8A bridge",
+        "primary": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+        "check": "Steady358Vpeak below1000V and~60mARMS input screen below.8A; actual surge/thermal not measured. Diodesnumericpins must not be replaced with genericMB10S manufacturer map.",
+        "pin_map": {
+          "1": "+BUS_RECT",
+          "2": "AC_FUSED",
+          "3": "-DC_RETURN",
+          "4": "AC_N"
+        },
+        "land_mm": [
+          1,
+          2.15
+        ]
+      },
+      "sources": [
+        {
+          "vendor": "LCSC",
+          "url": "https://www.lcsc.com/product-detail/C460887.html",
+          "MPN": "MB10S-13",
+          "evidence_grade": "fresh_public_HTTP_product_offer",
+          "HTTP_date": "Sun, 22 Nov 2026 18:01:09 GMT",
+          "HTML_sha256": "26192addb8743f0568c0b51e867f8896bcaa44f1d04392c5d7073832edaea072",
+          "stock": 5285,
+          "availability": "http://schema.org/InStock",
+          "not_reserved": true,
+          "live_API_or_checkout_confirmation": false,
+          "MOQ": 5,
+          "multiple": 5,
+          "price_breaks_USD": [
+            [
+              5,
+              0.137
+            ],
+            [
+              50,
+              0.1245
+            ],
+            [
+              150,
+              0.1182
+            ],
+            [
+              500,
+              0.1136
+            ],
+            [
+              3000,
+              0.1098
+            ],
+            [
+              6000,
+              0.108
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "refs": [
+        "C1"
+      ],
+      "MPN": "B32529E6473K189",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "47nF10%400VDC MKT,postbridge",
+        "primary": "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529E6473K189",
+        "check": "358Vlinepeak below400V rating only with applicable temperature/ripple derating. Fullrating85C; at100C category325V falls below358V. Proposed80C prototype stop ceiling is a conservative test-plan condition, not measured temperature. No across-lineX rating inferred.",
+        "body_max_mm": [
+          7.3,
+          4.5,
+          9.5
+        ],
+        "pitch_mm": 5
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.com/en/products/detail/tdk/B32529E6473K189/18718969",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 5750,
+          "crawl_age_displayed": "1 month",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "L1"
+      ],
+      "MPN": "768772332",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "3.3mH10%400V",
+        "primary": "https://www.we-online.com/components/products/datasheet/768772332.pdf",
+        "check": "358Vpeak below400V;60mARMS assumed below.25A40K-rise test rating. Typical.27Asaturation not guaranteed hot/fault limit.",
+        "body_max_mm": [
+          8.3,
+          8.3,
+          10
+        ],
+        "hole_pattern_mm": {
+          "hole": 1.2,
+          "pitch": 5
+        },
+        "lead_diameter_reference_only_mm": 0.7,
+        "guaranteed_max_lead_published": false
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.no/en/products/detail/w%C3%BCrth-elektronik/768772332/16910471",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 142,
+          "crawl_age_displayed": "2 months",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "C4"
+      ],
+      "MPN": "B32671P6154K000",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "150nF10%630VDC MKP",
+        "primary": "https://product.tdk.com/en/search/capacitor/film/snubbering_pfc/info?part_no=B32671P6154K000",
+        "check": "Normal358Vpeak below630V; rate250V/us. High-frequency ripple, compositewaveform andsurge still subject to controlledprototype measurements. NotsoleDCmark proof.",
+        "body_max_mm": [
+          13,
+          6,
+          12
+        ],
+        "pitch_mm": 10,
+        "lead_max_mm": 0.65
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.si/en/products/detail/tdk/B32671P6154K000/3878304",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 13460,
+          "crawl_age_displayed": "1 month",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact DigiKey product page index retrieved2026-11-22; EUR.92qty1/.586qty10. Primary TDK feed separately reports13275, updated2026-10-23. Neither is a fresh reserved checkout. LCSC exactstock0 in fresh response.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "U1"
+      ],
+      "MPN": "LYT1603D-TL",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "LYT1603D-TL SO8,725VMOSFET",
+        "primary": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+        "check": "D08A pinout/land match. Feedback threshold273..285mV at25C, on-time1.012..1.25us minimum, auto-restart current1.06..1.24A atspecifieddi/dt. NRND does notpreventprototypepurchase butrequiresknownsource/identity. Noabsolutejunctiontemperaturepredictedfromgenericthermalresistance.",
+        "pins": {
+          "1": "BP",
+          "2": "M",
+          "3": "FB",
+          "4": "D",
+          "5": "S",
+          "6": "S",
+          "7": "S",
+          "8": "S"
+        },
+        "land_mm": [
+          1.45,
+          0.6
+        ],
+        "pitch_mm": 1.27,
+        "row_centres_mm": 5.45,
+        "TME_packaging_alternate": "LYT1603D is same1603SO8 electricaltype, blankstandardpack vs-TLtape/reel per primaryp12; source alternate only, notautochanged inBOM.",
+        "rejected_blind_substitute": "LYT1604D-TL has1.61..1.88Aauto-restartlimit anddifferentbias current/capacitance; do not substitute solelybecausepincompatible."
+      },
+      "sources": [
+        {
+          "vendor": "LCSC",
+          "url": "https://www.lcsc.com/product-detail/C567687.html",
+          "MPN": "LYT1603D-TL",
+          "evidence_grade": "fresh_public_HTTP_product_offer",
+          "HTTP_date": "Sun, 22 Nov 2026 18:00:12 GMT",
+          "HTML_sha256": "464a90b26a1a76dee98045a0d241fbe8c9e9e8d27af9024fab49d52979530677",
+          "stock": 10,
+          "availability": "http://schema.org/InStock",
+          "not_reserved": true,
+          "live_API_or_checkout_confirmation": false
+        },
+        {
+          "vendor": "TME",
+          "url": "https://www.tme.eu/en/details/lyt1603d/led-drivers/power-integrations/",
+          "MPN": "LYT1603D",
+          "evidence_grade": "fresh_public_HTTP_product_offer",
+          "HTTP_date": "Sun, 22 Nov 2026 18:00:12 GMT",
+          "HTML_sha256": "d23be2b8f8a738c4e607f422e8bd57aec11d3cfc4951e44a737fb6d66063de14",
+          "stock": 80,
+          "availability": "http://schema.org/InStock",
+          "not_reserved": true,
+          "live_API_or_checkout_confirmation": false
+        }
+      ]
+    },
+    {
+      "refs": [
+        "C5"
+      ],
+      "MPN": "CL21B475KAFNNNE",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "4.7uF25VX7R0805",
+        "primary": "https://product.samsungsem.com/mlcc/CL21B475KAFNNN.do",
+        "check": "BPmax5.55V below25V. Existing~3.14uFeffectivecurve istypical notguaranteed;BPdroop/startup mustbemeasured.",
+        "body_max_mm": [
+          2.1,
+          1.35,
+          1.35
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B475KAFNNNE/3888627",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 232263,
+          "crawl_age_displayed": "2 months",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "R4"
+      ],
+      "MPN": "ERJ-6ENF1242V",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "12.4k1%0805.125W",
+        "primary": "https://industrial.panasonic.com/ww/products/pt/general-purpose-chip-resistors/models/ERJ6ENF1242V",
+        "check": "At2.48V threshold,~.496mW below.125W. Use100ppm/Kgrade; actualOVPdynamicbound not established.",
+        "body_max_mm": [
+          2.1,
+          1.35,
+          0.7
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.com/en/products/detail/panasonic-industry/ERJ-6ENF1242V/119288",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 20881,
+          "crawl_age_displayed": "4 months",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "R5"
+      ],
+      "MPN": "RL1206FR-7W0R68L",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": ".68ohm1%.5W1206",
+        "primary": "https://www.yageo.com/en/Upload/PDF/-/PYu-RL-HP_51_ROHS_L.pdf",
+        "check": "At.279Vpeaksensethreshold triangularRMS paperloss.0382W below.5W; exact0R68 not0R068.200ppm/Ktolerance screens retained.",
+        "body_max_mm": [
+          3.4,
+          1.85,
+          0.7
+        ]
+      },
+      "sources": [
+        {
+          "vendor": "LCSC",
+          "url": "https://www.lcsc.com/product-detail/C859937.html",
+          "MPN": "RL1206FR-7W0R68L",
+          "evidence_grade": "fresh_public_HTTP_product_offer",
+          "HTTP_date": "Sun, 22 Nov 2026 18:01:09 GMT",
+          "HTML_sha256": "49c3857c3bff10cbb84892d971f7a32ba94572031da95a855de97eb6383dca01",
+          "stock": 3830,
+          "availability": "http://schema.org/InStock",
+          "not_reserved": true,
+          "live_API_or_checkout_confirmation": false,
+          "MOQ": 10,
+          "multiple": 10,
+          "price_breaks_USD": [
+            [
+              10,
+              0.0453
+            ],
+            [
+              100,
+              0.0356
+            ],
+            [
+              300,
+              0.0308
+            ],
+            [
+              1000,
+              0.0272
+            ],
+            [
+              5000,
+              0.0242
+            ],
+            [
+              10000,
+              0.0228
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "refs": [
+        "R6"
+      ],
+      "MPN": "CRCW12063R65FKEA",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "3.65ohm1%.25W1206",
+        "primary": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+        "check": "At.279Vpeak triangularpaperloss.00711W below.25W. Exact3R65 not3K65.100ppm/Kgrade.",
+        "body_max_mm": [
+          3.4,
+          1.85,
+          0.7
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.mouser.co.uk/en/ProductDetail/Vishay/CRCW12063R65FKEA?qs=a87eylGnD3%252BEdqERjdagRQ%3D%3D",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 14174,
+          "crawl_age_displayed": "2 months",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "D1"
+      ],
+      "MPN": "US1J-13-F",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "US1J-13-F600V1A75nsSMA",
+        "primary": "https://www.diodes.com/assets/Datasheets/ds16008.pdf",
+        "check": "Steadylinepeak358Vbelow600V;nominal.487Apeakand.281AtriangleRMSbelow1Acataloguecurrentunderitsconditions. Transient/thermal/currentderatingremainmeasuredtestitems.",
+        "pins": {
+          "1": "cathode FB_INDUCTOR",
+          "2": "anode DC_RETURN"
+        },
+        "land_mm": [
+          2.5,
+          1.7
+        ],
+        "row_centres_mm": 4
+      },
+      "sources": [
+        {
+          "vendor": "LCSC",
+          "url": "https://www.lcsc.com/product-detail/C85095.html",
+          "MPN": "US1J-13-F",
+          "evidence_grade": "fresh_public_HTTP_product_offer",
+          "HTTP_date": "Sun, 22 Nov 2026 18:01:09 GMT",
+          "HTML_sha256": "ca4fd08412782149db9fa37e962f5e337e61937d640cc18ae33d75ac8ec2f6d1",
+          "stock": 27435,
+          "availability": "http://schema.org/InStock",
+          "not_reserved": true,
+          "live_API_or_checkout_confirmation": false,
+          "MOQ": 5,
+          "multiple": 5,
+          "price_breaks_USD": [
+            [
+              5,
+              0.1247
+            ],
+            [
+              50,
+              0.1009
+            ],
+            [
+              150,
+              0.0889
+            ],
+            [
+              500,
+              0.08
+            ],
+            [
+              2500,
+              0.0728
+            ],
+            [
+              5000,
+              0.0646
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "refs": [
+        "T1"
+      ],
+      "MPN": "MSS1210H-125KED",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "1.2mH10%400VMSS1210H",
+        "primary": "https://www.coilcraft.com/getmedia/52078704-21eb-4c2b-9b72-1e07b4a2e252/mss1210h.pdf",
+        "check": "400Voperation,.69Atyp10%Isatat25C,.63Arms20K-rise at25C,1.013ohmDCRmax perprimaryPDF. Paper.487Apeak/.281Arms below25Ctyp values; hotinductance/corelossminimumonmargin remainshypothesis to measure. No customwinding required.",
+        "body_max_mm": [
+          12.3,
+          12.3,
+          10.2
+        ],
+        "land_mm": [
+          5.5,
+          3
+        ],
+        "centres_mm": 9.5,
+        "polarity": "nonpolar two-terminalcoil"
+      },
+      "sources": [
+        {
+          "url": "https://www.coilcraft.com/en-us/products/power/high-voltage-inductors/mss-mos-%281%29/mss1210h/mss1210h-125/",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": null,
+          "crawl_age_displayed": "3 weeks",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact manufacturer catalogue Buy/sample route, MOQ1 and$3.68 qty1; dynamic page also contains generic unavailable message, so do not read generic text as exact livecount. Numeric1077 is manufacturer feed viaFindchips,6daysold, not direct reserved stock.",
+          "MOQ": 1
+        },
+        {
+          "url": "https://www.findchips.com/search/10h12",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 1077,
+          "crawl_age_displayed": "6 days",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Coilcraft Direct Manufacturer stock feed, exactMSS1210H-125KED. Availability evidence only; electrical data relies on Coilcraft primary datasheet.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "C6"
+      ],
+      "MPN": "EEUFS2A151",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "150uF20%100VEEUFS2A151",
+        "primary": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFS2A151",
+        "check": "90Vdynamicstop target below100V;180uFmaxenergy.729J.105Ccataloguelimit andripple needqualifiedmeasurement;10000hr/105CcatalogueratingisnotSC09life. Horizontalforming support/ventclearance asdocumented.",
+        "diameter_max_mm": 13,
+        "length_max_mm": 22,
+        "pitch_mm": 5,
+        "lead_max_mm": 0.65,
+        "polarity": "pin1positiveLED_PLUS pin2negativeDC_RETURN"
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.com/en/products/detail/panasonic-industry/EEU-FS2A151/9597035",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 566,
+          "crawl_age_displayed": "3 weeks",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "R7"
+      ],
+      "MPN": "HVR2500003903FR500",
+      "quantity_per_PCB": 1,
+      "ratings_and_fit_desk_review": {
+        "value": "390k1%.25W1600VDCHVR25",
+        "primary": "https://www.vishay.com/docs/30260/hvr2537.pdf",
+        "check": "Priorworstpaper.116344W below.161765W at100Clocalambientderating; noVR25thetaJAtransfer. Reference.58\u00b1.05lead andcoatedbody7.5max reviewed.",
+        "body_max_mm": [
+          7.5,
+          2.5
+        ],
+        "lead_max_mm": 0.63
+      },
+      "sources": [
+        {
+          "url": "https://www.digikey.com/en/products/detail/vishay-beyschlag-draloric-bc-components/HVR2500003903FR500/719816",
+          "evidence_grade": "retrieved_indexed_product_page",
+          "stock_displayed": 17138,
+          "crawl_age_displayed": "1 month",
+          "observed_date": "2026-11-22",
+          "not_reserved": true,
+          "fresh_direct_HTTP_stock_verified": false,
+          "note": "Exact-MPN distributor product page retrieved by web search; not a fresh direct HTTP stock API or reserved cart.",
+          "MOQ": 1
+        }
+      ]
+    },
+    {
+      "refs": [
+        "R8",
+        "R9"
+      ],
+      "MPN": "RC1206FR-0768KL",
+      "quantity_per_PCB": 2,
+      "ratings_and_fit_desk_review": {
+        "value": "68k1%.25W1206bleeder",
+        "primary": "https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL",
+        "check": "90V\u00b2/(68k*.99)=.12032W perresistor below.25W@70C, below.16176W@100Clocalambientlinear derating. Twoindependentparallel parts; one-open90\u21925V36.45spaper bound remainsconditional.",
+        "body_max_mm": [
+          3.4,
+          1.85,
+          0.7
+        ]
+      },
+      "sources": [
+        {
+          "vendor": "LCSC",
+          "url": "https://www.lcsc.com/product-detail/C137239.html",
+          "MPN": "RC1206FR-0768KL",
+          "evidence_grade": "fresh_public_HTTP_product_offer",
+          "HTTP_date": "Sun, 22 Nov 2026 18:01:09 GMT",
+          "HTML_sha256": "f50bacaf8dac30e89d8b31f067718f21f01574d2df22aa3581e64f94939b85fd",
+          "stock": 93700,
+          "availability": "http://schema.org/InStock",
+          "not_reserved": true,
+          "live_API_or_checkout_confirmation": false,
+          "MOQ": 50,
+          "multiple": 50,
+          "price_breaks_USD": [
+            [
+              50,
+              0.0121
+            ],
+            [
+              500,
+              0.0099
+            ],
+            [
+              1500,
+              0.0087
+            ],
+            [
+              5000,
+              0.0079
+            ],
+            [
+              25000,
+              0.0073
+            ],
+            [
+              50000,
+              0.007
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "native_part_audit_sha256": "eea1d06d0c016789fbc7c3ae2961c1cd9998be3a9664a145b96d93009bb959b6",
+  "native_part_check_pass": true,
+  "package_geometry_provenance": [
+    {
+      "file": "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\reference\\active-land-correction.json",
+      "sha256": "9b021d0a45738238a7b84d1cdf51aaf9c95ea769ec3e200df5660806b607745a"
+    },
+    {
+      "file": "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\reference\\passive-footprints.json",
+      "sha256": "8535e0fb328d6df4b255d50c6b2f563fb2e629e69a7840ff7eb74f6c60a54e6b"
+    },
+    {
+      "file": "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\reference\\package-addendum.json",
+      "sha256": "916e0888d23c1f37af8c51b27e769941c551206b82a2334a8138ea204901e48c"
+    },
+    {
+      "file": "work/compact09/catalog-only/U1-L1-sources/WE-768772332-current-primary-extract.json",
+      "sha256": "9fa94f4ede18f46bedcf162b15c0bf8c85585aa4c17884cb01ab93f9efc63c97"
+    }
+  ],
+  "calculated_screen": {
+    "high_line_sinusoidal_peak_V": 357.7960312803931,
+    "R4_threshold_power_W": 0.000496,
+    "R5_triangle_power_W": 0.03815735294117648,
+    "R6_triangle_power_W": 0.007108767123287674,
+    "bleeder_each_90V_minR_power_W": 0.12032085561497326,
+    "RF1_at60mArms_W": 0.036,
+    "not_waveform_simulation": true,
+    "not_measurement": true
+  },
+  "findings": [
+    {
+      "id": "PART05-01",
+      "severity": "note",
+      "status": "desk_verified_closed",
+      "issue": "ExactU1availability appearedblockedbycachedwebresults",
+      "evidence": "FreshLCSC10 exactLYT1603D-TL;freshTME80 packagingalternateLYT1603D;do notclaimunavailable solelyfromDigiKey0. Source stock has not been reserved."
+    },
+    {
+      "id": "PART05-02",
+      "severity": "note",
+      "status": "documented_preassembly_inspection",
+      "issue": "L1lead diameter isreferenceonly; freeleadpitchtolerance\u00b1.5mm",
+      "closure": "PCBmatchesmanufacturer1.2hole/P5pattern; samplegaugingandgentlefreeleadformingbeforehandassembly. No fabricated guaranteedmaxlead."
+    },
+    {
+      "id": "PART05-03",
+      "severity": "note",
+      "status": "test_plan_condition_for_coordinator",
+      "issue": "C1temperature-dependent voltage rating",
+      "closure": "Keep C1below85Cfullratingbasis; conservative80Cstopproposal pendingactualtestsetup. No100Cfull400Vclaim."
+    },
+    {
+      "id": "PART05-04",
+      "severity": "note",
+      "status": "bounded_to_postfabrication_labtests",
+      "issue": "MOV/RF1surge/faultcoordination andhotmagnetic/OVP/thermalwaveformsnotphysicallyqualified",
+      "closure": "These remainbringup/qualificationgates, not falselyreportedmeasurements orautomaticbarePCBfabricationdefects."
+    }
+  ],
+  "unconditional_product_release": false,
+  "immediate_stock_all16_live_confirmed": false,
+  "supplier_contact": false,
+  "purchase": false,
+  "physical_tests": false,
+  "CAD_modified": false,
+  "BOM_modified": false,
+  "source_metadata_consistency": {
+    "id": "PART05-05",
+    "severity": "major",
+    "status": "independently_verified_closed",
+    "issue": "Active power-supply-specification.json and T1-custom-contract.json retain pre-CAT01 custom EE10 winding text despite current CAT01 native T1=MSS1210H-125KED.",
+    "closure_condition": "Preserve former values as historical evidence and publish corrected active CAT01/ROUTE05 specification; current T1 contract must point to the standard catalogue Coilcraft part and current footprint. Verify no functional source substitution occurred.",
+    "classification": "Documentation consistency affecting order review, not a native pin/MPN/footprint defect.",
+    "parent_notified": true,
+    "actual_verifier": "/root/r05_parts",
+    "verified_fields": [
+      "Current T1 exactcatalogue MPN andtwo-terminalvalue",
+      "CurrentPCB51.2x33x1.6",
+      "HistoricalpreCAT01filepreserved",
+      "CustomcontractSUPERSEDEDnotforprocurement"
+    ],
+    "evidence_sha256": {
+      "power-supply-specification.json": "3d735b07595f74699186825a0fa1b6ddf658b8abb4bb4293586b9cc57a5af266",
+      "power-supply-specification.pre-CAT01-historical.json": "b75318f16ef66c0d715294ec5a75dee595e5209cb3f4790c873528c8c8b4817b",
+      "T1-custom-contract.json": "06be18b15fe3750f61a7ee7fd31416a3da7b48327166657b1fb6bfa62415da13"
+    },
+    "scope": "T1procurement/specificationconsistencyandcurrentPCBdimensions;othertextfieldsoutsideclosure"
+  },
+  "public_acquisition_summary_sha256": "3e3a4f9cd176f5c43b676a620d0d5e03bb18e1be227932a0b204ccbab42fb089",
+  "full_HTML_private": true,
+  "initial_R04_PCB_sha256": "9b73c61c34dc28fceff2e9d2265fcfb1280053245c9840f4e7c0bb39d782fa87",
+  "candidate_revision": "SC09-ROUTE05",
+  "final_candidate_parts_scope": "R05outlineandR4trackescapechangesdonotalteranyexactMPN,padnetmembershiporlandsize. Freshnative19/46checkwasrerunagainstactualR05board."
+}

@@ -35,6 +35,7 @@
 	)
 	(setup
 		(pad_to_mask_clearance 0)
+		(solder_mask_min_width 0.1)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting
 			(front yes)
@@ -3547,8 +3548,8 @@
 		)
 	)
 	(gr_line
-		(start 100 100)
-		(end 150 100)
+		(start 99.4 99.4)
+		(end 150.6 99.4)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -3557,8 +3558,8 @@
 		(uuid "188fbd80-fc06-4f2d-a0b4-634e1185e9b3")
 	)
 	(gr_line
-		(start 100 132)
-		(end 100 100)
+		(start 99.4 132.4)
+		(end 99.4 99.4)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -3567,8 +3568,8 @@
 		(uuid "88bd4453-d330-40d1-95d9-c463987ba8e7")
 	)
 	(gr_line
-		(start 150 100)
-		(end 150 132)
+		(start 150.6 99.4)
+		(end 150.6 132.4)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -3577,8 +3578,8 @@
 		(uuid "717a0e23-4bf6-4617-93c6-cc8671ec077e")
 	)
 	(gr_line
-		(start 150 132)
-		(end 100 132)
+		(start 150.6 132.4)
+		(end 99.4 132.4)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -3586,7 +3587,7 @@
 		(layer "Edge.Cuts")
 		(uuid "0f39de94-f0c6-4385-93ce-d5b950f902a1")
 	)
-	(gr_text "SC09 R04"
+	(gr_text "SC09 R05"
 		(at 124 129.199999 0)
 		(layer "F.SilkS")
 		(uuid "c5383ffa-8f00-454c-bdc1-7142212a504d")
@@ -3645,7 +3646,7 @@
 		)
 	)
 	(gr_text "230 V"
-		(at 145 126.8 0)
+		(at 145 126.2 0)
 		(layer "B.SilkS")
 		(uuid "252855ba-a682-48b2-9b74-bb250695c598")
 		(effects
@@ -3869,7 +3870,7 @@
 		(uuid "2f2d9171-2d06-4ce6-a615-f93699f61712")
 	)
 	(segment
-		(start 121.2 116.2)
+		(start 122.6 116.2)
 		(end 120.4 116.2)
 		(width 0.3)
 		(layer "F.Cu")
@@ -3902,7 +3903,7 @@
 	)
 	(segment
 		(start 129.499999 116.2)
-		(end 121.2 116.2)
+		(end 122.6 116.2)
 		(width 0.3)
 		(layer "F.Cu")
 		(net "/DC_RETURN")
@@ -3917,7 +3918,7 @@
 		(uuid "cb0de63c-eb06-40d4-aa7d-69b994080126")
 	)
 	(via
-		(at 121.2 116.2)
+		(at 122.6 116.2)
 		(size 0.75)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
@@ -3979,6 +3980,14 @@
 		(layer "B.Cu")
 		(net "/DC_RETURN")
 		(uuid "9423c479-af6d-4cf5-90e0-7e1400c283cf")
+	)
+	(segment
+		(start 121.2 116.2)
+		(end 122.6 116.2)
+		(width 0.4)
+		(layer "B.Cu")
+		(net "/DC_RETURN")
+		(uuid "94389216-62a9-4057-b08b-257255f3c74d")
 	)
 	(segment
 		(start 108.75 126.5)
@@ -4803,7 +4812,7 @@
 		)
 		(polygon
 			(pts
-				(xy 100 100) (xy 113.75 100) (xy 113.75 122.5) (xy 100 122.5)
+				(xy 100 99.4) (xy 113.75 99.4) (xy 113.75 122.5) (xy 100 122.5)
 			)
 		)
 	)

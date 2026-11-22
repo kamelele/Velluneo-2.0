@@ -1,0 +1,172 @@
+{
+  "actor": "/root",
+  "script_author": "/root/r05_fabrication",
+  "board_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "tool": "10.0.6",
+  "source_changed": false,
+  "capabilities_file": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\routing05\\jlcpcb-capabilities-2026-11-22.json",
+  "capabilities_sha256": "5b21e10266a82979965cfae1243404632b8935380ac19e74ba66191393edb432",
+  "script_sha256": "fd4389aabd82cb9deb4ce8707ddefbb720a61cd8d1c901920aa1b5938e18eca4",
+  "scope": "Bare PCB manufacturing screen. No CAM acceptance, safety/product qualification or actual solder/process measurement.",
+  "approximation_mm": 0.002,
+  "findings": [],
+  "notes": [],
+  "board": {
+    "dimensions_mm": [
+      51.19999999999999,
+      33.0
+    ],
+    "thickness_mm": 1.6,
+    "layers": 2,
+    "closed_rectangular_outline": true
+  },
+  "drill": {
+    "total": 24,
+    "component_count": 14,
+    "via_count": 10,
+    "tools_mm": [
+      0.3,
+      0.9,
+      1.0,
+      1.1,
+      1.2
+    ],
+    "minimum_annulus_mm": 0.225,
+    "minimum_component_annulus_mm": 0.5,
+    "minimum_hole_wall_gap_mm": [
+      0.6899494936611705,
+      "a5a54216-c342-4e22-b988-ba9ca9a946ed",
+      "f2a61eed-87f3-4d99-a37e-f480de9fbc7b",
+      0.2
+    ]
+  },
+  "track_widths_mm": [
+    0.3,
+    0.4,
+    0.6
+  ],
+  "minimum_copper_edge_mm": [
+    1.0999999999999943,
+    [
+      "0cb27bbb-fd54-49ae-a35f-8dd37e6196ec",
+      "B.Cu"
+    ]
+  ],
+  "minimum_different_net_copper_gap_mm": [
+    0.305001,
+    [
+      "U1.1",
+      "87af18c2-fa7c-48f7-969f-8ccedcacb022",
+      "B.Cu"
+    ]
+  ],
+  "minimum_mask_aperture_gap_mm": [
+    0.0,
+    [
+      "R7.1",
+      "R4.1",
+      "B.Cu"
+    ]
+  ],
+  "intentional_compound_mask_windows": [
+    {
+      "a": "R7.1",
+      "b": "R4.1",
+      "layer": "B.Cu",
+      "net": "/M",
+      "gap_mm": 0.0,
+      "disposition": "Intentional shared same-net solderable window. Hand assembly order/fillet inspection required. No insulating bridge or different-net clearance credit is claimed."
+    }
+  ],
+  "open_via_holes_inside_SMD_pads": [],
+  "visible_silk": [
+    {
+      "text": "SC09 R05",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "230 V",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "LED",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "B.Silkscreen"
+    },
+    {
+      "text": "-",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "B.Silkscreen"
+    },
+    {
+      "text": "+",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "B.Silkscreen"
+    },
+    {
+      "text": "230 V",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "B.Silkscreen"
+    },
+    {
+      "text": "N",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "B.Silkscreen"
+    },
+    {
+      "text": "L",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15,
+      "layer": "B.Silkscreen"
+    }
+  ],
+  "minimum_silk_mask_gap_mm": [
+    0.226956,
+    [
+      "LED",
+      "C6.1",
+      "B.Cu"
+    ]
+  ],
+  "minimum_mask_to_different_net_trace_mm": [
+    0.305001,
+    [
+      "U1.1",
+      "87af18c2-fa7c-48f7-969f-8ccedcacb022",
+      "B.Cu"
+    ]
+  ],
+  "archive": {
+    "path": "work/Velluneo-2.0/hardware/E27/workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach/SC09_ROUTE05_Gerbers_drills.zip",
+    "sha256": "c6fe02af21d9f2fff38ac7e96eafeee09ca4d7c5a9a894cd339c5ebf59742fb7",
+    "members": [
+      "SC09_compact-B_Cu.gbl",
+      "SC09_compact-B_Mask.gbs",
+      "SC09_compact-B_Silkscreen.gbo",
+      "SC09_compact-Edge_Cuts.gm1",
+      "SC09_compact-F_Cu.gtl",
+      "SC09_compact-F_Mask.gts",
+      "SC09_compact-F_Silkscreen.gto",
+      "SC09_compact-NPTH.drl",
+      "SC09_compact-PTH.drl"
+    ],
+    "CRC_pass": true,
+    "members_differing_from_export_directory": []
+  },
+  "input_unchanged": true,
+  "passed": true,
+  "remaining_limits": [
+    "Intentional M shared solderable window is explicitly reported; no maskbridge claimed there.",
+    "Supplier CAM acceptance, exact part sample inspection, manual leadforming/support and solder inspection remain separate.",
+    "Manufacturing limits do not override project functional matrix, human release review or physical bring-up limits."
+  ]
+}

@@ -1,13 +1,12 @@
 {
-  "revision": "SC09-ROUTE04",
+  "revision": "SC09-ROUTE05",
   "functional_revision": "SC09-CAT01",
   "coordinator": "/root",
-  "implementer": "/root/route04_writer",
-  "base_commit": "27674de71c9e1eec702d3ba235e44f3229676547",
+  "implementer": "/root/r05_spacing",
+  "base_commit": "d011ef6a865f6dd7f06825f233b2465238ecba27",
   "PCB_mm": [
-    50,
-    32,
-    1.6
+    51.2,
+    33
   ],
   "layers": 2,
   "same_catalogue_electronics": true,
@@ -61,10 +60,10 @@
     ],
     "fixture_condition": "Can entirely within PCB footprint;5mm free vent air required beyond upperedge."
   },
-  "current_workflow": "routing-approaches/po_poprawkach",
+  "current_workflow": "routing-order-prep/po_poprawkach",
   "physical_measurements": false,
   "exact_human_spatial_approval": null,
   "full_product_release": false,
   "thermal": "Compact SOURCE still floats with switching; no generic thetaJA or previous copper-dependent temperature prediction qualifies this layout.",
-  "routing_only_notice": "Endpoint approaches chamfered after whole-board review; component/via placement and existing spatial intent retained. No physical qualification inferred."
+  "routing_only_notice": "Bare-fabrication corrections: larger edge margin, D1 ordinary via outside SMD land, AC legend clearance, conservative extended C6 reserve. Same circuit and placements. Final review pending."
 }
