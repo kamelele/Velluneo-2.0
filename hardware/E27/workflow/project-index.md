@@ -1,3 +1,5 @@
+Current human decision: [SC09-ROUTE05 bare-prototype fabrication acceptance](integrated-shade/compact-09/routing-order-prep/owner-fabrication-approval.json),22Nov2026. Exact source/manufacturing bytes unchanged; no order, powered test or product qualification.
+
 # Current task: SC09-ROUTE05 routing correction
 
 Current sources: variants/integrated-shade/SC09_compact. [Current corrected packet](integrated-shade/compact-09/routing-order-prep/po_poprawkach/README.md), [assessment and plan](integrated-shade/compact-09/routing-order-prep/assessment-and-plan.md). PreviousCAT01catalogue-package is historical; exact before checkpoint is d011ef6a865f6dd7f06825f233b2465238ecba27.
