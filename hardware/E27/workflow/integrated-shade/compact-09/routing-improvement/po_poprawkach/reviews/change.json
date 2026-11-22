@@ -1,0 +1,241 @@
+{
+  "role": "Change Reviewer",
+  "actual_actor": "/root/routing_final_change",
+  "date": "2026-11-22",
+  "manifest_sha256": "49a49ab249b902615756e4d27c0f6774c10c422029f369e7daee530c183ed379",
+  "source_snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b",
+  "PCB_sha256": "29d4fa9950f369fdfa1998309926c05d54f65da9112df21d09abc5cb2c67df02",
+  "scope": "Independent final engineering routing correction review against immutable CAT01 baseline. Not a human stage approval, unconditional manufacturing release or physical qualification.",
+  "checked_files": [
+    "pinned Toolkit docs/roles/change-reviewer.md",
+    "routing-improvement/task-contract.json",
+    "routing-improvement/assessment-and-plan.md",
+    "routing-improvement/adoption.json",
+    "native before/current PCB and local libraries/models",
+    "native KiCad project/rules",
+    "CAT01 graph/basis/BOM/schematic",
+    "selected spatial intent and generated placement/routing contracts",
+    "writer and root adapter execution records",
+    "fresh XML netlist, source-bound ERC/DRC/refill/spacing/semantic audit reports",
+    "artifact registration and fabrication archive",
+    "native layer/assembly/3D view exports"
+  ],
+  "checks": {
+    "all_frozen_hashes_verified": 214,
+    "same_physical_pin_net_map": true,
+    "same_values_FPID_DNP_model_count": true,
+    "unchanged_functional_files": [
+      "SC09_compact.kicad_sch",
+      "E27SC09.kicad_sym",
+      "PowerFlags.kicad_sym",
+      "bom-build.json",
+      "bom-build.csv",
+      "intended-connectivity.CAT01.json",
+      "source-basis.CAT01.json",
+      "symbol-pin-verification.json",
+      "model-attachment.json",
+      "footprint-geometry.json"
+    ],
+    "unchanged_local_library_model_files": 58,
+    "native_project_settings_semantics_unchanged": true,
+    "before_outline": [
+      [
+        [
+          100.0,
+          100.8
+        ],
+        [
+          100.8,
+          100.0
+        ]
+      ],
+      [
+        [
+          100.0,
+          131.2
+        ],
+        [
+          100.0,
+          100.8
+        ]
+      ],
+      [
+        [
+          100.8,
+          100.0
+        ],
+        [
+          149.2,
+          100.0
+        ]
+      ],
+      [
+        [
+          100.8,
+          132.0
+        ],
+        [
+          100.0,
+          131.2
+        ]
+      ],
+      [
+        [
+          149.2,
+          100.0
+        ],
+        [
+          150.0,
+          100.8
+        ]
+      ],
+      [
+        [
+          149.2,
+          132.0
+        ],
+        [
+          100.8,
+          132.0
+        ]
+      ],
+      [
+        [
+          150.0,
+          100.8
+        ],
+        [
+          150.0,
+          131.2
+        ]
+      ],
+      [
+        [
+          150.0,
+          131.2
+        ],
+        [
+          149.2,
+          132.0
+        ]
+      ]
+    ],
+    "after_outline": [
+      [
+        [
+          100.0,
+          100.0
+        ],
+        [
+          150.0,
+          100.0
+        ]
+      ],
+      [
+        [
+          100.0,
+          132.0
+        ],
+        [
+          100.0,
+          100.0
+        ]
+      ],
+      [
+        [
+          150.0,
+          100.0
+        ],
+        [
+          150.0,
+          132.0
+        ]
+      ],
+      [
+        [
+          150.0,
+          132.0
+        ],
+        [
+          100.0,
+          132.0
+        ]
+      ]
+    ],
+    "old_floor_rules_preserved_verbatim": true,
+    "additional_rules": [
+      "(rule \"HW-NETCLASS-POWER\" (condition \"A.NetClass == 'POWER'\") (constraint track_width (min 0.3mm)))",
+      "(rule \"HW-SPATIAL-C6_BODY\" (condition \"A.intersectsArea('HW-SPATIAL-C6_BODY')\") (constraint disallow track via pad zone))",
+      "(rule \"HW-SPATIAL-C6_VENT\" (condition \"A.intersectsArea('HW-SPATIAL-C6_VENT')\") (constraint disallow track via pad zone))"
+    ],
+    "native_zones": [
+      {
+        "name": "HW-SPATIAL-C6_BODY",
+        "rule_area": true,
+        "net": "",
+        "layers": [
+          0,
+          2
+        ],
+        "track_keepout": false,
+        "via_keepout": false,
+        "pad_keepout": false,
+        "pour_keepout": false
+      },
+      {
+        "name": "HW-SPATIAL-C6_VENT",
+        "rule_area": true,
+        "net": "",
+        "layers": [
+          0,
+          2
+        ],
+        "track_keepout": false,
+        "via_keepout": false,
+        "pad_keepout": false,
+        "pour_keepout": false
+      }
+    ],
+    "actual_adapter_consumer_digest": "ee7b1f6cf115827b3cfa2b83505c3bf986e99090ecadc0f78ef72862076245ee",
+    "seed_generic_polish_digests_agree": true,
+    "refs": 19,
+    "physical_pads": 46,
+    "tracks": 148,
+    "vias": 13,
+    "layers": 2,
+    "independent_XML_pinsets_equal": true,
+    "intent_basis_hashes_match": true,
+    "intent_approval": null,
+    "spatial_approval": null,
+    "fresh_native_DRC": {
+      "violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "report_sha256": "7bd620d021960ad020e6f98695d9d903e50d1a133f9e62b98cfb35b77af01d8b"
+    },
+    "fresh_spatial": "FAIL solely missing current human approval; geometry/consumer supplied digest unchanged",
+    "strict_findings_by_type": {
+      "copper_edge_setback": 9,
+      "copper_spacing": 17
+    },
+    "bounded_findings": 0,
+    "fab_archive_CRC": null,
+    "fab_archive_members": 9,
+    "registered_artifacts_actual_hashes_match": true
+  },
+  "findings": [],
+  "retained_release_gates": [
+    "Current exact CAT01 intent/spatial/stage human approvals are absent, not inferred from engineering authorization.",
+    "Physical current/ripple/OVP/discharge/thermal/fault/surge/EMC/insulation tests and local provider/process confirmation remain unqualified.",
+    "Strict screen retains original1.0mm edge target, while bounded engineering and unchanged native floor use0.5mm. Strict current failures include9copper-edge findings plus17spacing findings; not solely intrinsic package lands. Integrationopenitems must state this distinction.",
+    "C6 material overhang0.25mmleft and2.5mmexternalventabovePCB require an actual supported guarded fixture; complete lamp fit remains unapproved.",
+    "BroadSOURCE switching pours removed; previous copper-dependent temperature predictions do not qualify new routing."
+  ],
+  "invalidation_impact": "Before CAT01 routing/placement/manufacturing exports and physical assumptions are historical. New rectangle/spatial intent, placement, routing and exports require current human decisions and physical qualification before unconditional product release. Functional physical pin graph and catalogue MPN identities remain unchanged.",
+  "recommendation": "ready_for_human_review",
+  "major_or_blocker_routing_regressions": 0,
+  "approval_fabricated": false,
+  "supplier_message": false,
+  "order": false,
+  "physical_measurements": false
+}

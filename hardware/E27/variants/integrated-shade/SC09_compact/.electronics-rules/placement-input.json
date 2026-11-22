@@ -1,0 +1,206 @@
+{
+  "constraints": {
+    "areas": [
+      {
+        "basis": "Board intersection of max can [-.25,2.5,12.75,24.5] plus .5mm packing margin, both copper faces.",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "C6_BODY",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          100,
+          102,
+          113.25,
+          125
+        ]
+      },
+      {
+        "basis": "Board intersection of vent [-.25,-2.5,12.75,2.5]; additional 2.5mm external free air above board required.",
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "exceptions": [],
+        "id": "C6_VENT",
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "rectangle_mm": [
+          100,
+          100,
+          113.25,
+          102.5
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "basis": "ManufacturerLYTSwitch1PCBLayout/high-side guidance, TI SLYP762 pp16/24/26 and independent baseline findings.",
+        "id": "HIGH_SIDE_BUCK",
+        "kelvin_connections": {
+          "objects": [
+            "R5.2",
+            "U1.3",
+            "R6.2",
+            "/FB_INDUCTOR"
+          ],
+          "rationale": "SeparateKelvinsensemeetsforceonlyinsidephysicalR5FBpad;same-netDRCnotaproof."
+        },
+        "loops": {
+          "objects": [
+            "C4.1",
+            "U1.4",
+            "U1.5",
+            "R5",
+            "R6",
+            "D1.1",
+            "D1.2",
+            "C4.2",
+            "T1",
+            "C6",
+            "C5"
+          ],
+          "rationale": "Minimizecommutation/output/decouplingloopsusingactualtopology; measurelengths/areaproxiesafterrefill, not inferredfromDRC."
+        },
+        "requirement_id": "C_ROUTING",
+        "return_paths": {
+          "objects": [
+            "/SW_SOURCE",
+            "/DC_RETURN",
+            "C5.2",
+            "C4.2",
+            "D1.2"
+          ],
+          "rationale": "DistinctfloatingSOURCEandDCreturn;noGNDshort. SOURCEforcebridge preservesseparatesensegeometry."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "/BP",
+            "/M",
+            "/FB_INDUCTOR",
+            "U1.1",
+            "U1.2",
+            "U1.3",
+            "R4",
+            "R5",
+            "R6"
+          ],
+          "rationale": "Separatefloating-source sensing fromforcepaths; directC5andphysicalR5padKelvinbranch required."
+        },
+        "switching_nodes": {
+          "objects": [
+            "/SW_SOURCE",
+            "/FB_INDUCTOR",
+            "U1.5",
+            "D1.1",
+            "T1.2"
+          ],
+          "rationale": "Both SOURCEandFBcommutateatcommonmode; minimizecopperarea andavoidusingSOURCEasquietgroundorlargeheatsink."
+        }
+      }
+    ],
+    "intent_digest": "82f4cf3776e5267a7e7f808ee2f61b63b0f798d2e0b7a1042896407702d8b5c2",
+    "kicad_version": "10.0.6",
+    "minimums_mm": {
+      "annular_width": 0.2,
+      "clearance": 0.3,
+      "edge_clearance": 0.5,
+      "hole_size": 0.3,
+      "track_width": 0.3
+    },
+    "net_settings": {
+      "classes": [
+        {
+          "bus_width": 12,
+          "clearance": 0.3,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "Default",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        },
+        {
+          "bus_width": 12,
+          "clearance": 0.3,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "POWER",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        }
+      ],
+      "meta": {
+        "version": 3
+      },
+      "netclass_patterns": [
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_L"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_N"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_FUSED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_RECT"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_FILTERED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/SW_SOURCE"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/FB_INDUCTOR"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/LED_PLUS"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/DC_RETURN"
+        }
+      ]
+    },
+    "outline_mm": [
+      100,
+      100,
+      150,
+      132
+    ],
+    "schema_version": 1
+  },
+  "constraints_digest": "ee7b1f6cf115827b3cfa2b83505c3bf986e99090ecadc0f78ef72862076245ee"
+}

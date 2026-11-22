@@ -1,7 +1,9 @@
-# SC09-CAT01 catalogue-only laboratory driver
+# SC09-ROUTE01 laboratory driver
 
-Current KiCad sources retain the SC09_compact basename. Current map is intended-connectivity.CAT01.json:19references,46pins,11nets,0NC. T1 is standard Coilcraft MSS1210H-125KED, two SMD terminals; L1 is Wurth768772332; R7 is VishayHVR2500003903FR500. No custom winding. Prior A/A1 custom-coil maps, approvals and proposals are historical and do not authorize these changed pins.
+Current functional circuit remains SC09-CAT01:19references/46pins/11nets, same17electronicpositions/16catalogueMPNs. Current routing revision is SC09-ROUTE01,50x32mm,2layers. See layout-revision.json and routing-improvement-basis.json.
 
-50x32mm board, approximately19.5mm assembled envelope; nonisolated mains-referenced laboratory prototype only. Current package and source-bound checks: hardware/E27/workflow/integrated-shade/compact-09/catalogue-package in the repository. All17 electrical positions have catalogue purchase paths; J1/J2 are bare wire lands. Catalogue offers and fresh live stock are distinguished, no cart/reservation/order or full JLC PCBA qualification claimed.
+The current corrected engineering packet is hardware/E27/workflow/integrated-shade/compact-09/routing-improvement/po_poprawkach. Earlier catalogue-package is the preserved pre-correction layout; its exports are historical. The owner-requested exact before checkpoint is f7074024129f5b7890427ed463ec0c085617ace0.
 
-CAT01 graph approval remains null. FullToolkit release is not passed. Current engineering checks cannot establish physical temperatures, surge/fault performance or finished lamp safety. Normal manual lead forming/support/sample inspection of RF1/R7/C6 and qualified guarded measurements remain required. See catalogue-engineering-status.json.
+C6maximumcan extends0.25mmleft ofPCB;5mmvent reserve needs2.5mmfreeair abovePCB. Both copperfaces respect declared body/vent areas. No finishedlamp/fixturefit approval is claimed. SOURCE is a floating switching node; broadSOURCEpours removed. Earlier copper-dependent U1temperature estimates do not qualify this layout.
+
+Native CAD and bounded laboratory geometry checks are separate from the strict intrinsicpackage spacing result, genuine human stage decisions, providerprocess confirmation and physical tests. Full Toolkit product release remainsFAIL until those gates are actually closed. No order, supplier communication or powered testing has been performed.

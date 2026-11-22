@@ -1,3 +1,5 @@
-# Current packet: SC09-CAT01 catalogue-only
+# Current packet: SC09-ROUTE01
 
-Use catalogue-package/README.md and current SC09_compact CAD. The older prototype-package, order-review-inputs, customT1 contracts and old SC09_Pakiet_prototyp_lab.zip are historical1705d20/customcoil scope and do not fit the new catalogueT1. CAT01 removes customwinding; changed physicalpin map requires fresh checks and does not inheritA1humanapproval. Root is soleCADwriter; main outsidewrite scope.
+Corrected routing: [package](routing-improvement/po_poprawkach/README.md), [assessment and plan](routing-improvement/assessment-and-plan.md), [thermal and spacing limits](routing-improvement/thermal-and-spacing-basis.md). Native sources remainSC09_compact with unchangedCAT01circuit.
+
+Before checkpoint: f7074024129f5b7890427ed463ec0c085617ace0 / [przed poprawkami](routing-improvement/przed_poprawkami/README.md). Catalogue-package and olderprototype-package are historical. Current PCB50x32mm, two layers; max C6materialwidth50.25mm and2.5mmexternalventabovePCB. Full Toolkit productreleaseFAIL remains explicit; no humanapproval/physicaltest/order fabricated.

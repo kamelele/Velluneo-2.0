@@ -1,0 +1,243 @@
+{
+  "actual_actor": "/root/routing_spatial_adoption",
+  "role": "Bounded read-only toolkit spatial/workflow adoption research contributor; not a final review role or human approver",
+  "date": "2026-11-22",
+  "write_scope": "Only this report and own private authoring script. No S/W/CAD/library/rule/dependency edits.",
+  "input_hashes": [
+    {
+      "path": "work/routing-improvement/baseline-source/hardware.json",
+      "sha256": "c57fa9afd8d1718e9cc9dfb4ff7773f12d3607e2e642d9d766a3bfdc6c1082ef"
+    },
+    {
+      "path": "work/routing-improvement/baseline-source/requirements.json",
+      "sha256": "259db5e35b6dfc5c79798639f9924d3097c7e3e9225641ab2aa8417523a75fd3"
+    },
+    {
+      "path": "work/routing-improvement/baseline-source/SC09_compact.kicad_pcb",
+      "sha256": "8aac351c09f351ce5a8f68e7e4a4cce23bb920bff34b63afa889307c5c242e6f"
+    },
+    {
+      "path": "work/routing-improvement/baseline-source/owner-size-50x32-approval.json",
+      "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e"
+    },
+    {
+      "path": "work/routing-improvement/baseline-source/footprint-geometry.json",
+      "sha256": "a8ccb85f8438c6610ae0cc17c6b4b692d7793d7b9da617da8cd2187e9487c018"
+    },
+    {
+      "path": "work/Velluneo-2.0/.pcb-toolkit/versions/05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822/scripts/spatial.py",
+      "sha256": "87c94556e3f62540cc4d40bfb61672f04655942a8ec21bf24bc144c26bd2da98"
+    },
+    {
+      "path": "work/Velluneo-2.0/.pcb-toolkit/versions/05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822/scripts/spatial_cad.py",
+      "sha256": "48642fe3b9474a0578914cc6f964c5117be55ef22d0f0994600bae94952678f4"
+    },
+    {
+      "path": "work/Velluneo-2.0/.pcb-toolkit/versions/05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822/scripts/configuration.py",
+      "sha256": "2698a03b6545262811eee3d6f9ea7325d762ec587afc763928fa495e27e4f1de"
+    }
+  ],
+  "findings": [
+    {
+      "id": "SPA-01",
+      "severity": "major",
+      "object": "hardware.product.spatial_file",
+      "fact": "Currentvalue=null. No shared Toolkit placement/routing constraint inputs have been adopted.",
+      "closure": "Root creates independent explicit spatial intent, links real requirements/basis, previews/reviews/applies configuration and records exact generated consumer constraints_digest. Human approval must remain null until actually obtained."
+    },
+    {
+      "id": "SPA-02",
+      "severity": "major_adoption_conflict",
+      "object": "SC09_compact Edge.Cuts",
+      "fact": "Pinned spatial_cad.py supports exactly four straight segments matching outline_mm. Existing eight-segment chamfered outline is preserved and rejected; no automatic overwrite.",
+      "closure": "Deliberate native migration to owner-budget50x32four-edge rectangle or retain unsupported-outline blocker. Do not edit dependency or invent current eight-segment support."
+    },
+    {
+      "id": "SPA-03",
+      "severity": "major_source_implementation_mismatch",
+      "object": "C6 mechanical keepout vs native board",
+      "fact": "footprint-geometry.C6.mechanical_keepouts.C6_BODY_UNDER declares F.Cu+B.Cu and no runs/components; native C6_CAN_AND_VENT_NO_TOP_COPPER is only F.Cu. Existing bottom R8/R9 and copper undercan therefore do not match that original engineering declaration. This is not proof Panasonic explicitly prohibits backside copper.",
+      "closure": "Root independently resolves intended body/vent restrictions from actual manufacturer mounting guidance and engineering rationale; then migrate actual geometry/copper or explicitly propose revised scope. Do not silently copy existing F-only geometry or fabricate a waiver."
+    },
+    {
+      "id": "SPA-04",
+      "severity": "major_potential_net_integrity_hazard",
+      "object": "Pinned spatial_cad.py lines27 and103",
+      "fact": "Geometry helper uses pcb.LoadBoard and pcb.SaveBoard when adding areas/outline. This project previously required raw PCB_IO_MGR loader to preserve saved track/via net identities; regenerated board must not be assumed electrically unchanged.",
+      "closure": "Compare exact raw UUID-to-net identities and pad/net graph before/after any generated proposed board. Safe manual migration option described below avoids helper SaveBoard. No dependency patch is authorized."
+    },
+    {
+      "id": "SPA-05",
+      "severity": "note_required_human_gate",
+      "object": "approval fields",
+      "fact": "spatial.load()/prepare()/configure do not require approval to be present. spatial.verify explicitly adds Spatial contract lacks current human approval for approval:null. Engineering configure can proceed honestly, but checks must retain that failure.",
+      "closure": "Record actual computed intent_digest and show draft/evidence; never fill approved_by or intent_digest approval fields from engineering authorization alone."
+    },
+    {
+      "id": "SPA-06",
+      "severity": "note_capability_limit",
+      "object": "block/area validation",
+      "fact": "Blocks verify complete topic records and known requirement_id, not topology/loop area/return currents/thermal function or even existence of each objects identifier. Areas disallow track/via/pad/zone only; they do not enforce whole component/3D envelopes.",
+      "closure": "Native independent geometry and physical reasoning must cover actual circuit loop/power/Kelvin, component envelopes, vent freevolume and physical measurement limits separately."
+    }
+  ],
+  "exact_schema": {
+    "top_level": [
+      "schema_version(integer1)",
+      "revision(nonempty trimmed string)",
+      "basis(nonempty trimmed string)",
+      "basis_sources(nonempty list of project-relative nonCAD paths+sha256)",
+      "outline_mm(finite4element positive rectangle inside±10000mm)",
+      "areas(explicit list)",
+      "blocks(explicit list)",
+      "no_blocks_reason(required nonempty only ifblocks empty)",
+      "approval(null until actualapproval)"
+    ],
+    "area": [
+      "id unique regex[A-Za-z][A-Za-z0-9_-]*",
+      "rectangle_mm insideoutline",
+      "layers unique explicitF.Cu/B.Cu",
+      "disallow unique subsettrack/via/pad/zone,nonempty",
+      "basis(nonempty)",
+      "exceptions(explicitlist)"
+    ],
+    "exception": "Each exact net,reason,approved_by,evidence must be genuine nonempty strings; no wildcard. Avoid exceptions entirely in draft unless actual human decision exists.",
+    "block": "id,basis,requirement_id(existingrequirementsID), then five topicobjects/rationale records: sensitive_nets,switching_nodes,return_paths,loops,kelvin_connections. Empty objects needs explicit inapplicable rationale."
+  },
+  "approval_null_configure_supported": true,
+  "approval_null_verify_pass": false,
+  "safe_manual_geometry_migration": [
+    "Preserve user-requested immutable baseline and original global minimums, rules and exclusions; root remains sole CAD writer.",
+    "Record new intended outline/body/vent requirements independently of saved customerCAD and verify exact datasheet/pin identifiers. Root chooses actual revised placement targets; this report example is not an approved contract.",
+    "Use rawloader-based native editing to deliberately normalize outline to four straight edges if chosen. Native keepout/outline changes invalidate all previous current source checks.",
+    "Optionally pre-add exact planned neutral managed rule areas using UUID5(NAMESPACE_URL,electronics-rules/spatial/+id), nameHW-SPATIAL-id, expectedfourrectanglepoints/layers. AllnativeDoNotAllowTracks/Vias/Pads/Footprints/ZoneFills flags false; generated customDru performs actual scoping. Keep unrelated stricter legacy keepouts unless deliberately reconciled.",
+    "When native outline/managedareas already exactly match independent intent, configure preview can emit new rules/consumerfiles without generating a rewritten PCB through LoadBoard/SaveBoard. Verify source bytes and preview diff; do not patch generatedDru manually.",
+    "Run pinnedlauncherconfigure, read exact planJSON/.diff and spatial-preview.svg, apply current PLAN_ID. Plan becomes stale if source/rules/library/dependency bytes change.",
+    "Read the exact .electronics-rules/placement-input.json and routing-input.json in the actual native adapter, reject mismatchedconstraints_digest, enforce activeareas and netclassminima, log consumedconstraints_digest. Loading a file alone does not prove a router obeyed constraints; real postroute DRC/geometry/parity remain required.",
+    "Run spatial, requirements --stageplacement/routing, native graph/ERC/DRC/parity and independent spacing after finaltwo-passzonefill. Retain approvalnull/fullrelease failures honestly. Freeze one candidate for four actual read-only roles."
+  ],
+  "independent_C6_projection_note": "At existing engineering proposedC6origin102.5,106.75, ±7mmkeepoutmargin extends0.25mmoutsideboard. Toolkitareas must remain insideoutline, so use explicitly documented BOARD INTERSECTION of manufacturer/engineeringprojection, not a silentlyshrunk area. Required3Dvolume outsideboard still needs separate mechanical proof. Example body[106,100,129,113.75], vent[128.5,100,134,113.75] are proposal, not an approved root plan.",
+  "example_contract_not_applied_or_approved": {
+    "schema_version": 1,
+    "revision": "SC09-ROUTE-DRAFT-01",
+    "basis": "Proposed engineering draft from actual owner50x32size choice and manufacturer-derived C6 body/vent forming envelope. Desired target origin must be explicitly recorded independently before CAD migration. No human stage approval inferred.",
+    "basis_sources": [
+      {
+        "path": "owner-size-50x32-approval.json",
+        "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e"
+      },
+      {
+        "path": "footprint-geometry.json",
+        "sha256": "a8ccb85f8438c6610ae0cc17c6b4b692d7793d7b9da617da8cd2187e9487c018"
+      }
+    ],
+    "outline_mm": [
+      100,
+      100,
+      150,
+      132
+    ],
+    "areas": [
+      {
+        "id": "C6_BODY_PROPOSED",
+        "rectangle_mm": [
+          106,
+          100,
+          129,
+          113.75
+        ],
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "disallow": [
+          "track",
+          "via",
+          "pad",
+          "zone"
+        ],
+        "basis": "BOARD INTERSECTION of existing engineering forming projection x3.5..26.5,y±7 relative to proposed desiredC6origin102.5,106.75. Original two-face scope needs explicit reconciliation with current F-only implementation before use. No normative protection claim.",
+        "exceptions": []
+      }
+    ],
+    "blocks": [
+      {
+        "id": "POWER_LAYOUT_REVIEW",
+        "basis": "Manufacturer-specific high-side buck assessment plus TI layout principles; root must verify illustrative object pin references and set quantitative acceptance evidence before use.",
+        "requirement_id": "C_ROUTING",
+        "sensitive_nets": {
+          "objects": [
+            "/BP",
+            "/FB_INDUCTOR",
+            "/M",
+            "U1.1",
+            "U1.2",
+            "U1.3",
+            "C5",
+            "R4",
+            "R5",
+            "R6",
+            "R7"
+          ],
+          "rationale": "Route sensing and BP decoupling according to manufacturer-specific floating-source buck requirements; keep measurement copper away from switched-node force copper. Exact root acceptance metrics must be established from power assessment, not generic GND rules."
+        },
+        "switching_nodes": {
+          "objects": [
+            "/SW_SOURCE",
+            "U1.5",
+            "U1.6",
+            "U1.7",
+            "U1.8",
+            "R6",
+            "T1",
+            "D1"
+          ],
+          "rationale": "High-side source/inductor commutation context requires manufacturer-specific topology assessment; a net called SOURCE is not automatically quiet ground. Minimize unnecessary switched copper while retaining qualified thermal paths."
+        },
+        "return_paths": {
+          "objects": [
+            "C4",
+            "D1",
+            "U1",
+            "R5",
+            "R6",
+            "/DC_RETURN",
+            "/SW_SOURCE"
+          ],
+          "rationale": "Explicitly distinguish DC_RETURN from floating SOURCE; no automatic connection or undifferentiated plane. Measure actual critical loop conductors and avoid shared sense/force impedance."
+        },
+        "loops": {
+          "objects": [
+            "C4.1",
+            "U1.4",
+            "U1.5",
+            "R6",
+            "T1",
+            "D1",
+            "C4.2",
+            "C5",
+            "U1.1"
+          ],
+          "rationale": "Document actual commutation and BP local loops from the manufacturer schematic before altering paths; minimum area/length and post-route topology checks belong in linked requirement evidence."
+        },
+        "kelvin_connections": {
+          "objects": [
+            "R5",
+            "R6",
+            "U1.2",
+            "/FB_INDUCTOR",
+            "/SW_SOURCE"
+          ],
+          "rationale": "Keep separate sense takeoffs/force-current conductors where specified by the actual circuit. Shared net identity or clean DRC does not establish Kelvin routing."
+        }
+      }
+    ],
+    "no_blocks_reason": null,
+    "approval": null
+  },
+  "limitations": [
+    "Read-only static code/contract inspection; no new CAD/configuration migration or executed customer geometry checks performed by this actor.",
+    "This report does not grant any human acceptance, release, supplier communication, purchase or powered testing authority.",
+    "Manufacturer-specific actual switched-node/thermal/return-path assignment must come from the separate power assessment, not blindly from illustrative block objects."
+  ]
+}

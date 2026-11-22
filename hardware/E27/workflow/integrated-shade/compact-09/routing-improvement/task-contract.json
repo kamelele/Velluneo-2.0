@@ -1,0 +1,50 @@
+{
+  "id": "SC09-ROUTE01",
+  "date": "2026-11-22",
+  "owner": "Kamil",
+  "coordinator": "/root",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "base_commit": "af59cf024e9c2368daea1d17095bd932aafd7e3e",
+  "before_checkpoint_commit": "f7074024129f5b7890427ed463ec0c085617ace0",
+  "owner_request": "Preserve the present state as przed poprawkami, read the pinned PCB Agent Toolkit and supplied TI/JLC layout guidance, assess the actual board, document specific defects and a correction plan, then implement routing corrections on the existing branch.",
+  "write_scope": [
+    "hardware/E27/variants/integrated-shade/SC09_compact",
+    "hardware/E27/workflow/integrated-shade/compact-09/routing-improvement",
+    "hardware/E27/workflow/integrated-shade/compact-09/CURRENT_PACKET.md",
+    "hardware/E27/workflow/integrated-shade/compact-09/design-state.json",
+    "hardware/E27/workflow/project-index.md"
+  ],
+  "preserve": [
+    "main and unrelated files",
+    "19 references, 46 physical pins, 11 nets, 0 NC",
+    "CAT01 physical pin graph, values and catalogue MPNs",
+    "50x32mm outer PCB dimensions, 2 copper layers, 1.6mm FR4, 1oz copper, manual laboratory assembly",
+    "0.3mm manufacturing clearance/width/hole, 0.2mm annulus, 0.5mm copper edge floors",
+    "All55 independent functional net-pair spacing targets and bounded package floor/escape scopes",
+    "No fabricated approvals, measurements, process qualification or release PASS"
+  ],
+  "requirements": [
+    {"id":"ROUTE-SOURCE","acceptance":"Remove broad SOURCE switching pours; preserve the physical net graph and deliberately compact local connections. Withdraw unsupported inherited thermal claims."},
+    {"id":"ROUTE-BYPASS","acceptance":"Provide direct same-face C5 BP and SOURCE paths to the appropriate U1 pins, without relying on separate islands and bypass-return vias."},
+    {"id":"ROUTE-SENSE","acceptance":"Keep U1 FB sense takeoff separate from the force branch except inside physical R5.2; independently audit actual same-net saved copper intersections."},
+    {"id":"ROUTE-LOOPS","acceptance":"Improve the power-stage/output-capacitor arrangement and document actual geometric and routed metrics, with their limits; do not claim inductance or EMI measurements."},
+    {"id":"ROUTE-SPATIAL","acceptance":"Declare explicit spatial intent from maximum physical geometry, retain conservative both-face C6 body/vent restriction, preview configuration adoption and record actual adapter consumer digests."},
+    {"id":"ROUTE-VERIFY","acceptance":"Fresh native ERC, DRC/parity and unconnected0; independent physical-pin equality,55-pair bounded spacing, saved-fill freshness, saved-net identity and source-bound export checks."},
+    {"id":"ROUTE-REVIEW","acceptance":"Four distinct read-only role reports cover the same frozen engineering packet; coordinator verifies closure and records any retained human/physical gates."},
+    {"id":"ROUTE-DELIVER","acceptance":"Preserved before checkpoint, corrected native sources, comparison and layer/assembly views, native3D renders and source-bound fabrication review artifacts on the existing branch."}
+  ],
+  "authority": {
+    "engineering_work_authorized": true,
+    "automatic_human_stage_approval": false,
+    "supplier_message": false,
+    "purchase": false,
+    "powered_test": false
+  },
+  "cad_ownership": {
+    "active_customer_sources": "/root",
+    "private_implementation": "/root/routing_candidate_writer",
+    "private_paths": [".work/routing-vertical", "external scratch work/routing-improvement/vertical"],
+    "one_writer_rule": "Root does not edit the private candidate during the implementer lease. Root adopts only after explicit handoff and fresh independent checks."
+  },
+  "stage_disposition": "Engineering correction/review packet. Exact intent/spatial/human and physical release gates remain explicit; this contract does not approve them."
+}

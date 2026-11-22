@@ -1,1 +1,1 @@
-SC09-CAT01 engineering exports only; catalogue-package is current. Source-bound artifacts do not establish human graph approval, qualified physical operation, supplier CAM acceptance or a full Toolkit release PASS.
+SC09-ROUTE01 engineering fabrication review artifacts only. Current packet is workflow/integrated-shade/compact-09/routing-improvement/po_poprawkach. Exact human stage decisions, provider/process confirmation and physical qualification remain open; full Toolkit releaseFAIL. No order or powered test.

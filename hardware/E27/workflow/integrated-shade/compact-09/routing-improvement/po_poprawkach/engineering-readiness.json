@@ -1,0 +1,92 @@
+{
+  "revision": "SC09-ROUTE01",
+  "functional_revision": "SC09-CAT01",
+  "status": "Corrected engineering routing packet ready for human review; NOT unconditional manufacture/order/product release",
+  "source_snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b",
+  "input_manifest_sha256": "49a49ab249b902615756e4d27c0f6774c10c422029f369e7daee530c183ed379",
+  "frozen_inputs_verified": 214,
+  "PCB_sha256": "29d4fa9950f369fdfa1998309926c05d54f65da9112df21d09abc5cb2c67df02",
+  "same_catalogue_BOM_graph": true,
+  "PCB_mm": [
+    50,
+    32,
+    1.6
+  ],
+  "layers": 2,
+  "max_C6_material_width_mm": 50.25,
+  "C6_vent_external_above_PCB_mm": 2.5,
+  "native_ERC_violations": 0,
+  "native_DRC_violations": 0,
+  "native_unconnected": 0,
+  "native_parity_errors": 0,
+  "physical_pins": 46,
+  "nets": 11,
+  "bounded_55_pair_screen_pass": true,
+  "Kelvin_saved_copper_audit_pass": true,
+  "Kelvin_negative_controls_rejected": true,
+  "fill_freshness_pass": true,
+  "strict_screen_pass": false,
+  "strict_findings": {
+    "copper_edge_setback": 9,
+    "copper_spacing": 17
+  },
+  "strict_scope_note": "Unmodified strict screen has1.0mm copper-edge target and no finite package assessments:9edge failures plus17different-net spacing failures. Bounded lab screen preserves prior0.5mm native/engineering edge floor and exact finite U1/BR1/D1 package floors/margins. No floor relaxed for this correction, no normative waiver claimed.",
+  "native_default_ignored_keys_visible": [
+    "track_not_centered_on_via",
+    "tuning_profile_track_geometries"
+  ],
+  "actual_constraints_digest": "ee7b1f6cf115827b3cfa2b83505c3bf986e99090ecadc0f78ef72862076245ee",
+  "before_metrics": {
+    "segments": 167,
+    "vias": 11,
+    "total_track_length_mm": 390.01939822412874,
+    "short_segments_below0_3mm": 60
+  },
+  "after_metrics": {
+    "segments": 148,
+    "vias": 13,
+    "total_track_length_mm": 343.81663634139244,
+    "short_segments_below0_3mm": 38
+  },
+  "independent_reviews": [
+    {
+      "role": "Reality Checker",
+      "actual_actor": "/root/routing_final_reality",
+      "path": "po_poprawkach/reviews/reality.json",
+      "sha256": "5cddb38fba0035e538ca63e290c77bfee4756b4ab00d09d6b8a228d75df507b2",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Overengineering / Simplicity Reviewer",
+      "actual_actor": "/root/routing_final_simplicity",
+      "path": "po_poprawkach/reviews/simplicity.json",
+      "sha256": "98429fe77e718b74262885d5909d9c5b8abf6e3ed211eb420706323c6b954b3b",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Completeness Reviewer",
+      "actual_actor": "/root/routing_final_completeness",
+      "path": "po_poprawkach/reviews/completeness.json",
+      "sha256": "35b60a32c0dc0cd1a6641c2636f883d56a3b1bd20e33df92772ba9a2a94d24a2",
+      "recommendation": "ready_for_human_review"
+    },
+    {
+      "role": "Change Reviewer",
+      "actual_actor": "/root/routing_final_change",
+      "path": "po_poprawkach/reviews/change.json",
+      "sha256": "8cbf06f905db999c1bcc5b6b9e2a71299665549da2e97008a150cc9a66b869ad",
+      "recommendation": "ready_for_human_review"
+    }
+  ],
+  "retained_minor": "BOM C6 assembly prose mentions top copper keepout, without saying top-only. Authoritative selected spatial contract and actual native area rules protect both faces; README/drawings govern current placement. No BOM/MPN/graph change made for prose.",
+  "full_Toolkit_product_release_pass": false,
+  "exact_human_stage_approvals": false,
+  "physical_measurements": false,
+  "provider_process_confirmation": false,
+  "supplier_CAM_confirmation": false,
+  "supplier_message": false,
+  "purchase": false,
+  "powered_tests": false,
+  "before_checkpoint": "f7074024129f5b7890427ed463ec0c085617ace0",
+  "main_outside_scope": true
+}

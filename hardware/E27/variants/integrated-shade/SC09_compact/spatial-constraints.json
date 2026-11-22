@@ -1,11 +1,133 @@
 {
   "schema_version": 1,
-  "revision": "draft-1",
-  "basis": null,
-  "basis_sources": [],
-  "outline_mm": null,
-  "areas": [],
-  "blocks": [],
+  "revision": "SC09-ROUTE01-V2",
+  "basis": "Private 50x32 PCB, C6 maximum 22x13 mm can axis -Y, both-face body and vent restriction, .25 mm left body overhang and 2.5 mm external upper vent fixture condition.",
+  "basis_sources": [
+    {
+      "path": "routing-improvement-basis.json",
+      "sha256": "820e01fb7b3d97af1be974022eec72339a18b5556f8725ca00cb1a4d6e738e67"
+    },
+    {
+      "path": "footprint-geometry.json",
+      "sha256": "a8ccb85f8438c6610ae0cc17c6b4b692d7793d7b9da617da8cd2187e9487c018"
+    }
+  ],
+  "outline_mm": [
+    100,
+    100,
+    150,
+    132
+  ],
+  "areas": [
+    {
+      "id": "C6_BODY",
+      "rectangle_mm": [
+        100,
+        102,
+        113.25,
+        125
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "disallow": [
+        "track",
+        "via",
+        "pad",
+        "zone"
+      ],
+      "basis": "Board intersection of max can [-.25,2.5,12.75,24.5] plus .5mm packing margin, both copper faces.",
+      "exceptions": []
+    },
+    {
+      "id": "C6_VENT",
+      "rectangle_mm": [
+        100,
+        100,
+        113.25,
+        102.5
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "disallow": [
+        "track",
+        "via",
+        "pad",
+        "zone"
+      ],
+      "basis": "Board intersection of vent [-.25,-2.5,12.75,2.5]; additional 2.5mm external free air above board required.",
+      "exceptions": []
+    }
+  ],
+  "blocks": [
+    {
+      "id": "HIGH_SIDE_BUCK",
+      "requirement_id": "C_ROUTING",
+      "basis": "ManufacturerLYTSwitch1PCBLayout/high-side guidance, TI SLYP762 pp16/24/26 and independent baseline findings.",
+      "sensitive_nets": {
+        "objects": [
+          "/BP",
+          "/M",
+          "/FB_INDUCTOR",
+          "U1.1",
+          "U1.2",
+          "U1.3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "rationale": "Separatefloating-source sensing fromforcepaths; directC5andphysicalR5padKelvinbranch required."
+      },
+      "switching_nodes": {
+        "objects": [
+          "/SW_SOURCE",
+          "/FB_INDUCTOR",
+          "U1.5",
+          "D1.1",
+          "T1.2"
+        ],
+        "rationale": "Both SOURCEandFBcommutateatcommonmode; minimizecopperarea andavoidusingSOURCEasquietgroundorlargeheatsink."
+      },
+      "return_paths": {
+        "objects": [
+          "/SW_SOURCE",
+          "/DC_RETURN",
+          "C5.2",
+          "C4.2",
+          "D1.2"
+        ],
+        "rationale": "DistinctfloatingSOURCEandDCreturn;noGNDshort. SOURCEforcebridge preservesseparatesensegeometry."
+      },
+      "loops": {
+        "objects": [
+          "C4.1",
+          "U1.4",
+          "U1.5",
+          "R5",
+          "R6",
+          "D1.1",
+          "D1.2",
+          "C4.2",
+          "T1",
+          "C6",
+          "C5"
+        ],
+        "rationale": "Minimizecommutation/output/decouplingloopsusingactualtopology; measurelengths/areaproxiesafterrefill, not inferredfromDRC."
+      },
+      "kelvin_connections": {
+        "objects": [
+          "R5.2",
+          "U1.3",
+          "R6.2",
+          "/FB_INDUCTOR"
+        ],
+        "rationale": "SeparateKelvinsensemeetsforceonlyinsidephysicalR5FBpad;same-netDRCnotaproof."
+      }
+    }
+  ],
   "no_blocks_reason": null,
   "approval": null
 }

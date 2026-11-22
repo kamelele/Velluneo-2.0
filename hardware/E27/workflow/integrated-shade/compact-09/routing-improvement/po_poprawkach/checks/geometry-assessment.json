@@ -1,0 +1,411 @@
+{
+  "task": "Read-only baseline routing geometry assessment",
+  "actual_actor": "/root/routing_geometry_review",
+  "date": "2026-11-22",
+  "source_commit": "af59cf024e9c2368daea1d17095bd932aafd7e3e",
+  "input_PCB_sha256": "8aac351c09f351ce5a8f68e7e4a4cce23bb920bff34b63afa889307c5c242e6f",
+  "inventory_sha256": "cb2f577d125e4d9f80d610771c167cdd0786f01c684fac5244d3d7db83dd31de",
+  "native_tool": "pcbnew10.0.6 rawPCB_IO_MGR.KICAD_SEXP load; no source save",
+  "coordinate_system": "All coordinates aremm from board left/top; add100mm toX/Y for nativeabsoluteCADcoordinates.",
+  "write_scope": [
+    "work/routing-improvement/geometry_native_audit.py",
+    "work/routing-improvement/geometry-native-inventory.json",
+    "work/routing-improvement/geometry_report.py",
+    "work/routing-improvement/geometry-assessment.json"
+  ],
+  "source_CAD_written": false,
+  "approvals_or_measurements_fabricated": false,
+  "baseline_metrics": {
+    "track_segments": 167,
+    "through_vias": 11,
+    "summed_track_centerline_length_mm": 390.0193982241288,
+    "segments_below_0_30_mm": 60,
+    "segments_at_most_0_10_mm_tolerance_1nm": 26,
+    "netstats": [
+      {
+        "net": "/AC_FUSED",
+        "length_mm": 45.47640126960853,
+        "segments": 6,
+        "vias": 1,
+        "segments_below_0_3_mm": 0,
+        "segments_below_0_1_mm": 0
+      },
+      {
+        "net": "/AC_L",
+        "length_mm": 3.190611226708761,
+        "segments": 1,
+        "vias": 0,
+        "segments_below_0_3_mm": 0,
+        "segments_below_0_1_mm": 0
+      },
+      {
+        "net": "/AC_N",
+        "length_mm": 39.82035893435774,
+        "segments": 35,
+        "vias": 0,
+        "segments_below_0_3_mm": 25,
+        "segments_below_0_1_mm": 6
+      },
+      {
+        "net": "/BP",
+        "length_mm": 2.246776695296637,
+        "segments": 2,
+        "vias": 0,
+        "segments_below_0_3_mm": 1,
+        "segments_below_0_1_mm": 0
+      },
+      {
+        "net": "/BUS_FILTERED",
+        "length_mm": 63.17942842626278,
+        "segments": 11,
+        "vias": 1,
+        "segments_below_0_3_mm": 1,
+        "segments_below_0_1_mm": 0
+      },
+      {
+        "net": "/BUS_RECT",
+        "length_mm": 31.830040674629924,
+        "segments": 7,
+        "vias": 0,
+        "segments_below_0_3_mm": 0,
+        "segments_below_0_1_mm": 0
+      },
+      {
+        "net": "/DC_RETURN",
+        "length_mm": 59.139764755766215,
+        "segments": 44,
+        "vias": 1,
+        "segments_below_0_3_mm": 21,
+        "segments_below_0_1_mm": 7
+      },
+      {
+        "net": "/FB_INDUCTOR",
+        "length_mm": 34.12833930072145,
+        "segments": 14,
+        "vias": 4,
+        "segments_below_0_3_mm": 0,
+        "segments_below_0_1_mm": 0
+      },
+      {
+        "net": "/LED_PLUS",
+        "length_mm": 50.138905347719906,
+        "segments": 24,
+        "vias": 0,
+        "segments_below_0_3_mm": 12,
+        "segments_below_0_1_mm": 3
+      },
+      {
+        "net": "/M",
+        "length_mm": 23.03655296579062,
+        "segments": 5,
+        "vias": 1,
+        "segments_below_0_3_mm": 0,
+        "segments_below_0_1_mm": 0
+      },
+      {
+        "net": "/SW_SOURCE",
+        "length_mm": 37.83221862726621,
+        "segments": 18,
+        "vias": 3,
+        "segments_below_0_3_mm": 0,
+        "segments_below_0_1_mm": 0
+      }
+    ],
+    "SW_SOURCE_saved_fill_mm2": 264.2419543357265,
+    "DC_RETURN_saved_fill_mm2": 72.64341747423799
+  },
+  "findings": [
+    {
+      "id": "GEO-01",
+      "severity": "minor",
+      "confidence": "high, exact duplicate native objects",
+      "objects": [
+        "90c3a893-d123-4440-a7cc-8a77aeeccb6a",
+        "956100bf-089a-4201-b1af-d5a62fe235e3"
+      ],
+      "problem": "Duplicate .3mm B.Cu AC_N segment exactly from(31.75,22.5)to(31.8,22.5). Two UUIDs have identicalgeometry/net/layer/width.",
+      "implication": "Unnecessarynativeobject, redundantrouteauthoring. Same-netoverlapcanescapeDRC and doesnotaddcurrentcapacity. No specific electrical failure asserted.",
+      "proposed_fix": "Remove exactlyone duplicateUUID from candidate; retain othersegment and all netidentities.",
+      "closure": "No exactduplicate trackobjects; nativeERC/DRC/parity0 and55-pairboundedspacingmaintained."
+    },
+    {
+      "id": "GEO-02",
+      "severity": "minor",
+      "confidence": "high geometric count; electrical impact not proven",
+      "objects": [
+        "/AC_N",
+        "/DC_RETURN",
+        "/LED_PLUS"
+      ],
+      "problem": "Gridrouter left61segments shorterthan.30mm, including26atmost.10mm. AC_N alone35segments,25shortjogs; DC_RETURN44segments,21shortjogs; LED_PLUS24segments,12shortjogs. Some short stubs simply join pad centers and are legitimate; blanketdeletionwoulddisconnectnets.",
+      "examples": [
+        {
+          "uuid": "21e55a67-d4a2-4c04-9210-8eb7f83d1b8f",
+          "a": [
+            24.2,
+            22.8
+          ],
+          "b": [
+            24.1,
+            22.8
+          ],
+          "net": "/AC_N",
+          "length_mm": 0.09999999999999787
+        },
+        {
+          "uuid": "59388f9a-5b89-466b-8eab-d41757edba76",
+          "a": [
+            14.7,
+            22.4
+          ],
+          "b": [
+            14.7,
+            22.3
+          ],
+          "net": "/AC_N",
+          "length_mm": 0.09999999999999787
+        },
+        {
+          "uuid": "6488fc1d-aa54-4181-a2e4-8c7b8510a555",
+          "a": [
+            7.1,
+            9.7
+          ],
+          "b": [
+            7.0,
+            9.7
+          ],
+          "net": "/DC_RETURN",
+          "length_mm": 0.09999999999999964
+        },
+        {
+          "uuid": "b6135ca8-d963-4b01-b620-bde00eccf89e",
+          "a": [
+            16.4,
+            6.8
+          ],
+          "b": [
+            16.3,
+            6.7
+          ],
+          "net": "/LED_PLUS",
+          "length_mm": 0.14142135623730775
+        }
+      ],
+      "implication": "Needlessly stepped contours complicate auditing and produce acute/reentrantcopperfeatures; nativeDRCpass means they are NOT presently proven open/short/widthviolations. Do not claim a measuredEMIimprovement by cleanupalone.",
+      "proposed_fix": "Simplify only branch-free paths into straight/45degree paths while preservingterminal/branch nodes, packageescapes and actualclearance. Keep necessarypad-entry stubs.",
+      "closure": "Quantitativelyreduceunnecessaryjogs/segmentcount, prove nets/branchmembershipunchanged and freshnativeDRC+55pairspacing0newfindings."
+    },
+    {
+      "id": "GEO-03",
+      "severity": "major_candidate_for_electrical_review",
+      "confidence": "high pathgeometry; medium physicalperformance consequence",
+      "objects": [
+        "R5.2",
+        "D1.1",
+        "T1.2",
+        "U1.3"
+      ],
+      "path_UUIDs": [
+        "4e9bcded-e1d8-4e5c-8752-3f2c4112633c",
+        "6ffe7264-88f2-48a0-8141-ec91a6ef0a13",
+        "e7807d72-43b3-4875-9cc6-ff29d772eb6a",
+        "afd9941f-93d3-4e9f-9917-481ff1c2057c",
+        "c3710096-40cb-401b-846e-2f3fac69f608"
+      ],
+      "problem": "Current FB_FORCE connection R5.2→D1.1 detours throughT1.2 pad on front: R5(36.3,3.5)→(38.65,3.5)→via(39.15,3)→T1.2(43,2.2)→via(43.2,2.9)→D1K(43.2,10).",
+      "path_centerline_mm": 14.817356318320954,
+      "direct_pad_center_distance_mm": 9.479451460923258,
+      "through_vias_on_path": 2,
+      "implication": "TheT1terminalexcursion is in the force-path portion of the commutationloop. A directlocaldiode/senseconnection with inductorconnection asbranch may shrink criticallooplength; geometryalonecannotquantify actual di/dt/overshoot. Currentlayoutcouldwork but nativeDRC0doesnotresolveloopquality.",
+      "proposed_fix": "Electricalreviewshouldidentifyactualhighdi/dtloopthenpreferlocalR5/R6placementnearIC/diode or rerouteD1K towardforce sense node beforeinductorbranch. PreserveU1.3independentKelvintap physically, notjustnetnames. Do not simply joinFB routes acrossF.Cu y4.5: same-netshortwouldbypassdedicatedsensepath without DRCfinding.",
+      "closure": "Electricalblockcard identifiescommutationloop; explicitbefore/afterbranch topology, forcepathlength/vias and looparea proxy reviewed; shortenforcepathwithoutmixingKelvin/switchcurrent and retainnativeparity/clearances."
+    },
+    {
+      "id": "GEO-04",
+      "severity": "major_candidate_for_electrical_review",
+      "confidence": "high routegeometry; medium noise consequence",
+      "objects": [
+        "R4.1",
+        "R7.1",
+        "U1.2",
+        "2518a82a-b4d7-4c0c-b2f3-70d6b73c5692"
+      ],
+      "problem": "M monitor divider spans23.03655mm summedtrace; R7M→U1.2 trace19.21mm with13.5mmhorizontal F.Cu stretch from(35,6.5)to(48.5,6.5). R4 dividerbottom is farther left, so highimpedanceM is extended over powerregion.",
+      "baseline_total_M_trace_mm": 23.03655296579062,
+      "R7M_to_U1M_trace_mm": 19.21,
+      "parallel_Kelvin_overlap_x_mm": [
+        37,
+        44.8
+      ],
+      "parallel_Kelvin_centerline_separation_mm": 2.0,
+      "parallel_Kelvin_length_mm": 7.8,
+      "implication": "Extended monitor node has greater possible parasiticcoupling. Sameface separation is not proof of noisefailure and no noise/currentwaveformswere measured. Exact manufacturerplacementguidelines should determine which dividerleg is nearU1.",
+      "proposed_fix": "Consider bringR4/monitor referenceclose toU1M/SOURCE and rerouteM short with proper localreturn; repositionR7onlyifitsformedbody/vent/T1courtyard remainsvalid. Avoid creatingunnecessarysame-netloop and preservecomponentvalues/map.",
+      "closure": "Declaremonitorplacement/routing criterion fromprimarydatasheet; quantifyshorterMlength and chosenreturn, check3D/vent/keepouts/nativeDRC. Any retainedtradeoffrequiresactualreview, not a fabricatedEMIpass."
+    },
+    {
+      "id": "GEO-05",
+      "severity": "major",
+      "confidence": "High native subpolygon/via topology evidence; unmeasured EMI/control consequence",
+      "objects": [
+        "C5.1",
+        "C5.2",
+        "U1.1",
+        "U1.8",
+        "361fa5d6-9373-4447-874a-01243f9bdfba",
+        "02aa71da-a725-4f4d-a619-92a171ac84ea"
+      ],
+      "problem": "C5SOURCE is on a separate B.Cu SOURCE fill island, rather than the same island as the IC SOURCEpins. Its return must traverse B→F→B through the bypass vias at(48.85,2.9) and(40,5.6). Thus the short2.247mm BPleg hides a much longerreturnloop.",
+      "native_subpolygon_evidence": {
+        "SOURCE_THERMAL_B.Cu": {
+          "outline_count": 2,
+          "outline0_bbox_mm": [
+            14.8,
+            0.75,
+            46.2545,
+            12
+          ],
+          "outline0_contains": [
+            "U1.5",
+            "U1.8",
+            "R5.1",
+            "R4.2"
+          ],
+          "outline1_bbox_mm": [
+            47.1955,
+            0.75,
+            49.25,
+            4.5945
+          ],
+          "outline1_contains": [
+            "C5.2"
+          ]
+        },
+        "SOURCE_THERMAL_F.Cu": {
+          "outline_count": 2,
+          "outline0_bbox_mm": [
+            33.5,
+            6.9705,
+            46.911262,
+            11.152531
+          ],
+          "outline1_bbox_mm": [
+            33.5,
+            0.75,
+            49.25,
+            7.83095
+          ]
+        },
+        "SOURCE_via_membership": [
+          {
+            "uuid": "02aa71da-a725-4f4d-a619-92a171ac84ea",
+            "point": [
+              40.0,
+              5.599999999999994
+            ],
+            "zone_membership": [
+              {
+                "zone": "SOURCE_THERMAL_F.Cu",
+                "indices": [
+                  1
+                ]
+              },
+              {
+                "zone": "SOURCE_THERMAL_B.Cu",
+                "indices": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "361fa5d6-9373-4447-874a-01243f9bdfba",
+            "point": [
+              48.849999999999994,
+              2.9000000000000057
+            ],
+            "zone_membership": [
+              {
+                "zone": "SOURCE_THERMAL_F.Cu",
+                "indices": [
+                  1
+                ]
+              },
+              {
+                "zone": "SOURCE_THERMAL_B.Cu",
+                "indices": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "590241aa-5238-4c72-b4e4-7e71ba7a596a",
+            "point": [
+              42.30000000000001,
+              7.799999999999997
+            ],
+            "zone_membership": [
+              {
+                "zone": "SOURCE_THERMAL_F.Cu",
+                "indices": [
+                  0
+                ]
+              },
+              {
+                "zone": "SOURCE_THERMAL_B.Cu",
+                "indices": [
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence_method": "SHAPE_POLY_SET.Contains(point,subpolyIndex), not Contains(point) alone. B.Cu C5pad andICpad membership are actual coppercontacts; F.Cu projected padpositions are not additional platedconnections."
+      },
+      "C5_BP_trace_mm": 2.246776695296637,
+      "C5_SOURCE_explicit_trace_to_common_trunk40_5_5_6_mm": 13.35,
+      "C5_SOURCE_explicit_trace_to_U1_SOURCE7_mm": 14.66,
+      "return_layer_changes": 2,
+      "additional_via_barrel_length_mm_approx": 3.2,
+      "limits": "The filledF1coppercanroundcornersandshortenthereturnrelativeexplicittrackcenterline. Itcannot provide a directsamefaceBreturn because the Bsourceislands are separate. No exact HFcurrentdistribution or parasiticinductance was simulated/measured.",
+      "proposed_fix": "Move/rotateC5so itsSOURCEpad shares a compact B.Cu return with U1SOURCE8 and itsBPpad is adjacentU1BP1. Candidatecenter(44,1.3),rotation180 gives BP(45,1.3),SOURCE(43,1.3); straightlinepadcenterlegs toU1BP1/SOURCE8 each3.033mm, vs baseline2.247+7.887mm projectedlowerbound beforeislanddetour. Retire old C5bypassdetouronlyafternewdirectreturnisproven.",
+      "candidate_is_proven_fix": false,
+      "closure": "Fresh native savedgeometry verifies samefaceC5SOURCE→U1SOURCEreturnwithoutvias; rootproposedengineeringtargetbothlegs<=3.5mmifplacementfeasible (not a manufacturerspecifiedlimit). Check actualFBvia(43.2,2.9),global.3clearance,.5edge,C5courtyard/full55matrix,refillandnativeERC/DRC/parity; quantifybefore/afterreturntopology."
+    }
+  ],
+  "retained_checks_and_nonfindings": [
+    {
+      "id": "GEO-N1",
+      "topic": "ExistingKelvintrace",
+      "details": "R5.2 toU1.3 is a distinct .3/.4mm trace route through(37,2.4),(37,4.5),(44.8,4.5),(45.45,5),(45.45,6.335), endingU1.3(46.725,6.335). This is not automaticallywrong simply becauseitsnetisFB_INDUCTOR.",
+      "path_UUIDs": [
+        "a6c73cf3-ccb7-4784-9e26-1a5f9c8a87a2",
+        "0eb905c1-7761-4989-9882-5a741d9bcb80",
+        "08272b83-7d9a-40d7-8bb4-e83aaf267e0f",
+        "17dc1dfd-c1cd-4cd7-a37e-1bea4c3ef1fa",
+        "cc647412-034f-4d25-b6a8-77b568065b00",
+        "a2a280f5-2568-49a6-b1c2-6858bbad86f5"
+      ],
+      "trace_centerline_mm": 14.633901454383368,
+      "vias": 2,
+      "limit": "Needforce/sense current topology and copperfield review; same-netDRCcannotproveKelvinintegrity."
+    },
+    {
+      "id": "GEO-N3",
+      "topic": "Source copper area",
+      "F_mm2": 70.5473705063385,
+      "B_mm2": 193.694583829388,
+      "details": "264.24195mm2 is SOURCE not a universalground plane. Electricalrole/switching and whetherSOURCEthermalcopper is appropriate must be decided against exactLYTSwitchmanufacturerrecommendations; genericTIGNDplaneinstructionscannotbe blindlyapplied."
+    }
+  ],
+  "acceptance_limits": "No nativeCAD or library changed. This geometryaudit does not approveareas,violations,clearancewaivers,highvoltageoperation,physicaltemperature,surge,EMCororders. Rootmust recheckanycandidateonactualsavedCAD and preserveallbaselinehistory.",
+  "correction_history": [
+    {
+      "topic": "C5return assessment",
+      "status": "corrected_before_final_handoff",
+      "detail": "InitialunindexedpolysetContains wasmisreadassamefillisland. Subsequent explicit subpolyindexqueries proved2differentBislands and via-onlylayerreturn. GEO-N2initialnonfindingiswithdrawn/replacedbyGEO-05. Parentwasnotifiedpromptly; noCADorapprovalsmodified."
+    }
+  ]
+}

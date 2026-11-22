@@ -1,8 +1,8 @@
-# Current task: SC09-CAT01 catalogue-only driver
+# Current task: SC09-ROUTE01 routing correction
 
-Current sources: variants/integrated-shade/SC09_compact. [Current package](integrated-shade/compact-09/catalogue-package/README.md); [purchasing guide](integrated-shade/compact-09/catalogue-package/SC09_catalogue_buy_list.pdf). Previous prototype-package/customT1 exports and orderreviewrecords are historical1705d20scope and must not be ordered for catalogueT1.
+Current sources: variants/integrated-shade/SC09_compact. [Current corrected packet](integrated-shade/compact-09/routing-improvement/po_poprawkach/README.md), [assessment and plan](integrated-shade/compact-09/routing-improvement/assessment-and-plan.md). PreviousCAT01catalogue-package is historical; exact before checkpoint is f7074024129f5b7890427ed463ec0c085617ace0.
 
-19references/46physicalpins/11nets,2terminalCoilcraftT1;50x32mm. RootsoleCADwriter. Fourrole reviewpacket: integrated-shade/compact-09/catalogue-review-inputs.json. FullToolkitproductreleaseFAIL remains explicit; stageapproval/physicalqualification absent. ExactCAT01graphapprovalnull. No purchase/suppliermessage/poweredtest. Branch concept/integrated-shade-nonisolated-buck;main outsidewrite scope.
+SameCAT01circuit:19references/46pins/11nets,17electronicpositions/16catalogueMPNs. PCB50x32mm/2L. RootsoleactiveCADwriter after privateimplementerhandoff. Current finalreview manifest: integrated-shade/compact-09/routing-improvement/review-inputs.json. FullToolkitproductreleaseFAIL; exactstage decisions and physicalqualification absent. No purchase/suppliermessage/poweredtest. Branchconcept/integrated-shade-nonisolated-buck;mainoutsidewrite scope.
 
 # E27 workflow index
 

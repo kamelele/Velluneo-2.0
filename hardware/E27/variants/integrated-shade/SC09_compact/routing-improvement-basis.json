@@ -1,0 +1,101 @@
+{
+  "revision": "SC09-ROUTE01-V2",
+  "writer": "/root/routing_candidate_writer",
+  "root_authorized_private_lease": true,
+  "origin": "Private alternate axis -Y C6; same 19 refs/46 pins/11 nets/MPNs. No approval invented.",
+  "C6": {
+    "anchor_mm": [
+      6.25,
+      28.5
+    ],
+    "native_angle": 90,
+    "can_bbox_mm": [
+      -0.25,
+      2.5,
+      12.75,
+      24.5
+    ],
+    "vent_bbox_mm": [
+      -0.25,
+      -2.5,
+      12.75,
+      2.5
+    ],
+    "fixture_condition": "Can overhangs PCB left by .25 mm. Vent requires 2.5 mm clear air beyond upper PCB edge; neither limit is an enclosure approval."
+  },
+  "planned_placements": {
+    "T1": [
+      20,
+      8
+    ],
+    "C4": [
+      34,
+      11.5
+    ],
+    "C1": [
+      43,
+      5.5
+    ],
+    "L1": [
+      45.5,
+      15.5
+    ],
+    "RV1": [
+      30.5,
+      22
+    ],
+    "RF1": [
+      45.7,
+      28.4
+    ],
+    "U1": [
+      22,
+      5.7
+    ],
+    "C5": [
+      22,
+      2
+    ],
+    "R5": [
+      15.7,
+      6
+    ],
+    "R6": [
+      16,
+      9
+    ],
+    "R4": [
+      26,
+      1.3
+    ],
+    "D1": [
+      21.2,
+      14
+    ],
+    "BR1": [
+      35,
+      5
+    ],
+    "R8": [
+      20,
+      22
+    ],
+    "R9": [
+      20,
+      25
+    ],
+    "R7": [
+      29,
+      2
+    ]
+  },
+  "no_powered_tests_or_orders": true,
+  "native_orientation_changes": {
+    "C6": 90,
+    "C4": "baseline+180",
+    "L1": "baseline+180",
+    "J2": "wholefootprint LED31,30 and DC37.4,27.5"
+  },
+  "no_SOURCE_floods": true,
+  "C5_direct_same_face": true
+}

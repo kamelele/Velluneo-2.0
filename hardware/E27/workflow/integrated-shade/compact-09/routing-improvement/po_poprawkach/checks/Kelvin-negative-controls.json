@@ -1,0 +1,53 @@
+{
+  "actual_actor": "/root",
+  "source_sha256": "29d4fa9950f369fdfa1998309926c05d54f65da9112df21d09abc5cb2c67df02",
+  "source_unchanged": true,
+  "baseline": {
+    "passed": true,
+    "Kelvin_native_objects": 13,
+    "missing_declared_UUIDs": [],
+    "other_FB_intersections_checked": 2,
+    "findings": [],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "missing_UUID_control": {
+    "passed": false,
+    "Kelvin_native_objects": 13,
+    "missing_declared_UUIDs": [
+      "00000000-0000-4000-8000-000000000001"
+    ],
+    "other_FB_intersections_checked": 2,
+    "findings": [],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "same_net_force_join_control": {
+    "passed": false,
+    "Kelvin_native_objects": 13,
+    "missing_declared_UUIDs": [],
+    "other_FB_intersections_checked": 5,
+    "findings": [
+      {
+        "Kelvin": "be0ca487-d390-4088-8971-a5da39453d35",
+        "other_FB": "efa7e9ff-56db-462b-abba-1af79c870e3b",
+        "layer": "B.Cu",
+        "overlap_outside_R5_mm2": 0.11406
+      },
+      {
+        "Kelvin": "df4bec1b-20ae-4178-aa36-92830e06e674",
+        "other_FB": "efa7e9ff-56db-462b-abba-1af79c870e3b",
+        "layer": "B.Cu",
+        "overlap_outside_R5_mm2": 0.1465035
+      },
+      {
+        "Kelvin": "fd9ac69d-7a89-4f63-8d01-aa16b89afcbb",
+        "other_FB": "efa7e9ff-56db-462b-abba-1af79c870e3b",
+        "layer": "B.Cu",
+        "overlap_outside_R5_mm2": 0.108785132433
+      }
+    ],
+    "limit": "Saved planar outward polygon intersection audit at2um approximation, excluding allowed physicalR5padandU1receiverpad; not impedance or current waveform proof."
+  },
+  "invalid_fixture_sha256": "50db4de99c549b3aabd06363ffa2d3f64247fe471c3888d29209c92acac60bc2",
+  "added_track_uuid": "efa7e9ff-56db-462b-abba-1af79c870e3b",
+  "scope": "Deliberately invalid isolated fixtures validate missing-object and same-net intersection detection. Native different-net DRC is not claimed clean for these fixtures. They are never adopted into customer CAD."
+}

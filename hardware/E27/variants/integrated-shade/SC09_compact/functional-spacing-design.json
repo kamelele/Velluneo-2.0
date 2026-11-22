@@ -632,7 +632,7 @@
       "parts": [
         "C6"
       ],
-      "constraints": "HorizontalbodyØ13x22max plusleadformingreserved.5mmventextension clear of other bodies/adhesive as existingproposal; exactventgeometrymanualreview. Topsurface copper/lead keepout beneath can unless actualratedsolidspacer preventscontact; sleeve alone not protective insulation. Bottomlayerfunctional coppermaypass underFR4only afterclearance/stressreview. Body-to-RF1target>=3mm,body-to-R7/T1>=2mm; replace old10mmblanket heatgap with actualthermalmeasurement."
+      "constraints": "Horizontalbody\u00d813x22max plusleadformingreserved.5mmventextension clear of other bodies/adhesive as existingproposal; exactventgeometrymanualreview. Topsurface copper/lead keepout beneath can unless actualratedsolidspacer preventscontact; sleeve alone not protective insulation. Bottomlayerfunctional coppermaypass underFR4only afterclearance/stressreview. Body-to-RF1target>=3mm,body-to-R7/T1>=2mm; replace old10mmblanket heatgap with actualthermalmeasurement."
     },
     {
       "id": "BOUNDARY",
@@ -678,7 +678,7 @@
     {
       "id": "IEC60664-1",
       "url": "https://webstore.iec.ch/en/publication/59671",
-      "basis": "Catalog confirms2020+AMD1:2025, ≤2000m baseline, frequency scopeup30kHz. Full normative tables not accessed; no clause minimum asserted."
+      "basis": "Catalog confirms2020+AMD1:2025, \u22642000m baseline, frequency scopeup30kHz. Full normative tables not accessed; no clause minimum asserted."
     },
     {
       "id": "IEC60664-4",
@@ -703,5 +703,6 @@
       "basis": "R7 thermal resistance140K/W,0.25W70C, derating towards155C; voltage rating does not remove power limit."
     }
   ],
-  "CAT01_notice": "Historical custom-coil baseline only. Current selected catalogue electrical/thermal values: catalogue-design-calculations.json. Current actual copper and geometry checks are in catalogue-package. No old thermal estimate transfers automatically."
+  "CAT01_notice": "Historical custom-coil baseline only. Current selected catalogue electrical/thermal values: catalogue-design-calculations.json. Current actual copper and geometry checks are in catalogue-package. No old thermal estimate transfers automatically.",
+  "ROUTE01_notice": "Historical baseline record. Current routing/thermal/spatial authority: layout-revision.json, routing-improvement-basis.json, selected spatial-constraints.json, power-supply-specification.ROUTE01.json and thermal-and-spacing-basis.ROUTE01.md. No previous copper-based temperature estimate qualifies current layout."
 }

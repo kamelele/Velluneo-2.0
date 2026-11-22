@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "role": "Reality Checker",
+  "actual_actor": "/root/routing_final_reality",
+  "date": "2026-11-22",
+  "revision": "SC09-ROUTE01",
+  "manifest_sha256": "49a49ab249b902615756e4d27c0f6774c10c422029f369e7daee530c183ed379",
+  "source_snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b",
+  "PCB_sha256": "29d4fa9950f369fdfa1998309926c05d54f65da9112df21d09abc5cb2c67df02",
+  "scope": "Independent read-only review of corrected engineering routing and evidence, not unconditional manufacture, powered operation or finished-product approval.",
+  "all_frozen_input_hashes_verified": 214,
+  "retained_review_scope": "The first review independently verified all213 original input hashes, raw native copper and critical route geometry. The final214-file bookkeeping refresh was independently reverified in full. It adds distinct work/release report copies and removes an empty doctor file without changing source snapshot, PCB, BOM, graph, placement, routing, thermal assumptions or spatial contract. Those native findings remain applicable.",
+  "checked_files": [
+    "pinned Toolkit docs/roles/reality-checker.md",
+    "routing-improvement/task-contract.json",
+    "routing-improvement/assessment-and-plan.md",
+    "routing-improvement/thermal-and-spacing-basis.md",
+    "SC09_compact/requirements.json",
+    "SC09_compact/routing-improvement-basis.json",
+    "SC09_compact/spatial-constraints.json",
+    "SC09_compact/power-supply-specification.ROUTE01.json",
+    "SC09_compact/SC09_compact.kicad_pcb",
+    "po_poprawkach/BRINGUP.md",
+    "po_poprawkach/checks/writer-seed-authoring.json",
+    "po_poprawkach/checks/before-after-metrics.json",
+    "po_poprawkach/checks/independent-connectivity.json",
+    "po_poprawkach/checks/ERC.json",
+    "po_poprawkach/checks/DRC.json",
+    "po_poprawkach/checks/refill.json",
+    "po_poprawkach/checks/bounded-spacing.json",
+    "po_poprawkach/checks/strict-spacing.json",
+    "po_poprawkach/checks/Kelvin-negative-controls.json",
+    "po_poprawkach/checks/toolkit-spatial.log",
+    "manufacturer LYTSwitch-1 datasheet PCB Layout Considerations and AN-67 layout paragraphs from local primary-source text"
+  ],
+  "actual_checks": [
+    {
+      "kind": "Independent native CAD read",
+      "method": "Pinned KiCad10.0.6 raw PCB_IO_MGR loader, not convenience LoadBoard; no source saves",
+      "result": "19 references,46 physical pads,2 copper layers,1.6mm thickness; no SOURCE poured zones. All48 declared critical route UUIDs remain in saved copper."
+    },
+    {
+      "kind": "Independent critical route geometry inspection",
+      "result": "C5 BP and SOURCE legs each consist of two B.Cu segments totalling2.77655177mm directly to the corresponding U1 pin; no bypass-return vias. The R5.2-to-D1.1 force branch is7.68281611mm, all B.Cu, with no detour through T1. SOURCE remains separate from DC_RETURN."
+    },
+    {
+      "kind": "Saved-copper semantic Kelvin audit rerun",
+      "method": "Reviewer executed the planar polygon audit against actual saved native copper and independently checked the purpose/UUID inventory",
+      "result": "PASS:13 declared Kelvin copper objects present; two contacts with other FB copper are contained in the permitted physical R5 pad; no extra force/sense join outside that pad. Audit is planar geometry, not dynamic current/noise evidence. Negative controls explicitly reject a missing UUID and an added same-net force join."
+    },
+    {
+      "kind": "Fresh report inspection",
+      "result": "Native ERC has no violations in any sheet and no ignored checks. Native DRC has0 violations,0 unconnected and0 schematic-parity findings. Bounded55-pair screen passes, strict screen intentionally fails, saved two-pass fill equality passes and fresh physical pin-set comparison is46pins/11nets/0NC. Default DRC ignored-check entries are disclosed by the actual report; this is not a claim that every possible KiCad check was enabled."
+    },
+    {
+      "kind": "Primary manufacturer layout guidance comparison",
+      "result": "LYTSwitch-1 and AN-67 explicitly distinguish high-side critical loops and local BP/SOURCE bypass from the low-side ground-potential SOURCE heat-spreading example. Removal of broad switching SOURCE pours and direct bypass routing follow the appropriate topology. Actual loop impedance, EMI and temperature improvements are not established by this geometrical change."
+    },
+    {
+      "kind": "Electrical and thermal limits review",
+      "result": "Unchanged230V/50Hz laboratory screen207-253V and0-40C; nominal60V, approximately133.44mA external LED after bleeders. Loss0.9-1.7W and82.5-89.9% efficiency remain assumptions, not measurements. T1 hot-bias factors/core loss and the50.2-90.3C sensitivity calculation remain explicitly unqualified; no inherited U1 thetaJA or temperature forecast is used to accept the corrected copper. Bring-up requires actual corner current/OVP/ripple/loss/temperature measurements and states numeric planning/stop limits with rated limits taking precedence."
+    },
+    {
+      "kind": "Mechanical and access conditions review",
+      "result": "Native C6 anchor6.25,28.5mm/90degrees matches the declared maximum can projection[-0.25,2.5,12.75,24.5]mm. Both-face copper body/vent restrictions are explicit. PCB is50x32mm;50.25mm material width and2.5mm external upper vent clearance are openly stated. The fixture must provide support, guarded access, wiring restraint and the external vent volume. Sample fit, formed leads, soldered3Dclearances and finished-lamp enclosure fit remain unqualified."
+    }
+  ],
+  "findings": [],
+  "retained_release_gates": [
+    {
+      "id": "RC-GATE-HUMAN",
+      "status": "open_explicitly_retained",
+      "owner": "Kamil or authorized reviewer",
+      "blocked_scope": "Formal stage/product release",
+      "condition": "Exact connectivity/spatial and affected-stage human decisions are absent. Geometric agreement and an instruction to perform design work do not fabricate those decisions."
+    },
+    {
+      "id": "RC-GATE-PHYSICAL",
+      "status": "open_explicitly_retained",
+      "owner": "Qualified test investigator",
+      "blocked_scope": "Qualified powered use and finished-product release",
+      "condition": "Current tolerance/ripple, hot magnetic behavior, actual losses/PF/efficiency, OVP dynamics/discharge, case/junction temperatures and fault/surge/EMC/insulation behavior require separately qualified tests; no physical PASS is claimed."
+    },
+    {
+      "id": "RC-GATE-PROCESS",
+      "status": "open_explicitly_retained",
+      "owner": "Owner and chosen manufacturer/assembler",
+      "blocked_scope": "Unconditional order/process release",
+      "condition": "Actual sample/formed-part inspection, fixture clearance/support, supplier CAM/process confirmation and current part procurement remain required. Finite intrinsic-package assessments are laboratory geometry screens, not normative insulation waivers."
+    }
+  ],
+  "recommendation": "ready_for_human_review",
+  "recommendation_scope": "The corrected engineering routing packet has no newly identified blocker or major electrical/layout regression within this review. This recommendation preserves all stated human, physical and process release gates and does not authorize an order or powered test.",
+  "sources_modified": false,
+  "human_approval_given": false,
+  "measurements_performed": false,
+  "full_product_release_approved": false
+}

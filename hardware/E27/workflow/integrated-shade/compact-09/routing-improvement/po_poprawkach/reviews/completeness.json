@@ -1,0 +1,144 @@
+{
+  "role": "Completeness Reviewer",
+  "actual_actor": "/root/routing_final_completeness",
+  "date": "2026-11-22",
+  "manifest_sha256": "49a49ab249b902615756e4d27c0f6774c10c422029f369e7daee530c183ed379",
+  "initial_manifest_reviewed_sha256": "293ac296531e370f2468c53065344cf4e335195e493c65472b11f128e4ab8361",
+  "scope": "SC09-ROUTE01 engineering routing correction/review packet. This is not approval to manufacture, order, energize or release a finished lamp.",
+  "source_snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b",
+  "PCB_sha256": "29d4fa9950f369fdfa1998309926c05d54f65da9112df21d09abc5cb2c67df02",
+  "recommendation": "ready_for_human_review",
+  "unconditional_product_release_recommendation": "blocked",
+  "checked_files_and_checks": [
+    {
+      "check": "Final frozen inputs",
+      "result": "All 214 actual file SHA256 values match the final manifest; its hash was independently verified."
+    },
+    {
+      "check": "Preserved before state",
+      "result": "Before archive: CRC pass, 109 members, SHA256 0fb137fd5f4501a7aba3f774f4be57adadb8aa7d610239e7d2f07986e1ce6bf4. Its embedded KiCad archive contains the original PCB 8aac351c09f351ce5a8f68e7e4a4cce23bb920bff34b63afa889307c5c242e6f."
+    },
+    {
+      "check": "Native saved PCB independently loaded read-only",
+      "result": "KiCad 10.0.6 raw native loader: 19 footprints, 46 pads, 17 models, 2 layers, 1.6 mm, 148 segments, 13 vias, minimum track width 0.3 mm, 0 SOURCE zones, 2 rule areas, 14 drilled component pads. Source hash unchanged."
+    },
+    {
+      "check": "Fresh native reports",
+      "result": "Fresh ERC sheet violations 0; DRC violations 0, unconnected 0, schematic parity 0. All severities included. Default ignored DRC keys remain visible; this is not a claim that literally every possible check is enabled."
+    },
+    {
+      "check": "Independent functional graph",
+      "result": "Separately parsed fresh XML physical pin sets equal independent CAT01 intent: 46 pins, 11 nets, 0 NC. Exact human graph approval remains null."
+    },
+    {
+      "check": "Spacing/refill",
+      "result": "Both spacing screens contain all 55 pair rows. Bounded screen PASS; strict screen FAIL retained. Two-pass saved fill polygons match exactly, with source unchanged and zero unconnected. This does not qualify three-dimensional insulation."
+    },
+    {
+      "check": "Spatial and adapter evidence",
+      "result": "Selected spatial contract contains two both-face body/vent areas. Its only Toolkit spatial error is missing current human approval. Consumer digest ee7b1f6cf115827b3cfa2b83505c3bf986e99090ecadc0f78ef72862076245ee matches writer seed/handoff and root polishing records. Active configure preview has an empty diff."
+    },
+    {
+      "check": "Kelvin audit controls",
+      "result": "All 13 declared Kelvin objects remain; no additional force/sense join was found outside physical R5.2. The missing-UUID fixture and deliberate same-net force-join fixture are both rejected; source unchanged. Native DRC is not substituted for this topology audit."
+    },
+    {
+      "check": "Exports",
+      "result": "Fabrication archive CRC passes: exactly seven Gerber layers and two Excellon drills. Drill report 27 PTH/0 NPTH agrees with 13 vias plus 14 component holes. Portable CAD archive CRC passes and all 136 entries match current source bytes. Assembly front/back each have one PDF page; layer PDF has five, schematic one, review report three. Native 3D renders are 2576 x 1768; trace images 1919 x 1248."
+    },
+    {
+      "check": "Toolkit modes and bookkeeping",
+      "result": "Distinct fresh work/release JSON reports record the same 1afadd... source snapshot and current timestamps. Work FAIL has 33 errors; release FAIL has 44. Actual doctor.log passes. Empty doctor JSON was removed; empty CLI stdout logs are not treated as passing reports."
+    }
+  ],
+  "requirement_coverage": [
+    {
+      "id": "OWNER-BEFORE",
+      "deliverable": "przed_poprawkami/baseline.json and preserved ZIP; checkpoint f7074024129f5b7890427ed463ec0c085617ace0",
+      "status": "Local archive integrity verified. Remote checkpoint publication is recorded by the coordinator."
+    },
+    {
+      "id": "OWNER-SOURCES-PLAN",
+      "deliverable": "assessment-and-plan.md; SC09_routing_review.pdf",
+      "status": "Concrete SOURCE, C5, force/Kelvin, C6, M, routing debris and spatial findings have reasons and an execution plan. TI/JLC guidance is qualified by the PI high-side topology."
+    },
+    {
+      "id": "ROUTE-SOURCE",
+      "deliverable": "Native PCB; before-after-metrics.json; thermal-and-spacing-basis.md",
+      "status": "No SOURCE pours. Unsupported inherited thermal conclusions are explicitly withdrawn."
+    },
+    {
+      "id": "ROUTE-BYPASS",
+      "deliverable": "writer-seed-authoring.json; actual native PCB; layer PDF",
+      "status": "Direct same-face BP/SOURCE paths are documented and covered by the current native and spacing checks."
+    },
+    {
+      "id": "ROUTE-SENSE",
+      "deliverable": "before-after-metrics.json; Kelvin-negative-controls.json; protected UUID map",
+      "status": "Physical saved-copper join audited with meaningful negative controls. Current waveform measurements remain open."
+    },
+    {
+      "id": "ROUTE-LOOPS",
+      "deliverable": "SC09_routing_review.pdf; before-after-metrics.json",
+      "status": "Actual geometric changes and the increased via count are disclosed. No inductance or EMC guarantee is claimed."
+    },
+    {
+      "id": "ROUTE-SPATIAL",
+      "deliverable": "Selected spatial-constraints.json; consumers; configure-adoption.json; writer/root records",
+      "status": "Geometry and consumer agreement are documented. Human intent approval and physical fixture qualification remain explicit gates."
+    },
+    {
+      "id": "ROUTE-VERIFY",
+      "deliverable": "ERC/DRC/XML/pin CSV; bounded and strict spacing; refill; Kelvin audit; native inventory",
+      "status": "Current engineering checks are complete at their stated scope. Strict package failures remain visible."
+    },
+    {
+      "id": "ROUTE-REVIEW",
+      "deliverable": "Four independent role reports and coordinator integration receipt",
+      "status": "This independent role is complete. Coordinator must collect all four reports for the same final manifest and verify closure before publication."
+    },
+    {
+      "id": "ROUTE-DELIVER",
+      "deliverable": "Native KiCad archive; Gerber/drill archive; BOM; positions; pin CSV; schematic/assembly/layer PDFs; 3D PNGs; comparison report",
+      "status": "Local packet complete. Final branch publication and main invariance verification remain coordinator integration checks."
+    }
+  ],
+  "findings": [
+    {
+      "id": "COMP-01",
+      "severity": "minor",
+      "status": "independently_closed",
+      "object": "checks/toolkit-work.json, toolkit-release.json, toolkit-doctor.log",
+      "issue": "Initial packet had empty work/release CLI stdout logs and only the last shared check.json. An empty doctor.json remained after an unsupported flag.",
+      "closure": "Coordinator preserved distinct mode=work and mode=release reports and removed the empty doctor JSON. Reviewer independently read both fresh same-snapshot reports and verified all 214 final hashes. CAD and functional basis are unchanged."
+    }
+  ],
+  "retained_gates": [
+    {
+      "gate": "Exact human intent, spatial and stage approvals",
+      "owner": "Kamil or authorized reviewer",
+      "effect": "Engineering checks do not approve schematic/placement/routing acceptance, manufacturing or product release."
+    },
+    {
+      "gate": "Fixture, formed-part and mechanical qualification",
+      "owner": "Kamil / qualified prototype investigator",
+      "effect": "Actual fixture must accommodate the 0.25 mm left C6 overhang and 2.5 mm external upper vent reserve. Finished lamp fit is unverified."
+    },
+    {
+      "gate": "Physical electrical, thermal, EMC and safety qualification",
+      "owner": "Qualified prototype investigator",
+      "effect": "Current, ripple, OVP, faults, surge, losses, temperature, insulation and optical requirements remain unmeasured. Full product release is FAIL."
+    },
+    {
+      "gate": "Provider/process and CAM confirmation",
+      "owner": "Coordinator / owner before purchase",
+      "effect": "Manual reference positions and engineering Gerbers do not qualify automatic PCBA or supplier CAM. No order has been placed."
+    }
+  ],
+  "retained_scope_after_manifest_refresh": "Initial findings retain their scope because PCB hash, source snapshot, functional graph and engineering metrics are unchanged. Final 214 hashes, separate Toolkit mode reports and portable CAD archive equality were freshly verified. Physical testing and human approval are not inferred.",
+  "limitations": [
+    "No powered or physical sample tests performed.",
+    "Reviewer does not approve a stage or claim IEC compliance.",
+    "Final Git branch publication and main invariance are coordinator integration checks, not fabricated by this local review."
+  ]
+}

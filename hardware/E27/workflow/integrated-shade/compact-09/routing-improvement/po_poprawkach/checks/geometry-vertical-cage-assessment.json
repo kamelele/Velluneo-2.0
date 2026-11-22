@@ -1,0 +1,46 @@
+{
+  "actual_actor": "/root/routing_geometry_review",
+  "date": "2026-11-22",
+  "task": "Read-only bounded assistance to /root/routing_candidate_writer; no CAD/config/library mutation",
+  "inspected_candidate": {
+    "seed_board_sha256": "283e203faea9e923672edebda6f19d50409ca637f6b14a35d82ae29eaf618a99",
+    "generic_board_sha256": "26872421ddeba07b8485069a1474e9887daf4bcef13916513fa0cf17022732b9",
+    "place_script_sha256": "cfa7a6c0895d5bec9d2ed174acba3393eca81b4e3230f1b84358c2c1d38b792f",
+    "seed_script_sha256": "b2487f4a4f47ffeededcfd0d1bac6ace2c671b0b61c7fbcb28d70a460f0e76b8",
+    "actual_context": "Private routing-vertical candidate, not current published S and not the abandoned horizontal trial. Candidate remains live-changing; this report covers only stated hashes."
+  },
+  "native_unconnected_count": 5,
+  "native_unconnected_groups_report": "geometry-vertical-groups.json",
+  "specific_cages": [
+    {
+      "id": "VERT-CAGE-01",
+      "net": "LED_PLUS",
+      "isolated_endpoint": "C6.1 at(9.25,3.5)",
+      "obstacles": [
+        "Bothface can-body keepout x.25..13.25 beginning y7.5 blocks down/left escape",
+        "DC_RETURN top route y1.0 plus F.Cu wall x13.95,y1.5..14.5 separates capacitor leads from power/output island",
+        "Opposite B.Cu SOURCE row x14.1..18.5,y3.795 and R5SOURCE pad14.1,6 require2mm fromLED, preventing an ordinary layer-switch escape near that wall",
+        "Possible F.Cu strip nearx15.25..15.325 adjacentKelvinvia17.85,5.65 is narrower than.1mmroutergrid and inaccessible fromleft withoutcrossingDCwall"
+      ],
+      "root_cause": "Bothface capacitor-body protection and early DC routing form a topological enclosure; global .3mmDRC cannot override independently required LED_SOURCE2mm matrix.",
+      "recommended_placement": "ReverseverticalC6 so leadsarebottom nearJ2, e.g.center6.75,28.5 withorientation90 (verifyactualpad/bodytransform). Bodythenapproximatelyy2.5..24.5, LED4.25,28.5/DC9.25,28.5. CandidateleadY30.2 canreduceexternalventextension from2.5to.8mm ifactualPTHland/edgeclearancepasses.",
+      "required_rechecks": "ActualC6body+5mmventcontract, vertex/pad rotation, .5mmedgeand2mmmatrix, newmanualrouting/filledcopper/nativeDRC. Externalfreeairventspace must be explicit, not silently clipped.",
+      "proposal_proven_routable": false
+    },
+    {
+      "id": "VERT-CAGE-02",
+      "affected_nets": ["BUS_RECT", "AC_FUSED", "AC_N"],
+      "native_groups": {
+        "BUS_RECT": [["L1.1"], ["C1.1"], ["BR1.1"]],
+        "AC_FUSED": [["RV1.1", "RF1.2"], ["BR1.2"]],
+        "AC_N": [["J1.2", "RV1.2"], ["BR1.4"]]
+      },
+      "root_cause": "Genericrouter priority DCfirst andLEDbeforeBUS_RECT permits quietoutputrails to seal bridge/filterescapes. R8/R9currentlyat45,8.7/45,11.5 forcebothoutputrailsintorectifier/filtercluster.",
+      "recommended_routing": "RouteBUS_RECT,AC_FUSED,AC_NbeforegenericLED/DCorpreseedrealbridgepositive/frontviaescape. A deliberate orderchange is a heuristic, not proof; inspectactualnewremaininggroups.",
+      "recommended_placement": "MoveR8/R9 to quietoutputbottom, trialBcenters21,25and21,28 withsamepinorientation, thenrerun allplacement/body/2mmclearances. This removes a mandatory outputrail excursionthroughC1/BR1/L1region.",
+      "proposal_proven_routable": false
+    }
+  ],
+  "rules_unchanged": true,
+  "no_claims": ["No root or writer CAD file modified", "No clearance rule lowered", "No case/enclosure fit approved", "No candidate route or thermal performance validated by recommendation alone", "No physical tests, orders or supplier messages"]
+}

@@ -19,7 +19,7 @@
   "product": {
     "requirements_file": "requirements.json",
     "connectivity_file": "intended-connectivity.CAT01.json",
-    "spatial_file": null,
+    "spatial_file": "spatial-constraints.json",
     "domains": [
       {
         "id": "MAINS_REFERENCED",
@@ -160,6 +160,7 @@
     "intended-connectivity.CAT01.json",
     "intended-connectivity.json",
     "intended-connectivity.toolkit.json",
+    "layout-revision.json",
     "mechanical-budget.proposed.json",
     "model-attachment.json",
     "original-requirements-crosswalk.json",
@@ -171,6 +172,7 @@
     "owner-process-line-decision.json",
     "owner-prototype-scope.json",
     "owner-size-50x32-approval.json",
+    "power-supply-specification.ROUTE01.json",
     "power-supply-specification.json",
     "reference/C6-mounting-interpretation.json",
     "reference/LED-primary-research.json",
@@ -187,6 +189,7 @@
     "reference/rdr464-research.json",
     "reference/rdr464-verified-U1-pins.json",
     "requirements.json",
+    "routing-improvement-basis.json",
     "source-basis.A1.json",
     "source-basis.CAT01.json",
     "source-basis.json",
@@ -194,6 +197,7 @@
     "standards-and-test-plan.json",
     "sym-lib-table",
     "symbol-pin-verification.json",
+    "thermal-and-spacing-basis.ROUTE01.md",
     "thermal-planning.json",
     "two-endpoint-interface.proposed.json"
   ],
@@ -203,48 +207,48 @@
     "gerbers": [
       {
         "path": "release-candidate/SC09_do_zamowienia_PCB.zip",
-        "sha256": "6b09789f91498fb02ba406aff433fe331e7799c65b4f89a71c6e478b3c04a5be",
-        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+        "sha256": "a487b9b4cd70b670ad8d6e49526dac55643a85dffd671d7b7b49e2bef72caa19",
+        "snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b"
       }
     ],
     "drills": [
       {
         "path": "release-candidate/SC09_drills.zip",
-        "sha256": "5ed387d2fc16e7dadb2cedc3afd69195ba835ab67c2dbcddde3d675b90f55fc5",
-        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+        "sha256": "30caf35ffab3585decdba478198f8bd01c6bb26e9c89792e908cc3dee5263d17",
+        "snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b"
       }
     ],
     "bom": [
       {
         "path": "release-candidate/SC09_BOM.csv",
         "sha256": "234548a3c34bfb821039a89f27e28aeeefc8a35d778539953b501f03ef6824ab",
-        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+        "snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b"
       }
     ],
     "positions": [
       {
         "path": "release-candidate/SC09_positions_manual_reference.csv",
-        "sha256": "843e9dbb93360204f776ed3dcd0c4ecb8892dd99feaa085bfcfe2c7692a70df5",
-        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+        "sha256": "9fa4092b7f5ee6856ab3566e4f0ed00671547c402aece8ea9af7f626601744a2",
+        "snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b"
       }
     ],
     "assembly_drawing": [
       {
         "path": "release-candidate/SC09_assembly_front.pdf",
-        "sha256": "bbc31460aaecc7a4585f664ffb438d82a972c075f1329af9ed9fae13074eb96d",
-        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+        "sha256": "6eeac0473bc02cdff8aa0e6d47b93a25de3958c1a6461905d9b92ac9dcb027dc",
+        "snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b"
       },
       {
         "path": "release-candidate/SC09_assembly_back.pdf",
-        "sha256": "03efd6315168a5d238d855fcb84cd66c48e175113f856ec67a710bb650a684e8",
-        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+        "sha256": "413040e13c972079281cb17a991ed9136ca9b34a6b113e344e7f457ff16047fd",
+        "snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b"
       }
     ],
     "bringup_plan": [
       {
         "path": "release-candidate/BRINGUP.md",
-        "sha256": "911ef6038fdfd020153d1ca8ac1b17f00824dcbf3b49195768a8d04df6c1e54f",
-        "snapshot": "9a936306103bfdc0cf2999fd7298850f7de2ab8902f8c8d45966a256335a46ec"
+        "sha256": "fee7f533d748af3fc781d978d6fdc8d1d092f694ff7902d57b9ee87b1435cae2",
+        "snapshot": "1afadd86db640d920025e5edb8ba9a00c2aa4446ac7e607f8ece1b3adff57b4b"
       }
     ]
   }

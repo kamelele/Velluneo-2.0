@@ -1,0 +1,798 @@
+{
+  "actual_actor": "/root/routing_candidate_writer",
+  "board_sha256": "d0a6fa5ed7c65d0c2b8177ae18e5a17167c34535504debe8954d9d3e9d4788fc",
+  "actual_constraints_digest_supplied": "ee7b1f6cf115827b3cfa2b83505c3bf986e99090ecadc0f78ef72862076245ee",
+  "consumer_sha256": "04e1a8387aaa3a5e387a5e48bb57cd0854acb49264015b0bba4a9d66edbdafd1",
+  "routes": [
+    {
+      "uuid": "ede96409-3471-4af8-b937-267b1fc1867a",
+      "net": "/BUS_RECT",
+      "points": [
+        [
+          33.75,
+          2.325
+        ],
+        [
+          33.0,
+          2.4
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "bridgepositiveescape"
+    },
+    {
+      "uuid": "8c848ffe-652d-4bb1-84b3-0c540ea1855a",
+      "net": "/DC_RETURN",
+      "points": [
+        [
+          36.25,
+          2.325
+        ],
+        [
+          37.1,
+          2.325
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "bridgereturnescape"
+    },
+    {
+      "uuid": "865e2eec-0a4a-43f2-bfe4-74e07ae4711e",
+      "net": "/AC_FUSED",
+      "points": [
+        [
+          33.75,
+          7.675
+        ],
+        [
+          32.5,
+          7.7
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "bridgephaseescape"
+    },
+    {
+      "uuid": "14e48db9-7e46-4e5c-bd34-7cec919475d9",
+      "net": "/AC_N",
+      "points": [
+        [
+          36.25,
+          7.675
+        ],
+        [
+          36.65,
+          8.35
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "bridgeneutralescape"
+    },
+    {
+      "uuid": "996a827d-6a3e-4011-ad0b-aba75c88ba43",
+      "net": "/BUS_FILTERED",
+      "points": [
+        [
+          24.725,
+          7.605
+        ],
+        [
+          24.65,
+          7.68
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "drainescape"
+    },
+    {
+      "uuid": "24a26a81-4d2c-4818-ac29-bdde2a49529b",
+      "net": "/BUS_FILTERED",
+      "points": [
+        [
+          24.65,
+          7.68
+        ],
+        [
+          26.4,
+          9.1
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "drainescape"
+    },
+    {
+      "uuid": "2032bf36-18ba-4ae0-8b7d-3d1540e4a422",
+      "net": "/BUS_FILTERED",
+      "point": [
+        26.4,
+        9.1
+      ],
+      "via": true,
+      "purpose": "DRAIN"
+    },
+    {
+      "uuid": "74a3b850-f974-45c7-b736-94d15ad0f209",
+      "net": "/BUS_FILTERED",
+      "points": [
+        [
+          26.4,
+          9.1
+        ],
+        [
+          29.0,
+          11.5
+        ]
+      ],
+      "layer": "F.Cu",
+      "width": 0.4,
+      "purpose": "HFbusFORCE"
+    },
+    {
+      "uuid": "296c507e-dc2a-4675-9827-220b1a4147b8",
+      "net": "/BP",
+      "points": [
+        [
+          23.0,
+          2.0
+        ],
+        [
+          24.725,
+          3.025
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "BPdirectlocal"
+    },
+    {
+      "uuid": "590b2c3b-88b6-424a-a1e5-5a79f54f52c3",
+      "net": "/BP",
+      "points": [
+        [
+          24.725,
+          3.025
+        ],
+        [
+          24.725,
+          3.795
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "BPdirectlocal"
+    },
+    {
+      "uuid": "68c6f510-8219-47a6-91e2-a546f857240d",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          21.0,
+          2.0
+        ],
+        [
+          19.275,
+          3.025
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "SOURCEdirectlocal"
+    },
+    {
+      "uuid": "ea082c82-86e2-4a4f-acd5-4482305b3802",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          19.275,
+          3.025
+        ],
+        [
+          19.275,
+          3.795
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "SOURCEdirectlocal"
+    },
+    {
+      "uuid": "06ea4986-3d56-4ff5-8ac4-21e317f13d09",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          19.275,
+          7.605
+        ],
+        [
+          19.275,
+          3.795
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.6,
+      "purpose": "SOURCEcompactFORCE"
+    },
+    {
+      "uuid": "9b2a12bb-2718-427c-9c99-4f5ea8275fc2",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          19.275,
+          3.795
+        ],
+        [
+          14.1,
+          3.795
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.6,
+      "purpose": "SOURCEcompactFORCE"
+    },
+    {
+      "uuid": "decdc475-b6b4-410f-a0c5-27b92feefb39",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          14.1,
+          3.795
+        ],
+        [
+          14.1,
+          6.0
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.6,
+      "purpose": "SOURCEcompactFORCE"
+    },
+    {
+      "uuid": "84f39a9c-3936-4dfe-8ebf-ba43d2fd6bf9",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          14.725,
+          9.0
+        ],
+        [
+          14.1,
+          8.375
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R6SOURCEparallelFORCE"
+    },
+    {
+      "uuid": "28b2f3cd-962a-4608-9e4e-830693cd793b",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          14.1,
+          8.375
+        ],
+        [
+          14.1,
+          6.0
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R6SOURCEparallelFORCE"
+    },
+    {
+      "uuid": "f41908a4-c6f2-46c5-80f9-4528c80d0ed3",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          24.85,
+          1.3
+        ],
+        [
+          24.85,
+          0.65
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "MdividerSOURCEreference"
+    },
+    {
+      "uuid": "22dd5c9a-8585-406d-9492-c5aa37c1124b",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          24.85,
+          0.65
+        ],
+        [
+          19.275,
+          0.65
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "MdividerSOURCEreference"
+    },
+    {
+      "uuid": "1dcea0e4-dae0-43a1-a2c6-adf5ad116b10",
+      "net": "/SW_SOURCE",
+      "points": [
+        [
+          19.275,
+          0.65
+        ],
+        [
+          19.275,
+          3.795
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "MdividerSOURCEreference"
+    },
+    {
+      "uuid": "92ac6210-a16a-414b-8b27-efc290e33ff6",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          17.3,
+          6.0
+        ],
+        [
+          17.3,
+          8.3
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R5toD1directFORCE"
+    },
+    {
+      "uuid": "810a4de7-ce69-4463-9184-92024b1545a4",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          17.3,
+          8.3
+        ],
+        [
+          20.3,
+          11.3
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R5toD1directFORCE"
+    },
+    {
+      "uuid": "b37af965-b696-459c-8340-80d85ca4e110",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          20.3,
+          11.3
+        ],
+        [
+          21.2,
+          12.0
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R5toD1directFORCE"
+    },
+    {
+      "uuid": "146dd841-cfa4-4a9d-a481-605873a3c49f",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          17.275,
+          9.0
+        ],
+        [
+          16,
+          7.725
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R6parallelFORCE"
+    },
+    {
+      "uuid": "eb92746c-ac82-4959-bedf-e61b3c34df27",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          16,
+          7.725
+        ],
+        [
+          16,
+          6
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R6parallelFORCE"
+    },
+    {
+      "uuid": "6cb651cd-feb4-40c9-9670-15cb0abbe491",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          16,
+          6
+        ],
+        [
+          17.3,
+          6.0
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "R6parallelFORCE"
+    },
+    {
+      "uuid": "88cfe194-147e-4694-8e47-cca645869cc5",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          20.0,
+          3.25
+        ],
+        [
+          20.7,
+          5.5
+        ]
+      ],
+      "layer": "F.Cu",
+      "width": 0.4,
+      "purpose": "coilbranchFORCE"
+    },
+    {
+      "uuid": "914438ac-2891-4068-a233-932668b58dd0",
+      "net": "/FB_INDUCTOR",
+      "point": [
+        20.7,
+        5.5
+      ],
+      "via": true,
+      "purpose": "coilFORCE"
+    },
+    {
+      "uuid": "edb3625a-5c52-404c-8124-357162fa2642",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          20.7,
+          5.5
+        ],
+        [
+          20.7,
+          11.5
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "coilbranchFORCE"
+    },
+    {
+      "uuid": "afa54254-7aa1-4895-8913-c80319423d3a",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          20.7,
+          11.5
+        ],
+        [
+          21.2,
+          12.0
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "coilbranchFORCE"
+    },
+    {
+      "uuid": "7f075067-a668-44af-b408-19c7d82dc836",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          17.3,
+          6.0
+        ],
+        [
+          17.3,
+          5.1
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "KelvintakeoffR5"
+    },
+    {
+      "uuid": "86291b09-d6d9-457f-9e28-bf97134cef19",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          17.3,
+          5.1
+        ],
+        [
+          16.5,
+          4.9
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "KelvintakeoffR5"
+    },
+    {
+      "uuid": "01d1e503-71f1-48cd-940b-fa5d3e0e6197",
+      "net": "/FB_INDUCTOR",
+      "point": [
+        16.5,
+        4.9
+      ],
+      "via": true,
+      "purpose": "Kelvin"
+    },
+    {
+      "uuid": "7ee28132-b18b-4631-bd52-c511fc715ca9",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          16.5,
+          4.9
+        ],
+        [
+          16.5,
+          6.6
+        ]
+      ],
+      "layer": "F.Cu",
+      "width": 0.3,
+      "purpose": "Kelvinisolated"
+    },
+    {
+      "uuid": "1afef5ca-f187-4979-bafe-e33225c8aef6",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          16.5,
+          6.6
+        ],
+        [
+          21.7,
+          6.6
+        ]
+      ],
+      "layer": "F.Cu",
+      "width": 0.3,
+      "purpose": "Kelvinisolated"
+    },
+    {
+      "uuid": "b71aa227-b369-4149-91c1-6597fd18237b",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          21.7,
+          6.6
+        ],
+        [
+          21.7,
+          6.2
+        ]
+      ],
+      "layer": "F.Cu",
+      "width": 0.3,
+      "purpose": "Kelvinisolated"
+    },
+    {
+      "uuid": "47fdf762-89da-4b4f-b0ec-7646a4bcd55a",
+      "net": "/FB_INDUCTOR",
+      "point": [
+        21.7,
+        6.2
+      ],
+      "via": true,
+      "purpose": "Kelvin"
+    },
+    {
+      "uuid": "684d04ae-b87d-4887-a03a-4a3ba6639831",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          21.7,
+          6.2
+        ],
+        [
+          22,
+          5.3
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Kelvinreceiver"
+    },
+    {
+      "uuid": "df4bec1b-20ae-4178-aa36-92830e06e674",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          22,
+          5.3
+        ],
+        [
+          23.2,
+          5.3
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Kelvinreceiver"
+    },
+    {
+      "uuid": "be0ca487-d390-4088-8971-a5da39453d35",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          23.2,
+          5.3
+        ],
+        [
+          23.2,
+          6.335
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Kelvinreceiver"
+    },
+    {
+      "uuid": "fd9ac69d-7a89-4f63-8d01-aa16b89afcbb",
+      "net": "/FB_INDUCTOR",
+      "points": [
+        [
+          23.2,
+          6.335
+        ],
+        [
+          24.725,
+          6.335
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Kelvinreceiver"
+    },
+    {
+      "uuid": "c38a1204-8ece-49f8-b038-d6a5a760bf10",
+      "net": "/M",
+      "points": [
+        [
+          29.0,
+          2.0
+        ],
+        [
+          26.8,
+          2
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Mreceiver"
+    },
+    {
+      "uuid": "f11386be-4b57-433d-beb9-83098b643302",
+      "net": "/M",
+      "points": [
+        [
+          26.8,
+          2
+        ],
+        [
+          26.8,
+          4.2
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Mreceiver"
+    },
+    {
+      "uuid": "a34693d4-bd92-4685-a276-c3cf60de0f40",
+      "net": "/M",
+      "points": [
+        [
+          26.8,
+          4.2
+        ],
+        [
+          24.725,
+          5.065
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Mreceiver"
+    },
+    {
+      "uuid": "08d5dd41-b8ad-4f13-82c3-92a743628f93",
+      "net": "/M",
+      "points": [
+        [
+          29.0,
+          2.0
+        ],
+        [
+          27.15,
+          1.3
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "Mdividerlocal"
+    },
+    {
+      "uuid": "a0e4aa5b-b113-4e63-85a9-360e9a33df2d",
+      "net": "/AC_L",
+      "points": [
+        [
+          48.4,
+          30.1
+        ],
+        [
+          45.7,
+          28.4
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.4,
+      "purpose": "AClive"
+    },
+    {
+      "uuid": "2b0cf6ce-8723-409f-97c6-8389a396c33d",
+      "net": "/AC_FUSED",
+      "points": [
+        [
+          45.7,
+          21.6
+        ],
+        [
+          42,
+          21.6
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "fusedMOVinput"
+    },
+    {
+      "uuid": "9cea9bfe-900b-430a-8038-ee93b7300b13",
+      "net": "/AC_FUSED",
+      "points": [
+        [
+          42,
+          21.6
+        ],
+        [
+          29.25,
+          19.5
+        ]
+      ],
+      "layer": "B.Cu",
+      "width": 0.3,
+      "purpose": "fusedMOVinput"
+    }
+  ],
+  "nets_preserved": true,
+  "SOURCEthermalzones": 0
+}

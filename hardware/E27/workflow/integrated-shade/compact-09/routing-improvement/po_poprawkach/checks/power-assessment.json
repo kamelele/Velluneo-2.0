@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "task": "Independent bounded power-layout assessment before SC09 routing improvement",
+  "actual_actor": "/root/routing_power_review",
+  "role": "Read-only technical assessment contributor; not final reviewer of my own recommendations",
+  "date": "2026-11-22",
+  "base_commit": "af59cf024e9c2368daea1d17095bd932aafd7e3e",
+  "base_PCB_sha256": "8aac351c09f351ce5a8f68e7e4a4cce23bb920bff34b63afa889307c5c242e6f",
+  "baseline_directory": "work/routing-improvement/baseline-source",
+  "write_scope": "This report and private source-document images only; no CAD/library/project edits, purchases, supplier messages, physical tests or approvals.",
+  "primary_sources": [
+    {
+      "id": "PI-LYT1",
+      "url": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "cache": "work/compact09/rdr-research/lytswitch-1_family_datasheet.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "sections": "Rev B July2016, pages2–5 pin/topology/layout and page7 thermal conditions"
+    },
+    {
+      "id": "PI-AN67",
+      "url": "https://www.power.com/sites/default/files/documents/an67.pdf",
+      "cache": "work/compact09/rdr-research/an67.pdf",
+      "sha256": "53069f49b53917459c150a5f8afc2073499a08b3adce4588bcd2e1869d2d68db",
+      "sections": "Page9 high-side critical loops and page10 low-side thermal distinction"
+    },
+    {
+      "id": "TI-SLYP762",
+      "url": "https://www.ti.com/lit/ml/slyp762/slyp762.pdf",
+      "sections": "Slides10–18 switched loops/node parasitics,21 filter placement,24 local signal routing,26 thermal strategy",
+      "interpretation": "General SMPS guidance; it does not override the actual high-side floating SOURCE reference or certify this prototype. Its warning against switch-node cooling is applicable to large SOURCE areas in this topology."
+    },
+    {
+      "id": "PI-RDR464",
+      "url": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "cache": "work/compact09/sources/rdr464.pdf",
+      "sha256": "c71ee568ae0c797061deebce5aa8e3d65cc7394d6da323566a3cf0ddc80a1f6d",
+      "interpretation": "Reference schematic/layout are useful, but its prose calls the positive-rail arrangement low-side in one place while later family documents explicitly call it high-side. Determine topology from actual nodes, not that inconsistent label; do not transfer its measured efficiency or temperatures."
+    }
+  ],
+  "topology": {
+    "classification": "Nonisolated high-side buck, determined from actual CAT01 pin/net sets",
+    "on_path": [
+      "C4.1 BUS_FILTERED",
+      "U1.4 DRAIN",
+      "internal MOSFET",
+      "U1.5–8 SW_SOURCE",
+      "R5||R6",
+      "FB_INDUCTOR",
+      "T1.2→T1.1",
+      "C6/LED load",
+      "DC_RETURN",
+      "C4.2"
+    ],
+    "off_freewheel_path": [
+      "DC_RETURN",
+      "D1.2 anode→D1.1 cathode",
+      "FB_INDUCTOR",
+      "T1.2→T1.1",
+      "C6/LED load",
+      "DC_RETURN"
+    ],
+    "commutation_difference_loop": [
+      "C4.1",
+      "U1 MOSFET",
+      "R5||R6",
+      "D1",
+      "C4.2"
+    ],
+    "floating_reference": "SOURCE is the IC's local power/signal reference, but it switches relative to DC_RETURN. FB_INDUCTOR shares its large common-mode swing and differs by the sense-resistor drop during conduction. Neither is quiet board ground or SELV.",
+    "BP_and_M": "BP is approximately5.2V relative to SOURCE. M normally senses approximately2V relative to SOURCE in the output sampling interval. Avoid treating either as ordinary ground-referenced low-voltage nodes."
+  },
+  "findings": [
+    {
+      "id": "PWR-01",
+      "severity": "major",
+      "objects": [
+        "SOURCE_THERMAL_F.Cu",
+        "SOURCE_THERMAL_B.Cu",
+        "thermal-planning.json U1 source-area target"
+      ],
+      "baseline_evidence": {
+        "F_filled_area_mm2": 70.5473705063385,
+        "B_filled_area_mm2": 193.694583829388,
+        "sum_filled_area_mm2": 264.2419543357265
+      },
+      "problem": "A large two-face heat-spreading pour uses the switching SOURCE node. The old150mm2 SOURCE target is an unqualified thermal planning choice, not a manufacturer high-side layout requirement. Broad node area can increase capacitive switching-current injection and EMI.",
+      "specific_manufacturer_reconciliation": "PI describes maximizing ground-potential SOURCE copper as an advantage of LOW-SIDE operation. Its thermal-resistance test coupon is a characterization condition, not an instruction to maximize high-side switching copper. A local SOURCE fanout/bias return is still required; removing every SOURCE conductor would be incorrect.",
+      "recommended_fix": "Remove the broad SW_SOURCE thermal zones, retain compact current-rated SOURCE pin fanout and direct local C5/analog returns. Keep quiet-node diode thermal copper separately. Do not reconnect SOURCE to DC_RETURN or claim an equivalent quiet thermal path.",
+      "observable_closure": [
+        "No broad filled SW_SOURCE thermal zones remain; report actual remaining pad/track copper separately if measured",
+        "Native connectivity/DRC/parity and unchanged pin/net intent pass",
+        "Current documents retire the150mm2 SOURCE minimum and any inherited thermal prediction dependent on that copper",
+        "Thermal qualification remains open rather than replacing electrical/thermal physics with a geometric PASS"
+      ],
+      "thermal_tradeoff": "Reducing SOURCE heat-spreading area can increase U1 junction temperature. It is not simultaneously a proven EMI and temperature improvement. A sufficiently cool native-CAD image does not settle this tradeoff."
+    },
+    {
+      "id": "PWR-02",
+      "severity": "major_layout_opportunity",
+      "objects": [
+        "C5",
+        "U1 BP/SOURCE",
+        "SOURCE bypass routing"
+      ],
+      "baseline_evidence": {
+        "C5_BP_pad_mm": [
+          46.85,
+          1.6
+        ],
+        "C5_SOURCE_pad_mm": [
+          48.85,
+          1.6
+        ],
+        "U1_BP_pad_mm": [
+          46.725,
+          3.795
+        ],
+        "explicit_BP_trace_length_mm": 2.246776695296637,
+        "explicit_SOURCE_return_to_common_trunk_mm": 13.35,
+        "explicit_SOURCE_vias": 2
+      },
+      "important_caveat": "Saved SOURCE fill contains C5.2 and U1 SOURCE pads on both faces. There are parallel copper return paths; the13.35mm authored trace is NOT proof of the actual HF current-path length. Do not label the complete baseline decoupling loop20mm without a saved-plane current analysis.",
+      "recommended_fix": "With broad pours removed, deliberately place C5 above the U1 centre with BP on its right and SOURCE on its left, and provide short direct B.Cu BP and SOURCE connections. Root candidate(44,1.3) is a placement proposal subject to native DRC/courtyard review.",
+      "observable_closure": [
+        "Both new C5 branches connect directly to the appropriate U1 pins on B.Cu without vias",
+        "Report the actual new branch lengths, approximately3mm each target; do not compare against an alleged exclusive baseline path",
+        "C5 body/pads clear U1 pads and the new FB force routing",
+        "No DC_RETURN connection to C5/SOURCE is added"
+      ],
+      "opposite_face_T1_coupling": "At the proposed location C5 overlaps the front T1 FB land projection. That land shares SOURCE's common-mode switching swing; BP-to-FB is approximately a5V-scale differential, not the full mains swing. This does not prove no coupling: retain normal component/field inspection and waveform measurements. Avoid adding a quiet DC_RETURN plane below the switching island merely to shield it."
+    },
+    {
+      "id": "PWR-03",
+      "severity": "major",
+      "objects": [
+        "R5/R6 FB force routing",
+        "T1.2",
+        "D1.1",
+        "U1.3 Kelvin branch"
+      ],
+      "baseline_evidence": {
+        "authored_R5_to_coil_star_mm": 3.057106781186549,
+        "authored_star_to_T1_FB_mm": 3.9322385482063535,
+        "authored_T1_FB_to_cathode_via_mm": 0.7280109889280524,
+        "authored_cathode_via_to_D1_mm": 7.1,
+        "sum_explicit_force_chain_mm": 14.817356318320956,
+        "via_count_chain": 2,
+        "R5_FB_to_D1_cathode_direct_2D_distance_mm": 9.479451460923258,
+        "explicit_Kelvin_trace_chain_mm": 14.633901454383366
+      },
+      "problem": "The sense-to-diode commutation branch takes an excursion through the front coil land/upper via instead of a compact direct diode/sense star. The branch should be evaluated independently from the required inductor power branch.",
+      "recommended_fix": "Route a deliberate current-rated R5/R6 force connection to D1 cathode, while feeding T1 as the other power branch and retaining a separate U1 FB Kelvin connection at the resistor pad. Rework both force and SOURCE paths when needed rather than overlaying a short across a different net.",
+      "geometric_warning": "A straight B.Cu R5FB(36.3,3.5)→D1K(43.2,10) line crosses the existing SOURCE-force branch near(40.5,7.45). A direct diagonal alone is not a valid fix.",
+      "observable_closure": [
+        "Report native saved force branch length/vias and loop proxy before/after with the same method",
+        "Kelvin tap stays at the physical sense-resistor node and is not moved onto the inductor or diode load path",
+        "DRC proves no SOURCE/FB short; inspect filled copper because a same-net pour can destroy intended Kelvin topology",
+        "Do not declare parasitic inductance/EMI measured from centreline length alone"
+      ]
+    },
+    {
+      "id": "PWR-04",
+      "severity": "major",
+      "objects": [
+        "C6 placement",
+        "T1/D1/C6 output freewheel loop"
+      ],
+      "baseline_evidence": {
+        "C6_LED_pad_mm": [
+          2.5,
+          4.25
+        ],
+        "C6_DC_pad_mm": [
+          2.5,
+          9.25
+        ],
+        "T1_LED_pad_mm": [
+          43,
+          11.7
+        ],
+        "D1_anode_pad_mm": [
+          43.2,
+          14
+        ],
+        "C6_LED_to_T1_LED_terminal_distance_mm": 41.1795155386753,
+        "C6_DC_to_D1_anode_terminal_distance_mm": 40.97624311720146
+      },
+      "problem": "The output capacitor leads are on the opposite edge from the power inductor/diode. Even though the capacitor body fits compactly, its terminal placement makes the specified output switching-current path span most of the board.",
+      "recommended_fix": "Reverse the horizontal C6 mounting so the body/vent project left while the terminals sit near the power stage. Root candidate anchor(31.5,6.75),180degree relative rotation, preserves the same catalogue capacitor and a nearly identical can footprint. Move R7/R4 as necessary for true copper/body clearance.",
+      "proposed_geometry_not_yet_native_verified": {
+        "C6_LED_pad_mm": [
+          31.5,
+          9.25
+        ],
+        "C6_DC_pad_mm": [
+          31.5,
+          4.25
+        ],
+        "can_rectangle_mm": [
+          5.5,
+          0.25,
+          27.5,
+          13.25
+        ],
+        "vent_rectangle_mm": [
+          0.5,
+          0.25,
+          5.5,
+          13.25
+        ],
+        "C6_LED_to_T1_LED_terminal_distance_mm": 11.758082326638132,
+        "C6_DC_to_D1_anode_terminal_distance_mm": 15.229986868017978,
+        "root_R7_M_pad_candidate_mm": [
+          35,
+          1.5
+        ],
+        "root_R7_LED_pad_candidate_mm": [
+          35,
+          6.3
+        ]
+      },
+      "C6_basis": "Existing selected Panasonic can:12.5mm nominal diameter+0.5max=13mm;20mm nominal length+2max=22mm. Actual can projection is22x13mm. The additional4mm formed-lead/body offset and5mm free vent reserve are separate engineering assembly allowances. Neither is manufacturer horizontal-mount qualification.",
+      "observable_closure": [
+        "Update native footprint orientation/model/keepout and current formed-lead/vent contracts; no historical right-facing can description is active",
+        "C6 polarity remains1LED_PLUS/2DC_RETURN with46pin intent unchanged",
+        "Root verifies R7/R4 copper clearance, both-side body courtyards and actual3D clearance",
+        "Re-run exact native refill/DRC/spacing checks; output terminal distances alone are not routed loop area",
+        "Retain physical wire-support/vent inspection because the front vent projects over the back J2 LED-wire region"
+      ],
+      "not_a_guarantee": "The proposed distances are endpoint calculations, not a routed-result claim, measured EMI reduction, physical vent acceptance or finished-lamp fit."
+    },
+    {
+      "id": "PWR-05",
+      "severity": "minor_layout_opportunity",
+      "objects": [
+        "R7/R4 to U1 M route"
+      ],
+      "baseline_evidence": {
+        "R7_M_mm": [
+          35,
+          9
+        ],
+        "U1_M_mm": [
+          46.725,
+          5.065
+        ],
+        "explicit_front_M_chain_mm": 17.435,
+        "U1_M_back_escape_mm": 1.775,
+        "sum_explicit_M_chain_mm": 19.21
+      },
+      "problem": "The long monitor connection passes through the switching island and is not the short local signal placement recommended for the controller.",
+      "recommended_fix": "When moving R7 for C6 reversal, take advantage of its new upper position to shorten the monitor network. Keep R4 local to the monitor star/SOURCE reference and keep the M route out of the high-current force branch.",
+      "observable_closure": [
+        "Compare saved M route length and proximity to switching current paths before/after",
+        "Retain true sample topology and resistor values; no EMC guarantee or generic ground-plane prescription"
+      ]
+    },
+    {
+      "id": "PWR-06",
+      "severity": "minor_layout_opportunity",
+      "objects": [
+        "C1/L1 input filter cluster"
+      ],
+      "problem": "C1 at(20,20) is substantially separated from L1 at(6.5,22.2). They are correctly away from the right-side switching island, but their local interconnect could be reduced.",
+      "recommended_fix": "Consider moving C1 left to approximately(15.5,20), subject to the maximum L1 body/courtyard and C1 land spacing. This is optional after the higher-priority switching/decoupling fixes; preserve input separation and do not place a new broad return plane across the filter.",
+      "observable_closure": [
+        "Document actual filter route shortening and body clearances if changed",
+        "No claim that a general TI common-mode-inductor rule directly qualifies this differential L1"
+      ]
+    }
+  ],
+  "thermal_disposition": {
+    "SOURCE_zone_reduction_is_an_EMI_design_tradeoff_not_thermal_validation": true,
+    "published_SO8_theta_JA_K_per_W": [
+      100,
+      80
+    ],
+    "published_theta_JA_conditions": "232/645mm2of2ozcopper respectively; not this1ozboard and not an arbitrary local SOURCE fanout",
+    "published_theta_JC_SOURCE_K_per_W": 30,
+    "old_U1_power_allocation_W_unmeasured": [
+      0.15,
+      0.35
+    ],
+    "retained_SOURCE_measurement_target_C": 100,
+    "retained_junction_design_target_C": 120,
+    "conditional_junction_estimate_if_SOURCE_close_to_package_is_actually100C_and_power_assumption_holds_C": [
+      104.5,
+      110.5
+    ],
+    "critical_limit": "This conditional SOURCE-referenced estimate does NOT predict whether the reduced-area board will keep SOURCE at100C in40Cambient. No junction temperature, ambient resistance or safe fault performance is established. If physical temperatures fail, revisit the design instead of restoring an unbounded switch-node heatsink without reviewing EMI."
+  },
+  "measurement_and_release_limits": [
+    "No energized or thermal/EMC/fault measurements performed",
+    "No stage or graph approval created; native CAD checks cannot replace it",
+    "No guarantee of meeting lamp safety/EMC standards or actual provider CAM acceptance",
+    "Root must check actual integrated native candidate, not assume these proposals are routed",
+    "All19references/46pins/11nets, component MPNs,50x32mm and2layers remain protected by the assigned task"
+  ],
+  "recommendation": "Proceed with explicitly provisional root implementation of PWR-01/02/03/04, native checks and independent frozen-packet reviews. Do not mark powered-product qualification or the full Toolkit release passed."
+}
