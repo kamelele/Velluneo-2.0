@@ -1,0 +1,218 @@
+{
+  "actor": "/root/sb01_fabrication_audit",
+  "scope": "Read-only source manufacturing-export implementation handoff, not independentreleaseapproval",
+  "source_PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "copy_only_refill": true,
+  "source_unchanged": true,
+  "native_ERC_count": 0,
+  "native_DRC_count": 0,
+  "unconnected_count": 0,
+  "schematic_parity_count": 0,
+  "independent_physical_graph_match": true,
+  "manufacturing_geometry_pass": true,
+  "nominal_outline_mm": [
+    51.2,
+    33.0
+  ],
+  "fresh_upload_zip": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\SC09_SB01_Gerber_Drill_CANDIDATE_NOT_RELEASED.zip",
+  "fresh_upload_zip_sha256": "d0a3491fe0e593379d9bb5e62d5338e6e782201a9abf09aca2b69aacc2370af2",
+  "zip_test_pass": true,
+  "upload_file_count": 8,
+  "Gerber_count": 7,
+  "PTH_hits": 26,
+  "NPTH_hits": 0,
+  "track_geometry_count": 143,
+  "pad_flash_count_both_faces": 60,
+  "minimum_copper_edge_mm": 1.05,
+  "min_trace_mm": 0.3,
+  "min_via_drill_pad_mm": [
+    0.3,
+    0.75
+  ],
+  "min_via_annular_mm": 0.225,
+  "min_PTH_annular_mm": 0.5,
+  "mask_web_mm": [
+    {
+      "layer": "gts",
+      "minimum_web_between_distinct_openings_mm": 2.05,
+      "region_pair": [
+        15,
+        13
+      ],
+      "green1oz_required_mm": 0.1,
+      "pass": true
+    },
+    {
+      "layer": "gbs",
+      "minimum_web_between_distinct_openings_mm": 0.5,
+      "region_pair": [
+        5,
+        3
+      ],
+      "green1oz_required_mm": 0.1,
+      "pass": true
+    }
+  ],
+  "silk_min_height_stroke_mm": [
+    1,
+    0.15
+  ],
+  "raw_native_job_excluded": true,
+  "source_ignored_DRC_checks": [
+    "track_not_centered_on_via",
+    "tuning_profile_track_geometries"
+  ],
+  "findings": [
+    {
+      "id": "FAB01",
+      "status": "CLOSED_WITH_VISIBLE_DISPOSITION",
+      "subject": "Stale/defaultoptionalGerberjobmetadata",
+      "resolution": "RawjobretainedH/raw-native.gbrjob,outsideuploadzip; explicitorderprofile51.2x33leadfreeHASLgoverns. Actualoutlinecenterlinespass. Nativejobstrokedbbox51.25x33.05 isnotnominalsize."
+    },
+    {
+      "id": "FAB02",
+      "status": "CLOSED_VERIFIED",
+      "subject": "Excellondrillcoordinatequantization",
+      "resolution": "TwoL1pads0.1umrounding, under0.5umper-axislimit; all26hitsmatchnative after1umdrillquantization. NoCADmodification."
+    },
+    {
+      "id": "FAB03",
+      "status": "OPEN_SYSTEM_CONCEPT_NOTE",
+      "subject": "EarlierlampconceptillustrativeLEDwiringnotactualJ2end",
+      "resolution": "ReportactualnativeportsJ1highXAC,J2lowXLED; mechanicalharnessneedsdefinition. NotbarePCBgeometrydefect."
+    },
+    {
+      "id": "FAB04",
+      "status": "OPEN_RELEASE_GATE",
+      "subject": "Strictfunctionalspacing23knownconditions andexactcurrentstageapproval",
+      "resolution": "Do notcallthispackageorderready orinheritoldROUTE05approval. Rootmustintegratefourreviews andpresentboundedbareprototypeacceptance separately."
+    }
+  ],
+  "limits": [
+    "No physicaltests, supplierCAMorcartreview, safety/productcertification ororder",
+    "NativeDRC doesnotwaivestrictfunctionalspacing oraccessiblepartbarriers",
+    "Partavailability,cost,electricalthermalqualificationownedbyroot/otherreviewers"
+  ],
+  "artifacts": [
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\DRC-refilled.json",
+      "sha256": "cb4a68ca09386ea7c00b35a93e35e4fbdfb6b6da97acdb6e9925c265c0caee8b",
+      "bytes": 690
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\drills\\drill-report.txt",
+      "sha256": "c57c490b0389d4ad0a256010a70a14d1966eb52c38c47a45adaf1cf93a197f0e",
+      "bytes": 773
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\drills\\SC09_compact-NPTH-drl_map.pdf",
+      "sha256": "8c2e4bff5f53c42882c231ee53f77d5d833f4005d3e2e9178f9ed54d8044b783",
+      "bytes": 6109
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\drills\\SC09_compact-NPTH.drl",
+      "sha256": "f3bd66bd927978498480729e74cf68b3630fb811bae2d5629f042e4734000c9b",
+      "bytes": 276
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\drills\\SC09_compact-PTH-drl_map.pdf",
+      "sha256": "b388af4bf6cfbcbaf7eda85cb73e373ddecff7ab3e1ea169707ff08970b4ae9d",
+      "bytes": 13834
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\drills\\SC09_compact-PTH.drl",
+      "sha256": "5486e60a067650122e9674f98059092b12a620957907d8fb68eecadc76d75395",
+      "bytes": 982
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\ERC.json",
+      "sha256": "04bb0c6de4924e2dcfa6ef17e789c1d6d0ce3617d272c886194c5730ee066967",
+      "bytes": 496
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\fabrication-manifest.json",
+      "sha256": "51fb0c147ac6c6ab812e4a992b1c05657d579da14e2603e9ee1cf17b52ba32fa",
+      "bytes": 1613
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerber-drill-audit.json",
+      "sha256": "b506cd9d9067032ae5353982ccf6db013aee81302dfd424a28ecd1eb242203a0",
+      "bytes": 9817
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\Gerber_copper_back.png",
+      "sha256": "7adbcb7c2102cbf1e8e744bfec9f90e5750ad6acd9d698269d3fab201dbbcdb7",
+      "bytes": 30334
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\Gerber_copper_front.png",
+      "sha256": "87912527336663088bfdd9887177f191d799e0ad9f9e77e2211c86221ce17d3a",
+      "bytes": 27091
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\Gerber_mask_silk_back.png",
+      "sha256": "a5cce202f6e0b1f94908ad9e06db6e6a8fbd58de515ec619f744f3c311b89c54",
+      "bytes": 33410
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\Gerber_mask_silk_front.png",
+      "sha256": "b4594ab5e5da7645ce834b997cb7cfd636711a0dc52e6a3fc69a5d34bae7022f",
+      "bytes": 29899
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerbers\\SC09_compact-B_Cu.gbl",
+      "sha256": "9bb86feb2932fccbac8b9b35f0fe51861d7c9048b736c3e1fc1e8ea41c4aead1",
+      "bytes": 12371
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerbers\\SC09_compact-B_Mask.gbs",
+      "sha256": "a83c0b6e91be02f8fe877324a3ab2e9f16df13598b264160a1201e376f38682f",
+      "bytes": 44370
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerbers\\SC09_compact-B_Silkscreen.gbo",
+      "sha256": "66c8673d61b83d5782d67e0b70c1a4e7eda1bff7bd689510d433cb5ceea8a829",
+      "bytes": 48242
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerbers\\SC09_compact-Edge_Cuts.gm1",
+      "sha256": "8f3861995112cc35107a8ae1e1f38ee79689c5ea9cc27f214fa7d43bc6aeb47b",
+      "bytes": 713
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerbers\\SC09_compact-F_Cu.gtl",
+      "sha256": "fff309fa2febd4087870448968a667e7337cdcc676525589194dca1cdff7a722",
+      "bytes": 4775
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerbers\\SC09_compact-F_Mask.gts",
+      "sha256": "401c9bd2721e61362b8bed1a74b94b73eed67b3e50f6b68577e1f9817a40469d",
+      "bytes": 19881
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\gerbers\\SC09_compact-F_Silkscreen.gto",
+      "sha256": "cb5e52df6f15c31884f18337c223a933664d6aa64a39e032112efef09c793f01",
+      "bytes": 29747
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\native-audit.json",
+      "sha256": "5d5a909df4d63e89d3cd83e28e4f7e34ca9630ba3f7cd5d730cec40e23347fc7",
+      "bytes": 21354
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\ORDER_PROFILE_NOT_RELEASED.json",
+      "sha256": "4ad48969111e5a4858a65c93780af10e97b923198c0e05e95d9b62dcb27fa4c3",
+      "bytes": 941
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\README_NOT_RELEASED.md",
+      "sha256": "ac2da3ee712fe125e8289a205b1f0bd2982ed614d8f1353c8eb014f0200b166b",
+      "bytes": 3335
+    },
+    {
+      "path": "outputs\\SC09_weryfikacja_i_kompendium\\fabrication-candidate\\SC09_SB01_Gerber_Drill_CANDIDATE_NOT_RELEASED.zip",
+      "sha256": "d0a3491fe0e593379d9bb5e62d5338e6e782201a9abf09aca2b69aacc2370af2",
+      "bytes": 36135
+    }
+  ]
+}

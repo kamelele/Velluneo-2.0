@@ -1,0 +1,132 @@
+{
+  "reviewer": "/root/sb01_reality_audit",
+  "board": "work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_pcb",
+  "board_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "read_only_sha256_unchanged": true,
+  "pin_intent_expected_from_retained_functional_contract": {
+    "T1.1": "/LED_PLUS",
+    "T1.2": "/FB_INDUCTOR",
+    "C1.1": "/BUS_RECT",
+    "C1.2": "/DC_RETURN",
+    "RV1.1": "/AC_FUSED",
+    "RV1.2": "/AC_N",
+    "RF1.1": "/AC_L",
+    "RF1.2": "/AC_FUSED",
+    "R6.1": "/SW_SOURCE",
+    "R6.2": "/FB_INDUCTOR",
+    "D1.1": "/FB_INDUCTOR",
+    "D1.2": "/DC_RETURN"
+  },
+  "actual_native_pin_nets": {
+    "T1.1": "/LED_PLUS",
+    "T1.2": "/FB_INDUCTOR",
+    "C1.1": "/BUS_RECT",
+    "C1.2": "/DC_RETURN",
+    "RV1.1": "/AC_FUSED",
+    "RV1.2": "/AC_N",
+    "RF1.1": "/AC_L",
+    "RF1.2": "/AC_FUSED",
+    "R6.1": "/SW_SOURCE",
+    "R6.2": "/FB_INDUCTOR",
+    "D1.1": "/FB_INDUCTOR",
+    "D1.2": "/DC_RETURN"
+  },
+  "pin_intent_matches": true,
+  "T1_projected_max_body_rectangle_mm": [
+    114.25,
+    115.75,
+    126.75,
+    128.25
+  ],
+  "BP_M_under_body_hits": [],
+  "U1_FB_to_R5_kelvin_path_found": true,
+  "U1_FB_to_R5_path_edges": [
+    {
+      "kind": "pad",
+      "ref": "U1",
+      "number": "3"
+    },
+    {
+      "uuid": "8e43e883-c5a1-492c-8f5a-7df850a83250",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "980e4dca-995f-4452-bb3a-93a0cca643e5",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "1fb4428d-51f4-4f94-bb55-786253a9c06d",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "97657426-148e-4b26-8510-1a7767037827",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "f303f056-dadc-4bfb-83a7-0282c540b648",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "cb79fa3e-48ad-4c2d-bf70-7d4c5d62f1dc",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "7821ee36-0167-4bfc-9ca7-d9cc4a05045c",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "a5a54216-c342-4e22-b988-ba9ca9a946ed",
+      "kind": "via",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "80724aa8-e42d-467a-b228-22d31dead367",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "b4e2e3a6-2876-408a-842a-d2407c2276fe",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "c6e9f0a1-caad-40e4-ac1a-81f3f760ff6d",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "13c27e0e-510b-496a-90a4-6f5ae4b23e92",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "c9c99396-baba-4e5d-a76e-d5d22eb32db8",
+      "kind": "via",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "8e06769a-0ebc-4b1a-adbb-c201de260988",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "uuid": "9a9ee121-ac7a-4709-a502-d0fecab17f06",
+      "kind": "track",
+      "net": "/FB_INDUCTOR"
+    },
+    {
+      "kind": "pad",
+      "ref": "R5",
+      "number": "2"
+    }
+  ],
+  "U1_FB_sense_branch_under_body_hits": [],
+  "scope_note": "Native shortest connected path from U1.3 sense pin to R5.2 force junction is inspected independently; force-carrying same-net routes ending at T1.2 are not misclassified as low-current sensitive traces. This is geometry/topology evidence, not EMC, impedance or measured feedback performance."
+}

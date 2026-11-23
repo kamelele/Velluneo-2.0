@@ -1,0 +1,75 @@
+{
+  "review_id": "SC09-SB01-AUDIT01-CHANGE",
+  "role": "Change Reviewer",
+  "actual_actor": "/root/sb01_change_review",
+  "date": "2026-11-23",
+  "input_manifest": "work/sc09-order-audit/review-inputs.json",
+  "manifest_sha256": "5cb5713b8c8022d10d00ff0d733fccac21ca4e5dec82153a35e4da2f4df7c34c",
+  "source_PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "scope": "Independent read-only review of verification/export/documentation change against prior frozen SB01; no design changes authorized in this audit.",
+  "requirements_reviewed": [
+    "Retain actual SC09-SB01 electrical CAD, libraries and rules",
+    "Generate current source-bound Gerber/drill candidate without mixing old files",
+    "Disclose process/strict-spacing/physical gates and avoid fabricated approval",
+    "Provide consistent compendium and exact-source traceability"
+  ],
+  "checks": [
+    {
+      "check": "All frozen inputs",
+      "result": "PASS",
+      "evidence": "202 file hashes match; all JSON inputs parse"
+    },
+    {
+      "check": "Prior SB01 source invariance",
+      "result": "PASS",
+      "evidence": "All166 previous frozen manifest entries unchanged, including28 critical CAD/library/rule files; hardware approvals remain empty."
+    },
+    {
+      "check": "Native physical graph",
+      "result": "PASS",
+      "evidence": "Independent pcbnew10.0.6 read matches 46 physical pins and11 independent net groups;0 differences."
+    },
+    {
+      "check": "Copper export",
+      "result": "PASS",
+      "evidence": "Separate independent Gerber parser compares36 F.Cu +107 B.Cu straight segments against actual saved board endpoints and widths;0 missing/extra."
+    },
+    {
+      "check": "Drills",
+      "result": "PASS",
+      "evidence": "Independent native pad/via inventory26holes matches Excellon coordinates and tool diameters on declared1um decimal grid;0missing/extra."
+    },
+    {
+      "check": "Candidate upload ZIP",
+      "result": "PASS",
+      "evidence": "ZIP integrity passes;8entries(7Gerber+PTHdrill) byte-identical to frozen exports. Optional contradictory rawgbrjob excluded. ZIP hash differs historical archive."
+    },
+    {
+      "check": "Outline",
+      "result": "PASS",
+      "evidence": "Independent parsed4closed rectangle segments centerlines99.4..150.6 /99.4..132.4mm; nominal51.2x33mm, not strokedbbox."
+    },
+    {
+      "check": "Document disposition",
+      "result": "PASS_FOR_SCOPE",
+      "evidence": "Compendium/data/README expressly NOT_RELEASED_FOR_ORDER; no physical results represented as measurements. Historical archives and lamp cable illustration limitation disclosed."
+    }
+  ],
+  "findings": [],
+  "retained_open_gates": [
+    "Full strict functional-spacing FAIL23 remains; no source-specific exception approval inferred.",
+    "Full Toolkit release FAIL and missing/current stage evidence/approvals remain.",
+    "Physical startup,current,ripple,thermal,surge,fault and finishedlamp insulation/EMC/optical qualification unperformed.",
+    "No current exact-source fabrication approval or order inferred from this evidence review."
+  ],
+  "independent_evidence": {
+    "path": "work/sc09-order-audit/reviews/change.independent-checks.json",
+    "sha256": "016d67c6dbf6b7779fd5de82e2bb3d204bcdcb8b42f70e78035a41fac56e5b83"
+  },
+  "recommendation": "ready_for_human_review",
+  "recommendation_scope": "Evidence/compendium candidate is internally consistent and introduces no detected change-specific regression. This recommendation is NOT fabrication/order/energization approval.",
+  "full_release_passed": false,
+  "fabrication_approved": false,
+  "order_authorized_or_placed_by_review": false,
+  "source_modified": false
+}

@@ -1,0 +1,677 @@
+{
+  "title": "SC09-SB01 — kompendium i weryfikacja PCB",
+  "date": "2026-11-23",
+  "PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "status": "NOT_RELEASED_FOR_ORDER",
+  "manufacturing_scope": "BarePCB_manualassembly_laboratoryprototype",
+  "sections": [
+    {
+      "title": "1. Werdykt i zakres weryfikacji",
+      "paragraphs": [
+        "Aktualna wersja to SC09-SB01. Możliwość wykonania geometrii przez fabrykę, zgoda na wykonanie konkretnego prototypu oraz potwierdzenie działania pod napięciem są trzema różnymi ocenami. Ten dokument ich nie utożsamia.",
+        "Świeży eksport Gerberów i wierceń odpowiada aktualnej płytce. ERC, DRC, brakujące połączenia i zgodność schematu z PCB: 0 zgłoszeń. Pełna kontrola przyjętych odstępów funkcjonalnych nadal ma FAIL: 23 zgłoszenia. Pełne sprawdzenie release w PCB Agent Toolkit również ma FAIL. Dlatego pakiet oznaczono jako kandydat, a nie zatwierdzone pliki do zamówienia.",
+        "Dotychczasowy folder release-candidate oraz stare archiwa „do zamówienia” dotyczą wcześniejszej geometrii. Nie wolno używać ich z BOM SC09-SB01. Nowe pliki są oddzielone w fabrication-candidate. Nie złożono zamówienia ani nie wykonano prób pod napięciem.",
+        "Brak pomiarów nie wyklucza samego wykonania laboratoryjnej PCB. Przed takim wykonaniem pozostaje jednak ocena konkretnych ograniczeń odstępów oraz decyzja dotycząca dokładnej wersji prototypu. Wyników badań gotowej żarówki nie zastępuje ani DRC, ani akceptacja plików przez JLCPCB."
+      ],
+      "headers": [
+        "Obszar",
+        "Wynik",
+        "Znaczenie"
+      ],
+      "rows": [
+        [
+          "Źródło PCB",
+          "SC09-SB01, 51,2 × 33 mm",
+          "Bez zmian miedzi i rozmieszczenia podczas tego audytu."
+        ],
+        [
+          "ERC / DRC / parity / niepołączone",
+          "0 / 0 / 0 / 0",
+          "Świeże sprawdzenia natywnego KiCad 10.0.6."
+        ],
+        [
+          "Niezależna mapa połączeń",
+          "46 pinów / 11 sieci; zgodna",
+          "19 oznaczeń, w tym 2 interfejsy przewodowe."
+        ],
+        [
+          "Gerbery / wiercenia",
+          "7 warstw; 26 otworów PTH",
+          "143 odcinki ścieżek i 60 ekspozycji padów zgodnych z PCB."
+        ],
+        [
+          "Odstępy funkcjonalne",
+          "FAIL — 23 zgłoszenia",
+          "Te same liczbowe grupy obudów i krótkich dojść co wcześniej; nie oznacza zwolnienia z wymagań."
+        ],
+        [
+          "Pełny release Toolkit",
+          "FAIL",
+          "Brak aktualnych dowodów etapów, zatwierdzeń i części kwalifikacji; szczegóły w raporcie JSON."
+        ],
+        [
+          "Pomiary / zgodność produktu",
+          "Nie wykonano",
+          "Brak potwierdzenia prądu, temperatur, udaru, EMC, trwałości i bezpieczeństwa całej lampy."
+        ]
+      ]
+    },
+    {
+      "title": "2. Co to jest za zasilacz",
+      "paragraphs": [
+        "Nieizolowany, impulsowy sterownik stałoprądowy LED typu buck, oparty na Power Integrations LYT1603D. To nie jest zasilacz stabilizujący stale 60 V. Napięcie ustala łańcuch LED w swoim punkcie pracy; celem regulacji jest prąd.",
+        "Tor energii: wejście 230 V → rezystor bezpiecznikowy i MOV → mostek prostowniczy → filtr wejściowy → sterownik, dioda i dławik magazynujący energię → kondensator C6 oraz szereg LED. T1 jest gotowym dławikiem, mimo oznaczenia T; nie jest transformatorem izolującym.",
+        "Nie ma ściemniania, akumulatora 18650 ani trybu awaryjnego. SC09 nie zawiera PhotoMOS ani aktywnego układu do bezpiecznego podłączania LED przy naładowanym wyjściu. Wymiana modułu tylko po odłączeniu i sprawdzeniu rozładowania."
+      ],
+      "headers": null,
+      "rows": null
+    },
+    {
+      "title": "3. Napięcia, prądy i moc",
+      "paragraphs": [
+        "Wartości wyjściowe są nominalnymi obliczeniami projektu. Nie są gwarantowanymi parametrami ani wynikami pomiarów. Zakres 52–68 V wymaga potwierdzenia regulacji, czasu włączenia i temperatur. Nie przenosimy szerokiego zakresu sieci referencyjnego RDR-464 na SC09.",
+        "Prąd wejściowy RMS obliczono z I = Pin / (U × PF), przy założonym PF = 0,9. To nie jest zmierzony współczynnik mocy. Prąd szczytowy wejścia przy rozruchu jest inną wielkością."
+      ],
+      "headers": [
+        "Parametr",
+        "Wartość",
+        "Status / warunek"
+      ],
+      "rows": [
+        [
+          "Wejście nominalne",
+          "230 V AC RMS, 50 Hz",
+          "Polska / UE."
+        ],
+        [
+          "Zakres projektowy wejścia",
+          "207–253 V AC RMS",
+          "±10% względem 230 V; sprawdzenie na prototypie."
+        ],
+        [
+          "Szczyt sinusoidy sieci",
+          "około 293–358 V",
+          "√2 × napięcie RMS; przed uwzględnieniem spadków mostka i przepięć."
+        ],
+        [
+          "Wyjście nominalne",
+          "około 60 V DC",
+          "Dla dobranego szeregu LED; nie stabilizowane CV."
+        ],
+        [
+          "Planowane okno LED",
+          "52–68 V",
+          "Warunkowe okno obliczeń, bez gwarancji regulacji."
+        ],
+        [
+          "Całkowity prąd regulacji",
+          "około 135,2 mA",
+          "Obliczenie; obejmuje rezystory rozładowania."
+        ],
+        [
+          "Prąd zewnętrznych LED przy 60 V",
+          "około 133,4 mA",
+          "Średni prąd docelowy, nie prąd szczytowy."
+        ],
+        [
+          "R8 i R9 przy 60 V",
+          "łącznie około 1,765 mA",
+          "Dwa rezystory 68 kΩ równolegle."
+        ],
+        [
+          "Moc LED przy 60 V",
+          "około 8,01 W",
+          "60 V × 133,4 mA; nie stała moc w całym oknie napięć."
+        ],
+        [
+          "Przy 52 V / 68 V",
+          "około 6,95 W / 9,06 W LED",
+          "Przy zachowaniu nominalnego prądu całkowitego; zmienia obciążenie cieplne."
+        ],
+        [
+          "Straty w bazie przy nominalnych 60 V",
+          "plan 1,1–2,1 W",
+          "Obejmują rezystory rozładowania; straty rdzenia i przełączania niezmierzone."
+        ],
+        [
+          "Pobór mocy przy nominalnych 60 V",
+          "szacunek 9,11–10,11 W",
+          "Moc LED + plan strat; nie limit maksymalny urządzenia."
+        ],
+        [
+          "Sprawność elektryczna do LED",
+          "szacunek 79,2–87,9%",
+          "PLED / Pin; nie skuteczność świetlna i nie pomiar."
+        ],
+        [
+          "Prąd wejściowy przy 230 V",
+          "szacunek 44,0–48,8 mA RMS",
+          "Tylko przy nominalnych 60 V i założonym PF 0,9."
+        ],
+        [
+          "Ograniczenie robocze w planie prób",
+          "60 mA wejściowo — próg przeglądu",
+          "Nie znamionowy prąd maksymalny ani udar."
+        ],
+        [
+          "Ściemnianie / hot-plug / SELV",
+          "nie / nie / nie",
+          "Wyjście ma odniesienie do sieci."
+        ]
+      ]
+    },
+    {
+      "title": "4. Moduł LED i światło",
+      "paragraphs": [
+        "Docelowo własny panel: 20 diod Lumileds L128-4080CA3500001 połączonych szeregowo (20S), 4000 K, CRI co najmniej 80. Nie jest to wskazanie gotowego modułu sklepowego. Panel z koncepcji obudowy Ø72 mm nie ma jeszcze ukończonej mapy, routingu ani kwalifikacji cieplnej.",
+        "800 lm jest celem światła gotowej lampy, a nie potwierdzonym wynikiem. Strumień zależy od binu LED, prądu, temperatury i strat klosza. Nie należy utożsamiać tego celu z sumą typowych lumenów katalogowych przy 25°C.",
+        "Dane katalogowe diody CA przy 120 mA i Tj = 25°C: Vf min./typ./max. 2,9/3,0/3,2 V; typowy opór cieplny złącze–pad lutowniczy 21 K/W. Katalogowe granice absolutne tej wersji: Tj 125°C, obudowa 105°C, prąd DC 240 mA. Nie są to zalecane temperatury robocze panelu ani dopuszczenie impulsów z kondensatora C6."
+      ],
+      "headers": null,
+      "rows": null
+    },
+    {
+      "title": "5. Interfejsy i poprawne podłączenia",
+      "paragraphs": [
+        "Pozycje podano w absolutnych współrzędnych zapisanej PCB KiCad. Widok od dołu jest lustrzany względem widoku od góry; nadruki L/N oraz +/− należy porównać ze schematem, a nie z samą orientacją obrazka.",
+        "Wykryta korekta dokumentacyjna: w poprzednim podglądzie całej żarówki krótkie przewody LED przy panelu były ilustracją, a nie prawidłową trasą od faktycznego J2. Na obecnej PCB wejście AC jest przy wysokim X, a wyjście LED przy niskim X. Koncepcja obudowy wymaga obrócenia płytki o 180° wokół osi promieniowej albo zaprojektowania dłuższej trasy przewodów i ponownego sprawdzenia dopasowania. Dotychczasowy rysunek obudowy nie jest projektem okablowania."
+      ],
+      "headers": [
+        "Interfejs / pin",
+        "Funkcja",
+        "Pozycja X / Y [mm]"
+      ],
+      "rows": [
+        [
+          "J1.1",
+          "AC_L — faza",
+          "148,4 / 130,0"
+        ],
+        [
+          "J1.2",
+          "AC_N — neutralny",
+          "148,4 / 124,5"
+        ],
+        [
+          "J2.1",
+          "LED_PLUS — plus szeregu LED",
+          "101,6 / 124,5"
+        ],
+        [
+          "J2.2",
+          "DC_RETURN — minus szeregu LED",
+          "101,6 / 130,0"
+        ]
+      ]
+    },
+    {
+      "title": "6. Zabezpieczenia i granice ich działania",
+      "paragraphs": [
+        "RF1 jest rezystorem bezpiecznikowym 47 Ω / 2 W. Ogranicza udar i jest elementem o określonym zachowaniu przy przeciążeniu; to nie dowód skoordynowanego odłączenia każdej usterki w sieci 253 V. MOV 275 V AC ogranicza przepięcia według swojej charakterystyki; bez pomiarów i oceny energii nie można deklarować odporności całego zasilacza na określony test kV.",
+        "Sterownik ma funkcje ograniczania prądu, OVP i ochrony cieplnej według karty katalogowej. Nie są to niezależne kanały bezpieczeństwa. Ochrona cieplna U1 nie mierzy bezpośrednio temperatur panelu LED, dławika ani C6. Zanik regulacji, uszkodzenie tranzystora lub rezystorów wymaga osobnej oceny usterkowej."
+      ],
+      "headers": [
+        "Wielkość",
+        "Obecne dane",
+        "Ograniczenie"
+      ],
+      "rows": [
+        [
+          "OVP statyczne nominalne",
+          "około 77,88 V",
+          "Obliczenie progu; nie napięcie znamionowe LED."
+        ],
+        [
+          "OVP z rezerwami dryftu",
+          "około 69,4–89,5 V",
+          "Warunkowy model progów i rezystorów, nie gwarancja dynamiczna."
+        ],
+        [
+          "Dynamiczny cel C6",
+          "poniżej 90 V",
+          "Nie potwierdzono oscyloskopem; C6 ma znamionowo 100 V."
+        ],
+        [
+          "Model rozruchu: RF1 = 47 Ω",
+          "C1 około 706,3 V; C4 około 588,7 V",
+          "Liniowy model narożników tolerancji; nie ogranicza nieliniowego rozruchu, nasycenia i przepięć."
+        ],
+        [
+          "L1 w tym modelu",
+          "różnica napięć około 324,45 V; szczyt prądu około 2,126 A",
+          "Nie potwierdza prądu i temperatur podczas rzeczywistego udaru."
+        ],
+        [
+          "C1 — szybkość napięcia",
+          "około 179,47 V/µs na początku idealnego skoku",
+          "Katalogowo 3500 V/µs; bez zamknięcia pełnego przebiegu."
+        ],
+        [
+          "T1 — prąd roboczy obliczony",
+          "szczyt około 0,487 A; rozszerzony 0,527 A; RMS do 0,304 A",
+          "Przyjęte modele tolerancji/dryftu i przebiegu trójkątnego."
+        ],
+        [
+          "T1 — dane katalogowe",
+          "1,5 mH ±20%; 400 V; IR 0,52 A; Isat 0,8 A typ.",
+          "IR dla wzrostu 40 K; Isat dla spadku L o 10%, nie bezpieczny limit każdej awarii."
+        ]
+      ]
+    },
+    {
+      "title": "7. Kondensator wyjściowy i rozładowanie",
+      "paragraphs": [
+        "C6: 150 µF / 100 V, z tolerancją +20% do 180 µF. Dwa rezystory R8/R9 po 68 kΩ równolegle dają nominalnie 34 kΩ. Zmniejszają napięcie po odłączeniu, lecz nie tworzą izolacji ani bezpiecznego styku.",
+        "Obliczony czas do 5 V dotyczy napięcia pomiędzy wyjściami LED, nie napięcia względem ziemi. Obliczenie nie upoważnia do dotykania po odczekaniu podanej liczby sekund. Podłączenie diod do naładowanego C6 może wywołać impuls niezależny od średniego prądu regulacji."
+      ],
+      "headers": [
+        "Parametr",
+        "Wartość",
+        "Warunek"
+      ],
+      "rows": [
+        [
+          "Energia nominalna przy 60 V",
+          "0,270 J",
+          "150 µF; E = ½CV²."
+        ],
+        [
+          "Energia przy 90 V i Cmax",
+          "0,729 J",
+          "180 µF; istotna dla uszkodzeń i dołączania LED."
+        ],
+        [
+          "90 V → 5 V, oba rezystory",
+          "około 18,2 s",
+          "Cmax i przyjęta rezerwa rezystancji +3%."
+        ],
+        [
+          "90 V → 5 V, jeden rezystor przerwany",
+          "około 36,45 s",
+          "Cmax, jeden 68 kΩ i taka sama rezerwa."
+        ],
+        [
+          "Moc R8 + R9 przy 60 V",
+          "łącznie około 0,106 W",
+          "Przy nominalnej rezystancji."
+        ],
+        [
+          "Moc każdego przy podwyższonym napięciu",
+          "screen do około 0,123 W / szt.",
+          "Sprawdzić derating w rzeczywistej temperaturze i czas działania OVP."
+        ]
+      ]
+    },
+    {
+      "title": "8. Temperatury: szacunki a kryteria",
+      "paragraphs": [
+        "Żadnej temperatury SC09-SB01 nie zmierzono. Zakres 0–40°C to założenie otoczenia laboratoryjnego; nie oznacza, że zamknięta baza żarówki zachowa takie warunki przy płytce.",
+        "Dla T1 obliczono straty miedzi około 0,174 W przy 20°C oraz 0,267 W w rozszerzonym wariancie przy 100°C. Straty rdzenia 0,1–0,4 W i opór do otoczenia 50–100 K/W są założeniami. Stąd warunkowe 58–107°C przy lokalnym otoczeniu 40°C. Górny wariant przekracza zachowany cel 90°C, więc nie ma zaliczenia cieplnego.",
+        "Zwiększenie temperatury otoczenia wewnątrz bazy podnosi temperatury elementów. Nie mamy wiarygodnego modelu temperatur R7, U1, D1 ani całej PCB w obudowie. Temperatury w tabeli poniżej są celami lub progami planu prób, a nie przewidywanymi odczytami."
+      ],
+      "headers": [
+        "Element / punkt",
+        "Cel / próg projektu",
+        "Co wiadomo"
+      ],
+      "rows": [
+        [
+          "T1 — korpus",
+          "cel do 90°C",
+          "Warunkowy scenariusz 58–107°C przy lokalnych 40°C; katalogowe 125°C nie jest celem pracy."
+        ],
+        [
+          "C6 — puszka",
+          "cel do 75°C; przerwanie charakterystyki przy 85°C",
+          "Katalogowe 105°C nie dowodzi trwałości zamkniętej lampy."
+        ],
+        [
+          "C1 — korpus",
+          "próg roboczy 80°C",
+          "Indywidualny próg ma pierwszeństwo przed grupowym celem 85°C."
+        ],
+        [
+          "C4 / C5 — korpus",
+          "cel do 85°C",
+          "Sprawdzić tętnienia, pojemność efektywną i derating."
+        ],
+        [
+          "U1 — punkt przy SOURCE / złącze",
+          "punkt do 100°C; cel Tj do 120°C",
+          "Tj jest temperaturą wewnętrzną; nie utożsamiać z temperaturą obudowy."
+        ],
+        [
+          "D1 — obudowa / złącze",
+          "obudowa do 100°C; cel Tj do 125°C",
+          "Oszacowanie Tj wymaga właściwego punktu pomiaru i strat."
+        ],
+        [
+          "RF1 / R5 / R6 / R8 / R9",
+          "cele korpusów do 100°C",
+          "Trzeba uwzględnić rzeczywisty derating, dryft oraz awarie."
+        ],
+        [
+          "L1 — korpus",
+          "cel do 90°C",
+          "Brak pomiarów rozruchu i strat rdzenia."
+        ],
+        [
+          "R7 — korpus / lokalne otoczenie",
+          "korpus do 125°C; otoczenie do 100°C — propozycja",
+          "Nie wyznaczono bezwzględnej temperatury; nie przenosić oporu cieplnego innego rezystora."
+        ],
+        [
+          "LED / panel aluminiowy",
+          "cel roboczy panelu nie został jeszcze ustalony",
+          "Granice LED CA: Tj 125°C i obudowa 105°C są absolutne, nie zalecane."
+        ]
+      ]
+    },
+    {
+      "title": "9. Czy wystarczy aluminiowy panel Ø72 mm?",
+      "paragraphs": [
+        "Panel ma około 8 W elektrycznie w nominalnym punkcie. Część energii opuszcza LED jako światło; ciepło w panelu jest mniejsze, ale nie zostało jeszcze wyznaczone. Rozprowadzanie ciepła przez aluminium nie jest tym samym co oddawanie go przez powierzchnię do otoczenia.",
+        "Sama średnica i grubość nie wystarczają do potwierdzenia temperatur. Potrzebne są właściwości warstwy dielektrycznej MCPCB, rozmieszczenie LED, powierzchnie odsłonięte, ułożenie lampy, przepływ powietrza i nagrzewanie od zasilacza. Sam krążek z wentylacją może być wariantem prototypowym, ale nie ma jeszcze kwalifikacji.",
+        "Przykład objaśniający, nie wynik SC09: przy 5 W ciepła i lokalnym powietrzu 40°C utrzymanie panelu do przyjętych przykładowo 80°C wymagałoby panel–otoczenie nie więcej niż 8 K/W. Ani 5 W, ani 80°C nie stanowią ustalonego parametru naszego panelu.",
+        "Koncepcja lampy Ø78 × 143,6 mm potwierdza tylko idealną obwiednię geometryczną: około 2,04 mm do pochylonej ściany i 3,8 mm osiowo do panelu. Nie są to zatwierdzone odstępy izolacyjne. Wyprowadzenia, podparcie C6, jego wolna strefa wentyla 5 mm, przewody i mocowania wymagają dopracowania."
+      ],
+      "headers": null,
+      "rows": null
+    },
+    {
+      "title": "10. Lista elementów aktualnej SC09-SB01",
+      "paragraphs": [
+        "Drobna rozbieżność metadanych: stare pole Package w BOM opisuje T1 jako 1280; karta dokładnego MPN 7687709152 podaje typ 1210 i korpus maksymalnie 12,5 × 12,5 × 10,5 mm. Geometria padów i dobrany MPN pozostają zgodne; opis 1280 nie jest podstawą zamawiania części.",
+        "19 oznaczeń obejmuje 17 obsadzanych pozycji elektronicznych oraz J1/J2 jako pola do lutowania przewodów. Jest 16 różnych MPN elektronicznych, ponieważ R8 i R9 są jednakowe. Montaż ręczny; brak zatwierdzonego montażu JLCPCB PCBA. Nie zastępować rezystora bezpiecznikowego zwykłym rezystorem ani części wysokonapięciowych elementami dobranymi wyłącznie po wartości."
+      ],
+      "headers": [
+        "Ref.",
+        "Wartość / funkcja",
+        "Dokładny MPN"
+      ],
+      "rows": [
+        [
+          "J1",
+          "230V AC input",
+          "Direct insulated-wire solder pads"
+        ],
+        [
+          "RF1",
+          "47ohm 5% 2W fusible",
+          "FW20A47R0JA"
+        ],
+        [
+          "RV1",
+          "275VAC MOV 21J",
+          "B72207S0271K101"
+        ],
+        [
+          "BR1",
+          "1000V 0.8A bridge",
+          "MB10S-13"
+        ],
+        [
+          "C1",
+          "47nF 5% 1000V pulse film",
+          "R76QI24705050J"
+        ],
+        [
+          "L1",
+          "3.3mH 10% 400V",
+          "768772332"
+        ],
+        [
+          "C4",
+          "150nF 630V 10%",
+          "B32671P6154K000"
+        ],
+        [
+          "U1",
+          "LYTSwitch-1",
+          "LYT1603D"
+        ],
+        [
+          "C5",
+          "4.7uF 25V X7R",
+          "CL21B475KAFNNNE"
+        ],
+        [
+          "R4",
+          "12.4kohm 1%",
+          "ERJ-6ENF1242V"
+        ],
+        [
+          "R5",
+          "0.68ohm 1% 0.5W",
+          "RL1206FR-7W0R68L"
+        ],
+        [
+          "R6",
+          "3.65ohm 1% 0.25W",
+          "1206S4F365KT5E"
+        ],
+        [
+          "D1",
+          "1000V 1A ultrafast",
+          "US1M-13-F"
+        ],
+        [
+          "T1",
+          "1.5mH 20% 400V",
+          "7687709152"
+        ],
+        [
+          "C6",
+          "150uF 100V 20%",
+          "EEUFS2A151"
+        ],
+        [
+          "R7",
+          "390kohm 1% 1.6kV",
+          "HVR2500003903FR500"
+        ],
+        [
+          "R8",
+          "68kohm 1% 0.25W",
+          "RC1206FR-0768KL"
+        ],
+        [
+          "R9",
+          "68kohm 1% 0.25W",
+          "RC1206FR-0768KL"
+        ],
+        [
+          "J2",
+          "LED module output",
+          "Direct insulated-wire solder pads"
+        ]
+      ]
+    },
+    {
+      "title": "11. PCB i ustawienia wykonania",
+      "paragraphs": [
+        "To płytka zasilacza FR-4, a nie aluminiowy panel LED. Kontur nominalny wyznaczają linie środkowe Edge.Cuts: 51,2 × 33 mm. Obwiednia uwzględniająca szerokość kreski 0,05 mm daje w metadanych 51,25 × 33,05 mm; nie jest to drugi wymiar zamawianej płytki.",
+        "Surowy plik .gbrjob wygenerował Finish=None. Został zachowany wyłącznie do audytu, poza archiwum przesyłanym do fabryki. Ustawienia zamówienia muszą odpowiadać profilowi poniżej; nie należy traktować tej surowej metadanej jako wybranego wykończenia."
+      ],
+      "headers": [
+        "Ustawienie / geometria",
+        "Wartość",
+        "Uwagi"
+      ],
+      "rows": [
+        [
+          "Materiał / warstwy",
+          "FR-4 / 2",
+          "Warstwy miedzi F.Cu i B.Cu."
+        ],
+        [
+          "Grubość / miedź",
+          "1,6 mm / 1 oz",
+          "Tolerancja grubości producenta jest osobna od nominalnej wartości."
+        ],
+        [
+          "Wykończenie / kolory",
+          "HASL bez ołowiu / zielona maska / biały nadruk",
+          "Wybrać zgodnie z order-profile; nie kopiować Finish=None."
+        ],
+        [
+          "Montaż",
+          "Ręczny po dostawie",
+          "Bez PCBA JLCPCB, pick-and-place i szablon nie są potrzebne do zamówienia samej PCB."
+        ],
+        [
+          "Kontur",
+          "51,2 × 33 mm",
+          "Jeden zamknięty prostokąt, bez slotów."
+        ],
+        [
+          "Wiercenia",
+          "26 PTH; 0 NPTH",
+          "14 otworów wyprowadzeń + 12 przelotek. Pusty NPTH jest zgodny z projektem."
+        ],
+        [
+          "Średnice wierteł",
+          "0,3 / 0,9 / 1,0 / 1,1 / 1,2 mm",
+          "Zgodne z zapisanymi padami i przelotkami."
+        ],
+        [
+          "Pierścienie miedzi",
+          "min. via 0,225 mm; PTH 0,5 mm",
+          "Weryfikacja geometrii; osadzenie rzeczywistych części nadal wymaga kontroli."
+        ],
+        [
+          "Miedź do krawędzi",
+          "około 1,05 mm",
+          "Zalicza roboczy cel projektu 1 mm."
+        ],
+        [
+          "Obwiednia z elementami",
+          "około 51,2 × 33 × 19,5 mm",
+          "Wysokość planowana, zależna od ręcznego formowania i lutowania."
+        ]
+      ]
+    },
+    {
+      "title": "12. Odstępy i pozostałe blokady",
+      "paragraphs": [
+        "Kontrola funkcjonalna bada 55 par sieci w płaszczyźnie zapisanej miedzi. Przyjęto zasadniczo 2 mm, 1 mm między LED_PLUS i DC_RETURN oraz 0,25 mm wewnątrz lokalnej grupy sterownika. Nie jest to pełna koordynacja izolacji według norm produktu. Globalna reguła produkcyjna 0,3 mm i czysty DRC nie zastępują tych celów.",
+        "Świeże sprawdzenie ponownie zwraca 23 wyniki. Nie pojawiła się nowa długa trasa poniżej celu; nadal występują warunki przy wyprowadzeniach obudów i ich krótkich dojściach. Brak globalnego zaliczenia pozostaje jawny. Pełna lista obiektów i UUID jest w strict-spacing-fresh.json; poniżej zestawienie grup.",
+        "Pełny release Toolkit zgłasza także nieaktualne lub brakujące dowody wymagań, powiązania zatwierdzeń mapy i kontraktów przestrzennych oraz brak pomiarów dla produktu. Wymóg potwierdzenia zewnętrznej linii PCBA nie opisuje zamówienia samej PCB z montażem ręcznym; nie wpisano fikcyjnego potwierdzenia, żeby usunąć ten błąd."
+      ],
+      "headers": [
+        "Para sieci",
+        "Liczba wyników",
+        "Cel / znaczenie"
+      ],
+      "rows": [
+        [
+          "AC_FUSED / AC_N",
+          "4",
+          "2 mm; ocena konkretnego obszaru nadal wymagana"
+        ],
+        [
+          "BUS_FILTERED / FB_INDUCTOR",
+          "13",
+          "2 mm; ocena konkretnego obszaru nadal wymagana"
+        ],
+        [
+          "BUS_FILTERED / M",
+          "1",
+          "2 mm; ocena konkretnego obszaru nadal wymagana"
+        ],
+        [
+          "BUS_RECT / DC_RETURN",
+          "4",
+          "2 mm; ocena konkretnego obszaru nadal wymagana"
+        ],
+        [
+          "DC_RETURN / FB_INDUCTOR",
+          "1",
+          "2 mm; ocena konkretnego obszaru nadal wymagana"
+        ]
+      ]
+    },
+    {
+      "title": "13. Co należy sprawdzić po wykonaniu prototypu",
+      "paragraphs": [
+        "Przed zasileniem: rzeczywiste dopasowanie części i formowanie C6/RF1/R7, podparcie, polaryzacja, luty, czystość, brak zwarć, poprawne przewody, osłonięte stanowisko i określona osoba odpowiedzialna. Same wyprowadzenia LED nie są bezpieczne dotykowo mimo około 60 V między nimi.",
+        "Pomiary przez osobę przygotowaną do pracy z 230 V: wejścia 207/230/253 V, warunki zimne i gorące, lokalne otoczenie 0–40°C, docelowy panel i obciążenie. Zmierzyć prąd średni i tętnienia LED, Pin/Pout/PF, rozruch, napięcie C6, szczyty napięć i prądów, temperatury oraz zachowanie po odłączeniu.",
+        "Próby zwarcia, przerwy obciążenia, awarii elementów i przepięć wymagają osobnego kontrolowanego planu. Nie podawać granicy absolutnej U1 725 V jako zwykłego progu roboczego oscyloskopu: należy wcześniej ustalić niższe limity przerwania, marginesy i niepewności. W tym pakiecie nie ma zgody na wykonanie takich prób.",
+        "Dla gotowej lampy pozostają: ochrona przed dotykiem także podczas wymiany, dostęp przez szczeliny, izolacja metalowego panelu i mocowań, temperatura materiałów i dostępnych powierzchni, zachowanie przy usterkach, EMC/odporność, migotanie i strumień. Dokładne normy, wydania i poziomy badań wymagają kwalifikowanej oceny wyrobu."
+      ],
+      "headers": null,
+      "rows": null
+    },
+    {
+      "title": "14. Koszty i zakupy — zapis budżetowy",
+      "paragraphs": [
+        "Kosztorys z 23.11.2026: zużyte elementy około 60,54 zł brutto; zakup minimalnych ilości około 72,71 zł; TME + DigiKey z budżetem dwóch dostaw razem około 188,21 zł. Nie zawiera samej PCB i jej transportu, montażu, panelu LED, obudowy, przewodów ani badań.",
+        "To zapis poprzednich obserwacji cen i dostępności, nie nowa rezerwacja koszyka. Dostawa DigiKey 80 zł została ostrożnie zabudżetowana jako 98,40 zł z VAT; część cen TME przeliczono z USD. Ostateczny kurs, VAT i wysyłki zależą od koszyka. R6 ma minimum 100 sztuk, więc pozostaje 99 zapasowych. Sam T1 to gotowy element Würth, nie uzwojenie na zamówienie.",
+        "LYT1603D ma status NRND w dotychczasowym doborze: jest częścią obecną w prototypie, ale jego dalszą dostępność i sens dla seryjnego produktu trzeba ocenić osobno. Nie deklarujemy 100% zakupów z TME."
+      ],
+      "headers": null,
+      "rows": null
+    },
+    {
+      "title": "15. Źródła, wersje i pliki",
+      "paragraphs": [
+        "Podstawa: zapisane źródła SC09-SB01 i nowe raporty audytu. KiCad CLI/pcbnew 10.0.6; pinned PCB Agent Toolkit 0.7.1 / pakiet 0.7.1-preview.3. Doctor rozpoznał poprawny runtime, ale zgłosił dodatkowy błąd dekodowania tekstu w wątku; nie zamienia to niezaliczonego release w PASS.",
+        "SHA-256 źródła PCB: a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+        "Aktualny commit wejściowy projektu: b8aea5115a467d1d86ef6069a84d21f0e7e5290b. Zapis „przed uproszczonym zakupem”: 74c3ff1565e8b207d3f05fcc10beb0b67e1f659c. Audit i dokumentacja nie zmieniają main ani elektrycznej geometrii SC09.",
+        "Dokładne źródła i sumy plików: review-inputs.json oraz fabrication-candidate/fabrication-manifest.json w pakiecie audytu. Lista materiałowa i dostawców: bom-build.csv / procurement.SB01.json. Pełny raport błędów procesu: toolkit-release-check.json. Pliki produkcyjne-kandydat są przechowywane osobno od starych release-candidate.",
+        "Projekt referencyjny RDR-464: https://www.power.com/sites/default/files/documents/rdr464.pdf",
+        "Sterownik LYTSwitch-1: https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+        "Dławik T1 Würth 7687709152: https://www.we-online.com/components/products/datasheet/7687709152.pdf",
+        "Dławik L1 Würth 768772332: https://www.we-online.com/components/products/datasheet/768772332.pdf",
+        "LED Lumileds — dane wersji CA: https://lumileds.com/wp-content/uploads/files/DS216-ZH-LUXEON-2835-Line-datasheet.pdf",
+        "Projektowanie chłodzenia Lumileds: https://lumileds.com/wp-content/uploads/files/WP31.pdf",
+        "Rezystor bezpiecznikowy Bourns FW: https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
+        "Dioda US1M: https://www.diodes.com/datasheet/download/US1M.pdf",
+        "Możliwości wykonania JLCPCB: https://jlcpcb.com/capabilities/pcb-capabilities"
+      ],
+      "headers": null,
+      "rows": null
+    }
+  ],
+  "sources": [
+    [
+      "Projekt referencyjny RDR-464",
+      "https://www.power.com/sites/default/files/documents/rdr464.pdf"
+    ],
+    [
+      "Sterownik LYTSwitch-1",
+      "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf"
+    ],
+    [
+      "Dławik T1 Würth 7687709152",
+      "https://www.we-online.com/components/products/datasheet/7687709152.pdf"
+    ],
+    [
+      "Dławik L1 Würth 768772332",
+      "https://www.we-online.com/components/products/datasheet/768772332.pdf"
+    ],
+    [
+      "LED Lumileds — dane wersji CA",
+      "https://lumileds.com/wp-content/uploads/files/DS216-ZH-LUXEON-2835-Line-datasheet.pdf"
+    ],
+    [
+      "Projektowanie chłodzenia Lumileds",
+      "https://lumileds.com/wp-content/uploads/files/WP31.pdf"
+    ],
+    [
+      "Rezystor bezpiecznikowy Bourns FW",
+      "https://www.bourns.com/docs/Product-Datasheets/FW.pdf"
+    ],
+    [
+      "Dioda US1M",
+      "https://www.diodes.com/datasheet/download/US1M.pdf"
+    ],
+    [
+      "Możliwości wykonania JLCPCB",
+      "https://jlcpcb.com/capabilities/pcb-capabilities"
+    ]
+  ],
+  "physical_measurements_performed": false,
+  "full_strict_spacing_passed": false,
+  "toolkit_release_passed": false
+}

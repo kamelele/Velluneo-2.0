@@ -1,0 +1,1 @@
+SC09-SB01 verification packet. Current matchingGerber/drillcandidate in fabrication-candidate; NOT RELEASED FOR ORDER. Do not use oldrelease-candidatearchives. ReadSC09_kompendium.pdf/html for completeparameters,scopeandopenissues. NoPCBsourcechange,orderorpoweredtest. Generic3DmodelletteringnotBOM.

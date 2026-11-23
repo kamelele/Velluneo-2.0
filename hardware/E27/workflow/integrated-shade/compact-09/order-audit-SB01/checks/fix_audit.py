@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path('work/sc09-order-audit/fabrication/gerber_audit.py');t=p.read_text();t=t.replace("nc,ac=collections.Counter(nativehits),collections.Counter(actualhits)","max_drill_coordinate_error=max(min(max(abs(a[0]-n[0]),abs(a[1]-n[1]))for a in actualhits if a[2]==n[2])for n in nativehits);nc,ac=collections.Counter(tuple(round(q,3)for q in x)for x in nativehits),collections.Counter(tuple(round(q,3)for q in x)for x in actualhits)")
+t=t.replace("'tool_inventory':toolsets}","'tool_inventory':toolsets,'max_coordinate_quantization_error_mm':round(max_drill_coordinate_error,8),'per_axis_tolerance_mm':0.0005,'coordinate_quantization_pass':max_drill_coordinate_error<=0.0005}")
+t=t.replace("job=json.loads(next(G.glob('*.gbrjob')).read_text());raw_job=next(G.glob('*.gbrjob'));shutil=None\nimport shutil\nshutil.copy2(raw_job,H/'raw-native.gbrjob');raw_job.unlink()", "import shutil\nraw_job=next(G.glob('*.gbrjob'),None);job=json.loads((raw_job or H/'raw-native.gbrjob').read_text())\nif raw_job:shutil.copy2(raw_job,H/'raw-native.gbrjob');raw_job.unlink()")
+p.write_text(t)

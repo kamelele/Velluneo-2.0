@@ -1,0 +1,15 @@
+# SC09-SB01 manufacturing implementation handoff
+
+Actor: /root/sb01_fabrication_audit. Source read-only; no CAD, pin, net, placement, routing, rule or global check changes. Fresh exports made from an exact private source copy under KiCad10.0.6, with copy-only zone refill. Source PCB SHA256 a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19 remains unchanged.
+
+Fresh ERC/DRC/unconnected/schematic-parity: 0. Independent intended physical graph11groups/46pins matches schematic and saved PCB. Gerber143tracksegments match native endpoints/widths;16front+44back nativepadflashes match positions and aperturedimensions. Excellon26hits match12vias+14componentPTHholes. NPTH0. Maximumcoordinatequantizationerror0.0001mm under0.0005mm allowance. SevenGerbers usecommonabsoluteorigin; Bsideisnotmanuallymirrored. Outlineisoneclosedrectangle51.2x33centerline; nativejobbbox51.25x33.05includes50umplotstrokeandisnotactualroutedsize.
+
+Manufacturing checks PASS within declaredscope: trackminimum0.3mm, adoptedDRCdifferentnetfloor0.3mm; copperedge1.05mm; via0.30/0.75mm gives0.225mmannular; componentPTHannularminimum0.5mm. Plottedmaskwebfront2.05mm/back0.5mm betweenfinalmergedopenings vsJLCgreen1oz0.1mm. Allnativepadcentresarewithinmaskopenings; back43mergedregionscover44pads. Visiblelegendall1.0mmhigh andactualGerberstroke0.15mm, meetingpublishedJLCminima. ActualGerbercopper/mask/silkpreviews were rendered and visuallyinspected; no missinglegend/padobstructionseen. NativeDRCignoredkeysaretrack_not_centered_on_via andtuning_profile_track_geometries, notmanufacturingclearanceexceptions; noactualDRCexclusionswereused.
+
+RawnativeoptionalGerberjobFinish=None,Revision=rev? andstrokedbboxmetadataarepreservedinauditraw-native.gbrjob andEXCLUDEDfromuploadZIP. Nooutputwasmanuallymisrepresented asrawnative. ExplicitORDER_PROFILE_NOT_RELEASED.json states FR4/2L/1.6mm/1oz/leadfreeHASL/green/white/manualassembly. CandidateflatZIPcontains7Gerbers+PTHExcellononly; emptyNPTH,drillmaps,reports,images andrawjob areoutsideuploadZIP. ZIPCRC,memberlistandmemberSHA256checksPASS.
+
+IMPORTANT: This is still NOT a releasedorderpackage. Fullstrictfunctionalspacing23knownintrinsicpackage/shortescapeconditions isnotwaivedbyfabDRC. ExactcurrentSB01releaseacceptance/stageevidence andphysicalcurrent/thermal/startup/surge/faulttests remainopen. HistoricalROUTE05acceptancedoesnottransfer. Noorder,poweredtestorJLCsupplierCAMinspectionhasoccurred.
+
+Nativeports: J1.1AC_L148.4,130;J1.2AC_N148.4,124.5. J2.1LED_PLUS101.6,124.5;J2.2DC_RETURN101.6,130. TheearlierlampconceptillustrativepanelwiresathighXarenotanactualJ2harness. Rootcompendiumshouldcorrectthatvisualinterpretation, withoutchangingPCB.
+
+References/checkresults: native-audit.json,gerber-drill-audit.json,ERC.json,DRC-refilled.json,commands.json,source-inputs.json. Officialfabricationcapabilities https://jlcpcb.com/capabilities/pcb-capabilities read23Nov2026; theadoptedsourceconstraintsarestricterthanthecited2L1ozfabricationminimums. Thishandoffisimplementationevidence, notindependenthumanapproval.

@@ -1,0 +1,67 @@
+{
+  "review_id": "SC09-SB01-ORDER-AUDIT-REALITY",
+  "actor": "/root/sb01_reality_audit",
+  "role": "Reality Checker",
+  "status": "preliminary_awaiting_final_packet_manifest",
+  "board_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "source_read_only": true,
+  "physical_measurements_performed": false,
+  "manufacturing_or_energization_approved": false,
+  "findings": [
+    {
+      "id": "REAL-ORDER-01",
+      "severity": "major",
+      "status": "open",
+      "gate": "exact-snapshot fabrication acceptance",
+      "object": "strict-spacing23",
+      "problem": "The bound full functional-spacing report fails23 conditions; native manufacturing DRC does not supersede it. Previous ROUTE05 acceptance does not transfer to changedSB01 parts, geometry and source.",
+      "closure": "Either correct all failed targets or obtain exact, bounded, source-specific laboratory fabrication acceptance after technical review. No safety or product waiver inferred."
+    },
+    {
+      "id": "REAL-ORDER-02",
+      "severity": "major",
+      "status": "open",
+      "gate": "energized functional qualification; not bare-PCB file syntax",
+      "object": "startup, current, hot operation, fault, surge and thermal system",
+      "problem": "No hardware measurements demonstrate regulation, ripple, output OVP overshoot, nonlinear choke behavior, fuse/MOV coordination or closed-bulb temperatures. T1 conditional high scenario107C exceeds retained90C body target.",
+      "closure": "Controlled qualified laboratory measurements at207/230/253VAC and0/25/40C, cold/hot restart and declared fault cases, with numeric stop margins and full thermal measurements."
+    },
+    {
+      "id": "REAL-ORDER-03",
+      "severity": "major",
+      "status": "open",
+      "gate": "finished lamp integration",
+      "object": "LED output and enclosure",
+      "problem": "Output is mains referenced, not SELV. LED panel, metal core, replaceable contacts and ventilation have no completed accessibility/insulation qualification. C6 can deliver reconnection impulse independent of controller current limit.",
+      "closure": "Complete electrical/mechanical interface and accessibility/insulation design and tests. No powered replacement or hot-plug claim."
+    },
+    {
+      "id": "REAL-ORDER-04",
+      "severity": "minor",
+      "status": "documentation_constraint",
+      "gate": "compendium correctness",
+      "object": "nominal ratings versus assumptions and targets",
+      "problem": "60V is a nominal LED load point, not CV regulation. 8W nominal rises to~9.06W at proposed68V with samecurrent. PF0.9,efficiency79\u201388%,loss1.1\u20132.1W and43.99\u201348.82mA input are nominal calculations, not measured limits acrossallloads. Thermal targets are not predictions. 800lm is an opticaltarget.",
+      "closure": "Compendium must label catalogue, calculation, proposed target, CAD check and physical measurement separately."
+    },
+    {
+      "id": "REAL-ORDER-05",
+      "severity": "minor",
+      "status": "documentation_constraint",
+      "gate": "bring-up plan readiness",
+      "object": "VDS absolute ratings and LED thermal limits",
+      "problem": "A stop described only as VDS approaching725V absolute is not a numeric operatingmargin. ICthermal shutdown160C protectsitsjunction anddoesnot guarantee T1/C6/LEDpanel protection. LEDCA absoluteTj125C/case105C requirederating,notnormaloperationtargets.",
+      "closure": "State absolute limits separately; competent test owner selects sufficiently conservative numeric trigger margins and actual measurementpoints before energization."
+    }
+  ],
+  "evidence": [
+    "reality.facts.json",
+    "reality.native.py",
+    "reality.native.json",
+    "sourcecatalogue-design-calculations.json",
+    "sourcethermal-planning.json",
+    "sourceprototype-gates.SB01.json",
+    "boundSB01strict-spacing.json"
+  ],
+  "recommendation_pending_final_packet": true
+}

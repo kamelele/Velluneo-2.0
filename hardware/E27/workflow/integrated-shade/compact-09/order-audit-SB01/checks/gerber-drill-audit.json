@@ -1,0 +1,449 @@
+{
+  "source_PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "actual_Gerber_file_count": 7,
+  "unsupported_gerber_primitives": {},
+  "track_geometry_comparison": {
+    "missing": 0,
+    "extra": 0,
+    "native_segments": 143,
+    "gerber_segments": 143
+  },
+  "pad_flash_alignment": [
+    {
+      "layer": "gtl",
+      "expected": 16,
+      "actual": 16,
+      "differences": {}
+    },
+    {
+      "layer": "gbl",
+      "expected": 44,
+      "actual": 44,
+      "differences": {}
+    }
+  ],
+  "drill_alignment": {
+    "native_holes": 26,
+    "plotted_holes": 26,
+    "missing": [],
+    "extra": [],
+    "tool_inventory": {
+      "SC09_compact-NPTH.drl": {
+        "tools": {},
+        "hits": 0
+      },
+      "SC09_compact-PTH.drl": {
+        "tools": {
+          "1": 0.3,
+          "2": 0.9,
+          "3": 1.0,
+          "4": 1.1,
+          "5": 1.2
+        },
+        "hits": 26
+      }
+    },
+    "max_coordinate_quantization_error_mm": 0.0001,
+    "per_axis_tolerance_mm": 0.0005,
+    "coordinate_quantization_pass": true
+  },
+  "outline": {
+    "line_segments": 4,
+    "closed_single_rectangle": true,
+    "centerline_bounds_mm": [
+      99.4,
+      99.4,
+      150.6,
+      132.4
+    ],
+    "centerline_size_mm": [
+      51.2,
+      33
+    ],
+    "native_stroked_bbox_size_mm": [
+      51.25,
+      33.05
+    ]
+  },
+  "minimum_copper_to_routed_outline_mm": 1.05,
+  "minimum_annular_mm": {
+    "via": 0.225,
+    "PTH": 0.5
+  },
+  "annular_inventory": [
+    {
+      "type": "PTH",
+      "ref": "L1",
+      "pin": "1",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "PTH",
+      "ref": "L1",
+      "pin": "2",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "PTH",
+      "ref": "C1",
+      "pin": "1",
+      "annular_mm": 0.5
+    },
+    {
+      "type": "PTH",
+      "ref": "C1",
+      "pin": "2",
+      "annular_mm": 0.5
+    },
+    {
+      "type": "PTH",
+      "ref": "C4",
+      "pin": "1",
+      "annular_mm": 0.5
+    },
+    {
+      "type": "PTH",
+      "ref": "C4",
+      "pin": "2",
+      "annular_mm": 0.5
+    },
+    {
+      "type": "PTH",
+      "ref": "RV1",
+      "pin": "1",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "PTH",
+      "ref": "RV1",
+      "pin": "2",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "PTH",
+      "ref": "R7",
+      "pin": "1",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "PTH",
+      "ref": "R7",
+      "pin": "2",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "PTH",
+      "ref": "RF1",
+      "pin": "1",
+      "annular_mm": 0.5
+    },
+    {
+      "type": "PTH",
+      "ref": "RF1",
+      "pin": "2",
+      "annular_mm": 0.5
+    },
+    {
+      "type": "PTH",
+      "ref": "C6",
+      "pin": "1",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "PTH",
+      "ref": "C6",
+      "pin": "2",
+      "annular_mm": 0.55
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    },
+    {
+      "type": "via",
+      "annular_mm": 0.225
+    }
+  ],
+  "native_job_metadata": {
+    "raw_file": "raw-native.gbrjob retainedinauditonly",
+    "finish": "None",
+    "reported_bbox_size": {
+      "X": 51.25,
+      "Y": 33.05
+    },
+    "disposition": "ExcludedoptionalrawgbrjobfromuploadcandidatebecauseFinish=None,Sizeincludesoutline50umstroke,Revision=rev?. Explicitorderprofilegovernsfinish/nominaldimensions; actualoutlinegeometryverified51.2x33. NoCADsourcechanged."
+  },
+  "JLCPCB_official_capability_source": {
+    "url": "https://jlcpcb.com/capabilities/pcb-capabilities",
+    "observed": "2026-11-23",
+    "FR4_2L_1oz_track_space_mm": [
+      0.1,
+      0.1
+    ],
+    "PTH_annular_abs_min_mm": 0.18,
+    "PTH_annular_recommended_mm": 0.25,
+    "via_drill_preferred_min_mm": 0.2,
+    "routed_copper_edge_min_mm": 0.2,
+    "smd_pad_pad_differentnet_min_mm": 0.15,
+    "soldermask_bridge_mm": 0.1,
+    "silk_line_mm": 0.15,
+    "silk_height_mm": 1.0
+  },
+  "manufacturing_geometry_check": "PASS iff unsupported0+nativeDRC0+exactGerberanddrillalignment; electricalstrictspacingandsystemqualificationseparate",
+  "full_product_release": false,
+  "mask_coverage": [
+    {
+      "layer": "gts",
+      "region_count": 16,
+      "uncovered_native_pad_centres": [],
+      "note": "All16padcentrescovered."
+    },
+    {
+      "layer": "gbs",
+      "region_count": 43,
+      "uncovered_native_pad_centres": [],
+      "note": "Back43regionscover44pads becauseadjacentconnectedpadopeningsaremerged; notmissingmask."
+    }
+  ],
+  "pad_aperture_dimensions_vs_native_differences": [],
+  "native_port_pinmap": {
+    "J1": [
+      {
+        "pin": "1",
+        "net": "AC_L",
+        "position_absolute_mm": [
+          148.4,
+          130.0
+        ],
+        "position_relative_to_outline_min_mm": [
+          49.0,
+          30.599999999999994
+        ]
+      },
+      {
+        "pin": "2",
+        "net": "AC_N",
+        "position_absolute_mm": [
+          148.4,
+          124.5
+        ],
+        "position_relative_to_outline_min_mm": [
+          49.0,
+          25.099999999999994
+        ]
+      }
+    ],
+    "J2": [
+      {
+        "pin": "1",
+        "net": "LED_PLUS",
+        "position_absolute_mm": [
+          101.6,
+          124.5
+        ],
+        "position_relative_to_outline_min_mm": [
+          2.1999999999999886,
+          25.099999999999994
+        ]
+      },
+      {
+        "pin": "2",
+        "net": "DC_RETURN",
+        "position_absolute_mm": [
+          101.6,
+          130.0
+        ],
+        "position_relative_to_outline_min_mm": [
+          2.1999999999999886,
+          30.599999999999994
+        ]
+      }
+    ]
+  },
+  "silkscreen_native_board_text": [
+    {
+      "text": "SC09 SB01",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "text": "230 V",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "text": "LED",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "text": "-",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "text": "+",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "text": "230 V",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "text": "N",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "text": "L",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    }
+  ],
+  "minimum_track_width_mm": 0.3,
+  "adopted_min_different_net_clearance_mm": 0.3,
+  "clearance_basis": "FreshnativeDRC0withunmodifiedsourcecustomrules,notinferredfromrasterpreview.",
+  "source_unchanged": true,
+  "manufacturing_geometry_pass": true,
+  "soldermask_web_geometric_check": [
+    {
+      "layer": "gts",
+      "minimum_web_between_distinct_openings_mm": 2.05,
+      "region_pair": [
+        15,
+        13
+      ],
+      "green1oz_required_mm": 0.1,
+      "pass": true
+    },
+    {
+      "layer": "gbs",
+      "minimum_web_between_distinct_openings_mm": 0.5,
+      "region_pair": [
+        5,
+        3
+      ],
+      "green1oz_required_mm": 0.1,
+      "pass": true
+    }
+  ],
+  "silkscreen_plotted_line_widths_mm": {
+    "gto": [
+      0.15
+    ],
+    "gbo": [
+      0.15
+    ]
+  },
+  "visible_native_silkscreen_text_inventory": [
+    {
+      "owner": "board",
+      "text": "SC09 SB01",
+      "layer": "F.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "owner": "board",
+      "text": "230 V",
+      "layer": "F.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "owner": "board",
+      "text": "LED",
+      "layer": "B.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "owner": "board",
+      "text": "-",
+      "layer": "B.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "owner": "board",
+      "text": "+",
+      "layer": "B.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "owner": "board",
+      "text": "230 V",
+      "layer": "B.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "owner": "board",
+      "text": "N",
+      "layer": "B.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    },
+    {
+      "owner": "board",
+      "text": "L",
+      "layer": "B.Silkscreen",
+      "height_mm": 1.0,
+      "stroke_mm": 0.15
+    }
+  ],
+  "silkscreen_text_height_pass": true,
+  "silkscreen_line_width_pass": true,
+  "mask_silk_visual_review": {
+    "reviewer": "/root/sb01_fabrication_audit actualGerber-renderinspection",
+    "images": [
+      "Gerber_mask_silk_front.png",
+      "Gerber_mask_silk_back.png"
+    ],
+    "result": "No missinglegend,unexpectedoverlayorpadobstructionseen. Backimageis topcoordinateview soletteringismirroredbydesign; doNOTmanuallymirrorproductionfiles.",
+    "limitation": "CustomliteralGerberrenderer supports allparsedprimitives; previewnotmanufacturercamacceptance."
+  }
+}

@@ -1,0 +1,9 @@
+# SC09-SB01 order audit01 / 23Nov2026
+
+Current PCB source a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19 unchanged. This packet verifies manufacturability/artifact matching and documents parameters; it does not approve fabrication or powered testing. Native ERC/DRC/parity/unconnected0; all143Gerbertracks,60padflashes,26drills match. FullstrictspacingFAIL23 and fullToolkitreleaseFAIL remain. The oldrelease-candidatearchives are historical. Use only the clearly marked current candidate for any subsequent exactsource review.
+
+SC09_kompendium.pdf/html contains15sections/8pages in Polish for the user: CCdriver207–253VAC50Hz,nominal60V133.4mALED/~8W,conditionalnominal79.2–87.9%efficiency,thermalassumptions/stops,OVP/discharge,allparts,orderprofile andunresolvedgates. No physicalresultsarefabricated. CorrectactualJ1highX/J2lowX pinmaps override earlierlampconceptillustrativewires. OldT1Package1280label isdisclosed; exactMPN7687709152size1210andactualgeometrygovern.
+
+fabrication-candidate/SC09_SB01_Gerber_Drill_CANDIDATE_NOT_RELEASED.zip is8flatfiles(7Gerbers+PTH), SHA256d0a3491fe0e593379d9bb5e62d5338e6e782201a9abf09aca2b69aacc2370af2. No optionalrawgbrjobFinishNone isuploaded; actual51.2x33centerlineoutline and explicitleadfreeHASLprofilegovern. This is a candidate, NOT an order authorization.
+
+review-inputs.json preserves the original workspace-relativepaths used by four independentreviewers. Paths beginning outputs/SC09_weryfikacja_i_kompendium map to thisfolder. Paths beginning work/Velluneo-2.0 map to repositoryroot. Duplicate source-matched3Dimages remain under ../simplified-purchase/candidate-views; rawparsed-gerbers.json is in the local completeverificationZIP, not duplicatedhere. Source/provenance hashes remainunchanged. Actual revieweridentities and retainedopenfindings are in reviews/. Engineeringstageapprovalnotfabricated. Main isoutsidewritescope.

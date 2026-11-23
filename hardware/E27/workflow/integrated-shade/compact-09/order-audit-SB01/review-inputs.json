@@ -1,0 +1,816 @@
+{
+  "revision": "SC09-SB01-AUDIT01",
+  "source_PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "physical_measurements_performed": false,
+  "full_release_passed": false,
+  "files": [
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/bom-build.csv",
+      "sha256": "fd4b3c8394c86b1414c0c10b8d4e1afb5a835b9810fa5991c9917ab2b1d21d30"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/commands.json",
+      "sha256": "432565b6559d8ff9a428f0baeba07a167390589bf9d636d5293adbddd3cf995c"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/DRC-refilled.json",
+      "sha256": "cb4a68ca09386ea7c00b35a93e35e4fbdfb6b6da97acdb6e9925c265c0caee8b"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/ERC.json",
+      "sha256": "04bb0c6de4924e2dcfa6ef17e789c1d6d0ce3617d272c886194c5730ee066967"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/finalize.py",
+      "sha256": "9a83772cd80b232b77dcc941893c118b0b25fef0c30a9ea3609e71771790772c"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/findings.json",
+      "sha256": "2b03a83e811fe2ab01f3ccaff7837bb5709d3190aefef89e454d2c5b894f5f21"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/fix_audit.py",
+      "sha256": "4836e307158e2a32c82520a37689215d41025a8826ca6d12ce9d007292c3b1f7"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/gerber-drill-audit.json",
+      "sha256": "b506cd9d9067032ae5353982ccf6db013aee81302dfd424a28ecd1eb242203a0"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/gerber_audit.py",
+      "sha256": "46257d3f86f776f204c664a1f3bdda51ead8720201d6e0599dafed703486a0ad"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/handoff.json",
+      "sha256": "c083e1103a01119d37091365e6d2ebd3299b096f71bfc3d1429474b91dec94e0"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/handoff.md",
+      "sha256": "63af1d3e837109754123ea42e505cd5f817428e954bc8e91211c71d469681d99"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/make_handoff.py",
+      "sha256": "a807dc8c2af97ab7e9bc65376dece1cfabf400773bfe613d81f6bc9a6dee0312"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/mask_silk_check.py",
+      "sha256": "aa4baacf2c2c582b60180c8fdbdd3eeb9a5d9193f2718c0f6943428874445ecb"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/native-audit.json",
+      "sha256": "5d5a909df4d63e89d3cd83e28e4f7e34ca9630ba3f7cd5d730cec40e23347fc7"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/native-copper-views.pdf",
+      "sha256": "abe3758e4de75cf98016d0d9be569eb03949113c31dd48b616764c7dcd4b9a37"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/netlist.xml",
+      "sha256": "aba23c83a2d5cd1e35361180e89f916cd3663a493f951658fe2da28bcb67d01b"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/parsed-gerbers.json",
+      "sha256": "3954667a44570374f4a4e30a443e41fdca35c7cccabb911a118c80f280b3dcdd"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/raw-native.gbrjob",
+      "sha256": "fce13c0f9d8aed411cefe7d598f133a8b41045ffb963a62dc7908a2990311d88"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/reality.arithmetic.py",
+      "sha256": "55b1c714427e3a2b333b5411dfe8f84cff8f85eee55cfd660ee27239b0bc8f73"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/reality.facts.json",
+      "sha256": "dd083a2dfcc6dc14c7bdbc6851ae3e8e202f7dcde71843345aa612bb26937d9d"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/reality.native.json",
+      "sha256": "13b43c17332e5913db4ce52530fea1e50ddede5fb7dc320b9cc3a87085eb1d52"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/reality.native.py",
+      "sha256": "26d09e949e922f1b85f811e14e3f770deb92a7b93b197a04373f97b6da518f51"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/reality.preliminary.json",
+      "sha256": "2b89342c45ab51bc1f0b16c99b50c4283f4323edee87887ad8f1943ee9b78c55"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/reality.preliminary.py",
+      "sha256": "5eb736dbf7a9330636268a0e6b44a16f5755125f2a2a75afd2110f3af0bd41d0"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/render_gerber.py",
+      "sha256": "759a67c540482337e5389235e8af7c918596616a348d59c774ce2bb742adac8a"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/run_native.py",
+      "sha256": "11ae403cf45a4dc53573fabbcaa0e2b0fc18e41a520de34b999e92920b8bfac8"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/source-inputs.json",
+      "sha256": "cb702c010bb4c00b390901d0b2eca17be8d5aa992437eb1a4bbc870ef462dc03"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/strict-spacing-fresh.json",
+      "sha256": "17473854feb8c5c98f33c23793c9018d49c17ffc27d018f15d72eccb27eb767a"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/task-contract.json",
+      "sha256": "bebcde63c7968948c5d181b8b3f875b8c547d7507093318b86377821a304812c"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/toolkit-connectivity-netlist.xml",
+      "sha256": "da917a27e42d1b11f60ad41d409e96d3dcf4f1182a5c2c7dd6d1a08a4329c6a5"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/toolkit-drc.json",
+      "sha256": "0cadde3b5e5077b5245eda51368de793f1cbce03ebe3edef70a07242c401a2da"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/toolkit-erc.json",
+      "sha256": "e98e37ab5ae3d5a8e54bdd882e5d6cdbeadcc5f877a52f0aed82f214a0fa1526"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/checks/toolkit-release-check.json",
+      "sha256": "73d0c408c6ec7e6c99d057524603bd904c1dfc8f4287df25dd927ea4810fea26"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/DRC-refilled.json",
+      "sha256": "cb4a68ca09386ea7c00b35a93e35e4fbdfb6b6da97acdb6e9925c265c0caee8b"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/drills/drill-report.txt",
+      "sha256": "c57c490b0389d4ad0a256010a70a14d1966eb52c38c47a45adaf1cf93a197f0e"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/drills/SC09_compact-NPTH-drl_map.pdf",
+      "sha256": "8c2e4bff5f53c42882c231ee53f77d5d833f4005d3e2e9178f9ed54d8044b783"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/drills/SC09_compact-NPTH.drl",
+      "sha256": "f3bd66bd927978498480729e74cf68b3630fb811bae2d5629f042e4734000c9b"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/drills/SC09_compact-PTH-drl_map.pdf",
+      "sha256": "b388af4bf6cfbcbaf7eda85cb73e373ddecff7ab3e1ea169707ff08970b4ae9d"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/drills/SC09_compact-PTH.drl",
+      "sha256": "5486e60a067650122e9674f98059092b12a620957907d8fb68eecadc76d75395"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/ERC.json",
+      "sha256": "04bb0c6de4924e2dcfa6ef17e789c1d6d0ce3617d272c886194c5730ee066967"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/fabrication-manifest.json",
+      "sha256": "51fb0c147ac6c6ab812e4a992b1c05657d579da14e2603e9ee1cf17b52ba32fa"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerber-drill-audit.json",
+      "sha256": "b506cd9d9067032ae5353982ccf6db013aee81302dfd424a28ecd1eb242203a0"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/Gerber_copper_back.png",
+      "sha256": "7adbcb7c2102cbf1e8e744bfec9f90e5750ad6acd9d698269d3fab201dbbcdb7"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/Gerber_copper_front.png",
+      "sha256": "87912527336663088bfdd9887177f191d799e0ad9f9e77e2211c86221ce17d3a"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/Gerber_mask_silk_back.png",
+      "sha256": "a5cce202f6e0b1f94908ad9e06db6e6a8fbd58de515ec619f744f3c311b89c54"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/Gerber_mask_silk_front.png",
+      "sha256": "b4594ab5e5da7645ce834b997cb7cfd636711a0dc52e6a3fc69a5d34bae7022f"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerbers/SC09_compact-B_Cu.gbl",
+      "sha256": "9bb86feb2932fccbac8b9b35f0fe51861d7c9048b736c3e1fc1e8ea41c4aead1"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerbers/SC09_compact-B_Mask.gbs",
+      "sha256": "a83c0b6e91be02f8fe877324a3ab2e9f16df13598b264160a1201e376f38682f"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerbers/SC09_compact-B_Silkscreen.gbo",
+      "sha256": "66c8673d61b83d5782d67e0b70c1a4e7eda1bff7bd689510d433cb5ceea8a829"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerbers/SC09_compact-Edge_Cuts.gm1",
+      "sha256": "8f3861995112cc35107a8ae1e1f38ee79689c5ea9cc27f214fa7d43bc6aeb47b"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerbers/SC09_compact-F_Cu.gtl",
+      "sha256": "fff309fa2febd4087870448968a667e7337cdcc676525589194dca1cdff7a722"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerbers/SC09_compact-F_Mask.gts",
+      "sha256": "401c9bd2721e61362b8bed1a74b94b73eed67b3e50f6b68577e1f9817a40469d"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/gerbers/SC09_compact-F_Silkscreen.gto",
+      "sha256": "cb5e52df6f15c31884f18337c223a933664d6aa64a39e032112efef09c793f01"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/native-audit.json",
+      "sha256": "5d5a909df4d63e89d3cd83e28e4f7e34ca9630ba3f7cd5d730cec40e23347fc7"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/ORDER_PROFILE_NOT_RELEASED.json",
+      "sha256": "4ad48969111e5a4858a65c93780af10e97b923198c0e05e95d9b62dcb27fa4c3"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/README_NOT_RELEASED.md",
+      "sha256": "ac2da3ee712fe125e8289a205b1f0bd2982ed614d8f1353c8eb014f0200b166b"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/fabrication-candidate/SC09_SB01_Gerber_Drill_CANDIDATE_NOT_RELEASED.zip",
+      "sha256": "d0a3491fe0e593379d9bb5e62d5338e6e782201a9abf09aca2b69aacc2370af2"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/power-supply-specification.json",
+      "sha256": "d1a6d35f6d8f4453d5674ddecb95c37ae08b1f41f09ba5a218591958c8f633f6"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/procurement.SB01.json",
+      "sha256": "36cf3f5678d1a083ba362014f6735644fce7ca01e3df6b6712ca29fb77ab4ede"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/prototype-gates.SB01.json",
+      "sha256": "925a120becc9c1b930a427dcf2868fa291ae7c5cd63018870b74eecd73cb5484"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/READ_ME_FIRST.txt",
+      "sha256": "f6728b6f628bc0ec612aee5a0073dc5fe2fc6987fd8adc6da38a804f461dd41a"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/SC09_kompendium.html",
+      "sha256": "806ee19678196b560d4fcf1c40445e0c70272758e2c4e5cdcc3d4cc61115fabf"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/SC09_kompendium.pdf",
+      "sha256": "71f580ea4fef7635820fdf562e1cd1c7c80a43508329b5cec274859bddf97b3a"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/SC09_kompendium_dane.json",
+      "sha256": "15035f7a4179fa26e3b6cb3c04bc575a6c609fbfb6cea8b0fee26d34744bce49"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/thermal-planning.json",
+      "sha256": "c374ceb26b4860c4e228bee04c1acccc770ce626e61783517a202be5f7af6a70"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/views/SC09_SB01_3D_przod.png",
+      "sha256": "5de8c2ca3419613bd214afa3d238cac2584afddd6e3479aea6e5dabbaf347442"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/views/SC09_SB01_3D_tyl.png",
+      "sha256": "26207c27c968d20d26922c5d49457438ceca6b28f662801f81566afc2af84715"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/views/SC09_SB01_layers.pdf",
+      "sha256": "04f6c81a38d4d55c2bd3f0fa25d74edd6530a2a7d215e40847ade8213b8a14ac"
+    },
+    {
+      "path": "outputs/SC09_weryfikacja_i_kompendium/views/SC09_SB01_schematic.pdf",
+      "sha256": "4f5a1967146957f16cbc2ccb739aefd6c6fa2215c539e8380cae0c7985dd9b42"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/AGENTS.md",
+      "sha256": "e8971c6193d982f58dc368d80748a934067b11401d1dc0529d02302a141d6634"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/bom-build.csv",
+      "sha256": "fd4b3c8394c86b1414c0c10b8d4e1afb5a835b9810fa5991c9917ab2b1d21d30"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/bom-build.json",
+      "sha256": "6211d9fc52a549a85c01290156b2314cd987ade2508c96344fc11a3a29a77bce"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/bom-proposal.A1.json",
+      "sha256": "99f8bb7ef6c92f759304b146b912bb800e8be83a031833910da27359e0f9b448"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/bom-proposal.json",
+      "sha256": "3cf8097a9424a7dbb77683184414cc8a4bc00aecbe552051b99991654aed043d"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/calculated-proposal.json",
+      "sha256": "b8f01c7d5ae56bdca2c495a05bbca06fc13889f9588b7e57a4ef781bfb3bbd2c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/catalogue-design-calculations.json",
+      "sha256": "6486cd1a5165fe3ceaad5c3f721b26ae8e15b17ef9d726156458e0070f74ea5f"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/catalogue-engineering-status.json",
+      "sha256": "12ab7df8bd277c9316a6f3f4de189a2a4a64893988a2339c02e35f3fe3d78c4d"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/driver-led-interface.proposed.json",
+      "sha256": "43f447a7aa29a41099efe7c89ba3e400428ad9df92b03e103a7437c1e4acb61e"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.kicad_sym",
+      "sha256": "e5381001125b37a39bb37c0239a79e7e45d63d144f486d1cf73e57be360d254d"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_BR1.kicad_mod",
+      "sha256": "55574b3cafb6d6c4e572febe2efbaf22b30586f8aeee398f7689467b3e03d17f"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C1.kicad_mod",
+      "sha256": "8d00a70cdf7256783ffb2e5f0822056be0517e8ca3e07f643785a1ab732475a5"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C4.kicad_mod",
+      "sha256": "084f1e3251b62ddbea78aab4234f1ae42e9f55300b97af33b308476ac6c31c15"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C5.kicad_mod",
+      "sha256": "6eec974d33f5ad2c0dd428161f1d538863c6eec14d977db98b76b69ee7042f06"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_C6.kicad_mod",
+      "sha256": "ceb8744337eeb916f5eff022eded25ee6249cde7e8f3bda4be33dfd0bc932db6"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_D1.kicad_mod",
+      "sha256": "e52ed2ed82ca3799ff29272b0559d6d3f69500fa4c5ef1b05a9598dabad8d6ca"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_J1.kicad_mod",
+      "sha256": "163b0501ce503528ad879f0efcd97d8c93c9dbb4bf47fdffad29fbac7938fdeb"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_J2.kicad_mod",
+      "sha256": "154226bd737340ae99430ef2060721e766f0ccd9aeea046b9d04c4498d723c74"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_L1.kicad_mod",
+      "sha256": "e0be0f976f46b2463d2fd1442dd2de88c0336d20cfb559d7fef06d7962d25aaf"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R4.kicad_mod",
+      "sha256": "fa424d7efab65b2141801c0249cd4f36f41c9bd10d75b8ab82862e0f1155c537"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R5.kicad_mod",
+      "sha256": "6dc4e57471b9ecbbb3dd975b9a35fe5e51eef7b5b587be0b53c5c1f0fba41b14"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R6.kicad_mod",
+      "sha256": "de47bf2e0174cd4d5a1297e26e4bfe6c51023c5e4d4af38acdeb9780055726d8"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R7.kicad_mod",
+      "sha256": "cf077e9f19c790456acd239144a4a163fb79d7b41e4583d2911d8a7f12158869"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R8.kicad_mod",
+      "sha256": "48800dfeefb5118405897a9b1556e31fdd1ec1cb8df1b4168babcb147cde6a71"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_R9.kicad_mod",
+      "sha256": "07eaecde236567a2d8acdb968630ea4cd1e210ad962a52aa39b452acb9b9895e"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_RF1.kicad_mod",
+      "sha256": "cd0a6a2fc0a9c5d0724ef92e511d8f2e220542753cedbf906c64d34f02c5c121"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_RV1.kicad_mod",
+      "sha256": "58cf37871ac60dceaf963c2ad75bdb2455ba01ecf579e967f53c0608dd039dab"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_T1.kicad_mod",
+      "sha256": "0f8b659a90889f8ca037980dee26a5726eceb087593370ae899d29fa3a03e899"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/E27SC09.pretty/SC09_U1.kicad_mod",
+      "sha256": "075f17e3046f2d67476e00dbeb5a96f11d6d01e4022c2eb0a8c71333c420fb71"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/footprint-assignments.json",
+      "sha256": "216de453e2b3d6c6f78c8d4459abde80b3beb0fce13c3cd039d5d1c563e45831"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/footprint-geometry.json",
+      "sha256": "ecfa984e749cd663d7d14a58a6a522af13696d857d8372749a3e3bd3b9247dd2"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/fp-lib-table",
+      "sha256": "bc92eb83e53b679cc5a77e3aaeca9a9c3b3ecd4118f10740841f4310222ee232"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/functional-spacing-design.json",
+      "sha256": "013ddeb0316c1c8e3745cf5b70466d8e2bed23871dadbd69b086dea2c2c3e4b7"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/hardware.json",
+      "sha256": "4978c98833b7818f677a2a28388c6dcaf6bf159a8353358b88827124b0933e75"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.A1.json",
+      "sha256": "b0803bf46f12463e8710831891f12a443556b816ee8683307a0def57d6702799"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.CAT01.json",
+      "sha256": "f942fe226fe255f954e7bbcb729468f8151bea4560b14b8819f5e19ada83f1d2"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.json",
+      "sha256": "138f807a2e72218608904feb9c141002d554adec6c0e9f4b7b0e721d3c0fda87"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.SB01.json",
+      "sha256": "db3f4839353262c569ebb89a97cc20fbd1c7449f573bff5e604fff6d7293db62"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/intended-connectivity.toolkit.json",
+      "sha256": "d688024527b7ebb2516fa377e89a127f4e0d9f91bd9906706e2a6760aa4e2db9"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/layout-revision.json",
+      "sha256": "e0f0f44e5563ba8e1f59b1451f947325951b83520c3e360b964a79a56a0a7b3d"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/manual-prototype-fabrication-scope.json",
+      "sha256": "03d8a9353f305cf9bed63d4e7960ff9b86490c07f984ae5c1c066d996843a847"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/mechanical-budget.proposed.json",
+      "sha256": "ab7506fea8b1361f1b5bb82b2091ec71b0e9fccbc7a4bc716e3016010afc4d87"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/model-attachment.json",
+      "sha256": "415780770bb8265ac133969aa178b957a55f4dda4c8ac0037bd56dbd6d552bf6"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/catalogue-model-checks.json",
+      "sha256": "d4b12417e72cb70da17056573f8041193f7fd503c54fb56c9958873a390a6422"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/model-checks.json",
+      "sha256": "51f3aae0a79e3feacf20ffd77593156dd57c99aefea79f790f33b8045dc05d86"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/MODEL_CREDITS.txt",
+      "sha256": "985676099358d1d84df0d3ac98cb92d8825032e4914ba2f9adfa69974c7c0000"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/MODEL_INFO.json",
+      "sha256": "6593126bc7d9a9e6fe221fba55d247accc238ef8a2c973564e7fdeb019003bf0"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/R7-standing-check.json",
+      "sha256": "18afa995c0275b0d3a565b34b222f4fbbb474429437476dac266c110e3ac3798"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_BR1.step",
+      "sha256": "cde35d2e511334f7b76fbf095a2059e6450804f2418b73c9fb90530efa800989"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_BR1.wrl",
+      "sha256": "5f82df351f029b6fd63e07dc219091768d8fb70c48e93f0778ee936aeb81e2f1"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C1.step",
+      "sha256": "223ba1b012f6861b374716ae1dcec83953e3bf5e49bb14830338f5176ad650ed"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C1.wrl",
+      "sha256": "35741dba8e678013b94db61598d01de11773c59b7dfc0696891d8af87a1d5763"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C4.step",
+      "sha256": "72ba7507945fc930cafb8d5458507159891b48cea5f49f1cdc2647290c3149c1"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C4.wrl",
+      "sha256": "9044f94d6b2b58b075422e8882af7921988e239f38a6a5c0161ad20ad874ae0e"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C5.step",
+      "sha256": "6ce863d8a7b21e4f50ecf9cc12c5b93f09bcb8c987f75e5c8543602882932b47"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C5.wrl",
+      "sha256": "bd8eb58f3b2cb8452cb25db0c54741a39673320212ddef2e3c17e58bd2f83564"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C6.step",
+      "sha256": "2f59da198250284bd98bb06179d73e8f703c909c3a9a7c7e8fbb5a0a3ee108ce"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_C6.wrl",
+      "sha256": "3edb63da220fa35801d5321a5af70dc197ee87ec5ddf8549c980ee3426a74dc8"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_D1.step",
+      "sha256": "a93c8b977ec16681cf2306a817883c58fbdc7ccf97f2bc9cfe3b67aad27f184b"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_D1.wrl",
+      "sha256": "c652f95e7a8ddf3f73bfce6e28c257ec94c8871badf48973532cafea9d339d38"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_L1.step",
+      "sha256": "e85ca12258c34e303be61ef6e0279017cdf052e45a4a491a7ec3837e581db23c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_L1.wrl",
+      "sha256": "d9fe1356ae6e23b511eb692f1fbb425a0ecd74878e81b437214c516e63c6b506"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R4.step",
+      "sha256": "cf34849f8725feb8365d30ba0470ec5f1343cfb06f7e1486898785811faa3536"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R4.wrl",
+      "sha256": "ba760614a022deb954449f21948960a7a217aad6429a81210ab4d033e386ab81"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R5.step",
+      "sha256": "0a9097f645a411704dc89621c55892fc24c8368146530b461c71bda72a46a81a"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R5.wrl",
+      "sha256": "91a1287293cccaa41814d09c149527486535daf6e4e03c356806b75b01de0b2c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R6.step",
+      "sha256": "70e5564d6aea2f82104e0ba4e2c55afa9ab482f2290ca6e4f59a7f53b10a01c8"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R6.wrl",
+      "sha256": "fd12e6fa026df2a2e204f4892f6a9d234e0ab1747a91237fb94e681ac40dc700"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R7.step",
+      "sha256": "f9b749dd77cfcd883697ff3ff146d020d51395eb4368647d9c292921985944d7"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R7.wrl",
+      "sha256": "fe3dbba5a9476ac31a652c3701a0e9dc5005f46ac35558ce878c03b7d83aca2d"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R8.step",
+      "sha256": "a6d560ed9828fe2ae9edcf4eb9202bd49fdba1c592121e9aad7fd777bbab19da"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R8.wrl",
+      "sha256": "5c9e8c4394ddf28d48b3cda4f8466a444a82bd0406bfad544cad542edfa3e084"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R9.step",
+      "sha256": "f9bb63679dbb2e5e6c66b602eff26d00e404fc1d05b3fabb95b8e09371bdb6b4"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_R9.wrl",
+      "sha256": "5c9e8c4394ddf28d48b3cda4f8466a444a82bd0406bfad544cad542edfa3e084"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RF1.step",
+      "sha256": "b73f5217b302ffd32ce6333c3bee84ccd97f28b8580e67ef0589102819c5ab3c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RF1.wrl",
+      "sha256": "c2550a13157c7891629a43a0bfeb08302ffecb8f36153f0af95605529cda8a13"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RV1.step",
+      "sha256": "bfc2423df865a70188961a7e9265a98c3d1a9b32e7bd5392640dea649985677c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_RV1.wrl",
+      "sha256": "8c24d4e00d45273df7f126e4d9345e6555e3c6fe6db6d4108c5968a372122833"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_T1.step",
+      "sha256": "236f640d2a034ea3c264b4cccc0eff9b67292a43b0668e424579074f8c1c9774"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_T1.wrl",
+      "sha256": "9a712881432a6320f18c5ca1a477d50b145f89d479dd4126fa6fc3143917fae3"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_U1.step",
+      "sha256": "cfd6002595e92d357104afdb5d04eec7ec8c3a04a1073870127c3ef175c5e96b"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/Models/SC09_U1.wrl",
+      "sha256": "1e1dbafe226d4ee02434dbc20b4005c897e69b03fe0d6a43fee5246bbec7af03"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/original-requirements-crosswalk.json",
+      "sha256": "e272579323a8b96be67c9f789203202cbcef459fd2c914e73a20c3b4f11cb0e8"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-A1-map-approval.json",
+      "sha256": "9d0e7ca43921b24c06363a0686492455a0ae3035c41037b7790077b94dcdbb55"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-autonomous-completion.json",
+      "sha256": "122f8d79c320614d63abac65b1c616e17dca7f4fba7555f8b2d027995419ddce"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-catalogue-only-request.json",
+      "sha256": "028a5bf700eda3480731e0badaff65c21b63f561a4f8876749b7448f95ed714f"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-current-brief.json",
+      "sha256": "1e3d8467c44d2e7255a12dc177b7c4bcd905b40ecefe665db3c7ac9572a0a9d0"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-process-line-decision.json",
+      "sha256": "430648e1b471d9aa3fede9aa34134bb94fe95150c138cb2d5948d0886afaab47"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-prototype-scope.json",
+      "sha256": "6491988d16217c36ca1519eb1b358ec1b201469389301840d973146a850343ac"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-SC09-direction-map-approval.json",
+      "sha256": "bf0280e5e38fb07dd4ef20e327f985a74be45dd963f60e09af30e63190a3b1a2"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/owner-size-50x32-approval.json",
+      "sha256": "14171fd9a7e8a3e24d458380461cb8295bd922a903d3a738f1f2093d31ac7a7e"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.json",
+      "sha256": "d1a6d35f6d8f4453d5674ddecb95c37ae08b1f41f09ba5a218591958c8f633f6"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.pre-CAT01-historical.json",
+      "sha256": "b75318f16ef66c0d715294ec5a75dee595e5209cb3f4790c873528c8c8b4817b"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.ROUTE01.json",
+      "sha256": "d7418778c1b4b9ed938f7ae3a56e47d2f922dbe8dbd29c4baca074933332617f"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/power-supply-specification.ROUTE02.json",
+      "sha256": "fa4aeb39d61a650a942fea6af06c070a0f0ac9f5423f53d7c4d039112dc6a276"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/PowerFlags.kicad_sym",
+      "sha256": "b6b7b927b1a790c249425e0116068b8c3ea9a67778fe3fa6e0eb775221977649"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/procurement.SB01.json",
+      "sha256": "36cf3f5678d1a083ba362014f6735644fce7ca01e3df6b6712ca29fb77ab4ede"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/prototype-gates.SB01.json",
+      "sha256": "925a120becc9c1b930a427dcf2868fa291ae7c5cd63018870b74eecd73cb5484"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/R7-standing-contract.json",
+      "sha256": "f97430519a7e893c79b77f2eeb2ea59f4615491ac35e2fac5fb99dccb2b4fc4a"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/README.md",
+      "sha256": "72fa5ac5415b1563d816c4eaff7d1e82029d1ad35526bfea231560f29dc848d6"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/active-land-correction.json",
+      "sha256": "9b021d0a45738238a7b84d1cdf51aaf9c95ea769ec3e200df5660806b607745a"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/active-parts-report.json",
+      "sha256": "10790e30a541a8b2f05dbf62307100dc5d4be431cf4044e1805b820025c924aa"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/alternatives.json",
+      "sha256": "341756937253aaf6c6e64920b1973d8c617324923685088f3e3a8aa48465c05a"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/body-packing-study.json",
+      "sha256": "d769d0c6b06068c083988f6020917393f14e1c46a42b3c11345a426812f1efb0"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/C6-mounting-interpretation.json",
+      "sha256": "43ebce32840f85a6b49bf09a84bc6f79b444f1ea156f77c1a8d1f0ca890c4314"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/LED-primary-research.json",
+      "sha256": "cb6055d0e7dde703bd02d0c3197307b9c0831b32a4a759c1cdcccf80742a40b0"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/package-addendum.json",
+      "sha256": "916e0888d23c1f37af8c51b27e769941c551206b82a2334a8138ea204901e48c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/package-research.json",
+      "sha256": "309bfd7dc9de1d187bdeb42a992f1b9f40b35915981164d4aecaedf9702be578"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/parameter-research.json",
+      "sha256": "e00a0803ca5c0b379129e93cba080dfe1a001725c28d57ae1d8086e6007e99d7"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/passive-footprints.json",
+      "sha256": "8535e0fb328d6df4b255d50c6b2f563fb2e629e69a7840ff7eb74f6c60a54e6b"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/passive-parts-report.json",
+      "sha256": "9e8813f4ef2bb9b9c3db28a997942a7cff26a7e83e1d1b905bcbceaed1a34301"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/rdr464-research.json",
+      "sha256": "af1da3440e55a01ccfe27747ea7168ff37585fe87c815b3e8d769f8ba2240ec2"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/rdr464-verified-U1-pins.json",
+      "sha256": "67fddba5bde24c83b497235c3ca706e896caaf11e12c609cf5b07d729b73efe7"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/reference/T1-magnetic-design.json",
+      "sha256": "8ddde32c4185bbdcbf7975577118975dba95249633663cf54f959b014ac5f27d"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/requirements.json",
+      "sha256": "3cb196f1cf655df66045394ad4f46983e98b2de0fb4301ca0f7e15595ea833a0"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/routing-improvement-basis.json",
+      "sha256": "b736fd36083b0b23e79b7286edf37628a53d011d6c2f86860556af32c15b252a"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_dru",
+      "sha256": "980789aef3fb935c0a965f28e33106e95639f3bfe653092931a91b01dc5aa8fe"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_pcb",
+      "sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_pro",
+      "sha256": "d74058d2e0f1e7a0e73a89c4af72a4e0d25f70aac5327f658921bf08f373461c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/SC09_compact.kicad_sch",
+      "sha256": "1defb94bf56a0afda141c476034cd44dfaf14cce7b2f6b941ca6ca3b5b523976"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/source-basis.A1.json",
+      "sha256": "4a8e1a947af8dd806f7c0594b91d053c5b1464f127382516bd872590f9d15a64"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/source-basis.CAT01.json",
+      "sha256": "beabb0ce49b0bd27cfa061045dcc83fa5fcb260c983f4a4993b88bf1f4594447"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/source-basis.json",
+      "sha256": "7f9e79ec220bc5fa4671b1a8a6bc881548895415321cc635b6757e6cded545ad"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/source-basis.SB01.json",
+      "sha256": "ea6322e2649f69d6e383ccfc5cb6354e0688f2696ea95429ac3681f1e4f02e6c"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/spatial-constraints.json",
+      "sha256": "479611185a2415f22bd16ee322f4b4950d1c755388c96a3895238a9a79cede19"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/standards-and-test-plan.json",
+      "sha256": "3e4a244c67f2619d591d7f170a443250bf8c758e7e10db1ae35431ea5c2b13b4"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/sym-lib-table",
+      "sha256": "89df9f9762889b20a645be209dda6cc4dd7339fd314f61f20ecd079aced8ad9b"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/symbol-pin-verification.json",
+      "sha256": "6fbf3ccb9922950faac5562a2e0a5d898d52a9a8bfd298be09b5405eaaae91bf"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/T1-custom-contract.json",
+      "sha256": "06be18b15fe3750f61a7ee7fd31416a3da7b48327166657b1fb6bfa62415da13"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/thermal-and-spacing-basis.ROUTE01.md",
+      "sha256": "173841aa2699695f227cd85fbcd4137cf82d87a4907c997494ab46f5446fd999"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/thermal-and-spacing-basis.ROUTE02.md",
+      "sha256": "73aab8b1acc2c0c890f89900e82a1cd8d9d5d77a135d34d791e6d4b929693287"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/thermal-planning.json",
+      "sha256": "c374ceb26b4860c4e228bee04c1acccc770ce626e61783517a202be5f7af6a70"
+    },
+    {
+      "path": "work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC09_compact/two-endpoint-interface.proposed.json",
+      "sha256": "11daa08b06f38753ffaedc683095fe6116c6a9ee0fbbfc94033ee6c36e15c51c"
+    }
+  ]
+}

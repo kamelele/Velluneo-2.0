@@ -1,3 +1,5 @@
+Latest verification: [SC09-SB01 order audit and compendium](integrated-shade/compact-09/order-audit-SB01/README.md),23Nov2026. Fresh manufacturinggeometryPASS; strictspacingFAIL23/fullToolkitreleaseFAIL; noorder/noCADchanges.
+
 Current task: SC09-SB01 simplified procurement,23Nov2026. Samebranch,mainunchanged. [Current packet](integrated-shade/compact-09/simplified-purchase/README.md). PreviousSC09 saved as "przed uproszczonym zakupem" at74c3ff1565e8b207d3f05fcc10beb0b67e1f659c. Six MPN changes;51.2x33mm. No fabricated release approval or physical tests. SC10 remains onhold.
 
 Historical index follows:
