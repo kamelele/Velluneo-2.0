@@ -1,0 +1,45 @@
+{
+  "task": "SC09-SB01 minimal changes for simplified procurement",
+  "date": "2026-11-23",
+  "actual_user_instruction": "Dobierz zamienniki z TME, rozwiąż kwestię dławika i popraw SC09 tylko tam, gdzie trzeba. Policz koszt kompletu z dostawą. Ten sam branch, main unchanged, no repeated approvals; save current as przed uproszczonym zakupem.",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "remote_input_commit": "74c3ff1565e8b207d3f05fcc10beb0b67e1f659c",
+  "preserved_design_commit": "f015f750183ddae738155993823aee4cfbfed463",
+  "main_input_sha": "377fc0a08e74043e255b732f7c2beb63134a3576",
+  "requirements": [
+    "SC09 electrical topology retained",
+    "20SLED nominal60V/133.4mA after bleeders",
+    "207–253VAC50Hz laboratory0–40C",
+    "Minimize PCB changes and retain opposite-edge AC/LED ports",
+    "No per-supplier freight for a single cheap part where technically avoidable",
+    "Prototype quantities and shipping priced explicitly",
+    "Original native sources preserved before edits"
+  ],
+  "procurement_strategy": "Prefer TME for selected stock items; retain one consolidated DigiKey basket for qualified originals and a manufacturer-supported HV energy choke. Prefer two reliable baskets over forcing an unqualified all-TME redesign.",
+  "ownership": {
+    "coordinator_metadata_integration": "/root",
+    "isolated_candidate_CAD": "/root/sc09_minimal_cad, work/sc09-simple/cad only",
+    "T1_research": "/root/sc09_t1_purchase, work/sc09-simple/t1 only",
+    "other_BOM_research": "/root/sc09_tme_bom, work/sc09-simple/bom only"
+  },
+  "selected_changes_proposed": [
+    "C1 higher-voltage/pulse-rated47nFfilm, larger footprint only as needed",
+    "T1 WE-PD HV7687709152,1.5mH20%400V,12.5square10.5high; footprint/pulse/thermal review",
+    "RV1 TDKSIOV-S07K275275VAC MOV with verified standard-lead geometry",
+    "R6 Royalohm3.65ohm1206 with updated TCR screen"
+  ],
+  "unchanged_intent": "Physical pin/net membership retained for all components, independently copied from prior reviewed functional intent and exact two-terminal datasheets, not inferred from changed CAD.",
+  "authorization": "Current instruction explicitly authorizes design implementation and limited procurement-driven changes without repeated consent. It is not a fabricated approval of exact resulting schematic, production release, order or energized test.",
+  "SC10_TME": "ON_HOLD, not resumed",
+  "review_plan": "Freeze final source and calculation/procurement inputs, request four distinct read-only role inspections. Report gaps and actual failures; no approval fabricated.",
+  "acceptance_checks": [
+    "Native ERC",
+    "Native DRC with schematic parity after refill",
+    "Exact graph membership vs independent retained intent",
+    "No new unconnected copper",
+    "CAD clearance, body/keepout and trace inspection",
+    "Bound final BOM/MPN/footprints/models",
+    "Exact purchase quantities and two-delivery assumptions",
+    "Verify remote main unchanged"
+  ]
+}

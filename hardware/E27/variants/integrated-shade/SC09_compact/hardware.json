@@ -18,7 +18,7 @@
   },
   "product": {
     "requirements_file": "requirements.json",
-    "connectivity_file": "intended-connectivity.CAT01.json",
+    "connectivity_file": "intended-connectivity.SB01.json",
     "spatial_file": "spatial-constraints.json",
     "domains": [
       {
@@ -52,7 +52,7 @@
       "NoSELVoutput",
       "Functional55pairmatrixindependentofglobalmanufacturingfloor",
       "NoautomaticIECcomplianceorsafetyapproval",
-      "SC09-CAT01catalogueT1;noone-offwinding;normalmanualaxialleadformingandsampleinspectionremain"
+      "SC09-SB01: WE-PD HV7687709152 two-terminalenergycoil; prototype-gates.SB01.json governs unresolved physical qualification"
     ],
     "barriers": [],
     "standards_review_evidence": "functional-spacing-design.json (engineeringprototypebasis;notnormativequalification)"
@@ -203,7 +203,11 @@
     "thermal-and-spacing-basis.ROUTE01.md",
     "thermal-and-spacing-basis.ROUTE02.md",
     "thermal-planning.json",
-    "two-endpoint-interface.proposed.json"
+    "two-endpoint-interface.proposed.json",
+    "source-basis.SB01.json",
+    "intended-connectivity.SB01.json",
+    "prototype-gates.SB01.json",
+    "procurement.SB01.json"
   ],
   "approvals": {},
   "waivers": [],
@@ -255,5 +259,8 @@
         "snapshot": "68c1f87df0d1cb4525005c53cc2bc047f8c49221373fbcf83770dbe550e89fdc"
       }
     ]
-  }
+  },
+  "artifacts": {},
+  "procurement_revision": "SC09-SB01",
+  "historical_release_note": "All release-candidate artifacts from previousCAT01/ROUTE05 are historical and must not be ordered for currentSB01 source. New artifacts are in simplified-purchase/candidate-views; not fabricated release."
 }

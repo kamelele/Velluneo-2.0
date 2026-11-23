@@ -1,0 +1,109 @@
+{
+  "review_id": "SIMPLE-SB01-FINAL-01",
+  "role": "Overengineering Reviewer",
+  "actual_actor": "/root/simple_simplicity_review",
+  "date": "2026-11-23",
+  "candidate": "SC09-SB01",
+  "input_manifest": "hardware/E27/workflow/integrated-shade/compact-09/simplified-purchase/review-inputs.json",
+  "manifest_sha256": "8035ba4c7b87abf9926d00b1b05ab22d21cbc5357870bcd294a8142d240c8243",
+  "PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "baseline_PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "scope": "Independent read-only review of procurement architecture, proportionality of design changes and sourcing/assembly complexity. This is not electrical qualification or fabrication approval.",
+  "requirements_reviewed": [
+    "Minimize procurement-driven SC09 changes",
+    "Prefer TME without forcing unqualified all-TME components",
+    "Retain compact original outline, two layers and opposite-edge ports",
+    "Preserve protection and existing verified functional intent",
+    "Price one build using actual minimum purchase quantities and delivery allowances",
+    "Preserve prior SC09 before changes"
+  ],
+  "independent_checks": {
+    "manifest_files_checked": 166,
+    "manifest_hash_failures": [],
+    "native_runtime": "KiCad pcbnew 10.0.6",
+    "native_read_only_inventory": "19 footprints, same reference set as preserved baseline, two copper layers, outline unchanged; source bytes unchanged by review.",
+    "six_replacement_MPNs": [
+      "RF1",
+      "C1",
+      "RV1",
+      "R6",
+      "T1",
+      "D1"
+    ],
+    "physical_placements_changed": [
+      "C1",
+      "C4",
+      "RV1",
+      "T1",
+      "BR1"
+    ],
+    "tracks_and_vias_baseline": 136,
+    "tracks_and_vias_candidate": 155,
+    "independent_native_report": "work/sc09-simple/reviews/simplicity.native.json",
+    "procurement_unique_MPNs": 16,
+    "procurement_fitted_positions": 17,
+    "supplier_split": {
+      "TME_unique_MPNs": 7,
+      "DigiKey_unique_MPNs": 9
+    },
+    "recomputed_consumed_net_PLN": "49.2161399",
+    "recomputed_minimum_purchase_net_PLN": "59.1161399",
+    "recomputed_consumed_gross_PLN": "60.535852077",
+    "recomputed_minimum_purchase_gross_PLN": "72.712852077",
+    "delivery_gross_budget_PLN": "115.50",
+    "recomputed_total_gross_budget_PLN": "188.212852077",
+    "MOQ_excess_explained": "R6 minimum 100 pieces adds 99 spare resistors and 12.177 PLN gross over consumed component cost.",
+    "historical_cost_handling": "procurement-final.json explicitly marks the earlier research cost object historical; integrated_cost_SBO1 contains the current recomputed total.",
+    "check_results_inspected": "Frozen native ERC/DRC/parity reports are clean; full strict spacing remains explicitly false with 23 findings. This role does not waive or independently close those spacing dispositions."
+  },
+  "assessment": [
+    "Two baskets remove the separate Mouser and Coilcraft freight without forcing a new controller, additional protection IC, larger transformer, parallel output-capacitor bank or lower-voltage replacement for R7.",
+    "Retaining L1, R7 and C6 avoids unnecessary magnetic, high-voltage-resistor and output-capacitor qualification changes. RF1 changes value within the existing Bourns fusible family and same footprint to damp the modeled input transient, rather than adding a separate fuse/resistor network.",
+    "T1 is a manufacturer-supported HV energy inductor in the consolidated DigiKey order. Its move and the resulting local reroute are justified by the manufacturer-sensitive-traces-under-body guidance. The increased track count is not by itself evidence of needless complexity.",
+    "C1 higher voltage and pulse rating address the new input-voltage screen; lower initial dV/dt after RF1=47 ohm does not justify a smaller 630 V candidate when the modeled C1 peak is approximately 706 V.",
+    "D1 to a 1000 V part in the same package is a proportionate margin improvement after the modeled filtered bus approached the old 600 V rating. It adds no positions or routing function.",
+    "R6's 100-piece minimum costs more than one fitted resistor but is included honestly in the one-build purchase budget. No additional series/parallel sensing network is introduced merely to use standard values.",
+    "The user's preference for TME is satisfied pragmatically rather than interpreted as a requirement to buy every part there. C5 remains a single original DigiKey part, avoiding the more expensive TME minimum of ten pieces."
+  ],
+  "findings": [
+    {
+      "id": "SIMPLE-SB01-01",
+      "severity": "note",
+      "owner": "/root",
+      "affected_gate": "procurement communication",
+      "status": "RETAINED_EXPLICIT_LIMIT",
+      "finding": "188.21 PLN is a conditional two-order budget, not a supplier checkout quote or the cost of a manufactured and assembled power board.",
+      "preserved_conditions": "TME USD prices are converted with the declared NBP rate, DigiKey delivery conservatively adds VAT, and bare PCB/assembly/LED/housing are excluded. Keep approximately 190 PLN phrasing and these qualifications in the user handoff."
+    },
+    {
+      "id": "SIMPLE-SB01-02",
+      "severity": "note",
+      "owner": "/root",
+      "affected_gate": "release and energized testing",
+      "status": "OUTSIDE_SIMPLICITY_CLOSURE",
+      "finding": "No simplification recommendation removes the existing physical thermal/current/fault/surge checks or the unresolved full strict-spacing assessment.",
+      "preserved_conditions": "The changed candidate must not inherit prior exact-board fabrication approval or be called a fully qualified all-TME release. This review only covers proportionality and purchasing structure."
+    }
+  ],
+  "preliminary_notes_closed": [
+    "The final native/replacement list contains six changed MPNs; R6's part substitution is no longer hidden by a footprint-only CAD_change flag.",
+    "T1 live price and stock are reflected in the current integrated cost rather than the earlier pending-price wording. Historical research records are marked historical."
+  ],
+  "evidence_unavailable": [
+    "No independent checkout quotation, reservation or payment was performed by this reviewer.",
+    "No independent powered thermal, EMC, current, surge or fault test was performed.",
+    "Visual manufacturing/render quality was not re-certified in this role; native layout inventory and frozen CAD reports were inspected."
+  ],
+  "recommendation": "ready_for_human_review",
+  "recommendation_scope": "Procurement simplicity and minimal-change engineering strategy only. No new overengineering blocker identified on the frozen input. Overall fabrication/release remains subject to the other reviews, deterministic checks and explicitly recorded unresolved limits.",
+  "approval": false,
+  "source_or_CAD_modified": false,
+  "re_review": {
+    "reason": "Final structured documentation corrections; source PCB and cost unchanged. Independently reverified every manifest file and exact PCB/cost values.",
+    "prior_manifest_sha256": "4691eb3fe294db22b15925604a9f1b0b11231286d3abaff297c438e25015fb78",
+    "manifest_sha256": "8035ba4c7b87abf9926d00b1b05ab22d21cbc5357870bcd294a8142d240c8243",
+    "manifest_files_checked": 166,
+    "file_hash_failures": [],
+    "disposition": "Simplicity recommendation retained for this final frozen input."
+  }
+}

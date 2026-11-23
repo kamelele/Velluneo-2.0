@@ -1,53 +1,103 @@
 {
-  "actor": "/root/sc09_reality, bounded research implementer; not independent reviewer of this new research",
+  "actor": "/root integrated SB01; independent Reality review requested",
   "kind": "Own conditional thermal arithmetic and proposed layout/bringup limits; not measurement",
   "total_driver_loss_planning_W": [
-    0.9,
-    1.7
+    1.1,
+    2.1
   ],
-  "not_additive_guarantee": "Updated planning allocation after custom 180-turn T1. Not a proven upper bound; RF1 RMS input, magnetics core loss, switching loss and capacitor ripple require measurement. Reference-board efficiency is not inherited.",
+  "not_additive_guarantee": "Updated rounded budget includes increased T1 copper and RF1loss; full core, switching and line-modulation losses are not measured. No temperature or efficiency PASS.",
   "component_screens": [
     {
       "ref": "RF1",
-      "screen": "IinRMS60mA planning,10ohm+5%tol+2%TCR100K =>0.03856W normal; inputpulse/fusingnotcovered",
-      "normal_power_W": 0.038556,
+      "screen": "47ohm5% plus2%hotreserve at60mARMS =>0.1812W; retains100Cbodytarget. Impulse/fusing stillrequiresactualfixturequalification.",
+      "normal_power_W": 0.1812132,
       "local_body_target_C": 100,
-      "placement": "3mm bodygapfromC6target; no heatblanket10mm or2Wratednormaldissipationassumption."
+      "placement": "3mm bodygapfromC6target; no heatblanket10mm or2Wratednormaldissipationassumption.",
+      "MPN": "FW20A47R0JA"
     },
     {
       "ref": "L1",
-      "screen": "IinRMS60mA,DCR6.72ohm plus40%copperhotreserve =>0.03387W DCcopper; core/ripple notcovered",
+      "screen": "768772332 retained; DCRmax7.08ohm20C. No hotcore/surgequalification inferred from previouscustomcoil arithmetic.",
       "normal_power_W": 0.0338688,
       "local_body_target_C": 90,
       "placement": "Atinput,keepawayfromswitchingisland; no saturation/coretemp guarantee."
     },
     {
       "ref": "T1",
-      "screen": "Healthy equivalent triangularcurrent Ipk~0.4867A, fulltriangle Irms~0.2810A. Actualenvelope/line modulation/hotDCR/coreloss mustbe measured; custom part DCR notbound. Copperlossformula0.07897*Rdc_hot_W.",
-      "triangle_Ipk_A": 0.4867324738114424,
-      "triangle_Irms_A": 0.28101512477836876,
-      "copper_coefficient_A2": 0.07896950035420217,
+      "MPN": "7687709152",
+      "conditional_calculation": {
+        "kind": "Conditional arithmetic engineering screen, not measured or manufacturer guaranteed hot limits",
+        "normal_Ipeak_A": 0.4867324738114424,
+        "extended_Ipeak_min_A": 0.4497505082123992,
+        "extended_Ipeak_max_A": 0.526596469045526,
+        "sense_screen_basis": "Retained existing TME R5/R6 extended tolerance/TCR/life/FB reserve model; use current actual BOM owner figures if changed",
+        "triangle_RMS_nom_A": 0.28101512477836876,
+        "triangle_RMS_max_A": 0.3040306131577409,
+        "Lnom_H": 0.0015,
+        "Lmin_tolerance_only_H": 0.0012000000000000001,
+        "Lmin_assumed_hot_bias_H": 0.0009720000000000002,
+        "Lmin_assumption_factors": [
+          0.8,
+          0.9,
+          0.9
+        ],
+        "Lmax_tolerance_H": 0.0018,
+        "Lrequired_for_min_on_H": 0.0008499046296129417,
+        "minimum_on_screen_us": 1.4295721633535852,
+        "minimum_on_limit_us": 1.25,
+        "minimum_on_margin_percent": 14.365773068286813,
+        "max_normal_voltage_across_inductor_V": 305.7960312803931,
+        "working_voltage_max_V": 400,
+        "fixed_peak_triangle_frequency_at52V_Hz": 101662.72386336762,
+        "fixed_peak_triangle_frequency_at68V_Hz": 125987.62803876307,
+        "frequency_model_limit": "CrM triangle toy model. Actual controller line modulation/forced frequency/core loss must be measured;100kHz test frequency is not a maximum operating frequency.",
+        "DCRmax20C_ohm": 2.2,
+        "DCRmax100C_Cu_model_ohm": 2.8916800000000005,
+        "DCRmax125C_Cu_model_ohm": 3.1078300000000003,
+        "Cu_loss_nominal20C_W": 0.17373290077924478,
+        "Cu_loss_extended100C_W": 0.26729132385121607,
+        "Cu_loss_extended125C_W": 0.28727106561048416,
+        "rated_DC_current_40K_rise_A": 0.52,
+        "normal_RMS_fraction_of_IR": 0.5846742560725786,
+        "saturation_10pct_typ20C_A": 0.8,
+        "normal_peak_fraction_of_typ_Isat": 0.6582455863069075,
+        "stored_energy_nominalL_peakmax_J": 0.00020797788090841173,
+        "core_loss_assumed_W": [
+          0.1,
+          0.4
+        ],
+        "thermal_resistance_assumed_K_per_W": [
+          50,
+          100
+        ],
+        "conditional_coil_body_at40ambient_C": [
+          58.3645661925608,
+          106.72913238512162
+        ],
+        "thermal_model_limit": "Only copper loss is calculated. Core loss and theta are planning assumptions, not measurements. Retain existing T1 body target90C; conditional58–107C scenarios do not establish thermal closure. Research100C proposal is superseded, not an approved relaxation.",
+        "output_current_effect": "Nominal sense resistors and controller fixed peak estimate retained, about135.2mA total /133.4mA LED at60V. New L changes switching frequency/current timing, requires retuning/measurement per manufacturer; do not claim optical/current guarantee.",
+        "capacitor_ripple_screen_RMS_A": 0.2665290085695101,
+        "ripple_model_limit": "Fulltriangle toy currentoccupancy gives upperplanning estimate, not100Hz outputvoltage ripple or controller actualwaveform.",
+        "retained_body_target_C": 90
+      },
       "local_body_target_C": 90,
-      "proposed_DCR_max_25C_ohm": 2.7,
-      "proposed_DCR_max_100C_ohm": 3.6,
-      "proposed_core_loss_budget_W": 0.4,
-      "copper_screen_at_300mA_W": 0.324,
-      "total_planning_budget_W": 0.724,
-      "qualification": "Supplier-built custom 180-turn AWG32 coil is not measured; saturation during IC maximum fault current remains unresolved."
+      "qualification": "Existing90Cplanningtarget retained. Conditional58–107C scenariodoes notestablish thermal closure. Physicalhotbias/core/switching/faultmeasurements remain due."
     },
     {
       "ref": "R5_R6",
       "screen": "FulltriangularIrms screenacross0.57321ohm =>~0.0453Wtotal. ActualMOSFETonintervalmakeshealthyaverage smaller; no startup/faultpowerguarantee.",
       "normal_power_W": 0.045266120064464156,
-      "local_body_target_C": 100
+      "local_body_target_C": 100,
+      "R6_part": "1206S4F365KT5E,400ppm/K,max125C; retain100Cbodytarget."
     },
     {
       "ref": "D1",
-      "screen": "Conservativewhole135mA throughdiode at1.7V =>0.230W conductionplanning, not exactwaveform. Addreverse-recovery/switchloss separately.",
+      "screen": "1000VVRRM,1A75ns,Vfmax1.7V,Ifsm30A; sameSMA. Planningconductionallocation unchanged; no actualrecovery/thermalmeasurement.",
       "normal_power_planning_W": 0.22983999999999996,
       "local_case_target_C": 100,
       "junction_design_target_C": 125,
-      "placement": ">=30mm2combinedpadcopper; actualTJestimateusingdatasheet30K/Wjunctiontoterminalwithcase/sourceappropriate measurement, not ambient."
+      "placement": ">=30mm2combinedpadcopper; actualTJestimateusingdatasheet30K/Wjunctiontoterminalwithcase/sourceappropriate measurement, not ambient.",
+      "MPN": "US1M-13-F"
     },
     {
       "ref": "U1",
@@ -62,8 +112,7 @@
     },
     {
       "ref": "R7",
-      "screen": "Normal253Vconservativecyclebound~0.113W frompriorresearch;140K/W=>~15.8Kfilm-toambientriseunderthatmodel;0.25Wat70Cderateslinearlytozero155C.",
-      "normal_power_upper_screen_W": 0.11321,
+      "screen": "HVR2500003903FR500 retained. Updated catalogue screen0.116344W and allowable0.161765W at100C. No VR25theta140K/W is assigned to HVR25; absolute temperature unpredicted.",
       "power_allowable_at100C_W": 0.16176470588235295,
       "local_ambient_max_proposal_C": 100,
       "body_target_C": 125,
@@ -95,7 +144,7 @@
   "measurement_plan": [
     "No energizedworkis authorized bythisreport. Beforetest aqualifiedpersondefinesfullycontainedfixture, correctlyrateddifferentialprobes/currentmeasurement,currentlimitedsourceandisolationstrategy. Isolationtransformerdoesnotmaketheoutputsafe.",
     "Measureat207/230/253VAC50Hz,ambient0/25/40C,repeatedcold/hotrestartandopen/shortoutputwithcontrolledfaultfixture. Logsteady-statePin,Pout,currentavg/peak,COUTpeak,VDSpeak,BPmin/hotL,allnamedparttemps. Includeuncertaintyandprobe loading.",
-    "StopifCOUT>90V, VDSapproaches725VabsoluteorD1reverse600Vabsolute, sustainedinputcurrentabove60mAplanningwithoutreview, anytemperaturelimitabove, abnormalnoise/smoke/visiblearcing orunexpectedcurrentgrowth. Numerical400Vnormalnetstressscreenalsorequiresreviewifwaveformexceedsit; do not reinterpretasguaranteedtransientlimit.",
+    "StopifCOUT>90V, VDSapproaches725VabsoluteorD1reverse1000Vabsolute, sustainedinputcurrentabove60mAplanningwithoutreview, anytemperaturelimitabove, abnormalnoise/smoke/visiblearcing orunexpectedcurrentgrowth. Numerical400Vnormalnetstressscreenalsorequiresreviewifwaveformexceedsit; do not reinterpretasguaranteedtransientlimit.",
     "Biasmax/minthresholds andhotLareunproven; failing135mAregulationor>specifiedoptical/currentinterface meansredesign,notautomaticresistortrimmingwithoutnewmapreview.",
     "Closedbulbthermalpathisaseparatelaterqualification. The0..40Clabtargetdoesnotjustifyarbitrarysealedfixtureoperation."
   ],
@@ -132,5 +181,9 @@
   "all_new_measurements_performed": false,
   "loss_boundary": "AllbaseelectronicslossesincludingR8/R9; externalLEDpowerexcluded. Noaddingbleederlosstwice.",
   "CAT01_notice": "Historical custom-coil baseline only. Current selected catalogue electrical/thermal values: catalogue-design-calculations.json. Current actual copper and geometry checks are in catalogue-package. No old thermal estimate transfers automatically.",
-  "ROUTE01_notice": "Historical baseline record. Current routing/thermal/spatial authority: layout-revision.json, routing-improvement-basis.json, selected spatial-constraints.json, power-supply-specification.ROUTE01.json and thermal-and-spacing-basis.ROUTE01.md. No previous copper-based temperature estimate qualifies current layout."
+  "ROUTE01_notice": "Historical baseline record. Current routing/thermal/spatial authority: layout-revision.json, routing-improvement-basis.json, selected spatial-constraints.json, power-supply-specification.ROUTE01.json and thermal-and-spacing-basis.ROUTE01.md. No previous copper-based temperature estimate qualifies current layout.",
+  "revision": "SC09-SB01",
+  "historical_reference": "thermal-planning.pre-SB01-historical.json",
+  "physical_measurements_performed": false,
+  "individual_stop_precedence": "C1 body80C individual stop overrides grouped85C capacitor planning target."
 }

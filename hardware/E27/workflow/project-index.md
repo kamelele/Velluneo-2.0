@@ -1,3 +1,7 @@
+Current task: SC09-SB01 simplified procurement,23Nov2026. Samebranch,mainunchanged. [Current packet](integrated-shade/compact-09/simplified-purchase/README.md). PreviousSC09 saved as "przed uproszczonym zakupem" at74c3ff1565e8b207d3f05fcc10beb0b67e1f659c. Six MPN changes;51.2x33mm. No fabricated release approval or physical tests. SC10 remains onhold.
+
+Historical index follows:
+
 Current human decision: [SC09-ROUTE05 bare-prototype fabrication acceptance](integrated-shade/compact-09/routing-order-prep/owner-fabrication-approval.json),22Nov2026. Exact source/manufacturing bytes unchanged; no order, powered test or product qualification.
 
 # Current task: SC09-ROUTE05 routing correction

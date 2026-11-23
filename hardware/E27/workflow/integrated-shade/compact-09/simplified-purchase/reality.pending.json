@@ -1,0 +1,30 @@
+{
+  "role": "Reality Checker",
+  "actor": "/root/simple_reality_review",
+  "revision": "SC09-SB01 candidate, not yet frozen",
+  "status": "WAITING_FINAL_FREEZE_NOT_FINAL_REVIEW",
+  "final_recommendation": null,
+  "completed_preliminary_work": [
+    "Independently read manufacturer Wurth7687709152, KEMETR76, TDKSIOVStandarD, BournsFW and DiodesUS1A-M family evidence",
+    "Found retained630VC4 ideal startup overrating with10ohm input resistor; coordinator selected47ohm qualified-family replacement after requested discrimination",
+    "Recorded independent47/100/150ohm linear corner sweep, retained explicit nonlinear limits",
+    "Independently probed native pin intent and low-current sense routing outside T1 body on an interim candidate; must rerun on frozen source",
+    "Requested cleanup of stale thermal/current/input-review metadata; coordinator is updating sources"
+  ],
+  "independent_artifacts": [
+    "reality.input-screen.py",
+    "reality.input-screen.json",
+    "reality.damping-screen.py",
+    "reality.damping-screen.json",
+    "reality.native.py",
+    "reality.native.json"
+  ],
+  "known_open_scope": [
+    "Final source and evidence snapshot not yet provided",
+    "Final functional-spacing disposition must be reviewed; an interim unexcepted assessment had37findings and cannot inherit old23-object acceptance automatically",
+    "No physical hot/current/ripple/startup/surge/fault qualification exists; no order/energization or product approval created",
+    "Retain T1 body90C target; conditional58–107C arithmetic is not thermal PASS",
+    "New diode1000V closes low reverse-voltage-headroom concern only; it does not qualify system surge behavior"
+  ],
+  "resume_action": "Coordinator sends frozen review-inputs.json path/digest and source path via followup_task. Reviewer then verifies hashes, reruns own native check and issues final reality.json/md bound to that snapshot."
+}

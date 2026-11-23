@@ -1,5 +1,5 @@
 {
-  "revision": "SC09-CAT01",
+  "revision": "SC09-SB01",
   "input_VAC_RMS": [
     207,
     230,
@@ -28,55 +28,77 @@
   "optical_target_lm": 800,
   "optical_measurement_performed": false,
   "base_loss_inclusive_of_bleeders_W": [
-    0.9,
-    1.7
+    1.1,
+    2.1
   ],
   "estimated_input_power_W": [
-    8.90632446,
-    9.70632446
+    9.10632446,
+    10.10632446
   ],
   "estimated_LED_efficiency_percent": [
-    82.4856,
-    89.8948
+    79.22093231509015,
+    87.92048312322049
   ],
   "assumed_PF_not_measured": 0.9,
   "estimated_input_current_mA_230V_assumedPF": [
-    43.026,
-    46.89
+    43.99190560386474,
+    48.822823478260865
   ],
   "T1": {
-    "MPN": "MSS1210H-125KED",
-    "L_mH": 1.2,
-    "tolerance_percent": 10,
-    "operating_voltage_V": 400,
-    "DCR_max_25C_ohm": 1.013,
-    "Isat_10percent_25C_A": 0.69,
-    "paper_peak_current_A": 0.486732,
-    "paper_equivalent_triangle_RMS_A": 0.281015,
-    "paper_hot_bias_screen_L_mH": 0.8748,
-    "paper_min_ON_us": 1.324582,
-    "minimum_ON_reference_us": 1.25,
-    "margin_percent": 5.9666,
-    "assumed_independent_L_factors": [
-      0.9,
+    "MPN": "7687709152",
+    "kind": "Conditional arithmetic engineering screen, not measured or manufacturer guaranteed hot limits",
+    "normal_Ipeak_A": 0.4867324738114424,
+    "extended_Ipeak_min_A": 0.4497505082123992,
+    "extended_Ipeak_max_A": 0.526596469045526,
+    "sense_screen_basis": "Retained existing TME R5/R6 extended tolerance/TCR/life/FB reserve model; use current actual BOM owner figures if changed",
+    "triangle_RMS_nom_A": 0.28101512477836876,
+    "triangle_RMS_max_A": 0.3040306131577409,
+    "Lnom_H": 0.0015,
+    "Lmin_tolerance_only_H": 0.0012000000000000001,
+    "Lmin_assumed_hot_bias_H": 0.0009720000000000002,
+    "Lmin_assumption_factors": [
+      0.8,
       0.9,
       0.9
     ],
-    "Cu_only_DCR_at100C_ohm": 1.305828,
-    "conditional_Cu_loss_W": 0.103121,
-    "core_loss_assumption_W": [
+    "Lmax_tolerance_H": 0.0018,
+    "Lrequired_for_min_on_H": 0.0008499046296129417,
+    "minimum_on_screen_us": 1.4295721633535852,
+    "minimum_on_limit_us": 1.25,
+    "minimum_on_margin_percent": 14.365773068286813,
+    "max_normal_voltage_across_inductor_V": 305.7960312803931,
+    "working_voltage_max_V": 400,
+    "fixed_peak_triangle_frequency_at52V_Hz": 101662.72386336762,
+    "fixed_peak_triangle_frequency_at68V_Hz": 125987.62803876307,
+    "frequency_model_limit": "CrM triangle toy model. Actual controller line modulation/forced frequency/core loss must be measured;100kHz test frequency is not a maximum operating frequency.",
+    "DCRmax20C_ohm": 2.2,
+    "DCRmax100C_Cu_model_ohm": 2.8916800000000005,
+    "DCRmax125C_Cu_model_ohm": 3.1078300000000003,
+    "Cu_loss_nominal20C_W": 0.17373290077924478,
+    "Cu_loss_extended100C_W": 0.26729132385121607,
+    "Cu_loss_extended125C_W": 0.28727106561048416,
+    "rated_DC_current_40K_rise_A": 0.52,
+    "normal_RMS_fraction_of_IR": 0.5846742560725786,
+    "saturation_10pct_typ20C_A": 0.8,
+    "normal_peak_fraction_of_typ_Isat": 0.6582455863069075,
+    "stored_energy_nominalL_peakmax_J": 0.00020797788090841173,
+    "core_loss_assumed_W": [
       0.1,
       0.4
     ],
-    "thermal_resistance_assumption_K_per_W": [
+    "thermal_resistance_assumed_K_per_W": [
       50,
       100
     ],
-    "conditional_temperature_at40ambient_C": [
-      50.16,
-      90.31
+    "conditional_coil_body_at40ambient_C": [
+      58.3645661925608,
+      106.72913238512162
     ],
-    "temperature_qualified": false
+    "thermal_model_limit": "Only copper loss is calculated. Core loss and theta are planning assumptions, not measurements. Retain existing T1 body target90C; conditional58\u2013107C scenarios do not establish thermal closure. Research100C proposal is superseded, not an approved relaxation.",
+    "output_current_effect": "Nominal sense resistors and controller fixed peak estimate retained, about135.2mA total /133.4mA LED at60V. New L changes switching frequency/current timing, requires retuning/measurement per manufacturer; do not claim optical/current guarantee.",
+    "capacitor_ripple_screen_RMS_A": 0.2665290085695101,
+    "ripple_model_limit": "Fulltriangle toy currentoccupancy gives upperplanning estimate, not100Hz outputvoltage ripple or controller actualwaveform.",
+    "retained_body_target_C": 90
   },
   "L1": {
     "MPN": "768772332",
@@ -121,9 +143,13 @@
     "energy_J_at90V_Cmax": 0.729,
     "hotplug_allowed": false
   },
-  "envelope_mm": null,
+  "envelope_mm": [
+    51.2,
+    33,
+    19.5
+  ],
   "all_physical_temperatures_efficiency_fault_and_surge_unmeasured": true,
-  "layout_revision": "SC09-ROUTE05",
+  "layout_revision": "SC09-SB01",
   "PCB_mm": [
     51.2,
     33,
@@ -178,18 +204,50 @@
     }
   },
   "thermal_layout_status": "No physical temperature, efficiency or EMC qualification. Earlier conditional magnetic scenarios are sensitivity assumptions, not this layout temperatures. No inherited U1thetaJA/copper-dependent prediction.",
-  "routing_only_revision": "ROUTE05 expands outline to51.2x33mm withorigin99.4,99.4, extends C6 spatial keepout and moves D1 return via; electronics and component/pad placements unchanged.",
   "PCB_origin_absolute_mm": [
     99.4,
     99.4
   ],
-  "current_T1": "MSS1210H-125KED, catalogue2-terminal1.2mH400V; no custom winding",
+  "current_T1": "7687709152 WE-PD HV,1.5mH20%400V,12.5x12.5x10.5max; DigiKey consolidated basket",
   "final_PCB_release_accepted": false,
   "source_scope": "Laboratory prototype fabrication review candidate; all electrical/thermal values are design/calculation assumptions, not measurements.",
   "historical_preCAT01_file": "power-supply-specification.pre-CAT01-historical.json",
   "prototype_temperature_stops": {
     "C1_case_C": 80,
-    "basis": "Conservative proposed prototype stop ceiling below85C full400V rating; ripple/waveforms still require measured qualification.",
+    "basis": "Retained conservative C1 body80C prototype stop for new1000V R76. Individual stops take precedence over grouped85C screen; actual ripple/waveforms and manufacturer derating still apply.",
     "measurements_performed": false
-  }
+  },
+  "historical_baseline_file": "catalogue-design-calculations.pre-SB01-historical.json",
+  "C1": {
+    "MPN": "R76QI24705050J",
+    "capacitance_nF": 47,
+    "tolerance_percent": 5,
+    "rated_VDC": 1000,
+    "dVdt_V_per_us": 3500,
+    "initial_coldplug_dVdt_V_per_us": 179.4703015643098,
+    "historical_10ohm_initial_screen_V_per_us": 843.5104,
+    "initial_step_only_not_full_transient": true
+  },
+  "R6": {
+    "MPN": "1206S4F365KT5E",
+    "TCR_ppm_per_K": 400,
+    "conservative_body_measurement_stop_C": 100,
+    "maximum_catalogue_temperature_C": 125,
+    "paper_total_current_mA_75K_screen": [
+      128.7551,
+      141.9746
+    ],
+    "paper_only": true
+  },
+  "RF1": {
+    "MPN": "FW20A47R0JA",
+    "R_ohm": 47,
+    "normal_60mA_RMS_hot_screen_W": 0.1812132,
+    "linear_input_corner_C1_max_V": 706.3,
+    "linear_input_corner_C4_max_V": 588.7,
+    "not_full_transient_qualification": true
+  },
+  "updated_loss_basis": "Rounded planning budget includes about0.1\u20130.2W additional T1 copper loss and increased RF1loss. Core, controller and actual switching losses remain unmeasured; these are not guaranteed limits.",
+  "thermal_reference": "thermal-planning.json, SB01",
+  "historical_routing_only_revision": "ROUTE05 expands outline to51.2x33mm withorigin99.4,99.4, extends C6 spatial keepout and moves D1 return via; electronics and component/pad placements unchanged."
 }

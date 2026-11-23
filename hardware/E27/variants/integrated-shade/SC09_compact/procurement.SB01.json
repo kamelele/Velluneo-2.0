@@ -1,0 +1,491 @@
+{
+  "revision": "SC09-SB01",
+  "date": "2026-11-23",
+  "actor": "/root/sc09_tme_bom",
+  "scope": "Integrated procurement plan for minimally changed SC09 engineering candidate; no order placed.",
+  "base_PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
+  "intent": "Minimal SC09 changes: TME plus one consolidated DigiKey basket. Retain original R7/C6/L1 and avoid the abandoned SC10 topology/layout expansion. RF1 changes to same-family47ohm for damping after independent review; D1 changes to same-family1000V for headroom.",
+  "parts": [
+    {
+      "refs": [
+        "RF1"
+      ],
+      "original_MPN": "FW20A10R0JA",
+      "purchase_MPN": "FW20A47R0JA",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/bourns-inc/FW20A47R0JA/4211446",
+      "unit_net_PLN": "2.29",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 1971,
+      "evidence": "Root live browser-rendered Polish DigiKey page2026-11-23:1971pcs,MOQ1,PLN2.29net/2.8167gross. Earlier ordinaryHTTP403 and older cached971 are superseded, not treated as stockzero.",
+      "CAD_change": true,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "2.29",
+      "consumed_net_PLN": "2.29",
+      "unit_original_currency": "PLN",
+      "unit_original_price": "2.29",
+      "stock_freshness": "LIVE_BROWSER_2026-11-23",
+      "BOM_change": true,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "RV1"
+      ],
+      "original_MPN": "V275LA4P",
+      "purchase_MPN": "B72207S0271K101",
+      "qty_per_PCB": 1,
+      "seller": "TME",
+      "url": "https://www.tme.eu/en/details/siov-s07k275/tht-varistors/tdk/b72207s0271k101/",
+      "unit_net_PLN": "0.893222",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 16006,
+      "evidence": "Direct TME HTTP200, 2026-11-23; work/sc09-supplier-check/tme-recheck/observations.json",
+      "CAD_change": true,
+      "unit_original_currency": "USD",
+      "unit_original_price": ".22",
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "0.893222",
+      "consumed_net_PLN": "0.893222",
+      "BOM_change": true,
+      "footprint_change": true
+    },
+    {
+      "refs": [
+        "BR1"
+      ],
+      "original_MPN": "MB10S-13",
+      "purchase_MPN": "MB10S-13",
+      "qty_per_PCB": 1,
+      "seller": "TME",
+      "url": "https://www.tme.eu/en/details/mb10s-13/smd-tht-sing-phase-diode-bridge-rectif/diodes-incorporated/",
+      "unit_net_PLN": "2.192454",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 27,
+      "evidence": "Direct TME HTTP200 2026-11-23T16:03:54Z; work/tme-build/stock/observations.json",
+      "CAD_change": false,
+      "unit_original_currency": "USD",
+      "unit_original_price": ".54",
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "2.192454",
+      "consumed_net_PLN": "2.192454",
+      "BOM_change": false,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "C1"
+      ],
+      "original_MPN": "B32529E6473K189",
+      "purchase_MPN": "R76QI24705050J",
+      "qty_per_PCB": 1,
+      "seller": "TME",
+      "url": "https://www.tme.eu/en/details/r76qi24705050j/tht-film-capacitors/kemet/",
+      "unit_net_PLN": "3.248080",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 590,
+      "evidence": "Direct TME HTTP200, 2026-11-23; work/sc09-simple/bom/acquisition.json",
+      "CAD_change": true,
+      "unit_original_currency": "USD",
+      "unit_original_price": ".80",
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "3.248080",
+      "consumed_net_PLN": "3.248080",
+      "BOM_change": true,
+      "footprint_change": true
+    },
+    {
+      "refs": [
+        "L1"
+      ],
+      "original_MPN": "768772332",
+      "purchase_MPN": "768772332",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/w%C3%BCrth-elektronik/768772332/16910471",
+      "unit_net_PLN": "5.75",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 142,
+      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+      "CAD_change": false,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "5.75",
+      "consumed_net_PLN": "5.75",
+      "BOM_change": false,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "C4"
+      ],
+      "original_MPN": "B32671P6154K000",
+      "purchase_MPN": "B32671P6154K000",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/tdk/B32671P6154K000/3878304",
+      "unit_net_PLN": "4.16",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 13275,
+      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+      "CAD_change": false,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "4.16",
+      "consumed_net_PLN": "4.16",
+      "BOM_change": false,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "U1"
+      ],
+      "original_MPN": "LYT1603D-TL",
+      "purchase_MPN": "LYT1603D",
+      "qty_per_PCB": 1,
+      "seller": "TME",
+      "url": "https://www.tme.eu/pl/details/lyt1603d/drivery-led/power-integrations/",
+      "unit_net_PLN": "1.74",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 80,
+      "evidence": "Prior live browser check in Poland/PLN/net; packaging-only TL reel to tube",
+      "CAD_change": false,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "1.74",
+      "consumed_net_PLN": "1.74",
+      "BOM_change": true,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "C5"
+      ],
+      "original_MPN": "CL21B475KAFNNNE",
+      "purchase_MPN": "CL21B475KAFNNNE",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/samsung-electro-mechanics/CL21B475KAFNNNE/3888627",
+      "unit_net_PLN": "1.94",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 365393,
+      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+      "CAD_change": false,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "1.94",
+      "consumed_net_PLN": "1.94",
+      "BOM_change": false,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "R4"
+      ],
+      "original_MPN": "ERJ-6ENF1242V",
+      "purchase_MPN": "ERJ6ENF1242V",
+      "qty_per_PCB": 1,
+      "seller": "TME",
+      "url": "https://www.tme.eu/en/details/erj6enf1242v/smd-resistors/panasonic/",
+      "unit_net_PLN": "0.4019499",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 622,
+      "evidence": "Direct TME HTTP200, 2026-11-23; work/sc09-simple/bom/acquisition.json; same canonical manufacturer MPN without punctuation",
+      "CAD_change": false,
+      "unit_original_currency": "USD",
+      "unit_original_price": ".099",
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "0.4019499",
+      "consumed_net_PLN": "0.4019499",
+      "BOM_change": true,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "R5"
+      ],
+      "original_MPN": "RL1206FR-7W0R68L",
+      "purchase_MPN": "RL1206FR-7W0R68L",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/yageo/RL1206FR-7W0R68L/3886044",
+      "unit_net_PLN": "1.59",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 19482,
+      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+      "CAD_change": false,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "1.59",
+      "consumed_net_PLN": "1.59",
+      "BOM_change": false,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "R6"
+      ],
+      "original_MPN": "CRCW12063R65FKEA",
+      "purchase_MPN": "1206S4F365KT5E",
+      "qty_per_PCB": 1,
+      "seller": "TME",
+      "url": "https://www.tme.eu/pl/details/smd1206-3.65r-1%25/rezystory-smd/royalohm/1206s4f365kt5e/",
+      "unit_net_PLN": ".10",
+      "minimum_purchase": 100,
+      "multiple": 100,
+      "stock": 1700,
+      "evidence": "Direct TME HTTP200 2026-11-23; visible table .10 PLN net @100; schema .12 is gross, not net; work/sc09-supplier-check/tme-recheck/R6.html",
+      "CAD_change": true,
+      "purchase_quantity": 100,
+      "purchase_net_PLN": "10.00",
+      "consumed_net_PLN": "0.10",
+      "BOM_change": true,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "D1"
+      ],
+      "original_MPN": "US1J-13-F",
+      "purchase_MPN": "US1M-13-F",
+      "qty_per_PCB": 1,
+      "seller": "TME",
+      "url": "https://www.tme.eu/en/details/us1m-13-f/smd-universal-diodes/diodes-incorporated/",
+      "unit_net_PLN": "1.380434",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 8946,
+      "evidence": "Direct TME HTTP200 2026-11-23T19:30:41Z, work/sc09-simple/D1-live.json",
+      "CAD_change": true,
+      "unit_original_currency": "USD",
+      "unit_original_price": "0.34",
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "1.380434",
+      "consumed_net_PLN": "1.380434",
+      "BOM_change": true,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "T1"
+      ],
+      "original_MPN": "MSS1210H-125KED",
+      "purchase_MPN": "7687709152",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/w%C3%BCrth-elektronik/7687709152/4156000",
+      "unit_net_PLN": "13.84",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 1710,
+      "evidence": "Root live browser verification 2026-11-23: DigiKey Poland1710pcs, MOQ1,13.84PLNnet/17.0232gross; directly communicated by root and independently relayed by T1researcher.",
+      "CAD_change": true,
+      "unit_original_currency": "PLN",
+      "unit_original_price": "13.84",
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "13.84",
+      "consumed_net_PLN": "13.84",
+      "BOM_change": true,
+      "footprint_change": true
+    },
+    {
+      "refs": [
+        "C6"
+      ],
+      "original_MPN": "EEUFS2A151",
+      "purchase_MPN": "EEUFS2A151",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/panasonic-industry/EEU-FS2A151/9597035",
+      "unit_net_PLN": "7.35",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 275,
+      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+      "CAD_change": false,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "7.35",
+      "consumed_net_PLN": "7.35",
+      "BOM_change": false,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "R7"
+      ],
+      "original_MPN": "HVR2500003903FR500",
+      "purchase_MPN": "HVR2500003903FR500",
+      "qty_per_PCB": 1,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/vishay-beyschlag-draloric-bc-components/HVR2500003903FR500/719816",
+      "unit_net_PLN": "1.48",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 17136,
+      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+      "CAD_change": false,
+      "purchase_quantity": 1,
+      "purchase_net_PLN": "1.48",
+      "consumed_net_PLN": "1.48",
+      "BOM_change": false,
+      "footprint_change": false
+    },
+    {
+      "refs": [
+        "R8",
+        "R9"
+      ],
+      "original_MPN": "RC1206FR-0768KL",
+      "purchase_MPN": "RC1206FR-0768KL",
+      "qty_per_PCB": 2,
+      "seller": "DigiKey",
+      "url": "https://www.digikey.pl/en/products/detail/yageo/RC1206FR-0768KL/729061",
+      "unit_net_PLN": "0.43",
+      "minimum_purchase": 1,
+      "multiple": 1,
+      "stock": 33421,
+      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+      "CAD_change": false,
+      "purchase_quantity": 2,
+      "purchase_net_PLN": "0.86",
+      "consumed_net_PLN": "0.86",
+      "BOM_change": false,
+      "footprint_change": false
+    }
+  ],
+  "baskets": {
+    "TME": {
+      "unique_MPNs": 7,
+      "consumed_net_PLN": "10.1997459",
+      "purchase_net_PLN": "20.0997459"
+    },
+    "DigiKey": {
+      "unique_MPNs": 9,
+      "consumed_net_PLN": "39.15",
+      "purchase_net_PLN": "39.15"
+    }
+  },
+  "cost": {
+    "consumed_components_net_PLN": "49.3497459",
+    "consumed_components_gross_PLN": "60.700187457",
+    "minimum_purchase_components_net_PLN": "59.2497459",
+    "minimum_purchase_components_gross_PLN": "72.877187457",
+    "DigiKey_shipping_published_PLN": 80,
+    "DigiKey_shipping_conservative_gross_PLN": "98.40",
+    "TME_standard_shipping_gross_PLN": "17.10",
+    "one_build_all_minimums_and_delivery_conditional_gross_PLN": "188.377187457",
+    "bare_PCB_assembly_LED_housing_excluded": true,
+    "root_T1_live_PLN_price_check_pending": false,
+    "FX": {
+      "USD": "4.0601",
+      "EUR": "4.4556",
+      "source": "NBP227/A/NBP/2026 2026-11-23"
+    },
+    "VAT_percent": 23
+  },
+  "changes_requiring_review": [
+    {
+      "ref": "C1",
+      "selection": "R76QI24705050J",
+      "value": "47nF5%1000V",
+      "body_nominal_LWH_mm": [
+        18,
+        7.5,
+        13.5
+      ],
+      "body_max_LWH_mm": [
+        18.5,
+        7.7,
+        13.6
+      ],
+      "pitch_mm": 15,
+      "lead_diameter_mm": ".8+/- .05",
+      "source": "https://www.tme.eu/Document/e17ad82984cff1e1d067933eb1fdd0b8/KEM_F3034_R76.pdf",
+      "source_pages": [
+        3,
+        17
+      ],
+      "dVdt_V_per_us": 3500,
+      "nominal_Ipkr_A": 165,
+      "Irms_A_at100kHz85C": 5.4,
+      "ESRmax_ohm_at100kHz": 0.014,
+      "initial_coldplug_screen": {
+        "line_VAC": 253,
+        "Rin_min_ohm": 9.5,
+        "C_min_nF": 44.65,
+        "initial_I_A": 37.66274013477822,
+        "initial_dVdt_V_per_us": 843.5104173522557,
+        "limitations": "Initial ideal peak-line step only. Not a full transient/surge bound; no nonlinear L1/MOV/fault or switching qualification."
+      },
+      "placement": "New P15 and larger body; inspect fit and creepage before integrating. C1 remains post-rectifier DC, not across-line."
+    },
+    {
+      "ref": "RV1",
+      "selection": "B72207S0271K101",
+      "rating": "275VAC,1.2kA,21J,710V@10A",
+      "delta": "Old V275LA4P23J ->21J. New straight P5 vs old staggered holes. No inherited surge/thermal/fuse approval; revisit bounded laboratory surge calculation."
+    },
+    {
+      "ref": "R6",
+      "selection": "1206S4F365KT5E",
+      "value": "3.65ohm1%0.25W1206",
+      "delta": "TCR400ppm/K vs100 and ambient maximum125C vs155C. Existing 75K resistor-drift paper model predicts current range128.755\u2013141.975mA total vs129.201\u2013141.463original; not a measured or full regulator bound. Minimum100pcs."
+    },
+    {
+      "ref": "T1",
+      "selection": "7687709152",
+      "status": "Root live DigiKey check confirmed 1710 pcs, MOQ1, 13.84 PLN net / 17.0232 gross on 2026-11-23; exact manufacturer geometry and conditional calculations attached."
+    },
+    {
+      "ref": "RF1",
+      "selection": "FW20A47R0JA",
+      "reason": "Same-body47ohmfusiblepart damps inputLC. Rootlivebrowserconfirmed1971pcs/PLN2.29net/ MOQ1 on2026-11-23."
+    },
+    {
+      "ref": "D1",
+      "selection": "US1M-13-F",
+      "reason": "SameSMA1000V1A75nsDiodesfamily; lowercurrentTMEprice and moreheadroom."
+    }
+  ],
+  "unchanged_critical_parts": [
+    "R7HVR2500003903FR500",
+    "C6EEUFS2A151",
+    "L1768772332",
+    "C4B32671P6154K000",
+    "C5CL21B475KAFNNNE",
+    "R5RL1206FR-7W0R68L",
+    "R8/R9RC1206FR-0768KL"
+  ],
+  "stock_caveats": [
+    "Fresh means dated supplier snapshot, not reservation. Later HTTP429 checks do not establish stockzero.",
+    "T1 root live PLN check confirmed. Selected nonmagnetic offers have same-day live evidence, with earlier snapshots retained for BR1/D1 and unchanged DigiKey parts.",
+    "International TME USD prices converted with NBP are budget equivalents, not a PLN checkout quote. PLN structured highPrice may include VAT; visible price table governs."
+  ],
+  "rejected_changes": [
+    "RF1 ordinary/metal-film resistor substituted without safe fusing evidence",
+    "C6largerUPWcan or parallel bank just for TME",
+    "R7lower-voltage or resistorstack just for TME",
+    "C5newdielectric/MPN merely to avoidTME10MOQ: original1pcDK is cheaper and same basket",
+    "C1R71PF24704030K400V/us: no margin in843V/us initialcoldplugscreen"
+  ],
+  "integrated_cost_SBO1": {
+    "consumed_net_PLN": "49.2161399",
+    "consumed_gross_PLN": "60.535852077",
+    "minimum_purchases_net_PLN": "59.1161399",
+    "minimum_purchases_gross_PLN": "72.712852077",
+    "DigiKey_shipping_gross_budget_PLN": "98.40",
+    "TME_shipping_gross_PLN": "17.10",
+    "total_gross_budget_PLN": "188.212852077",
+    "not_final_checkout_quote": true,
+    "RF1_stock_not_live_verified": false,
+    "bare_PCB_and_assembly_and_LED_not_included": true
+  },
+  "prior_research_cost_is_historical": true,
+  "C1_pulse_screen_revision_note": "Any843.510V/us value records historical10ohmRF1; current47ohmlinear initial slope179.470V/us. Seeindependentreality.damping-screen.json."
+}

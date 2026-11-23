@@ -190,85 +190,40 @@
     "footprint": "E27SC09:SC09_RF1"
   },
   "RV1": {
-    "refs": [
-      "RV1"
-    ],
-    "mpn": "V275LA4P",
-    "units": "mm",
-    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
+    "description": "TDK B72207S0271K101 S07K275 straight P5 leads; body rotated in plan to4.4x9mm maximum,11mm height. Nonpolar project terminal1 AC_FUSED terminal2 AC_N.",
     "pads": [
       {
         "number": "1",
         "center_mm": [
-          -1.25,
+          0.0,
           -2.5
         ],
         "size_mm": [
           2.1,
           2.1
         ],
-        "drill_mm": 1.1,
-        "kind": "thru_hole",
-        "shape": "rect"
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
       },
       {
         "number": "2",
         "center_mm": [
-          1.25,
+          0.0,
           2.5
         ],
         "size_mm": [
           2.1,
           2.1
         ],
-        "drill_mm": 1.1,
-        "kind": "thru_hole",
-        "shape": "circle"
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
       }
-    ],
-    "max_body_bbox_xy_mm": [
-      -2.8,
-      -4.5,
-      2.8,
-      4.5
-    ],
-    "courtyard_bbox_xy_mm": [
-      -5,
-      -3.3,
-      5,
-      3.3
-    ],
-    "planned_max_above_PCB_mm": 15.0,
-    "sources": [
-      "Littelfuse_RV1"
-    ],
-    "design_basis": "NonpolarMOVturnedontheoppositefaceandrotatedforvertical5x2.5stagger;pad1/2areprojectterminalidentities,notmanufacturernumbers.",
-    "notes": [
-      "Manufacturerrawspacinge4..6/e1=1.5..3.5iswiderthanordinaryholeinsertionclearance;formlongfreeleadswithsupportedcoating,notforcebody.",
-      "3mmstand-offandbendpositionareengineeringreserves,nopart-specificmanufacturerbendminimumfound.",
-      "Finishedas-builtleadformmustfitcourtyardandheight;coulduselessstand-offonlyafterevidence."
-    ],
-    "mechanical_keepouts": [],
-    "electrical_clearance_claim": false,
-    "courtyard_polygon": [
-      [
-        -3.05,
-        -4.75
-      ],
-      [
-        3.05,
-        -4.75
-      ],
-      [
-        3.05,
-        4.75
-      ],
-      [
-        -3.05,
-        4.75
-      ]
-    ],
-    "footprint": "E27SC09:SC09_RV1"
+    ]
   },
   "BR1": {
     "pads": [
@@ -358,92 +313,40 @@
     "footprint": "E27SC09:SC09_BR1"
   },
   "C1": {
-    "refs": [
-      "C1"
-    ],
-    "mpn": "B32529E6473K189",
-    "units": "mm",
-    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
+    "description": "KEMET R76QI24705050J P15; maximum body18.5x7.7x13.6mm, lead0.8+/-0.05mm. Engineering finished hole1.1mm/pad2.1mm; inspect formed lead and solder sample.",
     "pads": [
       {
         "number": "1",
         "center_mm": [
-          -2.5,
-          0
+          -7.5,
+          0.0
         ],
-        "kind": "thru_hole",
         "size_mm": [
-          2.0,
-          2.0
+          2.1,
+          2.1
         ],
-        "drill_mm": 1.0,
-        "shape": "rect",
-        "layers": [
-          "*.Cu",
-          "*.Mask"
+        "drill_mm": [
+          1.1,
+          1.1
         ]
       },
       {
         "number": "2",
         "center_mm": [
-          2.5,
-          0
+          7.5,
+          0.0
         ],
-        "kind": "thru_hole",
         "size_mm": [
-          2.0,
-          2.0
+          2.1,
+          2.1
         ],
-        "drill_mm": 1.0,
-        "shape": "circle",
-        "layers": [
-          "*.Cu",
-          "*.Mask"
+        "drill_mm": [
+          1.1,
+          1.1
         ]
       }
-    ],
-    "max_body_bbox_xy_mm": [
-      -3.65,
-      -2.25,
-      3.65,
-      2.25
-    ],
-    "courtyard_bbox_xy_mm": [
-      -4.15,
-      -2.75,
-      4.15,
-      2.75
-    ],
-    "planned_max_above_PCB_mm": 10.0,
-    "sources": [
-      "TDK_C1",
-      "TDK_C1_series"
-    ],
-    "design_basis": "P5/bodyfrommanufacturer;1.0finishedhole/2.0padand.5mmstand-off/.5courtyardareengineeringmanualprototypechoices. Nominalcasepitchwithgentlefreeleadadjustment,noepoxystress.",
-    "notes": [
-      "Noacross-lineXratinginferred. Actualfabholetolerancesandpartleadformingneedassemblycheck."
-    ],
-    "mechanical_keepouts": [],
-    "electrical_clearance_claim": false,
-    "courtyard_polygon": [
-      [
-        -3.9,
-        -2.5
-      ],
-      [
-        3.9,
-        -2.5
-      ],
-      [
-        3.9,
-        2.5
-      ],
-      [
-        -3.9,
-        2.5
-      ]
-    ],
-    "footprint": "E27SC09:SC09_C1"
+    ]
   },
   "L1": {
     "refs": [
@@ -506,7 +409,7 @@
     "sources": [
       "Renco_L1"
     ],
-    "design_basis": "Wurth768772332catalogue3.3mHHV400V,bodyD8.3/H10max+.5seating,P5\u00b1.5/freeleadforming;manufacturerrecommended1.2holes;compatibleP5.0038retained.",
+    "design_basis": "Wurth768772332catalogue3.3mHHV400V,bodyD8.3/H10max+.5seating,P5±.5/freeleadforming;manufacturerrecommended1.2holes;compatibleP5.0038retained.",
     "notes": [
       "Wire.8128mmTYPnotguaranteedmax;actualsampleandformingjigrequired.",
       "Do not useC=.375inaspinpitch:itisminimumshortleadlength9.525mm.",
@@ -595,7 +498,7 @@
     "sources": [
       "TDK_C4"
     ],
-    "design_basis": "ManufacturerP10\u00b1.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
+    "design_basis": "ManufacturerP10±.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -825,7 +728,7 @@
     "sources": [
       "Samsung_C5"
     ],
-    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at\u00b11.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
+    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at±1.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
     "notes": [
       "Catalogmanualsolder0201..1206:350Cmax,preheat>=60s,contact<=3s,deltaT<=190C;actualprocessrequiresvalidation.",
       "Do not present numericland as a Samsung recommendation."
@@ -915,7 +818,7 @@
     "sources": [
       "Panasonic_R4"
     ],
-    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers\u00b11.15;courtyard.25frompad/bodyunion.",
+    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers±1.15;courtyard.25frompad/bodyunion.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -1029,91 +932,40 @@
     "footprint": "E27SC09:SC09_R5"
   },
   "R6": {
-    "refs": [
-      "R6"
-    ],
-    "mpn": "CRCW12063R65FKEA",
-    "units": "mm",
-    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
+    "description": "Retained 1206 manual-prototype lands; Royalohm 1206S4F365KT5E body and termination overlap require sample inspection. Not a claimed exact Royalohm land pattern.",
     "pads": [
       {
         "number": "1",
         "center_mm": [
           -1.275,
-          0
+          0.0
         ],
-        "kind": "smd",
         "size_mm": [
           1.05,
           1.8
         ],
-        "drill_mm": null,
-        "shape": "rect",
-        "layers": [
-          "F.Cu",
-          "F.Paste",
-          "F.Mask"
+        "drill_mm": [
+          0.0,
+          0.0
         ]
       },
       {
         "number": "2",
         "center_mm": [
           1.275,
-          0
+          0.0
         ],
-        "kind": "smd",
         "size_mm": [
           1.05,
           1.8
         ],
-        "drill_mm": null,
-        "shape": "rect",
-        "layers": [
-          "F.Cu",
-          "F.Paste",
-          "F.Mask"
+        "drill_mm": [
+          0.0,
+          0.0
         ]
       }
-    ],
-    "max_body_bbox_xy_mm": [
-      -1.65,
-      -0.875,
-      1.65,
-      0.875
-    ],
-    "courtyard_bbox_xy_mm": [
-      -2.05,
-      -1.15,
-      2.05,
-      1.15
-    ],
-    "planned_max_above_PCB_mm": 0.6,
-    "sources": [
-      "Vishay_R6"
-    ],
-    "design_basis": "ExactVishayCRCW1206reflowlandsG1.5,Y1.05,X1.8,Z3.6. Court.25frombody/padunion. Manualuseisspecificprocesschoice.",
-    "notes": [],
-    "mechanical_keepouts": [],
-    "electrical_clearance_claim": false,
-    "courtyard_polygon": [
-      [
-        -2.05,
-        -1.15
-      ],
-      [
-        2.05,
-        -1.15
-      ],
-      [
-        2.05,
-        1.15
-      ],
-      [
-        -2.05,
-        1.15
-      ]
-    ],
-    "footprint": "E27SC09:SC09_R6"
+    ]
   },
   "D1": {
     "pads": [
@@ -1257,65 +1109,40 @@
     "footprint": "E27SC09:SC09_D1"
   },
   "T1": {
+    "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
+    "description": "Wurth 7687709152 WE-PD HV manufacturer 5.4x2.9mm lands at 0,+/-4.95mm; project pin1 LED_PLUS pin2 FB_INDUCTOR. Maximum body12.5x12.5x10.5mm.",
     "pads": [
       {
         "number": "1",
         "center_mm": [
-          0,
-          4.75
+          0.0,
+          4.95
         ],
         "size_mm": [
-          5.5,
-          3.0
+          5.4,
+          2.9
         ],
-        "drill_mm": null,
-        "kind": "smd",
-        "shape": "rect"
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
       },
       {
         "number": "2",
         "center_mm": [
-          0,
-          -4.75
+          0.0,
+          -4.95
         ],
         "size_mm": [
-          5.5,
-          3.0
+          5.4,
+          2.9
         ],
-        "drill_mm": null,
-        "kind": "smd",
-        "shape": "rect"
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
       }
-    ],
-    "max_body_bbox_xy_mm": [
-      -6.15,
-      -6.15,
-      6.15,
-      6.15
-    ],
-    "planned_max_above_PCB_mm": 10.3,
-    "body_height_manufacturer_max_mm": 10.2,
-    "proposed_solder_seating_allowance_mm": 0.1,
-    "courtyard_polygon": [
-      [
-        -6.4,
-        -6.5
-      ],
-      [
-        6.4,
-        -6.5
-      ],
-      [
-        6.4,
-        6.5
-      ],
-      [
-        -6.4,
-        6.5
-      ]
-    ],
-    "footprint": "E27SC09:SC09_T1",
-    "design_basis": "ManufacturerMSS1210Hrecommendedlands,page2;nonpolarterminal1LED/2FBisexplicitdesignassignment.Notcustomcoil/3rdNC."
+    ]
   },
   "C6": {
     "refs": [
@@ -1379,7 +1206,7 @@
       "Panasonic_C6",
       "Panasonic_C6_mount"
     ],
-    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5\u00b1.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y\u00b12.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
+    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5±.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y±2.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
     "notes": [
       "Pin1positive,pin2negative;verifynegativebodyband/positiveleadbeforeforming.",
       "ManufacturerdoesNOTsupplythishorizontalformingradius/offset;2.5straight/1.5bend/.5supportareexplicitengineeringchoices,notqualifiedmanufacturerforming.",

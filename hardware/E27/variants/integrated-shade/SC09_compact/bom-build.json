@@ -1,6 +1,6 @@
 {
-  "revision": "SC09-CAT01",
-  "status": "Engineering catalogue-only revision. Source offers have individually graded freshness; no reservation/cart/order claimed.",
+  "revision": "SC09-SB01",
+  "status": "Engineering candidate for two-basket TME + DigiKey procurement. Not a new manufacturing acceptance or product qualification.",
   "components": [
     {
       "ref": "J1",
@@ -18,40 +18,41 @@
     },
     {
       "ref": "RF1",
-      "value": "10 ohm 2W fusible",
-      "mpn": "FW20A10R0JA",
+      "value": "47ohm 5% 2W fusible",
+      "mpn": "FW20A47R0JA",
       "kind": "fusible resistor",
       "pins": {
         "1": "AC_L",
         "2": "AC_FUSED"
       },
       "source": "https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
-      "package": "axial",
+      "package": "axial, same FW20A12x6mm",
       "body_or_reservation_mm": [
         12,
         6,
         6
       ],
-      "notes": "Exact lead forming and abnormal fusing/pulse behavior need qualification.",
-      "assembly": "UprightP6.8customforming; max14.85mmabovePCB; supplierforming/fusingverificationremainopen."
+      "notes": "Changed10ohm to47ohm for inputLCdamping after independentreview. RetainBournsFWfusiblefamilyandgeometry; normal60mARMSplanning0.1812W. IdealcornerC4peak588.7V<630V is not nonlinear/surge guarantee.",
+      "assembly": "Existing uprightP6.8customforming, max14.85mmabovePCB, retained. No genericnonfusible replacement."
     },
     {
       "ref": "RV1",
-      "value": "275V AC MOV",
-      "mpn": "V275LA4P",
+      "value": "275VAC MOV 21J",
+      "mpn": "B72207S0271K101",
       "kind": "MOV",
       "pins": {
         "1": "AC_FUSED",
         "2": "AC_N"
       },
-      "source": "https://www.littelfuse.com/assetdocs/varistors-la-datasheet?assetguid=f7c547ce-c2fa-4789-86cc-ec39a5060afb",
-      "package": "radial staggered",
+      "source": "https://www.tme.eu/Document/94891b49d586e9338877713baac923fe/SIOV_Leaded_StandarD.pdf",
+      "package": "TDK S07 standard radial P5",
       "body_or_reservation_mm": [
         9,
-        5.6,
-        12
+        4.4,
+        11
       ],
-      "notes": "Lead offsets nominal5x2.5mm;7mmdiscclass is not finishedbodydiameter. Thermal/abnormal coordination unqualified."
+      "notes": "275VAC/350VDC,21J,1.2kA,710V at10A. Old23J rating is not inherited. Full RF1/MOV/surge coordination remains an explicit prototype test gate.",
+      "assembly": "Straight P5 leads; project-assigned nonpolar terminal identities follow retained AC_FUSED/AC_N mapping."
     },
     {
       "ref": "BR1",
@@ -75,21 +76,22 @@
     },
     {
       "ref": "C1",
-      "value": "47nF 400V 10%",
-      "mpn": "B32529E6473K189",
+      "value": "47nF 5% 1000V pulse film",
+      "mpn": "R76QI24705050J",
       "kind": "film",
       "pins": {
         "1": "BUS_RECT",
         "2": "DC_RETURN"
       },
-      "source": "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529E6473K189",
-      "package": "radial P5",
+      "source": "https://www.tme.eu/Document/e17ad82984cff1e1d067933eb1fdd0b8/KEM_F3034_R76.pdf",
+      "package": "KEMET R76 radial P15",
       "body_or_reservation_mm": [
-        7.3,
-        4.5,
-        9.5
+        18.5,
+        7.7,
+        13.6
       ],
-      "notes": "Postrectifier only; not an X capacitor. Actual ripple/surge remains to be checked."
+      "notes": "Exact pulse-film row: 3500V/us, nominal165A pulse. Cold-plug ideal initial843.5V/us screen is not a complete nonlinear/surge qualification.",
+      "assembly": "0.8+/-0.05mm leads; P15; inspect 1.1mm finished holes,2.1mm pads and as-built stand-off."
     },
     {
       "ref": "L1",
@@ -131,7 +133,7 @@
     {
       "ref": "U1",
       "value": "LYTSwitch-1",
-      "mpn": "LYT1603D-TL",
+      "mpn": "LYT1603D",
       "kind": "IC",
       "pins": {
         "1": "BP",
@@ -150,7 +152,7 @@
         4.9,
         1.75
       ],
-      "notes": "Active but NRND. Prototype direction only pending actual owner selection and verified procurement. All8pins physical."
+      "notes": "Same original silicon/SO8; tube packaging instead of LYT1603D-TL reel. Manufacturer ordering suffix verified in prior record; not an electrical change."
     },
     {
       "ref": "C5",
@@ -208,59 +210,59 @@
     },
     {
       "ref": "R6",
-      "value": "3.65ohm 1%",
-      "mpn": "CRCW12063R65FKEA",
+      "value": "3.65ohm 1% 0.25W",
+      "mpn": "1206S4F365KT5E",
       "kind": "sense resistor",
       "pins": {
         "1": "SW_SOURCE",
         "2": "FB_INDUCTOR"
       },
-      "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "source": "https://www.tme.eu/pl/details/smd1206-3.65r-1%25/rezystory-smd/royalohm/1206s4f365kt5e/",
       "package": "1206",
       "body_or_reservation_mm": [
         3.4,
         1.85,
         0.7
       ],
-      "notes": "0.68||3.65=>0.57321ohm. Nominal135.2mA by datasheet ratio3.6, not inconsistent RDR ratio4.666."
+      "notes": "TCR400ppm/K versus original100. Range to125C; conservative proposed measured body stop100C. Same nominalparallel sense resistance/current; updated drift screen retained."
     },
     {
       "ref": "D1",
-      "value": "600V 1A ultrafast",
-      "mpn": "US1J-13-F",
+      "value": "1000V 1A ultrafast",
+      "mpn": "US1M-13-F",
       "kind": "diode",
       "pins": {
         "1": "FB_INDUCTOR",
         "2": "DC_RETURN"
       },
-      "source": "https://www.diodes.com/assets/Datasheets/ds16008.pdf",
+      "source": "https://www.diodes.com/datasheet/download/US1M.pdf",
       "package": "SMA",
       "body_or_reservation_mm": [
         6,
         3.5,
         2.7
       ],
-      "notes": "Pin1cathode,pin2anode; actual land geometry due before capture/placement."
+      "notes": "Same DiodesUS1family/SMApinmap,1A75ns,Vfmax1.7V,Ifsm30A; VRRM1000V instead600V increasesstartupheadroom without new layout. Actual reverse recovery/temperature/surge measurement remains due."
     },
     {
       "ref": "T1",
-      "value": "1.2mH 10% 400V",
-      "mpn": "MSS1210H-125KED",
+      "value": "1.5mH 20% 400V",
+      "mpn": "7687709152",
       "kind": "inductor",
       "pins": {
         "1": "LED_PLUS",
         "2": "FB_INDUCTOR"
       },
-      "source": "https://www.coilcraft.com/getmedia/52078704-21eb-4c2b-9b72-1e07b4a2e252/mss1210h.pdf",
-      "package": "2-terminal SMD,12.3x12.3x10.2max",
+      "source": "https://www.we-online.com/components/products/datasheet/7687709152.pdf",
+      "package": "WE-PD HV 1280 SMD,12.5x12.5x10.5max",
       "body_or_reservation_mm": [
-        12.3,
-        12.3,
-        10.2
+        12.5,
+        12.5,
+        10.5
       ],
-      "notes": "Standard catalogue Coilcraft part; no custom winding. ManufacturerMOQ1price$3.68;Findchipsmanufacturerfeedreports1077,notdirectliveconfirmed/reserved. Confirm actualvendoravailabilityatcheckout. ±10%L/bias/hotpaper assumptionsnotmeasurement.",
+      "notes": "400V working,520mArms/40K,typ800mA10%Ldrop;2.2ohm max20C DCR. Hot/fault/core-loss measurements remain due. Manufacturer no sensitive traces underneath.",
       "reference_design_mpn": "RDR464 EE10 150turn build",
-      "assembly": "Manufacturerrecommendedtwo5.5x3.0mmpadsat0,±4.75;nonpolarcoil;designpin1LED/pin2FB.No3rdpinorNC."
+      "assembly": "Recommended two5.4x2.9mm lands at0,+/-4.95mm. Projectpin1LED_PLUS,pin2FB_INDUCTOR,nonpolar. Preserve visible winding-dot orientation in manual assembly record."
     },
     {
       "ref": "C6",

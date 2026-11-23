@@ -1,0 +1,158 @@
+{
+  "revision": "SC09-SB01-DRAFT",
+  "actor": "/root/sc09_minimal_cad",
+  "CAD_frozen": true,
+  "candidate_PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "original_PCB_unchanged": true,
+  "changed_CAD_files": [
+    {
+      "path": "E27SC09.pretty/SC09_C1.kicad_mod",
+      "sha256": "8d00a70cdf7256783ffb2e5f0822056be0517e8ca3e07f643785a1ab732475a5"
+    },
+    {
+      "path": "E27SC09.pretty/SC09_R6.kicad_mod",
+      "sha256": "de47bf2e0174cd4d5a1297e26e4bfe6c51023c5e4d4af38acdeb9780055726d8"
+    },
+    {
+      "path": "E27SC09.pretty/SC09_RV1.kicad_mod",
+      "sha256": "58cf37871ac60dceaf963c2ad75bdb2455ba01ecf579e967f53c0608dd039dab"
+    },
+    {
+      "path": "E27SC09.pretty/SC09_T1.kicad_mod",
+      "sha256": "0f8b659a90889f8ca037980dee26a5726eceb087593370ae899d29fa3a03e899"
+    },
+    {
+      "path": "Models/SC09_C1.wrl",
+      "sha256": "35741dba8e678013b94db61598d01de11773c59b7dfc0696891d8af87a1d5763"
+    },
+    {
+      "path": "Models/SC09_RV1.wrl",
+      "sha256": "8c24d4e00d45273df7f126e4d9345e6555e3c6fe6db6d4108c5968a372122833"
+    },
+    {
+      "path": "Models/SC09_T1.wrl",
+      "sha256": "9a712881432a6320f18c5ca1a477d50b145f89d479dd4126fa6fc3143917fae3"
+    },
+    {
+      "path": "SC09_compact.kicad_pcb",
+      "sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19"
+    },
+    {
+      "path": "SC09_compact.kicad_sch",
+      "sha256": "1defb94bf56a0afda141c476034cd44dfaf14cce7b2f6b941ca6ca3b5b523976"
+    }
+  ],
+  "physical_membership_comparison_to_independent_retained_CAT01": {
+    "expected_pins": 46,
+    "actual_pins": 46,
+    "differences": {},
+    "passed": true
+  },
+  "native_DRC": {
+    "violations": 0,
+    "unconnected": 0,
+    "schematic_parity": 0
+  },
+  "strict_spacing": {
+    "findings": 23,
+    "passed": false,
+    "interpretation": "Same23numericalintrinsicpackage/shortescapeconditions as baseline; BR1local geometry translated and pad memberships retained. This is not a fabricated fresh approval or a full spacing PASS. Root must refresh bounded assessment and independent review."
+  },
+  "routing_axis45_audit": {
+    "irregular_segments": [],
+    "same_net_collinear_overlaps": []
+  },
+  "magnetic_sensitive_route_audit": {
+    "max_body_rectangle_mm": [
+      114.25,
+      115.75,
+      126.75,
+      128.25
+    ],
+    "basis": "MaximumWE-PD12.5squarebody; projectedonbothfaces; distinguishlow-currentanalogueFBsensepathfrompowerforcebranchofsamename",
+    "sensitive_segment_count": 30,
+    "sensitive_segments_under_body": [],
+    "under_body_FB_force_segments": [
+      {
+        "uuid": "a384d69d-994e-4ee5-97d1-c202a416fdae",
+        "net": "/FB_INDUCTOR",
+        "layer": "F.Cu",
+        "a": [
+          125.45,
+          122.0
+        ],
+        "z": [
+          127.8,
+          122.0
+        ],
+        "axis_or_45deg": true
+      },
+      {
+        "uuid": "1bb169f0-98bf-4cd0-9d15-6036a6be1969",
+        "net": "/FB_INDUCTOR",
+        "layer": "B.Cu",
+        "a": [
+          125.6,
+          119.8
+        ],
+        "z": [
+          127.8,
+          122.0
+        ],
+        "axis_or_45deg": true
+      },
+      {
+        "uuid": "64bc5397-3156-4e2a-9f29-e24915c15677",
+        "net": "/FB_INDUCTOR",
+        "layer": "B.Cu",
+        "a": [
+          125.6,
+          112.0
+        ],
+        "z": [
+          125.6,
+          119.8
+        ],
+        "axis_or_45deg": true
+      }
+    ],
+    "force_purpose": "NewD1.1toT1.2energyforcebranch, not theU1.3Kelvinsenseescape. OriginalU1.3/R5/R6sensejunction remains wholly abovebody. R8/R9powerbleedersunderbodyarenotBP/M/sensecomponents."
+  },
+  "replacement_MPNs": {
+    "RF1": "FW20A47R0JA",
+    "C1": "R76QI24705050J",
+    "RV1": "B72207S0271K101",
+    "T1": "7687709152",
+    "R6": "1206S4F365KT5E",
+    "D1": "US1M-13-F"
+  },
+  "actual_placement_changes_mm": {
+    "C1": [
+      140.6,
+      104
+    ],
+    "T1": [
+      120.5,
+      122
+    ],
+    "RV1": [
+      134,
+      122
+    ],
+    "BR1": [
+      137.8,
+      104.2
+    ],
+    "C4": [
+      134,
+      113.55
+    ]
+  },
+  "outline_changed": false,
+  "remaining_qualifications": [
+    "R6terminationoverlapmanualsolderinspection",
+    "Physicalcurrent/OVP/thermal/faultmeasurementsofchangedparts",
+    "Freshsource-boundintent/spatial/boundedpackageassessmentandreview"
+  ],
+  "write_lease": "Releasedafterhandoff; no further CAD writes without explicit new task"
+}

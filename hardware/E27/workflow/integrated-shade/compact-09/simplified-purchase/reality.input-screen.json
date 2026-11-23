@@ -1,0 +1,38 @@
+{
+  "reviewer": "/root/simple_reality_review",
+  "review_calculation": "Initial unloaded peak-line step through ideal blocking bridge and RF1-C1-L1-C4 Pi network",
+  "parameters": {
+    "VAC": 253,
+    "Rin_ohm": 9.5,
+    "C1_F": 4.465e-08,
+    "C4_F": 1.35e-07,
+    "L1_H": 0.00363,
+    "L1_DCR_ohm": 7.08,
+    "initial_conditions": [
+      0,
+      0,
+      0
+    ],
+    "time_s": 0.001
+  },
+  "results": [
+    {
+      "dt_s": 2.5e-08,
+      "C1_peak_V": 808.8211572439013,
+      "L1_peak_A": 2.0210580120995583,
+      "C4_peak_V": 662.9131130596771
+    },
+    {
+      "dt_s": 1.25e-08,
+      "C1_peak_V": 808.821165503955,
+      "L1_peak_A": 2.0210580120995525,
+      "C4_peak_V": 662.913113059676
+    }
+  ],
+  "limitations": [
+    "Linear L1 is invalid once its quoted small-signal/10%-drop envelope is exceeded. This is an overvoltage flag, NOT a guaranteed upper bound.",
+    "No source impedance beyond RF1, no measured parasitics/MOV/nonlinear inductance/converter load.",
+    "Higher-voltage C1 alone does not prove retained C4, L1, U1, MOV or surge/fault adequacy.",
+    "Calculation is a read-only review finding, not an implemented fix, physical measurement or order/energization authorization."
+  ]
+}

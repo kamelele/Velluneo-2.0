@@ -1,0 +1,70 @@
+{
+  "role": "Change Reviewer",
+  "actor": "/root/simple_change_review",
+  "revision": "SC09-SB01",
+  "read_only": true,
+  "review_input_manifest_sha256": "8035ba4c7b87abf9926d00b1b05ab22d21cbc5357870bcd294a8142d240c8243",
+  "source_PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "manifest_files_verified": 166,
+  "manifest_hash_mismatches": [],
+  "disposition": "ready_for_human_review_of_engineering_candidate_only",
+  "new_defect_findings": [],
+  "independent_checks": {
+    "baseline": "Original source read from preserved SC09_przed_uproszczonym_zakupem.zip, not implementer summary.",
+    "same_reference_set": true,
+    "same_physical_pin_partition": true,
+    "physical_pins": 46,
+    "nets": 11,
+    "independent_intent_vs_fresh_export_same_partition": true,
+    "outline_equal": true,
+    "layers": 2,
+    "changed_placements": [
+      "C1",
+      "C4",
+      "RV1",
+      "T1",
+      "BR1"
+    ],
+    "interfaces_J1_J2_unchanged": true,
+    "project_rules_config_and_consumer_inputs_hash_equal_to_baseline": true,
+    "electrical_substitutions": [
+      "RF1: FW20A10R0JA -> FW20A47R0JA",
+      "C1: B32529E6473K189 -> R76QI24705050J",
+      "RV1: V275LA4P -> B72207S0271K101",
+      "T1: MSS1210H-125KED -> 7687709152",
+      "R6: CRCW12063R65FKEA -> 1206S4F365KT5E",
+      "D1: US1J-13-F -> US1M-13-F"
+    ],
+    "U1_packaging_only": "LYT1603D-TL -> LYT1603D, same device/package; not counted as seventh electrical substitution.",
+    "strict_spacing_independent_comparison": {
+      "baseline_findings": 23,
+      "candidate_findings": 23,
+      "same_counter_of_type_nets_kinds_layer_gap_rounded_4_target": true,
+      "full_pass": false
+    },
+    "native_reports_inspected": "Frozen implementer ERC/DRC/parity reports report zero findings; this reviewer independently loaded both saved native boards and compared semantics rather than rerunning the CLI. Root final integrated run remains integration responsibility."
+  },
+  "regression_assessment": [
+    "T1 larger body and terminal pitch require relocated C1/RV1 and two adjacent components; the five placement changes are consistent with bounded procurement scope.",
+    "No connector movement, net merge/split, pin polarity change, outline expansion, layer change or rule relaxation was found.",
+    "The retained 23 strict-spacing conditions are not newly approved by this review; unchanged numerical signatures do not establish compliance.",
+    "Replacement R6 temperature coefficient, MOV energy rating and T1 magnetic/thermal behavior have changed; updated electrical screens and physical gates must be retained.",
+    "Old release-candidate artifacts are explicitly marked historical and cannot be combined with SB01 native CAD."
+  ],
+  "invalidation_impact": [
+    "Original exact-source fabrication acceptance does not transfer to SB01.",
+    "New component selection and placement require current source-bound electrical, assembly, spatial and thermal review.",
+    "No actual thermal/current/fault/surge measurements are claimed; these remain qualification gates."
+  ],
+  "remaining_conditions": [
+    "Do not claim full spacing, full toolkit release, powered-test approval or final product compliance.",
+    "Root must perform final integration checks and verify published branch/main refs; this reviewer did not independently query remote refs.",
+    "No manufacturing order or supplier submission is authorized by this report."
+  ],
+  "review_limitations": [
+    "Manufacturer/stock evidence and electrical analysis reviewed as supplied engineering inputs; no physical board or bench measurements available.",
+    "No supplier-certified 3D models claimed; maximum-body models remain illustrative."
+  ],
+  "documentation_only_refresh": "Rechecked every input hash and parsed all manifest JSON after structured historical-note correction; PCB, graph and rules unchanged.",
+  "json_parse_failures": []
+}

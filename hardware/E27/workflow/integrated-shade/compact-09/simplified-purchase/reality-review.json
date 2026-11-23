@@ -1,0 +1,124 @@
+{
+  "review_id": "SC09-SB01-REALITY-FINAL",
+  "role": "Reality Checker",
+  "actual_reviewer": "/root/simple_reality_review",
+  "revision": "SC09-SB01",
+  "reviewed_date": "2026-11-23",
+  "candidate_commit": "working candidate bound by exact frozen manifest, not a claimed final commit",
+  "manifest": "work\\Velluneo-2.0\\hardware\\E27\\workflow\\integrated-shade\\compact-09\\simplified-purchase\\review-inputs.json",
+  "manifest_sha256": "8035ba4c7b87abf9926d00b1b05ab22d21cbc5357870bcd294a8142d240c8243",
+  "source_PCB_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "manifest_files_verified": 166,
+  "hash_mismatches": [],
+  "scope": "Minimal procurement revision; laboratory bare PCB, manual assembly; not consumer product approval, energized-test approval or order authorization",
+  "recommendation": "ready_for_human_review",
+  "reason": "No remaining demonstrated static component-selection limit failure in reviewed bounded desk screens after 47 ohm RF1 and 1 kV D1 corrections. Final native topology and sensitive-node geometry checks pass; residual uncertainty is explicitly retained at later release/test gates.",
+  "manufacturing_or_energization_approved": false,
+  "full_strict_spacing_passed": false,
+  "physical_tests_performed": false,
+  "coverage": [
+    "exact frozen sources and manifest hashes",
+    "replacement component ratings and pulse/thermal derating bases",
+    "independent linear startup and damping screens",
+    "native critical pin/net and sense routing checks",
+    "independent KiCad 10.0.6 ERC and DRC/parity reports",
+    "strict-spacing baseline numeric signature comparison"
+  ],
+  "limitations": [
+    "No hardware, EMI, surge, insulation, fault-clearing or thermal measurements",
+    "No warranty that ideal linear LC screen bounds nonlinear choke behavior",
+    "No stock reservation or checkout-confirmed currency/tax/delivery quote",
+    "No automatic transfer of earlier fabrication approval"
+  ],
+  "component_screen": {
+    "T1": "7687709152: 1.5 mH +/-20%, 400 V working, 0.52 Arms, typical 0.8 A at 10% L drop, 2.2 ohm max DCR20C, max body12.5x12.5x10.5mm. Assumed Lmin0.972mH gives minON1.4296us versus1.25us, normal peak0.4867A/extended0.5266A, RMS0.2810/extended0.3040A. Assumptions require physical confirmation.",
+    "C1": "R76QI24705050J:47nF,1000V,pulse3500V/us. Postbridge DC application; not claimed across-line X capacitor.",
+    "RV1": "B72207S0271K101:275VAC,350VDC,21J versus original23J,710V at10A, no ambient derating through105C per TDK. Full coordination not established.",
+    "R6": "1206S4F365KT5E:400ppm/K versus100; limited75K model gives128.755–141.975mA versus129.201–141.463mA before change. Not full controller-temperature bound.",
+    "D1": "US1M-13-F:1000V versus600V, same Diodes US1A-M SMA family/pins,1A/75ns/Vfmax1.7V/30A pulse. Removes close600V reverse headroom concern in linear startup screen, not complete surge proof.",
+    "retained": "U1 unchanged; RF1 family retained but resistance intentionally changed; R7 HVR25,L1,C6 retained. No new topology claimed."
+  },
+  "evidence": [
+    "reality.native.py",
+    "reality.native.json",
+    "reality.ERC.json",
+    "reality.DRC.json",
+    "reality.input-screen.py",
+    "reality.input-screen.json",
+    "reality.damping-screen.py",
+    "reality.damping-screen.json",
+    "work/sc09-simple/t1/7687709152-mfr-mirror.pdf",
+    "final frozen candidate-views/handoff.json",
+    "final frozen prototype gates and power-supply specification"
+  ],
+  "primary_sources": [
+    "https://www.we-online.com/components/products/datasheet/7687709152.pdf",
+    "https://www.tme.eu/Document/e17ad82984cff1e1d067933eb1fdd0b8/KEM_F3034_R76.pdf",
+    "https://www.tme.eu/Document/94891b49d586e9338877713baac923fe/SIOV_Leaded_StandarD.pdf",
+    "https://www.diodes.com/assets/Datasheets/ds16008.pdf"
+  ],
+  "findings": [
+    {
+      "id": "REAL-SB01-01",
+      "severity": "major",
+      "status": "verified_closed",
+      "gate": "desk component selection",
+      "object": "RF1/C1/L1/C4",
+      "problem": "Original retained 10 ohm input resistor produced 662.913 V across 630 V C4 in an independent unloaded linear input-filter step screen.",
+      "consequence": "Specific modeled normal-startup rating flag required correction.",
+      "evidence": "reality.input-screen.py/json; reality.damping-screen.py/json. Final RF1 FW20A47R0JA closes this specific linear screen: C4 588.698 V, C1 706.299 V, L1 differential 324.453 V, C1 dV/dt 179.470 V/us. At 60 mArms, resistance tolerance and 2% hot increase, resistor loss 0.1812 W versus 2 W nominal.",
+      "closure": "47 ohm same-family fusible resistor and 1 kV pulse C1 present in frozen source. Linear-model flag is closed; nonlinear L1, hot startup, pulse life, surge and clearing are not qualified by this calculation.",
+      "owner": "implementer; independent verification /root/simple_reality_review"
+    },
+    {
+      "id": "REAL-SB01-02",
+      "severity": "major",
+      "status": "verified_closed",
+      "gate": "magnetic-sensitive placement",
+      "object": "T1/U1.3/R5.2/BP/M",
+      "problem": "New WE-PD HV manufacturer guidance prohibits sensitive traces underneath the inductor body.",
+      "consequence": "An inherited smaller-body placement could invalidate feedback/noise assumptions.",
+      "evidence": "Final native read-only probe: maximum 12.5 mm square projected body at [114.25,115.75,126.75,128.25]; no BP/M overlap and no overlap of connected U1.3-to-R5.2 sensing path. Power connection terminating at T1.2 is distinguished from low-current sensing.",
+      "closure": "Final native geometry passes this explicitly bounded check. No EMC or dynamic feedback proof inferred.",
+      "owner": "implementer; independent verifier"
+    },
+    {
+      "id": "REAL-SB01-03",
+      "severity": "minor",
+      "status": "verified_closed",
+      "gate": "thermal and electrical planning documentation",
+      "object": "active specification and prototype gates",
+      "problem": "Inherited current, C1 rating-basis and T1 thermal-target statements needed reconciliation with replacement parts and revised losses.",
+      "consequence": "Stale thresholds could mislead prototype testing.",
+      "evidence": "Frozen active metadata retains T1 90 C planning target; C1 individual conservative stop 80 C overrides grouped 85 C; input current reconciled to revised 1.1–2.1 W loss budget. R7 thermal assumptions no longer inherit unrelated VR25 data.",
+      "closure": "Corrected frozen metadata inspected; no measurements claimed.",
+      "owner": "implementer; independent verifier"
+    },
+    {
+      "id": "REAL-SB01-04",
+      "severity": "major",
+      "status": "open",
+      "gate": "energized testing and functional qualification",
+      "object": "T1/L1/RF1/MOV/U1 and thermal system",
+      "problem": "No physical startup, steady-state, fault, hot-restart, surge or temperature measurements exist for the replacement magnetic component and protection combination.",
+      "consequence": "Desk screens cannot establish reliable current regulation, actual saturated inductance, AC core loss, MOV/fuse coordination or safe fault behavior.",
+      "evidence": "Declared no_physical_measurements; prototype-gates.SB01.json. T1 0.8 A Isat is typical at 10% inductance drop, not an absolute current maximum. 0.52 Arms rating and assumed core-loss/thermal resistance do not bound all real switching losses. Conditional 58–107 C estimate exceeds retained 90 C target in its high case.",
+      "closure": "Competent controlled lab measurements with declared stop conditions: LED current/ripple, peak startup and restart currents/voltages, hot operation at 40 C ambient, T1 temperature and current-limit recovery; nonlinear L1/surge/fault/protection verification. Do not claim closure from appearance, Isat comparison or resistor energy integral.",
+      "owner": "prototype test owner"
+    },
+    {
+      "id": "REAL-SB01-05",
+      "severity": "major",
+      "status": "open",
+      "gate": "exact-snapshot fabrication/release scope",
+      "object": "23 strict-spacing findings",
+      "problem": "Full strict-spacing check still FAILS. Twenty-three reported numeric violation signatures match the prior baseline; matching does not transfer prior human acceptance to this changed source.",
+      "consequence": "Cannot label this new candidate fully spacing-passed or generally safety-qualified.",
+      "evidence": "Independent Counter comparison of sorted nets/kinds, conservative gap rounded to 4 decimals and target: baseline routing-order-prep/po_poprawkach/checks/strict-spacing.json and final candidate-views/strict-spacing.json both 23 and equal. Native DRC pass uses configured rules and does not override this separate check.",
+      "closure": "Exact new snapshot requires explicit bounded fabrication review/acceptance or design correction meeting stricter targets. All product/energization qualifications remain separate.",
+      "owner": "release decision owner"
+    }
+  ],
+  "earlier_checks_invalidated": "Original prototype acceptance does not cover new magnetic part, changed protection parts, updated footprints or thermal/startup assumptions. New native checks bind this exact board only.",
+  "required_next_evidence": "Human review of exact bounded candidate and residual spacing scope before fabrication release; later measured bring-up and protection/thermal qualification before any functional safety claims."
+}

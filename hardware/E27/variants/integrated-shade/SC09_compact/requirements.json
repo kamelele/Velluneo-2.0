@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "Velluneo_SC09_compact",
-  "revision": "SC09-CAT01",
+  "revision": "SC09-SB01",
   "subsystems": [
     {
       "id": "DRIVER",
@@ -645,5 +645,18 @@
       "scope": "BoundedpaperOVP/discharge/energycalculationsonly;nosinglefaultsurgephysicalpass."
     }
   ],
-  "catalogue_revision_notice": "Existing EV-* and A/A1 approvals are historical and not approval of changed CAT01 pins/parts. Active current evidence: catalogue-engineering-status.json. Full product release is not passed."
+  "catalogue_revision_notice": "Existing EV-* and A/A1 approvals are historical and not approval of changed CAT01 pins/parts. Active current evidence: catalogue-engineering-status.json. Full product release is not passed.",
+  "SB01_current_engineering_basis": {
+    "outline_mm": [
+      51.2,
+      33
+    ],
+    "driver_loss_planning_W": [
+      1.1,
+      2.1
+    ],
+    "MOV": "B72207S0271K101 straightP5",
+    "T1": "7687709152 catalogue WE-PD HV",
+    "precedence": "These current SB01 fields supersede historical CAT01/custom-coil and earlier50x32 text; old owner records remain historical, no new release approval."
+  }
 }

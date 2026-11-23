@@ -1,0 +1,186 @@
+{
+  "actor": "/root/sc09_t1_purchase",
+  "date": "2026-11-23",
+  "input_revision": "SC09-ROUTE05 originally b8aeb9d/accepted74ee1; parent now checkpoint74c3ff1",
+  "task": "Find minimum-change cost-effective energy-inductor replacement; preferTME but notmandatory",
+  "selection": "Wurth7687709152 WE-PD HV",
+  "selected_vendor": "DigiKey consolidated basket with other unavoidable originals; NOT claimedTME stock",
+  "decision_level": "Recommended engineering candidate for minimalSC09 laboratory revision; not acceptance, productionqualification or poweredtestauthorization",
+  "primary_source": "https://www.we-online.com/components/products/datasheet/7687709152.pdf",
+  "mirror_saved": "7687709152-mfr-mirror.pdf",
+  "mirror_sha256": "fd6c5daeb38fc93bf408aa9a3aab9c2fcf478dce247a69fb7a2998bd9fa483c8",
+  "drawing_revision": "001.003,2019-05-06",
+  "application_evidence": "https://www.onsemi.com/download/design-notes/pdf/dn05058-d.pdf :off-linebuck85–265VAC100kHz, same1.5mHpart outputenergycoil; not a direct claim of SC09 behavior",
+  "procurement": {
+    "url": "https://www.digikey.pl/en/products/detail/w%C3%BCrth-elektronik/7687709152/4156000",
+    "MOQ": 1,
+    "packaging": "CutTape, noDigiReel",
+    "indexed_stock": 1710,
+    "indexed_stock_freshness": "2weekoldGreekprimary/lastmonthcatalogue; parent must livecheck",
+    "indexed_unit_price_EUR_net": 3.16,
+    "indexed_unit_price_USD_net": 3.56,
+    "same_part_TME": "No exact publiclisting established; absence ofsearchresultisnotproofneveravailable",
+    "cost_advantage": "Eliminates standaloneCoilcraftshipment ifDigiKeybasket alreadyrequired. Unitpricecomparable, savingsmostlytransport.",
+    "live_stock": 1710,
+    "live_unit_price_PLN_net": 13.84,
+    "live_unit_price_PLN_gross": 17.0232,
+    "live_evidence_actor": "/root",
+    "live_evidence_note": "Root reports direct rendered DigiKey Polish product page confirmed this turn. Root owns the source snapshot; indexed values retained only as history."
+  },
+  "geometry": {
+    "body_max_XYZ_mm": [
+      12.5,
+      12.5,
+      10.5
+    ],
+    "nominal_body_XY_mm": [
+      12,
+      12
+    ],
+    "land_pattern_verified": "Visually inspected manufacturer-authored mirrored PDF page1, same revision001.003/2019-05-06 as official primary parsed PDF",
+    "pad_dimensions_mm": [
+      5.4,
+      2.9
+    ],
+    "pad_centres_mm": {
+      "1": [
+        0,
+        4.95
+      ],
+      "2": [
+        0,
+        -4.95
+      ]
+    },
+    "pad_centre_separation_mm": 9.9,
+    "land_outer_span_mm": 12.8,
+    "minimum_courtyard_envelope_mm": [
+      13,
+      13.3
+    ],
+    "suggested_courtyard_halfspan_mm": [
+      6.5,
+      6.65
+    ],
+    "no_sensitive_traces_underneath": true,
+    "existing_MSS1210H_lands_mm": {
+      "pad_size": [
+        5.5,
+        3
+      ],
+      "centres": {
+        "1": [
+          0,
+          4.75
+        ],
+        "2": [
+          0,
+          -4.75
+        ]
+      },
+      "body_max": [
+        12.3,
+        12.3,
+        10.2
+      ]
+    },
+    "independent_intended_physical_membership": {
+      "T1.1": "LED_PLUS",
+      "T1.2": "FB_INDUCTOR"
+    },
+    "pin_intent_basis": "Two-terminal nonpolar energy inductor per exact manufacturer schematic and SC09 circuit contract. Numbers are design-assigned since manufacturer does not label 1/2 in this drawing. Winding-start dot orientation should be documented for repeatable EMC; it is not electrical polarity or a third connection. No NC.",
+    "changed_connectivity": false,
+    "changed_part_and_land_geometry": true,
+    "CAD_placement_rotation": "Coordinates above local unrotated footprint; preserve existing localpin1/pin2 mapping when rotating/mirroring."
+  },
+  "calculations": {
+    "kind": "Conditional arithmetic engineering screen, not measured or manufacturer guaranteed hot limits",
+    "normal_Ipeak_A": 0.4867324738114424,
+    "extended_Ipeak_min_A": 0.4497505082123992,
+    "extended_Ipeak_max_A": 0.526596469045526,
+    "sense_screen_basis": "Retained existing TME R5/R6 extended tolerance/TCR/life/FB reserve model; use current actual BOM owner figures if changed",
+    "triangle_RMS_nom_A": 0.28101512477836876,
+    "triangle_RMS_max_A": 0.3040306131577409,
+    "Lnom_H": 0.0015,
+    "Lmin_tolerance_only_H": 0.0012000000000000001,
+    "Lmin_assumed_hot_bias_H": 0.0009720000000000002,
+    "Lmin_assumption_factors": [
+      0.8,
+      0.9,
+      0.9
+    ],
+    "Lmax_tolerance_H": 0.0018,
+    "Lrequired_for_min_on_H": 0.0008499046296129417,
+    "minimum_on_screen_us": 1.4295721633535852,
+    "minimum_on_limit_us": 1.25,
+    "minimum_on_margin_percent": 14.365773068286813,
+    "max_normal_voltage_across_inductor_V": 305.7960312803931,
+    "working_voltage_max_V": 400,
+    "fixed_peak_triangle_frequency_at52V_Hz": 101662.72386336762,
+    "fixed_peak_triangle_frequency_at68V_Hz": 125987.62803876307,
+    "frequency_model_limit": "CrM triangle toy model. Actual controller line modulation/forced frequency/core loss must be measured;100kHz test frequency is not a maximum operating frequency.",
+    "DCRmax20C_ohm": 2.2,
+    "DCRmax100C_Cu_model_ohm": 2.8916800000000005,
+    "DCRmax125C_Cu_model_ohm": 3.1078300000000003,
+    "Cu_loss_nominal20C_W": 0.17373290077924478,
+    "Cu_loss_extended100C_W": 0.26729132385121607,
+    "Cu_loss_extended125C_W": 0.28727106561048416,
+    "rated_DC_current_40K_rise_A": 0.52,
+    "normal_RMS_fraction_of_IR": 0.5846742560725786,
+    "saturation_10pct_typ20C_A": 0.8,
+    "normal_peak_fraction_of_typ_Isat": 0.6582455863069075,
+    "stored_energy_nominalL_peakmax_J": 0.00020797788090841173,
+    "core_loss_assumed_W": [
+      0.1,
+      0.4
+    ],
+    "thermal_resistance_assumed_K_per_W": [
+      50,
+      100
+    ],
+    "conditional_coil_body_at40ambient_C": [
+      58.3645661925608,
+      106.72913238512162
+    ],
+    "thermal_model_limit": "Only copper loss is calculated. Core-loss and theta ranges are explicit borrowed planning assumptions, not datasheet/measured quantities.58–107C conditional isNOT guaranteed; desired measurement target<=100C isproposedplanningtarget (not asserted priorownerapproval); absolute125Cpartmax. Rootmustbind actualthermal acceptancecriterion.",
+    "output_current_effect": "Nominal sense resistors and controller fixed peak estimate retained, about135.2mA total /133.4mA LED at60V. New L changes switching frequency/current timing, requires retuning/measurement per manufacturer; do not claim optical/current guarantee.",
+    "capacitor_ripple_screen_RMS_A": 0.2665290085695101,
+    "ripple_model_limit": "Fulltriangle toy currentoccupancy gives upperplanning estimate, not100Hz outputvoltage ripple or controller actualwaveform."
+  },
+  "fault_scope": {
+    "LYT_AR_limiter_25C_A": [
+      1.06,
+      1.24
+    ],
+    "limiter_test_dIdt_A_per_us": 0.446,
+    "fault_no_saturation_required": false,
+    "reason": "Isat specifies chosenLdrop, not absolutecurrentrating. OriginalCoilcraft10pctIsat.69A isalsobelow1.24Afaultlimiter. NewWurth.8AtypIsat10pct improvesnormalheadroom; typicalLvsI graph shows gradualreduction around~.6–.7mHat1.24A, but graphisnot hot/minimumguarantee.",
+    "not_closed": "Fault/startup waveform, currentlimiterovershoot with saturatedL and actualhigh-line, auto-restartduty, hotwinding/coretemperature and repeatedfaultsurvival remain unmeasured. Do not claim fusecyclebycyclecurrentlimiting or infer safe faultenergy fromnominalL. Retain boundedcontainedlabbringup/faultqualification gate.",
+    "qualification_change": "Oldphysicalresultnone; retain explicit unmeasuredfaultgate with newpart-specific measurements. Paper data support normal-operation prototype selection, not fullsafety.",
+    "surge_voltage_gate": "Normal computed differential voltage305.8V isbelow400V; actual turn-on/surge/fault windingvoltage mustalso remainbelow400V. No higher pulsevoltage claim inferred from hipot or qualitativeHV name."
+  },
+  "rejected_TME_candidates": [
+    {
+      "part": "FERROCORECOIL1.2",
+      "reason": "Stock2056fromrootfreshcheck;1.2mH/.6Alabelbut noverifiedworkingvoltage/definedsaturation/hotbias/ACcoreloss; THTP5differentfootprint; cannotapprove solelymatchingL."
+    },
+    {
+      "part": "JANTEKJNRH1207-102M-A",
+      "reason": "1mH20pct; applying.8*.9*.9Lscreen yields.648mH andabout.95us minON withextendedimin, below1.25us. WorkingHVnotconfirmed."
+    },
+    {
+      "part": "MYRRA74089",
+      "reason": "RealHVsuitablemagneticcandidate but21×21×22mm andninepinslarge versus2terminal12.5squareWurth, lacksDCR/corelossandretainsfaultgate. Notminimumchange."
+    },
+    {
+      "part": "Murata1415513C",
+      "reason": "TMEcatalogue3indexedstock1.5mH1.3A,24.4mmouterdiameter,14mmheight; noverifiedcontinuousHVratingor132kHzcoreloss. Too largefornecessity."
+    }
+  ],
+  "written_paths": [
+    "work/sc09-simple/t1/"
+  ],
+  "active_CAD_modified": false,
+  "BOM_modified": false,
+  "order": false
+}
