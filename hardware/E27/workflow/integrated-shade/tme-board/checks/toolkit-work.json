@@ -1,0 +1,959 @@
+{
+  "schema_version": 1,
+  "mode": "work",
+  "time_utc": "2026-11-23T16:28:30.483317+00:00",
+  "ruleset_version": "0.7.1",
+  "errors": [
+    "Requirements: OPEN-TME-STOCK: Unresolved: Confirm current positive prototype-quantity availability for every exact selected MPN; cached counts are not live stock.",
+    "Requirements: OPEN-FAULT-T1: Unresolved: Qualify bounded fault waveform within allowed magnetic current/temperature or redesign independent current limiting/magnetic.",
+    "Requirements: OPEN-INPUT-TRANSIENT: Unresolved: Obtain transient differential/L-bias/pulse data or select/reconfigure qualifiedfilter; measure using separately approved contained fixture. Both630Vcapacitors do not establish a surge bound.",
+    "Requirements: OPEN-FUSE-COORDINATION: Unresolved: Coordinate exact totalclearing vs resistor pulse/overload; limit prospective fault current to fuse rating includingMOVshort; establish rating applicability at253VAC.",
+    "Requirements: OPEN-SURGE-THERMAL-OVP: Unresolved: Verify actual hot current, magnetic losses/bias, coilambient<=50C, OVP overshoot<=90V, voltage/current waveforms, surge/EMC and capacitor ripple/sharing. Neither CAD nor calculations imply measurements.",
+    "Requirements: OPEN-NEW-STAGE-REVIEW: Unresolved: Review concrete final candidate packet; no stage/release acceptance invented from oldSC09 approvals.",
+    "Requirements: OPEN-SPACING: Unresolved: Resolve all231pair functional-spacing findings with actual electrical rationale/design changes and specific authorized review; no inheritedSC09exceptions.",
+    "Requirements: OPEN-INTERFACES: Unresolved: Bind exact guardedlabfixture,input/sourcefaultlimits and LEDmodule interface revisions before powered testing; current power-supply-specification and bring-up-gates do not establish approvedexternalinterfaces.",
+    "Requirements: TME-PROCUREMENT: Required evidence kind absent: review",
+    "Requirements: INPUT-EU230: Required evidence kind absent: review",
+    "Requirements: LED-800LM: Required evidence kind absent: review",
+    "Requirements: FAULT-CONTAINMENT: Required evidence kind absent: review",
+    "Requirements: GRAPH-EXACT: Required evidence kind absent: review",
+    "Requirements: COMPACT-PCB: Required evidence kind absent: review",
+    "Requirements: ROUTING: Required evidence kind absent: review",
+    "Requirements: THERMAL: Required evidence kind absent: review",
+    "Spatial: Spatial contract lacks current human approval",
+    "Connectivity: missing_stale_intent_approval: Intent lacks current human approval evidence"
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\Plytka_TME.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\.work\\erc.json",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\Plytka_TME.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC10_TME/.work/erc.json\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    },
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\.work\\drc.json",
+        "--refill-zones",
+        "--schematic-parity",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\Plytka_TME.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to C:/Users/kamil/Documents/Codex/2026-11-19/znajd-na-githubie-veluneo-2-0/work/Velluneo-2.0/hardware/E27/variants/integrated-shade/SC10_TME/.work/drc.json\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  },
+  "requirements": {
+    "schema_version": 1,
+    "stage": "routing",
+    "errors": [
+      {
+        "id": "OPEN-TME-STOCK",
+        "gate": "specification",
+        "message": "Unresolved: Confirm current positive prototype-quantity availability for every exact selected MPN; cached counts are not live stock."
+      },
+      {
+        "id": "OPEN-FAULT-T1",
+        "gate": "schematic",
+        "message": "Unresolved: Qualify bounded fault waveform within allowed magnetic current/temperature or redesign independent current limiting/magnetic."
+      },
+      {
+        "id": "OPEN-INPUT-TRANSIENT",
+        "gate": "schematic",
+        "message": "Unresolved: Obtain transient differential/L-bias/pulse data or select/reconfigure qualifiedfilter; measure using separately approved contained fixture. Both630Vcapacitors do not establish a surge bound."
+      },
+      {
+        "id": "OPEN-FUSE-COORDINATION",
+        "gate": "schematic",
+        "message": "Unresolved: Coordinate exact totalclearing vs resistor pulse/overload; limit prospective fault current to fuse rating includingMOVshort; establish rating applicability at253VAC."
+      },
+      {
+        "id": "OPEN-SURGE-THERMAL-OVP",
+        "gate": "routing",
+        "message": "Unresolved: Verify actual hot current, magnetic losses/bias, coilambient<=50C, OVP overshoot<=90V, voltage/current waveforms, surge/EMC and capacitor ripple/sharing. Neither CAD nor calculations imply measurements."
+      },
+      {
+        "id": "OPEN-NEW-STAGE-REVIEW",
+        "gate": "schematic",
+        "message": "Unresolved: Review concrete final candidate packet; no stage/release acceptance invented from oldSC09 approvals."
+      },
+      {
+        "id": "OPEN-SPACING",
+        "gate": "placement",
+        "message": "Unresolved: Resolve all231pair functional-spacing findings with actual electrical rationale/design changes and specific authorized review; no inheritedSC09exceptions."
+      },
+      {
+        "id": "OPEN-INTERFACES",
+        "gate": "schematic",
+        "message": "Unresolved: Bind exact guardedlabfixture,input/sourcefaultlimits and LEDmodule interface revisions before powered testing; current power-supply-specification and bring-up-gates do not establish approvedexternalinterfaces."
+      },
+      {
+        "id": "TME-PROCUREMENT",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "INPUT-EU230",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "LED-800LM",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "FAULT-CONTAINMENT",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "GRAPH-EXACT",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "COMPACT-PCB",
+        "gate": "placement",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "ROUTING",
+        "gate": "routing",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "THERMAL",
+        "gate": "routing",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "matrix": [
+      {
+        "id": "TME-PROCUREMENT",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "TME-PROCUREMENT",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "INPUT-EU230",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "INPUT-EU230",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "LED-800LM",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "specification",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "LED-800LM",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "FAULT-CONTAINMENT",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "FAULT-CONTAINMENT",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "GRAPH-EXACT",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "schematic",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "GRAPH-EXACT",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "COMPACT-PCB",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "placement",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "COMPACT-PCB",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "ROUTING",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "ROUTING",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "THERMAL",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "routing",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "THERMAL",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "blocked"
+      },
+      {
+        "id": "MANUAL-LAB",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "MANUAL-LAB",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      },
+      {
+        "id": "PRESERVE-ORIGINAL",
+        "revision": "SC10-TME-A-DRAFT",
+        "owner": "Codex-root",
+        "type": "requirement",
+        "gate": "release",
+        "implementation": [
+          {
+            "subsystem": "DRIVER",
+            "object": "PRESERVE-ORIGINAL",
+            "path": "design-brief.json"
+          }
+        ],
+        "required_kind": "review",
+        "evidence_ids": [],
+        "observed_levels": [],
+        "status": "not_due"
+      }
+    ],
+    "open_questions": [
+      {
+        "id": "OPEN-TME-STOCK",
+        "record_id": "TME-PROCUREMENT",
+        "blocks_stage": "specification",
+        "owner": "procurement/root",
+        "question": "Confirm current positive prototype-quantity availability for every exact selected MPN; cached counts are not live stock.",
+        "field": "qualification",
+        "status": "open"
+      },
+      {
+        "id": "OPEN-FAULT-T1",
+        "record_id": "FAULT-CONTAINMENT",
+        "blocks_stage": "schematic",
+        "owner": "electrical/root",
+        "question": "Qualify bounded fault waveform within allowed magnetic current/temperature or redesign independent current limiting/magnetic.",
+        "field": "qualification",
+        "status": "open"
+      },
+      {
+        "id": "OPEN-INPUT-TRANSIENT",
+        "record_id": "INPUT-EU230",
+        "blocks_stage": "schematic",
+        "owner": "electrical/root",
+        "question": "Obtain transient differential/L-bias/pulse data or select/reconfigure qualifiedfilter; measure using separately approved contained fixture. Both630Vcapacitors do not establish a surge bound.",
+        "field": "qualification",
+        "status": "open"
+      },
+      {
+        "id": "OPEN-FUSE-COORDINATION",
+        "record_id": "FAULT-CONTAINMENT",
+        "blocks_stage": "schematic",
+        "owner": "electrical/root",
+        "question": "Coordinate exact totalclearing vs resistor pulse/overload; limit prospective fault current to fuse rating includingMOVshort; establish rating applicability at253VAC.",
+        "field": "qualification",
+        "status": "open"
+      },
+      {
+        "id": "OPEN-SURGE-THERMAL-OVP",
+        "record_id": "THERMAL",
+        "blocks_stage": "routing",
+        "owner": "electrical/root",
+        "question": "Verify actual hot current, magnetic losses/bias, coilambient<=50C, OVP overshoot<=90V, voltage/current waveforms, surge/EMC and capacitor ripple/sharing. Neither CAD nor calculations imply measurements.",
+        "field": "qualification",
+        "status": "open"
+      },
+      {
+        "id": "OPEN-NEW-STAGE-REVIEW",
+        "record_id": "GRAPH-EXACT",
+        "blocks_stage": "schematic",
+        "owner": "Kamil",
+        "question": "Review concrete final candidate packet; no stage/release acceptance invented from oldSC09 approvals.",
+        "field": "qualification",
+        "status": "open"
+      },
+      {
+        "id": "OPEN-SPACING",
+        "record_id": "ROUTING",
+        "blocks_stage": "placement",
+        "owner": "Codex-root",
+        "question": "Resolve all231pair functional-spacing findings with actual electrical rationale/design changes and specific authorized review; no inheritedSC09exceptions.",
+        "field": "functional_clearances",
+        "status": "open"
+      },
+      {
+        "id": "OPEN-INTERFACES",
+        "record_id": "INPUT-EU230",
+        "blocks_stage": "schematic",
+        "owner": "Codex-root/Kamil",
+        "question": "Bind exact guardedlabfixture,input/sourcefaultlimits and LEDmodule interface revisions before powered testing; current power-supply-specification and bring-up-gates do not establish approvedexternalinterfaces.",
+        "field": "external_fixture_and_LED_interfaces",
+        "status": "open"
+      }
+    ],
+    "passed": false,
+    "limitations": [
+      "Declared contracts are not compared to CAD netlists or geometry (#9/#11).",
+      "Hashes establish freshness, not evidence truth or reviewer authority.",
+      "Electrical checks compare declared DC envelopes only, not complete operation."
+    ],
+    "intent_digest": "a442598e6337b0b7de71adcf78afef714efda00aeaab48e8af2e860b83979545",
+    "product": "Plytka_TME",
+    "revision": "SC10-TME-A-DRAFT",
+    "document_sha256": "ec77866bac772969700fc00430293ed7bdd63a83ce1d6afb5a5e8e6be445f969",
+    "blockers": [
+      {
+        "id": "OPEN-TME-STOCK",
+        "gate": "specification",
+        "message": "Unresolved: Confirm current positive prototype-quantity availability for every exact selected MPN; cached counts are not live stock."
+      },
+      {
+        "id": "OPEN-FAULT-T1",
+        "gate": "schematic",
+        "message": "Unresolved: Qualify bounded fault waveform within allowed magnetic current/temperature or redesign independent current limiting/magnetic."
+      },
+      {
+        "id": "OPEN-INPUT-TRANSIENT",
+        "gate": "schematic",
+        "message": "Unresolved: Obtain transient differential/L-bias/pulse data or select/reconfigure qualifiedfilter; measure using separately approved contained fixture. Both630Vcapacitors do not establish a surge bound."
+      },
+      {
+        "id": "OPEN-FUSE-COORDINATION",
+        "gate": "schematic",
+        "message": "Unresolved: Coordinate exact totalclearing vs resistor pulse/overload; limit prospective fault current to fuse rating includingMOVshort; establish rating applicability at253VAC."
+      },
+      {
+        "id": "OPEN-SURGE-THERMAL-OVP",
+        "gate": "routing",
+        "message": "Unresolved: Verify actual hot current, magnetic losses/bias, coilambient<=50C, OVP overshoot<=90V, voltage/current waveforms, surge/EMC and capacitor ripple/sharing. Neither CAD nor calculations imply measurements."
+      },
+      {
+        "id": "OPEN-NEW-STAGE-REVIEW",
+        "gate": "schematic",
+        "message": "Unresolved: Review concrete final candidate packet; no stage/release acceptance invented from oldSC09 approvals."
+      },
+      {
+        "id": "OPEN-SPACING",
+        "gate": "placement",
+        "message": "Unresolved: Resolve all231pair functional-spacing findings with actual electrical rationale/design changes and specific authorized review; no inheritedSC09exceptions."
+      },
+      {
+        "id": "OPEN-INTERFACES",
+        "gate": "schematic",
+        "message": "Unresolved: Bind exact guardedlabfixture,input/sourcefaultlimits and LEDmodule interface revisions before powered testing; current power-supply-specification and bring-up-gates do not establish approvedexternalinterfaces."
+      },
+      {
+        "id": "TME-PROCUREMENT",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "INPUT-EU230",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "LED-800LM",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "FAULT-CONTAINMENT",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "GRAPH-EXACT",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "COMPACT-PCB",
+        "gate": "placement",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "ROUTING",
+        "gate": "routing",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "THERMAL",
+        "gate": "routing",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "MANUAL-LAB",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "PRESERVE-ORIGINAL",
+        "gate": "release",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "blocked_stages": [
+      "specification",
+      "schematic",
+      "placement",
+      "routing",
+      "release"
+    ]
+  },
+  "snapshot": "fe59eb853e7ee3bc6f550894ba9852120ed6a5cf20da494a7a8b77034429785c",
+  "input_hashes": {
+    ".electronics-rules/config-state.json": "6354cb181488571f1fb1d6ba02ebf43ccaadb4f414e3e0bfffbf233355f722f1",
+    ".electronics-rules/placement-input.json": "917f5751ae0442a78fcea5129da85e6ac910076b2645ba7e594117409b804696",
+    ".electronics-rules/routing-input.json": "917f5751ae0442a78fcea5129da85e6ac910076b2645ba7e594117409b804696",
+    "AGENTS.md": "e8971c6193d982f58dc368d80748a934067b11401d1dc0529d02302a141d6634",
+    "bom-build.json": "9dd8ce0a381ece0fe73c49ac386807284b98f75507219fb783f8fc7c156124c4",
+    "bring-up-gates.json": "13f7e3814e38b06abba7684e4d1d85ccdccab6809c5458c8ab8c4dccacd84fb7",
+    "design-brief.json": "ec3c4fb7d3988227943088fa87f92a390475d3c3ce0c81671b860e5c163ca03b",
+    "engineering/electrical-calculations.json": "c01f8b0d43a6a096e55ca39a5ab066175f56ae45fa97be1701781e418210a15f",
+    "engineering/electrical-calculations.md": "9e7165969a5bc10bbc3c5fa975b5094846a43fa4de1378a2efd4d72cbc8871de",
+    "engineering/input-filter-screen.json": "1b252594f863ec78dceb53adb9c3a526abe1abf12a121c9c68aad9e82b224453",
+    "engineering/L1-research.json": "d3d4ceb72861c1e8443fed8400fa92228f6f2d045d40fd1b15168c76fdddbb27",
+    "engineering/magnetic-research.json": "71e771fff26fe523673a888ae781c18321a5e4b6cae6413d0af49595a8056ebc",
+    "engineering/procurement-research.json": "67415bed11bdd2272f0209af97972fa69dbff24d610695a7de6ae29c4f403c4e",
+    "engineering/procurement-research.md": "84167ce9f700336eb1037e3d7e74cdba58a660bbba380a42aecb24bc8f91cce4",
+    "engineering/procurement.TME-A.json": "03671aff70dacde6a0d34f69bb99cf5108cc39d2896d8496908d3b9cfd6605fd",
+    "engineering/stock-observations.json": "b1f6766efe37cdfa4236dd2bed8627d6348ba673d855aaebeb9945180e98528c",
+    "engineering-status.json": "f6a1d648698677cb1756b6195f1b576ec5021ddf1c95c1b7a0a23ef80b226da8",
+    "footprint-assignments.json": "69d3f781679852c6317dc5b44ebf2877324f15365148d6494f815bc678671c1c",
+    "footprint-geometry.json": "4aabeabe910a234564d4c7111ec1e260834b9d8b5e7a715fc3528dd6cc126e96",
+    "fp-lib-table": "7382a60ba8992a65542babfbbf106ad6160f961f765fa99759c545ff027d44c8",
+    "functional-blocks.TME-A.json": "75d89538d176729be0f26f70ba4acb223b55086206e8e94ed2d8f4b15f059699",
+    "functional-spacing-targets.json": "be671f29e206f3e7b73c5c8448528015eb4784b9081d6abd2cf8865cd944f984",
+    "intended-connectivity.TME-A.json": "e64e7818b40eaf00373b5ec7a179f2797f1626bda686f1499331d5bda7b53747",
+    "intended-connectivity.toolkit.json": "33390644fe492feaae847dac8ffbc675a12ac5b0d6e77c1769115fd43a1d2311",
+    "manual-assembly-plan.json": "c6a48d86d6e4030702d02508d7b31a71737732485e6aec1d11a5ff104a1dac50",
+    "Models/TME_BR1.wrl": "c71405ef69b4e562b61f3aec7fa2d65c6c2b5721771478ac422aa820388259db",
+    "Models/TME_C1.wrl": "5bf62396f5bee7de55af987e998bcfd56d33297e812cae1402aea1b35f5d00ab",
+    "Models/TME_C4.wrl": "5bf62396f5bee7de55af987e998bcfd56d33297e812cae1402aea1b35f5d00ab",
+    "Models/TME_C5.wrl": "2f363859e19cb7b09706e515e0026efcb2ef27474d442014e8f1f6b6d72cb34e",
+    "Models/TME_C6.wrl": "8602f13cfc588ffb5983689dc4642c35229910afb65151e5ea5043fc7729d9f4",
+    "Models/TME_C7.wrl": "8602f13cfc588ffb5983689dc4642c35229910afb65151e5ea5043fc7729d9f4",
+    "Models/TME_C8.wrl": "8602f13cfc588ffb5983689dc4642c35229910afb65151e5ea5043fc7729d9f4",
+    "Models/TME_D1.wrl": "8e4b390cdb6c42b235f27be2aa4093e91caa40d60d56f6723d0b26946b3e2711",
+    "Models/TME_F1.wrl": "e2cd14168a9d7c43ada394c077f27bac5186cd72ad71049699ed27a74b085206",
+    "Models/TME_J1.wrl": "5ccca5658f0e5bb037a6155aa1a7f01a4819067f8287f3496a4d409170547830",
+    "Models/TME_J2.wrl": "5ccca5658f0e5bb037a6155aa1a7f01a4819067f8287f3496a4d409170547830",
+    "Models/TME_L1.wrl": "b2de1ae3c47136995a94d3fd6dba0ac3be98a52172e277052bff7d79820505c9",
+    "Models/TME_R1.wrl": "01ac8a4ba888c76de577c53497b0718ebf7c3533aa1084fe81b035ee6c8d49b6",
+    "Models/TME_R10.wrl": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+    "Models/TME_R11.wrl": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+    "Models/TME_R12.wrl": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+    "Models/TME_R4.wrl": "e204a92ee455e6a2b77ad5b09e24b20ce7907d21e76d87a9b215d231233cb4c6",
+    "Models/TME_R5.wrl": "7d385d96481a987a4dc1dbdab32b84fb607279f7736841c379b4b0a8ec360f51",
+    "Models/TME_R6.wrl": "5c8ddbaa29d14a98da67371af2ed189874c0784b5ac9d0b46f1b465c8cb146fc",
+    "Models/TME_R7.wrl": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+    "Models/TME_R8.wrl": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+    "Models/TME_R9.wrl": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+    "Models/TME_RV1.wrl": "fc15676cebbf23977ab1a8a99fdf9adaffa428531c7871f7235971dd21cf9f33",
+    "Models/TME_T1.wrl": "94165042d1e5cd7d4295d8678fe9497cd759e161ed48c85b02f018a8210a9e24",
+    "Models/TME_U1.wrl": "6a5357ceadedcbfdb177e47c7bd26ae09ae58046bfebf32a3f2ee8f5e567f36d",
+    "owner-TME-variant-request.json": "e931396709294d98a817ae686572987fa2c9c3c36d2c461d7cc4e1c57a3d2092",
+    "Plytka_TME.kicad_dru": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3",
+    "Plytka_TME.kicad_pcb": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+    "Plytka_TME.kicad_pro": "7d6b53947e74514c2b7302f73773c836646022d093c8544c62f9bfbe93300d88",
+    "Plytka_TME.kicad_sch": "6b7fc1df705d390128148a4a016f1157506ce84ec219a06472fe5e294bd3dbaf",
+    "PlytkaTME.kicad_sym": "ec9b4404930eb1c8b0a9190715d1a64e9b9c1ff5af514825df5f39c82582293e",
+    "PlytkaTME.pretty/TME_BR1.kicad_mod": "0d75850d6ca5b2faf4fa83ab5401560b601c20fdf4e7b49957c23870c51e5715",
+    "PlytkaTME.pretty/TME_C1.kicad_mod": "b6fc3d07d04a32c5cc503cdff1793a01c254f3af7cb89a0b0d64533d81f49a5c",
+    "PlytkaTME.pretty/TME_C4.kicad_mod": "91c29d07388bd26a36686c96217db2a66e9a559a395ceb60fcd8fe1a44c68cba",
+    "PlytkaTME.pretty/TME_C5.kicad_mod": "31b711f3e70339017e5a517a8a6b14fc4e9cfa66fe2149546cf1970ebda3a88f",
+    "PlytkaTME.pretty/TME_C6.kicad_mod": "c281e95ecc45bf33afb7c4e2fbd6bc86384561c6afa4ca81239b9b73a0dd8c18",
+    "PlytkaTME.pretty/TME_C7.kicad_mod": "7695074d3f81ef53c0203a1eac963892a488815c5c680726742fef60d0c028bb",
+    "PlytkaTME.pretty/TME_C8.kicad_mod": "7f12f7fe4fb1fdfea58ac9cc7d81be93d40d3c1f1a0988865d465a1e31943fce",
+    "PlytkaTME.pretty/TME_D1.kicad_mod": "0f1d5051a7e286e015e53747d192a499f2c030aa1302ab739c30b18ce9b88060",
+    "PlytkaTME.pretty/TME_F1.kicad_mod": "fe30339104d213f27616c0f8baf6df0f613e49ffde44c16a697f1a98b0c5761a",
+    "PlytkaTME.pretty/TME_J1.kicad_mod": "b44440fc4c3163f3b9dc26f0e06e4e517aecc522e85fdcf237c4b67455a9a6d0",
+    "PlytkaTME.pretty/TME_J2.kicad_mod": "b08a8f1d892023e19eed0a346a10ce3c234d99c81bc6490600dc8b734e0b3759",
+    "PlytkaTME.pretty/TME_L1.kicad_mod": "2a050778a6a0c51c3649f4f721246d67f9c19aadc49a0a6c0a24a0ecfc70c455",
+    "PlytkaTME.pretty/TME_R1.kicad_mod": "e7d597e3c94bfac3fb2d56702662cc01d69f119f72afd021d47466fbba58f3a4",
+    "PlytkaTME.pretty/TME_R10.kicad_mod": "a4b536b4b6e9ffd530c030e39138f549bc24044078e1486efd33604c2d11c03f",
+    "PlytkaTME.pretty/TME_R11.kicad_mod": "dbcb38bead75c91723065a8cb5d0455e29f8e06f11c1ab9e098b23368bd142cd",
+    "PlytkaTME.pretty/TME_R12.kicad_mod": "00c18598eae99143938887a55cd41f6ab3e285c9e0bf3019ed4d03e507c443c2",
+    "PlytkaTME.pretty/TME_R4.kicad_mod": "0923ee7a44321afdfd853379a5ca784f1204279ac3ee0340e6208e74bcb8d4b5",
+    "PlytkaTME.pretty/TME_R5.kicad_mod": "00b3c8b1e2c7bc143cc988f6fb0da3d88cdaa16a1031f9720cdf1300e7b7fe3a",
+    "PlytkaTME.pretty/TME_R6.kicad_mod": "4702f5022410b2158ef29a098ce225e21198b97efc44c5483df7e4001ef78c24",
+    "PlytkaTME.pretty/TME_R7.kicad_mod": "59d4682c0e969cfe984337ca13757d109cefa396d99059f1dbeb4c3bc38988a0",
+    "PlytkaTME.pretty/TME_R8.kicad_mod": "761984902e0f1c2eb553d7e8f2854388eaa3e2ac0c7e1a56431847d065a7678b",
+    "PlytkaTME.pretty/TME_R9.kicad_mod": "1278eaea0496fccce622261dae2dad4cd72acf8b8428e7c99a4829e44ba52c46",
+    "PlytkaTME.pretty/TME_RV1.kicad_mod": "b907cc65134c54f8ad6139c42fd686203082aee39ddf04001045b92b5653599d",
+    "PlytkaTME.pretty/TME_T1.kicad_mod": "82fd0fa0211dd5cc1dbe0925938e6dc33563c1e9092639463f01f5b3f1cf7b38",
+    "PlytkaTME.pretty/TME_U1.kicad_mod": "9951c6f31f551f702d03dd9513e031225060b1bb2e0f2ee8399bc34a59e1bf68",
+    "power-supply-specification.TME-A.json": "8242151f50b1bafb48de5d0c3b3ee985c33575bc657698513f65fa790f629959",
+    "PowerFlags.kicad_sym": "b6b7b927b1a790c249425e0116068b8c3ea9a67778fe3fa6e0eb775221977649",
+    "README.md": "6870713df6af579cb36067601db92e47eebf523f8a38d7caf519506386dbc886",
+    "requirements.json": "ec77866bac772969700fc00430293ed7bdd63a83ce1d6afb5a5e8e6be445f969",
+    "source-basis.TME-A.json": "3c9daa2888f6a0b4c5b573f51a5a0e49f3e4120b41b8e8fd796c86e06d5ffaec",
+    "spatial-constraints.json": "f5492bed956e56a11d7bef7e1faef430761b3701dcfcc3ab2deceb685b6c412f",
+    "sym-lib-table": "9d82bef9c3a383dadebcbd8fd324177818e231f5ae05e3cd1496bdc0ca0d4ebc",
+    "symbol-pin-verification.json": "545b28134f3828c3b67370bd661c48fff581eab0d86d880aa7c5f6a873bb9fcd",
+    "thermal-and-insulation-basis.json": "3a8a356b799aa85073644108f9cca8e7b73e5e7ad598af0b4c073f1039719053",
+    "project-design-config": "815fb18ff3532ac0a063991277a4452b630eb0e95b67878b8c4233bfc7506aa7",
+    "toolkit:identity": "e261a411929278425cca528b66bb84add3b1e4261d2935da8cf3aeef78f27a66",
+    "ruleset:VERSION": "902311c7bb38fa1658ff403def6158ee7378fe9d6e2e284fa1c38735c31bd30b",
+    "ruleset:rules/catalog.json": "d1edf261c5686376ea86122b07d0c511a250ed6e6ffdb79413e1b0ae294a4e3d",
+    "ruleset:profiles/jlcpcb.json": "831daf5e4d36796b45661c35001af8971c2a3849791fe8d6216f5a5390683d83",
+    "ruleset:profiles/assembly-inhouse.json": "842ef8a87ec249443f3659a5d1d6c21c77ba5743c921492c5e009bee6fabdf48",
+    "ruleset:scripts/pcb_rules.py": "36dab64eb723841b5cbc454f353fab5482bfce795252f09bd857281ddfd94955",
+    "ruleset:scripts/configuration.py": "2698a03b6545262811eee3d6f9ea7325d762ec587afc763928fa495e27e4f1de",
+    "ruleset:scripts/product_contracts.py": "1c95b8d5e9cf88f606d33270414407fe2565cda0e8ca7999ec3d53601ae56d3c",
+    "ruleset:scripts/connectivity.py": "3cbe0e9b8e136c72aac386cfa9cead056572e91f6abf538cb4b0c415ebce7abc",
+    "ruleset:scripts/spatial.py": "87c94556e3f62540cc4d40bfb61672f04655942a8ec21bf24bc144c26bd2da98",
+    "ruleset:scripts/spatial_cad.py": "48642fe3b9474a0578914cc6f964c5117be55ef22d0f0994600bae94952678f4",
+    "ruleset:scripts/toolkit_install.py": "f306aabc8ea5ba5d80ca6d096d360e4a80988fc0368c767a5a8bd7b51fab6d50",
+    "ruleset:scripts/package_toolkit.py": "a41db64afa483389a159c74bd64d643dd9956f9b7de3895998d985a68bc9c6cb",
+    "ruleset:templates/kicad/board.kicad_pro": "6fa5d1285727ba111efebce5f199d5b39573ef62ba331ec0c177b4f201adcc32"
+  },
+  "resolved_minimums_mm": {
+    "clearance": 0.3,
+    "track_width": 0.3,
+    "hole_size": 0.3,
+    "annular_width": 0.2,
+    "edge_clearance": 1.0
+  },
+  "spatial": {
+    "passed": false,
+    "errors": [
+      "Spatial contract lacks current human approval"
+    ],
+    "constraints_digest": "cb004e11baacb5adf71d761d68ef080a6741bc60dcd7ebcc7c182934daf74e61",
+    "intent_digest": "e60c7ebc345f0b61a857b9f7516467c5e04eba81341850679bdc1f5ca3347b3a",
+    "geometry": {
+      "footprints": [
+        {
+          "reference": "C4",
+          "envelope_mm": [
+            117.625,
+            125.625,
+            13.75,
+            6.75
+          ]
+        },
+        {
+          "reference": "C6",
+          "envelope_mm": [
+            100.975,
+            100.475,
+            11.05,
+            11.05
+          ]
+        },
+        {
+          "reference": "F1",
+          "envelope_mm": [
+            139.975,
+            127.375,
+            9.05,
+            9.05
+          ]
+        },
+        {
+          "reference": "RV1",
+          "envelope_mm": [
+            137.925,
+            120.375,
+            9.55,
+            6.95
+          ]
+        },
+        {
+          "reference": "T1",
+          "envelope_mm": [
+            113.725,
+            100.725,
+            21.55,
+            21.55
+          ]
+        },
+        {
+          "reference": "C7",
+          "envelope_mm": [
+            100.975,
+            112.475,
+            11.05,
+            11.05
+          ]
+        },
+        {
+          "reference": "C1",
+          "envelope_mm": [
+            137.125,
+            113.625,
+            13.75,
+            6.75
+          ]
+        },
+        {
+          "reference": "L1",
+          "envelope_mm": [
+            137.475,
+            101.475,
+            12.05,
+            12.05
+          ]
+        },
+        {
+          "reference": "C8",
+          "envelope_mm": [
+            100.975,
+            124.475,
+            11.05,
+            11.05
+          ]
+        },
+        {
+          "reference": "R1",
+          "envelope_mm": [
+            131.775,
+            123.275,
+            6.05,
+            11.8
+          ]
+        },
+        {
+          "reference": "C5",
+          "envelope_mm": [
+            127.475,
+            116.225,
+            2.05,
+            3.55
+          ]
+        },
+        {
+          "reference": "BR1",
+          "envelope_mm": [
+            141.25,
+            109.475,
+            5.5,
+            8.05
+          ]
+        },
+        {
+          "reference": "R7",
+          "envelope_mm": [
+            110.125,
+            122.875,
+            4.75,
+            2.25
+          ]
+        },
+        {
+          "reference": "R5",
+          "envelope_mm": [
+            118.075,
+            108.575,
+            4.85,
+            2.25
+          ]
+        },
+        {
+          "reference": "R4",
+          "envelope_mm": [
+            127.525,
+            112.025,
+            1.95,
+            3.95
+          ]
+        },
+        {
+          "reference": "R8",
+          "envelope_mm": [
+            104.125,
+            110.875,
+            4.75,
+            2.25
+          ]
+        },
+        {
+          "reference": "J1",
+          "envelope_mm": [
+            147.625,
+            120.725,
+            2.75,
+            8.55
+          ]
+        },
+        {
+          "reference": "J2",
+          "envelope_mm": [
+            101.125,
+            107.725,
+            2.75,
+            8.55
+          ]
+        },
+        {
+          "reference": "R9",
+          "envelope_mm": [
+            104.125,
+            122.875,
+            4.75,
+            2.25
+          ]
+        },
+        {
+          "reference": "U1",
+          "envelope_mm": [
+            119.775,
+            114.275,
+            7.45,
+            5.45
+          ]
+        },
+        {
+          "reference": "R10",
+          "envelope_mm": [
+            110.125,
+            125.375,
+            4.75,
+            2.25
+          ]
+        },
+        {
+          "reference": "R12",
+          "envelope_mm": [
+            110.125,
+            130.375,
+            4.75,
+            2.25
+          ]
+        },
+        {
+          "reference": "D1",
+          "envelope_mm": [
+            118.475,
+            121.265,
+            7.05,
+            3.47
+          ]
+        },
+        {
+          "reference": "R6",
+          "envelope_mm": [
+            118.025,
+            110.825,
+            4.95,
+            2.35
+          ]
+        },
+        {
+          "reference": "R11",
+          "envelope_mm": [
+            110.125,
+            127.875,
+            4.75,
+            2.25
+          ]
+        }
+      ],
+      "area_count": 0,
+      "pcbnew_version": "10.0.6"
+    },
+    "limitations": [
+      "Consumer files verify declared inputs, not execution of an external router.",
+      "Block topology/SI/PI/EMC and physical insulation require separate evidence."
+    ]
+  },
+  "kicad_version": "10.0.6",
+  "connectivity": {
+    "schema_version": 1,
+    "passed": false,
+    "errors": [
+      {
+        "type": "missing_stale_intent_approval",
+        "message": "Intent lacks current human approval evidence"
+      }
+    ],
+    "commands": [
+      {
+        "command": [
+          "kicad-cli.EXE",
+          "sch",
+          "export",
+          "netlist",
+          "--format",
+          "kicadxml",
+          "--output",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\.work\\connectivity-netlist.xml",
+          "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\Plytka_TME.kicad_sch"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+      }
+    ],
+    "intent_digest": "fbba15e53896019cb52e36368c3fc6f0f6895c9879ab4123550e8f757b997e82",
+    "intent_revision": "SC10-TME-A-DRAFT",
+    "physical_pins": 65,
+    "intended_nets": 15,
+    "no_connects": 7,
+    "limitations": [
+      "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+      "Approval fields record evidence; hashes do not authenticate a human."
+    ],
+    "intent_sha256": "33390644fe492feaae847dac8ffbc675a12ac5b0d6e77c1769115fd43a1d2311",
+    "export_sha256": "0af69dbd83846109d838f361831d90fa497cf3d0aee4bfb713048d61f4ecd7a5",
+    "export_tool": "Eeschema 10.0.6"
+  },
+  "erc": {
+    "report_sha256": "605e5a3220dde71170ecac2ca044cfe1a00f694a193410e3c18b74c7c944e1f6",
+    "findings": []
+  },
+  "drc": {
+    "report_sha256": "04f3861ac6c37da7a8e23543f0bba2f5af666eced05fbe5080cfa4cc2cde8cee",
+    "findings": []
+  },
+  "passed": false
+}

@@ -1,0 +1,124 @@
+{
+  "actor": "/root/tme_magnetics_build",
+  "scope": "Research only; no active CAD, BOM or release edits",
+  "date": "2026-11-23",
+  "best_positive_candidate": {
+    "manufacturer": "MYRRA",
+    "MPN": "74089",
+    "TME_URL": "https://www.tme.eu/en/details/74089/pcb-transformers/myrra/",
+    "fresh_SSR_stock": 126,
+    "fresh_SSR_MOQ": 1,
+    "stock_note": "Public catalogue SSR fetched this turn. Cached web product shows143; live SSR preferred. Recheck at order.",
+    "part_kind": "Catalogue flyback EF20 transformer, use primary only as nonisolated energy winding; all unused winding pins NC. Not a custom-wound part.",
+    "primary_pins": [
+      "4",
+      "5"
+    ],
+    "primary_turns": 86,
+    "inductance_mH": 1.3,
+    "tolerance_percent": 10,
+    "primary_max_peak_A": 0.85,
+    "body_mm": [
+      21,
+      21,
+      22
+    ],
+    "lead_grid_mm": {
+      "row_spacing": 15.24,
+      "pin_pitch": 3.81
+    },
+    "recommended_drill_mm": 1.2,
+    "datasheet_author": "MYRRA",
+    "datasheet_revision": "Rev.A 2018-09-13, Change P polarity",
+    "datasheet_URL": "https://www.tme.eu/Document/3c9a981005973346bf6deccb406dce97/74087-Datasheet.pdf",
+    "frequency_application_proof_URL": "https://www.tme.eu/Document/74b1c6fdfa5c80edd28be424718b4d1b/74080.pdf",
+    "frequency_application_proof": "Manufacturer table lists74089,85-265Vrms,14W,Power Integrations132kHz. Primary reflected/reset voltage60-135VOR in same manufacturer document. Thus actual repetitive HV application proof, not just4kVpri-sec hipot.",
+    "ambient_max_C": 50,
+    "normal_screen": {
+      "required_peak_A": 0.487,
+      "peak_utilization_percent": 57.29411764705882,
+      "nominal_stored_energy_mJ": 0.15415985,
+      "rated_peak_nominal_energy_mJ": 0.46962499999999996,
+      "L_min_mH": 1.17,
+      "L_max_mH": 1.43
+    },
+    "why_promising": "Normal peak current has substantial catalogue margin;1.3mH is close to approved1.2mH and improves min-on-time vs1mH. 132kHz universal-input flyback winding sees325/375V energization and60-135V reset, closely related to off-line buck winding stress. Need topology-specific verification, not blanket approval.",
+    "not_closed": [
+      "Hot DC-bias L and current ratings vs actual temperature not supplied.",
+      "DCR and core loss absent: no defensible copper/total-loss or temperature numeric forecast.",
+      "1.24A auto-restart fault exceeds0.85A max and is NOT qualified. Need bounded fault energy/saturation/temperature test or independent current limit.",
+      "Use as primary-only buck energy winding differs from rated transformer application; leakage/parasitic capacitance, NC-terminal potential, creepage placement and measurement needed.",
+      "Height22mm is larger than previous20mm study, and21x21 body must be placed/routed from scratch.",
+      "Manufacturer drawing requires1.2mm holes and actual grid/dots; no reuse of MSS1210H footprint.",
+      "Do not short unused windings. ExplicitNCpins1,2,6,7,9,10; physicalpin8exists possiblyunused/no winding; pin3removed. Confirmphysicalpin8fromsample/drawing."
+    ]
+  },
+  "alternatives": [
+    {
+      "MPN": "MYRRA74087",
+      "stock": 282,
+      "MOQ": 1,
+      "L_mH": 1,
+      "peak_A": 1,
+      "body_mm": [
+        21,
+        21,
+        22
+      ],
+      "assessment": "Stronger peak but lowerL worsens minimumONmargin. Same132kHz universalinput evidence. Fault1.24A still exceeds1A."
+    },
+    {
+      "MPN": "MYRRA74080",
+      "stock": 275,
+      "MOQ": 1,
+      "L_mH": 1,
+      "peak_A": 1,
+      "body_mm": [
+        21,
+        21,
+        22
+      ],
+      "assessment": "185-265VAC132kHz;sameprimaryas74087 per manufacturer;minimumONissue."
+    },
+    {
+      "MPN": "MYRRA74023",
+      "stock": 30,
+      "MOQ": 1,
+      "L_mH": 1.25,
+      "peak_A": 0.85,
+      "body_mm": [
+        21,
+        17,
+        31
+      ],
+      "assessment": "Height31mm worse; lessusefulthan74089."
+    },
+    {
+      "MPN": "MYRRA74210",
+      "stock": 0,
+      "MOQ": 90,
+      "L_mH": 1.66,
+      "peak_A": 0.55,
+      "body_mm": [
+        19.5,
+        19,
+        16
+      ],
+      "assessment": "Normalpeakmargin~13%;notinTMEstock andlargeMOQ. Predecessor74010withdrawn. ProductpagecachedMOQ45vsfreshSSR90."
+    },
+    {
+      "MPN": "TALEMADPO-1.0-1000",
+      "L_mH": 1,
+      "rated_A": 1,
+      "assessment": "Explicitenergy-storagefamily but manufacturerratingfrequencyupto100kHz, noHVworkingproof. NotqualifiedLYT132kHz."
+    }
+  ],
+  "input_filter_L1_correction": {
+    "source": "https://www.st.com/resource/en/newsletter/Wurth_Inductor_HV_2018.pdf",
+    "finding": "Do not demand400VworkingacrossL1 solelybecause bothnodesareatrectifiedmainscommonmode. Manufacturer distinguishes inputfilter case frombuckenergycoil; evaluate differentialvoltage.",
+    "candidate": "FERROCORECOIL1010-3.3:3.3mH,.5Arms,.3Atyp10%Isat,4.65ohm,11.5x11.5mm,P5THT.",
+    "not_closed": "NeedstartupcapchargingpeakI andactualL1differentialVduringmains/surge/fault. Noarbitrary400VwaiverandnolabelinghotbiasguaranteedfromtypicalroomIsat."
+  },
+  "search_coverage": "ActualpublicTMEcatalogueSSR:2381mHproducts;voltagefacetallDCrated44;150VDCfacetonlyYageoSH211500nH. 27MYRRAimpulsecatalogueitemsallpagesinspected. Commonmodepartsnotmisusedasenergyinductors. Serieslowvoltagecoilsnotqualifiedbecausewindingvoltage/hotbias/transientsharingdataabsent.",
+  "deliverable_status": "Positive concrete architecture candidate found. CAD work and powered qualification remain separate. This report does not declare production/power release."
+}

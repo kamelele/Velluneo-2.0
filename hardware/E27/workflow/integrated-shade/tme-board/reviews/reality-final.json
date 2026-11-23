@@ -1,0 +1,187 @@
+{
+  "review_id": "REAL-TME-FINAL-01",
+  "role": "Reality Checker",
+  "actual_reviewer": "/root/tme_reality",
+  "date": "2026-11-23",
+  "candidate_revision": "SC10-TME-A-DRAFT",
+  "source_digest": "86c78b4be01ec98c0227b2ce02a5600e4c6f7527d1007f378b6b368268d3d2a2",
+  "review_inputs_path": "work/Velluneo-2.0/hardware/E27/workflow/integrated-shade/tme-board/review-inputs.json",
+  "review_inputs_sha256": "1757cef375abebf80d6a6e71ed0bb2434ee0ffc78133a3fa2ecc901a88acbf0c",
+  "hash_verification": {
+    "source_files": 91,
+    "artifacts": 22,
+    "mismatches": [],
+    "digest_match": true
+  },
+  "PCB_sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+  "scope": "Final frozen nativecandidate/electrical/procurement/thermal/independentgraph and visual schematic/3D review. No source mutation, powered measurements or order.",
+  "requirements": [
+    "TME-PROCUREMENT",
+    "INPUT-EU230",
+    "LED-800LM",
+    "FAULT-CONTAINMENT",
+    "THERMAL",
+    "GRAPH-EXACT",
+    "ROUTING",
+    "COMPACT-PCB",
+    "MANUAL-LAB"
+  ],
+  "preliminary_supersession": {
+    "prior_review": "REAL-TME-PRELIM-01",
+    "new_unique_MPN_count": 16,
+    "prior_unique_MPN_count": 17,
+    "C1_change": "Interim47nF400V→150nF630V samepartasC4; updatedcurrentmesh-based3Dmodels andfinalroutingreviewreplacepreliminaryscope. No silenttransfer of earlierreporthashes."
+  },
+  "independent_checks": {
+    "manifest": "All91sourcefiles and22artifacts individuallyhashed; canonicaldigestreproducedexactly.",
+    "native_read_only": "PinnedKiCad10.0.6PCB_IO_MGR.Load,25footprints65pads207track/viaobjects;10F.Cu15B.Cu, T1primary4=/FB_INDUCTOR,5=/LED_PLUS,7individualNC; sourcebytesunchanged.",
+    "intended_graph": "Pinnedconnectivity.compare rerun on frozenindependentintent vs frozennativeXML:65pins15nets7NC; soleerror missing_stale_intent_approval. Graphagreementonly; no invented approval.",
+    "native_reports": "Inspected frozenERC/DRC/parityreports andsummary:0nativeERC/DRC/unconnected/parity; these reports do notprovefunctionalclearance or physical behavior.",
+    "strict_spacing": "401findings/41netpairs,all231pairs enumerated, noexceptions; concrete0.350001mm HVroute example verified inreport.",
+    "schematic_visual": "RenderedfinalnativePDFinmemoryandvisuallyinspected: both150nF630Vfilms, primary4–5, sevenNC,independentfuse/MOV/resistor, three47uFcaps,four97.6kOVPparts, declarednonisolateddraft/open-gatenotes.",
+    "3D_visual": "ViewedbothfrozenKiCadrenders:10THTfront/15backpositions includingwirepads, oppositeedgeAC/LEDports, noobviousbodyoverlap. Modelsareexplicitillustrativeengineeringenvelopes, notsupplier-certifiedSTEP or physicalfitproof.",
+    "Kelvin_scope": "Inspectedrouting-recordandkelvin-contact-audit; own read ofactualU1pin3FBnetmatches. Dedicatedbranchcontact reportisimplementergeometryevidence, not anindependentanalogue/EMCmeasurement or fullqualification."
+  },
+  "independent_recalculation": {
+    "Rsense_parallel_ohm": 0.5732101616628176,
+    "Iout_total_A": 0.1352034649476229,
+    "OVP_nominal_V": 77.96129032258064,
+    "one_bleeder_90to5_s": 34.17832529025588,
+    "C1_C4_final_sum_nF": 300,
+    "C1_C4_nominal_energy_J": 0.019202700000000003
+  },
+  "final_linear_filter_maxima": {
+    "peak_C1_V": 406.9164696489554,
+    "peak_bus_V": 407.6125842716963,
+    "peak_L1_A": 1.3983850254872547,
+    "peak_L1_differential_V": 173.22118284946802,
+    "Rin_energy_J": 0.020789261783960344,
+    "source_I2t_A2s": 0.00014546224823194057
+  },
+  "findings": [
+    {
+      "id": "REAL-TME-01",
+      "severity": "blocker",
+      "gate": "schematic/release/bring-up",
+      "objects": [
+        "T1",
+        "U1"
+      ],
+      "basis": "MYRRA74089 primary catalogue maximum0.85Apk versus LYT1603D characterized25C auto-restart1.06–1.24A. Normal peak0.5266A screen is a different operating condition.",
+      "consequence": "No source evidence establishes fault waveform within magnetic maximum. Input fuse does not implement cycle-by-cycle0.85A limiting.",
+      "closure": "Redesign independent current limiting or select/qualify magnetic against all bounded fault/startup waveforms, using manufacturer-supported current envelope; only approved contained testing after test limits are defined.",
+      "status": "OPEN_ACKNOWLEDGED_IN_ROOT_STATUS",
+      "owner": "electrical/root"
+    },
+    {
+      "id": "REAL-TME-02",
+      "severity": "blocker",
+      "gate": "schematic/release/bring-up",
+      "objects": [
+        "L1",
+        "C1",
+        "C4",
+        "R1",
+        "BR1"
+      ],
+      "basis": "Final linear screen: C1=C4=150nF630V; C1peak406.916V,C4peak407.613V,L1peak1.398385A,differential173.221V. L1 published0.3A is typical10%Ldrop, not guaranteed hot maximum or impulse working-voltage proof.",
+      "consequence": "The larger630Vcapacitors fix the demonstrated400Vpart mismatch, but linear waveforms cannot establish nonlinear saturation, surge/fault or temperature bounds.",
+      "closure": "Obtain applicable nonlinearLbias/impulse data or redesign qualifiedinputfilter, then verify bounded startup/repetitive/surge conditions with approvedfixture. Retain bothC1andC4nodevoltage logs; do not call these linearpeaks guaranteedlimits.",
+      "status": "OPEN_ACKNOWLEDGED_IN_ROOT_STATUS",
+      "owner": "electrical/root"
+    },
+    {
+      "id": "REAL-TME-03",
+      "severity": "blocker",
+      "gate": "schematic/release/bring-up",
+      "objects": [
+        "F1",
+        "R1",
+        "RV1"
+      ],
+      "basis": "Littelfuse37301000410 primary row:100mA250V,50A@250VAC, maxmeltingI2t.0013A2s at10In. R1=150ohm3W; MOV sits beforeR1.",
+      "consequence": "MOV short bypasses current-limiting resistor. A50A prospective-fault boundary needs an actual source/fixture, and meltingI2t is not total clearing; low overload2In may persist up5s per fuse sheet.",
+      "closure": "Define enforceable <=50A fault-current source boundary includingMOVshort, resolve253VAC applicability, evaluate worst clearing/fault waveform against resistor overload/flame behavior and fuse repetitive-pulse endurance. Do not derive safe0.195J resistor stress from maxmeltingI2t alone.",
+      "status": "OPEN_ACKNOWLEDGED_IN_ROOT_STATUS",
+      "owner": "electrical/root"
+    },
+    {
+      "id": "REAL-TME-04",
+      "severity": "major",
+      "gate": "schematic/routing/release",
+      "objects": [
+        "T1",
+        "U1",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R10",
+        "R11",
+        "R12",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "basis": "1.39383us minimumON margin uses unverified .9bias/.9temperature L factors and assumed±2%IC thermal reserve. Controller k=3.6 and fulltemp thresholds lack independent guaranteed corner bounds. OVP lower extended screen68.913V leaves .913V at proposed68VDC load; ripple can exceed that.",
+      "consequence": "Paper model is useful but does not establish52–68V regulation or true current/thermal envelope. Unpublished DCR/RMS/coreloss prevents qualified loss and temperature forecast.",
+      "closure": "Retain conditional claims; qualify actual Lhot/bias and current/OVP/ripple/thermal behavior. Narrow output/load window or revise divider if bounded headroom fails. Enforce T1 localair<=50C and all declared stop thresholds in bring-up plan.",
+      "status": "OPEN_ACKNOWLEDGED_IN_ROOT_STATUS",
+      "owner": "electrical/root"
+    },
+    {
+      "id": "REAL-TME-05",
+      "severity": "major",
+      "gate": "procurement/release",
+      "objects": [
+        "engineering/procurement.TME-A.json"
+      ],
+      "basis": "FinalBOM has23electronicpositions/16uniqueMPNs plusJ1/J2wirepads; every electronicMPN has TMEoffer. Currentstockconfirmation remains incomplete/cached forsomeparts, as expressly recorded.",
+      "consequence": "The native variant may truthfully be called TME-catalogue-sourced, but every part currentlyorderable is not proved.",
+      "closure": "Confirm exact offers and prototype MOQ/current positive stock before buying. No treating429 as zero or as passedavailability; no all-current-stock claim.",
+      "status": "OPEN_ACKNOWLEDGED_IN_FINAL_STATUS",
+      "owner": "procurement/root"
+    },
+    {
+      "id": "REAL-TME-06",
+      "severity": "closed",
+      "gate": "documentation before final freeze",
+      "objects": [
+        "engineering/electrical-calculations.json:planning.input_R150_and_two150nF_RC_only_screen",
+        "engineering/electrical-calculations.md:late input-resistor paragraph"
+      ],
+      "basis": "FinalbothC1andC4areR71PF315050H6K150nF630V. Interim47nF400VC1wasrejected afterparentaddedC1voltagelog showing454.29V. CurrentBOM,schematicPDF,electricalscreen andengineeringstatusagree on two150nF630Vparts.",
+      "consequence": "Preliminary stale-input-capacitance issue and missingC1node-logging request are resolved in frozen source.",
+      "closure": "Closed for this exact source_digest only; no broader nonlinear or surge qualification implied.",
+      "status": "CLOSED_BY_SOURCE_AND_VISUAL_VERIFICATION",
+      "owner": "electrical/root"
+    },
+    {
+      "id": "REAL-TME-07",
+      "severity": "blocker",
+      "gate": "routing/release",
+      "objects": [
+        "functional-spacing-targets.json",
+        "final native routed PCB"
+      ],
+      "basis": "Final savedPCB has401strictobject-pair hits spanning41netpairs under231-pair targetmatrix. ExampleD1.2(/DC_RETURN) to savedtrack64adb25b-cd4e-4c1b-aa08-6c0f3531b5d3(/BUS_FILTERED):0.350001mm versus2mm target. NativeDRC floor.3mm passes; no approvedpackageexceptions.",
+      "consequence": "Actual high-differential-voltage routing does not meet declared functionalclearance target. These results cannot be dismissed collectively as cosmeticpackageartifacts or coveredby oldSC09acceptance.",
+      "closure": "Reroute/reposition or establish independently justified object-specific electrical/insulationbasis and genuine requiredapproval for eachdisposition; then rerun nativechecks and all231pairassessment. No manufacturing/powered-test readiness until resolved.",
+      "status": "OPEN_VERIFIED_FINAL_GEOMETRY_REPORT",
+      "owner": "PCB/root"
+    }
+  ],
+  "measurement_record": null,
+  "evidence_unavailable": [
+    "PhysicalhotDCR/Lbias/coreloss/RMS/current/OVP/ripplemeasurements",
+    "T1allowedfaultwaveform versusICrestartlimit",
+    "L1nonlinearpulse/workingvoltageenvelope",
+    "Totalfuse-clearing versusRinoverload proof and complete mainsfaultfixture",
+    "Allpartscurrentpositive-stockconfirmation",
+    "Functionalspacingclosure and realstage/humanreleaseapproval"
+  ],
+  "recommendation": "blocked",
+  "reason": "Separate fullyroutedengineeringcandidate exists, but actualHVclearance and electrical/fault/sourcinggates block fabricationacceptance, ordering and energization. Existing NOTFORORDERstatus is justified. Candidate may be archived/presented with these limits without describing it as completedqualifiedTMEpower-supply.",
+  "affected_prior_reviews": "SC09fabricationacceptance doesnottransfer; preliminaryRealityreport superseded by thisexactfrozenpacket; any source/artifactchange requires retainedscopeassessment orfreshreview.",
+  "authority": "Reviewerrecommendationonly, nothumanacceptance or certification."
+}

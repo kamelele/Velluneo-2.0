@@ -1,0 +1,39 @@
+{
+  "actor": "/root/tme_cad",
+  "independent_reviewer": false,
+  "PCB_sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+  "source_unchanged": true,
+  "native_polygon_error_mm": 0.002,
+  "purpose_UUIDs": {
+    "net": "FB_INDUCTOR",
+    "from": [
+      "R5",
+      "2"
+    ],
+    "to": [
+      "U1",
+      "3"
+    ],
+    "purpose": "Independent feedback sense branch at R5",
+    "width_mm": 0.3,
+    "success": true,
+    "strict_matrix_path_found": false,
+    "expanded": 144978,
+    "seconds": 1.421,
+    "kelvin": true,
+    "native_UUIDs": [
+      "cf9bb421-2d1a-47cc-a0fb-620509e0c293",
+      "d9a255eb-1b3c-4d8c-84c3-0cc54d6c2114",
+      "b215f58d-0f5c-4f0c-9ffc-9bed77a493c3",
+      "25df662a-e8dc-4d21-a5b9-11511834d02e",
+      "1ad7d067-dd54-4ca2-88d8-db1e4c3ce4fa",
+      "ccb168f6-53a9-4b02-bf91-25c98ef1d7f9",
+      "fee887c0-949d-47d5-b938-f067e39d0d89",
+      "309ce2bf-3603-4fa4-875d-a10d1186b8d9"
+    ]
+  },
+  "control_layer_objects": 8,
+  "unexpected_FB_force_contact_outside_R5_or_U1_pad": [],
+  "result": "PASS_GEOMETRY_ONLY",
+  "limitations": "Native polygon contact test confirms branch copper geometry only, not analogue, EMC, electrical stress, thermal or physical test qualification. Separate root independent review required."
+}

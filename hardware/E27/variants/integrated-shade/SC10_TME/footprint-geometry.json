@@ -1,0 +1,1745 @@
+{
+  "R4": {
+    "refs": [
+      "R4"
+    ],
+    "mpn": "ERJ-6ENF1242V",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.15,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.1,
+          1.4
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.15,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.1,
+          1.4
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.05,
+      -0.675,
+      1.05,
+      0.675
+    ],
+    "courtyard_bbox_xy_mm": [
+      -1.95,
+      -0.95,
+      1.95,
+      0.95
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "sources": [
+      "Panasonic_R4"
+    ],
+    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers\u00b11.15;courtyard.25frompad/bodyunion.",
+    "notes": [],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -1.95,
+        -0.95
+      ],
+      [
+        1.95,
+        -0.95
+      ],
+      [
+        1.95,
+        0.95
+      ],
+      [
+        -1.95,
+        0.95
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_R4"
+  },
+  "C5": {
+    "refs": [
+      "C5"
+    ],
+    "mpn": "CL21B475KAFNNNE",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.0,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.0,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.05,
+      -0.675,
+      1.05,
+      0.675
+    ],
+    "courtyard_bbox_xy_mm": [
+      -1.75,
+      -1.0,
+      1.75,
+      1.0
+    ],
+    "planned_max_above_PCB_mm": 1.35,
+    "sources": [
+      "Samsung_C5"
+    ],
+    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at\u00b11.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
+    "notes": [
+      "Catalogmanualsolder0201..1206:350Cmax,preheat>=60s,contact<=3s,deltaT<=190C;actualprocessrequiresvalidation.",
+      "Do not present numericland as a Samsung recommendation."
+    ],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -1.75,
+        -1.0
+      ],
+      [
+        1.75,
+        -1.0
+      ],
+      [
+        1.75,
+        1.0
+      ],
+      [
+        -1.75,
+        1.0
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_C5"
+  },
+  "R8": {
+    "refs": [
+      "R8",
+      "R9"
+    ],
+    "mpn": "RC1206FR-0768KL",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ],
+    "courtyard_bbox_xy_mm": [
+      -2.35,
+      -1.1,
+      2.35,
+      1.1
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "sources": [
+      "Yageo_R5_R8_R9"
+    ],
+    "design_basis": "Exactmanufacturerrecommended1206reflowlands;manualprototypeusesamegeometry. Court.25frommaxbody/padunion.",
+    "notes": [
+      "Worstdeclared90Vperresistor.12276W;measurelocaltemperatureandcheckderating. Manufacturerthermalguideadvisessolderjoint<=110Cgenerally;donotinfer.25Wcontinuouslyatalltemperatures."
+    ],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        1.1
+      ],
+      [
+        -2.35,
+        1.1
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_R8"
+  },
+  "R9": {
+    "refs": [
+      "R8",
+      "R9"
+    ],
+    "mpn": "RC1206FR-0768KL",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ],
+    "courtyard_bbox_xy_mm": [
+      -2.35,
+      -1.1,
+      2.35,
+      1.1
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "sources": [
+      "Yageo_R5_R8_R9"
+    ],
+    "design_basis": "Exactmanufacturerrecommended1206reflowlands;manualprototypeusesamegeometry. Court.25frommaxbody/padunion.",
+    "notes": [
+      "Worstdeclared90Vperresistor.12276W;measurelocaltemperatureandcheckderating. Manufacturerthermalguideadvisessolderjoint<=110Cgenerally;donotinfer.25Wcontinuouslyatalltemperatures."
+    ],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        1.1
+      ],
+      [
+        -2.35,
+        1.1
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_R9"
+  },
+  "RV1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.5,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          2.5,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -4.5,
+      -1.2,
+      4.5,
+      5.2
+    ],
+    "planned_max_above_PCB_mm": 11.5,
+    "design_basis": "TDK B72207S0271K101 radialP5+/-1,lead.6+/-.05,body9x4.4x11max,bodyoffseta2+/-1. Conservativeoffset bodyreservation, hole1 engineeringmanualfreeleadforming. Not oldstagger.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -4.75,
+      -1.45,
+      4.75,
+      5.45
+    ],
+    "footprint": "PlytkaTME:TME_RV1"
+  },
+  "U1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.725,
+          -1.905
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          -2.725,
+          -0.635
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "3",
+        "center_mm": [
+          -2.725,
+          0.635
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "4",
+        "center_mm": [
+          -2.725,
+          1.905
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "5",
+        "center_mm": [
+          2.725,
+          1.905
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "6",
+        "center_mm": [
+          2.725,
+          0.635
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "7",
+        "center_mm": [
+          2.725,
+          -0.635
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "8",
+        "center_mm": [
+          2.725,
+          -1.905
+        ],
+        "size_mm": [
+          1.45,
+          0.6
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.95,
+      -2.45,
+      1.95,
+      2.45
+    ],
+    "planned_max_above_PCB_mm": 1.75,
+    "design_basis": "Exact Diodes/PI manufacturer land addendum, same familypackage; primarypinidentity retained. Native bottomflip required.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -3.7,
+      -2.7,
+      3.7,
+      2.7
+    ],
+    "footprint": "PlytkaTME:TME_U1"
+  },
+  "BR1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          1.25,
+          -2.675
+        ],
+        "size_mm": [
+          1.0,
+          2.15
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.25,
+          2.675
+        ],
+        "size_mm": [
+          1.0,
+          2.15
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "3",
+        "center_mm": [
+          -1.25,
+          -2.675
+        ],
+        "size_mm": [
+          1.0,
+          2.15
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "4",
+        "center_mm": [
+          -1.25,
+          2.675
+        ],
+        "size_mm": [
+          1.0,
+          2.15
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -2.475,
+      -2.05,
+      2.475,
+      2.05
+    ],
+    "planned_max_above_PCB_mm": 2.9,
+    "design_basis": "Exact Diodes/PI manufacturer land addendum, same familypackage; primarypinidentity retained. Native bottomflip required.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -2.725,
+      -4.0,
+      2.725,
+      4.0
+    ],
+    "footprint": "PlytkaTME:TME_BR1"
+  },
+  "D1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.0,
+          0.0
+        ],
+        "size_mm": [
+          2.5,
+          1.7
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          2.0,
+          0.0
+        ],
+        "size_mm": [
+          2.5,
+          1.7
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -2.3,
+      -1.46,
+      2.3,
+      1.46
+    ],
+    "planned_max_above_PCB_mm": 2.4,
+    "design_basis": "Exact Diodes/PI manufacturer land addendum, same familypackage; primarypinidentity retained. Native bottomflip required.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -3.5,
+      -1.71,
+      3.5,
+      1.71
+    ],
+    "footprint": "PlytkaTME:TME_D1"
+  },
+  "C1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -5,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          5,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -6.6,
+      -3.1,
+      6.6,
+      3.1
+    ],
+    "planned_max_above_PCB_mm": 12.6,
+    "design_basis": "KEMET R71PF315050H6K max13.2x6.2x12.1,P10; .5mmseatingreserve;1mmholeengineeringmanualproposal.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -6.85,
+      -3.35,
+      6.85,
+      3.35
+    ],
+    "footprint": "PlytkaTME:TME_C1"
+  },
+  "C4": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -5,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          5,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -6.6,
+      -3.1,
+      6.6,
+      3.1
+    ],
+    "planned_max_above_PCB_mm": 12.6,
+    "design_basis": "KEMET R71PF315050H6K max13.2x6.2x12.1,P10; .5mmseatingreserve;1mmholeengineeringmanualproposal.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -6.85,
+      -3.35,
+      6.85,
+      3.35
+    ],
+    "footprint": "PlytkaTME:TME_C4"
+  },
+  "L1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.5,
+          0
+        ],
+        "size_mm": [
+          2.4,
+          2.4
+        ],
+        "drill_mm": 1.5,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          2.5,
+          0
+        ],
+        "size_mm": [
+          2.4,
+          2.4
+        ],
+        "drill_mm": 1.5,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -5.75,
+      -5.75,
+      5.75,
+      5.75
+    ],
+    "planned_max_above_PCB_mm": 12,
+    "design_basis": "FerrocoreCOIL1010-3.3 bodyD11.5H11.5,P5+/-.5,lead.8+/-.1;hole1.5engineeringmanualproposal, samplefitmustverify.",
+    "circle": true,
+    "courtyard_bbox_xy_mm": [
+      -6.0,
+      -6.0,
+      6.0,
+      6.0
+    ],
+    "footprint": "PlytkaTME:TME_L1"
+  },
+  "C6": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.5,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          2.5,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -5.25,
+      -5.25,
+      5.25,
+      5.25
+    ],
+    "planned_max_above_PCB_mm": 14,
+    "design_basis": "NichiconUHE2A470MPD D10nom(+.5),L12.5nom(+1.5reserve),P5. Hole1/pad2engineeringmanualchoice. Positive1. No jacket insulation credit.",
+    "circle": true,
+    "courtyard_bbox_xy_mm": [
+      -5.5,
+      -5.5,
+      5.5,
+      5.5
+    ],
+    "footprint": "PlytkaTME:TME_C6"
+  },
+  "C7": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.5,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          2.5,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -5.25,
+      -5.25,
+      5.25,
+      5.25
+    ],
+    "planned_max_above_PCB_mm": 14,
+    "design_basis": "NichiconUHE2A470MPD D10nom(+.5),L12.5nom(+1.5reserve),P5. Hole1/pad2engineeringmanualchoice. Positive1. No jacket insulation credit.",
+    "circle": true,
+    "courtyard_bbox_xy_mm": [
+      -5.5,
+      -5.5,
+      5.5,
+      5.5
+    ],
+    "footprint": "PlytkaTME:TME_C7"
+  },
+  "C8": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.5,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          2.5,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -5.25,
+      -5.25,
+      5.25,
+      5.25
+    ],
+    "planned_max_above_PCB_mm": 14,
+    "design_basis": "NichiconUHE2A470MPD D10nom(+.5),L12.5nom(+1.5reserve),P5. Hole1/pad2engineeringmanualchoice. Positive1. No jacket insulation credit.",
+    "circle": true,
+    "courtyard_bbox_xy_mm": [
+      -5.5,
+      -5.5,
+      5.5,
+      5.5
+    ],
+    "footprint": "PlytkaTME:TME_C8"
+  },
+  "R7": {
+    "refs": [
+      "R8",
+      "R9"
+    ],
+    "mpn": "RC1206FR-0768KL",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ],
+    "courtyard_bbox_xy_mm": [
+      -2.35,
+      -1.1,
+      2.35,
+      1.1
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "sources": [
+      "Yageo_R5_R8_R9"
+    ],
+    "design_basis": "Yageo RC1206samefamily manufacturerlands as R8/R9,97.6kvalue. Fourseriesparts.",
+    "notes": [
+      "Worstdeclared90Vperresistor.12276W;measurelocaltemperatureandcheckderating. Manufacturerthermalguideadvisessolderjoint<=110Cgenerally;donotinfer.25Wcontinuouslyatalltemperatures."
+    ],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        1.1
+      ],
+      [
+        -2.35,
+        1.1
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_R7"
+  },
+  "R10": {
+    "refs": [
+      "R8",
+      "R9"
+    ],
+    "mpn": "RC1206FR-0768KL",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ],
+    "courtyard_bbox_xy_mm": [
+      -2.35,
+      -1.1,
+      2.35,
+      1.1
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "sources": [
+      "Yageo_R5_R8_R9"
+    ],
+    "design_basis": "Yageo RC1206samefamily manufacturerlands as R8/R9,97.6kvalue. Fourseriesparts.",
+    "notes": [
+      "Worstdeclared90Vperresistor.12276W;measurelocaltemperatureandcheckderating. Manufacturerthermalguideadvisessolderjoint<=110Cgenerally;donotinfer.25Wcontinuouslyatalltemperatures."
+    ],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        1.1
+      ],
+      [
+        -2.35,
+        1.1
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_R10"
+  },
+  "R11": {
+    "refs": [
+      "R8",
+      "R9"
+    ],
+    "mpn": "RC1206FR-0768KL",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ],
+    "courtyard_bbox_xy_mm": [
+      -2.35,
+      -1.1,
+      2.35,
+      1.1
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "sources": [
+      "Yageo_R5_R8_R9"
+    ],
+    "design_basis": "Yageo RC1206samefamily manufacturerlands as R8/R9,97.6kvalue. Fourseriesparts.",
+    "notes": [
+      "Worstdeclared90Vperresistor.12276W;measurelocaltemperatureandcheckderating. Manufacturerthermalguideadvisessolderjoint<=110Cgenerally;donotinfer.25Wcontinuouslyatalltemperatures."
+    ],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        1.1
+      ],
+      [
+        -2.35,
+        1.1
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_R11"
+  },
+  "R12": {
+    "refs": [
+      "R8",
+      "R9"
+    ],
+    "mpn": "RC1206FR-0768KL",
+    "units": "mm",
+    "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.6,
+          0
+        ],
+        "kind": "smd",
+        "size_mm": [
+          1.0,
+          1.5
+        ],
+        "drill_mm": null,
+        "shape": "rect",
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ],
+    "courtyard_bbox_xy_mm": [
+      -2.35,
+      -1.1,
+      2.35,
+      1.1
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "sources": [
+      "Yageo_R5_R8_R9"
+    ],
+    "design_basis": "Yageo RC1206samefamily manufacturerlands as R8/R9,97.6kvalue. Fourseriesparts.",
+    "notes": [
+      "Worstdeclared90Vperresistor.12276W;measurelocaltemperatureandcheckderating. Manufacturerthermalguideadvisessolderjoint<=110Cgenerally;donotinfer.25Wcontinuouslyatalltemperatures."
+    ],
+    "mechanical_keepouts": [],
+    "electrical_clearance_claim": false,
+    "courtyard_polygon": [
+      [
+        -2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        -1.1
+      ],
+      [
+        2.35,
+        1.1
+      ],
+      [
+        -2.35,
+        1.1
+      ]
+    ],
+    "footprint": "PlytkaTME:TME_R12"
+  },
+  "R5": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.575,
+          0
+        ],
+        "size_mm": [
+          1.15,
+          1.7
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.575,
+          0
+        ],
+        "size_mm": [
+          1.15,
+          1.7
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.55,
+      -0.775,
+      1.55,
+      0.775
+    ],
+    "planned_max_above_PCB_mm": 0.65,
+    "design_basis": "VikingCSRevD3,1206lands innergap2.0,pad1.15x1.7. Body3.1x1.55. Manualprocesschoice.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -2.4,
+      -1.1,
+      2.4,
+      1.1
+    ],
+    "footprint": "PlytkaTME:TME_R5"
+  },
+  "R6": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -1.6,
+          0
+        ],
+        "size_mm": [
+          1.2,
+          1.8
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          1.6,
+          0
+        ],
+        "size_mm": [
+          1.2,
+          1.8
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ],
+    "planned_max_above_PCB_mm": 0.75,
+    "design_basis": "Royalohm1206 body3.2x1.7; engineeringmanuallands1.2x1.8 centres3.2, not quotedmanufacturerrecommendation. Exactland/sampleverification gate.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -2.45,
+      -1.15,
+      2.45,
+      1.15
+    ],
+    "footprint": "PlytkaTME:TME_R6"
+  },
+  "F1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          -2.54,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 0.9,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          2.54,
+          0
+        ],
+        "size_mm": [
+          1.8,
+          1.8
+        ],
+        "drill_mm": 0.9,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -4.25,
+      -4.25,
+      4.25,
+      4.25
+    ],
+    "planned_max_above_PCB_mm": 8.5,
+    "design_basis": "Littelfuse37301000410 TR5 maxD8.5H8,P5.08,lead.6; .5seatingreserve; .9hole/1.8pad engineeringmanualchoice.",
+    "circle": true,
+    "courtyard_bbox_xy_mm": [
+      -4.5,
+      -4.5,
+      4.5,
+      4.5
+    ],
+    "footprint": "PlytkaTME:TME_F1"
+  },
+  "R1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          0,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1.1,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          7.5,
+          0
+        ],
+        "size_mm": [
+          2,
+          2
+        ],
+        "drill_mm": 1.1,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -2.75,
+      -2.75,
+      2.75,
+      2.75
+    ],
+    "planned_max_above_PCB_mm": 20,
+    "design_basis": "RoyalPMR03SJ0151A19 axialbodymaxD5.5L16,lead.75+/-.05; uprightP7.5customforming. Height20reserve, freewirebend mustsamplecheck. No fusingclaim.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -3.0,
+      -3.0,
+      8.75,
+      3.0
+    ],
+    "footprint": "PlytkaTME:TME_R1"
+  },
+  "T1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          7.62,
+          7.62
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          7.62,
+          3.81
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      },
+      {
+        "number": "4",
+        "center_mm": [
+          7.62,
+          -3.81
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      },
+      {
+        "number": "5",
+        "center_mm": [
+          7.62,
+          -7.62
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      },
+      {
+        "number": "6",
+        "center_mm": [
+          -7.62,
+          -7.62
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      },
+      {
+        "number": "7",
+        "center_mm": [
+          -7.62,
+          -3.81
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      },
+      {
+        "number": "8",
+        "center_mm": [
+          -7.62,
+          0.0
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      },
+      {
+        "number": "9",
+        "center_mm": [
+          -7.62,
+          3.81
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      },
+      {
+        "number": "10",
+        "center_mm": [
+          -7.62,
+          7.62
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": 1.2,
+        "kind": "thru_hole",
+        "shape": "circle"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      -10.5,
+      -10.5,
+      10.5,
+      10.5
+    ],
+    "planned_max_above_PCB_mm": 22.5,
+    "design_basis": "MYRRA74087-89 RevA2018-09-13 bottomview converted tocomponentview byXmirror; row15.24,pitch3.81,pin3removed,all9physicalpins. Manufacturer1.2drill.2.2padengineeringannulus. Primary4/5,othersNC. Height22+.5seating.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -10.75,
+      -10.75,
+      10.75,
+      10.75
+    ],
+    "footprint": "PlytkaTME:TME_T1"
+  },
+  "J1": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          0,
+          -2.5
+        ],
+        "size_mm": [
+          2.2,
+          3
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          0,
+          2.5
+        ],
+        "size_mm": [
+          2.2,
+          3
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "planned_max_above_PCB_mm": 2,
+    "design_basis": "Direct manual solder wire lands on B.Cu, no connector purchase. Wire strain relief and fixture clearance separate.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -1.35,
+      -4.25,
+      1.35,
+      4.25
+    ],
+    "footprint": "PlytkaTME:TME_J1"
+  },
+  "J2": {
+    "pads": [
+      {
+        "number": "1",
+        "center_mm": [
+          0,
+          -2.5
+        ],
+        "size_mm": [
+          2.2,
+          3
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      },
+      {
+        "number": "2",
+        "center_mm": [
+          0,
+          2.5
+        ],
+        "size_mm": [
+          2.2,
+          3
+        ],
+        "drill_mm": null,
+        "kind": "smd",
+        "shape": "rect"
+      }
+    ],
+    "max_body_bbox_xy_mm": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "planned_max_above_PCB_mm": 2,
+    "design_basis": "Direct manual solder wire lands on B.Cu, no connector purchase. Wire strain relief and fixture clearance separate.",
+    "circle": false,
+    "courtyard_bbox_xy_mm": [
+      -1.35,
+      -4.25,
+      1.35,
+      4.25
+    ],
+    "footprint": "PlytkaTME:TME_J2"
+  }
+}

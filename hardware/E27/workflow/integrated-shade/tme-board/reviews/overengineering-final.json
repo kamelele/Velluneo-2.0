@@ -1,0 +1,75 @@
+{
+  "role": "Overengineering Reviewer",
+  "actual_actor": "/root/tme_simplicity",
+  "date": "2026-11-23",
+  "revision": "SC10-TME-A-DRAFT final frozen candidate review",
+  "frozen_manifest": "hardware/E27/workflow/integrated-shade/tme-board/review-inputs.json",
+  "manifest_sha256": "1757cef375abebf80d6a6e71ed0bb2434ee0ffc78133a3fa2ecc901a88acbf0c",
+  "source_digest": "86c78b4be01ec98c0227b2ce02a5600e4c6f7527d1007f378b6b368268d3d2a2",
+  "PCB_sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+  "integrity_verification": {
+    "source_files_compared": 91,
+    "artifact_files_compared": 22,
+    "mismatches": [],
+    "canonical_source_list_digest_reproduced": true
+  },
+  "scope": "Independent read-only review of final frozen requirements, architecture, part repetition, sourcing and physical-envelope complexity. The manifest, source hashes and check-artifact hashes were independently verified. Final native-check summaries and illustrative top3D were inspected; native electrical/CAD checks were not rerun in this role. No fabrication approval, purchase, supplier contact or powered test.",
+  "actual_final_design": {
+    "electronic_positions": 23,
+    "unique_electronic_MPNs": 16,
+    "direct_wire_interfaces": 2,
+    "PCB_mm": [51.2, 37, 1.6],
+    "copper_layers": 2,
+    "estimated_total_assembly_height_mm": 27,
+    "C1_C4": "Both KEMET R71PF315050H6K,150nF630V. Interim R66 47nF400V is excluded.",
+    "assembly_process": "Manual laboratory assembly; all tall THT bodies on front, SMD components on rear. Illustrative engineering envelope models, not supplierSTEP certification."
+  },
+  "preliminary_finding_closure": [
+    {
+      "id": "OE-01",
+      "result": "CLOSED_FOR_THIS_FROZEN_REVISION",
+      "evidence": "Final C1 is150nF630V, replacing interim47nF400V; C4 note that C1 changed from47nF now correctly describes the final variant. BOM, README, engineering status and input-filter source agree on two150nF630V parts."
+    }
+  ],
+  "findings": [
+    {
+      "id": "OE-02",
+      "severity": "major",
+      "requirement": "TME-PROCUREMENT",
+      "objects": ["engineering/procurement.TME-A.json", "README.md"],
+      "evidence": "Every selected MPN has a TME offer, but all_parts_current_stock_confirmed remains false. Several offers have cached stock or failed fresh checks. R6 and the four-part OVP resistor have MOQ100 records. LYT1603D is NRND.",
+      "consequence": "One supplier and16MPNs simplify procurement, but they do not establish a currently purchasable complete prototype set or a stable production supply chain.",
+      "closure": "Retain truthful per-MPN freshness and resolve exact stock/MOQ before calling this an available complete order. Track under existing TME-STOCK; no redundant alternate-controller redesign requested.",
+      "blocked_claim": "Complete currently available TME order; not saving an explicit engineering candidate"
+    },
+    {
+      "id": "OE-03",
+      "severity": "major",
+      "requirement": "COMPACT-PCB",
+      "objects": ["design-brief.json", "README.md", "checks/placement-proposal.json"],
+      "evidence": "Final board51.2x37mm is12.1% wider than33mm preference. MountedT1~22.5mm plus1.6mmPCB and2.9mm rearBR1 yields~27mm total,35% above20mm target. T1 alone exceeds the old total-height target.",
+      "consequence": "The TME sourcing choice is a real dimensional tradeoff. Routing cleanup alone cannot restore the20mm envelope with this magnetic component.",
+      "closure": "Continue to show exact dimensions and target miss. Prove actual mechanical fit or accept a concrete revised envelope before a normal-bulb fit claim. No invented fit from a 3D render.",
+      "blocked_claim": "Fits prior envelope or ordinary bulb; not saving an explicit separate candidate"
+    },
+    {
+      "id": "OE-04",
+      "severity": "blocker",
+      "requirement": "FAULT-CONTAINMENT/ROUTING/THERMAL",
+      "objects": ["engineering-status.json", "checks/summary.json", "checks/functional-spacing.json"],
+      "evidence": "Frozen assessment includes401object-pair hits across231 enumerated net pairs, no exceptions; full Toolkit release FAIL. T1 fault-current, input-transient, fuse/resistor/MOV coordination and physical thermal/ripple gates remain open.",
+      "consequence": "Reducing component count, retaining an existing controller or passing native manufacturing DRC cannot close these electrical/clearance issues. The frozen packet correctly stays NOTFORORDERORPOWEREDTEST.",
+      "closure": "Use existing electrical/spacing blockers and independent closure checks; do not remove required protection or weaken criteria merely to simplify the board.",
+      "blocked_claim": "Manufacturing/energization acceptance or qualified functional-insulation pass"
+    }
+  ],
+  "simplicity_assessment": [
+    "Two-layer single-controller architecture with no dimming or firmware is suitably modest for this sourcing variant. A full alternative external-MOSFET/controller topology is not a necessary simplification of this task.",
+    "Using the same630V150nF part forC1/C4 reduces uniqueMPNs from17to16 and removes the interim400VC1. This is coherent part consolidation; it does not itself prove nonlinear surge/filter behavior.",
+    "Three47uF output capacitors have a documented sourcing/ripple rationale. OneUCD150uF would remove2positions and4 solder joints, but lower120Hz ripple rating and unverified hot performance prevent calling that a qualified replacement.",
+    "Four97.6k resistors distribute voltage among sourced200V1206 parts; no verified in-stock singleHV390k substitution was established. Parallel sense resistors achieve the desired value. Dual bleeders preserve one-open discharge coverage. None is demonstrated redundant.",
+    "SeparateF1 is needed because a replacement resistor's mains interruption was not demonstrated. Do not remove fuse, MOV, bypass capacitor or input filter solely to save area; their actual coordination still requires proof."
+  ],
+  "recommendation": "blocked_for_release; appropriately simple explicit engineering candidate may be saved and reviewed with all open findings. No human approval or completed all-stock claim.",
+  "new_mandatory_redesign_requested_by_this_role": false
+}

@@ -1,0 +1,267 @@
+{
+  "revision": "SC10-TME-A basis",
+  "prepared_before_CAD": true,
+  "author": "/root/tme_cad",
+  "source_function": "Nonisolated high-side constant current buck adapted from physical datasheets; no isolated output or accepted SC09 approval inherited.",
+  "primary_sources": [
+    {
+      "ref": "J1",
+      "MPN": "Direct insulated-wire solder pads",
+      "url": "Actual owner board-only interface",
+      "physical_pin_nets": {
+        "1": "AC_L",
+        "2": "AC_N"
+      }
+    },
+    {
+      "ref": "F1",
+      "MPN": "37301000410",
+      "url": "https://www.littelfuse.com/products/fuses-overcurrent-protection/fuses/through-hole-fuses/subminiature-fuses/373/37301000410",
+      "physical_pin_nets": {
+        "1": "AC_L",
+        "2": "AC_PROTECTED"
+      }
+    },
+    {
+      "ref": "R1",
+      "MPN": "PMR03SJ0151A19",
+      "url": "https://www.tme.eu/en/details/pmr3s-150r/tht-resistors/royalohm/pmr03sj0151a19/",
+      "physical_pin_nets": {
+        "1": "AC_PROTECTED",
+        "2": "AC_LIMITED"
+      }
+    },
+    {
+      "ref": "RV1",
+      "MPN": "B72207S0271K101",
+      "url": "https://www.tme.eu/Document/94891b49d586e9338877713baac923fe/SIOV_Leaded_StandarD.pdf",
+      "physical_pin_nets": {
+        "1": "AC_PROTECTED",
+        "2": "AC_N"
+      }
+    },
+    {
+      "ref": "BR1",
+      "MPN": "MB10S-13",
+      "url": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+      "physical_pin_nets": {
+        "1": "BUS_RECT",
+        "2": "AC_LIMITED",
+        "3": "DC_RETURN",
+        "4": "AC_N"
+      }
+    },
+    {
+      "ref": "C1",
+      "MPN": "R71PF315050H6K",
+      "url": "https://content.kemet.com/datasheets/KEM_F3130_R71H.pdf",
+      "physical_pin_nets": {
+        "1": "BUS_RECT",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "L1",
+      "MPN": "COIL1010-3.3",
+      "url": "https://www.tme.eu/Document/d4ea539b7be49d8641efd52b6965f3fb/COIL1010-3.3.pdf",
+      "physical_pin_nets": {
+        "1": "BUS_RECT",
+        "2": "BUS_FILTERED"
+      }
+    },
+    {
+      "ref": "C4",
+      "MPN": "R71PF315050H6K",
+      "url": "https://content.kemet.com/datasheets/KEM_F3130_R71H.pdf",
+      "physical_pin_nets": {
+        "1": "BUS_FILTERED",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "U1",
+      "MPN": "LYT1603D",
+      "url": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "physical_pin_nets": {
+        "1": "BP",
+        "2": "M",
+        "3": "FB_INDUCTOR",
+        "4": "BUS_FILTERED",
+        "5": "SW_SOURCE",
+        "6": "SW_SOURCE",
+        "7": "SW_SOURCE",
+        "8": "SW_SOURCE"
+      }
+    },
+    {
+      "ref": "C5",
+      "MPN": "CL21B475KAFNNNE",
+      "url": "https://product.samsungsem.com/mlcc/CL21B475KAFNNN.do",
+      "physical_pin_nets": {
+        "1": "BP",
+        "2": "SW_SOURCE"
+      }
+    },
+    {
+      "ref": "R4",
+      "MPN": "ERJ6ENF1242V",
+      "url": "https://industrial.panasonic.com/ww/products/pt/general-purpose-chip-resistors/models/ERJ6ENF1242V",
+      "physical_pin_nets": {
+        "1": "M",
+        "2": "SW_SOURCE"
+      }
+    },
+    {
+      "ref": "R5",
+      "MPN": "CS06FTFUR680",
+      "url": "https://www.tme.eu/Document/a812535aec0aa18fd47b9a8fc0cc2be6/CS%2BREV.D3-160715.pdf",
+      "physical_pin_nets": {
+        "1": "SW_SOURCE",
+        "2": "FB_INDUCTOR"
+      }
+    },
+    {
+      "ref": "R6",
+      "MPN": "1206S4F365KT5E",
+      "url": "https://www.tme.eu/pl/details/smd1206-3.65r-1%25/rezystory-smd/royalohm/1206s4f365kt5e/",
+      "physical_pin_nets": {
+        "1": "SW_SOURCE",
+        "2": "FB_INDUCTOR"
+      }
+    },
+    {
+      "ref": "D1",
+      "MPN": "US1M-13-F",
+      "url": "https://www.diodes.com/assets/Datasheets/ds16008.pdf",
+      "physical_pin_nets": {
+        "1": "FB_INDUCTOR",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "T1",
+      "MPN": "74089",
+      "url": "https://www.tme.eu/Document/3c9a981005973346bf6deccb406dce97/74087-Datasheet.pdf",
+      "physical_pin_nets": {
+        "1": null,
+        "2": null,
+        "4": "FB_INDUCTOR",
+        "5": "LED_PLUS",
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null
+      }
+    },
+    {
+      "ref": "R8",
+      "MPN": "RC1206FR-0768KL",
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL",
+      "physical_pin_nets": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "R9",
+      "MPN": "RC1206FR-0768KL",
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL",
+      "physical_pin_nets": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "J2",
+      "MPN": "Direct insulated-wire solder pads",
+      "url": "Actual owner integratedLED+shade module",
+      "physical_pin_nets": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "R7",
+      "MPN": "RC1206FR-0797K6L",
+      "url": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "physical_pin_nets": {
+        "1": "LED_PLUS",
+        "2": "OVP_CHAIN1"
+      }
+    },
+    {
+      "ref": "R10",
+      "MPN": "RC1206FR-0797K6L",
+      "url": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "physical_pin_nets": {
+        "1": "OVP_CHAIN1",
+        "2": "OVP_CHAIN2"
+      }
+    },
+    {
+      "ref": "R11",
+      "MPN": "RC1206FR-0797K6L",
+      "url": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "physical_pin_nets": {
+        "1": "OVP_CHAIN2",
+        "2": "OVP_CHAIN3"
+      }
+    },
+    {
+      "ref": "R12",
+      "MPN": "RC1206FR-0797K6L",
+      "url": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "physical_pin_nets": {
+        "1": "OVP_CHAIN3",
+        "2": "M"
+      }
+    },
+    {
+      "ref": "C6",
+      "MPN": "UHE2A470MPD",
+      "url": "https://www.nichicon.co.jp/english/series_list/catalog_pdf/e-uhe.pdf",
+      "physical_pin_nets": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "C7",
+      "MPN": "UHE2A470MPD",
+      "url": "https://www.nichicon.co.jp/english/series_list/catalog_pdf/e-uhe.pdf",
+      "physical_pin_nets": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      }
+    },
+    {
+      "ref": "C8",
+      "MPN": "UHE2A470MPD",
+      "url": "https://www.nichicon.co.jp/english/series_list/catalog_pdf/e-uhe.pdf",
+      "physical_pin_nets": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      }
+    }
+  ],
+  "reference_input_hashes": [
+    {
+      "path": "work/tme-build/magnetics/74087-74089-primary.pdf",
+      "sha256": "3c4a1cfc940e4d90126a58e3c29295364ae8055ee8fec563033e498b3b627182"
+    },
+    {
+      "path": "work/compact09/capture-active/land-geometry-addendum.json",
+      "sha256": "9b021d0a45738238a7b84d1cdf51aaf9c95ea769ec3e200df5660806b607745a"
+    },
+    {
+      "path": "work/tme-build/magnetics/L1-selection.json",
+      "sha256": "d3d4ceb72861c1e8443fed8400fa92228f6f2d045d40fd1b15168c76fdddbb27"
+    }
+  ],
+  "limitations": [
+    "No new owner stage approval",
+    "Full current/thermal/impulse/fault qualification open",
+    "Pin8physicalspare sample check"
+  ]
+}

@@ -1,0 +1,17 @@
+# Final nonmagnetic freeze addendum
+
+Parent requested freeze: F1 Littelfuse37301000410 plus RIN RoyalohmPMR03SJ0151A19; D1US1M-13-F; twoR71PF315050H6K films; threeUHE2A470MPD output capacitors. See procurement-evidence.json for exact MPNs, counts, order quantities and honest freshness grades. This supersedes the earlier single-Royal-fusible protection proposal; do not treat FRN as the frozen RF1.
+
+F1 official primary confirms F100mA/250VAC,50A breaking, maximum melting integral at10In=.0013A²s; body diameter8.5max,height8max,P5.08,lead.6. This is thermoplasticUL94V0 TR5, not ceramic. TME category cached5days788/MOQ1. The voltage rating/source envelope and50A breaking limit must remain explicit, especially where the MOV is upstream of RIN. .0013×150=.195J is a screening product, not a guaranteed maximum total-clearing energy at the actual voltage/current. Do not mark fault coordination closed on this basis. Normal-current and repetitive-inrush fuse life need verification. Manufacturer link: https://www.littelfuse.com/assetdocs/littelfuse_fuse_373_datasheet.pdf?assetguid=24864334-6b08-484a-af3e-1dfca28b0404
+
+RIN primary PMR03S table confirms diameter5.5max,length16max,lead.75±.05mm,3W at70°C,350ppm/K,linear derating to0at155°C. TME current indexed lastweek14455/MOQ5; parent has stronger reported11965 observation. The manufacturer's performance sheet lists pulse-overload acceptance but does not establish a pulse-energy waveform envelope sufficient for fuse coordination. Source: https://www.mouser.com/datasheet/2/1365/6-3044630.pdf . A newer family drawing elsewhere gives slightly different dimensions; use conservative6×17mm keepout if exact supplied lot drawing is unresolved.
+
+D1 official DiodesUS1A–US1M family PDF fetched successfully: https://www.diodes.com/datasheet/download/US1M.pdf . US1M1kV/1A/SMA/75ns/1.7V@1A/30AIFSM; TME exact offer cachedlastmonth13786/MOQ1. Forward-drop and recovery losses require actual waveform/temperature review. Same family as previousUS1J does not transfer the prior approved value automatically.
+
+## Compact C1 primary now resolved
+
+The official R66 PDF became available through indexed retrieval. https://content.kemet.com/datasheets/KEM_F3102_R66.pdf revision2026-07-15 confirms exactR66MD2470AA7AK:47nF/400VDC/200VAC/±10%,P7.5±.4,275V/us,K0=220000V²/us; body10×4×9 nominal,maximum10.2×4.1×9.1mm,pin.6±.05. Rated85°C; voltage derating above85°C is1.25%/°C. At100°C rating325V would be below357.8Vmainspeak, so retain80°Ccase stop. LegacyMC7.5 alias smallerbody/200Vus is not the exact modern part geometry. This resolves primary geometry/pulse/temperature basis, but not alias procurement/stock matching. The parent froze150nFR71 atC1; retain R66 as an alternate proposal until exact offer evidence and new-map selection are clear. With150Ω−5%,47nF−10%, ideal source-only dV/dt=59.36V/us. That estimate does not bound L1 saturation or arbitrary surge events.
+
+## Rejected paths
+
+SchurterMST0034.6609 is phase-out (lastdeliveryJuly2026),35A breaking and slow, so not preferred. Littelfuse37202500431 T250mA is obtainable but its minimum melting integral.4938A²s would imply74.07J×150Ω atthat test point; it does not solve resistor survival. OptifuseFMR125 had no positive stock evidence. VishayAC03000001500JAC00 was found atTME but indexed0; do not list it as stocked. PMR150 is a procurement-positive candidate with explicit pulse-coordination gate, not a qualified surge resistor by inference.

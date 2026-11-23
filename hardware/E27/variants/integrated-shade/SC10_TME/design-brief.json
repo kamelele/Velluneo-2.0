@@ -1,0 +1,38 @@
+{
+  "name": "Płytka TME",
+  "engineering_revision": "SC10-TME-A",
+  "status": "New independent design in progress; no existing Gerbers are labelled as a verifiedTMEversion",
+  "retained_user_targets": {
+    "input_VAC_RMS": [
+      207,
+      230,
+      253
+    ],
+    "frequency_Hz": 50,
+    "optical_target_lm": 800,
+    "CCT_K": 4000,
+    "CRI_min": 80,
+    "LED_string_target": "Prefer retain20seriesLEDs, nominal60V/135mAtotal135, about133mAexternalafterbleeders",
+    "nonisolated": true,
+    "dimming": false,
+    "ambient_C": [
+      0,
+      40
+    ],
+    "use": "Laboratoryprototype, manuallyassembled",
+    "PCB_target_mm": [
+      51.2,
+      33
+    ],
+    "assembly_height_target_mm": 20,
+    "barePCB_process": "JLCPCBFR4,2layers,1.6mm,1oz,leadfreeHASL,greenmask,whitesilk"
+  },
+  "new_requirement": "Every electronic component must have an exactTMEcatalogueMPN, lowprototypeMOQ and current positive stock or explicit truthful availability status. Catalogue listing alone/zero stock/unknown industrialMOQ is not a complete ready-to-buy set.",
+  "allowed_design_changes": "Newparts, differentvalues, addedseriesresistors/parallelcapacitors, newfootprints/routing orcontroller if independentlyjustified; preservecompactnessand800lmlabtarget. No arbitraryweakenedrules or claimedphysicalmeasurements.",
+  "CAD_basename": "Plytka_TME",
+  "approval_inherited_from_SC09": false,
+  "physical_tests_performed": false,
+  "assembly_height_target_mm": 20,
+  "current_magnetic_body_height_mm": 22,
+  "height_target_status": "NOT_MET: MYRRA74089 itself is22mm above board; board and bottom components add to total envelope."
+}

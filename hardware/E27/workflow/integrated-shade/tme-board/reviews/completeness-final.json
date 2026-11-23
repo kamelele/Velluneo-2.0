@@ -1,0 +1,48 @@
+{
+  "role": "Completeness Reviewer",
+  "actual_actor": "/root/tme_completeness",
+  "date": "2026-11-23",
+  "revision": "SC10-TME-A-DRAFT",
+  "source_digest": "86c78b4be01ec98c0227b2ce02a5600e4c6f7527d1007f378b6b368268d3d2a2",
+  "PCB_sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+  "manifest": "hardware/E27/workflow/integrated-shade/tme-board/review-inputs.json",
+  "independent_checks": {
+    "source_files_hashed": 91,
+    "source_hash_mismatches": [],
+    "artifact_hash_mismatches": [],
+    "original_SC09_files_hashed": 140,
+    "original_SC09_mismatches": [],
+    "BOM_procurement_ref_MPN_membership_equal": true,
+    "BOM_electronic_positions": 23,
+    "procurement_unique_MPNs": 16,
+    "physical_pins_in_independent_intent": 65,
+    "explicit_NC_in_independent_intent": 7,
+    "independent_intent_approval": null,
+    "native_CAD_checks_reexecuted_by_this_reviewer": false,
+    "native_CAD_reports_inspected": true,
+    "remote_main_reverified_by_this_reviewer": false
+  },
+  "coverage": [
+    {"requirement":"TME-PROCUREMENT","deliverables":"bom-build.json; engineering/procurement.TME-A.json; exact TME offer links","assessment":"Complete catalogue selection for all23electronicpositions/16MPNs; every BOM reference/MPN matches procurement exactly. Current availability and prototype MOQ for every part remain incomplete.","gate":"specification","status":"blocked"},
+    {"requirement":"INPUT-EU230","deliverables":"power-supply-specification.TME-A.json; thermal-and-insulation-basis.json; bring-up-gates.json","assessment":"207–253VAC/50Hz and hazardous nonisolated output declared. Exact approved external fixture/interface and fault limits remain open.","gate":"specification/schematic","status":"blocked"},
+    {"requirement":"LED-800LM","deliverables":"design-brief.json; bom-build.json LED_module_candidate; power-supply-specification.TME-A.json","assessment":"20S,4000K,CRI>=80/~800lm target and calculated60V/135mAtotal output declared; actual flux/current/ripple/temperature not measured or qualified.","gate":"specification","status":"blocked"},
+    {"requirement":"FAULT-CONTAINMENT","deliverables":"engineering/electrical-calculations.json; engineering/input-filter-screen.json; engineering-status.json","assessment":"T1faultcurrent, nonlinearL1turn-on and fuse/resistor/MOVcoordination explicitly unresolved. No substituted physical proof.","gate":"schematic","status":"blocked"},
+    {"requirement":"GRAPH-EXACT","deliverables":"intended-connectivity.toolkit.json; source-basis.TME-A.json; checks/graph-audit.json; native netlist/ERC/DRC-parity reports","assessment":"25refs/65pins/15functionalnets/7NC graph comparison and native reports pass for their stated scope. Exact-map approval remainsnull; graph pass does not close electrical gates.","gate":"schematic","status":"blocked"},
+    {"requirement":"COMPACT-PCB","deliverables":"nativePCB; footprint-geometry.json; checks/placement-proposal.json; native3Dfront/back","assessment":"Actual51.2x37mm,2L,approximately27mm assembly shown. Former33mmwidth/20mmheight targets are missed and honestly disclosed. No approved final bulb/fixture fit contract.","gate":"placement","status":"blocked"},
+    {"requirement":"ROUTING","deliverables":"nativePCB; functional-spacing-targets.json; checks/routing-record.json; checks/functional-spacing.json; checks/kelvin-contact-audit.json; copperPDFs","assessment":"Actual full routing exists,190segments/17vias; nativeERC/DRC/unconnected/parity0. Conservative231net-pair assessment has401object-pairhits, no approved exceptions. Low-current Kelvin geometry evidence is limited, not physical isolation proof.","gate":"routing","status":"blocked"},
+    {"requirement":"THERMAL","deliverables":"thermal-and-insulation-basis.json; engineering/electrical-calculations.json; bring-up-gates.json","assessment":"0–40C laboratory scope and stop targets declared; T1DCR/coreloss/hotbias and absolute temperatures/efficiency unqualified.","gate":"routing","status":"blocked"},
+    {"requirement":"MANUAL-LAB","deliverables":"manual-assembly-plan.json; nativeCAD/libraries; schematicPDF; assemblygeometryPDF; 3Drenders; toolkitreleasecheck","assessment":"Useful manual-assembly design candidate packet exists. FullToolkitreleaseFAIL, no manufacturing acceptance/Gerbers/order-ready claim. No fabrication order or powered test authorized.","gate":"release","status":"blocked"},
+    {"requirement":"PRESERVE-ORIGINAL","deliverables":"preserved-original.json; original-preservation-check.json","assessment":"Reviewer independently rehashed all140originalSC09files with no differences. Remote main preservation remains root publication verification scope.","gate":"release","status":"verified_local_scope_only"}
+  ],
+  "findings": [
+    {"id":"COMP-TME-AVAILABILITY","severity":"major","object":"engineering/procurement.TME-A.json","basis":"Freshness grades and explicit all_parts_current_stock_confirmed:false; seven unique MPNs retain cached stock, several MOQs are null.","consequence":"The new PCB can be described as selected from the TME catalogue; the user's stronger all-components-currently-orderable requirement is not yet established.","closure":"Confirm current positive stock and viable order minimum/multiple for each exact selected MPN, with dated supplier evidence; retain lifecycle/NRND risk forLYT1603D.","blocked_stage":"specification"},
+    {"id":"COMP-TRACEABILITY","severity":"major","object":"requirements.json","basis":"All10requirements have empty evidence_ids and generic implementation pathdesign-brief.json, despite separate CAD/calculation/check deliverables existing.","consequence":"Machine-readable requirements verification remains incomplete and cannot support a stage/release acceptance. The fullToolkitFAIL is accurate.","closure":"Link actual current, hashed evidence of the declared kind to each requirement and specific implementation input; retain failed/unknown gates without fabricating technical or human acceptance.","blocked_stage":"specification"},
+    {"id":"COMP-INTERFACES-AND-FIT","severity":"major","object":"requirements.json interfaces:[]; bring-up-gates.json","basis":"OPEN-INTERFACES is explicitly open; no named approved fixture/LED interface revision, responsible tester or complete mechanical fit contract. Actual assembly exceeds former preferred width/height targets.","consequence":"The candidate cannot be presented as a fit-qualified bulb module or ready for powered laboratory integration.","closure":"Bind exact external LED and guarded laboratory fixture/source interfaces, physical envelopes and thermal conditions; review current geometry against actual fit requirements before relevant acceptance.","blocked_stage":"schematic/placement"},
+    {"id":"COMP-ELECTRICAL-AND-SPACING","severity":"blocker","object":"engineering-status.json; checks/functional-spacing.json; checks/toolkit-release.json","basis":"T1.85A catalogue peak versus up1.24A ICfaultlimit, L1nonlinearinputtransients, fuse coordination,401strictspacinghits and missing hot/OVP/ripple tests remain open.","consequence":"A clean manufacturing DRC does not establish safe operation, functional insulation or release. ExistingSC09fabrication approval does not apply to this changed design.","closure":"Close each owned electrical/spacing finding using applicable source evidence/design change and required physical qualification; obtain exact affected stage decisions. Do not convert a sourcing requirement into a waiver.","blocked_stage":"schematic/placement/routing/release"}
+  ],
+  "recommendation": "blocked",
+  "publication_scope": "The frozen native design may be published as a separate experimental TME-catalogue candidate with all these limitations visible. Do not describe all components as freshly confirmed available, the task as procurement-qualified complete, or the board as order-ready/safe to energize.",
+  "human_stage_approval_granted": false,
+  "source_files_modified": false,
+  "purchase_supplier_contact_or_powered_test": false
+}

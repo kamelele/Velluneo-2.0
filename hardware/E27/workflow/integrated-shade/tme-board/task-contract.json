@@ -1,0 +1,38 @@
+{
+  "task": "Build separate P\u0142ytka TME",
+  "actual_coordinator": "/root",
+  "date": "2026-11-23",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "main_write": false,
+  "requirements": [
+    "TME-PROCUREMENT",
+    "LED-800LM",
+    "INPUT-EU230",
+    "COMPACT-PCB",
+    "MANUAL-LAB",
+    "GRAPH-EXACT",
+    "ELECTRICAL-CHECKS"
+  ],
+  "ownership": {
+    "approvedSC09": "No writer permitted",
+    "newSC10sources": "Root until explicit implementer lease",
+    "architecture_research": "/root/tme_architecture -> work/tme-build/architecture",
+    "magnetics_research": "/root/tme_magnetics_build -> work/tme-build/magnetics",
+    "BOM_research": "/root/tme_bom_build -> work/tme-build/bom"
+  },
+  "expected_outputs": [
+    "ExactcurrentTMEpartsandprimaryratings/footprints",
+    "Independentintendedgraphbeforecapture",
+    "NativeKiCadschematic/PCBwithprofessionalopposite-edgeports",
+    "FreshERC/DRC/parity/Kelvin/spacings/manufacturingchecks",
+    "MatchedGerber/drill/BOM/manualassembly/3Dpackage",
+    "Fourdistinctread-onlyreviewrolesandfinalhumanstagepacket"
+  ],
+  "not_authorized": [
+    "OriginalSC09mutation",
+    "mainmutation",
+    "suppliermessage/upload/order",
+    "poweredtest",
+    "fabricatedhumanacceptanceorphysicalqualification"
+  ]
+}

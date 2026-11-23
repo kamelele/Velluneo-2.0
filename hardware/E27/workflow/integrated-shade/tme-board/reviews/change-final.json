@@ -1,0 +1,177 @@
+{
+  "actor": "/root/tme_change",
+  "role": "Change Reviewer",
+  "date": "2026-11-23",
+  "source_digest": "86c78b4be01ec98c0227b2ce02a5600e4c6f7527d1007f378b6b368268d3d2a2",
+  "PCB_sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+  "recommendation": "blocked",
+  "scope": "Read-only review of separate SC10-TME-A engineering candidate. No source/config/CAD edits, supplier communication, order, powered test or approval.",
+  "candidate_may_be_saved_separately": true,
+  "candidate_save_scope": "Accurately labelled unapproved design/review candidate only; this is not manufacturing acceptance.",
+  "verified": {
+    "source_files": 91,
+    "artifacts": 22,
+    "manifest_digest": true,
+    "original_SC09_files_unchanged": 140,
+    "fresh_independent_netlist_compare": "No topology/component/unit/NC mismatch; only genuine missing-intent-approval gate remains.",
+    "nativeMPN_and_connected_pin_membership_mismatches": 0,
+    "native_unrouted_NC_tracks": 0,
+    "native_DRC_violations": 0,
+    "native_unconnected": 0,
+    "native_schematic_parity": 0,
+    "routing_consumer_digest": "cb004e11baacb5adf71d761d68ef080a6741bc60dcd7ebcc7c182934daf74e61",
+    "placement_routing_consumer_files_equal": true,
+    "actual_routing_record_contract_hash_matches": true,
+    "sources_unchanged_during_review": true
+  },
+  "before_after": {
+    "original_SC09": {
+      "footprints": 19,
+      "pads": 46,
+      "tracks": 126,
+      "vias": 10
+    },
+    "new_TME": {
+      "footprints": 25,
+      "pads": 65,
+      "tracks": 190,
+      "vias": 17,
+      "layers": 2,
+      "thickness_mm": 1.6,
+      "edges": [
+        [
+          100.0,
+          100.0,
+          151.2,
+          100.0
+        ],
+        [
+          100.0,
+          137.0,
+          100.0,
+          100.0
+        ],
+        [
+          151.2,
+          100.0,
+          151.2,
+          137.0
+        ],
+        [
+          151.2,
+          137.0,
+          100.0,
+          137.0
+        ]
+      ]
+    },
+    "not_directly_comparable_metric": "Old strict55-net-pair matrix and new231-pair matrix including7NCs differ. Raw finding counts alone are not a normalized regression ratio."
+  },
+  "model_delta": "TenWRLfilesrepairedbyroot afterimplementerhandoff; checks/model-mesh-fix.json explicitly supersedes oldmodelhashes. Final91sourcefreeze covers repairedmeshes and finalrenders. PCB/schematic/lands/pro unchanged by modelrepair. Models remain illustrative envelopes, notcertifiedsupplierSTEP.",
+  "remote_main_verification": "Not independentlyqueried bythisreviewer; original140localfilehashesverified. Root must verify remote main and outside-scope tree at publication.",
+  "findings": [
+    {
+      "id": "CHG-HV-ROUTING",
+      "severity": "blocker",
+      "objects": [
+        "D1.2",
+        "track64adb25b-cd4e-4c1b-aa08-6c0f3531b5d3"
+      ],
+      "evidence": "checks/functional-spacing.json: B.Cu /DC_RETURN pad D1.2 versus /BUS_FILTERED track64adb25b... has0.350001mm conservative drawn gap against2mm target.401object-pair hits over231enumeratednetpairs; affected41netpairs.",
+      "consequence": "A native manufacturing-floor DRC pass does not establish functional high-voltage spacing. These are not solely unavoidable package-pin findings, and SC09exceptions/approval do not transfer.",
+      "closure": "Correct intercomponent/route spacing and independently rerun native matrix. Any remaining package/short-escape exception requires exact object/region electrical basis and actual authorized acceptance, not inherited SC09waivers.",
+      "blocks": [
+        "placement",
+        "routing",
+        "release",
+        "powered_test"
+      ]
+    },
+    {
+      "id": "CHG-CHANGED-ELECTRICAL-ENVELOPE",
+      "severity": "blocker",
+      "objects": [
+        "T1",
+        "L1",
+        "F1",
+        "R1",
+        "RV1",
+        "C1",
+        "C4",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "evidence": "New T1MYRRA74089 primary0.85A peak versus characterized ICfault1.06\u20131.24A. NewL1typ0.3A10%Ldrop versus ideal linear plug-in1.398A flag. New50A-breaking F100mA plus150ohm3W has no total-clearing/pulse coordination proof. Three47uF141uF aggregate and changed R6TCR invalidate earlier hot/ripple bounds.",
+      "consequence": "Actual circuit/parts differ from approvedSC09:19refs46pins11nets becomes25refs65pins15functionalnets+7NC. Normal-model graph equivalence and fresh DRC do not qualify new faults, surge or thermal limits.",
+      "closure": "Close exact source/fault/current/voltage/hot/ripple acceptance conditions or redesign. Physical data and approved contained test conditions must precede energized validation; do not mark these PASS from images or normal-current margins.",
+      "blocks": [
+        "schematic",
+        "release",
+        "powered_test"
+      ]
+    },
+    {
+      "id": "CHG-PROCUREMENT-FRESHNESS",
+      "severity": "major",
+      "objects": [
+        "engineering/procurement.TME-A.json"
+      ],
+      "evidence": "All16selecteduniqueMPNs have exactTMEoffers,23electronicpositions; only a subset has direct23Novemberpositiveinventory. Other counts are cached and last batch stopped atR5HTTP429. No custom-woundpart remains.",
+      "consequence": "A categorical all-components-currently-orderable claim is not established. Catalogue membership is established, current full-set stock/MOQ availability is not.",
+      "closure": "Confirm positive current prototype-quantity availability and purchase multiples for every exact selectedMPN; record timestamp and actual supplier part. No substitution without affected electrical/land checks.",
+      "blocks": [
+        "procurement_release"
+      ]
+    },
+    {
+      "id": "CHG-MECHANICAL-ENVELOPE",
+      "severity": "major",
+      "objects": [
+        "boardoutline",
+        "T1",
+        "R1",
+        "manual-assembly-plan.json"
+      ],
+      "evidence": "Saved four-edge rectangle51.2x37mm,2L1.6mm; oldSC09acceptedboard51.2x33mm. New total assembly reservation27mm exceeds20mmtarget. MYRRA22mm body plus0.5mmseating, board1.6mm and bottomBR12.9mm. R1uprightformedP7.5 remains sample/jig dependent.",
+      "consequence": "New candidate is not a demonstrated drop-in mechanical replacement or proven ordinary-bulb fit; width grows4mm.",
+      "closure": "Retain actual target misses in user handoff. Before enclosure integration/assembly release, inspect exact samples, formedlead/vent clearances and agreed fixture/bulb envelope.",
+      "blocks": [
+        "mechanical_acceptance",
+        "assembly_release"
+      ]
+    },
+    {
+      "id": "CHG-NEW-ACCEPTANCE",
+      "severity": "major",
+      "objects": [
+        "intended-connectivity.toolkit.json",
+        "spatial-constraints.json",
+        "checks/toolkit-release.json"
+      ],
+      "evidence": "Fresh independently exported physical-pin graph has only missing_stale_intent_approval finding; currentmap/spatialapprovalsnull; Toolkitwork/releaseFAIL. No originalSC09stageapproval transferred.",
+      "consequence": "New candidate may be retained for review but cannot inherit old bare-board manufacturing authorization. Four agent recommendations are not human approval.",
+      "closure": "Present exact updated candidate and remaining limits for actual authorized stage/release review after technical blockers are resolved; never fabricate acceptance.",
+      "blocks": [
+        "stage_acceptance",
+        "release"
+      ]
+    }
+  ],
+  "independent_audit_files": [
+    {
+      "path": "change-audit.json",
+      "sha256": "a29f06e7da21f283cdbb5ae83c3ce9d80bb1c557184c23bf96d5b769d5af9723"
+    },
+    {
+      "path": "change-native-drc.json",
+      "sha256": "592f5983dbfa4290783af080836280e3065efc27eec874c5c76006c18618fabf"
+    },
+    {
+      "path": "change-netlist.xml",
+      "sha256": "154a5e2fc8ca96f474861043dc69f333f9430a569c7777cc4a9e62930adf8559"
+    }
+  ],
+  "physical_measurements": false,
+  "approver": null
+}

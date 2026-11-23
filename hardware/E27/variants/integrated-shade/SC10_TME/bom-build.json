@@ -1,0 +1,479 @@
+{
+  "revision": "SC10-TME-A-DRAFT",
+  "approval": null,
+  "status": "Independent new TME-source candidate, not manufacturing release. Pending selections and stock grades remain explicit.",
+  "components": [
+    {
+      "ref": "J1",
+      "value": "230V AC input",
+      "mpn": "Direct insulated-wire solder pads",
+      "kind": "wirepads",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_N"
+      },
+      "source": "Actual owner board-only interface",
+      "package": "2wirepads",
+      "body_or_reservation_mm": null,
+      "notes": "No mechanical connector or consumer contact barrier selected."
+    },
+    {
+      "ref": "F1",
+      "value": "F100mA / 250VAC / 50A breaking",
+      "mpn": "37301000410",
+      "kind": "fuse",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_PROTECTED"
+      },
+      "source": "https://www.littelfuse.com/products/fuses-overcurrent-protection/fuses/through-hole-fuses/subminiature-fuses/373/37301000410",
+      "package": "TR5 radial P5.08",
+      "notes": "F100mA250VAC. Breaking capacity50A requires separately defined current-limited laboratory source; total-clearing/fuse-resistor coordination NOT closed.",
+      "body_or_reservation_mm": [
+        8.5,
+        8.5,
+        8
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "150ohm 5% 3W / surge-flameproof",
+      "mpn": "PMR03SJ0151A19",
+      "kind": "resistor",
+      "pins": {
+        "1": "AC_PROTECTED",
+        "2": "AC_LIMITED"
+      },
+      "source": "https://www.tme.eu/en/details/pmr3s-150r/tht-resistors/royalohm/pmr03sj0151a19/",
+      "package": "axial upright P7.5 custom forming",
+      "notes": "3W@70C derated to0@155C; bodyD5.5x16max,lead.75+/-.05. Upright formed return lead P7.5 and20mmheight assembly reservation. Pulse/fuse coordination remains open; not a fusible interruption claim.",
+      "body_or_reservation_mm": [
+        5.5,
+        5.5,
+        20
+      ]
+    },
+    {
+      "ref": "RV1",
+      "value": "275VAC MOV / 21J",
+      "mpn": "B72207S0271K101",
+      "kind": "MOV",
+      "pins": {
+        "1": "AC_PROTECTED",
+        "2": "AC_N"
+      },
+      "source": "https://www.tme.eu/Document/94891b49d586e9338877713baac923fe/SIOV_Leaded_StandarD.pdf",
+      "package": "TDK S07 radial P5",
+      "body_or_reservation_mm": [
+        9,
+        4.4,
+        11
+      ],
+      "notes": "TME SIOV-S07K275. 275VAC/350VDC,21J,1.2kA,710V@10A. ACprebridge. StraightP5, not oldLittelfusestagger. Source/fusecoordination and surge limit remain open."
+    },
+    {
+      "ref": "BR1",
+      "value": "1000V 0.8A bridge",
+      "mpn": "MB10S-13",
+      "kind": "bridge",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "AC_LIMITED",
+        "3": "DC_RETURN",
+        "4": "AC_N"
+      },
+      "source": "https://www.diodes.com/datasheet/download/MB10S.pdf",
+      "package": "MBS/SO4",
+      "body_or_reservation_mm": [
+        6.2,
+        4.9,
+        2.7
+      ],
+      "notes": "Reuse exact Diodes pin map from separately verifiedSC08part; not Comchip numeric identity."
+    },
+    {
+      "ref": "C1",
+      "value": "150nF 630V 10%",
+      "mpn": "R71PF315050H6K",
+      "kind": "film",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "DC_RETURN"
+      },
+      "source": "https://content.kemet.com/datasheets/KEM_F3130_R71H.pdf",
+      "package": "radial P10",
+      "body_or_reservation_mm": [
+        13.2,
+        6.2,
+        12.1
+      ],
+      "notes": "47nF400V R66 candidate rejected after independent input Pi-filter ODE predicted454V at C1. C1 now150nF630V samepart asC4. Value/filter/PF/surge/ringing qualification changed, not claimedclosed."
+    },
+    {
+      "ref": "L1",
+      "value": "3.3mH 10% / input filter",
+      "mpn": "COIL1010-3.3",
+      "kind": "inductor",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "BUS_FILTERED"
+      },
+      "source": "https://www.tme.eu/Document/d4ea539b7be49d8641efd52b6965f3fb/COIL1010-3.3.pdf",
+      "package": "radial P5",
+      "body_or_reservation_mm": [
+        11.5,
+        11.5,
+        11.5
+      ],
+      "notes": "DCR4.65ohm,Irms.5A,typIsat.3A@10%Ldrop; differential impulse and hot saturation qualification remain open.",
+      "assembly": "Vertical, hole1.5/pad2.4 proposal accommodates free-lead pitch tolerance; inspect actual sample."
+    },
+    {
+      "ref": "C4",
+      "value": "150nF 630V 10%",
+      "mpn": "R71PF315050H6K",
+      "kind": "film",
+      "pins": {
+        "1": "BUS_FILTERED",
+        "2": "DC_RETURN"
+      },
+      "source": "https://content.kemet.com/datasheets/KEM_F3130_R71H.pdf",
+      "package": "radial P10",
+      "body_or_reservation_mm": [
+        13.2,
+        6.2,
+        12.1
+      ],
+      "notes": "Post-bridge pulse film, not across-line X2; C1 changed from47nF requires fresh filter/PF review."
+    },
+    {
+      "ref": "U1",
+      "value": "LYTSwitch-1",
+      "mpn": "LYT1603D",
+      "kind": "IC",
+      "pins": {
+        "1": "BP",
+        "2": "M",
+        "3": "FB_INDUCTOR",
+        "4": "BUS_FILTERED",
+        "5": "SW_SOURCE",
+        "6": "SW_SOURCE",
+        "7": "SW_SOURCE",
+        "8": "SW_SOURCE"
+      },
+      "source": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "package": "SO8",
+      "body_or_reservation_mm": [
+        6,
+        4.9,
+        1.75
+      ],
+      "notes": "Same physical die/package as -TL reel; tube packaging. NRND. No prior approval transferred."
+    },
+    {
+      "ref": "C5",
+      "value": "4.7uF 25V X7R",
+      "mpn": "CL21B475KAFNNNE",
+      "kind": "MLCC",
+      "pins": {
+        "1": "BP",
+        "2": "SW_SOURCE"
+      },
+      "source": "https://product.samsungsem.com/mlcc/CL21B475KAFNNN.do",
+      "package": "0805",
+      "body_or_reservation_mm": [
+        2.1,
+        1.35,
+        1.35
+      ],
+      "notes": "Effective capacitance at5.55V is ~3.14uF typical per Samsung curve, not guaranteed; BPdroop to measure."
+    },
+    {
+      "ref": "R4",
+      "value": "12.4kohm 1%",
+      "mpn": "ERJ6ENF1242V",
+      "kind": "resistor",
+      "pins": {
+        "1": "M",
+        "2": "SW_SOURCE"
+      },
+      "source": "https://industrial.panasonic.com/ww/products/pt/general-purpose-chip-resistors/models/ERJ6ENF1242V",
+      "package": "0805",
+      "body_or_reservation_mm": [
+        2.1,
+        1.35,
+        0.65
+      ],
+      "notes": "Canonical Panasonic MPN without formatting hyphen, sameERJ6ENF1242V12.4kohm1%0805 part; lowerdivider reference retained."
+    },
+    {
+      "ref": "R5",
+      "value": "0.68ohm 1% 0.5W",
+      "mpn": "CS06FTFUR680",
+      "kind": "sense resistor",
+      "pins": {
+        "1": "SW_SOURCE",
+        "2": "FB_INDUCTOR"
+      },
+      "source": "https://www.tme.eu/Document/a812535aec0aa18fd47b9a8fc0cc2be6/CS%2BREV.D3-160715.pdf",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Viking .68ohm1% .5W200ppm/K; exact new land basis in footprint-geometry.json."
+    },
+    {
+      "ref": "R6",
+      "value": "3.65ohm 1%",
+      "mpn": "1206S4F365KT5E",
+      "kind": "sense resistor",
+      "pins": {
+        "1": "SW_SOURCE",
+        "2": "FB_INDUCTOR"
+      },
+      "source": "https://www.tme.eu/pl/details/smd1206-3.65r-1%25/rezystory-smd/royalohm/1206s4f365kt5e/",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Royalohm .25W400ppm/K; current tolerance changed vs original100ppm part. Primary rating/land verification pending supplier source."
+    },
+    {
+      "ref": "D1",
+      "value": "1000V 1A ultrafast75ns",
+      "mpn": "US1M-13-F",
+      "kind": "diode",
+      "pins": {
+        "1": "FB_INDUCTOR",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.diodes.com/assets/Datasheets/ds16008.pdf",
+      "package": "SMA",
+      "body_or_reservation_mm": [
+        6,
+        3.5,
+        2.7
+      ],
+      "notes": "Same Diodes US1A-M family SMA manufacturer land;1000V version. Parent primary source/stock verified; system surge/temperature remain unqualified."
+    },
+    {
+      "ref": "T1",
+      "value": "1.3mH / primary only",
+      "mpn": "74089",
+      "kind": "magnetic primary",
+      "pins": {
+        "1": null,
+        "2": null,
+        "4": "FB_INDUCTOR",
+        "5": "LED_PLUS",
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null
+      },
+      "source": "https://www.tme.eu/Document/3c9a981005973346bf6deccb406dce97/74087-Datasheet.pdf",
+      "package": "EF20 THT 21x21x22mm",
+      "body_or_reservation_mm": [
+        21,
+        21,
+        22
+      ],
+      "notes": "Use ONLY primary4-5 as energy choke. All other windings open. Pin3removed. Pin8mechanical presence must be checked on sample. NOT isolated output. Normal peak~.487A<.85A but fault1.24A>.85A remains unqualified.",
+      "reference_design_mpn": "RDR464 EE10 150turn build",
+      "assembly": "Manufacturer bottom-view pin numbering converted to component-side view; all physicalNCpads retained."
+    },
+    {
+      "ref": "R8",
+      "value": "68kohm 1% 0.25W",
+      "mpn": "RC1206FR-0768KL",
+      "kind": "bleeder",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Two parallel bleeders; one-open discharge calculated to5Vwithin40s from90V. No accessiblecontact barrier or energizedhotplug guarantee."
+    },
+    {
+      "ref": "R9",
+      "value": "68kohm 1% 0.25W",
+      "mpn": "RC1206FR-0768KL",
+      "kind": "bleeder",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC1206FR-0768KL",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Two parallel bleeders; one-open discharge calculated to5Vwithin40s from90V. No accessiblecontact barrier or energizedhotplug guarantee."
+    },
+    {
+      "ref": "J2",
+      "value": "LED module output",
+      "mpn": "Direct insulated-wire solder pads",
+      "kind": "wirepads",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "Actual owner integratedLED+shade module",
+      "package": "2wirepads",
+      "body_or_reservation_mm": null,
+      "notes": "Nonisolated, mainsreferenced. Cold replacement only after deenergizing and verified discharge; final contact mechanism separate."
+    },
+    {
+      "ref": "R7",
+      "value": "97.6kohm 1% / 200V",
+      "mpn": "RC1206FR-0797K6L",
+      "kind": "resistor",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "OVP_CHAIN1"
+      },
+      "source": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Four series parts replace390kHV resistor; total390.4k. Dynamic voltage distribution unmeasured."
+    },
+    {
+      "ref": "R10",
+      "value": "97.6kohm 1% / 200V",
+      "mpn": "RC1206FR-0797K6L",
+      "kind": "resistor",
+      "pins": {
+        "1": "OVP_CHAIN1",
+        "2": "OVP_CHAIN2"
+      },
+      "source": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Four series parts replace390kHV resistor; total390.4k. Dynamic voltage distribution unmeasured."
+    },
+    {
+      "ref": "R11",
+      "value": "97.6kohm 1% / 200V",
+      "mpn": "RC1206FR-0797K6L",
+      "kind": "resistor",
+      "pins": {
+        "1": "OVP_CHAIN2",
+        "2": "OVP_CHAIN3"
+      },
+      "source": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Four series parts replace390kHV resistor; total390.4k. Dynamic voltage distribution unmeasured."
+    },
+    {
+      "ref": "R12",
+      "value": "97.6kohm 1% / 200V",
+      "mpn": "RC1206FR-0797K6L",
+      "kind": "resistor",
+      "pins": {
+        "1": "OVP_CHAIN3",
+        "2": "M"
+      },
+      "source": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "package": "1206",
+      "body_or_reservation_mm": [
+        3.4,
+        1.85,
+        0.7
+      ],
+      "notes": "Four series parts replace390kHV resistor; total390.4k. Dynamic voltage distribution unmeasured."
+    },
+    {
+      "ref": "C6",
+      "value": "47uF 100V 20%",
+      "mpn": "UHE2A470MPD",
+      "kind": "electrolytic",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.nichicon.co.jp/english/series_list/catalog_pdf/e-uhe.pdf",
+      "package": "radial P5 vertical",
+      "body_or_reservation_mm": [
+        10.5,
+        10.5,
+        14
+      ],
+      "notes": "Three parallel47uF; total141uF. Can nominal10x12.5; maxD10.5,H14 including tolerance and seating planning reserve. Each325mA100kHz; sharing/temperature unmeasured.",
+      "assembly": "Vertical can, positivepin1; sleeve is not insulation. No exposed top copper under can except own pads."
+    },
+    {
+      "ref": "C7",
+      "value": "47uF 100V 20%",
+      "mpn": "UHE2A470MPD",
+      "kind": "electrolytic",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.nichicon.co.jp/english/series_list/catalog_pdf/e-uhe.pdf",
+      "package": "radial P5 vertical",
+      "body_or_reservation_mm": [
+        10.5,
+        10.5,
+        14
+      ],
+      "notes": "Three parallel47uF; total141uF. Can nominal10x12.5; maxD10.5,H14 including tolerance and seating planning reserve. Each325mA100kHz; sharing/temperature unmeasured.",
+      "assembly": "Vertical can, positivepin1; sleeve is not insulation. No exposed top copper under can except own pads."
+    },
+    {
+      "ref": "C8",
+      "value": "47uF 100V 20%",
+      "mpn": "UHE2A470MPD",
+      "kind": "electrolytic",
+      "pins": {
+        "1": "LED_PLUS",
+        "2": "DC_RETURN"
+      },
+      "source": "https://www.nichicon.co.jp/english/series_list/catalog_pdf/e-uhe.pdf",
+      "package": "radial P5 vertical",
+      "body_or_reservation_mm": [
+        10.5,
+        10.5,
+        14
+      ],
+      "notes": "Three parallel47uF; total141uF. Can nominal10x12.5; maxD10.5,H14 including tolerance and seating planning reserve. Each325mA100kHz; sharing/temperature unmeasured.",
+      "assembly": "Vertical can, positivepin1; sleeve is not insulation. No exposed top copper under can except own pads."
+    }
+  ],
+  "LED_module_candidate": {
+    "count": 20,
+    "series": true,
+    "mpn": "L128-4080CA3500001",
+    "CCT_K": 4000,
+    "minimum_CRI": 80,
+    "source": "https://lumileds.com/DS216-LUXEON-2835-Architectural-Datasheet",
+    "qualification": "Current datasheet20261112 and procured flux/Vfbin, stabilized temperature and diffuser must be checked; no800lm guarantee from coldpulse data."
+  }
+}

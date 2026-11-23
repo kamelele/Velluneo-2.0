@@ -1,0 +1,326 @@
+{
+  "actor": "/root/tme_architecture",
+  "revision": "TME engineering screen 2026-11-23",
+  "no_physical_tests": true,
+  "source": "Power Integrations LYTSwitch-1 RevB07/16 pp4,7\u20139: https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf?language=en",
+  "operating": {
+    "frequency_Hz": 50,
+    "input_VAC": [
+      207,
+      230,
+      253
+    ],
+    "LED_V_window_proposed": [
+      52,
+      68
+    ],
+    "SELV": false,
+    "nonisolated": true,
+    "ambient_C": [
+      0,
+      40
+    ],
+    "LED_series": 20
+  },
+  "assumptions": {
+    "R6_TCR_ppm": 400,
+    "R7_total_ohm": 390400,
+    "thermal_reserve_not_guarantee": true,
+    "L_factors": [
+      0.9,
+      0.9,
+      0.9
+    ],
+    "IC_FB_and_OVP_thermal_extra_reserve": 0.02,
+    "R7_series_count": 4,
+    "R5_TCR_ppm": 200,
+    "resistor_life_reserve": 0.01,
+    "max_delta_from25_K": 75,
+    "R7_TCR_assumed_ppm": 200,
+    "R4_TCR_ppm": 100,
+    "L_factors_not_guarantee": true,
+    "sense_resistor_tol": 0.01,
+    "resistor_body_limit_C": 100,
+    "bleeder_TCR_ppm": 100
+  },
+  "controller": {
+    "shutdown_typ_C": 160,
+    "AR_limit_25C_A": [
+      1.06,
+      1.15,
+      1.24
+    ],
+    "CC_claim_percent": 3,
+    "line_OVP_25C_A": [
+      0.0009,
+      0.001,
+      0.0011
+    ],
+    "k_estimate": 3.6,
+    "FB_temp_curve_available": false,
+    "foldback_C": [
+      138,
+      145,
+      152
+    ],
+    "VFB_25C_magnitude_V": [
+      0.273,
+      0.279,
+      0.285
+    ],
+    "CC_claim_scope": "single line input applications, not fulltemp/line/load independent limit for this PCB",
+    "k_separate_tolerance_published": false,
+    "AR_limit_test_dIdt_mA_per_us": 446,
+    "minON_us": [
+      1.012,
+      1.1,
+      1.25
+    ],
+    "trim_may_be_required": true,
+    "OVP_25C_V": [
+      2.3,
+      2.4,
+      2.48
+    ]
+  },
+  "nominal": {
+    "peak_A": 0.4867324738114424,
+    "total_output60V_W": 8.112207896857374,
+    "bleeder_pair60V_W": 0.10588235294117647,
+    "triangle_RMS_A": 0.28101512477836876,
+    "Rparallel_ohm": 0.5732101616628176,
+    "external_LED60V_mA": 133.43875906526995,
+    "bleeder_pair60V_mA": 1.7647058823529411,
+    "estimated_total_mA": 135.20346494762288,
+    "external_LED60V_W": 8.006325543916196
+  },
+  "resistor_only_corners": [
+    {
+      "maximum_peak_A": 0.5051461279565391,
+      "minimum_peak_A": 0.4688388147180303,
+      "resistor_body_C": 0,
+      "maximum_total_mA": 140.31836887681644,
+      "basis": "25C IC limits reused; resistor tolerance/TCR only; no IC thermal or k spread guarantee",
+      "minimum_total_mA": 130.23300408834174
+    },
+    {
+      "maximum_peak_A": 0.5022220594339852,
+      "minimum_peak_A": 0.4715496126566726,
+      "resistor_body_C": 25,
+      "maximum_total_mA": 139.50612762055147,
+      "basis": "25C IC limits reused; resistor tolerance/TCR only; no IC thermal or k spread guarantee",
+      "minimum_total_mA": 130.9860035157424
+    },
+    {
+      "maximum_peak_A": 0.5039720164313337,
+      "minimum_peak_A": 0.4699190186799353,
+      "resistor_body_C": 40,
+      "maximum_total_mA": 139.9922267864816,
+      "basis": "25C IC limits reused; resistor tolerance/TCR only; no IC thermal or k spread guarantee",
+      "minimum_total_mA": 130.53306074442645
+    },
+    {
+      "maximum_peak_A": 0.5081079439839132,
+      "minimum_peak_A": 0.46616197350262145,
+      "resistor_body_C": 75,
+      "maximum_total_mA": 141.141095551087,
+      "basis": "25C IC limits reused; resistor tolerance/TCR only; no IC thermal or k spread guarantee",
+      "minimum_total_mA": 129.48943708406148
+    },
+    {
+      "maximum_peak_A": 0.5111083376030106,
+      "minimum_peak_A": 0.46351838091277886,
+      "resistor_body_C": 100,
+      "maximum_total_mA": 141.9745382230585,
+      "basis": "25C IC limits reused; resistor tolerance/TCR only; no IC thermal or k spread guarantee",
+      "minimum_total_mA": 128.75510580910523
+    }
+  ],
+  "extended_corner": {
+    "Rparallel_min_ohm": 0.5520356042776048,
+    "Rparallel_max_ohm": 0.5948631410409692,
+    "R6_low_ohm": 3.4700440499999994,
+    "triangle_RMS_max_A": 0.3040306131577409,
+    "status": "Arithmetic screen, not guaranteed current: no k spread/fulltempFB guarantee",
+    "R5_high_ohm": 0.70407302,
+    "peak_max_A": 0.526596469045526,
+    "peak_min_A": 0.4497505082123992,
+    "R6_triangle_W": 0.008117715393267125,
+    "estimated_total_max_mA": 146.27679695709057,
+    "estimated_total_min_mA": 124.93069672566645,
+    "R5_triangle_W": 0.04290948245724433,
+    "R5_low_ohm": 0.6564709799999999,
+    "R6_high_ohm": 3.83506595
+  },
+  "magnetic": {
+    "datasheet_nominalL_peak_energy_J": 0.00046962499999999994,
+    "Lnom_H": 0.0013,
+    "primary_voltage_max_V": 305.7960312803931,
+    "primary_pins": [
+      4,
+      5
+    ],
+    "frequency_model_limit": "FixedpeakCrM model, not controller frequency bound: line/on-time modulation and forced minimum frequency excluded",
+    "min_on_margin_percent": 11.50662874157964,
+    "fault_rating_vs_IC_limit_open": true,
+    "minimum_on_us": 1.3938328592697455,
+    "Lmin_assumed_H": 0.0009477000000000001,
+    "secondary1to6_ideal_max_V": null,
+    "fixed_triangle_max_frequency_at68V_Hz": 129218.080039757,
+    "required_L_at_Imin_H": 0.0008499046296129417,
+    "peak_utilization": 0.6195252577006188,
+    "Cu_W_per_ohm_hot_DCR": 0.09243461373707189,
+    "tol": 0.1,
+    "Lmax_tolerance_H": 0.00143,
+    "RMS_published": false,
+    "manufacturer_ambient_max_C": 50,
+    "DCR_published": false,
+    "hot_bias_curve_published": false,
+    "manufacturer_peak_A": 0.85,
+    "normal_energy_max_J": 0.0001982722464660192,
+    "MPN": "MYRRA74089",
+    "manufacturer_input_VAC": [
+      85,
+      265
+    ],
+    "fixed_triangle_max_frequency_at52V_Hz": 104269.46037268474,
+    "secondary6to7_and9to10_ideal_max_V": 17.77883902792983,
+    "auxiliary2to1_ideal_max_V": 42.66921366703159,
+    "geometry_verified": {
+      "body_XYZ_mm": [
+        21,
+        21,
+        22
+      ],
+      "NC": [
+        1,
+        2,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "pitch_mm": 3.81,
+      "pin8_unwound_retained": true,
+      "drill_mm": 1.2,
+      "source_png": "74089-Datasheet.png",
+      "pitch_tolerance_mm": 0.3,
+      "row_tolerance_mm": 0.5,
+      "source": "https://myrra.com/wp-content/uploads/2017/09/Datasheet-74087-74088-74089-rev-A.pdf",
+      "pin3_removed": true,
+      "rows_mm": 15.24,
+      "physical_pins": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  "OVP": {
+    "R7_each_mismatch400V_W": 0.10980976567268687,
+    "dynamic_measured": false,
+    "R7_each_400V_equal_W": 0.10613131923598662,
+    "R7_normal305p8V_total_screen_W": 0.24811170930447618,
+    "normal68V_ripple_headroom_extended_min_V": 0.9133159788420784,
+    "dynamic_COUT_target_V": 90,
+    "line_trip_min52V_V": 391.20241696,
+    "surge_qualified": false,
+    "static_max_V": 85.58892978843211,
+    "line_trip_max68V_V": 512.6428201599999,
+    "extended_assumed_ICtemp_min_V": 68.91331597884208,
+    "extended_assumed_ICtemp_max_V": 87.30070838420076,
+    "R7_total_400V_screen_W": 0.4245252769439465,
+    "static_min_V": 70.31971018249192,
+    "nominal_V": 77.96129032258064
+  },
+  "discharge": {
+    "both90V_max_W": 0.24490925499829172,
+    "hotplug_allowed": false,
+    "energy90V_J": 0.6852600000000001,
+    "COUT_nominal_uF": 141,
+    "bleeder_each90V_max_W": 0.12245462749914586,
+    "both_failed_no_discharge": true,
+    "energy68V_J": 0.39119040000000005,
+    "both90to5_s": 17.089162645127942,
+    "COUT_max_uF": 169.20000000000002,
+    "bleeder_Rmax_each_ohm": 69887.051,
+    "one_open90to5_s": 34.178325290255884,
+    "other_discharge_paths_credited": false
+  },
+  "planning": {
+    "assumed_base_loss_W": [
+      1,
+      2
+    ],
+    "PF_assumed": 0.9,
+    "Pin60V_W": [
+      9.006325543916196,
+      10.006325543916196
+    ],
+    "input_Irms207V_PF09_max_A": 0.053710818807923756,
+    "coil_local_air_stop_C": 50,
+    "COUT_stop_C": 85,
+    "resistor_body_stop_C": 100,
+    "R10ohm_at60mA_W": 0.036,
+    "D1_case_stop_C": 100,
+    "LED_efficiency60V_percent": [
+      80.01264309039004,
+      88.8966927175367
+    ],
+    "loss_proven": false,
+    "COUT_target_C": 75,
+    "coil_body_stop_C": 90,
+    "U1_Tj_target_C": 120,
+    "temperature_prediction_qualified": false,
+    "U1_source_stop_C": 100,
+    "old_loss_not_transferable": true,
+    "input_R150ohm_at60mA_W": 0.54,
+    "R150_added_normal_loss_at53p7mA_W": 0.432727808424965,
+    "input_R150_and_two150nF_RC_only_screen": {
+      "qualifier": "IdealRC nominal-value screen only; actualLC/cap tolerance/damping/fusepulse/commutation analysis separate",
+      "initial_RC_peak_A": 2.3853068752026205,
+      "stored_at253VACcrest_J": 0.019202700000000003,
+      "R_ohm": 150,
+      "nominal_Csum_F": 3e-07,
+      "C1_nF": 150,
+      "C4_nF": 150,
+      "C1_rating_VDC": 630,
+      "C4_rating_VDC": 630
+    }
+  },
+  "hard_open_gates": [
+    "MYRRA DCR/RMS/hotbias and waveforms not closed",
+    "MYRRA .85A below IC fault limiter1.24A; saturation under fault unknown",
+    "VFB/VOOV fulltemp extrema and k spread not guaranteed",
+    "At68V DC ripple may encounter low OVP corner",
+    "Dynamic90V and surge/MOV coordination unproven",
+    "New footprint and unused winding NC pin clearance require physical review"
+  ],
+  "old_calculation": {
+    "implied_Imin_if52V_A": 0.4630223121918674,
+    "old_derivation_not_recovered": true,
+    "old_L_H": 0.0008748,
+    "located": "work/compact09/catalog-only/catalogue_documents.py line17 hardcoded record",
+    "implied_Rmax_if273mV_ohm": 0.5896044160543048,
+    "conclusion": "No established old error. Preliminary architecture-proposal tentative inconsistency language withdrawn/superseded by this explicit new calculation.",
+    "old_us": 1.324582
+  },
+  "height_correction": "74023 preliminary axis interpretation was wrong. Manufacturer drawing confirms74023plan21x17height31. Rootselects74089plan21x21height22. Earlierclaim17mmheightwithdrawn. No19.5/20mm overallenvelopeclaimed.",
+  "input_filter_correction": {
+    "actor": "/root",
+    "basis": "RealityChecker recommendation to log C1 itself; independent idealPi-network numerical screen",
+    "final_C1": "KEMET R71PF315050H6K150nF630V, same asC4",
+    "rejected_C1": "R66MD2470AA7AK47nF400V",
+    "rejected_linear_screen_peak_V": 454.29187216199415,
+    "new_linear_screen_peak_C1_V": 406.9164696489554,
+    "model_is_not_qualified_bound": true,
+    "remaining": "NonlinearL1 saturation/pulse/differentialvoltage qualification and actual surge/fuse coordination stayopen."
+  }
+}

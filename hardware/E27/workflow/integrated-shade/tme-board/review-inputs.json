@@ -1,0 +1,554 @@
+{
+  "revision": "SC10-TME-A-DRAFT",
+  "date": "2026-11-23",
+  "source_digest": "86c78b4be01ec98c0227b2ce02a5600e4c6f7527d1007f378b6b368268d3d2a2",
+  "source_files": [
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/.electronics-rules/config-state.json",
+      "sha256": "6354cb181488571f1fb1d6ba02ebf43ccaadb4f414e3e0bfffbf233355f722f1",
+      "bytes": 9946
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/.electronics-rules/placement-input.json",
+      "sha256": "917f5751ae0442a78fcea5129da85e6ac910076b2645ba7e594117409b804696",
+      "bytes": 5426
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/.electronics-rules/routing-input.json",
+      "sha256": "917f5751ae0442a78fcea5129da85e6ac910076b2645ba7e594117409b804696",
+      "bytes": 5426
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/AGENTS.md",
+      "sha256": "e8971c6193d982f58dc368d80748a934067b11401d1dc0529d02302a141d6634",
+      "bytes": 9968
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/bom-build.json",
+      "sha256": "9dd8ce0a381ece0fe73c49ac386807284b98f75507219fb783f8fc7c156124c4",
+      "bytes": 15715
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/bring-up-gates.json",
+      "sha256": "13f7e3814e38b06abba7684e4d1d85ccdccab6809c5458c8ab8c4dccacd84fb7",
+      "bytes": 723
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/design-brief.json",
+      "sha256": "ec3c4fb7d3988227943088fa87f92a390475d3c3ce0c81671b860e5c163ca03b",
+      "bytes": 1667
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/electrical-calculations.json",
+      "sha256": "c01f8b0d43a6a096e55ca39a5ab066175f56ae45fa97be1701781e418210a15f",
+      "bytes": 10932
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/electrical-calculations.md",
+      "sha256": "9e7165969a5bc10bbc3c5fa975b5094846a43fa4de1378a2efd4d72cbc8871de",
+      "bytes": 12049
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/input-filter-screen.json",
+      "sha256": "1b252594f863ec78dceb53adb9c3a526abe1abf12a121c9c68aad9e82b224453",
+      "bytes": 10982
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/L1-research.json",
+      "sha256": "d3d4ceb72861c1e8443fed8400fa92228f6f2d045d40fd1b15168c76fdddbb27",
+      "bytes": 3816
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/magnetic-research.json",
+      "sha256": "71e771fff26fe523673a888ae781c18321a5e4b6cae6413d0af49595a8056ebc",
+      "bytes": 5654
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/procurement-research.json",
+      "sha256": "67415bed11bdd2272f0209af97972fa69dbff24d610695a7de6ae29c4f403c4e",
+      "bytes": 10139
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/procurement-research.md",
+      "sha256": "84167ce9f700336eb1037e3d7e74cdba58a660bbba380a42aecb24bc8f91cce4",
+      "bytes": 3491
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/procurement.TME-A.json",
+      "sha256": "03671aff70dacde6a0d34f69bb99cf5108cc39d2896d8496908d3b9cfd6605fd",
+      "bytes": 16456
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering/stock-observations.json",
+      "sha256": "b1f6766efe37cdfa4236dd2bed8627d6348ba673d855aaebeb9945180e98528c",
+      "bytes": 11100
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/engineering-status.json",
+      "sha256": "f6a1d648698677cb1756b6195f1b576ec5021ddf1c95c1b7a0a23ef80b226da8",
+      "bytes": 2462
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/footprint-assignments.json",
+      "sha256": "69d3f781679852c6317dc5b44ebf2877324f15365148d6494f815bc678671c1c",
+      "bytes": 740
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/footprint-geometry.json",
+      "sha256": "4aabeabe910a234564d4c7111ec1e260834b9d8b5e7a715fc3528dd6cc126e96",
+      "bytes": 34859
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/fp-lib-table",
+      "sha256": "7382a60ba8992a65542babfbbf106ad6160f961f765fa99759c545ff027d44c8",
+      "bytes": 198
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/functional-blocks.TME-A.json",
+      "sha256": "75d89538d176729be0f26f70ba4acb223b55086206e8e94ed2d8f4b15f059699",
+      "bytes": 3223
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/functional-spacing-targets.json",
+      "sha256": "be671f29e206f3e7b73c5c8448528015eb4784b9081d6abd2cf8865cd944f984",
+      "bytes": 51442
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/hardware.json",
+      "sha256": "068f7f21cf659b3fa4c88e6df756830a6e73fe8a1edf96644b63e3ab666d873c",
+      "bytes": 5289
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/intended-connectivity.TME-A.json",
+      "sha256": "e64e7818b40eaf00373b5ec7a179f2797f1626bda686f1499331d5bda7b53747",
+      "bytes": 11078
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/intended-connectivity.toolkit.json",
+      "sha256": "33390644fe492feaae847dac8ffbc675a12ac5b0d6e77c1769115fd43a1d2311",
+      "bytes": 11736
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/manual-assembly-plan.json",
+      "sha256": "c6a48d86d6e4030702d02508d7b31a71737732485e6aec1d11a5ff104a1dac50",
+      "bytes": 1266
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_BR1.wrl",
+      "sha256": "c71405ef69b4e562b61f3aec7fa2d65c6c2b5721771478ac422aa820388259db",
+      "bytes": 1265
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_C1.wrl",
+      "sha256": "5bf62396f5bee7de55af987e998bcfd56d33297e812cae1402aea1b35f5d00ab",
+      "bytes": 12499
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_C4.wrl",
+      "sha256": "5bf62396f5bee7de55af987e998bcfd56d33297e812cae1402aea1b35f5d00ab",
+      "bytes": 12499
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_C5.wrl",
+      "sha256": "2f363859e19cb7b09706e515e0026efcb2ef27474d442014e8f1f6b6d72cb34e",
+      "bytes": 750
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_C6.wrl",
+      "sha256": "8602f13cfc588ffb5983689dc4642c35229910afb65151e5ea5043fc7729d9f4",
+      "bytes": 24624
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_C7.wrl",
+      "sha256": "8602f13cfc588ffb5983689dc4642c35229910afb65151e5ea5043fc7729d9f4",
+      "bytes": 24624
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_C8.wrl",
+      "sha256": "8602f13cfc588ffb5983689dc4642c35229910afb65151e5ea5043fc7729d9f4",
+      "bytes": 24624
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_D1.wrl",
+      "sha256": "8e4b390cdb6c42b235f27be2aa4093e91caa40d60d56f6723d0b26946b3e2711",
+      "bytes": 751
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_F1.wrl",
+      "sha256": "e2cd14168a9d7c43ada394c077f27bac5186cd72ad71049699ed27a74b085206",
+      "bytes": 18149
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_J1.wrl",
+      "sha256": "5ccca5658f0e5bb037a6155aa1a7f01a4819067f8287f3496a4d409170547830",
+      "bytes": 536
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_J2.wrl",
+      "sha256": "5ccca5658f0e5bb037a6155aa1a7f01a4819067f8287f3496a4d409170547830",
+      "bytes": 536
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_L1.wrl",
+      "sha256": "b2de1ae3c47136995a94d3fd6dba0ac3be98a52172e277052bff7d79820505c9",
+      "bytes": 29702
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R1.wrl",
+      "sha256": "01ac8a4ba888c76de577c53497b0718ebf7c3533aa1084fe81b035ee6c8d49b6",
+      "bytes": 18615
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R10.wrl",
+      "sha256": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+      "bytes": 751
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R11.wrl",
+      "sha256": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+      "bytes": 751
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R12.wrl",
+      "sha256": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+      "bytes": 751
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R4.wrl",
+      "sha256": "e204a92ee455e6a2b77ad5b09e24b20ce7907d21e76d87a9b215d231233cb4c6",
+      "bytes": 748
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R5.wrl",
+      "sha256": "7d385d96481a987a4dc1dbdab32b84fb607279f7736841c379b4b0a8ec360f51",
+      "bytes": 747
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R6.wrl",
+      "sha256": "5c8ddbaa29d14a98da67371af2ed189874c0784b5ac9d0b46f1b465c8cb146fc",
+      "bytes": 750
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R7.wrl",
+      "sha256": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+      "bytes": 751
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R8.wrl",
+      "sha256": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+      "bytes": 751
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_R9.wrl",
+      "sha256": "a894d658e7844ba56ad02bedcf5c05015012a2363db7095f9e54d86c32152db2",
+      "bytes": 751
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_RV1.wrl",
+      "sha256": "fc15676cebbf23977ab1a8a99fdf9adaffa428531c7871f7235971dd21cf9f33",
+      "bytes": 18155
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_T1.wrl",
+      "sha256": "94165042d1e5cd7d4295d8678fe9497cd759e161ed48c85b02f018a8210a9e24",
+      "bytes": 55856
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Models/TME_U1.wrl",
+      "sha256": "6a5357ceadedcbfdb177e47c7bd26ae09ae58046bfebf32a3f2ee8f5e567f36d",
+      "bytes": 2131
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/owner-TME-variant-request.json",
+      "sha256": "e931396709294d98a817ae686572987fa2c9c3c36d2c461d7cc4e1c57a3d2092",
+      "bytes": 402
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Plytka_TME.kicad_dru",
+      "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3",
+      "bytes": 444
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Plytka_TME.kicad_pcb",
+      "sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+      "bytes": 110137
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Plytka_TME.kicad_pro",
+      "sha256": "7d6b53947e74514c2b7302f73773c836646022d093c8544c62f9bfbe93300d88",
+      "bytes": 8096
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/Plytka_TME.kicad_sch",
+      "sha256": "6b7fc1df705d390128148a4a016f1157506ce84ec219a06472fe5e294bd3dbaf",
+      "bytes": 70099
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.kicad_sym",
+      "sha256": "ec9b4404930eb1c8b0a9190715d1a64e9b9c1ff5af514825df5f39c82582293e",
+      "bytes": 27609
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_BR1.kicad_mod",
+      "sha256": "0d75850d6ca5b2faf4fa83ab5401560b601c20fdf4e7b49957c23870c51e5715",
+      "bytes": 1153
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_C1.kicad_mod",
+      "sha256": "b6fc3d07d04a32c5cc503cdff1793a01c254f3af7cb89a0b0d64533d81f49a5c",
+      "bytes": 847
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_C4.kicad_mod",
+      "sha256": "91c29d07388bd26a36686c96217db2a66e9a559a395ceb60fcd8fe1a44c68cba",
+      "bytes": 847
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_C5.kicad_mod",
+      "sha256": "31b711f3e70339017e5a517a8a6b14fc4e9cfa66fe2149546cf1970ebda3a88f",
+      "bytes": 973
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_C6.kicad_mod",
+      "sha256": "c281e95ecc45bf33afb7c4e2fbd6bc86384561c6afa4ca81239b9b73a0dd8c18",
+      "bytes": 870
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_C7.kicad_mod",
+      "sha256": "7695074d3f81ef53c0203a1eac963892a488815c5c680726742fef60d0c028bb",
+      "bytes": 870
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_C8.kicad_mod",
+      "sha256": "7f12f7fe4fb1fdfea58ac9cc7d81be93d40d3c1f1a0988865d465a1e31943fce",
+      "bytes": 870
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_D1.kicad_mod",
+      "sha256": "0f1d5051a7e286e015e53747d192a499f2c030aa1302ab739c30b18ce9b88060",
+      "bytes": 921
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_F1.kicad_mod",
+      "sha256": "fe30339104d213f27616c0f8baf6df0f613e49ffde44c16a697f1a98b0c5761a",
+      "bytes": 875
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_J1.kicad_mod",
+      "sha256": "b44440fc4c3163f3b9dc26f0e06e4e517aecc522e85fdcf237c4b67455a9a6d0",
+      "bytes": 905
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_J2.kicad_mod",
+      "sha256": "b08a8f1d892023e19eed0a346a10ce3c234d99c81bc6490600dc8b734e0b3759",
+      "bytes": 909
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_L1.kicad_mod",
+      "sha256": "2a050778a6a0c51c3649f4f721246d67f9c19aadc49a0a6c0a24a0ecfc70c455",
+      "bytes": 872
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R1.kicad_mod",
+      "sha256": "e7d597e3c94bfac3fb2d56702662cc01d69f119f72afd021d47466fbba58f3a4",
+      "bytes": 910
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R10.kicad_mod",
+      "sha256": "a4b536b4b6e9ffd530c030e39138f549bc24044078e1486efd33604c2d11c03f",
+      "bytes": 873
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R11.kicad_mod",
+      "sha256": "dbcb38bead75c91723065a8cb5d0455e29f8e06f11c1ab9e098b23368bd142cd",
+      "bytes": 873
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R12.kicad_mod",
+      "sha256": "00c18598eae99143938887a55cd41f6ab3e285c9e0bf3019ed4d03e507c443c2",
+      "bytes": 873
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R4.kicad_mod",
+      "sha256": "0923ee7a44321afdfd853379a5ca784f1204279ac3ee0340e6208e74bcb8d4b5",
+      "bytes": 916
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R5.kicad_mod",
+      "sha256": "00b3c8b1e2c7bc143cc988f6fb0da3d88cdaa16a1031f9720cdf1300e7b7fe3a",
+      "bytes": 881
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R6.kicad_mod",
+      "sha256": "4702f5022410b2158ef29a098ce225e21198b97efc44c5483df7e4001ef78c24",
+      "bytes": 927
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R7.kicad_mod",
+      "sha256": "59d4682c0e969cfe984337ca13757d109cefa396d99059f1dbeb4c3bc38988a0",
+      "bytes": 871
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R8.kicad_mod",
+      "sha256": "761984902e0f1c2eb553d7e8f2854388eaa3e2ac0c7e1a56431847d065a7678b",
+      "bytes": 895
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_R9.kicad_mod",
+      "sha256": "1278eaea0496fccce622261dae2dad4cd72acf8b8428e7c99a4829e44ba52c46",
+      "bytes": 895
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_RV1.kicad_mod",
+      "sha256": "b907cc65134c54f8ad6139c42fd686203082aee39ddf04001045b92b5653599d",
+      "bytes": 931
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_T1.kicad_mod",
+      "sha256": "82fd0fa0211dd5cc1dbe0925938e6dc33563c1e9092639463f01f5b3f1cf7b38",
+      "bytes": 1626
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PlytkaTME.pretty/TME_U1.kicad_mod",
+      "sha256": "9951c6f31f551f702d03dd9513e031225060b1bb2e0f2ee8399bc34a59e1bf68",
+      "bytes": 1587
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/power-supply-specification.TME-A.json",
+      "sha256": "8242151f50b1bafb48de5d0c3b3ee985c33575bc657698513f65fa790f629959",
+      "bytes": 1976
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/PowerFlags.kicad_sym",
+      "sha256": "b6b7b927b1a790c249425e0116068b8c3ea9a67778fe3fa6e0eb775221977649",
+      "bytes": 1944
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/README.md",
+      "sha256": "6870713df6af579cb36067601db92e47eebf523f8a38d7caf519506386dbc886",
+      "bytes": 4068
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/requirements.json",
+      "sha256": "ec77866bac772969700fc00430293ed7bdd63a83ce1d6afb5a5e8e6be445f969",
+      "bytes": 10778
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/source-basis.TME-A.json",
+      "sha256": "3c9daa2888f6a0b4c5b573f51a5a0e49f3e4120b41b8e8fd796c86e06d5ffaec",
+      "bytes": 7521
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/spatial-constraints.json",
+      "sha256": "f5492bed956e56a11d7bef7e1faef430761b3701dcfcc3ab2deceb685b6c412f",
+      "bytes": 3842
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/sym-lib-table",
+      "sha256": "9d82bef9c3a383dadebcbd8fd324177818e231f5ae05e3cd1496bdc0ca0d4ebc",
+      "bytes": 292
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/symbol-pin-verification.json",
+      "sha256": "545b28134f3828c3b67370bd661c48fff581eab0d86d880aa7c5f6a873bb9fcd",
+      "bytes": 11465
+    },
+    {
+      "path": "hardware/E27/variants/integrated-shade/SC10_TME/thermal-and-insulation-basis.json",
+      "sha256": "3a8a356b799aa85073644108f9cca8e7b73e5e7ad598af0b4c073f1039719053",
+      "bytes": 1190
+    }
+  ],
+  "PCB_sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+  "review_scope": "Separate actualroutedTMEcandidate, notmanufacturingapproval; models-onlydeltaafterimplementerhandoffexplicit. Allfourreviewrolesinspectthissamefrozenmanifest.",
+  "artifacts": [
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/DRC-parity.json",
+      "sha256": "eb56545955637eb7e636b277691d226e4c20c0fdb7c6c39b3887f7516336eb90"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/ERC.json",
+      "sha256": "4a4a3ad3282db2dd01cc2888b099dc3e2a90cfac9719c4d3a11ed1d682eaae36"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/functional-spacing.json",
+      "sha256": "c4fe105ca550f2348a3f5e31d1159ad7dd8f61c12976ab721c75b9d5260b3eda"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/graph-audit.json",
+      "sha256": "e6497dce265a93d20a3d2bad591f62bb84ec296ac9f64afffd307a55d596b771"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/implementer-handoff.json",
+      "sha256": "5f4859ff20c1c4cf5b490b1199622db46e26aae6c47a773c2c05c478757f0e15"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/kelvin-contact-audit.json",
+      "sha256": "24d3e7977c8c2dda4cb5b81c7005c98c60def6950da6dcc8675b8878b0026c81"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/model-mesh-fix.json",
+      "sha256": "8107312b09aacb380208fd521d178504fb3932d6b0d2e2274629be65d470d2e9"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/netlist.xml",
+      "sha256": "187c30816c6022718db7ebdb692a0e09d151cb7f323db073b0307a84055510fb"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/placement-proposal.json",
+      "sha256": "23cdb5ec16e420378db2e5b661e8e418ddffefcfce1b811a7aca49610e3eae5d"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/routing-record.json",
+      "sha256": "7e79b3638ddc694cb26e5d538b857a88295967ed99a2e82dc41773bcc8e79997"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/summary.json",
+      "sha256": "647f8ebcebfff6924faa9bea9b3a514695080862d7469c5438c993ab38c509a3"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/toolkit-release.json",
+      "sha256": "beea6dfd1d4e1057ad3c395cc005b63f7071f5f00746e0adfad1e439c41b11f4"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/checks/toolkit-work.json",
+      "sha256": "51c983f254f531057e4ec31ffe677a8e7156875bfe14a9f3bca89ebc49d3e4f3"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/bottom-export-binding.json",
+      "sha256": "52d29164633d26372bcad7f65f21c811ed3ccdeb46e6ef07e51b3076889305f0"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/plots-export-binding.json",
+      "sha256": "52d29164633d26372bcad7f65f21c811ed3ccdeb46e6ef07e51b3076889305f0"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/Plytka_TME_3D_bottom.png",
+      "sha256": "dada299d331f10fea877baf29a8f5c93a5616236775189ff548cdf68c0e2cf84"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/Plytka_TME_3D_top.png",
+      "sha256": "5d4b9451967e2a7a04be1984b15e290842cfb5594c1a9c11a2e3f32037d1ed12"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/Plytka_TME_assembly_geometry.pdf",
+      "sha256": "73654ccbdcf5e1c61ceae27b684f0f4360a587eaa0bdc3cf444e9d59eb25b8c9"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/Plytka_TME_copper_bottom.pdf",
+      "sha256": "c79fef9aed0942e6073910991a12f014a5c14456ac4ce303b7d3cd86d4e0202b"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/Plytka_TME_copper_top.pdf",
+      "sha256": "0b6e8291d67c9dcd4047042343509d8016338d36ce49c2924f2bc3cdcc2f012a"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/Plytka_TME_schematic.pdf",
+      "sha256": "5b23f5397d94346fa36c4f532299b3606c05568e590affb82f0e116f9909b26f"
+    },
+    {
+      "path": "hardware/E27/workflow/integrated-shade/tme-board/candidate-views/top-export-binding.json",
+      "sha256": "52d29164633d26372bcad7f65f21c811ed3ccdeb46e6ef07e51b3076889305f0"
+    }
+  ]
+}

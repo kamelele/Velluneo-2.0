@@ -1,0 +1,1398 @@
+{
+  "schema_version": 1,
+  "revision": "SC10-TME-A-DRAFT",
+  "actor": "/root",
+  "basis": "Independent hazardous-voltage domains and controller-relative pinfunctions. No inheritedSC09packageexception. All22nets including7unusedwindingpadnets enumerated. Generic2mm target does not close surge, creepage or product-safety design.",
+  "pairs": [
+    {
+      "net_a": "/AC_L",
+      "net_b": "/AC_LIMITED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/AC_N",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/AC_PROTECTED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/BP",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/BUS_FILTERED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/BUS_RECT",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/DC_RETURN",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_L",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/AC_N",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/AC_PROTECTED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/BP",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/BUS_FILTERED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/BUS_RECT",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/DC_RETURN",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_LIMITED",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/AC_PROTECTED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/BP",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/BUS_FILTERED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/BUS_RECT",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/DC_RETURN",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_N",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/BP",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/BUS_FILTERED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/BUS_RECT",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/DC_RETURN",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/AC_PROTECTED",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/BUS_FILTERED",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/BUS_RECT",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/DC_RETURN",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 0.3,
+      "basis": "Localcontroller/sense lowdifferentialgroup"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/M",
+      "target_mm": 0.3,
+      "basis": "Localcontroller/sense lowdifferentialgroup"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 0.3,
+      "basis": "Localcontroller/sense lowdifferentialgroup"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BP",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/BUS_RECT",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/DC_RETURN",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_FILTERED",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/DC_RETURN",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/BUS_RECT",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "/FB_INDUCTOR",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/DC_RETURN",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "/LED_PLUS",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "/M",
+      "target_mm": 0.3,
+      "basis": "Localcontroller/sense lowdifferentialgroup"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 0.3,
+      "basis": "Localcontroller/sense lowdifferentialgroup"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/FB_INDUCTOR",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "/M",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/LED_PLUS",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "/OVP_CHAIN1",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 0.3,
+      "basis": "Localcontroller/sense lowdifferentialgroup"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/M",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "/OVP_CHAIN2",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN1",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "/OVP_CHAIN3",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN2",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "/SW_SOURCE",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/OVP_CHAIN3",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/SW_SOURCE",
+      "net_b": "unconnected-(T1-Pad1)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/SW_SOURCE",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/SW_SOURCE",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/SW_SOURCE",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/SW_SOURCE",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/SW_SOURCE",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "/SW_SOURCE",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad1)",
+      "net_b": "unconnected-(T1-Pad2)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad1)",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad1)",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad1)",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad1)",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad1)",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad2)",
+      "net_b": "unconnected-(T1-Pad6)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad2)",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad2)",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad2)",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad2)",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad6)",
+      "net_b": "unconnected-(T1-Pad7)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad6)",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad6)",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad6)",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad7)",
+      "net_b": "unconnected-(T1-Pad8)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad7)",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad7)",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad8)",
+      "net_b": "unconnected-(T1-Pad9)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad8)",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    },
+    {
+      "net_a": "unconnected-(T1-Pad9)",
+      "net_b": "unconnected-(T1-Pad10)",
+      "target_mm": 2.0,
+      "basis": "Conservative engineering functional-HV layout target, not a normative insulation compliance claim"
+    }
+  ],
+  "required_pair_count": 231,
+  "package_exceptions": [],
+  "approvals": null,
+  "status": "Assessment target; native manufacturingfloor.3mm is separate and does not imply thismatrixpasses."
+}

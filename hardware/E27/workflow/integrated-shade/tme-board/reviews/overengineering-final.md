@@ -1,0 +1,13 @@
+# Overengineering review — frozen SC10 TME candidate
+
+Reviewer: `/root/tme_simplicity`,2026-11-23. Source digest: `86c78b4be01ec98c0227b2ce02a5600e4c6f7527d1007f378b6b368268d3d2a2`. All91 source hashes and22 artifact hashes match the frozen manifest; its canonical source-list digest was reproduced. This is a read-only recommendation, not human acceptance. Native CAD checks were inspected as hashed evidence, not rerun in this role.
+
+The final design is appropriately simple for a separate sourcing variant: one controller, two copper layers,23 fitted electronic positions and16 unique MPNs. BothC1 andC4 now use the same150nF630V KEMET part. That consolidation removes one MPN and the interim400VC1. The preliminary stale-C4-note finding is closed for this exact revision: its statement that C1 changed from47nF now agrees with the final BOM and filter model.
+
+I found no verified component deletion that preserves the declared protection, sourcing, ripple and current-setting requirements. Three output capacitors, four series OVP resistors, the parallel sense pair and dual bleeders each have a stated purpose. A singleUCD150uF capacitor could remove two positions and four solder joints, but its lower120Hz ripple rating and unverified hot behavior prevent recommending that substitution now. Removing the fuse, MOV, bypass or filter to reduce area would discard required functions. A second controller/topology redesign is not justified merely as simplification of this task.
+
+The practical costs remain visible. Some stock observations are cached or rate-limited; the complete current TME order is not established, and the controller is NRND. The51.2x37mm PCB is12.1% wider than the33mm preference. Approximately27mm total assembly height is35% above the20mm target. The magnetic component alone exceeds that former total-height target, so routing changes cannot recover it. The inspected3D view is a useful envelope illustration; ordinary-bulb fit is not demonstrated by it.
+
+The final packet correctly preserves its release blockers. Its231-pair functional-spacing assessment reports401 object-pair hits with no approved exceptions. Native manufacturing checks reporting zero errors cannot close those findings, nor the magnetic fault-current, filter transient, fuse/resistor/MOV coordination and thermal/ripple issues. Simplification is not a reason to weaken these criteria.
+
+Recommendation: **blocked for release; save and review only as the explicitly labelled separate engineering candidate**. No additional mandatory architecture redesign is requested by this role, and no manufacturing, powered-test or all-current-stock approval is granted. Detailed findings and closure conditions are in `overengineering-final.json`.

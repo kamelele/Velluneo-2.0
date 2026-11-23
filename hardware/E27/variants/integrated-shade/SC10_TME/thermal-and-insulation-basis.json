@@ -1,0 +1,20 @@
+{
+  "classification": "All electrical nets and unused magnetic winding pins are mains referenced hazardous; nonisolated, no SELV.",
+  "ambient_C": [
+    0,
+    40
+  ],
+  "part_stop_targets_C": {
+    "T1_local_air": 50,
+    "T1_body": 90,
+    "C1_case": 80,
+    "C6_C7_C8_case": 85,
+    "U1_source": 100,
+    "D1_case": 100,
+    "resistor_body": 100
+  },
+  "provenance": "Project laboratory stop/review thresholds, not measured temperatures or proven safe operating limits; tighter datasheet restrictions override.",
+  "spacing": "Manufacturing floor.3mm and edge1.0mm are not functional insulation proof; independent voltage-pair assessment is still required. OriginalSC09package exceptions/approvals do not transfer.",
+  "thermal_budget": "OriginalSC09lossmodel invalidated by changed magnetic/Rin/capacitors. Rin at60mArms=.54W; T1Cu=.092435*DCR_hotW underextendedRMSscreen; DCR/corelossunknown. No qualified absolute temperatures/efficiency published.",
+  "unused_windings": "T1 physical pins1,2,6,7,8,9,10 NC; do not short. All retained pads require hazardous-domain clearance. Manufacturer transformer isolation does not isolate LED output in primary-only buck."
+}

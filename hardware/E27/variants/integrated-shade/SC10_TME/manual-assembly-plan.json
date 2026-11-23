@@ -1,0 +1,22 @@
+{
+  "revision": "SC10-TME-A-DRAFT",
+  "status": "Planningonly, no authorizationtoorderorenergize",
+  "all_THT_parts": "Fface; observepolarityofC6/C7/C8 andbridge/diode/U1pin1",
+  "bottom_SMD_parts": "BR1,D1,U1,C5,R4,R5,R6,R7,R8,R9,R10,R11,R12",
+  "wirepads": "J1ACright,J2LEDleft; no suppliedconnector; insulatedwire andguardedfixtureexternalmechanicalscope",
+  "R1_forming": "UprightP7.5returnlead,bodymax16x5.5mm,20mmaboveboardassemblyreservation; inspectsample/jig/bendlimits. No customwinding.",
+  "T1": "MYRRA74089stockcomponent. Primary4–5only; physicalpin3removed; allother7terminalsopennotshorted. NoSELVisolationinthiscircuit.",
+  "assembly_checks": [
+    "Match everyMPNtosupplierpackinglabel andupdateddatasheetbeforeassembly",
+    "Inspectactualholepitch/courtyard/bodyenvelopes,annulusandsoldermask",
+    "ManualsolderSMDsfirstwithaccessneeded; thenradialTHTswithpolaritycheck",
+    "Power-offcontinuity/pinmembershipandNCshortchecks",
+    "Actualdeenergizeddischargeandindependentfault/thermalqualificationrequired beforeanyapproved230Vbring-up"
+  ],
+  "missing_physical_evidence": [
+    "Samplefit",
+    "Fusingandpulsecoordination",
+    "Hotmagnetics/current/OVP/surge",
+    "Solderingqualityandcontact/fixturebarriers"
+  ]
+}

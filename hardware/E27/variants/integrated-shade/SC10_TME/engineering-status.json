@@ -1,0 +1,43 @@
+{
+  "revision": "SC10-TME-A-DRAFT",
+  "status": "EXPERIMENTAL_DESIGN_CANDIDATE_NOT_FOR_ORDER",
+  "original_SC09_acceptance_transferred": false,
+  "stage_approvals": {},
+  "physical_tests": false,
+  "blocking_findings": [
+    {
+      "id": "TME-STOCK",
+      "owner": "procurement/root",
+      "closure": "Confirm current positive prototype-quantity availability for every exact selected MPN; cached counts are not live stock."
+    },
+    {
+      "id": "FAULT-T1",
+      "owner": "electrical/root",
+      "evidence": "MYRRA74089 catalogue.85Apeak vs LYT1603D characterized25C auto-restart limit1.06\u20131.24A; normal-modelpeak.5266A does not closefaults.",
+      "closure": "Qualify bounded fault waveform within allowed magnetic current/temperature or redesign independent current limiting/magnetic."
+    },
+    {
+      "id": "INPUT-TRANSIENT",
+      "owner": "electrical/root",
+      "evidence": "FinalC1/C4both150nF630V. Ideal linearPi-network screen predictsL1peak1.398A, above typical.3A10%Ldrop; C1peak406.92V andfilteredbus407.61V are NOT guaranteed nonlinearupperbounds. Interim47nF400VC1 rejected after454.29Vscreen.",
+      "closure": "Obtain transient differential/L-bias/pulse data or select/reconfigure qualifiedfilter; measure using separately approved contained fixture. Both630Vcapacitors do not establish a surge bound."
+    },
+    {
+      "id": "FUSE-COORDINATION",
+      "owner": "electrical/root",
+      "evidence": "F1 F100mA250VAC,50A breaking; maxmeltingI2t.0013A2s is not totalclearingI2t. PMR150ohm pulse waveform/energy envelope unverified.",
+      "closure": "Coordinate exact totalclearing vs resistor pulse/overload; limit prospective fault current to fuse rating includingMOVshort; establish rating applicability at253VAC."
+    },
+    {
+      "id": "SURGE-THERMAL-OVP",
+      "owner": "electrical/root",
+      "closure": "Verify actual hot current, magnetic losses/bias, coilambient<=50C, OVP overshoot<=90V, voltage/current waveforms, surge/EMC and capacitor ripple/sharing. Neither CAD nor calculations imply measurements."
+    },
+    {
+      "id": "NEW-STAGE-REVIEW",
+      "owner": "Kamil",
+      "closure": "Review concrete final candidate packet; no stage/release acceptance invented from oldSC09 approvals."
+    }
+  ],
+  "permitted_next_step": "Finish and independently review separate native CAD candidate; preserve blocking status. No order, production upload or powered test."
+}

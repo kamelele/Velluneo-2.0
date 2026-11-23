@@ -1,0 +1,466 @@
+{
+  "revision": "SC10-TME-A-DRAFT",
+  "date": "2026-11-23",
+  "unique_electronic_MPNs": 16,
+  "electronic_positions": 23,
+  "wirepads": [
+    "J1",
+    "J2"
+  ],
+  "all_parts_have_TME_offer": true,
+  "all_parts_current_stock_confirmed": false,
+  "stock_reserved": false,
+  "supplier_contact_or_purchase": false,
+  "parts": [
+    {
+      "refs": [
+        "F1"
+      ],
+      "qty": 1,
+      "manufacturer": "Littelfuse",
+      "mpn": "37301000410",
+      "tme_symbol": "37301000410",
+      "offer_url": "https://www.tme.eu/en/details/37301000410/fuses-tr5-fast/littelfuse/",
+      "stock": 782,
+      "moq": 1,
+      "multiple": 1,
+      "stock_grade": "DIRECT_HTTP_200_2026-11-23",
+      "stock_source": "https://www.tme.eu/en/details/37301000410/fuses-tr5-fast/littelfuse/",
+      "retrieved": "2026-11-23",
+      "primary_url": "https://www.littelfuse.com/assetdocs/littelfuse_fuse_373_datasheet.pdf?assetguid=24864334-6b08-484a-af3e-1dfca28b0404",
+      "primary_verified": true,
+      "geometry": {
+        "body_diameter_max_mm": 8.5,
+        "body_height_max_mm": 8,
+        "lead_pitch_mm": 5.08,
+        "lead_diameter_mm": 0.6
+      },
+      "ratings": {
+        "current_A": 0.1,
+        "voltage_VAC": 250,
+        "breaking_A": 50,
+        "max_melting_I2t_at_10In_A2s": 0.0013
+      },
+      "gates": [
+        "50A breaking capacity requires explicitly bounded lab fault source at all times, especially MOV before Rin",
+        "250VAC rating versus253VAC upper input needs documented applicability or source restriction",
+        "Melting I2t is not maximum total-clearing I2t",
+        "Prove turn-on/repetitive pulse survival and Rin coordination",
+        "Temperature derating, input RMS current"
+      ],
+      "observed_UTC": "2026-11-23T16:03:52.252766+00:00",
+      "response_date": "Mon, 23 Nov 2026 16:03:56 GMT",
+      "response_sha256": "1b1c3bf78c344e9bc32c320d2052a85d95fb5b59e5636319f2ce20e5df610a0f"
+    },
+    {
+      "refs": [
+        "R1"
+      ],
+      "qty": 1,
+      "manufacturer": "Royalohm",
+      "mpn": "PMR03SJ0151A19",
+      "tme_symbol": "PMR3S-150R",
+      "offer_url": "https://www.tme.eu/pl/details/pmr3s-150r/rezystory-tht/royalohm/pmr03sj0151a19/",
+      "stock": 14350,
+      "moq": 5,
+      "multiple": 5,
+      "stock_grade": "DIRECT_HTTP_200_2026-11-23",
+      "stock_source": "https://www.tme.eu/pl/details/pmr3s-150r/rezystory-tht/royalohm/pmr03sj0151a19/",
+      "parent_reported_stock": 11965,
+      "retrieved": "2026-11-23",
+      "primary_url": "https://www.mouser.com/datasheet/2/1365/6-3044630.pdf",
+      "primary_verified": true,
+      "geometry": {
+        "body_diameter_max_mm": 5.5,
+        "body_length_max_mm": 16,
+        "lead_diameter_mm": 0.75,
+        "lead_diameter_tolerance_mm": 0.05
+      },
+      "ratings": {
+        "ohms": 150,
+        "tolerance_percent": 5,
+        "power_W_at_70C": 3,
+        "tcr_ppm_K": 350,
+        "zero_power_temperature_C": 155
+      },
+      "gates": [
+        "Manufacturer pulse-overload criteria have no verified waveform/energy envelope in retrieved sheet; do not infer surge or fault survival from750V working ceiling",
+        "Actual total clearing I2t versus pulse overload",
+        "Normal RMS loss and hotspot"
+      ],
+      "observed_UTC": "2026-11-23T16:03:53.131601+00:00",
+      "response_date": "Mon, 23 Nov 2026 16:03:57 GMT",
+      "response_sha256": "1b9be91b0510650eefb0434a3877a841ff12fcd9a9574657343c4f9af2dc432a"
+    },
+    {
+      "refs": [
+        "RV1"
+      ],
+      "qty": 1,
+      "manufacturer": "TDK",
+      "mpn": "B72207S0271K101",
+      "tme_symbol": "SIOV-S07K275",
+      "offer_url": "https://www.tme.eu/en/details/siov-s07k275/tht-varistors/tdk/b72207s0271k101/",
+      "stock": 20859,
+      "moq": 1,
+      "stock_grade": "CACHED_2_WEEKS_NOT_LIVE",
+      "retrieved": "2026-11-23",
+      "primary_url": "https://www.tme.eu/Document/94891b49d586e9338877713baac923fe/SIOV_Leaded_StandarD.pdf",
+      "primary_verified": true,
+      "gates": [
+        "21J versus old23J, fullclamp/fuse/MOVfault coordination remains open",
+        "UseP5newfootprint; not oldstaggeredholes"
+      ],
+      "multiple": 1,
+      "stock_source": "https://www.tme.eu/it/details/siov-s07k275/varistori-tht/tdk/b72207s0271k101/"
+    },
+    {
+      "refs": [
+        "BR1"
+      ],
+      "qty": 1,
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "MB10S-13",
+      "tme_symbol": "MB10S-13",
+      "offer_url": "https://www.tme.eu/en/details/mb10s-13/smd-tht-sing-phase-diode-bridge-rectif/diodes-incorporated/",
+      "stock": 27,
+      "moq": null,
+      "stock_grade": "DIRECT_HTTP_200_2026-11-23",
+      "retrieved": "2026-11-23",
+      "primary_url": "https://www.diodes.com/assets/Datasheets/ds21201.pdf",
+      "primary_verified": false,
+      "gates": [
+        "Preserve parent's exact offer/datasheet evidence rather than infer pinout from generic MB10S"
+      ],
+      "stock_source": "https://www.tme.eu/en/details/mb10s-13/smd-tht-sing-phase-diode-bridge-rectif/diodes-incorporated/",
+      "observed_UTC": "2026-11-23T16:03:54.373661+00:00",
+      "response_date": "Mon, 23 Nov 2026 16:03:58 GMT",
+      "response_sha256": "4e06decc44ed0b36738843868d8cc8c8f52adcf8d70837e011401e6d1be3dcde"
+    },
+    {
+      "refs": [
+        "C1",
+        "C4"
+      ],
+      "qty": 2,
+      "manufacturer": "KEMET",
+      "mpn": "R71PF315050H6K",
+      "tme_symbol": "R71PF315050H6K",
+      "offer_url": "https://www.tme.eu/en/details/r71pf315050h6k/tht-film-capacitors/kemet/",
+      "stock": 547,
+      "moq": null,
+      "stock_grade": "SIBLING_REPORTED_DIRECT_2026-11-23_1511UTC",
+      "retrieved": "2026-11-23",
+      "primary_url": "https://content.kemet.com/datasheets/KEM_F3130_R71H.pdf",
+      "primary_verified": "sibling report",
+      "geometry": {
+        "body_length_max_mm": 13.2,
+        "body_thickness_max_mm": 6.2,
+        "body_height_max_mm": 12.1,
+        "lead_pitch_mm": 10,
+        "lead_diameter_mm": 0.6,
+        "lead_diameter_tolerance_mm": 0.05
+      },
+      "ratings": {
+        "capacitance_nF": 150,
+        "tolerance_percent": 10,
+        "voltage_VDC": 630,
+        "dvdt_V_per_us": 260
+      },
+      "gates": [
+        "C1 changes47to150nF; new circuit approval and filter/PF validation",
+        "L1 plug-in saturation invalidates linear-only transient bound"
+      ]
+    },
+    {
+      "refs": [
+        "U1"
+      ],
+      "qty": 1,
+      "manufacturer": "Power Integrations",
+      "mpn": "LYT1603D",
+      "tme_symbol": "LYT1603D",
+      "offer_url": "https://www.tme.eu/en/details/lyt1603d/led-drivers/power-integrations/",
+      "stock": 80,
+      "moq": null,
+      "stock_grade": "DIRECT_HTTP_200_2026-11-23",
+      "retrieved": "2026-11-23",
+      "primary_url": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "primary_verified": false,
+      "gates": [
+        "Tube versus-TL reel only; verify original primary",
+        "NRND lifecycle",
+        "Drain voltage limit and L1 saturated transient remain open"
+      ],
+      "stock_source": "https://www.tme.eu/en/details/lyt1603d/led-drivers/power-integrations/",
+      "observed_UTC": "2026-11-23T16:03:55.243401+00:00",
+      "response_date": "Mon, 23 Nov 2026 16:03:59 GMT",
+      "response_sha256": "ddb7e6fbd661aa6a5c2a6653add128b25c9bad039018ebb7194d4067b465a8dc"
+    },
+    {
+      "refs": [
+        "C5"
+      ],
+      "qty": 1,
+      "manufacturer": "Samsung",
+      "mpn": "CL21B475KAFNNNE",
+      "tme_symbol": "CL21B475KAFNNNE",
+      "offer_url": "https://www.tme.eu/en/details/cl21b475kafnnne/mlcc-smd-capacitors/samsung/",
+      "stock": 44870,
+      "moq": null,
+      "stock_grade": "DIRECT_HTTP_200_2026-11-23",
+      "retrieved": "2026-11-23",
+      "primary_verified": false,
+      "gates": [
+        "Use original verified manufacturer sheet and DC bias basis"
+      ],
+      "stock_source": "https://www.tme.eu/en/details/cl21b475kafnnne/mlcc-smd-capacitors/samsung/",
+      "observed_UTC": "2026-11-23T16:03:56.089117+00:00",
+      "response_date": "Mon, 23 Nov 2026 16:04:00 GMT",
+      "response_sha256": "45d27b308a91b589780905bcd496dd3ada880a11967c2ced104d48e80cbc865a"
+    },
+    {
+      "refs": [
+        "R4"
+      ],
+      "qty": 1,
+      "manufacturer": "Panasonic",
+      "mpn": "ERJ6ENF1242V",
+      "tme_symbol": "ERJ6ENF1242V",
+      "offer_url": "https://www.tme.eu/en/details/erj6enf1242v/smd-resistors/panasonic/",
+      "stock": 622,
+      "moq": null,
+      "stock_grade": "DIRECT_HTTP_200_2026-11-23",
+      "retrieved": "2026-11-23",
+      "primary_verified": false,
+      "gates": [
+        "Use original manufacturer sheet; distributor omits hyphen in ERJ-6ENF1242V"
+      ],
+      "stock_source": "https://www.tme.eu/en/details/erj6enf1242v/smd-resistors/panasonic/",
+      "observed_UTC": "2026-11-23T16:03:57.329428+00:00",
+      "response_date": "Mon, 23 Nov 2026 16:04:01 GMT",
+      "response_sha256": "c0147d491be8fb6132c269a27970c471772a2cf9db2bf960212f269dfcbb2c0c"
+    },
+    {
+      "refs": [
+        "R5"
+      ],
+      "qty": 1,
+      "manufacturer": "Viking",
+      "mpn": "CS06FTFUR680",
+      "tme_symbol": "CS1206-0R68-1%-HP",
+      "offer_url": "https://www.tme.eu/en/details/cs1206-0r68-1%25-hp/smd-resistors/viking/cs06ftfur680/",
+      "stock": 40,
+      "alternative_cached_stock": 3760,
+      "moq": null,
+      "stock_grade": "CACHED_CONFLICTING_COUNTS_FRESH429",
+      "retrieved": "2026-11-23",
+      "primary_url": "https://www.tme.eu/Document/a812535aec0aa18fd47b9a8fc0cc2be6/CS%2BREV.D3-160715.pdf",
+      "primary_verified": "previous sibling primary-text verification",
+      "ratings": {
+        "ohms": 0.68,
+        "tolerance_percent": 1,
+        "power_W_at_70C": 0.5,
+        "tcr_ppm_K": 200
+      },
+      "geometry": {
+        "case": "1206",
+        "recommended_inner_gap_mm": 2,
+        "recommended_pad_length_mm": 1.15,
+        "recommended_pad_width_mm": 1.7
+      },
+      "gates": [
+        "Resolve current stock and actual order minimum",
+        "Footprint differs from old Yageo land recommendation"
+      ]
+    },
+    {
+      "refs": [
+        "R6"
+      ],
+      "qty": 1,
+      "manufacturer": "Royalohm",
+      "mpn": "1206S4F365KT5E",
+      "tme_symbol": "SMD1206-3.65R-1%",
+      "offer_url": "https://www.tme.eu/pl/details/smd1206-3.65r-1%25/rezystory-smd/royalohm/1206s4f365kt5e/",
+      "stock": 1800,
+      "moq": 100,
+      "multiple": 1,
+      "stock_grade": "CACHED_FRESH429",
+      "retrieved": "2026-11-23",
+      "primary_verified": "previous sibling primary review",
+      "ratings": {
+        "ohms": 3.65,
+        "tolerance_percent": 1,
+        "power_W": 0.25,
+        "tcr_ppm_K": 400,
+        "max_temperature_C": 125
+      },
+      "gates": [
+        "Recalculate current bounds for400ppm vs original100ppm"
+      ]
+    },
+    {
+      "refs": [
+        "D1"
+      ],
+      "qty": 1,
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "US1M-13-F",
+      "tme_symbol": "US1M-13-F",
+      "offer_url": "https://www.tme.eu/en/details/us1m-13-f/smd-universal-diodes/diodes-incorporated/",
+      "stock": 13786,
+      "moq": 1,
+      "multiple": 1,
+      "stock_grade": "CACHED_LAST_MONTH",
+      "secondary_today_TME_feed_stock": 9946,
+      "secondary_url": "https://www.oemstrade.com/search/us1m",
+      "retrieved": "2026-11-23",
+      "primary_url": "https://www.diodes.com/datasheet/download/US1M.pdf",
+      "primary_verified": true,
+      "ratings": {
+        "VRRM_V": 1000,
+        "IFAV_A": 1,
+        "trr_ns": 75,
+        "VF_V_at_1A": 1.7,
+        "IFSM_A": 30
+      },
+      "geometry": {
+        "case": "SMA"
+      },
+      "gates": [
+        "Actual diode loss and temperature; same primary family as US1J but updated value approval needed"
+      ]
+    },
+    {
+      "refs": [
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "qty": 3,
+      "manufacturer": "Nichicon",
+      "mpn": "UHE2A470MPD",
+      "tme_symbol": "UHE2A470MPD",
+      "offer_url": "https://www.tme.eu/en/details/uhe2a470mpd/tht-electrolytic-capacitors/nichicon/",
+      "stock": 1967,
+      "moq": 1,
+      "multiple": 1,
+      "stock_grade": "CACHED_5_MONTHS",
+      "retrieved": "2026-11-23",
+      "primary_verified": false,
+      "geometry": {
+        "diameter_nominal_mm": 10,
+        "height_nominal_mm": 12.5,
+        "lead_pitch_mm": 5
+      },
+      "ratings_per_part": {
+        "capacitance_uF": 47,
+        "tolerance_percent": 20,
+        "voltage_VDC": 100,
+        "impedance_ohms": 0.43,
+        "ripple_A_100kHz": 0.325,
+        "ripple_A_120Hz": 0.2275,
+        "life_hours_at_105C": 7000
+      },
+      "gates": [
+        "Capture primary UHE sheet and fresh stock",
+        "141uF total vs150uF; ripple-sharing/LED ripple/temperature measurements",
+        "Parallel total rating assumes current sharing; layout and ESR tolerance affect sharing"
+      ],
+      "primary_url": "https://www.tme.eu/Document/717cd33b66296cd3b4ef187a335fea49/UHE-series.pdf"
+    },
+    {
+      "refs": [
+        "R7",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "qty": 4,
+      "manufacturer": "Yageo",
+      "mpn": "RC1206FR-0797K6L",
+      "tme_symbol": "RC1206FR-0797K6L",
+      "offer_url": "https://www.tme.eu/en/details/rc1206fr-0797k6l/smd-resistors/yageo/",
+      "stock": 2900,
+      "moq": 100,
+      "multiple": 1,
+      "stock_grade": "CACHED_2_MONTHS_TILL_STOCK_LASTS",
+      "retrieved": "2026-11-23",
+      "primary_verified": false,
+      "ratings": {
+        "ohms": 97600,
+        "tolerance_percent": 1,
+        "power_W": 0.25,
+        "working_voltage_V": 200,
+        "overload_voltage_V": 500
+      },
+      "geometry": {
+        "case": "1206"
+      },
+      "gates": [
+        "TME document link incorrectly returns RC0201FR-07100KL; use correct RC1206 family primary",
+        "Actual fast-transient sharing not established by resistive division"
+      ]
+    },
+    {
+      "refs": [
+        "R8",
+        "R9"
+      ],
+      "qty": 2,
+      "manufacturer": "Yageo",
+      "mpn": "RC1206FR-0768KL",
+      "tme_symbol": "RC1206FR-0768KL",
+      "offer_url": "https://www.tme.eu/en/details/rc1206fr-0768kl/smd-resistors/yageo/",
+      "stock": 3135,
+      "moq": null,
+      "stock_grade": "CACHED_POSITIVE_3135;DIRECT_2026-11-23_HTTP429_NOT_VERIFIED",
+      "retrieved": "2026-11-23",
+      "primary_verified": false,
+      "gates": [
+        "Use original verified RC1206 manufacturer sheet"
+      ]
+    },
+    {
+      "mpn": "COIL1010-3.3",
+      "manufacturer": "Ferrocore",
+      "refs": [
+        "L1"
+      ],
+      "qty": 1,
+      "tme_symbol": "COIL1010-3.3",
+      "offer_url": "https://www.tme.eu/en/details/coil1010-3.3/inductors/ferrocore/",
+      "stock": 258,
+      "moq": 2,
+      "multiple": 2,
+      "stock_grade": "DIRECT_PUBLIC_CATALOGUE_2026-11-23",
+      "primary_url": "https://www.tme.eu/Document/d4ea539b7be49d8641efd52b6965f3fb/COIL1010-3.3.pdf",
+      "gates": [
+        "Typical0.3A10%Ldrop; plugin1.496Alinearflag requires nonlinear transient qualification",
+        "No published repetitive/impulse differential working-voltage rating"
+      ]
+    },
+    {
+      "mpn": "74089",
+      "manufacturer": "Myrra",
+      "refs": [
+        "T1"
+      ],
+      "qty": 1,
+      "tme_symbol": "74089",
+      "offer_url": "https://www.tme.eu/en/details/74089/pcb-transformers/myrra/",
+      "stock": 126,
+      "moq": 1,
+      "multiple": 1,
+      "stock_grade": "DIRECT_PUBLIC_CATALOGUE_2026-11-23",
+      "primary_url": "https://myrra.com/wp-content/uploads/2017/09/Datasheet-74087-74088-74089-rev-A.pdf",
+      "gates": [
+        "Primaryonly nonisolated buckuse, unusedwindingsopen",
+        "0.85Apeak catalogue vs up1.24AcharacterizedICfault; nofaultpass",
+        "DCR/hotbias/coreloss/RMSunpublished; measureagainstdeclaredcriteria"
+      ]
+    }
+  ],
+  "fresh_rate_limit": "Single batch stopped atCS06FTFUR680HTTP429; cached positive counts forremainingparts retained explicitly. Not zero stock or all-current proof."
+}

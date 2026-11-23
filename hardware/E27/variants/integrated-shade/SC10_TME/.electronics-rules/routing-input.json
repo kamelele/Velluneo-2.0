@@ -1,0 +1,189 @@
+{
+  "constraints": {
+    "areas": [],
+    "blocks": [
+      {
+        "basis": "LYTSwitch1 high-side buck layout and independent functional-blocks.TME-A.json; this contract does not establish actual loop or Kelvin compliance.",
+        "id": "BUCK_AND_SENSE",
+        "kelvin_connections": {
+          "objects": [
+            "U1.3-R5.2/R6.2",
+            "R4.2-U1.S",
+            "C5.2-U1.S"
+          ],
+          "rationale": "SeparateFBsense trace to forcejunction; BP/OVPreturn locally toSOURCE, no shared switchedforce segment."
+        },
+        "loops": {
+          "objects": [
+            "C4-U1-R5/R6-T1-COUT-D1-C4",
+            "U1.1-C5.1-C5.2-U1.S"
+          ],
+          "rationale": "Inspect actual source switching and local bypass loops; geometry alone cannot prove current return orEMC."
+        },
+        "requirement_id": "ROUTING",
+        "return_paths": {
+          "objects": [
+            "D1.2",
+            "C4.2",
+            "C6.2",
+            "C7.2",
+            "C8.2"
+          ],
+          "rationale": "Keep freewheel return paths short; do not route return through sense/BP reference."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "/BP",
+            "/M",
+            "/FB_INDUCTOR"
+          ],
+          "rationale": "Low-current sense/control routes must avoid drain/AC coupling; BP bypass adjacentU1."
+        },
+        "switching_nodes": {
+          "objects": [
+            "/SW_SOURCE",
+            "/FB_INDUCTOR",
+            "U1.4",
+            "T1.4"
+          ],
+          "rationale": "Highdv/dt anddi/dt conductors: minimize loop/coupled copper; sufficientthermalcopper needs separate analysis."
+        }
+      },
+      {
+        "basis": "Independent parts/interfaces and manual laboratory source boundary.",
+        "id": "INPUT_AND_OUTPUT",
+        "kelvin_connections": {
+          "objects": [],
+          "rationale": "No separate Kelvin function on input MOV/fuse/outputwirepads; sensitivecontrollerKelvin covered byBUCK_AND_SENSE."
+        },
+        "loops": {
+          "objects": [
+            "J1-F1-R1-BR1-J1",
+            "BR1-C1-L1-C4-BR1",
+            "T1-C6/C7/C8-D1"
+          ],
+          "rationale": "Minimize inputpulse/switchingloops and routeparallelcapacitors sensibly for ripple sharing."
+        },
+        "requirement_id": "ROUTING",
+        "return_paths": {
+          "objects": [
+            "/AC_N",
+            "/DC_RETURN"
+          ],
+          "rationale": "Distinctnetmemberships; no bypass of fuse or Rin."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "J1",
+            "J2",
+            "T1.NC"
+          ],
+          "rationale": "ACright,LEDleft; unused magnetic terminals remainopen hazardousdomain."
+        },
+        "switching_nodes": {
+          "objects": [
+            "/BUS_RECT",
+            "/BUS_FILTERED"
+          ],
+          "rationale": "Input pulses/transients and differential filter voltage unqualified; no presumedinsulation fromcan sleeves."
+        }
+      }
+    ],
+    "intent_digest": "e60c7ebc345f0b61a857b9f7516467c5e04eba81341850679bdc1f5ca3347b3a",
+    "kicad_version": "10.0.6",
+    "minimums_mm": {
+      "annular_width": 0.2,
+      "clearance": 0.3,
+      "edge_clearance": 1.0,
+      "hole_size": 0.3,
+      "track_width": 0.3
+    },
+    "net_settings": {
+      "classes": [
+        {
+          "bus_width": 12,
+          "clearance": 0.3,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "Default",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        },
+        {
+          "bus_width": 12,
+          "clearance": 0.3,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "POWER",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        }
+      ],
+      "meta": {
+        "version": 3
+      },
+      "netclass_patterns": [
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_L"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_N"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_PROTECTED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_LIMITED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_RECT"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_FILTERED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/DC_RETURN"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/SW_SOURCE"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/FB_INDUCTOR"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/LED_PLUS"
+        }
+      ]
+    },
+    "outline_mm": [
+      100,
+      100,
+      151.2,
+      137
+    ],
+    "schema_version": 1
+  },
+  "constraints_digest": "cb004e11baacb5adf71d761d68ef080a6741bc60dcd7ebcc7c182934daf74e61"
+}

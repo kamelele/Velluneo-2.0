@@ -1,0 +1,1101 @@
+{
+  "actual_actor": "/root/tme_cad",
+  "source_sha256": "3513e1944e43a2d26b0ed57dae55deec6ed2686bb0d42d88de433c399ff9bc18",
+  "result_sha256": "ffff2acb281c566fbee22e3ce58736d5ce266a8b57d104dfc825d3cb99825b64",
+  "native_floor_mm": 0.3,
+  "routing_contract_path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC10_TME\\.electronics-rules\\routing-input.json",
+  "constraints_digest_supplied": "cb004e11baacb5adf71d761d68ef080a6741bc60dcd7ebcc7c182934daf74e61",
+  "routing_contract_sha256": "917f5751ae0442a78fcea5129da85e6ac910076b2645ba7e594117409b804696",
+  "functional_matrix_sha256": "be671f29e206f3e7b73c5c8448528015eb4784b9081d6abd2cf8865cd944f984",
+  "functional_HV_spacing_pass": false,
+  "note": "Strict matrix preferred first; native-floor fallback jobs explicitly recorded and NOT approved exceptions. Full functional matrix and physical tests remain separate. Never claim insulation or manufacturing acceptance from these paths.",
+  "jobs": [
+    {
+      "net": "M",
+      "from": [
+        "U1",
+        "2"
+      ],
+      "to": [
+        "U1",
+        "2"
+      ],
+      "purpose": "External SO8 M escape via, not via-in-pad; .7/.3 meets unchanged annulus/drill floors",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "kelvin": false,
+      "native_UUIDs": [
+        "dc495210-4caf-4bc3-9034-cccdc4104b12",
+        "19ec9ac1-5416-4c0f-8b3c-9866a5f7b2bb",
+        "81d4e475-0723-4721-aa80-6a50149a940c",
+        "efe90a6f-a8ed-4bf0-bc52-e5231af7e10e"
+      ]
+    },
+    {
+      "net": "SW_SOURCE",
+      "from": [
+        "U1",
+        "8"
+      ],
+      "to": [
+        "C5",
+        "2"
+      ],
+      "purpose": "BP local source return",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 136806,
+      "seconds": 1.39,
+      "kelvin": false,
+      "native_UUIDs": [
+        "86cab8e9-cc66-46bb-a937-4e7d22f372ed",
+        "be7384c9-ef50-4491-ade6-2fe229e16e49",
+        "f9ad183d-86b8-41a8-896f-e76cfefded56",
+        "26bdb8dc-3606-43fb-a152-4f6024b60b8d",
+        "3d11e717-ab47-4aba-80e1-f2dc9dfc1dab",
+        "91a13b20-2a9f-4de5-a644-209535675deb",
+        "138f1ecb-de8b-4f9e-a700-5a840ea565b0",
+        "4ac4f3ab-a4a8-47dc-87a5-aca5bd0177ed"
+      ]
+    },
+    {
+      "net": "BUS_FILTERED",
+      "from": [
+        "C4",
+        "1"
+      ],
+      "to": [
+        "U1",
+        "4"
+      ],
+      "purpose": "Power input local feed",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 7002,
+      "seconds": 0.094,
+      "kelvin": false,
+      "native_UUIDs": [
+        "ff60cd25-b744-4416-af95-94491b30ea80",
+        "367e71ca-ce4f-4e46-8a2d-1e153ad31a80",
+        "64adb25b-cd4e-4c1b-aa08-6c0f3531b5d3",
+        "8664fc18-41f6-4941-8575-959fa5c7bf4b",
+        "c98fda4e-d600-4a70-b992-36e3827822e3",
+        "412e4f98-3bfb-4104-aad8-09d043ae7d71"
+      ]
+    },
+    {
+      "net": "BP",
+      "from": [
+        "U1",
+        "1"
+      ],
+      "to": [
+        "C5",
+        "1"
+      ],
+      "purpose": "BP local decoupling",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 8853,
+      "seconds": 0.109,
+      "kelvin": false,
+      "native_UUIDs": [
+        "92c9fae7-8d41-4a59-a72a-1c7a5bcfd518",
+        "cf564dc3-ea1e-434c-a71f-06bb04c33374",
+        "dee8c874-02ea-406c-b36e-f83f1434dab2",
+        "f589d6af-0f00-4807-9b20-e907b2847df4",
+        "c40bf4cd-8804-4341-b031-4564efa8eace",
+        "44ae5ef5-d22f-4a6e-928b-9906da0386dd",
+        "4b32bc26-5c1a-450a-a631-f57f69800f14",
+        "c3d6cd75-4d29-48a9-b2f5-09ad80485ef7",
+        "39d00960-f4ae-4f79-8783-a5edfdc4bcd6",
+        "9a594d0b-6880-495a-9a03-22823d6010c0"
+      ]
+    },
+    {
+      "net": "M",
+      "from": [
+        "U1",
+        "2"
+      ],
+      "to": [
+        "R4",
+        "1"
+      ],
+      "purpose": "Divider IC tap",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 110,
+      "seconds": 0.016,
+      "kelvin": false,
+      "native_UUIDs": [
+        "0b5f2272-dd5a-461f-8c66-c05525d086e3",
+        "bf898fec-5273-4bca-8f38-97ea23ef9f41",
+        "baf91ac2-84b0-41c0-80c6-a676a904b530",
+        "71a65725-b97e-45f5-b3fa-6d496fa7928f",
+        "bf2b69eb-8bb1-44b6-91cc-6105ff2f3088"
+      ]
+    },
+    {
+      "net": "M",
+      "from": [
+        "R12",
+        "2"
+      ],
+      "to": [
+        "R4",
+        "1"
+      ],
+      "purpose": "Four-series divider low end",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 61333,
+      "seconds": 0.906,
+      "kelvin": false,
+      "native_UUIDs": [
+        "efd2aa6d-4b7e-4974-9ff7-c0eae06107e8",
+        "da084214-7ad2-43f1-ad72-119961ce0150",
+        "67b356a8-38d6-460d-bff0-b4d2961d4723",
+        "b5c0a7f4-e89c-4152-b230-54c65fe49e4b",
+        "52cf7e4c-5dcc-4e3f-bcac-33fda88d52dc",
+        "788e5ff6-cdd8-4bdb-969e-cfe74590f721",
+        "61f2bb11-4609-4277-9bba-a3612ffdf718",
+        "c9660cb8-62d8-4086-9161-6d97ed3d10e8",
+        "63641f1d-aeaa-43ff-83de-5c3933769ba0"
+      ]
+    },
+    {
+      "net": "SW_SOURCE",
+      "from": [
+        "U1",
+        "5"
+      ],
+      "to": [
+        "U1",
+        "6"
+      ],
+      "purpose": "Compact common-source trunk",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 14,
+      "seconds": 0.016,
+      "kelvin": false,
+      "native_UUIDs": [
+        "6c3d112c-0421-44dc-a1b0-8c02cc6267f0",
+        "8a53e339-c883-4e77-8994-ecd7dc488447",
+        "3e6677f5-6156-43a9-b6bc-57bc99b22653"
+      ]
+    },
+    {
+      "net": "SW_SOURCE",
+      "from": [
+        "U1",
+        "6"
+      ],
+      "to": [
+        "U1",
+        "7"
+      ],
+      "purpose": "Compact common-source trunk",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 13,
+      "seconds": 0.015,
+      "kelvin": false,
+      "native_UUIDs": [
+        "a6e24003-b593-44fc-b0f4-06dc9f98de23",
+        "966f27ed-0986-4211-a49c-ca03baa804e6",
+        "6a5d8bcc-f926-4ce2-baac-af696095818a"
+      ]
+    },
+    {
+      "net": "SW_SOURCE",
+      "from": [
+        "U1",
+        "7"
+      ],
+      "to": [
+        "U1",
+        "8"
+      ],
+      "purpose": "Compact common-source trunk",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 14,
+      "seconds": 0.016,
+      "kelvin": false,
+      "native_UUIDs": [
+        "a1710361-9e71-4406-8116-e3d4704f4f83",
+        "76a5461a-40b3-4938-8e98-04ad1b8fc969",
+        "e1cf7251-7961-4487-b5a1-9091bcadd509"
+      ]
+    },
+    {
+      "net": "SW_SOURCE",
+      "from": [
+        "U1",
+        "5"
+      ],
+      "to": [
+        "R5",
+        "1"
+      ],
+      "purpose": "Sense force source",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 1418,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "a396b454-b78d-46f9-8097-9027908849c0",
+        "b534c938-5764-4293-bc21-ae782db2204f",
+        "1a51cb39-4e78-4578-b946-881ba68deb66",
+        "ca0747bc-243e-46a7-a5b2-9f0a769d8e7c"
+      ]
+    },
+    {
+      "net": "SW_SOURCE",
+      "from": [
+        "R5",
+        "1"
+      ],
+      "to": [
+        "R6",
+        "1"
+      ],
+      "purpose": "Parallel sense force source",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 24,
+      "seconds": 0.032,
+      "kelvin": false,
+      "native_UUIDs": [
+        "0747dc94-d958-4643-aaa8-f0190150a9f3",
+        "18f0bf84-5aa2-4c9d-846a-b297e057e00c"
+      ]
+    },
+    {
+      "net": "SW_SOURCE",
+      "from": [
+        "U1",
+        "7"
+      ],
+      "to": [
+        "R4",
+        "2"
+      ],
+      "purpose": "Divider local source reference",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 1232,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "4c5191ec-37fa-410a-ba50-b8107190d5ba",
+        "9e5af9d8-6cb4-4808-a841-917de2288820",
+        "c23753b1-830f-4948-8d00-cb3deb3bf648",
+        "b4ee4fca-e345-43fc-87c4-fd2085513a62",
+        "7ba23dab-a872-418e-9fa7-d347ad4ce40c"
+      ]
+    },
+    {
+      "net": "FB_INDUCTOR",
+      "from": [
+        "R5",
+        "2"
+      ],
+      "to": [
+        "R6",
+        "2"
+      ],
+      "purpose": "Parallel sense force output",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 24,
+      "seconds": 0.015,
+      "kelvin": false,
+      "native_UUIDs": [
+        "93671816-d184-4896-8552-8839f8be7dd1",
+        "1dc57fb1-1d4d-4a7d-b5ce-32f2c2e8331a"
+      ]
+    },
+    {
+      "net": "FB_INDUCTOR",
+      "from": [
+        "R5",
+        "2"
+      ],
+      "to": [
+        "T1",
+        "4"
+      ],
+      "purpose": "Sense force to energy primary",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 2861,
+      "seconds": 0.032,
+      "kelvin": false,
+      "native_UUIDs": [
+        "b8f53b43-9302-43af-9ce4-f4ae6b2a316d",
+        "0d01963d-9ff9-45c1-af88-426119e4e131",
+        "3ccf3674-8529-4aad-acf2-0b10a79dd495",
+        "4a741a74-bcbe-4fa1-a0ca-fbfd4bd1e5a5",
+        "510f49f7-5dc4-41fd-94a6-59d4312a9f14",
+        "02af298c-369f-451e-af5b-476cc3ccf8ce",
+        "e11686af-bc90-4c02-84ca-4896c9f43487"
+      ]
+    },
+    {
+      "net": "FB_INDUCTOR",
+      "from": [
+        "D1",
+        "1"
+      ],
+      "to": [
+        "T1",
+        "4"
+      ],
+      "purpose": "Freewheel cathode to inductor force",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 1017,
+      "seconds": 0.047,
+      "kelvin": false,
+      "native_UUIDs": [
+        "2d014be6-6d00-4fcf-b96f-222ecbd3c402",
+        "ac057029-d361-41fc-82a6-f4cc7b7fc971",
+        "9a2ada24-7da8-4c78-9a2c-06511a429667",
+        "216d370c-217b-406e-afe9-1ad6425b9308",
+        "3663f315-11e5-4615-8995-b174f131eac3"
+      ]
+    },
+    {
+      "net": "FB_INDUCTOR",
+      "from": [
+        "R5",
+        "2"
+      ],
+      "to": [
+        "U1",
+        "3"
+      ],
+      "purpose": "Independent feedback sense branch at R5",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 144978,
+      "seconds": 1.421,
+      "kelvin": true,
+      "native_UUIDs": [
+        "cf9bb421-2d1a-47cc-a0fb-620509e0c293",
+        "d9a255eb-1b3c-4d8c-84c3-0cc54d6c2114",
+        "b215f58d-0f5c-4f0c-9ffc-9bed77a493c3",
+        "25df662a-e8dc-4d21-a5b9-11511834d02e",
+        "1ad7d067-dd54-4ca2-88d8-db1e4c3ce4fa",
+        "ccb168f6-53a9-4b02-bf91-25c98ef1d7f9",
+        "fee887c0-949d-47d5-b938-f067e39d0d89",
+        "309ce2bf-3603-4fa4-875d-a10d1186b8d9"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "D1",
+        "2"
+      ],
+      "to": [
+        "C4",
+        "2"
+      ],
+      "purpose": "Freewheel local return",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 334,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "6c3800e5-937a-44b6-b5d0-21e647bdffc7",
+        "c367b156-4b34-47b4-8b13-a244b04bb199"
+      ]
+    },
+    {
+      "net": "LED_PLUS",
+      "from": [
+        "T1",
+        "5"
+      ],
+      "to": [
+        "C7",
+        "1"
+      ],
+      "purpose": "Inductor to output reservoir",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 12602,
+      "seconds": 0.141,
+      "kelvin": false,
+      "native_UUIDs": [
+        "33ab9f66-0b39-4751-ae21-06b07b9324f6",
+        "568641ef-ad68-4abd-91b1-172138f7cd44",
+        "92e7373a-4f67-4e48-aeeb-85aa355eba40",
+        "8fb65a6d-42d7-4c88-8602-8fd8fda9d557",
+        "2d8c7212-3f3f-4c6c-97bf-ec6e1b65c8e5",
+        "050d2361-116a-4ed1-be37-a982a66f16ef",
+        "cfbca22b-eb41-4e55-9835-5bd9d0072636"
+      ]
+    },
+    {
+      "net": "OVP_CHAIN1",
+      "from": [
+        "R7",
+        "2"
+      ],
+      "to": [
+        "R10",
+        "1"
+      ],
+      "purpose": "Series divider",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 26,
+      "seconds": 0.047,
+      "kelvin": false,
+      "native_UUIDs": [
+        "502a2faa-b821-4227-9bcd-a1ea33a69276"
+      ]
+    },
+    {
+      "net": "OVP_CHAIN2",
+      "from": [
+        "R10",
+        "2"
+      ],
+      "to": [
+        "R11",
+        "1"
+      ],
+      "purpose": "Series divider",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 26,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "d547a8b4-b449-4296-aab6-c975a6b8aec1"
+      ]
+    },
+    {
+      "net": "OVP_CHAIN3",
+      "from": [
+        "R11",
+        "2"
+      ],
+      "to": [
+        "R12",
+        "1"
+      ],
+      "purpose": "Series divider",
+      "width_mm": 0.3,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 26,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "79c832e0-2321-49a1-a552-4b272744b2c9"
+      ]
+    },
+    {
+      "net": "AC_L",
+      "from": [
+        "F1",
+        "1"
+      ],
+      "to": [
+        "J1",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 1402,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "bcf42e92-4ec7-47ab-8e96-0cc713974a40",
+        "3864eb4f-a2f1-4e67-b755-7bdd5f0fb0ab",
+        "cb6cada6-04c7-4502-bac8-bf05860ed068",
+        "e8df41b5-2925-4f46-8a56-fe71edaabc6f"
+      ]
+    },
+    {
+      "net": "AC_LIMITED",
+      "from": [
+        "R1",
+        "2"
+      ],
+      "to": [
+        "BR1",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 18846,
+      "seconds": 0.235,
+      "kelvin": false,
+      "native_UUIDs": [
+        "40482284-36b7-4685-9700-d139ed24096d",
+        "60157bd0-9273-45a3-b1f1-97d959b8f49c",
+        "0dea1fd2-2616-4ebf-a4b7-e60c2aa1b126",
+        "0da170e5-a58e-4e66-9489-b7fb7c7c8a74",
+        "d6c7ce90-6998-4aff-97f7-6bfcc3024afe"
+      ]
+    },
+    {
+      "net": "AC_N",
+      "from": [
+        "RV1",
+        "2"
+      ],
+      "to": [
+        "J1",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 3944,
+      "seconds": 0.062,
+      "kelvin": false,
+      "native_UUIDs": [
+        "07dcdc81-3959-45fb-84a0-d7651d6113ff",
+        "68f98e53-e1b7-4df0-bbdb-8024510fe19d",
+        "248d21e0-e3ca-4834-9ee8-8ad8dbaa68ed",
+        "2facc37f-41c4-4457-966b-248b1578af92",
+        "56e820c4-60c0-4fb8-9c13-679c0d22634d"
+      ]
+    },
+    {
+      "net": "AC_N",
+      "from": [
+        "RV1",
+        "2"
+      ],
+      "to": [
+        "BR1",
+        "4"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 16358,
+      "seconds": 0.172,
+      "kelvin": false,
+      "native_UUIDs": [
+        "8a08bcf4-761e-4422-843d-9af6df2b9f43",
+        "df0b6617-e025-45f4-8a06-a15600c90eb9",
+        "5404970a-4461-4877-9d10-1e223bee1c31",
+        "72f17b7b-d049-4149-81be-6dc3237d0613",
+        "8f3edf35-0a50-4655-b876-cea203792246",
+        "cd26162c-c2a3-4041-b3d7-c1c6522c5e68"
+      ]
+    },
+    {
+      "net": "AC_PROTECTED",
+      "from": [
+        "RV1",
+        "1"
+      ],
+      "to": [
+        "R1",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 460,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "25feb710-1df1-47f4-b9af-d1d92811a529",
+        "55968761-02f4-45ba-b0fb-1dce1311efea",
+        "422e1dfa-07d5-4e34-847d-d984bd345c13"
+      ]
+    },
+    {
+      "net": "AC_PROTECTED",
+      "from": [
+        "F1",
+        "2"
+      ],
+      "to": [
+        "RV1",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 2183,
+      "seconds": 0.047,
+      "kelvin": false,
+      "native_UUIDs": [
+        "19974718-37bf-4a3c-9d91-37d0bbe6266a",
+        "1372c82f-3760-46bb-bf06-38ace15024a7",
+        "4c43d9f5-f91f-4b02-b710-163f6d775dac",
+        "a7fec022-4f1d-4b7c-80a5-6e459678fb21"
+      ]
+    },
+    {
+      "net": "BUS_FILTERED",
+      "from": [
+        "L1",
+        "2"
+      ],
+      "to": [
+        "U1",
+        "4"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 58285,
+      "seconds": 0.703,
+      "kelvin": false,
+      "native_UUIDs": [
+        "a2c8ea28-275f-4dca-bba6-70a07dd9ffa2",
+        "8a60ce3f-f107-472c-b06f-1cbbb6e9f699",
+        "6030691a-82c3-4d38-9c26-9fe09f344ea0",
+        "4d4c4b3b-4f7f-4a25-941e-8b46f6ebfcda",
+        "697b79ed-b3b2-4803-baf2-1be2e1e01b62",
+        "6002280e-087b-480b-a049-8eebb92e5f0a",
+        "a2697c55-f59c-447e-b50a-d0349d15e67b",
+        "a4212492-a21f-40c3-900b-3628085a63fe",
+        "c925a749-62fe-412d-a7bf-79b6ac56f679"
+      ]
+    },
+    {
+      "net": "BUS_RECT",
+      "from": [
+        "C1",
+        "1"
+      ],
+      "to": [
+        "BR1",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 20093,
+      "seconds": 0.219,
+      "kelvin": false,
+      "native_UUIDs": [
+        "8605b252-36fc-431b-8cd1-77cc8d40a268",
+        "dea68388-3f47-40ab-b131-485a316d7e01",
+        "6a98285b-6309-4497-bc26-ac63a74b84a1",
+        "2a0d6f53-2446-46ca-a6d9-9a377ed695da",
+        "ce362b20-f5ee-4901-9c5b-6c2b323c265b",
+        "e68d9bf0-14d2-4f4b-a3cf-438382b00c08",
+        "af229723-0620-4674-ba9a-66932bcd656d",
+        "0859f41f-fc30-433a-a67d-481423dcb017"
+      ]
+    },
+    {
+      "net": "BUS_RECT",
+      "from": [
+        "L1",
+        "1"
+      ],
+      "to": [
+        "BR1",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 23496,
+      "seconds": 0.281,
+      "kelvin": false,
+      "native_UUIDs": [
+        "06989726-35ca-4edd-a85e-535238bb2672",
+        "829746b4-20de-4df2-866f-146b9ec822dc",
+        "230ee9b7-733f-4949-a96f-daf63c3896bb",
+        "ab63e5cc-1f8f-4601-b866-15c1441af0a1",
+        "9b770415-5de3-4178-8ed4-7c2dcda611a3",
+        "f12c5968-951b-43fb-bcb1-2c33997463e5",
+        "5cc0f3de-7da2-42b1-a569-53ef460ff96e"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "C6",
+        "2"
+      ],
+      "to": [
+        "R8",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 496,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "000bc72d-40f3-4b6c-8b02-94ea44709c8e",
+        "2084eca9-e277-4061-a4c2-ebd8a1f9140e"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "C7",
+        "2"
+      ],
+      "to": [
+        "R8",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 496,
+      "seconds": 0.047,
+      "kelvin": false,
+      "native_UUIDs": [
+        "88f60c21-6e5f-4487-bcdb-0c6b47c60983",
+        "f41744d5-dd21-4995-8b35-6818f5e757af"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "C7",
+        "2"
+      ],
+      "to": [
+        "R9",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 387,
+      "seconds": 0.032,
+      "kelvin": false,
+      "native_UUIDs": [
+        "646f7318-fbdd-4fe9-a869-b29c3a3194ec",
+        "2c405a8c-4343-4cfc-ae9c-d2b2d59fa77a",
+        "94daf048-68cb-4ad5-a999-4ea62cd1e811"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "C8",
+        "2"
+      ],
+      "to": [
+        "R9",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 496,
+      "seconds": 0.046,
+      "kelvin": false,
+      "native_UUIDs": [
+        "1543e17b-455b-4699-99d2-3c8dacbd93e4",
+        "94da54ae-3844-4b7a-a96e-2342c27f5d3b"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "R8",
+        "2"
+      ],
+      "to": [
+        "J2",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 83117,
+      "seconds": 0.797,
+      "kelvin": false,
+      "native_UUIDs": [
+        "546472bf-14d6-4708-92db-cb82b725007c",
+        "c7fc44b2-78a6-4319-9721-720a8df61869",
+        "0d714be8-0341-4917-9c81-80f8bc7aa484"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "C1",
+        "2"
+      ],
+      "to": [
+        "BR1",
+        "3"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 16196,
+      "seconds": 0.188,
+      "kelvin": false,
+      "native_UUIDs": [
+        "6e6a451e-56d7-40a9-b764-817962163b6c",
+        "6181ff68-b166-41f0-900b-c44e5690711a",
+        "e8791643-51f2-4825-84fd-96c1e8b01d40",
+        "6d98486d-0be2-4fe2-8454-d9689f5d6781",
+        "68eee970-5c92-4e30-bbb6-853554376be4",
+        "d6b75697-fd4d-49c3-8846-92a2facc8eed",
+        "d90ab6f0-d1f0-42d4-bb46-f4677ad73897",
+        "e2107673-6a51-4e64-b952-b95db23b1506",
+        "07a6e8e9-c351-4fb9-8348-090f861e3c40"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "C7",
+        "2"
+      ],
+      "to": [
+        "D1",
+        "2"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 34641,
+      "seconds": 0.329,
+      "kelvin": false,
+      "native_UUIDs": [
+        "c19410e5-c5ea-4c3c-a9cc-eb2fbb7c5a87",
+        "2c9327a2-dee9-4d85-8bc4-a44864c83068",
+        "4eb0da68-ff12-42c0-9a74-77baeffd0a99",
+        "31a40efa-1c2c-4bda-aff5-059f3aa013ad",
+        "44b0a2e2-2a85-4d6f-a706-1f00b44b5684",
+        "34c51206-8e5a-4f35-ae1f-a1359e30542b",
+        "d76c0350-e3f4-43b8-a294-f609cc4939e9",
+        "63e6a741-07cd-4c96-bd2a-6881b4872a55",
+        "ea9cea73-8603-450a-a12f-2e8a6fca1cdf"
+      ]
+    },
+    {
+      "net": "DC_RETURN",
+      "from": [
+        "C4",
+        "2"
+      ],
+      "to": [
+        "BR1",
+        "3"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 2476,
+      "seconds": 0.078,
+      "kelvin": false,
+      "native_UUIDs": [
+        "78367384-141d-43b5-b8f1-197627480598",
+        "3f590585-6583-4e03-9993-008ab8f19bab",
+        "2ad5e920-8c94-42b7-8072-d4510bb48749",
+        "03f8fd06-5338-4494-b34b-10808411b189",
+        "00525eca-a856-4986-85a0-948127e00378",
+        "091f1f1c-8927-41e5-bc3f-643c6c507869"
+      ]
+    },
+    {
+      "net": "LED_PLUS",
+      "from": [
+        "R8",
+        "1"
+      ],
+      "to": [
+        "J2",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 50,
+      "seconds": 0.047,
+      "kelvin": false,
+      "native_UUIDs": [
+        "aea1f385-8a43-4625-8518-6753120d90b0",
+        "d414d245-155e-4995-9398-5b97f60e6d98"
+      ]
+    },
+    {
+      "net": "LED_PLUS",
+      "from": [
+        "C7",
+        "1"
+      ],
+      "to": [
+        "J2",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 318,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "a66faf7b-37ce-4590-a85f-b4203e9f517c",
+        "9fb2f237-dfc1-4e98-8582-8fb334852c7a"
+      ]
+    },
+    {
+      "net": "LED_PLUS",
+      "from": [
+        "R7",
+        "1"
+      ],
+      "to": [
+        "R9",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 4294,
+      "seconds": 0.094,
+      "kelvin": false,
+      "native_UUIDs": [
+        "76e60b47-4532-45eb-8d3c-626cd0d70a46",
+        "515d0ece-e926-4308-a4c9-173ab9df63f9",
+        "501e5281-7501-4be5-bd69-844ee133cf50",
+        "937689f2-e9b2-489f-8bb4-5430e0a2e5f1",
+        "d71887ba-9c81-4db3-9abb-fe8f13a2b380"
+      ]
+    },
+    {
+      "net": "LED_PLUS",
+      "from": [
+        "C6",
+        "1"
+      ],
+      "to": [
+        "R8",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": false,
+      "expanded": 20853,
+      "seconds": 0.25,
+      "kelvin": false,
+      "native_UUIDs": [
+        "598219bf-ebb5-4123-9c40-4989a1b92835",
+        "862fcc40-89e9-49f7-afbf-0fc146d1e2d7",
+        "0828d8fc-04b9-4267-8b40-59cbc936344c",
+        "5a31038a-e4a0-4c99-814c-e88d34589048",
+        "30c74bb5-5434-41af-9fb4-90d8537d8951",
+        "37be7d24-2aef-4777-8200-e4b574314e23",
+        "e5fe12c8-2e16-42af-974b-ae38733e696a",
+        "eb678cb4-18bf-4fd0-937c-53afaa6803e0",
+        "8d33048e-5dec-466e-a176-c70fbbe04eae",
+        "80a1f59a-93d9-4bee-840e-c116c5ad3792",
+        "91b9f5c3-1720-498f-b58f-82cea181b310"
+      ]
+    },
+    {
+      "net": "LED_PLUS",
+      "from": [
+        "C7",
+        "1"
+      ],
+      "to": [
+        "R9",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 496,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "9397971c-1972-472a-9e52-3ee392286b44",
+        "9df81024-ee07-469f-80b1-c977455c91bd"
+      ]
+    },
+    {
+      "net": "LED_PLUS",
+      "from": [
+        "C8",
+        "1"
+      ],
+      "to": [
+        "R9",
+        "1"
+      ],
+      "purpose": "Remaining exact graph connection",
+      "width_mm": 0.4,
+      "success": true,
+      "strict_matrix_path_found": true,
+      "expanded": 496,
+      "seconds": 0.031,
+      "kelvin": false,
+      "native_UUIDs": [
+        "343cd923-732e-4fde-a079-c0c59dd1223f",
+        "d85b6790-652c-4f7b-9979-e162dfead0f5"
+      ]
+    }
+  ],
+  "tracks": 190,
+  "vias": 17
+}

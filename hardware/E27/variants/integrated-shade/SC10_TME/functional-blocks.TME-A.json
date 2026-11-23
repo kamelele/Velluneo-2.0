@@ -1,0 +1,89 @@
+{
+  "revision": "SC10-TME-A independent functional constraints",
+  "author": "/root/tme_cad",
+  "approval": null,
+  "status": "Design intent, not evidence of electrical or PCB acceptance",
+  "domains": "Entire circuit hazardous mains referenced; no SELV side, all unusedT1winding terminals alsohazardous. Oppositeedgeports are assembly aid only, not isolation.",
+  "blocks": [
+    {
+      "id": "INPUT",
+      "refs": [
+        "J1",
+        "F1",
+        "RV1",
+        "R1",
+        "BR1",
+        "C1",
+        "L1",
+        "C4"
+      ],
+      "intent": "ACrightedge; fuse before MOV and seriesresistor; no direct bypass of fuse/resistor. Compact bridge/C1/L1/C4 rectangle, separate ACfrom sensitivefeedback. Controlledlowprospectivefault laboratorysource required until50Afusecoordination verified.",
+      "electrical_open": [
+        "L1plug-in current exceeds typical.3Asaturation, no impulseworkingV proof",
+        "Fusetotalclearing/resistorpulsecoordination",
+        "MOVclamp+ringing vs725VU1"
+      ]
+    },
+    {
+      "id": "POWER_BUCK",
+      "refs": [
+        "U1",
+        "R5",
+        "R6",
+        "T1",
+        "D1",
+        "C4",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "intent": "Keep fastreturnloopC4-U1-Rsense-T1-Cout-D1-C4short; minimumswitchingcopperconsistentwiththermalpath. T1primary4sense/5output,neverrouteunusedwindings. D1cathodetoinductor/FB powerend,anodetoreturn.",
+      "target_tracks_mm": 0.4,
+      "layout_open": "Nativegeometryalone does not prove EMI or dynamicstress."
+    },
+    {
+      "id": "KELVIN",
+      "refs": [
+        "U1",
+        "R5",
+        "R6",
+        "C5",
+        "R4",
+        "R12"
+      ],
+      "intent": "FBpin3 must have separate low-current route to R5/R6pin2 force/sense junction,not share highcurrentsegment. U1SOURCEpins5..8 tiedcompactly andBPcapreturn close; R4dividerlowend references source locally. C5BPpin1withdirectshortlooptoU1BPpin1.",
+      "target_tracks_mm": 0.3,
+      "acceptance": "Verify nativebranch topology/length, not just graph parity."
+    },
+    {
+      "id": "OUTPUT",
+      "refs": [
+        "C6",
+        "C7",
+        "C8",
+        "R8",
+        "R9",
+        "J2"
+      ],
+      "intent": "LEDleftedge oppositeAC; threeparallel47uF100V, eachsamepolarity and ownshortconnections forripplecurrent sharing. Bleedersindependentparallel68k. No F.Cutracks/viasunderbarecans; only ownpads. Ventfreeabove.",
+      "physical_open": [
+        "CoutESR/ripplecurrent/hotspots",
+        "coldreplacement/dischargemeasurement",
+        "20SLEDselectedbin actualVf/light"
+      ]
+    },
+    {
+      "id": "OVP",
+      "refs": [
+        "R7",
+        "R10",
+        "R11",
+        "R12",
+        "R4",
+        "U1"
+      ],
+      "intent": "Four97.6kseries betweenLED+andM; avoidshortcutsacrosschain; directR12toR4/Minput. Distributedvoltagestressmustbecheckedwithswitchwaveforms. Dividerisnotforuserprotectionisolation."
+    }
+  ],
+  "spacing": "At leastnative manufacturing.3mm,edge1mm; strictfunctionalHVmatrix separately owned byroot, not waived. Native0DRC is not fullinsulationPASS. No source change grants exception."
+}

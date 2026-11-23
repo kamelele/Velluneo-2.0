@@ -1,0 +1,69 @@
+{
+  "revision": "SC10-TME-A-DRAFT",
+  "input": {
+    "VAC_RMS": [
+      207,
+      230,
+      253
+    ],
+    "frequency_Hz": 50,
+    "qualified": false
+  },
+  "output": {
+    "topology": "Nonisolated highside buck, primaryonly of catalogueMYRRA74089 asenergychoke",
+    "nominal_VDC": 60,
+    "nominal_total_current_mA_calculated": 135.2032666,
+    "nominal_LED_current_mA_after_bleeders_calculated": 133.43856,
+    "nominal_external_LED_power_W_calculated": 8.00631,
+    "LEDs": "20series4000KCRI>=80,~800lm target, externalLEDboard notpartofthisdriverBOM",
+    "dimming": false,
+    "SELV": false,
+    "measured_regulation_voltage_window": null,
+    "proposed_load_window_V": [
+      52,
+      68
+    ],
+    "window_note": "Not a guaranteed full52–68V regulation window; lowOVPcorner/ripple mayrestrictupperend."
+  },
+  "PCB": {
+    "dimensions_mm": [
+      51.2,
+      37,
+      1.6
+    ],
+    "layers": 2,
+    "copper_oz": 1,
+    "material": "FR4",
+    "finish": "leadfreeHASL",
+    "assembly": "Manual laboratory prototype candidate",
+    "total_assembly_envelope_mm": [
+      51.2,
+      37,
+      27.0
+    ]
+  },
+  "environment": {
+    "ambient_C": [
+      0,
+      40
+    ],
+    "T1_local_air_max_C": 50,
+    "temperature_estimates_qualified": false
+  },
+  "efficiency": {
+    "measured": false,
+    "qualified_percent": null,
+    "planning_only_LED_to_input_percent": [
+      80.01,
+      88.9
+    ],
+    "basis": "Assumedtotalbase_loss1–2W plus calculatedLEDpower; not a lossclosure or actualefficiencyprediction fornewmagnetic. Seeengineeringcalculations."
+  },
+  "losses": {
+    "Rin_at_60mARMS_W": 0.54,
+    "T1_copper_W_per_ohm_DCRhot": 0.092435,
+    "T1_DCR_and_core_loss": null,
+    "total_verified_base_loss_W": null
+  },
+  "qualification": "NOT_FOR_ORDER_OR_POWERED_TEST; engineering-status.json retains current blockers. No EMC/surge/thermalmeasurements or compliance established."
+}

@@ -1,0 +1,70 @@
+{
+  "actor": "/root/tme_magnetics_build",
+  "date": "2026-11-23",
+  "selection": "L1 FERROCORE COIL1010-3.3",
+  "status": "Selected physical catalogue part for proposed new TME CAD; differential surge/startup qualification remains open",
+  "TME_URL": "https://www.tme.eu/en/details/coil1010-3.3/inductors/ferrocore/",
+  "live_public_SSR_stock": 258,
+  "MOQ": 2,
+  "stock_source": "3p3mH-catalog.json, fetched this turn; cached webpages840 are stale and not used",
+  "manufacturer_authored_datasheet": "https://www.tme.eu/Document/d4ea539b7be49d8641efd52b6965f3fb/COIL1010-3.3.pdf",
+  "spec_number": "SP-0160325006",
+  "part_type": "Single winding radial PK power choke; not common-mode",
+  "L_mH": 3.3,
+  "tolerance_percent": 10,
+  "test_conditions": "1kHz,0.25V; these are measurement conditions NOT working-voltage rating",
+  "DCR_max_ohm": 4.65,
+  "Irms_A": 0.5,
+  "Irms_note": "40C typical temperature rise at Irms; not validated actual switching loss/hotspot bound",
+  "Isat_A": 0.3,
+  "Isat_note": "10% typical L drop at Isat; no guaranteed hot curve or maximum peak current proof",
+  "geometry": {
+    "body_diameter_max_mm": 11.5,
+    "body_height_max_mm": 11.5,
+    "lead_diameter_mm": 0.8,
+    "lead_diameter_tolerance_mm": 0.1,
+    "pitch_mm": 5,
+    "pitch_tolerance_mm": 0.5,
+    "lead_length_mm": 16,
+    "lead_length_tolerance_mm": 3,
+    "drawing_F_max_mm": 3,
+    "F_note": "Small lower-base/exit feature shown asF3max; keep drawing with footprint. Verify actual mounted seating/standoff with sample. Do not add invisible assumptions."
+  },
+  "proposed_footprint": {
+    "pins": 2,
+    "mount": "radial vertical THT",
+    "nominal_pad_centers_mm": [
+      [
+        -2.5,
+        0
+      ],
+      [
+        2.5,
+        0
+      ]
+    ],
+    "recommended_finished_hole_mm": 1.5,
+    "reason": "0.9mm max lead + nominal pitch5\u00b10.5mm, centred part allows up to0.25mm lateral lead displacement each.1.5mm holes give0.3mm radial space; assumes centredpart/normalleadposition.1.2mmholeswouldrequireleadformingorfitcheck.",
+    "suggested_pad_outer_mm": 2.4,
+    "recommended_body_courtyard_diameter_mm": 12.5,
+    "pad_hole_note": "Proposed implementation dimensions, not manufacturer PCB recommendation. Confirm manufacturability annular ring and actual samples."
+  },
+  "loss_screens": {
+    "equation": "Pcu=Irms_actual^2 *4.65ohm, before hotRincrease/coreloss",
+    "at50mA_W": 0.011625000000000003,
+    "at100mA_W": 0.046500000000000014,
+    "at200mA_W": 0.18600000000000005
+  },
+  "differential_stress_basis": {
+    "manufacturer_training": "https://www.st.com/resource/en/newsletter/Wurth_Inductor_HV_2018.pdf",
+    "correction": "400V common-mode potential of both terminals is not400V acrossinputfilterwinding. Inputfilterstandardinductors can be appropriate; off-linebuckenergycoil has different repeatedHVstress.",
+    "still_missing": [
+      "Actual differentialVL1 waveform at initial plug-in with downstream capacitor discharged and at surge/source-impedance corners.",
+      "L1 transient saturated current and wire/core temperature under input faults, including peak/energy in relation to fusible resistor clearing.",
+      "Manufacturer working-winding voltage and pulse/impulse/insulation degradation limits are not in provided sheet. Do not interpret0.25Vtestvoltage as operating limit or assume400Vqualification.",
+      "Room-temperaturetypicalIsat.3A does not guarantee L at hotstartup. May saturate temporarily; model resulting current and peak stress rather than treatingIsat as fuse.",
+      "Exact inputfilter transfer/EMI measurements on newlayout."
+    ]
+  },
+  "T1_direction_from_parent": "Parent selected MYRRA74023 primary9-10; separate architecture decision. This report does not change T1orCAD."
+}
