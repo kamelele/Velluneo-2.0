@@ -1,0 +1,32 @@
+{
+  "reviewer": "/root/lamp_fit_review",
+  "role": "Independent mechanical concept fit reviewer",
+  "scope": "Presentation-only bulb packaging feasibility. No electrical layout, source alteration, safety or thermal release.",
+  "input_fit_report_sha256": "dadc7dc50e128935bb1f7d0040f490bfff7aa6315ea9807aa5244a3787979b12",
+  "PCB_source_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "findings": [],
+  "checks": {
+    "PCB_source_matches_expected": true,
+    "length_sum_mm": 143.6,
+    "diameter_max_mm": 78,
+    "PCB_body_Fab_bbox_inventory_count": 17,
+    "all_body_Fab_XY_within_original_outline": true,
+    "box_corner_radius_mm": 19.165398508770956,
+    "cone_inner_radius_at_tight_end_mm": 21.285714285714285,
+    "minimum_radial_gap_mm": 2.120315776943329,
+    "minimum_perpendicular_cone_wall_gap_mm": 2.0387343960916686,
+    "axial_box_panel_gap_mm": 3.8,
+    "posts_to_box_radial_lateral_gap_mm": 11.0,
+    "ideal_envelope_fit_pass": true
+  },
+  "qualification": "NativeF.Fab bounding boxes establish no drawnbodyXYoverhang, not supplierformed-lead qualification. 19.5mmheight is retained planningenvelope, not measuredassembly. Prototype dimensional inspection remainsdue.",
+  "open_items": [
+    "Actualboardretainerandfastenertolerancesnotdesigned",
+    "Wiresandformedleadbendsnotfullyrouted/qualified",
+    "Vents/insulation/accessibilityneedseparatesafetyreview",
+    "LEDpanelplacementillustrative,notroutedLEDPCB",
+    "Noenclosedthermalmeasurement",
+    "E27visualenvelopenotmanufacturingthreadgauge"
+  ],
+  "recommendation": "Concept geometric fit supported with unchangedSC09; do not call final enclosure/orderready or thermally qualified."
+}
