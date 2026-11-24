@@ -1,0 +1,207 @@
+{
+  "constraints": {
+    "areas": [],
+    "blocks": [
+      {
+        "basis": "PI LinkSwitch-TN2 high-side buck and layout guidance; TI SLYP762 switched-current and Kelvin routing principles.",
+        "id": "BUCK_CC_OVP",
+        "kelvin_connections": {
+          "objects": [
+            "R7.1",
+            "R17.1",
+            "R7.2",
+            "U2.3"
+          ],
+          "rationale": "Separate sense pickup at the resistor lands from LED and power-return force routes."
+        },
+        "loops": {
+          "objects": [
+            "C4.1",
+            "U1.4",
+            "U1.5",
+            "D1.K",
+            "D1.A",
+            "C4.2",
+            "T1",
+            "C6"
+          ],
+          "rationale": "Keep the input commutation loop compact, then the output/freewheel loop. Review actual routed geometry, not only DRC."
+        },
+        "requirement_id": "SB02_ROUTING",
+        "return_paths": {
+          "objects": [
+            "/DC_RETURN",
+            "D1.A",
+            "C4.2",
+            "C6.2",
+            "R7.2",
+            "U2.3",
+            "U3.3"
+          ],
+          "rationale": "Separate force return from current-reference Kelvin branch; no switch-current flow in the reference spur."
+        },
+        "sensitive_nets": {
+          "objects": [
+            "U1.1",
+            "U1.2",
+            "C5",
+            "U4.3",
+            "R7",
+            "R17",
+            "U2.2",
+            "U3.2"
+          ],
+          "rationale": "Keep BP/FB local to U1 and quiet references away from SW and coil projections; all remain mains referenced."
+        },
+        "switching_nodes": {
+          "objects": [
+            "/SW",
+            "U1.5",
+            "U1.6",
+            "U1.7",
+            "U1.8",
+            "D1.K",
+            "T1.2"
+          ],
+          "rationale": "Minimize the commutating copper envelope; the mandatory DPAK cathode tab is included, not omitted."
+        }
+      }
+    ],
+    "intent_digest": "992ad58715b93a9df23742e5de645212bf34491ae15bd545794a124d477e4a5c",
+    "kicad_version": "10.0.6",
+    "minimums_mm": {
+      "annular_width": 0.2,
+      "clearance": 0.3,
+      "edge_clearance": 1.0,
+      "hole_size": 0.3,
+      "track_width": 0.3
+    },
+    "net_settings": {
+      "classes": [
+        {
+          "bus_width": 12,
+          "clearance": 0.3,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "Default",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        },
+        {
+          "bus_width": 12,
+          "clearance": 0.3,
+          "diff_pair_gap": 0.254,
+          "diff_pair_via_gap": 0.254,
+          "diff_pair_width": 0.254,
+          "line_style": 0,
+          "name": "POWER",
+          "pcb_color": "rgba(0, 0, 0, 0.000)",
+          "schematic_color": "rgba(0, 0, 0, 0.000)",
+          "track_width": 0.3,
+          "via_diameter": 1.27,
+          "via_drill": 0.7112,
+          "wire_width": 6
+        }
+      ],
+      "meta": {
+        "version": 3
+      },
+      "netclass_patterns": [
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_FUSED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_L"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_N"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BP"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_FILTERED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_RECT"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/CC_COMP"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/CC_REF"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/DC_RETURN"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/FB"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/K_CTL"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/LED_RETURN"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OPTO_A"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OPTO_COLLECTOR"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OVP_COMP"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OVP_MID"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OVP_REF"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/SW"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/VBIAS"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/VOUT"
+        }
+      ]
+    },
+    "outline_mm": [
+      100,
+      100,
+      151.2,
+      139.5
+    ],
+    "schema_version": 1
+  },
+  "constraints_digest": "85a015f724963e0ac256c83f14526828728413bf0ad3eff81a52d3d4d1dd5ff4"
+}

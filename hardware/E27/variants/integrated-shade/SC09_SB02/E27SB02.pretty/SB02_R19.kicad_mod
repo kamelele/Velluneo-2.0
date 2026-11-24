@@ -1,0 +1,157 @@
+(footprint "SB02_R19"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Yageo mounting2018primaryp4 Fig4/Table1 visually verified; A3 B1.2 C.9 D1.2 | DNP optionalresistor positions use same0805land")
+	(property "Reference" "REF**"
+		(at 0 -2.175 0)
+		(layer "F.Fab")
+		(uuid "2efe711e-0371-4355-964e-3e6edfa1d1c6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DNP / UNQUALIFIED"
+		(at 0 2.175 0)
+		(layer "F.Fab")
+		(uuid "14ea07a8-3572-4ba2-936e-0730e7b1cfda")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b5a3a7ee-7031-49ab-a709-731853678a83")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d76cad10-52f9-4bdb-ba18-ceb4826db136")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "DNP; optional compensation position, value not qualified"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "fc3c961e-3016-48eb-83d4-cbdf003ef991")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr dnp)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 -1.175)
+		(end 2 -1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "767be28e-811c-4687-920b-aa6d50a8b5b5")
+	)
+	(fp_line
+		(start -2 1.175)
+		(end -2 -1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "a91eb1c2-1469-4e38-8202-8622a0706044")
+	)
+	(fp_line
+		(start 2 -1.175)
+		(end 2 1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "a8e634f5-c7ac-4a87-a86b-8fc576a84033")
+	)
+	(fp_line
+		(start 2 1.175)
+		(end -2 1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "966427d8-0ab4-490c-b5a1-b6880ed5f5a5")
+	)
+	(fp_line
+		(start -1.05 -0.675)
+		(end 1.05 -0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "851fc52e-5cc5-4b17-9f97-e0be155a8091")
+	)
+	(fp_line
+		(start -1.05 0.675)
+		(end -1.05 -0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "d2c976ef-9ef3-4a6a-86fb-5bf06e70697e")
+	)
+	(fp_line
+		(start 1.05 -0.675)
+		(end 1.05 0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "8b828726-a3eb-4c60-acf1-dd8cca5367b6")
+	)
+	(fp_line
+		(start 1.05 0.675)
+		(end -1.05 0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "e033ecb3-fb6d-4457-946f-1d2ddd6fa7e2")
+	)
+	(pad "1" smd rect
+		(at -1.05 0)
+		(size 0.9 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a125b9af-b1f7-4eed-8a98-186712313b69")
+	)
+	(pad "2" smd rect
+		(at 1.05 0)
+		(size 0.9 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "450ebb98-0190-446d-9a70-3940a47e82ce")
+	)
+	(embedded_fonts no)
+)

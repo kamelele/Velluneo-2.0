@@ -1,0 +1,167 @@
+(footprint "SB02_R16"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Yageo mounting2018primaryp4 Fig4/Table1 visually verified; A3 B1.2 C.9 D1.2 | DNP optionalresistor positions use same0805land")
+	(property "Reference" "REF**"
+		(at 0 -2.175 0)
+		(layer "F.Fab")
+		(uuid "d8d69f08-9fc9-45e7-9fbd-b1e125048d44")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "12k"
+		(at 0 2.175 0)
+		(layer "F.Fab")
+		(uuid "73538628-a446-4d69-923d-876a1d352fbc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "61b5294a-f162-4105-93dd-dd93e5de62b2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a0ce816d-b952-4f14-a9e9-4a954d016494")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "RC0805FR-0712KL"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "dfd6a626-3ee6-4098-99ab-71b1849c85ce")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 -1.175)
+		(end 2 -1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9557c82d-369f-40e0-96e7-51845a7f37c5")
+	)
+	(fp_line
+		(start -2 1.175)
+		(end -2 -1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "b7d46d45-15ce-452b-9100-ebd4313b705b")
+	)
+	(fp_line
+		(start 2 -1.175)
+		(end 2 1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "fb8899c4-c565-4874-83c9-e2ab463d612f")
+	)
+	(fp_line
+		(start 2 1.175)
+		(end -2 1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "f9eb4e47-7efe-475e-9eed-e5813a502397")
+	)
+	(fp_line
+		(start -1.05 -0.675)
+		(end 1.05 -0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "fc462854-e6eb-4f85-95fb-1d0f760c8674")
+	)
+	(fp_line
+		(start -1.05 0.675)
+		(end -1.05 -0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "89c61878-91fc-498d-af71-f28ed453c86c")
+	)
+	(fp_line
+		(start 1.05 -0.675)
+		(end 1.05 0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "39f11a72-d952-4a1b-8028-ac0178181095")
+	)
+	(fp_line
+		(start 1.05 0.675)
+		(end -1.05 0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "53eaf583-eea7-43ea-bc8f-733598385695")
+	)
+	(pad "1" smd rect
+		(at -1.05 0)
+		(size 0.9 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f26a6717-f008-4bf4-b7fe-9079e193af52")
+	)
+	(pad "2" smd rect
+		(at 1.05 0)
+		(size 0.9 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cead944a-f9d2-482a-8fbf-335ce2db4493")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/R16_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

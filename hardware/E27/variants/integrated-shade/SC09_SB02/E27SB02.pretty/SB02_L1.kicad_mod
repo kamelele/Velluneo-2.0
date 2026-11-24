@@ -1,0 +1,115 @@
+(footprint "SB02_L1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Wurth768772332WE-TIHV3.3mH400V;nominalP5compatibleP5.0038;manualfreeleadadjustmentandfitinspection")
+	(property "Reference" "REF**"
+		(at 0 -5 0)
+		(layer "F.Fab")
+		(uuid "d9feba60-8844-454c-861e-cdc80d40392e")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "3m3 EMI"
+		(at 0 5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bbe58792-b2f8-4037-8517-7e5acbbfaa10")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dff373b0-b791-48c7-9c1c-b48ab35c81b1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a70af5c6-d6fa-417a-88c1-54cf1b355ea1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "768772332"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b9e1d201-a261-4027-99a0-dc5c0eec859d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 4.65 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9e631262-460c-4bd1-ba5b-a8bf538e59af")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 4.15 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b18b5302-4aa8-46eb-bba5-72800b5d0665")
+	)
+	(pad "1" thru_hole rect
+		(at -2.5019 0)
+		(size 2.3 2.3)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "51babc60-25ba-4e0e-bcdc-21f2ce0752c4")
+	)
+	(pad "2" thru_hole circle
+		(at 2.5019 0)
+		(size 2.3 2.3)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "eeb9a36a-b263-4a58-a876-c42f293803c5")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/L1_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

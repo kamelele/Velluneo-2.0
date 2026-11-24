@@ -1,0 +1,171 @@
+(footprint "SB02_D3"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Vishay85604 Rev2 p5 DO35;7.62mmformedpitch explicitly authorized root engineering choice | NOTmanufacturerrecommendedlands. Leadmax.6;1.1finishedhole2.1pad leaves.5annular. Keep>=1mmstraightfromglassseal and gentlebendR~.6mm; inspectfirstsamplewithoutglassforce. .1Wnormaldesignscreen,NOTfull.5Wdatasheet4mmleadcondition; stripe atK. Seated2.6mmconservativeassemblyenvelope.")
+	(property "Reference" "REF**"
+		(at 0 -2.55 0)
+		(layer "F.Fab")
+		(uuid "8317a86b-fff8-4f45-960b-224a6bedda43")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "6V8 ZENER"
+		(at 0 2.55 0)
+		(layer "F.Fab")
+		(uuid "c80ea361-19f6-453e-9773-d421612b8332")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a61b4509-e68b-4cad-b70a-416744b62a9b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bbc9f42c-ee21-4f46-ab4f-bfbdb0f85b56")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "BZX55C6V8-TAP"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9a3d1055-6343-416e-b897-9789765f915f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -5.36 -1.55)
+		(end 5.36 -1.55)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "4d035c74-6958-4ef4-8a17-c97b9f3f20fc")
+	)
+	(fp_line
+		(start -5.36 1.55)
+		(end -5.36 -1.55)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9c09b789-de9f-420a-b265-ddc3f37a606b")
+	)
+	(fp_line
+		(start 5.36 -1.55)
+		(end 5.36 1.55)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "001fab96-a7bd-40c7-a3dd-c4db0956e62d")
+	)
+	(fp_line
+		(start 5.36 1.55)
+		(end -5.36 1.55)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "96d150e9-960a-4ef5-b6e9-7d85f636c906")
+	)
+	(fp_line
+		(start -1.95 -0.85)
+		(end 1.95 -0.85)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "977a3dbb-4df3-424a-a04e-253f1f8518f9")
+	)
+	(fp_line
+		(start -1.95 0.85)
+		(end -1.95 -0.85)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "6f616660-e43d-4d6a-9db8-e4234b29fb4f")
+	)
+	(fp_line
+		(start 1.95 -0.85)
+		(end 1.95 0.85)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "9a5f3f32-7c0d-42b6-afec-28b3ec58c356")
+	)
+	(fp_line
+		(start 1.95 0.85)
+		(end -1.95 0.85)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "022b69de-d6d6-40e2-b0bb-ceade5a27a84")
+	)
+	(pad "A" thru_hole circle
+		(at -3.81 0)
+		(size 2.1 2.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "da6a7486-ed36-4094-9692-7c10ada5f995")
+	)
+	(pad "K" thru_hole circle
+		(at 3.81 0)
+		(size 2.1 2.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f2b04a54-5b2b-4577-b7be-e21d5c357a67")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/D3_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

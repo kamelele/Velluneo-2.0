@@ -1,0 +1,31 @@
+{
+  "revision": "SC09-SB02-A4 fault-scope clarification",
+  "intent_sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455",
+  "evidence_level": "Design review; no measurements",
+  "normal_domain_basis": "The 0.3 mm low-voltage control groups assume healthy 15 V bias clamp D2 and normal functional operation. The190-pair matrix is an engineering normal-operation spacing target, not proof of insulation or safe voltages under all single faults.",
+  "faults": [
+    {
+      "fault": "D2 open, both TL431 paths off",
+      "effect": "VBIAS, C8 and potentially K_CTL can charge toward VOUT via R10. Series resistance limits current, not open-circuit voltage.20 V control-domain envelope and reference/component voltage ratings are not guaranteed.",
+      "status": "Unqualified; no powered fault or product acceptance"
+    },
+    {
+      "fault": "Shared optocoupler, bias or controller path failure",
+      "effect": "CC and OVP share a final feedback/control path. Two TL431 references do not provide independent safety disconnection.",
+      "status": "Unqualified common-cause fault; no fail-safe claim"
+    },
+    {
+      "fault": "U1 internal power switch drain-source short",
+      "effect": "Nonisolated positive buck has no independent series cutoff. Rectified mains can reach output through magnetics.",
+      "status": "No fail-safe output-voltage protection"
+    },
+    {
+      "fault": "LED output short / bias collapse",
+      "effect": "R10/VBIAS and the optocoupler/reference supply are fed from VOUT. Near-short VOUT can remove feedback authority; nominal LED current is not established into a short. C6 discharge is a separate transient through the load/sense path.",
+      "status": "Unqualified powered behavior. A qualified responsible operator must define external guarded current/time/energy limits before any short test; no such test is authorized."
+    }
+  ],
+  "fabrication_scope": "A bare unpowered laboratory PCB may be fabricated to enable qualified measurements. This document neither approves a powered fault test nor declares the finished power supply safe or compliant.",
+  "before_powered_fault_tests": "Responsible experienced human must define guarded setup, external protection, instrument voltage ratings, actual test limits and safe fault-insertion procedure.",
+  "C6_discharge_condition": "The 7.94 s / 15.88 s figures are isolated-C6 ideal RC calculations after all replenishment stops. C7 can continue feeding U1 after AC removal; these are not complete-board maximum discharge or safe-handling delays. Actual input/output voltages must be verified in a qualified setup."
+}

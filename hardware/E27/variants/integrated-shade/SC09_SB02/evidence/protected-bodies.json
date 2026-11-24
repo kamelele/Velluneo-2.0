@@ -1,0 +1,110 @@
+{
+  "checker": "SC09-SB02 fixed protected-body copper screen",
+  "checker_sha256": "267fe6eb0e22899e44ffd0d587f3029c44aad86396cd16d584f80dde2bb08880",
+  "graph_geometry_adapter_sha256": "3a4614aa04181efa45b29017311048bda354ea5de94a040068e7b8152b9769c1",
+  "kernel_sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+  "inputs": {
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\SC09_SB02.kicad_pcb": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\new-architecture\\intended-connectivity.SB02-A.json": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\new-architecture\\spacing-matrix.SB02-A.json": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\protected-body-contract.json": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\research\\STPSC2H12-Y.pdf": "1ec37a044c8681f4f2c4c09cb4b17d6c8d8d3c8ea2569b1c053539e051da3cfd"
+  },
+  "limits": [
+    "Engineering projection targets, not measured assembly insulation or manufacturer approval.",
+    "Only exact object identities and fixed masks may be allowed; no whole-net whitelist.",
+    "Every supported native copper pad, track, via and saved zone on selected faces is examined.",
+    "Native graph collector rejects unsupported geometry; source is never saved.",
+    "Circle projections use outward polygons with 0.002 mm conservative radial reserve.",
+    "Schematic/native DRC/parity/spacing and body/pad qualification remain separate."
+  ],
+  "native_identity_stats": {
+    "per_face_objects": {},
+    "different_net_face_pairs": 0,
+    "clipped_piece_pairs": 0,
+    "physical_pin_count": 83,
+    "physical_contact_count": 84,
+    "physical_ref_count": 36
+  },
+  "passed": true,
+  "findings": [],
+  "stats": {
+    "regions": 4,
+    "checked_intersections": 27,
+    "allowed_intersections": 27,
+    "residual_intersections": 0
+  },
+  "protected_regions": [
+    {
+      "id": "C6-body",
+      "source_ref": "C6",
+      "policy": "can_projection",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "allowed_fixed_identities": 7,
+      "region_bbox_mm": [
+        100.95,
+        100.65,
+        111.45,
+        111.15
+      ]
+    },
+    {
+      "id": "C7-body",
+      "source_ref": "C7",
+      "policy": "can_projection",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "allowed_fixed_identities": 6,
+      "region_bbox_mm": [
+        139.997589,
+        121.797589,
+        150.902411,
+        132.702411
+      ]
+    },
+    {
+      "id": "T1-body",
+      "source_ref": "T1",
+      "policy": "magnetic_projection",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "allowed_fixed_identities": 12,
+      "region_bbox_mm": [
+        113.0,
+        102.25,
+        125.5,
+        114.75
+      ]
+    },
+    {
+      "id": "R20-body",
+      "source_ref": "R20",
+      "policy": "high_voltage_resistor_projection",
+      "layers": [
+        "B.Cu"
+      ],
+      "allowed_fixed_identities": 2,
+      "region_bbox_mm": [
+        146.75,
+        112.15,
+        150.05,
+        118.65
+      ]
+    }
+  ],
+  "inputs_after": {
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\SC09_SB02.kicad_pcb": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\new-architecture\\intended-connectivity.SB02-A.json": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\new-architecture\\spacing-matrix.SB02-A.json": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\protected-body-contract.json": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\research\\STPSC2H12-Y.pdf": "1ec37a044c8681f4f2c4c09cb4b17d6c8d8d3c8ea2569b1c053539e051da3cfd"
+  },
+  "input_unchanged": true
+}

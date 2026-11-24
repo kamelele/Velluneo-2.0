@@ -1,0 +1,51 @@
+{
+  "core_manifest_sha256": "286f47ac8239a97d379de4ce4aa3b9d92fe32f6df983ef1b0374216403fe8048",
+  "core_files_verified": 234,
+  "reviews": [
+    {
+      "role": "reality",
+      "actor": "/root/sb02_final_reality_review",
+      "report": "reviews/reality/review.md",
+      "sha256": "8250e72db7bc78806b70b5ab07c24809a180fb411086af8a0b60f6ed659e31bc",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bare unpowered laboratory PCB only; formal and powered gates remain"
+    },
+    {
+      "role": "simplicity",
+      "actor": "/root/sb02_final_simplicity_review",
+      "report": "reviews/simplicity/final-review.md",
+      "sha256": "7cfdf7320ebd2ff5a343fa9215364279d0978c4e439ab522468b34aa483a4721",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bare unpowered laboratory PCB only; formal and powered gates remain"
+    },
+    {
+      "role": "completeness",
+      "actor": "/root/sb02_final_completeness_review",
+      "report": "reviews/completeness/report.md",
+      "sha256": "afabb64c8f934282f5625d25efdba2091d0f7d65f27f35124d1124dc30e3ccf5",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bare unpowered laboratory PCB only; formal and powered gates remain"
+    },
+    {
+      "role": "change",
+      "actor": "/root/sb02_final_change_review",
+      "report": "reviews/change/final-review.md",
+      "sha256": "cbf6d7d67af2e2625f8407cc1052f04a85d3fd15a96657c59836bedb6555b874",
+      "recommendation": "ready_for_human_review",
+      "scope": "Bare unpowered laboratory PCB only; formal and powered gates remain"
+    }
+  ],
+  "human_accepted": false,
+  "order_submitted": false,
+  "full_toolkit_release_passed": false,
+  "explicit_native_ignored_checks": [
+    "track_not_centered_on_via",
+    "tuning_profile_track_geometries"
+  ],
+  "ignored_check_note": "Raw native DRC lists these generated/default ignores; independent centred-via disposition is retained, not all native rule types enabled.",
+  "final_open_process_gates": [
+    "Exact-source connectivity/spatial and stage human acceptances",
+    "Generic downstream inhouse assembly provider qualification"
+  ],
+  "powered_qualification": "Not authorized or measured; guarded test setup and limits remain required."
+}

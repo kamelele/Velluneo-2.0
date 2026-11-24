@@ -1,0 +1,792 @@
+{
+  "revision": "SC09-SB02-A4-READY-TO-BUY sourcing review",
+  "date": "2026-11-24",
+  "actor": "/root/sb02_parts_selected",
+  "scope": "Parts sourcing readiness only: exact selected MPN identity, observed positive stock and pack minima for one-board purchase quantities; NOT PCB fabrication acceptance or powered qualification",
+  "input_bom": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\SB02-metadata\\bom.SB02-A4.json",
+  "input_bom_sha256": "57c6fe5da1bdf9c05428b24b018824fd3319f31de915b327b43637e6d7c784fb",
+  "sources": [
+    {
+      "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\SB02-metadata\\live-offers.root.json",
+      "sha256": "fb0c0be8384278f4be1305499db240fbff7359820fed8c240dc4ced93c3e0c56",
+      "actor": "/root",
+      "method": "Read-only live browser accessibility views, attributed and not independently repeated by child"
+    },
+    {
+      "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\SB02-metadata\\live-offers.additional.root.json",
+      "sha256": "debee9af1fda29f22691cf4a7e8efd22df05146316d1bf14bde3b69ff1dfc344",
+      "actor": "/root",
+      "method": "Read-only live browser accessibility views, attributed and not independently repeated by child"
+    },
+    {
+      "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\SB02-metadata\\MOQ-confirmation.root.json",
+      "sha256": "3727ef7652eb4660b79337f8da5fd56ec8c4f3450e5be917857b399bf9450c30",
+      "actor": "/root",
+      "method": "Read-only live DigiKey PL browser accessibility view of first quantity/unit-price tier, correct exact MPN heading"
+    }
+  ],
+  "preserved_previous_report": {
+    "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\selected-parts-review\\selected-parts.A4-live.json",
+    "sha256": "0203ce51728f9b44c6f1efb92eb078a08dd711dddd2c16ddc4a0e7a6baf42c61",
+    "note": "Historical A4-live report with eight MOQ uncertainties preserved unchanged"
+  },
+  "unique_MPNs": 26,
+  "populated_positions": 30,
+  "live_positive_offer_MPNs": 26,
+  "all_selected_MPNs_have_exact_positive_live_stock_evidence": true,
+  "all_selected_MPNs_have_enough_stock_for_one_board_at_observation": true,
+  "all_fresh_MOQs_confirmed": true,
+  "MPNs_with_fresh_MOQ_not_separately_confirmed": [],
+  "all_live_prices_obtained": false,
+  "MPNs_with_live_price_not_obtained": [
+    "BZX55C15-TAP",
+    "BZX55C6V8-TAP",
+    "MOR01SJ0123A10",
+    "R76QI24705050J",
+    "VOS618A-3T"
+  ],
+  "price_note": "Five TME prices were not obtained. Missing prices are unknown, not zero. No complete basket cost or delivery cost calculated.",
+  "whole_basket_cost_or_shipping_verified": false,
+  "stock_reserved": false,
+  "procurement_findings": [
+    {
+      "id": "PART-A3-01",
+      "status": "CLOSED_FOR_SELECTED_MPN_IDENTITY_IN_A4",
+      "basis": "Parent authorized exact-value manufacturer substitutions and updated canonical A4 BOM; all three invalid/unverified old 2512 FR ordering codes removed. Positive exact supplier offers exist for all replacements. Qualified primary land geometry adopted by coordinator; actual native schematic/PCB MPN and land crosscheck remains a separate CAD acceptance check.",
+      "changes": [
+        {
+          "references": [
+            "R8",
+            "R9"
+          ],
+          "old": "RC2512FR-0768KL",
+          "new": "RC2512FK-0768KL",
+          "basis": "Real Yageo RC2512 FK product code, parent engineering adoption and qualified Yageo RC2512 primary land basis; actual native land crosscheck remains separate."
+        },
+        {
+          "references": [
+            "R13",
+            "R14"
+          ],
+          "old": "RC2512FR-07143KL",
+          "new": "ERJ-1TNF1433U",
+          "basis": "Panasonic-land-basis.json; manufacturer precision datasheet p2/p3/p5, root independently visually confirmed body and land diagram; qualified pads 1.30 x 3.50 mm, 6.30 mm centers. NRND explicitly accepted for laboratory prototype."
+        },
+        {
+          "references": [
+            "R17"
+          ],
+          "old": "RC2512FR-0710KL",
+          "new": "CRCW251210K0FKTG",
+          "basis": "Exact Vishay stocked FKTG variant, parent engineering adoption and qualified CRCW2512 primary land basis shared with R7/R20; actual native crosscheck remains separate."
+        }
+      ]
+    },
+    {
+      "id": "PART-A4-AVAILABILITY",
+      "status": "CLOSED_AT_CURRENT_STOCK_OBSERVATION_LEVEL",
+      "basis": "Both source offer sets together match all26 exact selected MPNs with positive available stock exceeding one-board population on2026-11-23/24. No substitution required beyond already adopted A4 corrections. Pack quantities and final price/shipping remain purchasing checks, not inferred guarantees."
+    },
+    {
+      "id": "PART-A4-PACK-MINIMUM",
+      "status": "CLOSED_FOR_ONE_BOARD_PURCHASE_QUANTITIES",
+      "basis": "Eight remaining current minima confirmed on exact live DigiKey pages24November2026. MOR is MOQ/multiple10, all other25 MPNs MOQ1. One board populates30 parts, purchases39 individual parts before optional spares."
+    }
+  ],
+  "freshness_policy": "All26 exact selected stock offers and pack minima are live parent read-only browser observations on stated dates. U1 stock observed23November2026; other25 stock offers and final eight MOQ checks24November2026. Inventory is not reserved and can change. Five TME live prices and all shipping remain unquoted.",
+  "rejected_UI_observations": "Initial RC0805 TME Check availability buttons opened related tweezers; those dialogs and incomplete loading placeholders are NOT component stock evidence. Selected RC0805 parts were instead verified on exact DigiKey pages.",
+  "items": [
+    {
+      "mpn": "450BXW10MEFR10X16",
+      "quantity": 1,
+      "references": [
+        "C7"
+      ],
+      "offer": {
+        "mpn": "450BXW10MEFR10X16",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/rubycon/450BXW10MEFR10X16/6049847",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 177,
+        "displayed_unit_PLN_without_VAT": 7.58,
+        "displayed_unit_PLN_with_VAT": 9.3234,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "7687709222",
+      "quantity": 1,
+      "references": [
+        "T1"
+      ],
+      "offer": {
+        "mpn": "7687709222",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/w%C3%BCrth-elektronik/7687709222/4156013",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 590,
+        "displayed_unit_PLN_without_VAT": 13.84,
+        "displayed_unit_PLN_with_VAT": 17.0232,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Cut-tape/single-unit offer was separately observed for T1, D1, ERJ143k, R20 and U1; other current excerpts establish displayed unit price and positive stock, with prior MOQ1 evidence kept separately. Reconfirm pack minimum before purchasing.",
+        "MOQ_freshly_confirmed": 1
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "768772332",
+      "quantity": 1,
+      "references": [
+        "L1"
+      ],
+      "offer": {
+        "mpn": "768772332",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/w%C3%BCrth-elektronik/768772332/16910471",
+        "stock_units_observed": 142,
+        "displayed_unit_PLN_without_VAT": 5.75,
+        "displayed_unit_PLN_with_VAT": 7.0725,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "B32671P6154K000",
+      "quantity": 1,
+      "references": [
+        "C4"
+      ],
+      "offer": {
+        "mpn": "B32671P6154K000",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/tdk/B32671P6154K000/3878304",
+        "stock_units_observed": 13275,
+        "displayed_unit_PLN_without_VAT": 4.16,
+        "displayed_unit_PLN_with_VAT": 5.1168,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "B72207S0271K101",
+      "quantity": 1,
+      "references": [
+        "RV1"
+      ],
+      "offer": {
+        "mpn": "B72207S0271K101",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/tdk/B72207S0271K101/593820",
+        "stock_units_observed": 27167,
+        "displayed_unit_PLN_without_VAT": 0.97,
+        "displayed_unit_PLN_with_VAT": 1.1931,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "BZX55C15-TAP",
+      "quantity": 1,
+      "references": [
+        "D2"
+      ],
+      "offer": {
+        "mpn": "BZX55C15-TAP",
+        "supplier": "TME",
+        "url": "https://www.tme.eu/en/details/bzx55c15-tap/tht-zener-diodes/vishay/",
+        "stock_units_observed": 19182,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Product page default quantity and multiple observed; main-product availability dialog exact MPN and Available in TME stock row independently matched.",
+        "price_status": "Current live price not obtained; international page displayed no-prices. Do not treat as zero cost.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "BZX55C6V8-TAP",
+      "quantity": 1,
+      "references": [
+        "D3"
+      ],
+      "offer": {
+        "mpn": "BZX55C6V8-TAP",
+        "supplier": "TME",
+        "url": "https://www.tme.eu/en/details/bzx55c6v8-tap/tht-zener-diodes/vishay/",
+        "stock_units_observed": 8505,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Product page default quantity and multiple observed; main-product availability dialog exact MPN and Available in TME stock row independently matched.",
+        "price_status": "Current live price not obtained; international page displayed no-prices. Do not treat as zero cost.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "CL21B104KBCNNNC",
+      "quantity": 2,
+      "references": [
+        "C5",
+        "C8"
+      ],
+      "offer": {
+        "mpn": "CL21B104KBCNNNC",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/samsung-electro-mechanics/CL21B104KBCNNNC/3886661",
+        "stock_units_observed": 3631349,
+        "displayed_unit_PLN_without_VAT": 0.39,
+        "displayed_unit_PLN_with_VAT": 0.4797,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 2,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "CRCW251210K0FKTG",
+      "quantity": 1,
+      "references": [
+        "R17"
+      ],
+      "offer": {
+        "mpn": "CRCW251210K0FKTG",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/vishay-dale/CRCW251210K0FKTG/18738181",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 2084,
+        "displayed_unit_PLN_without_VAT": 2.06,
+        "displayed_unit_PLN_with_VAT": 2.5338,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "CRCW251218R7FKEG",
+      "quantity": 1,
+      "references": [
+        "R7"
+      ],
+      "offer": {
+        "mpn": "CRCW251218R7FKEG",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/vishay-dale/CRCW251218R7FKEG/1173529",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 1900,
+        "displayed_unit_PLN_without_VAT": 1.09,
+        "displayed_unit_PLN_with_VAT": 1.3407,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "CRCW25121M00FKEG",
+      "quantity": 1,
+      "references": [
+        "R20"
+      ],
+      "offer": {
+        "mpn": "CRCW25121M00FKEG",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/vishay-dale/CRCW25121M00FKEG/1178901",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 111152,
+        "displayed_unit_PLN_without_VAT": 1.09,
+        "displayed_unit_PLN_with_VAT": 1.3407,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Cut-tape/single-unit offer was separately observed for T1, D1, ERJ143k, R20 and U1; other current excerpts establish displayed unit price and positive stock, with prior MOQ1 evidence kept separately. Reconfirm pack minimum before purchasing.",
+        "MOQ_freshly_confirmed": 1
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "DF10S",
+      "quantity": 1,
+      "references": [
+        "BR1"
+      ],
+      "offer": {
+        "mpn": "DF10S",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/onsemi/DF10S/965571",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 43485,
+        "displayed_unit_PLN_without_VAT": 3.97,
+        "displayed_unit_PLN_with_VAT": 4.8831,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "EEU-FS2A680",
+      "quantity": 1,
+      "references": [
+        "C6"
+      ],
+      "offer": {
+        "mpn": "EEU-FS2A680",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/panasonic-industry/EEU-FS2A680/9597031",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 2567,
+        "displayed_unit_PLN_without_VAT": 4.47,
+        "displayed_unit_PLN_with_VAT": 5.4981,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "ERJ-1TNF1433U",
+      "quantity": 2,
+      "references": [
+        "R13",
+        "R14"
+      ],
+      "offer": {
+        "mpn": "ERJ-1TNF1433U",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/panasonic-electronic-components/ERJ-1TNF1433U/956258",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 3051,
+        "displayed_unit_PLN_without_VAT": 3.11,
+        "displayed_unit_PLN_with_VAT": 3.8253,
+        "NRND": true,
+        "stock_reserved": false,
+        "MOQ_note": "Cut-tape/single-unit offer was separately observed for T1, D1, ERJ143k, R20 and U1; other current excerpts establish displayed unit price and positive stock, with prior MOQ1 evidence kept separately. Reconfirm pack minimum before purchasing.",
+        "MOQ_freshly_confirmed": 1
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "NRND": true,
+      "primary_basis": "Panasonic-land-basis.json",
+      "lifecycle_note": "Exact-value laboratory prototype option; not recommended for new production design without further lifecycle review",
+      "purchase_quantity_for_one_board": 2,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "FW20A47R0JA",
+      "quantity": 1,
+      "references": [
+        "RF1"
+      ],
+      "offer": {
+        "mpn": "FW20A47R0JA",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/bourns-inc/FW20A47R0JA/4211449",
+        "stock_units_observed": 1971,
+        "displayed_unit_PLN_without_VAT": 2.29,
+        "displayed_unit_PLN_with_VAT": 2.8167,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "LNK3206P",
+      "quantity": 1,
+      "references": [
+        "U1"
+      ],
+      "offer": {
+        "mpn": "LNK3206P",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/power-integrations/LNK3206P/6558504",
+        "date": "2026-11-23",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 64,
+        "displayed_unit_PLN_without_VAT": 3.81,
+        "displayed_unit_PLN_with_VAT": 4.6863,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Cut-tape/single-unit offer was separately observed for T1, D1, ERJ143k, R20 and U1; other current excerpts establish displayed unit price and positive stock, with prior MOQ1 evidence kept separately. Reconfirm pack minimum before purchasing.",
+        "MOQ_freshly_confirmed": 1
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "MOR01SJ0123A10",
+      "quantity": 1,
+      "references": [
+        "R10"
+      ],
+      "offer": {
+        "mpn": "MOR01SJ0123A10",
+        "supplier": "TME",
+        "url": "https://www.tme.eu/en/details/1w-12k/tht-resistors/royalohm/mor01sj0123a10/",
+        "stock_units_observed": 1410,
+        "MOQ_freshly_confirmed": 10,
+        "MOQ_note": "Product page default quantity and multiple observed; main-product availability dialog exact MPN and Available in TME stock row independently matched.",
+        "price_status": "Current live price not obtained; international page displayed no-prices. Do not treat as zero cost.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 10,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "R76QI24705050J",
+      "quantity": 1,
+      "references": [
+        "C1"
+      ],
+      "offer": {
+        "mpn": "R76QI24705050J",
+        "supplier": "TME",
+        "url": "https://www.tme.eu/en/details/r76qi24705050j/tht-film-capacitors/kemet/",
+        "stock_units_observed": 590,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Product page default quantity and multiple observed; main-product availability dialog exact MPN and Available in TME stock row independently matched.",
+        "price_status": "Current live price not obtained; international page displayed no-prices. Do not treat as zero cost.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "RC0805FR-0710KL",
+      "quantity": 1,
+      "references": [
+        "R15"
+      ],
+      "offer": {
+        "mpn": "RC0805FR-0710KL",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/yageo/RC0805FR-0710KL/727535",
+        "stock_units_observed": 1166151,
+        "displayed_unit_PLN_without_VAT": 0.39,
+        "displayed_unit_PLN_with_VAT": 0.4797,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "RC0805FR-0712KL",
+      "quantity": 1,
+      "references": [
+        "R16"
+      ],
+      "offer": {
+        "mpn": "RC0805FR-0712KL",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/yageo/RC0805FR-0712KL/727568",
+        "stock_units_observed": 131867,
+        "displayed_unit_PLN_without_VAT": 0.39,
+        "displayed_unit_PLN_with_VAT": 0.4797,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "RC0805FR-071KL",
+      "quantity": 1,
+      "references": [
+        "R12"
+      ],
+      "offer": {
+        "mpn": "RC0805FR-071KL",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/yageo/RC0805FR-071KL/727444",
+        "stock_units_observed": 447443,
+        "displayed_unit_PLN_without_VAT": 0.39,
+        "displayed_unit_PLN_with_VAT": 0.4797,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "RC0805FR-072K2L",
+      "quantity": 1,
+      "references": [
+        "R11"
+      ],
+      "offer": {
+        "mpn": "RC0805FR-072K2L",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/yageo/RC0805FR-072K2L/727676",
+        "stock_units_observed": 302429,
+        "displayed_unit_PLN_without_VAT": 0.39,
+        "displayed_unit_PLN_with_VAT": 0.4797,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Quantity1 and first unit-price row observed in live UI.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "RC2512FK-0768KL",
+      "quantity": 2,
+      "references": [
+        "R8",
+        "R9"
+      ],
+      "offer": {
+        "mpn": "RC2512FK-0768KL",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/yageo/RC2512FK-0768KL/5922355",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 9740,
+        "displayed_unit_PLN_without_VAT": 1.44,
+        "displayed_unit_PLN_with_VAT": 1.7712,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 2,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "STPSC2H12B2Y-TR",
+      "quantity": 1,
+      "references": [
+        "D1"
+      ],
+      "offer": {
+        "mpn": "STPSC2H12B2Y-TR",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/stmicroelectronics/STPSC2H12B2Y-TR/11205600",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 13281,
+        "displayed_unit_PLN_without_VAT": 10.96,
+        "displayed_unit_PLN_with_VAT": 13.4808,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Cut-tape/single-unit offer was separately observed for T1, D1, ERJ143k, R20 and U1; other current excerpts establish displayed unit price and positive stock, with prior MOQ1 evidence kept separately. Reconfirm pack minimum before purchasing.",
+        "MOQ_freshly_confirmed": 1
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "TL431BIDBZR",
+      "quantity": 2,
+      "references": [
+        "U2",
+        "U3"
+      ],
+      "offer": {
+        "mpn": "TL431BIDBZR",
+        "supplier": "DigiKey PL",
+        "url": "https://www.digikey.pl/en/products/detail/texas-instruments/TL431BIDBZR/863704",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view, not search cache",
+        "stock_units_observed": 21506,
+        "displayed_unit_PLN_without_VAT": 1.48,
+        "displayed_unit_PLN_with_VAT": 1.8204,
+        "NRND": false,
+        "stock_reserved": false,
+        "MOQ_note": "Exact MPN heading, Bulk or Cut Tape table, first QUANTITY1 row and unit price observed. No Digi-Reel purchase selected.",
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_confirmation_date": "2026-11-24"
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 2,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    },
+    {
+      "mpn": "VOS618A-3T",
+      "quantity": 1,
+      "references": [
+        "U4"
+      ],
+      "offer": {
+        "mpn": "VOS618A-3T",
+        "supplier": "TME",
+        "url": "https://www.tme.eu/en/details/vos618a-3t/optocouplers-analog-output/vishay/",
+        "stock_units_observed": 7819,
+        "MOQ_freshly_confirmed": 1,
+        "MOQ_note": "Product page default quantity and multiple observed; main-product availability dialog exact MPN and Available in TME stock row independently matched.",
+        "price_status": "Current live price not obtained; international page displayed no-prices. Do not treat as zero cost.",
+        "date": "2026-11-24",
+        "method": "Root read-only live browser accessibility view",
+        "stock_reserved": false
+      },
+      "status": "LIVE_POSITIVE_EXACT_SELECTED_STOCK_PARENT_OBSERVED",
+      "freshness_class": "live_parent_browser",
+      "available_for_required_quantity_at_observation": true,
+      "purchase_quantity_for_one_board": 1,
+      "purchase_quantity_note": "MOR MOQ and multiple10; all other parts MOQ1; quantities exclude optional spares"
+    }
+  ],
+  "DNP_not_ordered": [
+    "R18",
+    "R19",
+    "C9",
+    "C10"
+  ],
+  "ports_not_ordered_as_connector_bodies": [
+    "J1",
+    "J2"
+  ],
+  "order_submitted": false,
+  "cart_changed": false,
+  "CAD_changed_by_this_review": false,
+  "canonical_intent": {
+    "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\new-architecture\\intended-connectivity.SB02-A.json",
+    "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+  },
+  "total_individual_parts_to_purchase_excluding_spares": 39,
+  "parts_sourcing_readiness": "READY_AT_OBSERVED_IDENTITY_STOCK_AND_PACK_MINIMUM_LEVEL",
+  "all_purchase_quantities_covered_by_observed_stock": true
+}

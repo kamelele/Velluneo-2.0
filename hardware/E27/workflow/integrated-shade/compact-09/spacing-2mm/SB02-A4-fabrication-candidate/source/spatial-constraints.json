@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "revision": "SC09-SB02-A4-SP03-quiet-routing-expansion",
+  "basis": "Independent additional2mm bottom-strip expansion to51.2x39.5mm after actual zero-unconnected quiet-routing trial07 with dedicated R7.2 star. Numeric2/.3mm targets unchanged. Both33mm and37.5mm checkpoints preserved; no global infeasibility claim or exact-source human acceptance.",
+  "basis_sources": [
+    {
+      "path": "design-authorization.json",
+      "sha256": "c3a46cd602bd5078d0e32dc858411d113ff77e522405a059cf7cd635840ea5cc"
+    }
+  ],
+  "outline_mm": [
+    100,
+    100,
+    151.2,
+    139.5
+  ],
+  "areas": [],
+  "blocks": [
+    {
+      "id": "BUCK_CC_OVP",
+      "requirement_id": "SB02_ROUTING",
+      "basis": "PI LinkSwitch-TN2 high-side buck and layout guidance; TI SLYP762 switched-current and Kelvin routing principles.",
+      "sensitive_nets": {
+        "objects": [
+          "U1.1",
+          "U1.2",
+          "C5",
+          "U4.3",
+          "R7",
+          "R17",
+          "U2.2",
+          "U3.2"
+        ],
+        "rationale": "Keep BP/FB local to U1 and quiet references away from SW and coil projections; all remain mains referenced."
+      },
+      "switching_nodes": {
+        "objects": [
+          "/SW",
+          "U1.5",
+          "U1.6",
+          "U1.7",
+          "U1.8",
+          "D1.K",
+          "T1.2"
+        ],
+        "rationale": "Minimize the commutating copper envelope; the mandatory DPAK cathode tab is included, not omitted."
+      },
+      "return_paths": {
+        "objects": [
+          "/DC_RETURN",
+          "D1.A",
+          "C4.2",
+          "C6.2",
+          "R7.2",
+          "U2.3",
+          "U3.3"
+        ],
+        "rationale": "Separate force return from current-reference Kelvin branch; no switch-current flow in the reference spur."
+      },
+      "loops": {
+        "objects": [
+          "C4.1",
+          "U1.4",
+          "U1.5",
+          "D1.K",
+          "D1.A",
+          "C4.2",
+          "T1",
+          "C6"
+        ],
+        "rationale": "Keep the input commutation loop compact, then the output/freewheel loop. Review actual routed geometry, not only DRC."
+      },
+      "kelvin_connections": {
+        "objects": [
+          "R7.1",
+          "R17.1",
+          "R7.2",
+          "U2.3"
+        ],
+        "rationale": "Separate sense pickup at the resistor lands from LED and power-return force routes."
+      }
+    }
+  ],
+  "approval_pending": true,
+  "not_automated_by_empty_areas": "Empty fixed-area inventory does not assert that under-coil sensitive routes or under-can copper are acceptable. Those manufacturer/assembly restrictions must be checked separately against final placement."
+}

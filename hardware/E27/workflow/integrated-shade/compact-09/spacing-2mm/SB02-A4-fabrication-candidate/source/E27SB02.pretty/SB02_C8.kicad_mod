@@ -1,0 +1,167 @@
+(footprint "SB02_C8"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Samsung CL21B104KBCNNNC official part specsheet38pages p33;2012\\u00b1.10 row visually verified | a=.84,b=.93,c=1.30mm;centerpitch1.77 outerspan2.70 within primaryrecommended2.55\\u20132.85; mountedmanualprocessqualificationnotclaimed")
+	(property "Reference" "REF**"
+		(at 0 -2.175 0)
+		(layer "F.Fab")
+		(uuid "c6355c2b-8ad5-40e5-9ec6-cf44765c31c2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "100n / 50V"
+		(at 0 2.175 0)
+		(layer "F.Fab")
+		(uuid "75470e7f-c6b5-4b15-b6c0-efe759b5a95e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6a8e63f4-5ffc-48f3-a4f8-99c44ab7b2f1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f3119c94-44d2-42b3-8319-b5e22c5f7ad6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "CL21B104KBCNNNC"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "916d22af-bfa6-4c52-8349-6424f5bb465d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.85 -1.175)
+		(end 1.85 -1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "20409c20-513c-492e-9146-faeab8571ecf")
+	)
+	(fp_line
+		(start -1.85 1.175)
+		(end -1.85 -1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "0a04a0f0-67c5-46f2-a605-5e486afb4798")
+	)
+	(fp_line
+		(start 1.85 -1.175)
+		(end 1.85 1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "4245b870-7023-42cc-80f6-869426b1bde8")
+	)
+	(fp_line
+		(start 1.85 1.175)
+		(end -1.85 1.175)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "88f4786d-3443-49fc-a672-48890eeefaa2")
+	)
+	(fp_line
+		(start -1.05 -0.675)
+		(end 1.05 -0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "17da02ab-0396-431f-977c-33aefb9ae312")
+	)
+	(fp_line
+		(start -1.05 0.675)
+		(end -1.05 -0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "accd27df-4d06-4640-a7df-8d318e1a44f3")
+	)
+	(fp_line
+		(start 1.05 -0.675)
+		(end 1.05 0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "0cf3892b-ec62-4d96-b29e-0bb8f53ca113")
+	)
+	(fp_line
+		(start 1.05 0.675)
+		(end -1.05 0.675)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "fff8582a-7d1b-436b-aceb-c941e7b234d1")
+	)
+	(pad "1" smd rect
+		(at -0.885 0)
+		(size 0.93 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "78160082-7483-48c1-aec4-df048d306a4d")
+	)
+	(pad "2" smd rect
+		(at 0.885 0)
+		(size 0.93 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "dcaeefe0-0fa2-405b-b7d5-785f8d4a0460")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/C8_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

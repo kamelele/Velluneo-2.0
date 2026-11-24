@@ -1,0 +1,160 @@
+(footprint "SB02_J1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Two inline bare wire lands, pitch5.5mm; manual fixture and wire support required.")
+	(property "Reference" "REF**"
+		(at 3 0 0)
+		(layer "F.Fab")
+		(uuid "e242b4db-5c9a-4742-aac7-af1e1beac6a7")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "230 VAC INPUT"
+		(at -3 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "08fd3079-7f37-48d7-9ce2-097ead27f4c0")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6dc3d138-7cc5-4835-9db0-519a8353941e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8cd5318a-06eb-44cb-b9c6-28bd084862d4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "Wire solder connection; no supplied connector"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f2b88ecd-3d52-47f4-b16b-22d64f05f987")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.25 -1.5)
+		(end 1.25 -1.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9b29897f-9b93-43bd-aabc-189d0442d153")
+	)
+	(fp_line
+		(start -1.25 1.5)
+		(end -1.25 -1.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "dee155f1-5a68-4637-af50-6fac20bf839d")
+	)
+	(fp_line
+		(start -1.25 4)
+		(end 1.25 4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "f5aee32c-f05e-4d8c-a402-3bbe061135c0")
+	)
+	(fp_line
+		(start -1.25 7)
+		(end -1.25 4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "19a784d1-e0a8-4011-a569-8015177bbaa3")
+	)
+	(fp_line
+		(start 1.25 -1.5)
+		(end 1.25 1.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "afa4c4ef-ea86-464c-9c40-41b89bfcd569")
+	)
+	(fp_line
+		(start 1.25 1.5)
+		(end -1.25 1.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "0cf93397-2e47-4ff2-95dd-389ea86b0195")
+	)
+	(fp_line
+		(start 1.25 4)
+		(end 1.25 7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "1bbe8212-84f3-447d-bd08-bb106a3991db")
+	)
+	(fp_line
+		(start 1.25 7)
+		(end -1.25 7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "00357aa0-ceb5-464d-9465-7e633bb2f925")
+	)
+	(pad "1" smd roundrect
+		(at 0 0)
+		(size 2 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "7b8342f1-eb98-41f4-94c7-f06c5eba0ff6")
+	)
+	(pad "2" smd roundrect
+		(at 0 5.5)
+		(size 2 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "4aef9644-8d97-47d8-bd4d-b16911846627")
+	)
+	(embedded_fonts no)
+)

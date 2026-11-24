@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "name": "SC09_SB02",
+  "kicad_version": "10.0.6",
+  "fabrication": {
+    "vendor": "jlcpcb",
+    "service": "FR4-2L-1oz-routed",
+    "stackup": "FR4,2layers,1.6mm",
+    "copper": "1oz",
+    "finish": "leadfreeHASL",
+    "confirmation_evidence": "owner-process-line-decision.json"
+  },
+  "assembly": {
+    "mode": "inhouse",
+    "confirmation_evidence": "owner-process-line-decision.json",
+    "local_pcba_provider_confirmation": null,
+    "stencil": "not_requested",
+    "scope_note": "Manual laboratory assembly is downstream of this bare-PCB fabrication packet. No stencil order, local PCBA line capability, reflow or powered-test qualification is claimed. The generic pinned inhouse profile remains provisional."
+  },
+  "product": {
+    "requirements_file": "requirements.json",
+    "connectivity_file": "intended-connectivity.toolkit.json",
+    "spatial_file": "spatial-constraints.json",
+    "domains": [
+      {
+        "id": "MAINS_REFERENCED",
+        "nets": [
+          "AC_FUSED",
+          "AC_L",
+          "AC_N",
+          "BP",
+          "BUS_FILTERED",
+          "BUS_RECT",
+          "CC_COMP",
+          "CC_REF",
+          "DC_RETURN",
+          "FB",
+          "K_CTL",
+          "LED_RETURN",
+          "OPTO_A",
+          "OPTO_COLLECTOR",
+          "OVP_COMP",
+          "OVP_MID",
+          "OVP_REF",
+          "SW",
+          "VBIAS",
+          "VOUT"
+        ],
+        "no_SELV": true
+      }
+    ],
+    "requirements": [],
+    "minimums_mm": {
+      "clearance": 0.3,
+      "track_width": 0.3,
+      "hole_size": 0.3,
+      "annular_width": 0.2,
+      "edge_clearance": 1.0
+    },
+    "special_requirements": [
+      "Experimental nonisolated laboratory PCB only",
+      "Independent complete 190-pair saved-copper matrix; actual 2mm HV spacing",
+      "No inherited approval, powered qualification, surge or product compliance"
+    ],
+    "barriers": [],
+    "standards_review_evidence": "prototype-powered-gates.json"
+  },
+  "netclasses": [
+    {
+      "name": "POWER",
+      "nets": [
+        "/AC_FUSED",
+        "/AC_L",
+        "/AC_N",
+        "/BP",
+        "/BUS_FILTERED",
+        "/BUS_RECT",
+        "/CC_COMP",
+        "/CC_REF",
+        "/DC_RETURN",
+        "/FB",
+        "/K_CTL",
+        "/LED_RETURN",
+        "/OPTO_A",
+        "/OPTO_COLLECTOR",
+        "/OVP_COMP",
+        "/OVP_MID",
+        "/OVP_REF",
+        "/SW",
+        "/VBIAS",
+        "/VOUT"
+      ],
+      "clearance": 0.3,
+      "track_width": 0.3
+    }
+  ],
+  "source_files": [
+    ".electronics-rules/placement-input.json",
+    ".electronics-rules/routing-input.json",
+    "AGENTS.md",
+    "E27SB02.kicad_sym",
+    "E27SB02.pretty/SB02_BR1.kicad_mod",
+    "E27SB02.pretty/SB02_C1.kicad_mod",
+    "E27SB02.pretty/SB02_C10.kicad_mod",
+    "E27SB02.pretty/SB02_C4.kicad_mod",
+    "E27SB02.pretty/SB02_C5.kicad_mod",
+    "E27SB02.pretty/SB02_C6.kicad_mod",
+    "E27SB02.pretty/SB02_C7.kicad_mod",
+    "E27SB02.pretty/SB02_C8.kicad_mod",
+    "E27SB02.pretty/SB02_C9.kicad_mod",
+    "E27SB02.pretty/SB02_D1.kicad_mod",
+    "E27SB02.pretty/SB02_D2.kicad_mod",
+    "E27SB02.pretty/SB02_D3.kicad_mod",
+    "E27SB02.pretty/SB02_J1.kicad_mod",
+    "E27SB02.pretty/SB02_J2.kicad_mod",
+    "E27SB02.pretty/SB02_L1.kicad_mod",
+    "E27SB02.pretty/SB02_R10.kicad_mod",
+    "E27SB02.pretty/SB02_R11.kicad_mod",
+    "E27SB02.pretty/SB02_R12.kicad_mod",
+    "E27SB02.pretty/SB02_R13.kicad_mod",
+    "E27SB02.pretty/SB02_R14.kicad_mod",
+    "E27SB02.pretty/SB02_R15.kicad_mod",
+    "E27SB02.pretty/SB02_R16.kicad_mod",
+    "E27SB02.pretty/SB02_R17.kicad_mod",
+    "E27SB02.pretty/SB02_R18.kicad_mod",
+    "E27SB02.pretty/SB02_R19.kicad_mod",
+    "E27SB02.pretty/SB02_R20.kicad_mod",
+    "E27SB02.pretty/SB02_R7.kicad_mod",
+    "E27SB02.pretty/SB02_R8.kicad_mod",
+    "E27SB02.pretty/SB02_R9.kicad_mod",
+    "E27SB02.pretty/SB02_RF1.kicad_mod",
+    "E27SB02.pretty/SB02_RV1.kicad_mod",
+    "E27SB02.pretty/SB02_T1.kicad_mod",
+    "E27SB02.pretty/SB02_U1.kicad_mod",
+    "E27SB02.pretty/SB02_U2.kicad_mod",
+    "E27SB02.pretty/SB02_U3.kicad_mod",
+    "E27SB02.pretty/SB02_U4.kicad_mod",
+    "MOQ-confirmation.root.json",
+    "Models/envelopes/BR1_maximum_envelope.wrl",
+    "Models/envelopes/C1_maximum_envelope.wrl",
+    "Models/envelopes/C4_maximum_envelope.wrl",
+    "Models/envelopes/C5_maximum_envelope.wrl",
+    "Models/envelopes/C6_maximum_envelope.wrl",
+    "Models/envelopes/C7_maximum_envelope.wrl",
+    "Models/envelopes/C8_maximum_envelope.wrl",
+    "Models/envelopes/D1_maximum_envelope.wrl",
+    "Models/envelopes/D2_maximum_envelope.wrl",
+    "Models/envelopes/D3_maximum_envelope.wrl",
+    "Models/envelopes/L1_maximum_envelope.wrl",
+    "Models/envelopes/R10_maximum_envelope.wrl",
+    "Models/envelopes/R11_maximum_envelope.wrl",
+    "Models/envelopes/R12_maximum_envelope.wrl",
+    "Models/envelopes/R13_maximum_envelope.wrl",
+    "Models/envelopes/R14_maximum_envelope.wrl",
+    "Models/envelopes/R15_maximum_envelope.wrl",
+    "Models/envelopes/R16_maximum_envelope.wrl",
+    "Models/envelopes/R17_maximum_envelope.wrl",
+    "Models/envelopes/R20_maximum_envelope.wrl",
+    "Models/envelopes/R7_maximum_envelope.wrl",
+    "Models/envelopes/R8_maximum_envelope.wrl",
+    "Models/envelopes/R9_maximum_envelope.wrl",
+    "Models/envelopes/RF1_maximum_envelope.wrl",
+    "Models/envelopes/RV1_maximum_envelope.wrl",
+    "Models/envelopes/T1_maximum_envelope.wrl",
+    "Models/envelopes/U1_maximum_envelope.wrl",
+    "Models/envelopes/U2_maximum_envelope.wrl",
+    "Models/envelopes/U3_maximum_envelope.wrl",
+    "Models/envelopes/U4_maximum_envelope.wrl",
+    "Models/envelopes/geometry-provenance.json",
+    "Models/envelopes/native-attachment-provenance.json",
+    "SC09_SB02.kicad_dru",
+    "SC09_SB02.kicad_pcb",
+    "SC09_SB02.kicad_pro",
+    "SC09_SB02.kicad_sch",
+    "assembly-geometry-notes.A4.json",
+    "bom.SB02-A4.json",
+    "capture-record.json",
+    "configuration-conflict-resolution.json",
+    "design-authorization.json",
+    "evidence/DRC.json",
+    "evidence/ERC.json",
+    "evidence/coordinator-technical-review.json",
+    "evidence/fabrication.json",
+    "evidence/netlist.xml",
+    "evidence/parts.json",
+    "evidence/protected-bodies.json",
+    "evidence/quiet-star-final.json",
+    "evidence/routing-quality-final-disposition.json",
+    "evidence/routing-quality-final.json",
+    "evidence/spacing-graph.json",
+    "fabrication-profile.json",
+    "fault-scope.SB02-A4.json",
+    "fp-lib-table",
+    "intended-connectivity.toolkit.json",
+    "land-contracts.json",
+    "live-offers.additional.root.json",
+    "live-offers.root.json",
+    "new-architecture/calculations.SB02-A4.json",
+    "new-architecture/intended-connectivity.SB02-A.json",
+    "new-architecture/spacing-matrix.SB02-A.json",
+    "owner-process-line-decision.json",
+    "parts/selected-parts.A4-ready-to-buy.json",
+    "parts/selected-parts.A4-ready-to-buy.md",
+    "protected-body-contract.json",
+    "prototype-powered-gates.json",
+    "reference/retained-footprint-geometry.SB01.json",
+    "reference/retained-model-info.SB01.json",
+    "requirements.json",
+    "research/Panasonic-ERJ_precision_Rev08.pdf",
+    "research/STPSC2H12-Y.pdf",
+    "spatial-constraints.json",
+    "sym-lib-table"
+  ],
+  "approvals": {},
+  "waivers": [],
+  "release_files": {
+    "gerbers": [
+      {
+        "path": "release/SC09_SB02_JLCPCB_Gerbers_drills.zip",
+        "sha256": "16bd7eb892a2c286a1f2e2e2054b1ac71db0a54169f316328d470032ec0db897",
+        "snapshot": "68b76376ff75d3e65fda4f599cb34afc154e4beb188fdfbbc3e87fa9dda95485"
+      }
+    ],
+    "drills": [
+      {
+        "path": "release/SC09_SB02_drills.zip",
+        "sha256": "7b87caecb0c99084ecac5fb528f687b15b6312bca1f582850b517b337ce73c44",
+        "snapshot": "68b76376ff75d3e65fda4f599cb34afc154e4beb188fdfbbc3e87fa9dda95485"
+      }
+    ],
+    "bom": [
+      {
+        "path": "release/BOM-native-all-positions.csv",
+        "sha256": "3826c19c697e9ebdd0cd693b5f352a2ac3161ec9c4e48d9a84cad44285f59775",
+        "snapshot": "68b76376ff75d3e65fda4f599cb34afc154e4beb188fdfbbc3e87fa9dda95485"
+      }
+    ],
+    "positions": [
+      {
+        "path": "release/positions-manual-reference.csv",
+        "sha256": "d0da50262448978ec69ee0fb7d5c8e24518ae97783eb9c5704c51cce7113d3a7",
+        "snapshot": "68b76376ff75d3e65fda4f599cb34afc154e4beb188fdfbbc3e87fa9dda95485"
+      }
+    ],
+    "assembly_drawing": [
+      {
+        "path": "release/assembly-both-sides.pdf",
+        "sha256": "2541dd2977d054b92d901a9d8b82b724b83d47e14addad8f28bfe20f4bda7bf9",
+        "snapshot": "68b76376ff75d3e65fda4f599cb34afc154e4beb188fdfbbc3e87fa9dda95485"
+      }
+    ],
+    "bringup_plan": [
+      {
+        "path": "release/bare-PCB-inspection-plan.md",
+        "sha256": "4a514365f8aec1bf8c8f6139d9615a6132881c03a23570f3027f263e6f854340",
+        "snapshot": "68b76376ff75d3e65fda4f599cb34afc154e4beb188fdfbbc3e87fa9dda95485"
+      }
+    ]
+  },
+  "artifacts": {}
+}

@@ -1,0 +1,187 @@
+{
+  "actor": "/root",
+  "scope": "Private SB02 project configuration adoption, authorized design work; not stage approval",
+  "before_sha256": "2f0524eed949872f934876fc32490bf2a01baa7900df3aa7dca3dba9db7a3e51",
+  "after_sha256": "5c1222d3a62205b516fef1937964462db988fa85f7a0956b65062e093d202707",
+  "changes": [
+    {
+      "field": "board/design_settings/rules/min_clearance",
+      "before": 0.0,
+      "after": 0.3,
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rules/min_track_width",
+      "before": 0.2,
+      "after": 0.3,
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rules/min_via_annular_width",
+      "before": 0.1,
+      "after": 0.2,
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rules/min_copper_edge_clearance",
+      "before": 0.5,
+      "after": 1.0,
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/footprint_filters_mismatch",
+      "before": "ignore",
+      "after": "warning",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/footprint_type_mismatch",
+      "before": "ignore",
+      "after": "error",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/hole_to_hole",
+      "before": "warning",
+      "after": "error",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/missing_courtyard",
+      "before": "ignore",
+      "after": "warning",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/npth_inside_courtyard",
+      "before": "error",
+      "after": "warning",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/padstack",
+      "before": "warning",
+      "after": "error",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/pth_inside_courtyard",
+      "before": "error",
+      "after": "warning",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/silk_over_copper",
+      "before": "warning",
+      "after": "error",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "board/design_settings/rule_severities/silk_overlap",
+      "before": "warning",
+      "after": "error",
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "net_settings/classes/@Default/clearance",
+      "before": 0.2,
+      "after": 0.3,
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "net_settings/classes/@Default/track_width",
+      "before": 0.2,
+      "after": 0.3,
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    },
+    {
+      "field": "net_settings/netclass_patterns",
+      "before": [],
+      "after": [
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_FUSED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_L"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/AC_N"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BP"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_FILTERED"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/BUS_RECT"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/CC_COMP"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/CC_REF"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/DC_RETURN"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/FB"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/K_CTL"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/LED_RETURN"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OPTO_A"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OPTO_COLLECTOR"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OVP_COMP"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OVP_MID"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/OVP_REF"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/SW"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/VBIAS"
+        },
+        {
+          "netclass": "POWER",
+          "pattern": "/VOUT"
+        }
+      ],
+      "reason": "Adopt pinned Toolkit profile and retained numeric floors; explicit complete new net assignments. PTH/NPTH-in-courtyard remain visible warnings and unresolved warnings still block this task acceptance. No exclusions removed."
+    }
+  ],
+  "generated_custom_rules_edited": false,
+  "exclusions_cleared": false
+}

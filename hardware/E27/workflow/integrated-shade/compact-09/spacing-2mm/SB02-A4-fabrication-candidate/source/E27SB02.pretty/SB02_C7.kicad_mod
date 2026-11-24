@@ -1,0 +1,113 @@
+(footprint "SB02_C7"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Exact selected10mmcan/5mmpitch; lead-hole and pad are explicit engineering allowances | 1.1mmfinishedhole2.1mmpad; primary lead tolerance review pending; cylinder both-face copper exclusion")
+	(property "Reference" "REF**"
+		(at 0 -6.75 0)
+		(layer "F.Fab")
+		(uuid "ed3c0473-b694-4470-93c3-24eebbe385a5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "10u / 450V"
+		(at 0 6.75 0)
+		(layer "F.Fab")
+		(uuid "6f4a3a53-0208-456e-ba29-250344cc98ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ad53cd1-5a0c-4d05-aaed-27d8ee412058")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5c40e076-07e7-435d-b03c-1afc2cc4793a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "450BXW10MEFR10X16"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b1cf705e-935c-4a23-b143-df56b21ff2f9")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 5.75 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "de1fa4eb-fef4-4040-8b47-8c5d3a647912")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 5.25 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "acc9b68e-bf28-40c9-926b-f68e118f8b70")
+	)
+	(pad "1" thru_hole circle
+		(at -2.5 0)
+		(size 2.1 2.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2b2a4a3f-9af7-4111-8df2-b518596ea87b")
+	)
+	(pad "2" thru_hole circle
+		(at 2.5 0)
+		(size 2.1 2.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6a2ec4ab-b1fd-445a-9515-496d2f802633")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/C7_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

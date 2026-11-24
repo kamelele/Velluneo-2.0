@@ -1,0 +1,179 @@
+(footprint "SB02_U4"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Vishay83465 Rev1.6 p7 recommended footprint visually verified | Pad1.25x.9 derived(7.5outer-5inner)/2; centers6.25;1.27pitch gives.37localgap; body rotated90 from upperleft package view so pin1topleft")
+	(property "Reference" "REF**"
+		(at 0 -2.95 0)
+		(layer "F.Fab")
+		(uuid "a0c1abf6-8653-4e0a-85b1-e1f7e4246f82")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VOS618A-3T"
+		(at 0 2.95 0)
+		(layer "F.Fab")
+		(uuid "c3d0f91d-01ae-453b-800c-4f87303b68e0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed1c5569-ce3c-4eb8-80d1-0719d5a6f35c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "efdbd7dd-8101-488c-921c-a3b90d25deae")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "VOS618A-3T"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3129e992-5d66-46c9-a8ea-883da433e76c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.25 -1.95)
+		(end 4.25 -1.95)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "6b4ee21f-d41f-4b48-bd02-4b08338b4880")
+	)
+	(fp_line
+		(start -4.25 1.95)
+		(end -4.25 -1.95)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "c218233d-9b40-4322-bf57-b019ac9f817c")
+	)
+	(fp_line
+		(start 4.25 -1.95)
+		(end 4.25 1.95)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9ce9665c-254a-4a4d-932f-44a45cbc25b4")
+	)
+	(fp_line
+		(start 4.25 1.95)
+		(end -4.25 1.95)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "8b8b4a6c-fb2e-4c28-aabe-38436016bc06")
+	)
+	(fp_line
+		(start -2.3 -1.45)
+		(end 2.3 -1.45)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "0ff04302-2b5d-48f6-83ad-1b155ef4fb0e")
+	)
+	(fp_line
+		(start -2.3 1.45)
+		(end -2.3 -1.45)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "64ab981b-b1cc-450f-a5dc-7f7db05c480b")
+	)
+	(fp_line
+		(start 2.3 -1.45)
+		(end 2.3 1.45)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "a6975258-7547-4a1a-b442-618b8191c221")
+	)
+	(fp_line
+		(start 2.3 1.45)
+		(end -2.3 1.45)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "9c60278f-4487-4466-afe3-60725da494ee")
+	)
+	(pad "1" smd rect
+		(at -3.125 -0.635)
+		(size 1.25 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8701e8ba-f70d-4489-96c9-8bbeeb88db2f")
+	)
+	(pad "2" smd rect
+		(at -3.125 0.635)
+		(size 1.25 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e909a7fd-3e13-4c9c-b974-ea07cd19d0b1")
+	)
+	(pad "3" smd rect
+		(at 3.125 0.635)
+		(size 1.25 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "84ee40e5-0d36-4895-9231-c99bc480dfec")
+	)
+	(pad "4" smd rect
+		(at 3.125 -0.635)
+		(size 1.25 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7a2975f5-ac88-41a5-a30c-2511404396ff")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/U4_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

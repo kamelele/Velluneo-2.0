@@ -1,0 +1,118 @@
+(footprint "SB02_C1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "KEMET R76QI24705050J P15; maximum body18.5x7.7x13.6mm, lead0.8+/-0.05mm. Engineering finished hole1.1mm/pad2.1mm; inspect formed lead and solder sample.")
+	(property "Reference" "REF**"
+		(at 0 -5 0)
+		(layer "F.Fab")
+		(uuid "30b8be42-94d3-40a7-a1a1-7d9cfae395b8")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "47n / 1000V"
+		(at 0 5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3dee926-7246-4792-8cc1-ff93bb7d2df4")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dcf1e5c5-6c76-4fbd-a30e-0291edc79236")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f8d5cc7b-9a14-4a66-a5ba-435e4fb86edf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "R76QI24705050J"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9dfc3aa0-41fe-4861-919f-df69554355f0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "SC09_compact.kicad_sch")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -9.75 -4.35)
+		(end 9.75 4.35)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "0cb2bf6b-17f1-4d00-b767-fdc2b39a5fd9")
+	)
+	(fp_rect
+		(start -9.25 -3.85)
+		(end 9.25 3.85)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b695b644-9649-44de-9d21-05e59239d1d0")
+	)
+	(pad "1" thru_hole rect
+		(at -7.5 0)
+		(size 2.1 2.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e20d6d7e-2e37-429f-8d9c-c17b24123300")
+	)
+	(pad "2" thru_hole circle
+		(at 7.5 0)
+		(size 2.1 2.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9a75e64c-9b73-4181-932d-4c2275903870")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/C1_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,11 @@
+{
+  "scope": "Coordinator technical review of bare unpowered laboratory PCB; no human acceptance or independent-role recommendation inferred.",
+  "actor": "/root",
+  "board_sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564",
+  "scope_check": "Bare unpowered laboratory PCB, manual assembly, 0-40C. Fault limits and powered gates are explicit source inputs.",
+  "placement_check": "Independent body-contract check passes four protected regions with no residual forbidden intersections. Final native models are engineering maximum-body approximations; no enclosure fit or assembly registration qualification.",
+  "routing_check": "Independent 190-net-pair saved-copper check and graph pass. Dedicated R7 quiet pickup topology checked separately. Routing quality residual flags are centred adjacent bevels with explicit disposition. Geometry does not prove hot stability or EMC.",
+  "parts_check": "Independent actual MPN fields, Value, DNP and literal selected primary lands checked; 30 populated electronic positions, 4 DNP positions and 2 wire solder ports.",
+  "fabrication_check": "Independent Gerber/Excellon comparison checks native saved copper, both D1 cathode contacts, outline, drills and mask processing. Actual exports only, no supplier submission.",
+  "limits": "No measurements, no functional safety claim, no fabricated stage approvals. Four final role reviews are external to technical source inputs to avoid recursive snapshots."
+}

@@ -1,0 +1,1435 @@
+{
+  "tool": "SB02 generic read-only fabrication geometry audit",
+  "checker_sha256": "24c9c09bb82d58baf93eb8a663bdd3c9fa066dfac5aad5d611a46df1ff10fa1b",
+  "formats_sha256": "20691b25d6450321ae84f250cf18a77fd7c25f4daf1430aaa2d011a90edfddaf",
+  "native_kernel_sha256": "8b77118d3bfa321011991b686681548010032b6fcd95b57c87f0765026aa5d7a",
+  "inputs": {
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\SC09_SB02.kicad_pcb": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\fabrication-profile.json": "2891937c6e9d957b02d251f5f8c9a7f2996df961629e685e72f615a88b36defb",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\drill-report.txt": "2f9bb5ed5efcaaf4feb9f90255710c276504edbdede22e03424348be9c8b077b",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-NPTH-drl_map.pdf": "f6736c3ced76253dc7f329e243e3d088b4f3f94f5a1c5c7583b0cec0f395baa3",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-NPTH.drl": "c6283c768d6348f072ed0aad3f1a741690f0a76b304c17ad9d2c4d32f2a7ce96",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-PTH-drl_map.pdf": "74c5af4ff45651434c5baca659eb124b2af8b29c7c6715e77305242f8fb0df48",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-PTH.drl": "848635c69b43caf4838ea6a1876f13a1c4755a275339bb03ca1cb0def376fb96",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-B_Cu.gbl": "f787ef37bc695780b8b423e3091f0e2defe818ccbcefe70b8d2e6dbe557a79dd",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-B_Mask.gbs": "dd5f6ccef85dd01c01a40e6649fdd7d13b3a17bb045657d4b5776120a65e2e01",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-B_Silkscreen.gbo": "2639aa0b5b5dd10a057caa0c9c6e64a94afdfa15819beb883ae52ce874a85f64",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-Edge_Cuts.gm1": "5717cc55e23e8ce48a4e9831e2e3e37742c19e5ec86478fd21765315cee7b43f",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-F_Cu.gtl": "f9546379b41d09f5dad10f15fd4775bdd3f0dedf75ea80d4961f401dce94be41",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-F_Mask.gts": "35cd3f81d1e4a1ec2b25ead3aba5bfac0285e3a6c51f8e11fadfcd0cfb3ba04c",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-F_Silkscreen.gto": "4e2897afee456b6bd9340841e68f6153e4ab6071cd7ad296a27dbf73c24af917",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-job.gbrjob": "3cd5c492d154f8384365db0e1ac4249255fd1d1f1a89e0fd032fd03308628268"
+  },
+  "passed": true,
+  "full_product_release": false,
+  "order_submitted": false,
+  "limits": [
+    "Source-bound geometry comparison is not native ERC/DRC, electrical acceptance, insulation/thermal/EMC qualification or human fabrication approval.",
+    "Copper pad contacts and drill hits are preserved as multisets; duplicate ref/pin identities are never deduplicated.",
+    "Straight tracks, orthogonal circle/rectangle/oval/roundrect pads, through round drills and rectangular outline only; unsupported geometry or commands fail closed.",
+    "Mask/zone polygon comparisons use an explicitly reported source plot-error envelope, not manufacturing spacing credit.",
+    "Silkscreen file metadata/presence are checked; its detailed artwork and text quality remain separate native DRC and visual review.",
+    "No native CAD export/save/refill, gbrjob deletion or modification of input artifacts is performed."
+  ],
+  "outline": {
+    "passed": true,
+    "expected": 4,
+    "actual": 4,
+    "missing": [],
+    "extra": [],
+    "centerline_bounds_mm": [
+      100.0,
+      100.0,
+      151.2,
+      139.5
+    ],
+    "centerline_size_mm": [
+      51.19999999999999,
+      39.5
+    ]
+  },
+  "track_geometry_by_face": {
+    "passed": true,
+    "expected": 223,
+    "actual": 223,
+    "missing": [],
+    "extra": []
+  },
+  "physical_pad_flashes_by_face": {
+    "passed": true,
+    "expected": 111,
+    "actual": 111,
+    "missing": [],
+    "extra": []
+  },
+  "via_flashes_by_face": {
+    "passed": true,
+    "expected": 44,
+    "actual": 44,
+    "missing": [],
+    "extra": []
+  },
+  "physical_contact_inventory": [
+    {
+      "ref": "J1",
+      "pin": "1",
+      "uuid": "911e420d-208e-47cb-a38f-8b9d05181b20",
+      "position_mm": [
+        149.15,
+        118.1
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "J1",
+      "pin": "2",
+      "uuid": "9465fa08-9211-4519-95de-f37f8fce2871",
+      "position_mm": [
+        149.15,
+        112.6
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "R17",
+      "pin": "1",
+      "uuid": "5bcf080c-6850-4939-bd3b-841ec131428e",
+      "position_mm": [
+        109.8,
+        113.5
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "R17",
+      "pin": "2",
+      "uuid": "4d4923d8-6d8d-4a4e-8e1a-2a530244da1f",
+      "position_mm": [
+        109.8,
+        119.7
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "RV1",
+      "pin": "1",
+      "uuid": "e345ebe4-14fc-4633-8f22-4abf72e7d2b5",
+      "position_mm": [
+        148.7,
+        102.55
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "RV1",
+      "pin": "2",
+      "uuid": "5c30ddbe-4396-4ec1-bc03-fe2359ff84f6",
+      "position_mm": [
+        148.7,
+        107.55
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R8",
+      "pin": "1",
+      "uuid": "c02acef1-dca2-40e9-b6b3-52399c3b36f8",
+      "position_mm": [
+        112.25,
+        125.4
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "R8",
+      "pin": "2",
+      "uuid": "9df77996-f5e9-43c3-8c91-af8a3e35f211",
+      "position_mm": [
+        106.05,
+        125.4
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "C1",
+      "pin": "1",
+      "uuid": "dc7a0708-9609-44ad-8663-125a4ac03864",
+      "position_mm": [
+        143.45,
+        104.55
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C1",
+      "pin": "2",
+      "uuid": "83514fcc-8df8-4300-9870-6da513265158",
+      "position_mm": [
+        128.45,
+        104.55
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "T1",
+      "pin": "1",
+      "uuid": "e3a8aa14-1d77-4ed2-9e3a-a2752866643a",
+      "position_mm": [
+        119.25,
+        103.55
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "T1",
+      "pin": "2",
+      "uuid": "4ef2052a-2214-4206-a601-520eb80f5ef2",
+      "position_mm": [
+        119.25,
+        113.45
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "R9",
+      "pin": "1",
+      "uuid": "b6eb8e9c-4a05-4b57-8128-7bd810dd90a4",
+      "position_mm": [
+        116.2,
+        126.3
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "R9",
+      "pin": "2",
+      "uuid": "1f4e6a9a-2ad0-447d-b40e-fed9dbffa0f0",
+      "position_mm": [
+        116.2,
+        120.1
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "1",
+      "uuid": "fe3f476b-1c9b-48ca-9577-cc18a4752fbb",
+      "position_mm": [
+        120.99,
+        125.31
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "2",
+      "uuid": "fe79fab8-46f1-4176-a31c-96f1a58bb325",
+      "position_mm": [
+        123.53,
+        125.31
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "4",
+      "uuid": "966f0654-5c3d-4177-8866-8b6cbee98655",
+      "position_mm": [
+        128.61,
+        125.31
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "5",
+      "uuid": "e3d719f8-88a7-44bd-bd8f-3c39d620659f",
+      "position_mm": [
+        128.61,
+        117.69
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "6",
+      "uuid": "8662261d-2bd0-4ccc-9649-14b79f520a99",
+      "position_mm": [
+        126.07,
+        117.69
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "7",
+      "uuid": "1710dcac-8283-4ec0-9b0b-26ffc5db771a",
+      "position_mm": [
+        123.53,
+        117.69
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "8",
+      "uuid": "c0e63aa7-f3bb-4bcc-91fa-c3a107ce5018",
+      "position_mm": [
+        120.99,
+        117.69
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C7",
+      "pin": "1",
+      "uuid": "27459e30-1dc1-4e2d-a41b-59e4aa5db590",
+      "position_mm": [
+        147.95,
+        127.25
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C7",
+      "pin": "2",
+      "uuid": "0ab1e67a-17a9-4fad-9379-ce611ad5e2f5",
+      "position_mm": [
+        142.95,
+        127.25
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C6",
+      "pin": "1",
+      "uuid": "6a5dca1e-8fa2-4b0b-b429-6d71f60094aa",
+      "position_mm": [
+        103.7,
+        105.9
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C6",
+      "pin": "2",
+      "uuid": "1fddcec7-4bc4-4c36-815e-885ddf60b8fc",
+      "position_mm": [
+        108.7,
+        105.9
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C4",
+      "pin": "1",
+      "uuid": "776248d4-73c6-4aa6-8b3a-682e7e30e30a",
+      "position_mm": [
+        137.8,
+        112.6
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C4",
+      "pin": "2",
+      "uuid": "ab4118dd-4b54-48ff-8620-681263254f86",
+      "position_mm": [
+        127.8,
+        112.6
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R10",
+      "pin": "1",
+      "uuid": "ab5b4a97-c292-493b-9cd7-7e778031d5c4",
+      "position_mm": [
+        126.47,
+        130.6
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R10",
+      "pin": "2",
+      "uuid": "aa247c13-1686-4664-8f09-15b1fdb05d9c",
+      "position_mm": [
+        111.23,
+        130.6
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R7",
+      "pin": "1",
+      "uuid": "fa6ccdba-aa06-4274-ae7b-37dd2e4464fc",
+      "position_mm": [
+        102.8,
+        113.65
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "R7",
+      "pin": "2",
+      "uuid": "5b1cf1cc-1ca0-42f8-8541-0da5414c8fd1",
+      "position_mm": [
+        102.8,
+        119.85
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "RF1",
+      "pin": "1",
+      "uuid": "77189895-b700-415f-9768-15ac16b55df8",
+      "position_mm": [
+        143.35,
+        118.2
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "RF1",
+      "pin": "2",
+      "uuid": "63698466-6a4b-4842-8b22-92071a41478d",
+      "position_mm": [
+        143.35,
+        111.4
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "L1",
+      "pin": "1",
+      "uuid": "637c0b73-c6c5-470e-ae98-6461ec48e577",
+      "position_mm": [
+        134.95,
+        126.8019
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "L1",
+      "pin": "2",
+      "uuid": "fec1eaa2-bb6d-48ad-89ac-3e32e95bf220",
+      "position_mm": [
+        134.95,
+        121.7981
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "J2",
+      "pin": "1",
+      "uuid": "e3958c26-fa00-458a-a035-c0fb853ec142",
+      "position_mm": [
+        102.05,
+        130.449999
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "J2",
+      "pin": "2",
+      "uuid": "bc9669ac-aef0-4c2a-8703-64c5b53f2a52",
+      "position_mm": [
+        102.05,
+        124.949999
+      ],
+      "faces": [
+        "F.Cu"
+      ]
+    },
+    {
+      "ref": "R19",
+      "pin": "1",
+      "uuid": "b18fc915-1215-429a-9c2e-2a906916e896",
+      "position_mm": [
+        114.35,
+        137.0
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R19",
+      "pin": "2",
+      "uuid": "4796b1dd-ae2b-4d26-821e-ee0dbce8f2c8",
+      "position_mm": [
+        116.45,
+        137.0
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "BR1",
+      "pin": "1",
+      "uuid": "31615daf-7a2e-48f0-9708-f3d81efc2e65",
+      "position_mm": [
+        130.65,
+        108.7
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "BR1",
+      "pin": "2",
+      "uuid": "c3bbe7a6-6c21-4712-b7dd-f85ab30c8523",
+      "position_mm": [
+        130.65,
+        103.6
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "BR1",
+      "pin": "3",
+      "uuid": "f10c6e9a-bb89-499c-b572-516cb87d8b0f",
+      "position_mm": [
+        139.55,
+        103.6
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "BR1",
+      "pin": "4",
+      "uuid": "89724eac-7256-4b12-9c84-bcee86274c54",
+      "position_mm": [
+        139.55,
+        108.7
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R11",
+      "pin": "1",
+      "uuid": "c65cf65f-093b-4fdb-b441-fe84102344f4",
+      "position_mm": [
+        109.6,
+        125.05
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R11",
+      "pin": "2",
+      "uuid": "6b00ed3d-c2f6-430f-b417-f7a85fa82a52",
+      "position_mm": [
+        111.7,
+        125.05
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "1",
+      "uuid": "eb24cccc-5672-437d-9ccc-e7a384ad5c63",
+      "position_mm": [
+        118.75,
+        137.85
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "2",
+      "uuid": "cdf9931f-8c1c-43ee-80bd-0936c59cb6e3",
+      "position_mm": [
+        118.75,
+        135.95
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "3",
+      "uuid": "ea3c87fc-acde-4a37-9ef3-a5b2c24c3812",
+      "position_mm": [
+        120.85,
+        136.9
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R13",
+      "pin": "1",
+      "uuid": "0a60b75e-6e5b-4244-abd1-0e171f070f2f",
+      "position_mm": [
+        137.3,
+        130.65
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R13",
+      "pin": "2",
+      "uuid": "f4da4f1a-288e-4611-a25d-fc1b41ecc1dc",
+      "position_mm": [
+        137.3,
+        136.95
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R20",
+      "pin": "1",
+      "uuid": "eaac0a2f-5ac2-4a2b-9c8c-05471327746f",
+      "position_mm": [
+        148.4,
+        112.3
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R20",
+      "pin": "2",
+      "uuid": "3b10dead-365b-4ed2-bb52-530a2e3576d0",
+      "position_mm": [
+        148.4,
+        118.5
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R18",
+      "pin": "1",
+      "uuid": "8f2febef-91ec-4746-bdc4-39c4c7874a20",
+      "position_mm": [
+        115.9,
+        120.25
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R18",
+      "pin": "2",
+      "uuid": "4d87d42c-f850-4370-9467-317d5774fd51",
+      "position_mm": [
+        113.8,
+        120.25
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R15",
+      "pin": "1",
+      "uuid": "7a16a9c9-894c-4dee-9b23-8a3a6ef6b476",
+      "position_mm": [
+        110.15,
+        137.0
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R15",
+      "pin": "2",
+      "uuid": "4a1256c6-6725-4e3e-a2b9-9d197f149053",
+      "position_mm": [
+        112.25,
+        137.0
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pin": "1",
+      "uuid": "b4d61331-54f6-43fc-957c-18e9813e43d3",
+      "position_mm": [
+        115.925,
+        129.885
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pin": "2",
+      "uuid": "da141574-362a-4a9c-ae8d-ee52adb235cb",
+      "position_mm": [
+        115.925,
+        128.615
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pin": "3",
+      "uuid": "4280e2dc-0536-4bf7-875d-10889d5794bc",
+      "position_mm": [
+        122.175,
+        128.615
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U4",
+      "pin": "4",
+      "uuid": "fcea05dc-5a77-4444-9c4c-da09e016240d",
+      "position_mm": [
+        122.175,
+        129.885
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R16",
+      "pin": "1",
+      "uuid": "23203ac8-af1e-4a5b-8d8b-1006aa743a2e",
+      "position_mm": [
+        117.15,
+        125.5
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R16",
+      "pin": "2",
+      "uuid": "8e27c118-bd6f-4abf-a6e3-d3101e7b5339",
+      "position_mm": [
+        119.25,
+        125.5
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C5",
+      "pin": "1",
+      "uuid": "4f04dbb3-36b6-4f28-9189-77983e03f2d4",
+      "position_mm": [
+        121.95,
+        122.035
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C5",
+      "pin": "2",
+      "uuid": "7250450e-b921-4442-9cc7-af8be2dffe15",
+      "position_mm": [
+        121.95,
+        120.265
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "D1",
+      "pin": "A",
+      "uuid": "ba68b41a-357d-4f56-8dc9-9ddf9a2cec46",
+      "position_mm": [
+        124.0375,
+        113.7
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "D1",
+      "pin": "K",
+      "uuid": "46073f8e-ac9c-41ff-ab19-55216bb93413",
+      "position_mm": [
+        121.75,
+        107.175
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "D1",
+      "pin": "K",
+      "uuid": "97e964f1-0b84-424c-b1a0-48d6c86651f9",
+      "position_mm": [
+        119.4625,
+        113.7
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C8",
+      "pin": "1",
+      "uuid": "b313aa81-76a2-4c6c-a0c0-576cf82fabc1",
+      "position_mm": [
+        109.765,
+        127.5
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C8",
+      "pin": "2",
+      "uuid": "aa288a20-9773-4d1d-907f-fbcb073056bd",
+      "position_mm": [
+        111.535,
+        127.5
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R12",
+      "pin": "1",
+      "uuid": "b3a84f1e-da6b-4a4e-bab8-bd665de38ac9",
+      "position_mm": [
+        109.6,
+        122.65
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R12",
+      "pin": "2",
+      "uuid": "44f866ee-cf05-4dc3-aa4c-7e3f8a314ffd",
+      "position_mm": [
+        111.7,
+        122.65
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "D3",
+      "pin": "A",
+      "uuid": "0116aeec-9583-468e-b074-0b0305ea3d16",
+      "position_mm": [
+        106.14,
+        117.45
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "D3",
+      "pin": "K",
+      "uuid": "68d8d95b-3c27-4b62-87ae-5a59270353c3",
+      "position_mm": [
+        113.76,
+        117.45
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R14",
+      "pin": "1",
+      "uuid": "4c5a6858-1a53-41da-a05a-0455200edefd",
+      "position_mm": [
+        131.4,
+        137.45
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "R14",
+      "pin": "2",
+      "uuid": "cda6588e-50f5-4832-9e67-b9e088c6b530",
+      "position_mm": [
+        131.4,
+        131.15
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "D2",
+      "pin": "A",
+      "uuid": "ec40d189-a7f6-415b-99c3-ca69980f35c6",
+      "position_mm": [
+        106.15,
+        121.72
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "D2",
+      "pin": "K",
+      "uuid": "04203a1c-43e6-4596-a50b-bd48109df87f",
+      "position_mm": [
+        106.15,
+        129.34
+      ],
+      "faces": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C10",
+      "pin": "1",
+      "uuid": "cddaf6ce-af40-42d0-9359-4fd279490929",
+      "position_mm": [
+        114.45,
+        134.5
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C10",
+      "pin": "2",
+      "uuid": "4c814e80-51c3-4636-a588-92f975a5fa66",
+      "position_mm": [
+        116.35,
+        134.5
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C9",
+      "pin": "1",
+      "uuid": "0cd88951-0531-40a0-bbe4-6ec4affbe147",
+      "position_mm": [
+        111.6,
+        120.25
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "C9",
+      "pin": "2",
+      "uuid": "ddcbdf76-8026-493a-ba03-c60b396e0997",
+      "position_mm": [
+        109.7,
+        120.25
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "1",
+      "uuid": "1fbe2007-b294-408c-a172-a9b3c5450045",
+      "position_mm": [
+        110.2,
+        112.85
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "2",
+      "uuid": "1efb292b-622f-4d67-b1b6-9c6b68219827",
+      "position_mm": [
+        110.2,
+        114.75
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "3",
+      "uuid": "95ad69f1-b9be-4473-847c-0cbf5fd9791c",
+      "position_mm": [
+        108.1,
+        113.8
+      ],
+      "faces": [
+        "B.Cu"
+      ]
+    }
+  ],
+  "drill_alignment": {
+    "passed": true,
+    "native_holes": 49,
+    "plotted_holes": 49,
+    "missing": [],
+    "extra": [],
+    "per_axis_tolerance_mm": 0.0005,
+    "coordinate_comparison": "Exact Decimal of parsed/native decimal coordinates; unchanged inclusive per-axis tolerance",
+    "maximum_matched_coordinate_error_mm": 0.0005,
+    "tool_inventory": [
+      {
+        "file": "SC09_SB02-NPTH.drl",
+        "tools": {},
+        "hits": 0,
+        "plated": false
+      },
+      {
+        "file": "SC09_SB02-PTH.drl",
+        "tools": {
+          "1": 0.3,
+          "2": 0.86,
+          "3": 1.0,
+          "4": 1.1,
+          "5": 1.2
+        },
+        "hits": 49,
+        "plated": true
+      }
+    ]
+  },
+  "mask_profile": {
+    "F.Mask": {
+      "passed": true,
+      "comparison_envelope_mm": 0.012,
+      "expected_area_mm2": 187.499420205612,
+      "actual_area_mm2": 187.335666890166,
+      "missing_outside_envelope_mm2": 0.0,
+      "extra_outside_envelope_mm2": 0.0,
+      "missing_bbox_mm": null,
+      "extra_bbox_mm": null,
+      "prediction": "KiCad10.0.6 direct openings when min-width zero, otherwise original min-width closing; unchanged numeric envelope",
+      "plotted_primitive_counts": {
+        "flash": 41
+      },
+      "native_mask_min_width_mm": 0.0,
+      "minimum_separate_opening_web_mm": 0.75425,
+      "minimum_web_target_mm": 0.1
+    },
+    "B.Mask": {
+      "passed": true,
+      "comparison_envelope_mm": 0.012,
+      "expected_area_mm2": 195.873898562756,
+      "actual_area_mm2": 195.721526082118,
+      "missing_outside_envelope_mm2": 0.0,
+      "extra_outside_envelope_mm2": 0.0,
+      "missing_bbox_mm": null,
+      "extra_bbox_mm": null,
+      "prediction": "KiCad10.0.6 direct openings when min-width zero, otherwise original min-width closing; unchanged numeric envelope",
+      "plotted_primitive_counts": {
+        "flash": 70
+      },
+      "native_mask_min_width_mm": 0.0,
+      "minimum_separate_opening_web_mm": 0.37,
+      "minimum_web_target_mm": 0.1
+    }
+  },
+  "zone_regions": {
+    "F.Cu": {
+      "passed": true,
+      "comparison_envelope_mm": 0.012,
+      "expected_area_mm2": 0.0,
+      "actual_area_mm2": 0.0,
+      "missing_outside_envelope_mm2": 0.0,
+      "extra_outside_envelope_mm2": 0.0,
+      "missing_bbox_mm": null,
+      "extra_bbox_mm": null
+    },
+    "B.Cu": {
+      "passed": true,
+      "comparison_envelope_mm": 0.012,
+      "expected_area_mm2": 0.0,
+      "actual_area_mm2": 0.0,
+      "missing_outside_envelope_mm2": 0.0,
+      "extra_outside_envelope_mm2": 0.0,
+      "missing_bbox_mm": null,
+      "extra_bbox_mm": null
+    }
+  },
+  "minimum_plotted_copper_edge_mm": 1.049999999999983,
+  "copper_edge_target_mm": 1.0,
+  "fabrication_profile": {
+    "purpose": "Bare laboratory prototype PCB fabrication profile; manual assembly, no supplier order submitted",
+    "service": "JLCPCB FR-4 standard two-layer PCB",
+    "owner_process_decision": "owner-process-line-decision.json",
+    "actual_user_answer": "Tak, prototyp z monta\u017cem r\u0119cznym",
+    "copper_layers": 2,
+    "thickness_mm": 1.6,
+    "copper_oz": 1,
+    "finish": "lead-free HASL",
+    "assembly": "manual laboratory prototype",
+    "minimum_copper_edge_mm": 1.0,
+    "minimum_mask_web_mm": 0.1,
+    "soldermask": "green",
+    "silkscreen": "white",
+    "order_authorized": false,
+    "powered_test_authorized": false,
+    "note": "Process approval does not constitute acceptance of the changed SB02 source or manufacturing packet. Copper and finish are order selections; actual factory processing is not measured by the Gerber audit."
+  },
+  "raw_job_metadata_read_only": [
+    {
+      "file": "SC09_SB02-job.gbrjob",
+      "metadata": {
+        "Header": {
+          "GenerationSoftware": {
+            "Vendor": "KiCad",
+            "Application": "Pcbnew",
+            "Version": "10.0.6"
+          },
+          "CreationDate": "2026-11-24T04:54:32+01:00"
+        },
+        "GeneralSpecs": {
+          "ProjectId": {
+            "Name": "SC09_SB02",
+            "GUID": "53433039-5f53-4423-9032-2e6b69636164",
+            "Revision": "rev?"
+          },
+          "Size": {
+            "X": 51.25,
+            "Y": 39.55
+          },
+          "LayerNumber": 2,
+          "BoardThickness": 1.6,
+          "Finish": "None"
+        },
+        "DesignRules": [
+          {
+            "Layers": "Outer",
+            "PadToPad": 0.3,
+            "PadToTrack": 0.3,
+            "TrackToTrack": 0.3,
+            "MinLineWidth": 0.3
+          }
+        ],
+        "FilesAttributes": [
+          {
+            "Path": "SC09_SB02-F_Cu.gtl",
+            "FileFunction": "Copper,L1,Top",
+            "FilePolarity": "Positive"
+          },
+          {
+            "Path": "SC09_SB02-B_Cu.gbl",
+            "FileFunction": "Copper,L2,Bot",
+            "FilePolarity": "Positive"
+          },
+          {
+            "Path": "SC09_SB02-F_Silkscreen.gto",
+            "FileFunction": "Legend,Top",
+            "FilePolarity": "Positive"
+          },
+          {
+            "Path": "SC09_SB02-B_Silkscreen.gbo",
+            "FileFunction": "Legend,Bot",
+            "FilePolarity": "Positive"
+          },
+          {
+            "Path": "SC09_SB02-F_Mask.gts",
+            "FileFunction": "SolderMask,Top",
+            "FilePolarity": "Negative"
+          },
+          {
+            "Path": "SC09_SB02-B_Mask.gbs",
+            "FileFunction": "SolderMask,Bot",
+            "FilePolarity": "Negative"
+          },
+          {
+            "Path": "SC09_SB02-Edge_Cuts.gm1",
+            "FileFunction": "Profile",
+            "FilePolarity": "Positive"
+          }
+        ],
+        "MaterialStackup": [
+          {
+            "Type": "Legend",
+            "Name": "Top Silk Screen"
+          },
+          {
+            "Type": "SolderPaste",
+            "Name": "Top Solder Paste"
+          },
+          {
+            "Type": "SolderMask",
+            "Thickness": 0.01,
+            "Name": "Top Solder Mask"
+          },
+          {
+            "Type": "Copper",
+            "Thickness": 0.035,
+            "Name": "F.Cu"
+          },
+          {
+            "Type": "Dielectric",
+            "Thickness": 1.51,
+            "Material": "FR4",
+            "Name": "F.Cu/B.Cu",
+            "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+          },
+          {
+            "Type": "Copper",
+            "Thickness": 0.035,
+            "Name": "B.Cu"
+          },
+          {
+            "Type": "SolderMask",
+            "Thickness": 0.01,
+            "Name": "Bottom Solder Mask"
+          },
+          {
+            "Type": "SolderPaste",
+            "Name": "Bottom Solder Paste"
+          },
+          {
+            "Type": "Legend",
+            "Name": "Bottom Silk Screen"
+          }
+        ]
+      }
+    }
+  ],
+  "gerber_layer_inventory": {
+    "B.Cu": {
+      "file": "SC09_SB02-B_Cu.gbl",
+      "metadata": {
+        "GenerationSoftware": "KiCad,Pcbnew,10.0.6",
+        "CreationDate": "2026-11-24T04:54:32+01:00",
+        "ProjectId": "SC09_SB02,53433039-5f53-4423-9032-2e6b69636164,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Copper,L2,Bot",
+        "FilePolarity": "Positive"
+      }
+    },
+    "B.Mask": {
+      "file": "SC09_SB02-B_Mask.gbs",
+      "metadata": {
+        "GenerationSoftware": "KiCad,Pcbnew,10.0.6",
+        "CreationDate": "2026-11-24T04:54:32+01:00",
+        "ProjectId": "SC09_SB02,53433039-5f53-4423-9032-2e6b69636164,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Soldermask,Bot",
+        "FilePolarity": "Negative"
+      }
+    },
+    "B.Silkscreen": {
+      "file": "SC09_SB02-B_Silkscreen.gbo",
+      "metadata": {
+        "GenerationSoftware": "KiCad,Pcbnew,10.0.6",
+        "CreationDate": "2026-11-24T04:54:32+01:00",
+        "ProjectId": "SC09_SB02,53433039-5f53-4423-9032-2e6b69636164,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Legend,Bot",
+        "FilePolarity": "Positive"
+      }
+    },
+    "Edge.Cuts": {
+      "file": "SC09_SB02-Edge_Cuts.gm1",
+      "metadata": {
+        "GenerationSoftware": "KiCad,Pcbnew,10.0.6",
+        "CreationDate": "2026-11-24T04:54:32+01:00",
+        "ProjectId": "SC09_SB02,53433039-5f53-4423-9032-2e6b69636164,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Profile,NP"
+      }
+    },
+    "F.Cu": {
+      "file": "SC09_SB02-F_Cu.gtl",
+      "metadata": {
+        "GenerationSoftware": "KiCad,Pcbnew,10.0.6",
+        "CreationDate": "2026-11-24T04:54:32+01:00",
+        "ProjectId": "SC09_SB02,53433039-5f53-4423-9032-2e6b69636164,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Copper,L1,Top",
+        "FilePolarity": "Positive"
+      }
+    },
+    "F.Mask": {
+      "file": "SC09_SB02-F_Mask.gts",
+      "metadata": {
+        "GenerationSoftware": "KiCad,Pcbnew,10.0.6",
+        "CreationDate": "2026-11-24T04:54:32+01:00",
+        "ProjectId": "SC09_SB02,53433039-5f53-4423-9032-2e6b69636164,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Soldermask,Top",
+        "FilePolarity": "Negative"
+      }
+    },
+    "F.Silkscreen": {
+      "file": "SC09_SB02-F_Silkscreen.gto",
+      "metadata": {
+        "GenerationSoftware": "KiCad,Pcbnew,10.0.6",
+        "CreationDate": "2026-11-24T04:54:32+01:00",
+        "ProjectId": "SC09_SB02,53433039-5f53-4423-9032-2e6b69636164,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Legend,Top",
+        "FilePolarity": "Positive"
+      }
+    }
+  },
+  "findings": [],
+  "inputs_after": {
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\SC09_SB02.kicad_pcb": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-source-v2\\fabrication-profile.json": "2891937c6e9d957b02d251f5f8c9a7f2996df961629e685e72f615a88b36defb",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\drill-report.txt": "2f9bb5ed5efcaaf4feb9f90255710c276504edbdede22e03424348be9c8b077b",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-NPTH-drl_map.pdf": "f6736c3ced76253dc7f329e243e3d088b4f3f94f5a1c5c7583b0cec0f395baa3",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-NPTH.drl": "c6283c768d6348f072ed0aad3f1a741690f0a76b304c17ad9d2c4d32f2a7ce96",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-PTH-drl_map.pdf": "74c5af4ff45651434c5baca659eb124b2af8b29c7c6715e77305242f8fb0df48",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\drills\\SC09_SB02-PTH.drl": "848635c69b43caf4838ea6a1876f13a1c4755a275339bb03ca1cb0def376fb96",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-B_Cu.gbl": "f787ef37bc695780b8b423e3091f0e2defe818ccbcefe70b8d2e6dbe557a79dd",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-B_Mask.gbs": "dd5f6ccef85dd01c01a40e6649fdd7d13b3a17bb045657d4b5776120a65e2e01",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-B_Silkscreen.gbo": "2639aa0b5b5dd10a057caa0c9c6e64a94afdfa15819beb883ae52ce874a85f64",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-Edge_Cuts.gm1": "5717cc55e23e8ce48a4e9831e2e3e37742c19e5ec86478fd21765315cee7b43f",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-F_Cu.gtl": "f9546379b41d09f5dad10f15fd4775bdd3f0dedf75ea80d4961f401dce94be41",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-F_Mask.gts": "35cd3f81d1e4a1ec2b25ead3aba5bfac0285e3a6c51f8e11fadfcd0cfb3ba04c",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-F_Silkscreen.gto": "4e2897afee456b6bd9340841e68f6153e4ab6071cd7ad296a27dbf73c24af917",
+    "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-spacing23\\final-export-v2\\gerbers\\SC09_SB02-job.gbrjob": "3cd5c492d154f8384365db0e1ac4249255fd1d1f1a89e0fd032fd03308628268"
+  },
+  "input_unchanged": true,
+  "artifact_inventory_unchanged": true
+}

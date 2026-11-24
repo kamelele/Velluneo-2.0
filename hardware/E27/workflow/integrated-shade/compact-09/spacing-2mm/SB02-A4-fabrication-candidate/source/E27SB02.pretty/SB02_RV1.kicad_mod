@@ -1,0 +1,118 @@
+(footprint "SB02_RV1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "TDK B72207S0271K101 S07K275 straight P5 leads; body rotated in plan to4.4x9mm maximum,11mm height. Nonpolar project terminal1 AC_FUSED terminal2 AC_N.")
+	(property "Reference" "REF**"
+		(at 0 -5 0)
+		(layer "F.Fab")
+		(uuid "d6f860ea-9694-4c89-8ed2-8ac0b5b633fa")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "275 VAC MOV"
+		(at 0 5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "17864edb-433d-465d-90fd-044736805a90")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ad591332-22d5-413a-8415-e486d72714d5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "940bd908-2c6c-4246-9963-7cdf42bcfb0c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "B72207S0271K101"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "ebc4e8a1-d3fe-4468-9b6e-59ee99e40661")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "SC09_compact.kicad_sch")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -2.7 -5)
+		(end 2.7 5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "3ab209d8-0b2d-4915-9afa-9e676aba89b0")
+	)
+	(fp_rect
+		(start -2.2 -4.5)
+		(end 2.2 4.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b12df5d1-a703-4002-9c3f-bc88cebc0de4")
+	)
+	(pad "1" thru_hole rect
+		(at 0 -2.5)
+		(size 2.1 2.1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1558784d-db42-4147-9bf2-f951eb3556db")
+	)
+	(pad "2" thru_hole circle
+		(at 0 2.5)
+		(size 2.1 2.1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "74c09e99-d8cf-42e5-aa59-d2a432088f1d")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/RV1_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

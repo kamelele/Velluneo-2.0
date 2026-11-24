@@ -1,0 +1,167 @@
+(footprint "SB02_R20"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Vishay CRCW25121M00FKEG primary20035p1 500VAC/DCworking1W;reflowp11G4.75Y1.45X3.50Z7.65 | 1M1%100ppm/K. Noothercopperunderbody;500Vend-to-endratingisnotambientbodyinsulationrating. Nooutlineexpansion.")
+	(property "Reference" "REF**"
+		(at 0 -3.25 0)
+		(layer "F.Fab")
+		(uuid "352ce85b-c2e4-433b-83f7-37658b4c9f77")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "1M / 1W / 500V"
+		(at 0 3.25 0)
+		(layer "F.Fab")
+		(uuid "4475dea3-0c98-47d1-ae7b-89bc26b0322e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "21b0c300-762b-43e7-ac80-76a3f8194fce")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "04393ad6-1ead-411b-8aa3-76fb66880e2c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "CRCW25121M00FKEG"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d6a5375a-7c6c-4190-aaf3-a3bf5149b1b3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.325 -2.25)
+		(end 4.325 -2.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "d3950041-92e4-4536-940d-a7c77edbb183")
+	)
+	(fp_line
+		(start -4.325 2.25)
+		(end -4.325 -2.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "c8d1c698-0bc4-4cf1-8dfe-811fdbc9c6b7")
+	)
+	(fp_line
+		(start 4.325 -2.25)
+		(end 4.325 2.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "fc0e268d-cc09-4915-a76e-115b25698e87")
+	)
+	(fp_line
+		(start 4.325 2.25)
+		(end -4.325 2.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "6879a966-f76f-4bd1-9998-c506bf3fabb5")
+	)
+	(fp_line
+		(start -3.25 -1.65)
+		(end 3.25 -1.65)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "8dec24eb-10a6-4d74-b9a8-d5bb1d2016dc")
+	)
+	(fp_line
+		(start -3.25 1.65)
+		(end -3.25 -1.65)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "37adbf68-4156-418d-b69e-9178ff7069d5")
+	)
+	(fp_line
+		(start 3.25 -1.65)
+		(end 3.25 1.65)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "51fd017c-9ae8-40bc-a77e-01eb3c626d23")
+	)
+	(fp_line
+		(start 3.25 1.65)
+		(end -3.25 1.65)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "e4647401-f724-470b-a258-d11fc4f86cee")
+	)
+	(pad "1" smd rect
+		(at -3.1 0)
+		(size 1.45 3.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2b39f1b4-390e-4146-83c2-fae89d7a0872")
+	)
+	(pad "2" smd rect
+		(at 3.1 0)
+		(size 1.45 3.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "214f3040-459e-4846-a2e7-b5d6c414f1f1")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/envelopes/R20_maximum_envelope.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

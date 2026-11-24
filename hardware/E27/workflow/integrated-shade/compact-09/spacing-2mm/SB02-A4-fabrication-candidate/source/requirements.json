@@ -1,0 +1,623 @@
+{
+  "schema_version": 1,
+  "product": "Velluneo_SC09_SB02_bare_laboratory_PCB",
+  "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+  "subsystems": [
+    {
+      "id": "DRIVER",
+      "kind": "pcb",
+      "owner": "Kamil / Codex implementation"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "SB02_SCOPE",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Bare unpowered laboratory PCB; manual assembly, 0\u201340\u00b0C, no product compliance or energization approval.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Bare unpowered laboratory PCB; manual assembly, 0\u201340\u00b0C, no product compliance or energization approval.",
+      "gate": "specification",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_SCOPE",
+          "path": "SC09_SB02.kicad_pcb"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_SCOPE"
+      ]
+    },
+    {
+      "id": "SB02_GRAPH",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Exactly 36 components, 83 electrical pins and 84 copper contacts match independent intent; include all DNP positions and both D1 cathode contacts.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Exactly 36 components, 83 electrical pins and 84 copper contacts match independent intent; include all DNP positions and both D1 cathode contacts.",
+      "gate": "schematic",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_GRAPH",
+          "path": "SC09_SB02.kicad_sch"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_GRAPH"
+      ]
+    },
+    {
+      "id": "SB02_ERC",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Fresh native KiCad ERC has no errors or unreviewed warnings; physical pin types and power flags have truthful sources.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Fresh native KiCad ERC has no errors or unreviewed warnings; physical pin types and power flags have truthful sources.",
+      "gate": "schematic",
+      "method": "ERC",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_ERC",
+          "path": "SC09_SB02.kicad_sch"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_ERC"
+      ]
+    },
+    {
+      "id": "SB02_PARTS",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Exact selected manufacturers, pinmaps, polarity, lands, holes and package heights have documented primary or engineering basis.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Exact selected manufacturers, pinmaps, polarity, lands, holes and package heights have documented primary or engineering basis.",
+      "gate": "schematic",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_PARTS",
+          "path": "SC09_SB02.kicad_sch"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_PARTS"
+      ]
+    },
+    {
+      "id": "SB02_PLACEMENT",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "51.2 x 39.5 mm bare laboratory PCB; 22.4 mm planning envelope from 18.0 mm C7 front + 2.6 mm BR1 rear + 1.6 mm PCB with 0.16 mm positive thickness allowance. AC and LED wire ports are on opposite edges. Check body collisions, capacitor vent reserve, protected projections and manual assembly access. Original 33 mm and 37.5 mm checkpoints are retained; no enclosure fit or exact-source human acceptance is inferred. Trimmed lead/solder protrusions remain unqualified.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "51.2 x 39.5 mm bare laboratory PCB; 22.4 mm planning envelope from 18.0 mm C7 front + 2.6 mm BR1 rear + 1.6 mm PCB with 0.16 mm positive thickness allowance. AC and LED wire ports are on opposite edges. Check body collisions, capacitor vent reserve, protected projections and manual assembly access. Original 33 mm and 37.5 mm checkpoints are retained; no enclosure fit or exact-source human acceptance is inferred. Trimmed lead/solder protrusions remain unqualified.",
+      "gate": "placement",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_PLACEMENT",
+          "path": "SC09_SB02.kicad_pcb"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_PLACEMENT"
+      ]
+    },
+    {
+      "id": "SB02_ROUTING",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Compact C4/U1/D1 commutation loop, direct BP decoupling, Kelvin sense/return and separated input/control/output routing.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Compact C4/U1/D1 commutation loop, direct BP decoupling, Kelvin sense/return and separated input/control/output routing.",
+      "gate": "routing",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_ROUTING",
+          "path": "SC09_SB02.kicad_pcb"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_ROUTING"
+      ]
+    },
+    {
+      "id": "SB02_SPACING",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Every one of 190 intended net pairs is checked on saved copper: 2mm HV and 0.3mm explicit local normal-operation domains; no mask credit or package exceptions. Healthy D2 is assumed for the20V local domain; fault-scope.SB02-A4.json records unqualified open-clamp and common-feedback faults. This is not all-fault insulation proof.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Every one of 190 intended net pairs is checked on saved copper: 2mm HV and 0.3mm explicit local normal-operation domains; no mask credit or package exceptions. Healthy D2 is assumed for the20V local domain; fault-scope.SB02-A4.json records unqualified open-clamp and common-feedback faults. This is not all-fault insulation proof.",
+      "gate": "routing",
+      "method": "calculation",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_SPACING",
+          "path": "SC09_SB02.kicad_pcb"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_SPACING"
+      ]
+    },
+    {
+      "id": "SB02_DRC",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Fresh native DRC including unconnected-net and schematic/PCB parity checks has no errors or unreviewed warnings.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Fresh native DRC including unconnected-net and schematic/PCB parity checks has no errors or unreviewed warnings.",
+      "gate": "routing",
+      "method": "DRC",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_DRC",
+          "path": "SC09_SB02.kicad_pcb"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_DRC"
+      ]
+    },
+    {
+      "id": "SB02_FAB",
+      "revision": "SC09-SB02-A4-ENGINEERING-DRAFT",
+      "owner": "Kamil / Codex",
+      "text": "Gerbers and Excellon drills exactly match final saved source; correct outline, stackup, holes and copper, with source/artifact hashes.",
+      "basis": "Actual owner brief and independent primary-derived SB02 intent; no exact-source acceptance yet.",
+      "acceptance": "Gerbers and Excellon drills exactly match final saved source; correct outline, stackup, holes and copper, with source/artifact hashes.",
+      "gate": "release",
+      "method": "review",
+      "implementation": [
+        {
+          "subsystem": "DRIVER",
+          "object": "SB02_FAB",
+          "path": "SC09_SB02.kicad_pcb"
+        }
+      ],
+      "evidence_ids": [
+        "FINAL_SB02_FAB"
+      ]
+    }
+  ],
+  "interfaces": [],
+  "unknowns": [],
+  "evidence": [
+    {
+      "id": "FINAL_SB02_SCOPE",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/coordinator-technical-review.json",
+      "sha256": "b3d97ffdab6047f60b22224ee04e5f92137cf2101f39e888013836470a7e8332",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_GRAPH",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/spacing-graph.json",
+      "sha256": "03f06ebab5679d200a40e725d2502aeca19de21300ef9df780bfe81889b13a67",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_ERC",
+      "kind": "ERC",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/ERC.json",
+      "sha256": "dc0c4a04470b3170b5e023f641b1ced0610fe87b4c6eca528e65b085e77c5aef",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_PARTS",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/parts.json",
+      "sha256": "9acc48e543cc3d31918b8bb72ae7391938ab0caa508ef4eab4224be0a7257b71",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_PLACEMENT",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/protected-bodies.json",
+      "sha256": "954397d62f013d7843ca633b5296350ab45f7974e69b06f9f52259913c84582c",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_ROUTING",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/coordinator-technical-review.json",
+      "sha256": "b3d97ffdab6047f60b22224ee04e5f92137cf2101f39e888013836470a7e8332",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_SPACING",
+      "kind": "calculation",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/spacing-graph.json",
+      "sha256": "03f06ebab5679d200a40e725d2502aeca19de21300ef9df780bfe81889b13a67",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_DRC",
+      "kind": "DRC",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/DRC.json",
+      "sha256": "897ea749dfb3e7ac1afb9cc74f760d04ea885effd1078771b62acde21b155a05",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    },
+    {
+      "id": "FINAL_SB02_FAB",
+      "kind": "review",
+      "result": "pass",
+      "verified_by": "/root technical checks and coordinator review; independent lifecycle reviews recorded separately",
+      "intent_digest": "0e6eb31a0227d257eee04e21f06f2b4850c1aeb39df8bc3a54fb452dbd8d475d",
+      "artifact": "evidence/fabrication.json",
+      "sha256": "c41f2e8021288ec486db523a233688f0c6c7dc4965273145baf0a1be5691cae9",
+      "inputs": [
+        {
+          "path": "SC09_SB02.kicad_pcb",
+          "sha256": "c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564"
+        },
+        {
+          "path": "SC09_SB02.kicad_sch",
+          "sha256": "02c7e026d23c30a037377a40a484a47e33ecf2aefdbe449c5470b90d25822cd4"
+        },
+        {
+          "path": "SC09_SB02.kicad_pro",
+          "sha256": "98186342618d75844188c9c311c28ded6a658087bc1d8928b8df9a4661511cdd"
+        },
+        {
+          "path": "SC09_SB02.kicad_dru",
+          "sha256": "fef4a8cf38d5dba7e60e61bbc1a4ac97f2e9d9a9b83deafc1021891afab566b3"
+        },
+        {
+          "path": "new-architecture/intended-connectivity.SB02-A.json",
+          "sha256": "6e431365a42294cd8377bb47eedbeb47a974b27a4fa3f9e00d52ca62ec122455"
+        },
+        {
+          "path": "new-architecture/spacing-matrix.SB02-A.json",
+          "sha256": "91f617639b50ead1e94d262104c55bbf6609bff30700ba658d91c53eebd7dff5"
+        },
+        {
+          "path": "land-contracts.json",
+          "sha256": "fd542202e1e2515027a27ec5a9d5b44763ac27a8da3a7d6f0183c95774a62df4"
+        },
+        {
+          "path": "protected-body-contract.json",
+          "sha256": "b48fe93804872d5d8e567f5be1daab98b4cd5ee30789166306c1889051e4aade"
+        },
+        {
+          "path": "evidence/netlist.xml",
+          "sha256": "4fe0bd181c3969d791601b74e770382ae1d5fa252adf79613eff80bd1bfd4c1e"
+        }
+      ]
+    }
+  ],
+  "scope_note": "This is a new bare-board design contract. Earlier finished-lamp obligations are retained in the original SC09 sources; no claim that they have been met. Physical test gates are separately retained and block powered acceptance, not the physical existence of an unpowered prototype.",
+  "external_lifecycle_gate": "SB02_REVIEW remains mandatory in the external frozen-packet workflow: four distinct read-only roles inspect the same core manifest; their snapshot-referencing reports stay outside their own source inputs. This is relocation, not a waiver."
+}
