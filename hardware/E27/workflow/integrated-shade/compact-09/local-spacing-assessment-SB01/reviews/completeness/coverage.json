@@ -1,0 +1,68 @@
+{
+  "actor": "/root/sb01_r1_final_completeness",
+  "core_manifest_sha256": "1aade033562e650783312af8f588efa42d96a60f6210eb5c00e54e75023ee195",
+  "coverage_table": [
+    {
+      "criterion": "Exact current article and unchanged retained R1 scope",
+      "evidence": [
+        "core-manifest.json",
+        "source-guard.json",
+        "fabrication-only-proposal.json"
+      ],
+      "result": "21assessment/262R1filehashes and8guards independently match"
+    },
+    {
+      "criterion": "Complete five pad-pair and23object inventory",
+      "evidence": [
+        "geometry/current-geometry-assessment.json",
+        "geometry/strict-fresh.json"
+      ],
+      "result": "5intrinsic+18localobservations match exactobjectpairs/faces/nets/gaps"
+    },
+    {
+      "criterion": "Bounded geometric containment without blanket relaxation",
+      "evidence": [
+        "geometry/current-finite-region-proposal.json",
+        "geometry/finite-geometry-screen.json"
+      ],
+      "result": "5B.Cu pad/trackregions;55pairfreshdiagnosticpass;outside/cross targets retained;strictFAIL23"
+    },
+    {
+      "criterion": "Literal primary lands and material claim limits",
+      "evidence": [
+        "geometry/BR1-primary-land.png",
+        "geometry/U1-primary-land.png",
+        "geometry/D1-primary-land.png"
+      ],
+      "result": "Visual primarydimensions inspected; evidencehashes verified; no dielectricclaim"
+    },
+    {
+      "criterion": "Every pair electrical stress and unresolved upperbounds",
+      "evidence": [
+        "stress/electrical-stress-assessment.md",
+        "stress/evidence-hashes.json",
+        "conditional-input-filter-screen.json"
+      ],
+      "result": "All5pairsexplained; movingSOURCE andstartup/faultlimits explicit; notmeasured orbounded"
+    },
+    {
+      "criterion": "Exact manufacturing files and prior coverage retained",
+      "evidence": [
+        "SC09_SB01_R1_Gerber_Drill_CANDIDATE.zip",
+        "fabrication-recheck.json"
+      ],
+      "result": "SameR1ZIPb722078... with8flatfiles;currentauditPASS; no order"
+    },
+    {
+      "criterion": "Concrete owner decision and exclusions",
+      "evidence": [
+        "fabrication-only-proposal.json",
+        "ASSESSMENT.md"
+      ],
+      "result": "ProposalSB01-FAB-LOCAL-01 unsigned;unassembledunpoweredonlyafteractualacceptance; noagentorder/live/fullreleaseapproval"
+    }
+  ],
+  "recommendation": "ready_for_human_review for unsigned fabrication-only proposal, not accepted manufacturing release",
+  "owner_approved": false,
+  "powered_spacing_qualified": false
+}

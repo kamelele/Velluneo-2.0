@@ -1,0 +1,40 @@
+[
+  {
+    "name": "strict",
+    "args": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\catalog-only\\checker\\checker.py",
+      "--board",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_pcb",
+      "--project",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact",
+      "--matrix",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\routing-improvement\\spacing-matrix.CAT01.json",
+      "--report",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-sb01-spacing-assessment\\final-reviews\\change\\fresh-strict.json"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"passed\": false, \"stopped\": null, \"error\": null, \"stats\": {\"per_face_objects\": {\"pad\": 60, \"track\": 143, \"via\": 24}, \"different_net_face_pairs\": 13417, \"clipped_piece_pairs\": 23}, \"board_sha256\": \"532ff6ac51767badaabc49fb627b8feca729daeb1c4368a3cdb2ddad1c0996f8\", \"input_unchanged\": true}\n",
+    "stderr": ""
+  },
+  {
+    "name": "finite",
+    "args": [
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-17\\zo\\work\\kicad-10.0.6\\bin\\python.exe",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\catalog-only\\checker\\checker.py",
+      "--board",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_pcb",
+      "--project",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact",
+      "--matrix",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\routing-improvement\\spacing-matrix.CAT01.json",
+      "--report",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\sc09-sb01-spacing-assessment\\final-reviews\\change\\fresh-finite.json",
+      "--exceptions",
+      "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\outputs\\SC09_SB01_ocena_odstepow\\geometry\\current-finite-region-proposal.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"stopped\": null, \"error\": null, \"stats\": {\"per_face_objects\": {\"pad\": 60, \"track\": 143, \"via\": 24}, \"different_net_face_pairs\": 13417, \"clipped_piece_pairs\": 31}, \"board_sha256\": \"532ff6ac51767badaabc49fb627b8feca729daeb1c4368a3cdb2ddad1c0996f8\", \"input_unchanged\": true}\n",
+    "stderr": ""
+  }
+]
