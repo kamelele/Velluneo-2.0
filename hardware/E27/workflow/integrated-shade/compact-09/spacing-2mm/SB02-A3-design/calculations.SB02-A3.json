@@ -1,0 +1,130 @@
+{
+  "revision": "SC09-SB02-A3",
+  "intent_sha256": "96751bf026cca324b868a7a5e77d207acb7440a49cbc7b41259dac1858371739",
+  "evidence_level": "Conditional calculations only, not simulation or measurement",
+  "input_VAC": [
+    207,
+    230,
+    253
+  ],
+  "frequency_Hz": 50,
+  "ambient_C": [
+    0,
+    40
+  ],
+  "no_SELV": true,
+  "regulated_quantity": "LED current; voltage follows LED load. Approximate 20-series 3V LED load only.",
+  "LED_current_25C_static_screen_mA": {
+    "minimum_no_Iref_offset": 131.44093821146822,
+    "nominal_with_2uA_reference": 134.49197860962568,
+    "maximum_with_4uA_reference": 137.62626262626262,
+    "excludes": [
+      "Reference temperature drift",
+      "Sense resistor temperature drift",
+      "Zener temperature leakage",
+      "Loop ripple/offset and switching transients"
+    ]
+  },
+  "input_bulk_startup": {
+    "maximum_line_peak_V": 357.7960312803931,
+    "Cmax_F": 1.2e-05,
+    "stored_energy_J": 0.7681080000000002,
+    "RF1_ideal_initial_peak_A": 8.013348964846431,
+    "RF1_ideal_RC_timeconstant_s": 0.0005358,
+    "pulse_qualification": "NOT established by continuous 2W rating; manufacturer FW datasheet does not establish this sub-ms pulse from energy alone. Required before powered acceptance."
+  },
+  "discharge": {
+    "both_bleeders": {
+      "resistance_max_ohm": 34340.0,
+      "Cmax_F": 8.16e-05,
+      "85V_to_5V_max_ideal_s": 7.939071772767062,
+      "85V_to_30V_max_ideal_s": 2.9183037266264833
+    },
+    "one_bleeder_open": {
+      "resistance_max_ohm": 68680.0,
+      "Cmax_F": 8.16e-05,
+      "85V_to_5V_max_ideal_s": 15.878143545534124,
+      "85V_to_30V_max_ideal_s": 5.836607453252967
+    },
+    "each_resistor_power_at85V_W": 0.10732323232323232
+  },
+  "output_overvoltage": {
+    "static_threshold_25C_V": [
+      72.0768,
+      76.8255
+    ],
+    "maximum_voltage_test_stop_V": 85,
+    "required_maximum_delay_s": 0.0003,
+    "guaranteed_maximum_delay_from_primary": null,
+    "reason": "Optocoupler and reference delays are typical only; limit is an acceptance test requirement, not a proved bound.",
+    "Cout_energy_at85V_Cmax_J": 0.29478000000000004
+  },
+  "ref_open_fault": {
+    "condition": "Output held at or below85V by functioning OVP; not the failed-short main-switch fault",
+    "R17_maximum_power_W": 0.7297979797979798,
+    "R17_maximum_current_A": 0.008585858585858586,
+    "REF_absolute_input_current_A": 0.01,
+    "R17_surface_stop_C": 90,
+    "normal_4uA_ref_offset_V": 0.0404
+  },
+  "R10_bias_feed": {
+    "part": "MOR01SJ0123A10",
+    "tolerance_pct": 5,
+    "rating_W": 1,
+    "worst_short_clamp_85V_power_W": 0.6337719298245614,
+    "1mA_opto_assertion_source_headroom_at54V_A": 0.0009916844636833333
+  },
+  "thermal": {
+    "measured_temperatures": null,
+    "U1_SOURCE_stop_C": 100,
+    "T1_stop_C": 90,
+    "C7_case_stop_C": 75,
+    "C6_case_stop_C": 75,
+    "R10_surface_stop_C": 100,
+    "R17_fault_surface_stop_C": 90,
+    "D1_case_stop_C": 100,
+    "note": "These are test stop criteria, not predicted temperatures. Actual board temperature and efficiency remain unmeasured."
+  },
+  "failure_scope": {
+    "main_MOSFET_short": "The positive buck has no independent series disconnect. Output can receive rectified mains when main switch fails short. No fail-safe/product safety claim.",
+    "surge": "Old MOV/surge acceptance is not inherited; no surge waveform test authorized.",
+    "initial_energization": "Requires a qualified guarded test setup and separate documented test acceptance."
+  },
+  "fabrication_scope": "Unpowered bare laboratory PCB only; these calculations do not themselves approve CAD or manufacturing.",
+  "opto_feedback_authority": {
+    "primary": "LinkSwitch-TN2 family datasheet Rev Q June2023, control tables pp11-12 and Note C",
+    "BP_supply_min_A": 5.5e-05,
+    "FB_disable_max_25C_A": 5.4e-05,
+    "BP_to_FB_minimum_table_margin_A": 1e-06,
+    "R16_maximum_current_at_BP_shunt_max_A": 0.000462962962962963,
+    "FB_short_shutdown_min_25C_A": 0.00052,
+    "R16_drop_at_FB_disable_max_V": 0.6544800000000001,
+    "BP_min_V": 4.7,
+    "FB_max_V": 2.03,
+    "interpretation": "55uA is in the MIN column, visually checked against primary p12. This supports the manufacturer BP-to-FB optocoupler topology. Table limits at25C are not an independently proved all-temperature loop/delay guarantee; verify actual hot regulation and fault response."
+  },
+  "input_bulk_independent_discharge": {
+    "ref": "R20",
+    "mpn": "CRCW25121M00FKEG",
+    "resistance_nominal_ohm": 1000000.0,
+    "resistance_hot_screen_max_ohm": 1018080.0,
+    "basis": "1% initial tolerance plus100ppm/K maximum over an illustrative80K deviation; primary Vishay20035 rating1W at70C,500V end-to-end operating;300V against ambient is separate, no unrelated copper underbody.",
+    "normal_power_max_253VAC_Rminus1pct_W": 0.12931111111111113,
+    "healthy_357p8V_to50V_s": 24.04224516131594,
+    "healthy_357p8V_to5V_s": 52.17283513902048,
+    "surface_test_stop_C": 100,
+    "limits": "Healthy resistor only. Verify actual voltage and discharge in the qualified fixture before handling; a waiting time is not proof of zero voltage or single-fault redundancy."
+  },
+  "copper_screen": {
+    "trace_width_floor_mm": 0.3,
+    "nominal_copper_mm": 0.035,
+    "current_screen_A": 0.65,
+    "estimated_self_rise_K": 3.7646488159894163,
+    "resistance_per20mm_20C_ohm": 0.03276190476190476,
+    "basis": [
+      "https://www.nve.com/Downloads/SB-00-083_Precision_High_Current_Sensing_Over_PCB_Traces.pdf",
+      "https://www.ipc.org/system/files/technical_resource/E7%26S22_03.pdf"
+    ],
+    "limits": "Legacy external-trace empirical screening only, coarse at low temperature rise; does not include component heating, laminate tolerance, planes or airflow. Not a predicted complete-board temperature or physical verification."
+  }
+}

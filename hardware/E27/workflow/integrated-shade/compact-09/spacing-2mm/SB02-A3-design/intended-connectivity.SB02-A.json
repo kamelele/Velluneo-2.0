@@ -1,0 +1,426 @@
+{
+  "revision": "SC09-SB02-A3-ENGINEERING-DRAFT",
+  "basis_proposal_sha256": "8f6a2bae0d3a00dba64411ea933e36d47b40444852cfc1035130bbfe585b15bb",
+  "author": "/root, canonical translation of independent primary-derived implementer graph; not derived from CAD",
+  "root_correction": "Retain original parallel R8/R9 discharge paths, each 68k, with larger 2512 lands. Proposed series connection rejected because it loses single-open discharge redundancy for a saving of only about 80 mW.",
+  "user_authorization": "Change controller for actual 2 mm spacing; continue design on same branch without repeated routine questions",
+  "exact_source_release_approval": false,
+  "purpose": "Unpowered bare laboratory prototype development; not approved manufacturing files or energization",
+  "components": [
+    {
+      "ref": "BR1",
+      "mpn": "DF10S",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "DC_RETURN",
+        "3": "AC_N",
+        "4": "AC_FUSED"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "C1",
+      "mpn": "R76QI24705050J",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "C10",
+      "mpn": "DNP; optional compensation position, value not qualified",
+      "pins": {
+        "1": "OVP_COMP",
+        "2": "OVP_REF"
+      },
+      "dnp": true
+    },
+    {
+      "ref": "C4",
+      "mpn": "B32671P6154K000",
+      "pins": {
+        "1": "BUS_FILTERED",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "C5",
+      "mpn": "CL21B104KBCNNNC",
+      "pins": {
+        "1": "BP",
+        "2": "SW"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "C6",
+      "mpn": "EEU-FS2A680",
+      "pins": {
+        "1": "VOUT",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "C7",
+      "mpn": "450BXW10MEFR10X16",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "C8",
+      "mpn": "CL21B104KBCNNNC",
+      "pins": {
+        "1": "VBIAS",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "C9",
+      "mpn": "DNP; optional compensation position, value not qualified",
+      "pins": {
+        "1": "CC_COMP",
+        "2": "CC_REF"
+      },
+      "dnp": true
+    },
+    {
+      "ref": "D1",
+      "mpn": "STPSC2H12B2Y-TR",
+      "pins": {
+        "A": "DC_RETURN",
+        "K": "SW"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "D2",
+      "mpn": "BZX55C15-TAP",
+      "pins": {
+        "A": "DC_RETURN",
+        "K": "VBIAS"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "D3",
+      "mpn": "BZX55C6V8-TAP",
+      "pins": {
+        "K": "CC_REF",
+        "A": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "J1",
+      "mpn": "Wire solder connection; no supplied connector",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_N"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "J2",
+      "mpn": "Wire solder connection; no supplied connector",
+      "pins": {
+        "1": "VOUT",
+        "2": "LED_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "L1",
+      "mpn": "768772332",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "BUS_FILTERED"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R10",
+      "mpn": "MOR01SJ0123A10",
+      "pins": {
+        "1": "VOUT",
+        "2": "VBIAS"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R11",
+      "mpn": "RC0805FR-072K2L",
+      "pins": {
+        "1": "VBIAS",
+        "2": "OPTO_A"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R12",
+      "mpn": "RC0805FR-071KL",
+      "pins": {
+        "1": "OPTO_A",
+        "2": "K_CTL"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R13",
+      "mpn": "RC2512FR-07143KL",
+      "pins": {
+        "1": "VOUT",
+        "2": "OVP_MID"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R14",
+      "mpn": "RC2512FR-07143KL",
+      "pins": {
+        "1": "OVP_MID",
+        "2": "OVP_REF"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R15",
+      "mpn": "RC0805FR-0710KL",
+      "pins": {
+        "1": "OVP_REF",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R16",
+      "mpn": "RC0805FR-0712KL",
+      "pins": {
+        "1": "BP",
+        "2": "OPTO_COLLECTOR"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R17",
+      "mpn": "RC2512FR-0710KL",
+      "pins": {
+        "1": "LED_RETURN",
+        "2": "CC_REF"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R18",
+      "mpn": "DNP; optional compensation position, value not qualified",
+      "pins": {
+        "1": "K_CTL",
+        "2": "CC_COMP"
+      },
+      "dnp": true
+    },
+    {
+      "ref": "R19",
+      "mpn": "DNP; optional compensation position, value not qualified",
+      "pins": {
+        "1": "K_CTL",
+        "2": "OVP_COMP"
+      },
+      "dnp": true
+    },
+    {
+      "ref": "R20",
+      "mpn": "CRCW25121M00FKEG",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R7",
+      "mpn": "CRCW251218R7FKEG",
+      "pins": {
+        "1": "LED_RETURN",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R8",
+      "mpn": "RC2512FR-0768KL",
+      "pins": {
+        "1": "VOUT",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "R9",
+      "mpn": "RC2512FR-0768KL",
+      "pins": {
+        "1": "VOUT",
+        "2": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "RF1",
+      "mpn": "FW20A47R0JA",
+      "pins": {
+        "1": "AC_L",
+        "2": "AC_FUSED"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "RV1",
+      "mpn": "B72207S0271K101",
+      "pins": {
+        "1": "AC_FUSED",
+        "2": "AC_N"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "T1",
+      "mpn": "7687709222",
+      "pins": {
+        "1": "VOUT",
+        "2": "SW"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "U1",
+      "mpn": "LNK3206P",
+      "pins": {
+        "1": "BP",
+        "2": "FB",
+        "4": "BUS_FILTERED",
+        "5": "SW",
+        "6": "SW",
+        "7": "SW",
+        "8": "SW"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "U2",
+      "mpn": "TL431BIDBZR",
+      "pins": {
+        "1": "K_CTL",
+        "2": "CC_REF",
+        "3": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "U3",
+      "mpn": "TL431BIDBZR",
+      "pins": {
+        "1": "K_CTL",
+        "2": "OVP_REF",
+        "3": "DC_RETURN"
+      },
+      "dnp": false
+    },
+    {
+      "ref": "U4",
+      "mpn": "VOS618A-3T",
+      "pins": {
+        "1": "OPTO_A",
+        "2": "K_CTL",
+        "3": "FB",
+        "4": "OPTO_COLLECTOR"
+      },
+      "dnp": false
+    }
+  ],
+  "absent_leads": {
+    "U1": [
+      "3, manufacturer missing lead; not an unconnected physical terminal"
+    ]
+  },
+  "net_names": [
+    "AC_FUSED",
+    "AC_L",
+    "AC_N",
+    "BP",
+    "BUS_FILTERED",
+    "BUS_RECT",
+    "CC_COMP",
+    "CC_REF",
+    "DC_RETURN",
+    "FB",
+    "K_CTL",
+    "LED_RETURN",
+    "OPTO_A",
+    "OPTO_COLLECTOR",
+    "OVP_COMP",
+    "OVP_MID",
+    "OVP_REF",
+    "SW",
+    "VBIAS",
+    "VOUT"
+  ],
+  "local_control_domains": [
+    [
+      "SW",
+      "BP",
+      "FB",
+      "OPTO_COLLECTOR"
+    ],
+    [
+      "DC_RETURN",
+      "CC_REF",
+      "OVP_REF",
+      "K_CTL",
+      "OPTO_A",
+      "VBIAS",
+      "CC_COMP",
+      "OVP_COMP"
+    ]
+  ],
+  "normal_current_previous_131_to_135mA_excludes_new_RREF_offsets": true,
+  "powered_gates": [
+    "Startup<50ms",
+    "Thermal/current/inductance",
+    "Looprippleandstability",
+    "OVPdelayandoutput<85V",
+    "SenseopenLEDopen/short",
+    "SurgeandRF1pulsecoordination"
+  ],
+  "remaining_paper_gates": [
+    "Exact manufacturer land geometry and pin map for every changed package",
+    "Fresh native intent/ERC/DRC/parity and physical spacing",
+    "Input charging pulse and surge coordination, before powered acceptance",
+    "Independent final source reviews and actual stage acceptance"
+  ],
+  "physical_contact_multiplicity": {
+    "D1.K": 2
+  },
+  "physical_contact_basis": {
+    "D1.K": {
+      "datasheet": "ST DS13118 revision 2 September 2021, Figure 10 and page 1 pinout",
+      "sha256": "1ec37a044c8681f4f2c4c09cb4b17d6c8d8d3c8ea2569b1c053539e051da3cfd",
+      "description": "Two separate cathode solder contacts: large tab and one lead. Anode has one lead. Confirmed by CAD writer visual inspection; all three contacts must remain in copper checks.",
+      "path": "../research/STPSC2H12-Y.pdf"
+    }
+  },
+  "physical_contact_positions_count": 84,
+  "input_bulk_discharge_change": {
+    "ref": "R20",
+    "connection": "1M 1% Vishay CRCW25121M00FKEG directly across BUS_RECT/DC_RETURN; independent of controller operation",
+    "reason": "The newly introduced 10uF/450V input reservoir needs an explicit discharge path. Selected 500V/1W 2512 replaces the initially proposed larger HVR25 axial to preserve compact size; do not substitute a 200V Yageo part merely sharing the 2512 size.",
+    "primary": "Vishay document20035 revision14Apr2026,500VACRMS/DC operating voltage,1W at70C,100ppm/K; voltage against ambient300V is a separate limit, so no unrelated copper below body.",
+    "procurement": "Root live DigiKey PL browser on24November:111152 in stock,MOQ1,PLN1.09net/1.3407gross; no cart or order changed.",
+    "offer_url": "https://www.digikey.pl/en/products/detail/vishay-dale/CRCW25121M00FKEG/1178901"
+  }
+}

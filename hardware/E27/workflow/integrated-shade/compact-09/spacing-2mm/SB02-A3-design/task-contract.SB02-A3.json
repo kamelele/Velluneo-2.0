@@ -1,0 +1,34 @@
+{
+  "revision": "SC09-SB02-A3-ENGINEERING-DRAFT",
+  "date": "2026-11-24",
+  "supersedes_working_state_of": "task-contract.json",
+  "user_decision": "Zmienić sterownik — rzeczywiste odstępy 2 mm",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "main_excluded": true,
+  "scope": "Compact nonisolated constant-current buck redesign; real 2 mm high-differential saved-copper spacing; bare laboratory prototype PCB and reviewed fabrication outputs. No actual order or powered test.",
+  "baseline_saved": "outputs/SC09_przed_poprawa_odstepow/SC09_przed_poprawa_odstepow.zip",
+  "remote_checkpoint": "bd4770b8c2d0776654079a5417c648168d106b08",
+  "ownership": {
+    "private_native_CAD_and_libraries": "/root/spacing23_route_writer",
+    "metadata_calculations_configuration_and_integration": "/root",
+    "independent_geometry_and_fabrication_audit_tools": "/root/spacing23_sb02_checker",
+    "DSN_SES_only_router_tools": "/root/spacing23_freerouting_helper"
+  },
+  "acceptance_checks": [
+    "36 references, 83 electrical pins, 84 physical copper contacts; D1 cathode tab and lead both retained",
+    "Fresh schematic export matches independent intent; native ERC and schematic/PCB parity",
+    "All 190 net pairs checked against explicit 2 mm / 0.3 mm matrix with no package waiver",
+    "Actual saved copper preserves fixed protected-body and manual seed contracts",
+    "Zero unconnected routes and native DRC errors or unreviewed warnings",
+    "Actual power-loop and Kelvin topology reviewed, beyond geometry checks",
+    "Native copper, drills, outline and exported manufacturing files agree by hash and geometry",
+    "Four distinct read-only role reviews cover the same final frozen packet",
+    "Publication uses scoped Git tree and branch-head lease; main unchanged"
+  ],
+  "not_claimed": [
+    "Exact-source human release acceptance",
+    "Measured efficiency or temperatures",
+    "Qualified startup, loop stability, surge, hot inductance or RF1 pulse withstand",
+    "Fail-safe main-switch-short protection or finished-lamp compliance"
+  ]
+}
