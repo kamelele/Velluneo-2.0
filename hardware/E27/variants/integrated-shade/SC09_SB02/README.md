@@ -1,3 +1,9 @@
+# Inactive alternative — SC09-SB02
+
+On 2026-11-24 the owner chose to return to [SC09-SB01 / LYT1603D](../SC09_compact/README.SB01.md). SB02 is preserved for reference, not the active design. Its exact-source approval request is withdrawn. The frozen SB02 technical packet remains historical evidence and is not deleted or re-labelled as approved.
+
+---
+
 # SC09-SB02 current bare-PCB candidate
 
 Current native PCB: c75423f934b637d8b381745e72bed8440eceddb5020b956ee01f4b4426647564. Dimensions: 51.2 x 39.5 mm. Controller: LNK3206P. High-differential pair target: 2 mm; explicit local domains: 0.3 mm.

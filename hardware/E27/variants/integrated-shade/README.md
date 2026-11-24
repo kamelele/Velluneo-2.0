@@ -1,3 +1,11 @@
+# Current selection — SC09-SB01 restored
+
+On 2026-11-24 the owner requested a return to the previous SC09 after reviewing the larger SB02 redesign. The active design is [SC09-SB01 / LYT1603D](SC09_compact/README.SB01.md): 19 positions, 51.2 x 33 mm. Its existing CAD and component choices are retained byte-for-byte. SC09-SB02 / LNK3206P is inactive and preserved as an alternative study; its pending acceptance request is withdrawn.
+
+This restores the previous design selection, not a manufacturing approval. Its documented package-spacing limitations and prototype qualification gates remain. No supplier order or powered test is performed. The historical specification follows below.
+
+---
+
 # Integrated-shade non-isolated driver — specification draft IS-1
 
 Status: local engineering proposal, not an approved schematic or manufacturing release.
