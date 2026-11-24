@@ -1,3 +1,9 @@
+# Current SC09-SB01 verification — R1 / 24 November 2026
+
+[Current source-bound verification packet](integrated-shade/compact-09/routing-verification-SB01-R1/README.md). Same LYT1603D board, 19 positions, 51.2 x 33 mm; routing and placement unchanged. Corrected U1 purchasing metadata, synchronized stale consumer digests without numeric rule changes, and refreshed manufacturing artifact bindings. Fresh ERC/DRC/parity, graph, parts and fabrication checks pass. Strict spacing FAIL23 and full Toolkit release remain open; no order or powered test. Four independent final roles recommend only human review of this bounded packet.
+
+---
+
 # Current integrated-shade selection — 2026-11-24
 
 The owner has returned to [SC09-SB01 / LYT1603D](../variants/integrated-shade/SC09_compact/README.SB01.md), 19 positions, 51.2 x 33 mm. Native sources remain unchanged. The larger LNK3206P SC09-SB02 alternative is inactive and retained separately. See [selection record](../variants/integrated-shade/active-variant.json). This is not a new fabrication or powered-test acceptance.

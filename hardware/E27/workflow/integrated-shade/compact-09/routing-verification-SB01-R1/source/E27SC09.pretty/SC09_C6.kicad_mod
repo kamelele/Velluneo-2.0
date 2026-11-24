@@ -1,0 +1,162 @@
+(footprint "SC09_C6"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5±.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y±2.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.")
+	(property "Reference" "REF**"
+		(at 0 -5 0)
+		(layer "F.Fab")
+		(uuid "4a9481f5-ab55-4953-9a60-21ecbba2a4be")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SC09_C6"
+		(at 0 5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "47ffc383-5d85-452f-a817-1566a56cb9a6")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "65812b73-43a6-4b38-a0e0-97c32ff0006b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63fb3dc9-bce8-436f-88f7-9c6140234d44")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.4 -6.75)
+		(end 26.25 -6.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9db608a8-f757-40fb-9563-0352cc041822")
+	)
+	(fp_line
+		(start -1.4 6.75)
+		(end -1.4 -6.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "5afe34d9-c96d-4ee7-9ea3-8c8d146cba7e")
+	)
+	(fp_line
+		(start 26.25 -6.75)
+		(end 26.25 6.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "94d55ae5-6524-44ca-983f-edf719518782")
+	)
+	(fp_line
+		(start 26.25 6.75)
+		(end -1.4 6.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "b0b2b65f-1b0e-49f1-acab-5b6fd0bb20dc")
+	)
+	(fp_line
+		(start 4 -6.5)
+		(end 26 -6.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "7ab5e328-a426-4b39-8b05-4feaa3b0ec5c")
+	)
+	(fp_line
+		(start 4 6.5)
+		(end 4 -6.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "cb6f6a4c-3d4a-452a-b5d5-656aac4b0e5c")
+	)
+	(fp_line
+		(start 26 -6.5)
+		(end 26 6.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "9db4b19e-eea1-412c-9f8f-3536b13fd074")
+	)
+	(fp_line
+		(start 26 6.5)
+		(end 4 6.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "110ec574-5a00-4fb2-844d-5f6850bae234")
+	)
+	(pad "1" thru_hole rect
+		(at 0 -2.5)
+		(size 2.3 2.3)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f63605ad-19cb-41bb-a978-1780cd6e4606")
+	)
+	(pad "2" thru_hole circle
+		(at 0 2.5)
+		(size 2.3 2.3)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1f33643b-15a2-4dc9-bab9-d55fe0a68860")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/SC09_C6.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

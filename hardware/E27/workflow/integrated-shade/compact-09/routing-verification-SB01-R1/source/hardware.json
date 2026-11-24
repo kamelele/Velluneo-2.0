@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "name": "SC09_compact",
+  "kicad_version": "10.0.6",
+  "fabrication": {
+    "vendor": "jlcpcb",
+    "service": "FR4-2L-1oz-routed",
+    "stackup": "FR4,2layers,1.6mm",
+    "copper": "1oz",
+    "finish": "leadfreeHASL",
+    "confirmation_evidence": "owner-process-line-decision.json"
+  },
+  "assembly": {
+    "mode": "inhouse",
+    "confirmation_evidence": "owner-process-line-decision.json",
+    "local_pcba_provider_confirmation": null,
+    "stencil": "frameless"
+  },
+  "product": {
+    "requirements_file": "requirements.json",
+    "connectivity_file": "intended-connectivity.SB01.json",
+    "spatial_file": "spatial-constraints.json",
+    "domains": [
+      {
+        "id": "MAINS_REFERENCED",
+        "nets": [
+          "AC_L",
+          "AC_N",
+          "AC_FUSED",
+          "BUS_RECT",
+          "DC_RETURN",
+          "BUS_FILTERED",
+          "BP",
+          "M",
+          "FB_INDUCTOR",
+          "SW_SOURCE",
+          "LED_PLUS"
+        ],
+        "no_SELV": true
+      }
+    ],
+    "requirements": [],
+    "minimums_mm": {
+      "clearance": 0.3,
+      "track_width": 0.3,
+      "hole_size": 0.3,
+      "annular_width": 0.2,
+      "edge_clearance": 1.0
+    },
+    "special_requirements": [
+      "Mainsreferencedguardedlaboratoryprototypeonly",
+      "NoSELVoutput",
+      "Functional55pairmatrixindependentofglobalmanufacturingfloor",
+      "NoautomaticIECcomplianceorsafetyapproval",
+      "SC09-SB01: WE-PD HV7687709152 two-terminalenergycoil; prototype-gates.SB01.json governs unresolved physical qualification"
+    ],
+    "barriers": [],
+    "standards_review_evidence": "functional-spacing-design.json (engineeringprototypebasis;notnormativequalification)"
+  },
+  "netclasses": [
+    {
+      "name": "POWER",
+      "nets": [
+        "/AC_L",
+        "/AC_N",
+        "/AC_FUSED",
+        "/BUS_RECT",
+        "/BUS_FILTERED",
+        "/SW_SOURCE",
+        "/FB_INDUCTOR",
+        "/LED_PLUS",
+        "/DC_RETURN"
+      ],
+      "clearance": 0.3,
+      "track_width": 0.3
+    }
+  ],
+  "source_files": [
+    "AGENTS.md",
+    "E27SC09.kicad_sym",
+    "E27SC09.pretty/SC09_BR1.kicad_mod",
+    "E27SC09.pretty/SC09_C1.kicad_mod",
+    "E27SC09.pretty/SC09_C4.kicad_mod",
+    "E27SC09.pretty/SC09_C5.kicad_mod",
+    "E27SC09.pretty/SC09_C6.kicad_mod",
+    "E27SC09.pretty/SC09_D1.kicad_mod",
+    "E27SC09.pretty/SC09_J1.kicad_mod",
+    "E27SC09.pretty/SC09_J2.kicad_mod",
+    "E27SC09.pretty/SC09_L1.kicad_mod",
+    "E27SC09.pretty/SC09_R4.kicad_mod",
+    "E27SC09.pretty/SC09_R5.kicad_mod",
+    "E27SC09.pretty/SC09_R6.kicad_mod",
+    "E27SC09.pretty/SC09_R7.kicad_mod",
+    "E27SC09.pretty/SC09_R8.kicad_mod",
+    "E27SC09.pretty/SC09_R9.kicad_mod",
+    "E27SC09.pretty/SC09_RF1.kicad_mod",
+    "E27SC09.pretty/SC09_RV1.kicad_mod",
+    "E27SC09.pretty/SC09_T1.kicad_mod",
+    "E27SC09.pretty/SC09_U1.kicad_mod",
+    "Models/MODEL_CREDITS.txt",
+    "Models/MODEL_INFO.json",
+    "Models/R7-standing-check.json",
+    "Models/SC09_BR1.step",
+    "Models/SC09_BR1.wrl",
+    "Models/SC09_C1.step",
+    "Models/SC09_C1.wrl",
+    "Models/SC09_C4.step",
+    "Models/SC09_C4.wrl",
+    "Models/SC09_C5.step",
+    "Models/SC09_C5.wrl",
+    "Models/SC09_C6.step",
+    "Models/SC09_C6.wrl",
+    "Models/SC09_D1.step",
+    "Models/SC09_D1.wrl",
+    "Models/SC09_L1.step",
+    "Models/SC09_L1.wrl",
+    "Models/SC09_R4.step",
+    "Models/SC09_R4.wrl",
+    "Models/SC09_R5.step",
+    "Models/SC09_R5.wrl",
+    "Models/SC09_R6.step",
+    "Models/SC09_R6.wrl",
+    "Models/SC09_R7.step",
+    "Models/SC09_R7.wrl",
+    "Models/SC09_R8.step",
+    "Models/SC09_R8.wrl",
+    "Models/SC09_R9.step",
+    "Models/SC09_R9.wrl",
+    "Models/SC09_RF1.step",
+    "Models/SC09_RF1.wrl",
+    "Models/SC09_RV1.step",
+    "Models/SC09_RV1.wrl",
+    "Models/SC09_T1.step",
+    "Models/SC09_T1.wrl",
+    "Models/SC09_U1.step",
+    "Models/SC09_U1.wrl",
+    "Models/catalogue-model-checks.json",
+    "Models/model-checks.json",
+    "PowerFlags.kicad_sym",
+    "R7-standing-contract.json",
+    "README.md",
+    "SC09_compact.kicad_dru",
+    "SC09_compact.kicad_pcb",
+    "SC09_compact.kicad_pro",
+    "SC09_compact.kicad_sch",
+    "T1-custom-contract.json",
+    "bom-build.csv",
+    "bom-build.json",
+    "bom-proposal.A1.json",
+    "bom-proposal.json",
+    "calculated-proposal.json",
+    "catalogue-design-calculations.json",
+    "catalogue-engineering-status.json",
+    "driver-led-interface.proposed.json",
+    "footprint-assignments.json",
+    "footprint-geometry.json",
+    "fp-lib-table",
+    "functional-spacing-design.json",
+    "intended-connectivity.A1.json",
+    "intended-connectivity.CAT01.json",
+    "intended-connectivity.json",
+    "intended-connectivity.toolkit.json",
+    "layout-revision.json",
+    "manual-prototype-fabrication-scope.json",
+    "mechanical-budget.proposed.json",
+    "model-attachment.json",
+    "original-requirements-crosswalk.json",
+    "owner-A1-map-approval.json",
+    "owner-SC09-direction-map-approval.json",
+    "owner-autonomous-completion.json",
+    "owner-catalogue-only-request.json",
+    "owner-current-brief.json",
+    "owner-process-line-decision.json",
+    "owner-prototype-scope.json",
+    "owner-size-50x32-approval.json",
+    "power-supply-specification.ROUTE01.json",
+    "power-supply-specification.ROUTE02.json",
+    "power-supply-specification.json",
+    "power-supply-specification.pre-CAT01-historical.json",
+    "reference/C6-mounting-interpretation.json",
+    "reference/LED-primary-research.json",
+    "reference/T1-magnetic-design.json",
+    "reference/active-land-correction.json",
+    "reference/active-parts-report.json",
+    "reference/alternatives.json",
+    "reference/body-packing-study.json",
+    "reference/package-addendum.json",
+    "reference/package-research.json",
+    "reference/parameter-research.json",
+    "reference/passive-footprints.json",
+    "reference/passive-parts-report.json",
+    "reference/rdr464-research.json",
+    "reference/rdr464-verified-U1-pins.json",
+    "requirements.json",
+    "routing-improvement-basis.json",
+    "source-basis.A1.json",
+    "source-basis.CAT01.json",
+    "source-basis.json",
+    "spatial-constraints.json",
+    "standards-and-test-plan.json",
+    "sym-lib-table",
+    "symbol-pin-verification.json",
+    "thermal-and-spacing-basis.ROUTE01.md",
+    "thermal-and-spacing-basis.ROUTE02.md",
+    "thermal-planning.json",
+    "two-endpoint-interface.proposed.json",
+    "source-basis.SB01.json",
+    "intended-connectivity.SB01.json",
+    "prototype-gates.SB01.json",
+    "procurement.SB01.json"
+  ],
+  "approvals": {},
+  "waivers": [],
+  "release_files": {
+    "gerbers": [
+      {
+        "path": "release-refinement-R1/SC09_SB01_R1_Gerber_Drill_CANDIDATE.zip",
+        "sha256": "b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e",
+        "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+      }
+    ],
+    "drills": [
+      {
+        "path": "release-refinement-R1/SC09_SB01_R1_drills.zip",
+        "sha256": "7d74782f38203310c4f2d5c7c24f9dbf804a49a73f612b4d036c4b43bbe3cb48",
+        "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+      }
+    ],
+    "bom": [
+      {
+        "path": "release-refinement-R1/BOM.csv",
+        "sha256": "c27ee3237564e1a3470bcfe046115a9e6ad3e48e9314dd177b5bf27ccb95dc1f",
+        "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+      }
+    ],
+    "positions": [
+      {
+        "path": "release-refinement-R1/manual-positions.csv",
+        "sha256": "4dcb741050490ea3063d86664207fbe3c3a93e1330cfdd87a88a634a23f14653",
+        "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+      }
+    ],
+    "assembly_drawing": [
+      {
+        "path": "release-refinement-R1/assembly-both-sides.pdf",
+        "sha256": "67f7d73aee1ea1604f0565a96911af41cdced235331b5acb19a948835b36f4e0",
+        "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+      }
+    ],
+    "bringup_plan": [
+      {
+        "path": "release-refinement-R1/BRINGUP_UNPOWERED.md",
+        "sha256": "2275b34e0b424d3da32477fe34c7ce2d3a57d3b49d56dba79bc463b5d9223703",
+        "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+      }
+    ]
+  },
+  "artifacts": {},
+  "procurement_revision": "SC09-SB01",
+  "historical_release_note": "Earlier release-candidate and simplified-purchase artifacts are historical. Current metadata-corrected SB01 R1 fabrication candidate is release-refinement-R1; actual strict spacing FAIL23 and full release gates remain. No fabrication acceptance, order or powered test."
+}

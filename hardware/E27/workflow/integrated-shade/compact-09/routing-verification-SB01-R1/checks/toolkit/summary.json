@@ -1,0 +1,293 @@
+[
+  {
+    "name": "requirements",
+    "exit_code": 1,
+    "passed": false,
+    "errors": [
+      {
+        "id": "OPEN_CAVITY",
+        "gate": "placement",
+        "message": "Unresolved: Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement."
+      },
+      {
+        "id": "OPEN_GEOMETRY",
+        "gate": "placement",
+        "message": "Unresolved: ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking."
+      },
+      {
+        "id": "OPEN_C_ENV",
+        "gate": "schematic",
+        "message": "Unresolved: Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release."
+      },
+      {
+        "id": "OPEN_C_OPTICAL_INPUT",
+        "gate": "schematic",
+        "message": "Unresolved: 4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance."
+      },
+      {
+        "id": "OPEN_C_SAFETY_BASIS",
+        "gate": "schematic",
+        "message": "Unresolved: Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier."
+      },
+      {
+        "id": "OPEN_IFC_ACCEPTANCE",
+        "gate": "schematic",
+        "message": "Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints."
+      },
+      {
+        "id": "OPEN_ARCH",
+        "gate": "specification",
+        "message": "Resolved unknown has stale/missing/failed evidence"
+      },
+      {
+        "id": "C_SCOPE",
+        "gate": "specification",
+        "message": "EV-SCOPE: Evidence refers to a different intent revision/digest"
+      },
+      {
+        "id": "C_SCOPE",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_ARCH",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_SUPPLY",
+        "gate": "specification",
+        "message": "EV-SUPPLY: Evidence refers to a different intent revision/digest"
+      },
+      {
+        "id": "C_SUPPLY",
+        "gate": "specification",
+        "message": "Required evidence kind absent: design"
+      },
+      {
+        "id": "C_LIGHT",
+        "gate": "specification",
+        "message": "EV-LIGHT: Evidence refers to a different intent revision/digest"
+      },
+      {
+        "id": "C_LIGHT",
+        "gate": "specification",
+        "message": "Required evidence kind absent: design"
+      },
+      {
+        "id": "C_SIZE",
+        "gate": "specification",
+        "message": "EV-SIZE-50X32: Evidence refers to a different intent revision/digest"
+      },
+      {
+        "id": "C_SIZE",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_PROCESS",
+        "gate": "specification",
+        "message": "EV-PROCESS: Evidence refers to a different intent revision/digest"
+      },
+      {
+        "id": "C_PROCESS",
+        "gate": "specification",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "gate": "schematic",
+        "message": "EV-EFFICIENCY-02: Evidence refers to a different intent revision/digest"
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "gate": "schematic",
+        "message": "EV-EFFICIENCY-02: Evidence artifact missing, empty or modified"
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "gate": "schematic",
+        "message": "EV-EFFICIENCY-02: Evidence input missing or modified: calculated-proposal.json"
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "gate": "schematic",
+        "message": "EV-EFFICIENCY-02: Evidence input missing or modified: bom-build.json"
+      },
+      {
+        "id": "C_EFFICIENCY",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: calculation"
+      },
+      {
+        "id": "C_PARTS",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_GRAPH",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_PROTECTION",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: calculation"
+      },
+      {
+        "id": "C_INTERFACE",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_PACKING",
+        "gate": "placement",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_ROUTING",
+        "gate": "routing",
+        "message": "Required evidence kind absent: DRC"
+      },
+      {
+        "id": "C_ENV",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_OPTICAL_INPUT",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      },
+      {
+        "id": "C_SAFETY_BASIS",
+        "gate": "schematic",
+        "message": "Required evidence kind absent: review"
+      }
+    ],
+    "snapshot": null
+  },
+  {
+    "name": "connectivity",
+    "exit_code": 1,
+    "passed": false,
+    "errors": [
+      {
+        "type": "missing_stale_intent_approval",
+        "message": "Intent lacks current human approval evidence"
+      }
+    ],
+    "snapshot": null
+  },
+  {
+    "name": "spatial",
+    "exit_code": 1,
+    "passed": false,
+    "errors": [
+      "Spatial contract lacks current human approval"
+    ],
+    "snapshot": null
+  },
+  {
+    "name": "snapshot",
+    "exit_code": 0,
+    "passed": true,
+    "errors": null,
+    "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+  },
+  {
+    "name": "work",
+    "exit_code": 1,
+    "passed": false,
+    "errors": [
+      "Requirements: OPEN_CAVITY: Unresolved: Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement.",
+      "Requirements: OPEN_GEOMETRY: Unresolved: ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking.",
+      "Requirements: OPEN_C_ENV: Unresolved: Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release.",
+      "Requirements: OPEN_C_OPTICAL_INPUT: Unresolved: 4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance.",
+      "Requirements: OPEN_C_SAFETY_BASIS: Unresolved: Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier.",
+      "Requirements: OPEN_IFC_ACCEPTANCE: Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints.",
+      "Requirements: OPEN_ARCH: Resolved unknown has stale/missing/failed evidence",
+      "Requirements: C_SCOPE: EV-SCOPE: Evidence refers to a different intent revision/digest",
+      "Requirements: C_SCOPE: Required evidence kind absent: review",
+      "Requirements: C_ARCH: Required evidence kind absent: review",
+      "Requirements: C_SUPPLY: EV-SUPPLY: Evidence refers to a different intent revision/digest",
+      "Requirements: C_SUPPLY: Required evidence kind absent: design",
+      "Requirements: C_LIGHT: EV-LIGHT: Evidence refers to a different intent revision/digest",
+      "Requirements: C_LIGHT: Required evidence kind absent: design",
+      "Requirements: C_SIZE: EV-SIZE-50X32: Evidence refers to a different intent revision/digest",
+      "Requirements: C_SIZE: Required evidence kind absent: review",
+      "Requirements: C_PROCESS: EV-PROCESS: Evidence refers to a different intent revision/digest",
+      "Requirements: C_PROCESS: Required evidence kind absent: review",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence refers to a different intent revision/digest",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence artifact missing, empty or modified",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence input missing or modified: calculated-proposal.json",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence input missing or modified: bom-build.json",
+      "Requirements: C_EFFICIENCY: Required evidence kind absent: calculation",
+      "Requirements: C_PARTS: Required evidence kind absent: review",
+      "Requirements: C_GRAPH: Required evidence kind absent: review",
+      "Requirements: C_PROTECTION: Required evidence kind absent: calculation",
+      "Requirements: C_INTERFACE: Required evidence kind absent: review",
+      "Requirements: C_PACKING: Required evidence kind absent: review",
+      "Requirements: C_ROUTING: Required evidence kind absent: DRC",
+      "Requirements: C_ENV: Required evidence kind absent: review",
+      "Requirements: C_OPTICAL_INPUT: Required evidence kind absent: review",
+      "Requirements: C_SAFETY_BASIS: Required evidence kind absent: review",
+      "Spatial: Spatial contract lacks current human approval",
+      "Connectivity: missing_stale_intent_approval: Intent lacks current human approval evidence"
+    ],
+    "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+  },
+  {
+    "name": "release",
+    "exit_code": 1,
+    "passed": false,
+    "errors": [
+      "Requirements: OPEN_CAVITY: Unresolved: Confirmactualavailableinternalvolume/mountingclearanceoracceptreferencecavitybeforeplacement.",
+      "Requirements: OPEN_GEOMETRY: Unresolved: ClosefinishedT1pins/heightandformedC6/vent/padgeometry,thenactualelectricalpacking.",
+      "Requirements: OPEN_C_ENV: Unresolved: Owner declares fixture/enclosure orientations, thermal path, capacitor case/lifetime target and LED junction design limit; evidence plan before schematic acceptance, actual measurements before release.",
+      "Requirements: OPEN_C_OPTICAL_INPUT: Unresolved: 4000K/minCRI80 known; owner agrees flux acceptance band, diffuser loss range, operating-temperature/bin assumptions and full LED electrical envelope before schematic acceptance.",
+      "Requirements: OPEN_C_SAFETY_BASIS: Unresolved: Qualified review identifies lamp/controlgear architecture, exact applicable standard editions and numeric critical stress/spacing basis. No SELV or instruction-only contact barrier.",
+      "Requirements: OPEN_IFC_ACCEPTANCE: Unresolved: Finalize and accept structured two-endpoint voltage/current/pin/startup/fault contract from two-endpoint-interface.proposed.json before schematic acceptance; no compatible targets relabelled measured endpoints.",
+      "Requirements: OPEN_ARCH: Resolved unknown has stale/missing/failed evidence",
+      "Requirements: C_SCOPE: EV-SCOPE: Evidence refers to a different intent revision/digest",
+      "Requirements: C_SCOPE: Required evidence kind absent: review",
+      "Requirements: C_ARCH: Required evidence kind absent: review",
+      "Requirements: C_SUPPLY: EV-SUPPLY: Evidence refers to a different intent revision/digest",
+      "Requirements: C_SUPPLY: Required evidence kind absent: design",
+      "Requirements: C_LIGHT: EV-LIGHT: Evidence refers to a different intent revision/digest",
+      "Requirements: C_LIGHT: Required evidence kind absent: design",
+      "Requirements: C_SIZE: EV-SIZE-50X32: Evidence refers to a different intent revision/digest",
+      "Requirements: C_SIZE: Required evidence kind absent: review",
+      "Requirements: C_PROCESS: EV-PROCESS: Evidence refers to a different intent revision/digest",
+      "Requirements: C_PROCESS: Required evidence kind absent: review",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence refers to a different intent revision/digest",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence artifact missing, empty or modified",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence input missing or modified: calculated-proposal.json",
+      "Requirements: C_EFFICIENCY: EV-EFFICIENCY-02: Evidence input missing or modified: bom-build.json",
+      "Requirements: C_EFFICIENCY: Required evidence kind absent: calculation",
+      "Requirements: C_PARTS: Required evidence kind absent: review",
+      "Requirements: C_GRAPH: Required evidence kind absent: review",
+      "Requirements: C_PROTECTION: Required evidence kind absent: calculation",
+      "Requirements: C_INTERFACE: Required evidence kind absent: review",
+      "Requirements: C_PACKING: Required evidence kind absent: review",
+      "Requirements: C_ROUTING: Required evidence kind absent: DRC",
+      "Requirements: C_THERMAL: Required evidence kind absent: measurement",
+      "Requirements: C_COMPLIANCE: Required evidence kind absent: measurement",
+      "Requirements: C_RELEASE: Required evidence kind absent: review",
+      "Requirements: C_ENV: Required evidence kind absent: review",
+      "Requirements: C_OPTICAL_INPUT: Required evidence kind absent: review",
+      "Requirements: C_SAFETY_BASIS: Required evidence kind absent: review",
+      "Requirements: C_COST: Required evidence kind absent: review",
+      "Spatial: Spatial contract lacks current human approval",
+      "Connectivity: missing_stale_intent_approval: Intent lacks current human approval evidence",
+      "Local PCBA provider confirmation missing: assembly.local_pcba_provider_confirmation",
+      "Missing/stale user approval: specification",
+      "Missing/stale user approval: schematic",
+      "Missing/stale user approval: placement",
+      "Missing/stale user approval: routing",
+      "Missing/stale user approval: release",
+      "Release approval does not cover current artifacts"
+    ],
+    "snapshot": "f834905c883e608cee4dc5f8d8050f7689bdafa138911e3820f9d6d3b3f0c692"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "id": "IFC-DRIVER-LED",
+  "revision": "SC09-A",
+  "owner": "Kamil and root designer",
+  "status": "Proposed, not approved",
+  "source": {
+    "subsystem": "DRIVER",
+    "connector": "J2",
+    "pins": {
+      "1": "LED_PLUS",
+      "2": "DC_RETURN"
+    }
+  },
+  "destination": {
+    "subsystem": "LED_MODULE",
+    "connector": "LED-WIRE-PADS proposed",
+    "pins": {
+      "1": "LED_ANODE",
+      "2": "LED_CATHODE"
+    }
+  },
+  "pin_map": {
+    "J2.1": "LED-WIRE-PADS.1",
+    "J2.2": "LED-WIRE-PADS.2"
+  },
+  "source_voltage_V": [
+    52,
+    68
+  ],
+  "destination_voltage_V": [
+    52,
+    68
+  ],
+  "nominal_current_mA": 135,
+  "absolute_fault_target_V": 90,
+  "basis": "Both endpoints are proposed matching targets, not measured LED qualification. Current extrema, transient/restart envelope, actual pin labeling and optical/temp/bin constraints require agreement before schematic acceptance.",
+  "startup_fault_behavior": "Disconnected replacement only with verified discharge; IC cannot limit a direct C6-to-LED reconnection impulse. No powered hotplug. All pins mains-referenced.",
+  "port_type": "Two solder-wire pads at each end; consumer mating/contact barrier not selected."
+}

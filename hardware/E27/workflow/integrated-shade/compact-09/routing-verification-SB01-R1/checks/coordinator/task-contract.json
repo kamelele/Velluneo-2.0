@@ -1,0 +1,15 @@
+{
+  "revision": "SC09-SB01 routing refinement R1",
+  "owner_instruction": "no to zwerfyikuj popraw wszystko rooting i tak dalej ale bez zmiany płytki na nowa",
+  "coordinator": "/root",
+  "sole_native_writer": "/root/sb01_refine_cad_writer",
+  "diagnostic_actors": ["/root/sb01_refine_diagnostic", "/root/sb01_refine_placement_check"],
+  "baseline_board_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "immutable_design": {"controller": "LYT1603D", "positions": 19, "pins": 46, "nets": 11, "outline_mm": [51.2, 33], "layers": 2},
+  "allowed": ["Justified improvements to routes on existing board", "Exact U1 MPN metadata correction to selected tube packaging in PCB/SCH", "Source-bound evidence and refreshed manufacturing files after freeze"],
+  "forbidden": ["SB02/controller/topology adoption", "New components or changed values", "Larger board", "Unreviewed pad shrink or global spacing relaxation", "Fabricated human approval, measurements or supplier action", "main change"],
+  "native_write_scope": "work/sc09-sb01-refine/candidate only; canonical integration follows source freeze",
+  "required_checks": ["Independent current graph and actual MPN fields", "Fresh ERC and DRC including schematic parity", "Strict 55-pair saved-copper comparison with truthful intrinsic failures", "Bounded finite-package/escape assessment separate from strict report", "Quiet/force topology and body reservations", "Actual manufacturing geometry and source/artifact hashes", "Four distinct read-only final roles on same frozen packet"],
+  "baseline_backup": "outputs/SC09_SB01_przed_korekta_routingu_2026-11-24",
+  "approval_scope": "Work authorized; no new fabrication, powered-test or product acceptance inferred"
+}

@@ -1,0 +1,38 @@
+{
+  "actor": "/root/sb01_refine_placement_check",
+  "board_sha256": "a66e97b16b16b1dc667aeb59bcfa512543c749aff0824d9455ca29513e223f19",
+  "scope": "Literal primary land spotchecks and pin-contact dimensions for four high-energy/compact packages; not fullassemblyqualification ornormativeinsulation approval.",
+  "primary_inputs": {
+    "work/compact09/capture-active/MB10S.pdf": "a46066843f6b010bffdb85fe3162573330e70bd481df3c5ef9000eeb59e6a77c",
+    "work/compact09/capture-active/US1J.pdf": "d50b2773c0300d97a77f5125419098c8130ecaf967202a44be2b182de8a15c1f",
+    "work/compact09/rdr-research/lytswitch-1_family_datasheet.pdf": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+    "work/sc09-simple/t1/7687709152-mfr-mirror.pdf": "fd6c5daeb38fc93bf408aa9a3aab9c2fcf478dce247a69fb7a2998bd9fa483c8"
+  },
+  "checks": [
+    {
+      "ref": "BR1",
+      "basis": "Diodes DS39045 Rev3-2 p4: MBS C2.50/X1.00/Y2.15/Y1outer7.50; rowspacing7.50-2.15=5.35, independently visually read primary.",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "ref": "D1",
+      "basis": "Diodes DS16008 Rev11-2 p4 US1A-US1M SMA: pads2.5x1.7, pitch4.0, gap1.5, independently visually read primary.",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "ref": "U1",
+      "basis": "PI LYTSwitch1 RevB July2016 p11 D08A solder references:1.45x.60, pitch1.27, oppositecentres5.45, independently visually read primary.",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "ref": "T1",
+      "basis": "Wuerth7687709152 primaryp1 landdrawing:5.4x2.9, outer12.8, pitch12.8-2.9=9.9; windingbody12.0+/-0.5square/H10.5max.",
+      "passed": true,
+      "findings": []
+    }
+  ],
+  "passed": true
+}

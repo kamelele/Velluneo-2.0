@@ -1,0 +1,45 @@
+{
+  "owner_requirement": "Owner explicitly accepts50x32mmPCB; keep fullmoduleheightabout20mm asdeclaredcontractestimate. NoenclosuredevelopmentinthisPCBtask.",
+  "hard_proposal_stop_envelope_mm": [
+    50,
+    32,
+    20
+  ],
+  "first_trial_body_packing_envelope_mm": [
+    45,
+    25,
+    19
+  ],
+  "state": "50x32PCBowneraccepted; approximately19.5mmmoduleheightcontractestimate; realassemblyandlampfitunmeasured",
+  "capsule_model": "45x25x19rectangularmodule requires about31.4mm diagonal cross-section when45mmaxis vertical, before enclosure insulation/assembly clearance. Proposed test cavity34mmIDx48mmlongis an engineeringreferenceonly, not actualbulbgeometry.",
+  "reference_RDR_board_mm": {
+    "width_dimensioned": 22,
+    "length_drawing_estimate": 50.1,
+    "length_estimate_uncertainty": 0.5
+  },
+  "body_only_fit": "reference/body-packing-study.json fits45x25withC6formedleads and5mmventreserve; excludes truepads/THpinconflicts/routing/electricalspacing/thermalaccess.",
+  "placement_stop_conditions": [
+    "NoexactT1finishedbobbinpincoordinates/leadforming drawing",
+    "Noall47physicalpad/courtyard andelectricalspacingfit",
+    "Noowneracceptedactualcavity/spacebudget",
+    "Failuretomaintaincompactbudget; stopandredesignnotautomaticboardgrowth"
+  ],
+  "no_enclosure_development_required": "Only actual available internal volume and mounting/access boundaries needed before placement; no fullhousingCADneeded.",
+  "historical_earlier_proposal_mm": [
+    50,
+    25,
+    20
+  ],
+  "current_actual_PCB_mm": [
+    50,
+    32,
+    1.6
+  ],
+  "current_declared_module_mm": [
+    50,
+    32,
+    19.5
+  ],
+  "current_decision": "owner-size-50x32-approval.json",
+  "ROUTE01_notice": "Historical baseline record. Current routing/thermal/spatial authority: layout-revision.json, routing-improvement-basis.json, selected spatial-constraints.json, power-supply-specification.ROUTE01.json and thermal-and-spacing-basis.ROUTE01.md. No previous copper-based temperature estimate qualifies current layout."
+}

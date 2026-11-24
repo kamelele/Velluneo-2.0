@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "errors": [
+    {
+      "type": "missing_stale_intent_approval",
+      "message": "Intent lacks current human approval evidence"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.EXE",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\.work\\connectivity-netlist.xml",
+        "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\Velluneo-2.0\\hardware\\E27\\variants\\integrated-shade\\SC09_compact\\SC09_compact.kicad_sch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "08:54:20: Error: Directory 'C:\\Users\\kamil\\AppData' couldn't be created (error 183: Nie mo?na utworzy? pliku, kt\ufffdry ju? istnieje.)\n"
+    }
+  ],
+  "intent_digest": "020301adebb799bb6345876d549381e4a5e4b68ae037838d0e08c10d137ce57e",
+  "intent_revision": "SC09-SB01",
+  "physical_pins": 46,
+  "intended_nets": 11,
+  "no_connects": 0,
+  "limitations": [
+    "Graph agreement is not functional, part/MPN, PCB or physical isolation validation.",
+    "Approval fields record evidence; hashes do not authenticate a human."
+  ],
+  "intent_sha256": "db3f4839353262c569ebb89a97cc20fbd1c7449f573bff5e604fff6d7293db62",
+  "export_sha256": "92c246098701d8009faa6f830bac25aea8ee6cb6a61090403f8d369da444991c",
+  "export_tool": "Eeschema 10.0.6",
+  "toolkit": {
+    "kind": "installed",
+    "lock_sha256": "a8599540aabc65cc4970c6893cb622d4ca907a93a82692c0362b1cee9f8a279d",
+    "archive_sha256": "15a2789b06afb014f9dc166ce6da01a903c3b422b5c1b37b2a96581b218784b4",
+    "candidate_accepted": true,
+    "kicad_version": "10.0.6",
+    "manifest_sha256": "05935449180ad59d486071675d9465ad4d15f1f66f3e17d1c1cb9cfb1efdc822",
+    "package_version": "0.7.1-preview.3",
+    "publication_ready": false,
+    "ruleset_version": "0.7.1"
+  }
+}

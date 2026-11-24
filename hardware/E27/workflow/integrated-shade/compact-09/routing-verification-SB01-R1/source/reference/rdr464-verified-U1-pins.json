@@ -1,0 +1,66 @@
+{
+  "scope": "Verified U1 pinmap and net topology proposal only; NOT complete intended-connectivity graph or owner approval",
+  "basis": "LYTdatasheetRevBpage2Fig4 visuallyinspected;RDR464page7actualschematic visuallyinspected",
+  "pinmap_U1": {
+    "1": "BP",
+    "2": "M",
+    "3": "FB",
+    "4": "DRAIN",
+    "5": "SOURCE",
+    "6": "SOURCE",
+    "7": "SOURCE",
+    "8": "SOURCE"
+  },
+  "all8pinsphysical": true,
+  "sourcepinsalljoined": true,
+  "proposed_nets": {
+    "BP": [
+      "U1.1",
+      "C5.1"
+    ],
+    "M": [
+      "U1.2",
+      "R4.1",
+      "R7.1"
+    ],
+    "SW_SOURCE": [
+      "U1.5",
+      "U1.6",
+      "U1.7",
+      "U1.8",
+      "C5.2",
+      "R4.2",
+      "R5.1",
+      "R6.1"
+    ],
+    "INDUCTOR_IN": [
+      "U1.3",
+      "R5.2",
+      "R6.2",
+      "T1.8",
+      "D1.K"
+    ],
+    "LED_PLUS": [
+      "T1.1",
+      "C6.+",
+      "R7.2",
+      "R8.1",
+      "OUTPUT.+"
+    ],
+    "BUS_FILTERED": [
+      "U1.4",
+      "L1.2",
+      "C4.1"
+    ],
+    "DC_RETURN": [
+      "BR1.-",
+      "C1.2",
+      "C4.2",
+      "D1.A",
+      "C6.-",
+      "R8.2",
+      "OUTPUT.-"
+    ]
+  },
+  "not_verified": "BR1exactnumericphysicalpins;diodeA/Knumericpadmapping;replacementpartsandentirephysical112pin-styleintentnewmap. Passivepin1/2orientationproposal only. T1 pins1/8frommanufacturerreferencebuild,notgenericreplacement."
+}

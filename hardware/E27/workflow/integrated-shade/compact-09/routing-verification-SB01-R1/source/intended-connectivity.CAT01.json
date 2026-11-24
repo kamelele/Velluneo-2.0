@@ -1,0 +1,502 @@
+{
+  "schema_version": 1,
+  "revision": "SC09-CAT01",
+  "basis": "OnlyT1physicalterminalmappingchanges8→2andremovesunwound4;selectedstockL1/R7keep2terminalnonpolarfunctions. Expectedgraphdefinedfrommanufacturerterminaldataandapprovedfunctionalbaselinebeforecapture.",
+  "basis_sources": [
+    {
+      "path": "source-basis.CAT01.json",
+      "sha256": "beabb0ce49b0bd27cfa061045dcc83fa5fcb260c983f4a4993b88bf1f4594447"
+    },
+    {
+      "path": "bom-build.json",
+      "sha256": "8daede552d32517f6af42ace3ef049bb9a9122670a2fe401ae9d716c727023bd"
+    },
+    {
+      "path": "owner-catalogue-only-request.json",
+      "sha256": "028a5bf700eda3480731e0badaff65c21b63f561a4f8876749b7448f95ed714f"
+    }
+  ],
+  "components": [
+    {
+      "ref": "J1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RF1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RV1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "BR1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "L1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "T1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R7",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R8",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R9",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "id": "AC_L",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "1"
+        },
+        {
+          "ref": "RF1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "AC_N",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "2"
+        },
+        {
+          "ref": "RV1",
+          "pin": "2"
+        },
+        {
+          "ref": "BR1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "id": "AC_FUSED",
+      "pins": [
+        {
+          "ref": "RF1",
+          "pin": "2"
+        },
+        {
+          "ref": "RV1",
+          "pin": "1"
+        },
+        {
+          "ref": "BR1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "BUS_RECT",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "1"
+        },
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "L1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "DC_RETURN",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "3"
+        },
+        {
+          "ref": "C1",
+          "pin": "2"
+        },
+        {
+          "ref": "C4",
+          "pin": "2"
+        },
+        {
+          "ref": "D1",
+          "pin": "2"
+        },
+        {
+          "ref": "C6",
+          "pin": "2"
+        },
+        {
+          "ref": "R8",
+          "pin": "2"
+        },
+        {
+          "ref": "R9",
+          "pin": "2"
+        },
+        {
+          "ref": "J2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "BUS_FILTERED",
+      "pins": [
+        {
+          "ref": "L1",
+          "pin": "2"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "id": "BP",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "1"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "M",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "2"
+        },
+        {
+          "ref": "R4",
+          "pin": "1"
+        },
+        {
+          "ref": "R7",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "FB_INDUCTOR",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "3"
+        },
+        {
+          "ref": "R5",
+          "pin": "2"
+        },
+        {
+          "ref": "R6",
+          "pin": "2"
+        },
+        {
+          "ref": "D1",
+          "pin": "1"
+        },
+        {
+          "ref": "T1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "SW_SOURCE",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "5"
+        },
+        {
+          "ref": "U1",
+          "pin": "6"
+        },
+        {
+          "ref": "U1",
+          "pin": "7"
+        },
+        {
+          "ref": "U1",
+          "pin": "8"
+        },
+        {
+          "ref": "C5",
+          "pin": "2"
+        },
+        {
+          "ref": "R4",
+          "pin": "2"
+        },
+        {
+          "ref": "R5",
+          "pin": "1"
+        },
+        {
+          "ref": "R6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "LED_PLUS",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "1"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "R7",
+          "pin": "2"
+        },
+        {
+          "ref": "R8",
+          "pin": "1"
+        },
+        {
+          "ref": "R9",
+          "pin": "1"
+        },
+        {
+          "ref": "J2",
+          "pin": "1"
+        }
+      ]
+    }
+  ],
+  "no_connects": [],
+  "barriers": [],
+  "empty_design_reason": null,
+  "approval": null
+}

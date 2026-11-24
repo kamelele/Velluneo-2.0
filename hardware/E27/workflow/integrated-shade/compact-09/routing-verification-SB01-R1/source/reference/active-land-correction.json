@@ -1,0 +1,223 @@
+{
+  "task": "Correct and disambiguate manufacturer reference land dimensions before footprint generation",
+  "actual_actor": "/root/sc09_active_parts",
+  "role": "Research implementer targeted correction; not independent approval of future footprint",
+  "date": "2026-11-21",
+  "base_report": "active-parts-report.json",
+  "base_report_sha256": "10790e30a541a8b2f05dbf62307100dc5d4be431cf4044e1805b820025c924aa",
+  "base_report_preserved_unchanged": true,
+  "correction_authority": "Fresh visual reinspection of actual manufacturer page11LYT and page4MB10S, prompted by root observation. Original U1 reference land interpretation was wrong; this addendum supersedes ONLY those geometry fields. No graph or approved-source changes.",
+  "coordinate_convention": {
+    "units": "mm",
+    "view": "Top/component-side view before any board-side transform",
+    "origin": "Package centre",
+    "x_positive": "right",
+    "y_positive": "down",
+    "rotation": "Specified canonical footprint orientation below; on-bottom mirroring must be done by native CAD placement, not renumbering pads."
+  },
+  "sources": [
+    {
+      "ref": "U1",
+      "document": "LYTSwitch-1 family RevBJuly2016",
+      "primary_page": 11,
+      "primary_pdf": "../rdr-research/lytswitch-1_family_datasheet.pdf",
+      "primary_pdf_sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "visually_reinspected_image": "LYT-p11.png",
+      "image_sha256": "f023350f9c0b793547500615fccb9949dbd1bc56529cb26adae40e80d4b53abb"
+    },
+    {
+      "ref": "BR1",
+      "document": "DiodesMB10S DS39045Rev3-2March2017",
+      "primary_pages": [
+        1,
+        4
+      ],
+      "primary_pdf": "MB10S.pdf",
+      "primary_pdf_sha256": "a46066843f6b010bffdb85fe3162573330e70bd481df3c5ef9000eeb59e6a77c",
+      "visually_reinspected_images": [
+        "MB10S-p1.png",
+        "MB10S-p4.png"
+      ]
+    },
+    {
+      "ref": "D1",
+      "document": "DiodesUS1A-US1M DS16008Rev11-2December2014",
+      "primary_pages": [
+        1,
+        4
+      ],
+      "primary_pdf": "US1J.pdf",
+      "primary_pdf_sha256": "d50b2773c0300d97a77f5125419098c8130ecaf967202a44be2b182de8a15c1f",
+      "visually_reinspected_images": [
+        "US1J-p1.png",
+        "US1J-p4.png"
+      ]
+    }
+  ],
+  "U1": {
+    "mpn": "LYT1603D-TL",
+    "superseded_fields": {
+      "reference_pad_mm.row_centres": 4.0,
+      "reference_pad_mm.overall_row_span": 5.45
+    },
+    "correct_interpretation": "4.00mm is inner land-edge gap.5.45mm dimension terminates at land centre crosshairs. Land length along row-separation axis is1.45mm.Therefore centre-to-centre=5.45,innergap=5.45-1.45=4.00,outerspan=5.45+1.45=6.90mm.",
+    "row_centre_separation_mm": 5.45,
+    "inner_land_gap_mm": 4.0,
+    "outer_land_span_mm": 6.9,
+    "pad_size_xy_mm": [
+      1.45,
+      0.6
+    ],
+    "pin_pitch_mm": 1.27,
+    "orientation": "Manufacturer page11 top-view outline rotated90degreesclockwise for canonical leftpins1to4top-to-bottom/rightpins5to8bottom-to-top.",
+    "pad_centres_xy_mm": {
+      "1": [
+        -2.725,
+        -1.905
+      ],
+      "2": [
+        -2.725,
+        -0.635
+      ],
+      "3": [
+        -2.725,
+        0.635
+      ],
+      "4": [
+        -2.725,
+        1.905
+      ],
+      "5": [
+        2.725,
+        1.905
+      ],
+      "6": [
+        2.725,
+        0.635
+      ],
+      "7": [
+        2.725,
+        -0.635
+      ],
+      "8": [
+        2.725,
+        -1.905
+      ]
+    },
+    "pad_functions": {
+      "1": "BP",
+      "2": "M",
+      "3": "FB",
+      "4": "DRAIN",
+      "5": "SOURCE",
+      "6": "SOURCE",
+      "7": "SOURCE",
+      "8": "SOURCE"
+    },
+    "union_of_pads_bounds_mm": {
+      "xmin": -3.45,
+      "xmax": 3.45,
+      "ymin": -2.205,
+      "ymax": 2.205
+    },
+    "package_nominal_or_maxima": {
+      "body_xy_BSC_mm": [
+        3.9,
+        4.9
+      ],
+      "overall_lead_span_x_BSC_mm": 6.0,
+      "seated_height_max_mm": 1.75
+    },
+    "placement_note": "Actual landspan6.9mm exceeds nominal6mmleadspan; courtyard must include full land union plus body and assembly clearances. No courtyard,mask/paste or fabrication rules selected by this addendum."
+  },
+  "BR1": {
+    "mpn": "MB10S-13",
+    "orientation": "Exactly manufacturerpage1topview:upperleft3DC−,upperright1DC+,lowerleft4AC,lowerright2AC;notchright.",
+    "pad_size_xy_mm": [
+      1.0,
+      2.15
+    ],
+    "column_centre_separation_mm": 2.5,
+    "row_centre_separation_mm": 5.35,
+    "row_centre_derivation": "Y1overall7.50 minusYpadlength2.15 =5.35mm, givingy=±2.675mm. Ccolumncentres2.50 givesx=±1.25mm.",
+    "pad_centres_xy_mm": {
+      "1": [
+        1.25,
+        -2.675
+      ],
+      "2": [
+        1.25,
+        2.675
+      ],
+      "3": [
+        -1.25,
+        -2.675
+      ],
+      "4": [
+        -1.25,
+        2.675
+      ]
+    },
+    "pad_functions": {
+      "1": "DC+",
+      "2": "AC~",
+      "3": "DC−",
+      "4": "AC~"
+    },
+    "union_of_pads_bounds_mm": {
+      "xmin": -1.75,
+      "xmax": 1.75,
+      "ymin": -3.75,
+      "ymax": 3.75
+    },
+    "body_max_xy_mm": [
+      4.95,
+      4.1
+    ],
+    "overall_lead_span_y_max_mm": 7.0,
+    "body_height_A2_max_mm": 2.7,
+    "standoff_A1_max_mm": 0.2,
+    "conservative_A1plusA2_height_mm": 2.9,
+    "placement_note": "Body width4.95exceeds padunionwidth3.5; padsheight7.5exceeds leadspan7.0. Courtyard must include both, not only pads or the obsolete6.2mmreservation."
+  },
+  "D1": {
+    "mpn": "US1J-13-F",
+    "orientation": "Cathode-band end at left, assigned projectpad1. Manufacturer polaritybanddefinesidentity; manufacturerdoesnotnumberterminals.",
+    "pad_size_xy_mm": [
+      2.5,
+      1.7
+    ],
+    "pad_centres_xy_mm": {
+      "1": [
+        -2.0,
+        0.0
+      ],
+      "2": [
+        2.0,
+        0.0
+      ]
+    },
+    "pad_functions": {
+      "1": "CathodeK",
+      "2": "AnodeA"
+    },
+    "centre_separation_mm": 4.0,
+    "inner_gap_mm": 1.5,
+    "outer_span_mm": 6.5,
+    "body_max_xy_mm": [
+      4.6,
+      2.92
+    ],
+    "overall_lead_span_x_max_mm": 5.59,
+    "seated_height_J_max_mm": 2.4,
+    "placement_note": "Manufacturerlandwidth1.7isless thanbodywidth2.92; courtyard must include body and lands plus assemblyprocess allowances."
+  },
+  "checks": {
+    "dimension_arithmetic": "Recomputed independently in this script with assertions",
+    "no_numeric_pin_identity_change": true,
+    "no_approved_graph_change": true,
+    "native_footprint_or_DRC_run": false,
+    "cad_written": false
+  },
+  "required_root_action": "Use corrected U1landgeometry before footprintgeneration; retain oldreporthash as historicalinput and add this explicitcorrection to activegeometrybasis. Check resultingnativepads against these physical identities and sourcepage drawings. Do not treat this implementer handoff as independentfootprintapproval."
+}

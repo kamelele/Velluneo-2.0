@@ -1,0 +1,1118 @@
+{
+  "task": "SC09-A1 passive footprint source and engineer choices",
+  "actual_actor": "/root/sc09_passive_parts",
+  "date": "2026-11-21",
+  "allowedwrites": "work/compact09/footprint-basis/**only",
+  "input_BOM": "hardware/E27/variants/integrated-shade/SC09_compact/bom-proposal.A1.json",
+  "input_BOM_sha256": "99f8bb7ef6c92f759304b146b912bb800e8be83a031833910da27359e0f9b448",
+  "units": "mm",
+  "customer_CAD_changed": false,
+  "manufacturer_vs_choice": "Dimensions/landsidentifiedpersource. Finishedhole/padchoicesforTHT,courtyardsandmanualformingareengineerproposals;noclaimofphysicalqualificationorfabricatortolerances. SMDlandchoicesexplicitlylabelledmanufacturerpoint/rangeorengineerchoice.",
+  "courtyards": "MechanicalassemblycourtyardsONLY,notvoltageclearanceorcreepagerules. .25SMD/.5THTcourtyardmarginchosentoavoidbody/padcollisions;mustseparatelyapplyelectricalmatrix.",
+  "drill_semantics": "DesirednominalfinishedPTHdiameter,notatoolbitcompensationinstruction. Fabricatoractualfinishedholetoleranceandplatingmustbechecked;do notforcepartstoholetolerances.",
+  "critical_C6_finding": "Panasonic says avoidconductorsundercapacitor,sleeveisnotinsulation,andventdirectionmustbeclear. Do notassumefullbottomsideundercanavailableforSMD/traces. A qualifiedinsulatingtraydeviationwouldneedseparatebasisandheightbudget.",
+  "parts": [
+    {
+      "refs": [
+        "C1"
+      ],
+      "mpn": "B32529E6473K189",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -2.5,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": 1.0,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            2.5,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": 1.0,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -3.65,
+        -2.25,
+        3.65,
+        2.25
+      ],
+      "courtyard_bbox_xy_mm": [
+        -4.15,
+        -2.75,
+        4.15,
+        2.75
+      ],
+      "planned_max_above_PCB_mm": 10.0,
+      "sources": [
+        "TDK_C1",
+        "TDK_C1_series"
+      ],
+      "design_basis": "P5/bodyfrommanufacturer;1.0finishedhole/2.0padand.5mmstand-off/.5courtyardareengineeringmanualprototypechoices. Nominalcasepitchwithgentlefreeleadadjustment,noepoxystress.",
+      "notes": [
+        "Noacross-lineXratinginferred. Actualfabholetolerancesandpartleadformingneedassemblycheck."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "C4"
+      ],
+      "mpn": "B32671P6154K000",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -5.0,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            5.0,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -6.5,
+        -3,
+        6.5,
+        3
+      ],
+      "courtyard_bbox_xy_mm": [
+        -7,
+        -3.5,
+        7,
+        3.5
+      ],
+      "planned_max_above_PCB_mm": 12.5,
+      "sources": [
+        "TDK_C4"
+      ],
+      "design_basis": "ManufacturerP10±.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
+      "notes": [],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "C5"
+      ],
+      "mpn": "CL21B475KAFNNNE",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -1.0,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            1.0,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -1.05,
+        -0.675,
+        1.05,
+        0.675
+      ],
+      "courtyard_bbox_xy_mm": [
+        -1.75,
+        -1.0,
+        1.75,
+        1.0
+      ],
+      "planned_max_above_PCB_mm": 1.35,
+      "sources": [
+        "Samsung_C5"
+      ],
+      "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at±1.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
+      "notes": [
+        "Catalogmanualsolder0201..1206:350Cmax,preheat>=60s,contact<=3s,deltaT<=190C;actualprocessrequiresvalidation.",
+        "Do not present numericland as a Samsung recommendation."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "R4"
+      ],
+      "mpn": "ERJ-6ENF1242V",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -1.15,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.1,
+            1.4
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            1.15,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.1,
+            1.4
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -1.05,
+        -0.675,
+        1.05,
+        0.675
+      ],
+      "courtyard_bbox_xy_mm": [
+        -1.95,
+        -0.95,
+        1.95,
+        0.95
+      ],
+      "planned_max_above_PCB_mm": 0.65,
+      "sources": [
+        "Panasonic_R4"
+      ],
+      "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers±1.15;courtyard.25frompad/bodyunion.",
+      "notes": [],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "R5"
+      ],
+      "mpn": "RL1206FR-7W0R68L",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -1.6,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            1.6,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -1.6,
+        -0.85,
+        1.6,
+        0.85
+      ],
+      "courtyard_bbox_xy_mm": [
+        -2.35,
+        -1.1,
+        2.35,
+        1.1
+      ],
+      "planned_max_above_PCB_mm": 0.65,
+      "sources": [
+        "Yageo_R5_R8_R9"
+      ],
+      "design_basis": "Exactmanufacturerrecommended1206reflowlands;manualprototypeuseofsamegeometryisengineeringprocesschoice. Court.25frommaxbody/padunion.",
+      "notes": [
+        "ReservePCBthermalcopperperactualsensecurrent;do not assume.5Wwithtinyisolatedpads."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "R6"
+      ],
+      "mpn": "CRCW12063R65FKEA",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -1.275,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.05,
+            1.8
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            1.275,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.05,
+            1.8
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -1.65,
+        -0.875,
+        1.65,
+        0.875
+      ],
+      "courtyard_bbox_xy_mm": [
+        -2.05,
+        -1.15,
+        2.05,
+        1.15
+      ],
+      "planned_max_above_PCB_mm": 0.6,
+      "sources": [
+        "Vishay_R6"
+      ],
+      "design_basis": "ExactVishayCRCW1206reflowlandsG1.5,Y1.05,X1.8,Z3.6. Court.25frombody/padunion. Manualuseisspecificprocesschoice.",
+      "notes": [],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "R8",
+        "R9"
+      ],
+      "mpn": "RC1206FR-0768KL",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -1.6,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            1.6,
+            0
+          ],
+          "kind": "smd",
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": null,
+          "shape": "rect",
+          "layers": [
+            "F.Cu",
+            "F.Paste",
+            "F.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -1.6,
+        -0.85,
+        1.6,
+        0.85
+      ],
+      "courtyard_bbox_xy_mm": [
+        -2.35,
+        -1.1,
+        2.35,
+        1.1
+      ],
+      "planned_max_above_PCB_mm": 0.65,
+      "sources": [
+        "Yageo_R5_R8_R9"
+      ],
+      "design_basis": "Exactmanufacturerrecommended1206reflowlands;manualprototypeusesamegeometry. Court.25frommaxbody/padunion.",
+      "notes": [
+        "Worstdeclared90Vperresistor.12276W;measurelocaltemperatureandcheckderating. Manufacturerthermalguideadvisessolderjoint<=110Cgenerally;donotinfer.25Wcontinuouslyatalltemperatures."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "L1"
+      ],
+      "mpn": "RL-5480-3-3300",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -2.5019,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": 1.2,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            2.5019,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": 1.2,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -5.4,
+        -5.4,
+        5.4,
+        5.4
+      ],
+      "courtyard_bbox_xy_mm": [
+        -5.9,
+        -5.9,
+        5.9,
+        5.9
+      ],
+      "planned_max_above_PCB_mm": 11.93,
+      "sources": [
+        "Renco_L1"
+      ],
+      "design_basis": "ManufacturerF.197inleadformingpitch;bodydiammax(.375+.050)in=10.795mmrounded10.8,B11.43. Two1.2finishedholes/2.3pads/.5stand-off/.5courtyardareengineeringchoices.",
+      "notes": [
+        "Wire.8128mmTYPnotguaranteedmax;actualsampleandformingjigrequired.",
+        "Do not useC=.375inaspinpitch:itisminimumshortleadlength9.525mm.",
+        "Circlebody/courtyardmaybemodeledascirclewiththegivenboundingbox;nonpolar."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "RV1"
+      ],
+      "mpn": "V275LA4P",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -2.5,
+            -1.25
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            2.5,
+            1.25
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -4.5,
+        -2.8,
+        4.5,
+        2.8
+      ],
+      "courtyard_bbox_xy_mm": [
+        -5,
+        -3.3,
+        5,
+        3.3
+      ],
+      "planned_max_above_PCB_mm": 15.0,
+      "sources": [
+        "Littelfuse_RV1"
+      ],
+      "design_basis": "Nominalstagger5x2.5frommanufacturer;1.1holes/2.1padsandformingjigtothenominalpairareengineeringchoices. Reserve3mmbetweenmanufacturersseatingplaneandPCBforgentleleadforming=>max15mmabovePCB.",
+      "notes": [
+        "Manufacturerrawspacinge4..6/e1=1.5..3.5iswiderthanordinaryholeinsertionclearance;formlongfreeleadswithsupportedcoating,notforcebody.",
+        "3mmstand-offandbendpositionareengineeringreserves,nopart-specificmanufacturerbendminimumfound.",
+        "Finishedas-builtleadformmustfitcourtyardandheight;coulduselessstand-offonlyafterevidence."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "R7"
+      ],
+      "mpn": "VR25000003903FR500",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -6.25,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": 0.9,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            6.25,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": 0.9,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -3.75,
+        -1.25,
+        3.75,
+        1.25
+      ],
+      "courtyard_bbox_xy_mm": [
+        -7.75,
+        -1.75,
+        7.75,
+        1.75
+      ],
+      "planned_max_above_PCB_mm": 3.5,
+      "sources": [
+        "Vishay_R7"
+      ],
+      "design_basis": "Horizontalmanualleadform:1mmbodyundersideclearance;L2max7.5;onbothendssupportedstraight1.5then1.0centerlinebendradius=>12.5pitch. Drill.9/pad2.0/.5courtyardareengineeringchoices.",
+      "notes": [
+        "Noquantifiedmanufacturerminimumleadbenddistancefound. Do not claim1.5/1.0isvendorapproved.",
+        "Actualcoil/resistorheatingandcase/sealforcesrequireprototypeverification."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "RF1"
+      ],
+      "mpn": "FW20A10R0JA",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            -9.0,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            9.0,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        -6,
+        -3,
+        6,
+        3
+      ],
+      "courtyard_bbox_xy_mm": [
+        -10.55,
+        -3.5,
+        10.55,
+        3.5
+      ],
+      "planned_max_above_PCB_mm": 7.0,
+      "sources": [
+        "Bourns_RF1"
+      ],
+      "design_basis": "Defaultconservativehorizontalform:P18=bodyL12+2*(2mmstraight+1mmcenterlinebendradius);body1mmoffPCB. Finishedhole1.1,pad2.1,.5courtyardareengineeringchoices.",
+      "notes": [
+        "Fullfootprint21.1x7mm,largerthan12x6body-onlystudy.",
+        "NoFW-specificbendminimumfound;supportfreeleadwithfixtureandvalidatefusing/abnormalthermalbehavior."
+      ],
+      "mechanical_keepouts": [],
+      "electrical_clearance_claim": false
+    },
+    {
+      "refs": [
+        "C6"
+      ],
+      "mpn": "EEUFS2A151",
+      "units": "mm",
+      "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            0,
+            -2.5
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": 1.2,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            0,
+            2.5
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": 1.2,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "max_body_bbox_xy_mm": [
+        4.0,
+        -6.5,
+        26.0,
+        6.5
+      ],
+      "courtyard_bbox_xy_mm": [
+        -1.65,
+        -7.0,
+        31.5,
+        7.0
+      ],
+      "planned_max_above_PCB_mm": 13.5,
+      "sources": [
+        "Panasonic_C6",
+        "Panasonic_C6_mount"
+      ],
+      "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5±.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y±2.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
+      "notes": [
+        "Pin1positive,pin2negative;verifynegativebodyband/positiveleadbeforeforming.",
+        "ManufacturerdoesNOTsupplythishorizontalformingradius/offset;2.5straight/1.5bend/.5supportareexplicitengineeringchoices,notqualifiedmanufacturerforming.",
+        "Neednonconductivesupport/compatibleadhesive;morethan1/3sealopen;nohalogen/chloroprene,avoidlowmolecularsiloxane. Noactualadhesiveselectedhere.",
+        "Vinylsleeveisnotanelectricalbarrier;canmustbeisolatedfromcathode/otherconductors.",
+        "No numericalmanufacturerminbendradiusorsealtobenddistancefound;donotfabricateone."
+      ],
+      "mechanical_keepouts": [
+        {
+          "id": "C6_BODY_UNDER",
+          "bbox_xy_mm": [
+            3.5,
+            -7,
+            26.5,
+            7
+          ],
+          "layers": [
+            "F.Cu",
+            "B.Cu"
+          ],
+          "tracks": false,
+          "vias": false,
+          "zones": false,
+          "components": false,
+          "basis": "ConservativeimplementationofPanasonicavoidcircuitrunsundercapacitorandcaseisolation;capsownpinsareoutsideprojection. Do nottreatbacksideasfreeSMDarea."
+        },
+        {
+          "id": "C6_VENT",
+          "bbox_xy_mm": [
+            26,
+            -7,
+            31.5,
+            7
+          ],
+          "min_free_distance_from_case_mm": 5.0,
+          "components": false,
+          "HV_or_high_current_wiring": false,
+          "basis": "Engineering5mmreserveexceedsmanufacturer2mmminimumforD10..16;freeventdirectionvolume,notonlydrawnrectangle."
+        }
+      ],
+      "electrical_clearance_claim": false
+    }
+  ],
+  "optional_variants": [
+    {
+      "ref": "RF1",
+      "variant_id": "RF1_UPRIGHT_FORM_P6p5",
+      "status": "Optionalengineercompactmanualform,notsampledormanufacturerqualified",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            0,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            6.5,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "body_bbox_xy_mm": [
+        -3,
+        -3,
+        3,
+        3
+      ],
+      "courtyard_bbox_xy_mm": [
+        -3.5,
+        -3.5,
+        8.05,
+        3.5
+      ],
+      "body_z_mm": [
+        0.5,
+        12.5
+      ],
+      "max_lead_arch_z_mm": 15.35,
+      "planned_full_assembly_with_1p6PCB_2p7bottom_mm": 19.65,
+      "forming": "Bodyaxisvertical,pin1underbody,pin2returnlegX6.5;topwireleavesbody1.5mmstraightthenR1.0centerlinebendsacrossanddown. .7mmmaxwireincludedinheight. Supportleadwhileforming,nobodytension.",
+      "clearance_note": "Returnlegedgeapprox3.15mmfromsideofD6body;thisisnotvalidatedelectricalcreepageorratedcoatinginsulation. Checkactualvoltage/stressrulesandfusibleabnormalbehavior. Mechanicalprototypereviewneededbeforeadopting.",
+      "reason": "Horizontalfullcourtyard21.1x7maypreventcompactpacking;uprightfullcourtyard11.55x7tradesheightforarea. Fits20mmstoponlyconditionallywithspecificbottomheight;noenclosurefitclaim."
+    },
+    {
+      "ref": "RF1",
+      "variant_id": "RF1_UPRIGHT_FORM_P8",
+      "status": "Optionalengineercompactmanualform,notsampledormanufacturerqualified",
+      "pads": [
+        {
+          "number": "1",
+          "center_mm": [
+            0,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "rect",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        },
+        {
+          "number": "2",
+          "center_mm": [
+            8,
+            0
+          ],
+          "kind": "thru_hole",
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": 1.1,
+          "shape": "circle",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ]
+        }
+      ],
+      "body_bbox_xy_mm": [
+        -3,
+        -3,
+        3,
+        3
+      ],
+      "courtyard_bbox_xy_mm": [
+        -3.5,
+        -3.5,
+        9.55,
+        3.5
+      ],
+      "body_z_mm": [
+        0.5,
+        12.5
+      ],
+      "max_lead_arch_z_mm": 15.35,
+      "planned_full_assembly_with_1p6PCB_2p7bottom_mm": 19.65,
+      "forming": "Sameexplicitengineer.5mmbodystand-off/1.5mmstraighttop/1mmcenterlinebendradius;returnlegX8instead6.5. Leadarchmax15.35mm. Qualifiedfixture/sampleverificationneeded.",
+      "clearance_note": "Returnlegedgeapprox4.65mmfromsideofD6body,notvalidatedelectricalinsulation.",
+      "reason": "Horizontalfullcourtyard21.1x7maypreventcompactpacking;uprightfullcourtyard11.55x7tradesheightforarea. Fits20mmstoponlyconditionallywithspecificbottomheight;noenclosurefitclaim.",
+      "planned_full_assembly_with_1p6PCB_2p9bottom_mm": 19.85,
+      "requested_2mm_base_standoff_effect": "2mmstand-offinsteadof.5add1.5mm:leadarch16.85 +PCB1.6+bottom2.9 =21.35mm,exceeds20mmstop. Bodyheight14mmaloneomitsleadarch.",
+      "manufacturer_basis_limit": "6mmtwisttestisnotaminimumpermissionforcloserforming;vendorhasnotapprovedeitheruprightform. No3mmminimuminvented. At.5stand-off+1.6PCB,bottomsolderjointdistance~2.1mmfrombodymatchesdistanceonlyof2..2.5mmtest,butactualmanualheatprocessstillnotqualified."
+    }
+  ],
+  "sources": {
+    "TDK_C1": {
+      "url": "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529E6473K189",
+      "geometry": "Exactprimary7.3x4.5x9.5max/P5;seriesdrawingB32529P5±.4,d.5±.05mm. Freshseriesdownload403; primaryexactpageandmanufacturer-authoredseriesmirrorused."
+    },
+    "TDK_C1_series": {
+      "url": "https://product.tdk.com/system/files/dam/doc/product/capacitor/film/mkt/data_sheet/20/20/db/fc_2009/b32520_529.pdf",
+      "mirror": "https://datasheet4u.com/pdf-down/B/3/2/B32529-TDK.pdf",
+      "page": 2,
+      "kind": "Manufacturer-authoredseriesdrawing;mirrortransportnotnewmanufacturerqualification"
+    },
+    "TDK_C4": {
+      "url": "https://product.tdk.com/en/search/capacitor/film/snubbering_pfc/info?part_no=B32671P6154K000",
+      "series": "https://product.tdk.com/system/files/dam/doc/product/capacitor/film/mkp_mfp/data_sheet/20/20/db/fc_2009/mkp_b3267_p.pdf",
+      "geometry": "June2026primaryrecordinfit-research/addendum-parts.json:13x6x12max,P10±.4,d.6±.05mm"
+    },
+    "Samsung_C5": {
+      "url": "https://product.samsungsem.com/mlcc/CL21B475KAFNNN.do",
+      "catalog_url": "https://product.samsungsem.com/resources/file/product-catalog/MLCC_2512.pdf",
+      "local_file": "Samsung-MLCC.pdf",
+      "sha256": "99f87a705209ab4e097df75e0bdaf61cb7abd162b60e88fdb376d121f952e0b7",
+      "geometry": "2.00±.10 x1.25±.10 x1.25±.10mm. Catalogp40requiresappropriatepad/solderquantitybutdoesnotgiveexact2012numericlandtableininspectedsection."
+    },
+    "Panasonic_R4": {
+      "url": "https://industrial.panasonic.com/sa/products/pt/general-purpose-chip-resistors/models/ERJ6ENF1242V",
+      "land_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/DMM0000COL17.pdf",
+      "land_page": 1,
+      "land_revision": "24-Dec-2025",
+      "geometry": "0805genericERJlandexample:gap1.0..1.4,outer3.2..3.8,width.9..1.4mm; exactchosenpointisengineerchoicewithinrange."
+    },
+    "Yageo_R5_R8_R9": {
+      "url": "https://yageogroup.com/content/Resource%20Library/Product%20Guide-Catalog/yageo_PYu-R_Mount_10_19050818_343.pdf",
+      "local_file": "Yageo-mount.pdf",
+      "sha256": "591634ace247f61e9c6a263ca1ac98d7672fc163f5e87334c3460956f5c68b7b",
+      "page": 4,
+      "revision": "13-Feb-2018V10",
+      "land": "1206reflowA4.2,B2.2,C1.0,D1.5:two1x1.5padscenters±1.6. WavevariantA4.7B2.5C1.1D1.7isnotselected."
+    },
+    "Vishay_R6": {
+      "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "local_file": "../capture-passive/vishay-R6.pdf",
+      "sha256": "13a372e5b5f001ee517124d0a76a7697f523aaf94c68ae53e3220dcb2b2b5091",
+      "page": 9,
+      "revision": "14-Apr-2026",
+      "land": "CRCW1206reflowG1.50,Y1.05,X1.80,Z3.60:two1.05x1.80padscenters±1.275."
+    },
+    "Panasonic_C6": {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1255.pdf",
+      "page": 1,
+      "revision": "01-Sep-2025",
+      "geometry": "FS-A12.5x20:caseD12.5±.5,L20±2,P5±.5,leadd.6±.05mm; horizontalbend/supportnotdefinedbycatalog."
+    },
+    "Panasonic_C6_mount": {
+      "url": "https://industrial.panasonic.com/content/data/CP/PDF/S_Alm_A_cap_catalog_am.pdf",
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "revision": "28-Feb-2020",
+      "transport": "ReadprimaryfullPDFthroughwebtool;localdownloadtimeoutrecorded,notclaimedcachedsuccess",
+      "requirements": "D10..16ventminimum2mm;wepropose5mm. AvoidPCBconductorsundercapacitorandHV/currentwiringinventdirection; sleeveisnotinsulation. Supportleadsandavoidstressatseals. Noquantifiedminbendradiusorseal-to-benddistancefound. Manual<=350C/3s;no reflow;adhesivesmustleavemorethan1/3ofsealopen."
+    },
+    "Bourns_RF1": {
+      "url": "https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
+      "local_file": "../fit-research/FW.pdf",
+      "sha256": "84e4be4c20a74abd81846f893996eb07b7db068a94f6521eb458ed78c2924baa",
+      "pages": [
+        1,
+        2
+      ],
+      "geometry": "FW20AmaxL12,D6,leadd.65±.05mm; supplierleadformcustomizationofferedbutnotselected. Noquantifiedminimumpermittedmountingbendradius/distanceorverticalmountauthorizationfound. Page2terminal-strengthTWISTTESTbends90degreesapproximately6mmfrombody;thatisatestcondition,NOTanexplicitminimumformounting. Solder-heatTESTimmerseslead2..2.5mmfrombodyat260C±5for10±1s,notblanketmanualprocessapproval."
+    },
+    "Vishay_R7": {
+      "url": "https://www.vishay.com/docs/28907/vr25vr37vr68.pdf",
+      "local_file": "../capture-passive/vishay-R7.pdf",
+      "sha256": "eaffa53e04b875c64a4e5dd6c3dafa976d0fd667822632e6b9c8e01fbdaa3d7b",
+      "page": 8,
+      "geometry": "VR25Dmax2.5,L1max6.5,L2max7.5,d.58±.05mm; straightaxialR5packaging. Nofinishedleadformpitchesforourhorizontalmountprescribed."
+    },
+    "Littelfuse_RV1": {
+      "url": "https://www.littelfuse.com/assetdocs/varistors-la-datasheet?assetguid=f7c547ce-c2fa-4789-86cc-ec39a5060afb",
+      "local_visual_file": "../fit-research/LA2013.pdf",
+      "sha256": "15245ddc74a32929fe10fce74910da8af644aa89e2118471221f0eb2ac533454",
+      "page": 10,
+      "geometry": "V275LA4PmaxD9,thickness5.6,seatedA12; e4..6 ande1=1.5..3.5=>nominalstagger5x2.5. d.585..685. RawleadtoleranceNOTabsorbedbyordinary1.1mmholewithoutgentleforming."
+    },
+    "Renco_L1": {
+      "url": "https://www.cdiweb.com/datasheets/renco/rl-5480.pdf",
+      "local_file": "../fit-research/RL5480.pdf",
+      "sha256": "edc75e87196660b7fc568f4b7cda63692ffa4c80813a4176d6ce6a9e8c49406b",
+      "page": 1,
+      "geometry": "RL5480-3:A.375in(+.050wireexitallowance),B.450in,F.197in,wireE.032intyp. F=5.0038mm,notthe9.525mmCleadlength. ManufacturerexplicitlyallowsleadformingtoF; noF/Dwiretolerancesgiven."
+    }
+  },
+  "remaining": [
+    "Samsungexactnumericlandnotfoundininspectedcatalog:proposedpadisengineeringchoice.",
+    "Manufacturerpart-specificminbendradiiforC6/R7/RF1notfound;do notinvent.",
+    "THTactualsuppliedtolerance/leadforming/support/ventfixturesandthermalmeasurementsremainunqualified.",
+    "VoltageclearancesandphysicalfitmustbeverifiedonactualCAD;thisreportdoesnotestablish45-50x25fit.",
+    "T1excludedfromassignment.",
+    "One attempted coordinationmessagewasautomaticallyrejectedforomittedaction/payloadvisibility;notretried,boundedlocalworkcontinued."
+  ]
+}
