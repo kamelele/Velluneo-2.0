@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-24",
+  "status": "BUDGET_ESTIMATE_NOT_CURRENT_QUOTE",
+  "scope": "One power PCB: exact selected electronics, MOQ excess, TME+DK prepaid shipping. Excludes barePCB/LED/consumables/labour.",
+  "known_PLN_net": "45.650",
+  "C6_USD_net": "1.89",
+  "scenarios": [
+    {
+      "USD_PLN_budget_assumption": "4.00",
+      "not_live_exchange_rate": true,
+      "parts_net_PLN": "53.2100",
+      "parts_gross_PLN": "65.45",
+      "total_gross_PLN_shipping80": "157.63",
+      "total_gross_PLN_shipping98_40": "176.03"
+    },
+    {
+      "USD_PLN_budget_assumption": "4.50",
+      "not_live_exchange_rate": true,
+      "parts_net_PLN": "54.1550",
+      "parts_gross_PLN": "66.61",
+      "total_gross_PLN_shipping80": "158.79",
+      "total_gross_PLN_shipping98_40": "177.19"
+    },
+    {
+      "USD_PLN_budget_assumption": "5.00",
+      "not_live_exchange_rate": true,
+      "parts_net_PLN": "55.1000",
+      "parts_gross_PLN": "67.77",
+      "total_gross_PLN_shipping80": "159.95",
+      "total_gross_PLN_shipping98_40": "178.35"
+    }
+  ],
+  "practical_budget_gross_PLN": "180",
+  "budget_meaning": "Rough parts+shipping budget, not price guarantee; final supplier checkout overrides. Indexed DK prices may vary.",
+  "TME_C6_current": {
+    "EEUFS2A151": {
+      "stock": 0,
+      "MOQ": 200,
+      "multiple": 200,
+      "unit_net_PLN": "2.60",
+      "evidence": "c6-tme.json"
+    },
+    "EEUFS2A151B": {
+      "stock": 0,
+      "MOQ": 250,
+      "unit_net_PLN": "2.90",
+      "evidence": "c6b-tme.json"
+    },
+    "decision": "Neither is a stocked 1-piece option. Retain exact unsuffixed C6 from DigiKey."
+  },
+  "packaging_equivalence": {
+    "base": "EEUFS2A151",
+    "permissible_packaging_option": "EEUFS2A151B",
+    "selected": false,
+    "electrical_and_body": "100V150uF20%,105C10000h,1400mA100kHz,43mohm,12.5dia20long5pitch; same manufacturer table.",
+    "difference": "Bulk unformed bag versus standard ammo lead taping. Manual trimming/forming still must preserve manufacturer limits.",
+    "not_equivalent": "EEUFS2A151L/LB are10dia25long and1200mA44mohm; not approved.",
+    "primary_sources": [
+      "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFS2A151",
+      "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFS2A151B"
+    ]
+  },
+  "limitations": [
+    "DigiKey current direct availability unverified: publicHTTP403. All DK numerical observations are supplier-indexed, dated explicitly.",
+    "C6 PLN supplier price still not observed; estimated conversion is separate from purchase BOM.",
+    "Shipping VAT80/98.40 handled as scenarios, not asserted final payable charge."
+  ]
+}

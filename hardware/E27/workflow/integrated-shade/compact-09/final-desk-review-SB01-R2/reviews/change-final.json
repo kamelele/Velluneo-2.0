@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "role": "Change Reviewer",
+  "actual_actor": "/root/r2_final_change",
+  "date": "2026-11-24",
+  "read_only": true,
+  "core_manifest_sha256": "5ef99c2301f666e3aacfee8bb05db913aea9b998f82acdfd672ce4d1ef78e17e",
+  "source_snapshot_sha256": "1cd3e442e9a9289ebdf9064190ada02c582c3f185dff1994138c4448cdf617d5",
+  "base_commit": "872adddb3da9b3dbfa57e5c81ef7ba51da2a841c",
+  "scope": "Final normal-operation, assembly-fit and purchasing desk package for the existing SB01 R2 first manual laboratory prototype. This recommendation does not authorize an order, energized testing or a full product release.",
+  "result": "ready_for_human_review",
+  "material_blockers": [],
+  "findings": [],
+  "verified": {
+    "core_manifest_entries": 75,
+    "core_hash_mismatches": 0,
+    "candidate_snapshot_hash_mismatches": 0,
+    "declared_changed_source_files": 26,
+    "board_schematic_project_and_numeric_rule_bytes_equal_to_baseline": true,
+    "selected_MPN_value_kind_and_physical_pin_maps_equal_to_baseline": true,
+    "references": 19,
+    "electronic_positions": 17,
+    "unique_purchased_MPNs": 16,
+    "independent_fresh_XML_pin_set_comparison": {
+      "passed": true,
+      "method": "Parsed fresh native netlist.xml with ElementTree and compared unordered physical(ref,pin) membership sets against independently retained intended-connectivity.SB01.json; net names were not used as equivalence evidence.",
+      "nets": 11,
+      "physical_pins": 46,
+      "approval_not_fabricated": true
+    },
+    "native_check_input_hashes_match_final_candidate": true,
+    "native_version": "10.0.6",
+    "native_ERC_DRC_and_parity": "pass; current hashed command record inspected",
+    "native_unconnected": 0,
+    "actual_parts_audit": "pass",
+    "fabrication_audit": "pass",
+    "supplier_zip_members": 8,
+    "supplier_zip_sha256": "b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e",
+    "consumer_contract_changes": "Only intent_digest and constraints_digest changed in both placement/routing inputs; numerical constraints and config-state unchanged. These inputs do not claim execution of a router.",
+    "BOM_descriptor_correction": "Only T1 size description1280→1210; exact7687709152MPN,1.5mHvalue,pins,footprint and actual native CAD are retained.",
+    "approval_waiver_fields": "No fabricated stage acceptance or global clearance relaxation found. hardware.approvals remains empty and waivers remain empty."
+  },
+  "inspected": [
+    "Pinned docs/roles/change-reviewer.md",
+    "core-manifest.json, REVIEW_INPUT.json, source-snapshot.json and retained-scope.json",
+    "All75core-entry hashes and all candidate source-snapshot hashes recomputed",
+    "Baseline canonical P versus candidate saved CAD/project/rules bytes",
+    "BOM JSON/CSV before/after, hardware.json, intended-connectivity.SB01.json and spatial-constraints.json",
+    "Both generated consumer-input JSON diffs and config-state.json",
+    "Fresh native-export.json, commands.json, netlist.xml, actual-parts.json and fabrication.json",
+    "Toolkit work/release reports including explicit failing approval/requirements/spatial/connectivity scope",
+    "Current README.SB01-R2.md, specification, normal/assembly reviews, procurement report and purchasing CSV/cost plan"
+  ],
+  "retained_scope_and_limits": [
+    "Actual copper/pads/vias/outline/mask/legend, schematic and local library/model bytes are unchanged; original routing and visual reviews are retained by exact byte identity, not replaced by screenshots.",
+    "Current native export binds final candidate metadata with no mismatched source hashes; fresh actual-parts and manufacturing audits pass. This is not proof of physical function.",
+    "Strict2mm comparison still has23localized BR1/U1/D1 manufacturer-land/escape findings. Full Toolkit work/release remainFAIL; neither safety qualification nor an accepted spacing waiver is asserted.",
+    "Normal current/loss/efficiency calculations are bounded engineering models. Hot upper-load OVP discrimination, BP/startup dynamics, faults, surge, EMI and actual thermal behavior remain post-assembly tests. No new board is justified solely by this documentation change.",
+    "Purchasing list is complete as a budgeted exact-part plan, not a guaranteed current quotation. TME observations are direct; DigiKey is indexed evidence, C6PLNprice and shipping VAT need supplier checkout confirmation. Approximately180PLNbudget excludes PCB,LEDs and consumables.",
+    "No branch update or main mutation is claimed by this reviewer. This read-only review checks candidate change scope; coordinator must separately verify final Git integration, exact adopted hashes and main preservation."
+  ],
+  "invalidation": "Any subsequent CAD, selected-part, pin-map, numerical-rule or substantive calculation change invalidates affected scope. Later integration notes may aggregate these exact results without promoting full release or purchasing availability to a pass."
+}

@@ -1,3 +1,9 @@
+# Current engineering head: SB01 R2 final desk review
+
+[Current package](final-desk-review-SB01-R2/ORDERING.md): consolidated normal calculations,17part fit contract, exact purchase list and four final independent reviews. Same barePCB, no mandatory hardware change for firstlabprototype. Budget~180PLNgross for parts+2deliveries, not liveDKquote; PCB/LED/consumables excluded. Height20.5mm planning corrected. FullToolkitFAIL/strictFAIL23 and physicalqualification remain explicit. No order/test/humanapproval fabricated.
+
+## Previous packet history
+
 # Current engineering head: SB01 R2 RC correction (24 November 2026)
 
 The [reviewed R2 package](startup-correction-SB01-R2/README.md) is adopted as an **unreleased engineering head**, after four independent reviews of core `ddb90c1270fbfce6e8b64862b64e442b1f56bc66d86071a32232ea3b73235e80`. [Integration record](startup-correction-SB01-R2/integration.json).

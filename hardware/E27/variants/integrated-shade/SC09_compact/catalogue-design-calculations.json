@@ -1,183 +1,153 @@
 {
-  "revision": "SC09-SB01",
-  "input_VAC_RMS": [
-    207,
-    230,
-    253
-  ],
-  "frequency_Hz": 50,
-  "nonisolated": true,
-  "SELV": false,
-  "ambient_design_C": [
-    0,
-    40
-  ],
-  "nominal_output_V": 60,
-  "proposed_LED_voltage_window_V": [
-    52,
-    68
-  ],
-  "regulated_total_current_mA": 135.203447,
-  "bleeder_current_mA_at60V": 1.7647058823529413,
-  "external_LED_current_mA_at60V": 133.438741,
-  "external_LED_power_W_at60V": 8.00632446,
-  "LED_count_series": 20,
-  "LED_MPN": "L128-4080CA3500001",
-  "CCT_K": 4000,
-  "CRI_min": 80,
-  "optical_target_lm": 800,
-  "optical_measurement_performed": false,
-  "base_loss_inclusive_of_bleeders_W": [
-    1.1,
-    2.1
-  ],
-  "estimated_input_power_W": [
-    9.10632446,
-    10.10632446
-  ],
-  "estimated_LED_efficiency_percent": [
-    79.22093231509015,
-    87.92048312322049
-  ],
-  "assumed_PF_not_measured": 0.9,
-  "estimated_input_current_mA_230V_assumedPF": [
-    43.99190560386474,
-    48.822823478260865
-  ],
-  "T1": {
-    "MPN": "7687709152",
-    "kind": "Conditional arithmetic engineering screen, not measured or manufacturer guaranteed hot limits",
-    "normal_Ipeak_A": 0.4867324738114424,
-    "extended_Ipeak_min_A": 0.4497505082123992,
-    "extended_Ipeak_max_A": 0.526596469045526,
-    "sense_screen_basis": "Retained existing TME R5/R6 extended tolerance/TCR/life/FB reserve model; use current actual BOM owner figures if changed",
-    "triangle_RMS_nom_A": 0.28101512477836876,
-    "triangle_RMS_max_A": 0.3040306131577409,
-    "Lnom_H": 0.0015,
-    "Lmin_tolerance_only_H": 0.0012000000000000001,
-    "Lmin_assumed_hot_bias_H": 0.0009720000000000002,
-    "Lmin_assumption_factors": [
-      0.8,
-      0.9,
-      0.9
+  "revision": "SC09-SB01-R2-final-desk-review",
+  "supersedes": "All prior active SB01 fixed60mA/choke and mixed R1/R2 calculations; old exact bytes retained in baseline commit872addd.",
+  "calculation_file": "normal-calculations.SB01-R2.json",
+  "calculation_sha256": "e409e3e683b90130f807a951e353a10649e444e2b1ed34582d0bba75975a93b0",
+  "normal_current": {
+    "Rpar_ohm": 0.5732101616628176,
+    "Ipeak_A": 0.4867324738114424,
+    "total_output_A": 0.1352034649476229,
+    "LED_output_A_at60V": 0.13343875906526995,
+    "sense_25C_initial_only_Ipeak_A": [
+      0.4715496126566726,
+      0.5022220594339852
     ],
-    "Lmax_tolerance_H": 0.0018,
-    "Lrequired_for_min_on_H": 0.0008499046296129417,
-    "minimum_on_screen_us": 1.4295721633535852,
-    "minimum_on_limit_us": 1.25,
-    "minimum_on_margin_percent": 14.365773068286813,
-    "max_normal_voltage_across_inductor_V": 305.7960312803931,
-    "working_voltage_max_V": 400,
-    "fixed_peak_triangle_frequency_at52V_Hz": 101662.72386336762,
-    "fixed_peak_triangle_frequency_at68V_Hz": 125987.62803876307,
-    "frequency_model_limit": "CrM triangle toy model. Actual controller line modulation/forced frequency/core loss must be measured;100kHz test frequency is not a maximum operating frequency.",
-    "DCRmax20C_ohm": 2.2,
-    "DCRmax100C_Cu_model_ohm": 2.8916800000000005,
-    "DCRmax125C_Cu_model_ohm": 3.1078300000000003,
-    "Cu_loss_nominal20C_W": 0.17373290077924478,
-    "Cu_loss_extended100C_W": 0.26729132385121607,
-    "Cu_loss_extended125C_W": 0.28727106561048416,
-    "rated_DC_current_40K_rise_A": 0.52,
-    "normal_RMS_fraction_of_IR": 0.5846742560725786,
-    "saturation_10pct_typ20C_A": 0.8,
-    "normal_peak_fraction_of_typ_Isat": 0.6582455863069075,
-    "stored_energy_nominalL_peakmax_J": 0.00020797788090841173,
-    "core_loss_assumed_W": [
-      0.1,
-      0.4
+    "extended_Rpar_ohm": [
+      0.5487717711874159,
+      0.5982330280114041
     ],
-    "thermal_resistance_assumed_K_per_W": [
-      50,
-      100
+    "extended_Ipeak_A": [
+      0.44721703328439416,
+      0.529728414001675
     ],
-    "conditional_coil_body_at40ambient_C": [
-      58.3645661925608,
-      106.72913238512162
+    "extended_total_output_A": [
+      0.12422695369010948,
+      0.14714678166713194
     ],
-    "thermal_model_limit": "Only copper loss is calculated. Core loss and theta are planning assumptions, not measurements. Retain existing T1 body target90C; conditional58–107C scenarios do not establish thermal closure. Research100C proposal is superseded, not an approved relaxation.",
-    "output_current_effect": "Nominal sense resistors and controller fixed peak estimate retained, about135.2mA total /133.4mA LED at60V. New L changes switching frequency/current timing, requires retuning/measurement per manufacturer; do not claim optical/current guarantee.",
-    "capacitor_ripple_screen_RMS_A": 0.2665290085695101,
-    "ripple_model_limit": "Fulltriangle toy currentoccupancy gives upperplanning estimate, not100Hz outputvoltage ripple or controller actualwaveform.",
-    "retained_body_target_C": 90
-  },
-  "L1": {
-    "MPN": "768772332",
-    "L_mH": 3.3,
-    "voltage_VDC": 400,
-    "DCRmax20C_ohm": 7.08,
-    "RMS_rating_A_at40K_rise": 0.25,
-    "Isat10percent_A": 0.27,
-    "normalized_incremental_DCR_loss_at100C_60mA_W": 0.00218
-  },
-  "R7": {
-    "MPN": "HVR2500003903FR500",
-    "R_ohm": 390000,
-    "tolerance_percent": 1,
-    "rated_W_at70C": 0.25,
-    "max_operating_VDC": 1600,
-    "screen_power_W_at253VAC_52V_negativeDrift": 0.116344,
-    "allowable_W_at100C_local_ambient": 0.161765,
-    "theta_K_per_W": null,
-    "reason_no_theta": "VR25 theta140K/W is not qualified for newHVR25; no absolute R7 temperature prediction."
-  },
-  "OVP": {
-    "nominal_static_V": 77.88,
-    "legacy_additive_screen_V": [
-      69.371328,
-      86.510928
+    "extended_LED_A_52to68V": [
+      0.12220675166990747,
+      0.14563251259316573
     ],
-    "systematic_multiplicative_screen_V": [
-      69.39716,
-      86.537527
+    "note": "3.6 is PI design equation, not a guaranteed full-temperature current. Temperature/life/ICextra2percent reserves are declared engineering sensitivities."
+  },
+  "normal_stress_screens": {
+    "mains_crest_207_230_253_V": [
+      292.7422074112307,
+      325.2691193458119,
+      357.7960312803931
     ],
-    "extended_engineering_R7_4percent_andR4_2percent_high_V": 89.486765,
-    "dynamic_target_V_max": 90,
-    "dynamic_measured": false,
-    "notes": "25C ICthreshold corners; resistor drift screens are assumptions, not guaranteed full life/high-temperature dynamic bounds."
+    "T1_voltage_normal_running_max_V": 305.7960312803931,
+    "T1_voltage_initial_output_zero_conditional_max_V": 357.7960312803931,
+    "T1_voltage_rating_V": 400,
+    "T1_Lmin_screen_H": 0.0009720000000000002,
+    "T1_Lrequired_for_minON_H": 0.0008547193211610396,
+    "T1_minON_screen_us": 1.4215192869977016,
+    "T1_minON_max_limit_us": 1.25,
+    "T1_minON_margin_percent": 13.721542959816112,
+    "T1_Ipeak_fraction_of20CtypIsat0A8": 0.6621605175020937,
+    "T1_full_triangle_RMS_upper_A": 0.30583884242126064,
+    "T1_IR_rating_A": 0.52,
+    "D1_reverse_normal_no_ringing_screen_V": 359.4960312803931,
+    "D1_VRRM_V": 1000,
+    "U1_VDS_normal_no_ringing_screen_V": 359.4960312803931,
+    "U1_VDS_absmax_V": 725,
+    "C1_voltage_normal_screen_V": 357.7960312803931,
+    "C1_rating_V": 1000,
+    "C4_voltage_normal_screen_V": 357.7960312803931,
+    "C4_rating_V": 630,
+    "C4_AC_component_of_unipolar_rectified_sine_Vrms": 110.11475309830564,
+    "C4_AC_rating_Vrms": 200,
+    "C4_dVdt_required_from_peakI_over_Cmin_V_us": 3.9239141777901856,
+    "C4_dVdt_isolated_pulse_rating_V_us": 250,
+    "C6_DC_rating_V": 100,
+    "C6_HF_ripple_rating_A": 1.4,
+    "C6_conservative_60Hz_frequency_factor": 0.6,
+    "C6_conservative_ripple_current_screen_A": 0.84,
+    "R7_peak_normal_voltage_screen_V": 305.7960312803931,
+    "R7_working_voltage_V": 1600,
+    "R4_max_power_at2V48_andRmin_W": 0.0005010101010101011,
+    "bleeder_each_W_at90V_Rmin": 0.12032085561497326,
+    "R10_continuous_allowable_W_if_localambient90C_linear70to200": 1.6923076923076923
   },
-  "discharge": {
-    "COUT_nominal_uF": 150,
-    "COUT_max_uF": 180,
-    "one_open_bleeder_ohm": 68000,
-    "screen_90V_to5V_s": 36.45,
-    "energy_J_at90V_Cmax": 0.729,
-    "hotplug_allowed": false
-  },
-  "envelope_mm": [
-    51.2,
-    33,
-    19.5
-  ],
-  "all_physical_temperatures_efficiency_fault_and_surge_unmeasured": true,
-  "historical_baseline_file": "catalogue-design-calculations.pre-SB01-historical.json",
-  "C1": {
-    "MPN": "R76QI24705050J",
-    "capacitance_nF": 47,
-    "tolerance_percent": 5,
-    "rated_VDC": 1000,
-    "dVdt_V_per_us": 3500,
-    "initial_coldplug_dVdt_V_per_us": 179.4703015643098,
-    "historical_10ohm_initial_screen_V_per_us": 843.5104,
-    "initial_step_only_not_full_transient": true
-  },
-  "R6": {
-    "MPN": "1206S4F365KT5E",
-    "TCR_ppm_per_K": 400,
-    "conservative_body_measurement_stop_C": 100,
-    "maximum_catalogue_temperature_C": 125,
-    "paper_total_current_mA_75K_screen": [
-      128.7551,
-      141.9746
+  "loss_and_thermal_budget": {
+    "nominal_component_loss_screen_W": 1.0861953412101841,
+    "all_scenario_component_loss_screen_W": [
+      0.9018509565038172,
+      1.5125972278186195
     ],
-    "paper_only": true
+    "additional_core_switch_dielectric_loss_planning_W": [
+      0.15,
+      0.6
+    ],
+    "nominal_total_driver_loss_planning_W": [
+      1.236195341210184,
+      1.6861953412101842
+    ],
+    "nominal_external_LED_power_model_W": 7.944094470986858,
+    "nominal_efficiency_planning_fraction": [
+      0.8249071030993721,
+      0.8653424492582183
+    ],
+    "T1_copper_only_temperature_rise_scaled_from_IR40K_K": 5.870975838039753,
+    "limits": "Core/switching/dielectric additions are explicit planning assumptions, not guaranteed/calibrated losses. Auxiliary loss in RC model boosts input current; do not add it again to the component loss budget. No resistor/junction temperature forecast without actual thermal boundary conditions. T1 copper-only scaling omits core loss, adjacent heat and enclosed ambient."
   },
-  "RF1": {
-    "MPN": "FW20A47R0JA",
-    "R_ohm": 47,
-    "normal_60mA_RMS_hot_screen_W": 0.1812132,
-    "linear_input_corner_C1_max_V": 706.3,
-    "linear_input_corner_C4_max_V": 588.7,
-    "not_full_transient_qualification": true
+  "BP_startup_sensitivity": {
+    "C5_nominal_F": 4.7e-06,
+    "C5_rating_V": 25,
+    "BP_supply_max_V": 5.35,
+    "BP_shunt_max_V": 5.55,
+    "BP_reset_max_V": 4.65,
+    "BP_headroom_min_V": 0.4249999999999998,
+    "assumed_effective_C5_sensitivity_F": 1.5e-06,
+    "deadzone_threshold_Voutplus36_V": 104,
+    "deadzone_time_at207V_Vout68_s": 0.002312162719963802,
+    "typical_standby_A": 0.00018,
+    "C5_drop_with1u5_typstandby_V": 0.2774595263956563,
+    "required_Ceff_for_typstandby_hold_F": 9.79268916690552e-07,
+    "C5_typ_charge_time2mA_net180uA_to5V075_with4u7_s": 0.01310576923076923,
+    "limits": "No minimum startup charge current/maximum standby current or guaranteed Ceff-vsDCbias is published in the inspected tables; no hard startup-time bound. Chosen4.7uF X7R25V follows PI nominal recommendation. VerifyBPminimum/softstart at prototype; no automaticC5replacement required by this normal screen."
   },
-  "updated_loss_basis": "Rounded planning budget includes about0.1–0.2W additional T1 copper loss and increased RF1loss. Core, controller and actual switching losses remain unmeasured; these are not guaranteed limits."
+  "OVP_response_budget": {
+    "static_25C_1percent_range_V": [
+      73.20625998083679,
+      82.05575757575757
+    ],
+    "static_nom_V": 77.88387096774194,
+    "retained_extended_resistor_screen_high_V": 89.486765,
+    "one_normal_peak_pulse_energy_upper_J": 0.000252550973340657,
+    "one_pulse_voltage_rise_from_extended_high_at120u_V": 0.02351537635809109,
+    "normal_openload_power_envelope_W_at90V": 23.837778630075377,
+    "energy_budget_delay_to100V_from_extended_high_at120u_s": 0.00501418925164792,
+    "limits": "Normal-current envelope only, not faultauto-restart1.24A. No maximum controller OVPdelay specified, so this quantifies required response budget rather than proving dynamicOVP/singlefault safety.",
+    "output_trip_initial25C_min_with_D1_1V7_V": 71.50625998083679,
+    "R7_R4_TCR_sensitivity": {
+      "R7_abs_ppm_K": 200,
+      "R4_abs_ppm_K": 100,
+      "IC_min_threshold_held25C_V": 2.3,
+      "initial_resistors_percent": 1,
+      "extra_age_drift_percent": 0,
+      "D1_forward_offset_screen_V": 1.7,
+      "rows": [
+        {
+          "resistor_delta_abs_K": 0,
+          "output_trip_min_V": 71.50625998083679
+        },
+        {
+          "resistor_delta_abs_K": 50,
+          "output_trip_min_V": 70.44795759306311
+        },
+        {
+          "resistor_delta_abs_K": 75,
+          "output_trip_min_V": 69.9227454899496
+        },
+        {
+          "resistor_delta_abs_K": 100,
+          "output_trip_min_V": 69.40013344675253
+        }
+      ],
+      "normal_upper_output_peak_screen_V": 69.72296815980158,
+      "verdict": "Initial25C clears68Vplusmodelripple. Hot/upper68V regulation remains conditional: resistor100K sensitivity overlapsripple, IC hot OVP threshold unspecified, diode1.7V is25C1A screen not guaranteed alltemp bound. No narrowing loadwindow or relaxing90Vstop; measure actual OVP and68V load atcorners. Legacy69.371V no-diode screen is not a guaranteedhot threshold."
+    }
+  },
+  "physical_measurements_performed": false
 }

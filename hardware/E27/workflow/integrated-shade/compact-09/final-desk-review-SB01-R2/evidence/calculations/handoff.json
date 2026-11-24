@@ -1,0 +1,42 @@
+{
+  "actor": "/root/r2_normal_calcs",
+  "role": "implementer calculation contribution; no independent approval",
+  "base_commit": "872adddb3da9b3dbfa57e5c81ef7ba51da2a841c",
+  "input_source_guards": {
+    "SC09_compact.kicad_pcb": "0889e1d7a701c26b89750c4e1a42a170efc6a5b30669d75d5abded6ff8b69bbe",
+    "SC09_compact.kicad_sch": "573a1f12c6b30d33615efdec4e354683762f0d68ac45994d08c0eedbe9e3860f",
+    "bom-build.json": "48403606a32e1dc21caf0be1688091f222c786c986686aa18dd5f57edcbb905a",
+    "hardware.json": "4ae68b62eb72b7d72cb7d5d6cc8d6840b98b73a855c7e9a205ec295f49cb6a5b",
+    "startup-correction.SB01-R2.json": "2d6291dbbe5bd29c55aeb2ecbb08b56dca5e44427c54efce2291b32cdc1cccc7"
+  },
+  "canonical_files_edited": false,
+  "physical_tests": false,
+  "manufacturing_or_human_approval": false,
+  "outputs": {
+    "calculate_normal.py": "265371a7b20d3c19d5d4e5579b122c4675a4178f1a6105a2935fb3f2be3d6c75",
+    "normal-calculations.json": "e409e3e683b90130f807a951e353a10649e444e2b1ed34582d0bba75975a93b0",
+    "REPORT.md": "80c5471c9e40012144a858ee2305d833c7339d17fa5b3386025c630e240489c6",
+    "run-summary.txt": "0e0e58c522996410d96e452bf51ece5b9714e6d86043f705815c245be5532212"
+  },
+  "primary_local_sources": {
+    "work/sc09-simple/t1/7687709152-mfr-mirror.pdf": "fd6c5daeb38fc93bf408aa9a3aab9c2fcf478dce247a69fb7a2998bd9fa483c8",
+    "work/sc09-spacing23/research/Panasonic-FS-primary.pdf": "4ce0b8899596e5c21c949c68481032339a63ff1e15bcf497dab423f0a6744c92",
+    "work/compact09/capture-passive/yageo-R5.pdf": "fdef535644cac6d8ea7c149523dfc16c47c3f438ee5b716071bb43362948f06e",
+    "outputs/SC09_SB01_R2_rozruch_validated/analysis/startup/PR02FS-primary.pdf": "048a69c3c55dd3be3830586620d25cab23bcde74f2f6696fbd9807a84a512874"
+  },
+  "not_used_as_exact_R7_source": "work/compact09/capture-passive/vishay-R7.pdf is VR25, not actual HVR25; exact HVR25 manufacturer doc30260 indexed/website evidence instead",
+  "before_package_publish": [
+    "Replace or prominently supersede active stale R1 L1 choke/loss explanations with actual R2 RC results; retain history as history.",
+    "Upper68V/hot OVP discrimination is conditional and must not be called fully guaranteed or closed."
+  ],
+  "compulsory_hardware_fixes_from_normal_review": [],
+  "post_assembly_measurements": [
+    "low/high line startup, BPminimum and loadcurrent/ripple",
+    "T1currentramp and real effective hotL",
+    "OVPoutputdisconnect at actual highLEDvoltage and temperature,90Vstop retained",
+    "actual component/localair temperatures; drain/busringing",
+    "fault/surge/EMI separately"
+  ],
+  "limits": "No guaranteedcontroller macromodel or calibratedthermal forecast; extendedTCR/life/hotL assumptions declared. No PCB change requested.",
+  "clarification": "REPORT.md source list corrected: actual HVR25 manufacturer doc30260 intended basis; local VR25 PDF explicitly excluded. Arithmetic unchanged. Direct complete HVR25 PDF fetch timed out; coordinator primary verification requested."
+}

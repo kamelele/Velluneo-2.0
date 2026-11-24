@@ -5,9 +5,9 @@
   "existing_fault_scope_retained": true,
   "new_qualification_items": [
     "Measure LED current/ripple and minimum ON across207â€“253VAC,load52â€“68V and0â€“40C before asserting this window",
-    "Retain T1 body90C planning target from previous thermal-planning.json; absolutepart125C is not an operatingtarget. Conditional58â€“107C model is NOT temperaturepass. Measureactualcore/switchingloss/hotbias before asserting fullambient operation",
+    "Retain T1 body90C planning target from previous thermal-planning.json; absolutepart125C is not an operatingtarget. Old temperature forecast is historical, not a pass. Measureactualcore/switchingloss/hotbias before asserting fullambient operation",
     "R6body stop100C below125Ccataloguelimit; thermal drift affectscurrent",
-    "C1 stronger voltage/pulse ratings do not close fullLCstartup/surge orMOV/fuse behavior",
+    "C1 stronger voltage/pulse ratings do not close R2RCstartup/surge orMOV/fuse behavior",
     "NewMOV21J vsold23J: no inheritedsurgeapproval; verifyactualclamp/current/energy/fault coordination",
     "No hot-plug. Disconnect and discharge before changingLEDmodule",
     "No safety/productcertification or IECsurgepass inferred fromERC/DRC"
@@ -19,5 +19,11 @@
     "Output OVP dynamics, short faults, surge and maximumT1winding/U1VDS remain measurement-gated",
     "C6 cannot be guaranteed protected from U1D-Sshort by ordinary input fuse; no fail-safe claim",
     "Unpowered formed-lead fit and restraint for legacyL1 resistor"
+  ],
+  "pre_order_desk_review": "Normal calculations and actual-part fit complete for a first guarded laboratory prototype; no compulsory hardware modification identified. Not a full release or test authorization.",
+  "current_authority": [
+    "NORMAL_REVIEW.SB01-R2.md",
+    "ASSEMBLY_REVIEW.SB01-R2.md",
+    "PURCHASE.SB01-R2.csv"
   ]
 }

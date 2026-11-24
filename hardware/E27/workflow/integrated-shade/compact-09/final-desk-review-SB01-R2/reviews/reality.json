@@ -1,0 +1,45 @@
+{
+  "role": "Reality Checker",
+  "actor": "/root/r2_final_reality",
+  "date": "2026-11-24",
+  "core_manifest_sha256": "49efe4d6b9a6f9249ff7e0ee2c967fa860740f8fd60d826fe3bd92fe58b113a0",
+  "recommendation": "ready_for_human_review",
+  "scope": "First manual laboratory prototype normal-operation/assembly/purchasing desk review only. No full release, order, powered test or guarantee of successful operation.",
+  "independent_checks": [
+    "All75 core-manifest members exist and their SHA256 values match; all final source-snapshot file hashes match actual candidate bytes.",
+    "Independently expanded purchase CSV refs and compared all17 actual electronic MPN positions with bom-build.json: exact equality;16 purchased SKUs, J1/J2 excluded as bare wire pads.",
+    "Independently calculated 60V external LED power8.0063255W from0.68||3.65ohm,0.279V peak sense, factor3.6 and two68kohm bleeders. Height16+1.6+2.9=20.5mm agrees.",
+    "Read calculate_normal.py and normal-calculations.SB01-R2.json:82 declared surrogate cases, actual RC resistance and capacitance tolerances, conditional current/minON/ripple/BP/OVP screens, loss additions and model limitations. This is calculation, not actual waveform simulation or measurement.",
+    "Read exact local Vishay HVR25-primary.pdf page1, Revision14Apr2023 document30260: ±200ppm/K,0.25W P70,1600VDC. Supports R7 source basis without transferring VR25 thermal resistance.",
+    "Fresh native ERC/DRC/parity, actual-part and fabrication reports inspected: zero native violations/unconnected/parity items; actual part audit passed; fabrication audit passed with unchanged input/artifact inventory.",
+    "Full toolkit work/release FAIL results retained. No stale approval or missing product evidence silently converted to PASS. Native DRC retained two configured ignored check categories: track_not_centered_on_via and tuning_profile_track_geometries; no new suppression introduced by this metadata-only task.",
+    "Read all-part assembly report and contract: positive lead/hole diametral margins, no same-face envelope collisions, bounded manual lead forming and horizontal C6vent space; renderer shapes not treated as qualified sample fit. Exact board/BOM/rules/Gerber ZIP hashes retained.",
+    "Read unpowered inspection plan, revised thermal stops, prototype gates and purchasing cost scenarios.80/98.40PLN DigiKey delivery VAT uncertainty and unobserved C6PLNprice remain explicit budget assumptions."
+  ],
+  "findings": [
+    {
+      "id": "R2-REAL-01",
+      "severity": "minor",
+      "object": "candidate/power-supply-specification.json: external_LED_power_W_at60V and estimated_input_power_W",
+      "issue": "The8.006W external power is the nominal PI design-equation value, while9.180–9.630W input and82.49–86.53% efficiency use the surrogate7.944W LED load. The difference is small and both are legitimate approximations, but the summary field names do not explicitly distinguish the two bases.",
+      "consequence": "A reader could incorrectly subtract8.006W from the surrogate input estimate and think the loss budget is inconsistent by0.062W.",
+      "closure_condition": "Label the design-equation output versus surrogate output/input/efficiency basis in the final user summary or add a separate explanatory note. No hardware modification is necessary."
+    }
+  ],
+  "retained_scope": [
+    "Existing copper/placement/routing and23 local spacing findings retained by exact unchanged board/rules/BOM identity, not newly qualified electrical safety clearances.",
+    "Existing cold RC startup pulse and source-bound fabrication/view evidence retained; hot surge/fault/EMI remain post-build characterization.",
+    "Mechanical20.5/20.66mm values are planning envelopes before forming/solder variation; no20mm enclosure-fit acceptance."
+  ],
+  "material_preorder_hardware_blockers_identified": [],
+  "conditions_to_keep_visible": [
+    "68V hot load regulation remains conditional because OVP discrimination may overlap ripple; no divider adjustment or silently narrowed window is justified by the present evidence.",
+    "BP cold-start timing and maximum OVP response delay are not guaranteed by the inspected data; prototype measurements must establish them.",
+    "100V C6 protection against U1D-Sshort is not guaranteed by the input fuse. Full fault qualification is absent.",
+    "No actual operating temperatures or efficiency measured; closed housing operation not qualified.",
+    "DigiKey stock/prices are indexed and may change;180PLN is a rough parts-plus-delivery budget, not a complete current quote. Exact purchasable MPN list is coherent."
+  ],
+  "full_toolkit_release_pass": false,
+  "human_approval": false,
+  "source_files_modified": false
+}

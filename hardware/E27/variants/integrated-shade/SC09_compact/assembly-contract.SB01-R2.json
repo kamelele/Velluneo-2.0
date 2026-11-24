@@ -1,0 +1,1507 @@
+{
+  "revision": "SB01-R2 final assembly desk review",
+  "actor": "/root/r2_assembly_fit",
+  "source_board_sha256": "0889e1d7a701c26b89750c4e1a42a170efc6a5b30669d75d5abded6ff8b69bbe",
+  "method": "Read-only native inventory plus independently transformed source dimensional envelopes. Not a physical measurement or product release.",
+  "no_new_preorder_physical_incompatibility_identified": true,
+  "electronic_parts": [
+    {
+      "ref": "BR1",
+      "MPN": "MB10S-13",
+      "side": "B",
+      "xy_mm": [
+        137.8,
+        104.2
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -2.475,
+        -2.05,
+        2.475,
+        2.05
+      ],
+      "global_bbox_mm": [
+        135.325,
+        102.15,
+        140.275,
+        106.25
+      ],
+      "top_from_mounting_face_mm": 2.9,
+      "source_id": "Diodes_MB10S",
+      "assembly_note": "Bottom. Match positive pin1 BUS_RECT, negative pin3 DC_RETURN, AC pins2/4; never mirror polarity from a top-view image.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            1.25,
+            2.675
+          ],
+          "global_xy_mm": [
+            136.55,
+            101.525
+          ],
+          "size_mm": [
+            1.0,
+            2.15
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/BUS_RECT"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            1.25,
+            -2.675
+          ],
+          "global_xy_mm": [
+            136.55,
+            106.875
+          ],
+          "size_mm": [
+            1.0,
+            2.15
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/AC_FUSED"
+        },
+        {
+          "pin": "3",
+          "local_xy_mm": [
+            -1.25,
+            2.675
+          ],
+          "global_xy_mm": [
+            139.05,
+            101.525
+          ],
+          "size_mm": [
+            1.0,
+            2.15
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/DC_RETURN"
+        },
+        {
+          "pin": "4",
+          "local_xy_mm": [
+            -1.25,
+            -2.675
+          ],
+          "global_xy_mm": [
+            139.05,
+            106.875
+          ],
+          "size_mm": [
+            1.0,
+            2.15
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/AC_N"
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "MPN": "R76QI24705050J",
+      "side": "F",
+      "xy_mm": [
+        140.6,
+        104.0
+      ],
+      "orientation_deg": 0.0,
+      "local_max_or_planning_bbox_mm": [
+        -9.25,
+        -3.85,
+        9.25,
+        3.85
+      ],
+      "global_bbox_mm": [
+        131.35,
+        100.15,
+        149.85,
+        107.85
+      ],
+      "top_from_mounting_face_mm": 14.1,
+      "source_id": "KEMET_R76",
+      "assembly_note": "Nonpolar P15+/-0.4. Body max18.5x7.7x13.6; add0.5 engineering seating allowance. Form leads gently without force on epoxy; 24mm minimum lead length sufficient.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -7.5,
+            0.0
+          ],
+          "global_xy_mm": [
+            133.1,
+            104.0
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.1,
+            1.1
+          ],
+          "net": "/BUS_RECT"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            7.5,
+            0.0
+          ],
+          "global_xy_mm": [
+            148.1,
+            104.0
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.1,
+            1.1
+          ],
+          "net": "/DC_RETURN"
+        }
+      ],
+      "hole_check": {
+        "nominal_finished_hole_mm": 1.1,
+        "JLC_negative_tolerance_mm": 0.08,
+        "minimum_finished_hole_mm": 1.02,
+        "maximum_round_lead_mm": 0.85,
+        "minimum_diametral_clearance_mm": 0.17,
+        "minimum_radial_clearance_mm": 0.085
+      }
+    },
+    {
+      "ref": "C4",
+      "MPN": "B32671P6154K000",
+      "side": "F",
+      "xy_mm": [
+        134.0,
+        113.55
+      ],
+      "orientation_deg": 0.0,
+      "local_max_or_planning_bbox_mm": [
+        -6.5,
+        -3,
+        6.5,
+        3
+      ],
+      "global_bbox_mm": [
+        127.5,
+        110.55,
+        140.5,
+        116.55
+      ],
+      "top_from_mounting_face_mm": 12.5,
+      "source_id": "TDK_C4",
+      "assembly_note": "Nonpolar P10+/-0.4, max13x6x12, project0.5 stand-off. Slight pitch correction may be needed.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -5.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            129.0,
+            113.55
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.1,
+            1.1
+          ],
+          "net": "/BUS_FILTERED"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            5.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            139.0,
+            113.55
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.1,
+            1.1
+          ],
+          "net": "/DC_RETURN"
+        }
+      ],
+      "hole_check": {
+        "nominal_finished_hole_mm": 1.1,
+        "JLC_negative_tolerance_mm": 0.08,
+        "minimum_finished_hole_mm": 1.02,
+        "maximum_round_lead_mm": 0.65,
+        "minimum_diametral_clearance_mm": 0.37,
+        "minimum_radial_clearance_mm": 0.185
+      }
+    },
+    {
+      "ref": "C5",
+      "MPN": "CL21B475KAFNNNE",
+      "side": "B",
+      "xy_mm": [
+        122.5,
+        102.0
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -1.05,
+        -0.675,
+        1.05,
+        0.675
+      ],
+      "global_bbox_mm": [
+        121.45,
+        101.325,
+        123.55,
+        102.675
+      ],
+      "top_from_mounting_face_mm": 1.35,
+      "source_id": "Samsung_C5",
+      "assembly_note": "Bottom nonpolar0805. Pad1x1.5 at+/-1.0 is engineering selection; control solder volume and thermal shock.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -1.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            123.5,
+            102.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/BP"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            1.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            121.5,
+            102.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "MPN": "EEUFS2A151",
+      "side": "F",
+      "xy_mm": [
+        106.75,
+        126.0
+      ],
+      "orientation_deg": 90.0,
+      "local_max_or_planning_bbox_mm": [
+        4,
+        -6.5,
+        26,
+        6.5
+      ],
+      "global_bbox_mm": [
+        100.25,
+        100.0,
+        113.25,
+        122.0
+      ],
+      "top_from_mounting_face_mm": 13.5,
+      "source_id": "Panasonic_FS",
+      "assembly_note": "Horizontal; plus pin1 LED_PLUS, stripe/minus pin2 DC_RETURN. D12.5+/-0.5,L20+/-2,P5+/-0.5,d0.6+/-0.05. Support can0.5 abovePCB; seal plane localX4, axis+X, ventX26. Preserve2.5 straight lead before1.5 centreline bend. Do not grip/force seal. Keep vent5mm free in3D and support without covering vent. Sleeve is not an electrical barrier.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            0.0,
+            -2.5
+          ],
+          "global_xy_mm": [
+            104.25,
+            126.0
+          ],
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "net": "/LED_PLUS"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            0.0,
+            2.5
+          ],
+          "global_xy_mm": [
+            109.25,
+            126.0
+          ],
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "net": "/DC_RETURN"
+        }
+      ],
+      "hole_check": {
+        "nominal_finished_hole_mm": 1.2,
+        "JLC_negative_tolerance_mm": 0.08,
+        "minimum_finished_hole_mm": 1.12,
+        "maximum_round_lead_mm": 0.65,
+        "minimum_diametral_clearance_mm": 0.47,
+        "minimum_radial_clearance_mm": 0.235
+      }
+    },
+    {
+      "ref": "D1",
+      "MPN": "US1M-13-F",
+      "side": "B",
+      "xy_mm": [
+        121.2,
+        114.0
+      ],
+      "orientation_deg": -90.0,
+      "local_max_or_planning_bbox_mm": [
+        -2.3,
+        -1.46,
+        2.3,
+        1.46
+      ],
+      "global_bbox_mm": [
+        119.74,
+        111.7,
+        122.66,
+        116.3
+      ],
+      "top_from_mounting_face_mm": 2.4,
+      "source_id": "Diodes_US1M",
+      "assembly_note": "Bottom SMA. Cathode band to pin1 FB_INDUCTOR, anode pin2 DC_RETURN. Exact recommended2.5x1.7 lands pitch4.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -2.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            121.2,
+            112.0
+          ],
+          "size_mm": [
+            2.5,
+            1.7
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/FB_INDUCTOR"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            2.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            121.2,
+            116.0
+          ],
+          "size_mm": [
+            2.5,
+            1.7
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/DC_RETURN"
+        }
+      ]
+    },
+    {
+      "ref": "L1",
+      "MPN": "PR02FS0201000KR500",
+      "side": "F",
+      "xy_mm": [
+        145.5,
+        115.5
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -4.4519,
+        -1.95,
+        2.9169,
+        1.95
+      ],
+      "global_bbox_mm": [
+        142.5831,
+        113.55,
+        149.9519,
+        117.45
+      ],
+      "top_from_mounting_face_mm": 16,
+      "source_id": "Vishay_PR02FS",
+      "assembly_note": "Legacy refL1 is100ohm2W PR02-FS resistor, not choke. Upright body over pad1BUS_RECT. Pad pitch5.0038; bodyDmax3.9,Lbody10,totalterminal12. Preserve2mm stand-off and2mm topforming budget. Return lead to pin2BUS_FILTERED; sleeve return wire if needed to prevent accidental contact, without relying on sleeve for a new safety barrier. Inspect actual formed envelope.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -2.5019,
+            0.0
+          ],
+          "global_xy_mm": [
+            148.0019,
+            115.5
+          ],
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "net": "/BUS_RECT"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            2.5019,
+            0.0
+          ],
+          "global_xy_mm": [
+            142.9981,
+            115.5
+          ],
+          "size_mm": [
+            2.3,
+            2.3
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "net": "/BUS_FILTERED"
+        }
+      ],
+      "hole_check": {
+        "nominal_finished_hole_mm": 1.2,
+        "JLC_negative_tolerance_mm": 0.08,
+        "minimum_finished_hole_mm": 1.12,
+        "maximum_round_lead_mm": 0.83,
+        "minimum_diametral_clearance_mm": 0.29,
+        "minimum_radial_clearance_mm": 0.145
+      }
+    },
+    {
+      "ref": "R4",
+      "MPN": "ERJ-6ENF1242V",
+      "side": "B",
+      "xy_mm": [
+        126.5,
+        101.3
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -1.05,
+        -0.675,
+        1.05,
+        0.675
+      ],
+      "global_bbox_mm": [
+        125.45,
+        100.625,
+        127.55,
+        101.975
+      ],
+      "top_from_mounting_face_mm": 0.65,
+      "source_id": "Panasonic_R4",
+      "assembly_note": "Bottom nonpolar0805; pads1.1x1.4 at+/-1.15 are project choice within generic manufacturer land range.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -1.15,
+            0.0
+          ],
+          "global_xy_mm": [
+            127.65,
+            101.3
+          ],
+          "size_mm": [
+            1.1,
+            1.4
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/M"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            1.15,
+            0.0
+          ],
+          "global_xy_mm": [
+            125.35,
+            101.3
+          ],
+          "size_mm": [
+            1.1,
+            1.4
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "MPN": "RL1206FR-7W0R68L",
+      "side": "B",
+      "xy_mm": [
+        116.2,
+        106.0
+      ],
+      "orientation_deg": 0.0,
+      "local_max_or_planning_bbox_mm": [
+        -1.6,
+        -0.85,
+        1.6,
+        0.85
+      ],
+      "global_bbox_mm": [
+        114.6,
+        105.15,
+        117.8,
+        106.85
+      ],
+      "top_from_mounting_face_mm": 0.65,
+      "source_id": "Yageo_R5",
+      "assembly_note": "Bottom nonpolar current-sense1206. Exact manufacturer body3.1+/-0.1x1.6+/-0.1x0.55+/-0.1. Retainedland pattern; inspect wetting.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -1.6,
+            0.0
+          ],
+          "global_xy_mm": [
+            114.6,
+            106.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            1.6,
+            0.0
+          ],
+          "global_xy_mm": [
+            117.8,
+            106.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/FB_INDUCTOR"
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "MPN": "1206S4F365KT5E",
+      "side": "B",
+      "xy_mm": [
+        116.5,
+        109.0
+      ],
+      "orientation_deg": 0.0,
+      "local_max_or_planning_bbox_mm": [
+        -1.625,
+        -0.85,
+        1.625,
+        0.85
+      ],
+      "global_bbox_mm": [
+        114.875,
+        108.15,
+        118.125,
+        109.85
+      ],
+      "top_from_mounting_face_mm": 0.65,
+      "source_id": "Royalohm_1206",
+      "assembly_note": "Bottom nonpolar1206. Family dimensional max3.25x1.70x0.65. Retained1206 manual-prototype lands, not claimed exact Royalohm recommended land. Inspect termination overlap and solder sample.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -1.275,
+            0.0
+          ],
+          "global_xy_mm": [
+            115.225,
+            109.0
+          ],
+          "size_mm": [
+            1.05,
+            1.8
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            1.275,
+            0.0
+          ],
+          "global_xy_mm": [
+            117.775,
+            109.0
+          ],
+          "size_mm": [
+            1.05,
+            1.8
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/FB_INDUCTOR"
+        }
+      ]
+    },
+    {
+      "ref": "R7",
+      "MPN": "HVR2500003903FR500",
+      "side": "F",
+      "xy_mm": [
+        129.0,
+        102.0
+      ],
+      "orientation_deg": 0.0,
+      "local_max_or_planning_bbox_mm": [
+        -1.25,
+        -1.25,
+        1.25,
+        1.25
+      ],
+      "global_bbox_mm": [
+        127.75,
+        100.75,
+        130.25,
+        103.25
+      ],
+      "top_from_mounting_face_mm": 11.5,
+      "source_id": "Vishay_HVR25",
+      "assembly_note": "Upright P4.8. BodyD2.5,L2total7.5max. Seat0.5, keep2mm straight abovebody before projectR1 bend. Engineering11.5 topenvelope; no vendor-qualified bend-radius assertion.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            129.0,
+            102.0
+          ],
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": [
+            0.9,
+            0.9
+          ],
+          "net": "/M"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            0.0,
+            4.8
+          ],
+          "global_xy_mm": [
+            129.0,
+            106.8
+          ],
+          "size_mm": [
+            2.0,
+            2.0
+          ],
+          "drill_mm": [
+            0.9,
+            0.9
+          ],
+          "net": "/LED_PLUS"
+        }
+      ],
+      "hole_check": {
+        "nominal_finished_hole_mm": 0.9,
+        "JLC_negative_tolerance_mm": 0.08,
+        "minimum_finished_hole_mm": 0.82,
+        "maximum_round_lead_mm": 0.63,
+        "minimum_diametral_clearance_mm": 0.19,
+        "minimum_radial_clearance_mm": 0.095
+      }
+    },
+    {
+      "ref": "R8",
+      "MPN": "RC1206FR-0768KL",
+      "side": "B",
+      "xy_mm": [
+        120.0,
+        122.0
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -1.6,
+        -0.85,
+        1.6,
+        0.85
+      ],
+      "global_bbox_mm": [
+        118.4,
+        121.15,
+        121.6,
+        122.85
+      ],
+      "top_from_mounting_face_mm": 0.65,
+      "source_id": "Yageo_R8",
+      "assembly_note": "Bottom nonpolar1206, max3.2x1.7x0.65. Retainedmanufacturer1206 lands; manual process inspection.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -1.6,
+            0.0
+          ],
+          "global_xy_mm": [
+            121.6,
+            122.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/LED_PLUS"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            1.6,
+            0.0
+          ],
+          "global_xy_mm": [
+            118.4,
+            122.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/DC_RETURN"
+        }
+      ]
+    },
+    {
+      "ref": "R9",
+      "MPN": "RC1206FR-0768KL",
+      "side": "B",
+      "xy_mm": [
+        120.0,
+        125.0
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -1.6,
+        -0.85,
+        1.6,
+        0.85
+      ],
+      "global_bbox_mm": [
+        118.4,
+        124.15,
+        121.6,
+        125.85
+      ],
+      "top_from_mounting_face_mm": 0.65,
+      "source_id": "Yageo_R8",
+      "assembly_note": "Same asR8; second68kohm bleeder, do not omit.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -1.6,
+            0.0
+          ],
+          "global_xy_mm": [
+            121.6,
+            125.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/LED_PLUS"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            1.6,
+            0.0
+          ],
+          "global_xy_mm": [
+            118.4,
+            125.0
+          ],
+          "size_mm": [
+            1.0,
+            1.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/DC_RETURN"
+        }
+      ]
+    },
+    {
+      "ref": "RF1",
+      "MPN": "FW20A47R0JA",
+      "side": "F",
+      "xy_mm": [
+        143.0,
+        128.4
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -3,
+        -3,
+        3,
+        3
+      ],
+      "global_bbox_mm": [
+        140.0,
+        125.4,
+        146.0,
+        131.4
+      ],
+      "top_from_mounting_face_mm": 14.85,
+      "source_id": "Bourns_FW",
+      "assembly_note": "Upright P6.8, FW20A bodyD6,L12max, lead.65+/-0.05. Seat0.5; topstraight1,bendcentreR1,wireR.35 gives14.85 engineeringtopbudget. Nonpolar; do not replace by ordinary nonfusible resistor.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            143.0,
+            128.4
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.1,
+            1.1
+          ],
+          "net": "/AC_L"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            0.0,
+            6.8
+          ],
+          "global_xy_mm": [
+            143.0,
+            121.6
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.1,
+            1.1
+          ],
+          "net": "/AC_FUSED"
+        }
+      ],
+      "hole_check": {
+        "nominal_finished_hole_mm": 1.1,
+        "JLC_negative_tolerance_mm": 0.08,
+        "minimum_finished_hole_mm": 1.02,
+        "maximum_round_lead_mm": 0.7,
+        "minimum_diametral_clearance_mm": 0.32,
+        "minimum_radial_clearance_mm": 0.16
+      }
+    },
+    {
+      "ref": "RV1",
+      "MPN": "B72207S0271K101",
+      "side": "F",
+      "xy_mm": [
+        134.0,
+        122.0
+      ],
+      "orientation_deg": 0.0,
+      "local_max_or_planning_bbox_mm": [
+        -2.2,
+        -4.5,
+        2.2,
+        4.5
+      ],
+      "global_bbox_mm": [
+        131.8,
+        117.5,
+        136.2,
+        126.5
+      ],
+      "top_from_mounting_face_mm": 11.5,
+      "source_id": "TDK_RV1",
+      "assembly_note": "Nonpolar straightP5+/-1 leads, discplanealongY, max4.4x9x11body. Project0.5 seating budget; gently form pitch with leads supported, do not force disc.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            0.0,
+            -2.5
+          ],
+          "global_xy_mm": [
+            134.0,
+            119.5
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ],
+          "net": "/AC_FUSED"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            0.0,
+            2.5
+          ],
+          "global_xy_mm": [
+            134.0,
+            124.5
+          ],
+          "size_mm": [
+            2.1,
+            2.1
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ],
+          "net": "/AC_N"
+        }
+      ],
+      "hole_check": {
+        "nominal_finished_hole_mm": 1.0,
+        "JLC_negative_tolerance_mm": 0.08,
+        "minimum_finished_hole_mm": 0.92,
+        "maximum_round_lead_mm": 0.65,
+        "minimum_diametral_clearance_mm": 0.27,
+        "minimum_radial_clearance_mm": 0.135
+      }
+    },
+    {
+      "ref": "T1",
+      "MPN": "7687709152",
+      "side": "F",
+      "xy_mm": [
+        120.5,
+        122.0
+      ],
+      "orientation_deg": -90.0,
+      "local_max_or_planning_bbox_mm": [
+        -6.25,
+        -6.25,
+        6.25,
+        6.25
+      ],
+      "global_bbox_mm": [
+        114.25,
+        115.75,
+        126.75,
+        128.25
+      ],
+      "top_from_mounting_face_mm": 10.5,
+      "source_id": "Wurth_T1",
+      "assembly_note": "WE-PD HV SIZE1210, NOT1280. Max12.5squarex10.5. Native5.4x2.9 lands pitch9.9 match manufacturer drawing. Marking/pin1 toLED_PLUS, pin2FB_INDUCTOR; no polarity-sensitive winding claim. No custom winding.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            0.0,
+            4.95
+          ],
+          "global_xy_mm": [
+            115.55,
+            122.0
+          ],
+          "size_mm": [
+            5.4,
+            2.9
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/LED_PLUS"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            0.0,
+            -4.95
+          ],
+          "global_xy_mm": [
+            125.45,
+            122.0
+          ],
+          "size_mm": [
+            5.4,
+            2.9
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/FB_INDUCTOR"
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "MPN": "LYT1603D",
+      "side": "B",
+      "xy_mm": [
+        122.5,
+        105.7
+      ],
+      "orientation_deg": 180.0,
+      "local_max_or_planning_bbox_mm": [
+        -2.05,
+        -2.55,
+        2.05,
+        2.55
+      ],
+      "global_bbox_mm": [
+        120.45,
+        103.15,
+        124.55,
+        108.25
+      ],
+      "top_from_mounting_face_mm": 1.75,
+      "source_id": "PI_U1",
+      "assembly_note": "Bottom SO8D08A. Body3.9x4.9 BASIC, enlarged to4.1x5.1 for contour screen, not claimed guaranteed package maximum. Maxheight1.75. Pin1BP,2M,3FB,4DRAIN,5-8SOURCE. Use pin1 marker and actual native netmap; packageviewmirrored onB.",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            -2.725,
+            1.905
+          ],
+          "global_xy_mm": [
+            125.225,
+            103.795
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/BP"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            -2.725,
+            0.635
+          ],
+          "global_xy_mm": [
+            125.225,
+            105.065
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/M"
+        },
+        {
+          "pin": "3",
+          "local_xy_mm": [
+            -2.725,
+            -0.635
+          ],
+          "global_xy_mm": [
+            125.225,
+            106.335
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/FB_INDUCTOR"
+        },
+        {
+          "pin": "4",
+          "local_xy_mm": [
+            -2.725,
+            -1.905
+          ],
+          "global_xy_mm": [
+            125.225,
+            107.605
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/BUS_FILTERED"
+        },
+        {
+          "pin": "5",
+          "local_xy_mm": [
+            2.725,
+            -1.905
+          ],
+          "global_xy_mm": [
+            119.775,
+            107.605
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        },
+        {
+          "pin": "6",
+          "local_xy_mm": [
+            2.725,
+            -0.635
+          ],
+          "global_xy_mm": [
+            119.775,
+            106.335
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        },
+        {
+          "pin": "7",
+          "local_xy_mm": [
+            2.725,
+            0.635
+          ],
+          "global_xy_mm": [
+            119.775,
+            105.065
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        },
+        {
+          "pin": "8",
+          "local_xy_mm": [
+            2.725,
+            1.905
+          ],
+          "global_xy_mm": [
+            119.775,
+            103.795
+          ],
+          "size_mm": [
+            1.45,
+            0.6
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/SW_SOURCE"
+        }
+      ]
+    }
+  ],
+  "wire_ports": [
+    {
+      "ref": "J1",
+      "MPN": "Direct insulated-wire solder pads",
+      "value": "230 VAC",
+      "xy_mm": [
+        148.4,
+        130.0
+      ],
+      "orientation_deg": 0.0,
+      "side": "B",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            148.4,
+            130.0
+          ],
+          "size_mm": [
+            2.0,
+            2.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/AC_L"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            0.0,
+            -5.5
+          ],
+          "global_xy_mm": [
+            148.4,
+            124.5
+          ],
+          "size_mm": [
+            2.0,
+            2.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/AC_N"
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "MPN": "Direct insulated-wire solder pads",
+      "value": "20S LED MODULE",
+      "xy_mm": [
+        101.6,
+        124.5
+      ],
+      "orientation_deg": 0.0,
+      "side": "B",
+      "pads": [
+        {
+          "pin": "1",
+          "local_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "global_xy_mm": [
+            101.6,
+            124.5
+          ],
+          "size_mm": [
+            2.0,
+            2.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/LED_PLUS"
+        },
+        {
+          "pin": "2",
+          "local_xy_mm": [
+            0.0,
+            5.5
+          ],
+          "global_xy_mm": [
+            101.6,
+            130.0
+          ],
+          "size_mm": [
+            2.0,
+            2.5
+          ],
+          "drill_mm": [
+            0.0,
+            0.0
+          ],
+          "net": "/DC_RETURN"
+        }
+      ]
+    }
+  ],
+  "height": {
+    "F_top_planning_mm": 16,
+    "PCB_nominal_mm": 1.6,
+    "B_package_max_mm": 2.9,
+    "nominal_PCB_stack_planning_mm": 20.5,
+    "PCB_max_at_10percent_mm": 1.76,
+    "stack_with_max_PCB_before_forming_process_variation_mm": 20.66,
+    "original_20mm_target_met": false,
+    "through_hole_lead_and_solder_projection_limit_below_PCB_mm": 1.5,
+    "notes": "20.5 is a planning envelope with nominalPCB, not measured or unconditional maximum. Reserve21mm only as preliminary handling clearance; actual assembly gauge required. No enclosure is selected."
+  },
+  "C6_exact_case": {
+    "MPN": "EEUFS2A151",
+    "not_MPN": "EEUFS2A151L",
+    "nominal_D_L_mm": [
+      12.5,
+      20
+    ],
+    "maximum_D_L_mm": [
+      13,
+      22
+    ],
+    "ripple_mA_rms_100kHz_105C": 1400,
+    "frequency_factors_47_330uF": {
+      "60Hz": 0.6,
+      "120Hz": 0.7,
+      "1kHz": 0.85,
+      "10kHz": 0.95,
+      "100kHz": 1
+    },
+    "vent_free_mm": 5,
+    "vent_global_Y_mm": 100,
+    "free_corridor_to_global_Y_mm": 95
+  },
+  "wire_port_process": "J1/J2 are solder lands, no connector body. Use separately insulated mains leads and LED pair; strain relief on insulated support outside PCB; route away from resistorbody and C6vent; no stripped wire whiskers. Verify polarity using actual pad nets. Do not count external wire loops in20.5mm boardstack."
+}

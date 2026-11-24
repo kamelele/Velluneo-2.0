@@ -37,7 +37,7 @@
       0
     ],
     "planned_max_above_PCB_mm": 1.5,
-    "design_basis": "Two barewire landsP6.6;nativebottomposeL48.4,30.1/N41.8,30.1; no connectorbody. Manualsupportandwireinsulationmustbeverified.",
+    "design_basis": "ActualnativeBpad1AC_L148.4,130;pad2AC_N148.4,124.5; pitch5.5; no connectorbody.",
     "wirepads": true,
     "footprint": "E27SC09:SC09_J1",
     "courtyard_polygons_mm": [
@@ -78,7 +78,8 @@
         ]
       ]
     ],
-    "ROUTE02": "Straight inline wire lands5.5mmpitch, no purchasedconnector; actualBside pads mirrorFcanonical."
+    "ROUTE02": "Straight inline wire lands5.5mmpitch, no purchasedconnector; actualBside pads mirrorFcanonical.",
+    "description": "ActualnativeBpad1AC_L148.4,130;pad2AC_N148.4,124.5; pitch5.5; no connectorbody."
   },
   "RF1": {
     "pads": [
@@ -187,7 +188,24 @@
         3.25
       ]
     ],
-    "footprint": "E27SC09:SC09_RF1"
+    "footprint": "E27SC09:SC09_RF1",
+    "assembly_dimension_basis": "Bourns_FW",
+    "assembly_note": "Upright P6.8, FW20A bodyD6,L12max, lead.65+/-0.05. Seat0.5; topstraight1,bendcentreR1,wireR.35 gives14.85 engineeringtopbudget. Nonpolar; do not replace by ordinary nonfusible resistor.",
+    "planned_max_from_mounting_face_mm": 14.85,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -3,
+      -3,
+      3,
+      3
+    ],
+    "hole_fit_screen": {
+      "nominal_finished_hole_mm": 1.1,
+      "JLC_negative_tolerance_mm": 0.08,
+      "minimum_finished_hole_mm": 1.02,
+      "maximum_round_lead_mm": 0.7,
+      "minimum_diametral_clearance_mm": 0.32,
+      "minimum_radial_clearance_mm": 0.16
+    }
   },
   "RV1": {
     "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
@@ -223,7 +241,24 @@
           1.0
         ]
       }
-    ]
+    ],
+    "assembly_dimension_basis": "TDK_RV1",
+    "assembly_note": "Nonpolar straightP5+/-1 leads, discplanealongY, max4.4x9x11body. Project0.5 seating budget; gently form pitch with leads supported, do not force disc.",
+    "planned_max_from_mounting_face_mm": 11.5,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -2.2,
+      -4.5,
+      2.2,
+      4.5
+    ],
+    "hole_fit_screen": {
+      "nominal_finished_hole_mm": 1.0,
+      "JLC_negative_tolerance_mm": 0.08,
+      "minimum_finished_hole_mm": 0.92,
+      "maximum_round_lead_mm": 0.65,
+      "minimum_diametral_clearance_mm": 0.27,
+      "minimum_radial_clearance_mm": 0.135
+    }
   },
   "BR1": {
     "pads": [
@@ -310,7 +345,16 @@
         4.0
       ]
     ],
-    "footprint": "E27SC09:SC09_BR1"
+    "footprint": "E27SC09:SC09_BR1",
+    "assembly_dimension_basis": "Diodes_MB10S",
+    "assembly_note": "Bottom. Match positive pin1 BUS_RECT, negative pin3 DC_RETURN, AC pins2/4; never mirror polarity from a top-view image.",
+    "planned_max_from_mounting_face_mm": 2.9,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -2.475,
+      -2.05,
+      2.475,
+      2.05
+    ]
   },
   "C1": {
     "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
@@ -346,7 +390,24 @@
           1.1
         ]
       }
-    ]
+    ],
+    "assembly_dimension_basis": "KEMET_R76",
+    "assembly_note": "Nonpolar P15+/-0.4. Body max18.5x7.7x13.6; add0.5 engineering seating allowance. Form leads gently without force on epoxy; 24mm minimum lead length sufficient.",
+    "planned_max_from_mounting_face_mm": 14.1,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -9.25,
+      -3.85,
+      9.25,
+      3.85
+    ],
+    "hole_fit_screen": {
+      "nominal_finished_hole_mm": 1.1,
+      "JLC_negative_tolerance_mm": 0.08,
+      "minimum_finished_hole_mm": 1.02,
+      "maximum_round_lead_mm": 0.85,
+      "minimum_diametral_clearance_mm": 0.17,
+      "minimum_radial_clearance_mm": 0.085
+    }
   },
   "L1": {
     "refs": [
@@ -434,7 +495,24 @@
         5.65
       ]
     ],
-    "footprint": "E27SC09:SC09_L1"
+    "footprint": "E27SC09:SC09_L1",
+    "assembly_dimension_basis": "Vishay_PR02FS",
+    "assembly_note": "Legacy refL1 is100ohm2W PR02-FS resistor, not choke. Upright body over pad1BUS_RECT. Pad pitch5.0038; bodyDmax3.9,Lbody10,totalterminal12. Preserve2mm stand-off and2mm topforming budget. Return lead to pin2BUS_FILTERED; sleeve return wire if needed to prevent accidental contact, without relying on sleeve for a new safety barrier. Inspect actual formed envelope.",
+    "planned_max_from_mounting_face_mm": 16,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -4.4519,
+      -1.95,
+      2.9169,
+      1.95
+    ],
+    "hole_fit_screen": {
+      "nominal_finished_hole_mm": 1.2,
+      "JLC_negative_tolerance_mm": 0.08,
+      "minimum_finished_hole_mm": 1.12,
+      "maximum_round_lead_mm": 0.83,
+      "minimum_diametral_clearance_mm": 0.29,
+      "minimum_radial_clearance_mm": 0.145
+    }
   },
   "C4": {
     "refs": [
@@ -519,7 +597,24 @@
         3.25
       ]
     ],
-    "footprint": "E27SC09:SC09_C4"
+    "footprint": "E27SC09:SC09_C4",
+    "assembly_dimension_basis": "TDK_C4",
+    "assembly_note": "Nonpolar P10+/-0.4, max13x6x12, project0.5 stand-off. Slight pitch correction may be needed.",
+    "planned_max_from_mounting_face_mm": 12.5,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -6.5,
+      -3,
+      6.5,
+      3
+    ],
+    "hole_fit_screen": {
+      "nominal_finished_hole_mm": 1.1,
+      "JLC_negative_tolerance_mm": 0.08,
+      "minimum_finished_hole_mm": 1.02,
+      "maximum_round_lead_mm": 0.65,
+      "minimum_diametral_clearance_mm": 0.37,
+      "minimum_radial_clearance_mm": 0.185
+    }
   },
   "U1": {
     "pads": [
@@ -636,12 +731,6 @@
         "shape": "rect"
       }
     ],
-    "max_body_bbox_xy_mm": [
-      -1.95,
-      -2.45,
-      1.95,
-      2.45
-    ],
     "planned_max_above_PCB_mm": 1.75,
     "design_basis": "Exactmanufacturerlandaddendum9b021d0a;normalnativebottomfliprequired.",
     "courtyard_polygon": [
@@ -662,7 +751,27 @@
         2.7
       ]
     ],
-    "footprint": "E27SC09:SC09_U1"
+    "footprint": "E27SC09:SC09_U1",
+    "assembly_dimension_basis": "PI_U1",
+    "assembly_note": "Bottom SO8D08A. Body3.9x4.9 BASIC, enlarged to4.1x5.1 for contour screen, not claimed guaranteed package maximum. Maxheight1.75. Pin1BP,2M,3FB,4DRAIN,5-8SOURCE. Use pin1 marker and actual native netmap; packageviewmirrored onB.",
+    "planned_max_from_mounting_face_mm": 1.75,
+    "engineering_contour_screen_bbox_mm": [
+      -2.05,
+      -2.55,
+      2.05,
+      2.55
+    ],
+    "body_basic_LW_mm": [
+      3.9,
+      4.9
+    ],
+    "nominal_basic_body_bbox_xy_mm": [
+      -1.95,
+      -2.45,
+      1.95,
+      2.45
+    ],
+    "body_dimension_note": "3.9x4.9BSC is not an absolute maximum; separate4.1x5.1 engineering allowance checked in assembly contract."
   },
   "C5": {
     "refs": [
@@ -752,7 +861,16 @@
         1.0
       ]
     ],
-    "footprint": "E27SC09:SC09_C5"
+    "footprint": "E27SC09:SC09_C5",
+    "assembly_dimension_basis": "Samsung_C5",
+    "assembly_note": "Bottom nonpolar0805. Pad1x1.5 at+/-1.0 is engineering selection; control solder volume and thermal shock.",
+    "planned_max_from_mounting_face_mm": 1.35,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -1.05,
+      -0.675,
+      1.05,
+      0.675
+    ]
   },
   "R4": {
     "refs": [
@@ -839,7 +957,16 @@
         0.95
       ]
     ],
-    "footprint": "E27SC09:SC09_R4"
+    "footprint": "E27SC09:SC09_R4",
+    "assembly_dimension_basis": "Panasonic_R4",
+    "assembly_note": "Bottom nonpolar0805; pads1.1x1.4 at+/-1.15 are project choice within generic manufacturer land range.",
+    "planned_max_from_mounting_face_mm": 0.65,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -1.05,
+      -0.675,
+      1.05,
+      0.675
+    ]
   },
   "R5": {
     "refs": [
@@ -928,7 +1055,16 @@
         1.1
       ]
     ],
-    "footprint": "E27SC09:SC09_R5"
+    "footprint": "E27SC09:SC09_R5",
+    "assembly_dimension_basis": "Yageo_R5",
+    "assembly_note": "Bottom nonpolar current-sense1206. Exact manufacturer body3.1+/-0.1x1.6+/-0.1x0.55+/-0.1. Retainedland pattern; inspect wetting.",
+    "planned_max_from_mounting_face_mm": 0.65,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ]
   },
   "R6": {
     "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
@@ -964,6 +1100,15 @@
           0.0
         ]
       }
+    ],
+    "assembly_dimension_basis": "Royalohm_1206",
+    "assembly_note": "Bottom nonpolar1206. Family dimensional max3.25x1.70x0.65. Retained1206 manual-prototype lands, not claimed exact Royalohm recommended land. Inspect termination overlap and solder sample.",
+    "planned_max_from_mounting_face_mm": 0.65,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -1.625,
+      -0.85,
+      1.625,
+      0.85
     ]
   },
   "D1": {
@@ -1105,7 +1250,16 @@
         1.1
       ]
     ],
-    "footprint": "E27SC09:SC09_D1"
+    "footprint": "E27SC09:SC09_D1",
+    "assembly_dimension_basis": "Diodes_US1M",
+    "assembly_note": "Bottom SMA. Cathode band to pin1 FB_INDUCTOR, anode pin2 DC_RETURN. Exact recommended2.5x1.7 lands pitch4.",
+    "planned_max_from_mounting_face_mm": 2.4,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -2.3,
+      -1.46,
+      2.3,
+      1.46
+    ]
   },
   "T1": {
     "SB01_basis": "Manufacturer dimensions and final local-footprint implementation inventory; not independent electrical intent",
@@ -1141,6 +1295,15 @@
           0.0
         ]
       }
+    ],
+    "assembly_dimension_basis": "Wurth_T1",
+    "assembly_note": "WE-PD HV SIZE1210, NOT1280. Max12.5squarex10.5. Native5.4x2.9 lands pitch9.9 match manufacturer drawing. Marking/pin1 toLED_PLUS, pin2FB_INDUCTOR; no polarity-sensitive winding claim. No custom winding.",
+    "planned_max_from_mounting_face_mm": 10.5,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -6.25,
+      -6.25,
+      6.25,
+      6.25
     ]
   },
   "C6": {
@@ -1265,7 +1428,24 @@
         6.75
       ]
     ],
-    "footprint": "E27SC09:SC09_C6"
+    "footprint": "E27SC09:SC09_C6",
+    "assembly_dimension_basis": "Panasonic_FS",
+    "assembly_note": "Horizontal; plus pin1 LED_PLUS, stripe/minus pin2 DC_RETURN. D12.5+/-0.5,L20+/-2,P5+/-0.5,d0.6+/-0.05. Support can0.5 abovePCB; seal plane localX4, axis+X, ventX26. Preserve2.5 straight lead before1.5 centreline bend. Do not grip/force seal. Keep vent5mm free in3D and support without covering vent. Sleeve is not an electrical barrier.",
+    "planned_max_from_mounting_face_mm": 13.5,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      4,
+      -6.5,
+      26,
+      6.5
+    ],
+    "hole_fit_screen": {
+      "nominal_finished_hole_mm": 1.2,
+      "JLC_negative_tolerance_mm": 0.08,
+      "minimum_finished_hole_mm": 1.12,
+      "maximum_round_lead_mm": 0.65,
+      "minimum_diametral_clearance_mm": 0.47,
+      "minimum_radial_clearance_mm": 0.235
+    }
   },
   "R7": {
     "refs": [
@@ -1361,7 +1541,24 @@
         1.5
       ]
     ],
-    "footprint": "E27SC09:SC09_R7"
+    "footprint": "E27SC09:SC09_R7",
+    "assembly_dimension_basis": "Vishay_HVR25",
+    "assembly_note": "Upright P4.8. BodyD2.5,L2total7.5max. Seat0.5, keep2mm straight abovebody before projectR1 bend. Engineering11.5 topenvelope; no vendor-qualified bend-radius assertion.",
+    "planned_max_from_mounting_face_mm": 11.5,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -1.25,
+      -1.25,
+      1.25,
+      1.25
+    ],
+    "hole_fit_screen": {
+      "nominal_finished_hole_mm": 0.9,
+      "JLC_negative_tolerance_mm": 0.08,
+      "minimum_finished_hole_mm": 0.82,
+      "maximum_round_lead_mm": 0.63,
+      "minimum_diametral_clearance_mm": 0.19,
+      "minimum_radial_clearance_mm": 0.095
+    }
   },
   "R8": {
     "refs": [
@@ -1451,7 +1648,16 @@
         1.1
       ]
     ],
-    "footprint": "E27SC09:SC09_R8"
+    "footprint": "E27SC09:SC09_R8",
+    "assembly_dimension_basis": "Yageo_R8",
+    "assembly_note": "Bottom nonpolar1206, max3.2x1.7x0.65. Retainedmanufacturer1206 lands; manual process inspection.",
+    "planned_max_from_mounting_face_mm": 0.65,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ]
   },
   "R9": {
     "refs": [
@@ -1541,7 +1747,16 @@
         1.1
       ]
     ],
-    "footprint": "E27SC09:SC09_R9"
+    "footprint": "E27SC09:SC09_R9",
+    "assembly_dimension_basis": "Yageo_R8",
+    "assembly_note": "Same asR8; second68kohm bleeder, do not omit.",
+    "planned_max_from_mounting_face_mm": 0.65,
+    "max_body_or_formed_envelope_bbox_xy_mm": [
+      -1.6,
+      -0.85,
+      1.6,
+      0.85
+    ]
   },
   "J2": {
     "pads": [
@@ -1581,7 +1796,7 @@
       0
     ],
     "planned_max_above_PCB_mm": 1.5,
-    "design_basis": "Samebarewireinterface, movednegativepadforrouting; nativeBtransformgivesglobal5.0,8.2.",
+    "design_basis": "ActualnativeBpad1LED_PLUS101.6,124.5;pad2DC_RETURN101.6,130; pitch5.5; no connectorbody.",
     "wirepads": true,
     "footprint": "E27SC09:SC09_J2",
     "courtyard_polygons_mm": [
@@ -1622,6 +1837,7 @@
         ]
       ]
     ],
-    "ROUTE02": "Straight inline wire lands5.5mmpitch, no purchasedconnector; actualBside pads mirrorFcanonical."
+    "ROUTE02": "Straight inline wire lands5.5mmpitch, no purchasedconnector; actualBside pads mirrorFcanonical.",
+    "description": "ActualnativeBpad1LED_PLUS101.6,124.5;pad2DC_RETURN101.6,130; pitch5.5; no connectorbody."
   }
 }

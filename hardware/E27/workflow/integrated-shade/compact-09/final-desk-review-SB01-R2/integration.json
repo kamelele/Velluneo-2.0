@@ -1,0 +1,37 @@
+{
+  "kind": "Engineering desk-review integration, not manufacturing/test approval",
+  "date": "2026-11-24",
+  "base_commit": "872adddb3da9b3dbfa57e5c81ef7ba51da2a841c",
+  "branch": "concept/integrated-shade-nonisolated-buck",
+  "main_unchanged_expected": "377fc0a08e74043e255b732f7c2beb63134a3576",
+  "core_manifest_sha256": "5ef99c2301f666e3aacfee8bb05db913aea9b998f82acdfd672ce4d1ef78e17e",
+  "source_snapshot_sha256": "1cd3e442e9a9289ebdf9064190ada02c582c3f185dff1994138c4448cdf617d5",
+  "reviews": {
+    "reality": {
+      "file": "reviews/reality-final.json",
+      "sha256": "e2febdeae3efd4cafa3d790105e71ca73172f22b1bfc9e8d865d7cc0ece55e35"
+    },
+    "simplicity": {
+      "file": "reviews/simplicity-final.json",
+      "sha256": "3dc4cf0e830d4bcfb5a59ef90c8e10c1713e5fa341d97af29a8e92934b7a2d2e"
+    },
+    "completeness": {
+      "file": "reviews/completeness-final.json",
+      "sha256": "a70990cdbf8902a286eafefe7946919b78697c8e911ad99ba9e8a3a6dbf38fe8"
+    },
+    "change": {
+      "file": "reviews/change-final.json",
+      "sha256": "93b9eb60ae5e57d644b272f541cb745cb612b043ad28073d16e5f8b63b318930"
+    }
+  },
+  "native_manufacturing_checks_passed": true,
+  "full_toolkit_release_passed": false,
+  "strict_spacing_passed": false,
+  "strict_spacing_findings": 23,
+  "human_approval": null,
+  "order_submitted": false,
+  "powered_test": false,
+  "no_new_board": true,
+  "readiness": "No mandatory hardware change identified before first laboratory prototype; bounded desk review complete. Commercial quote and physical qualification limitations explicit.",
+  "integration_documents": "ORDERING.md and integration.json summarize frozen evidence/reviews; no new engineering input or approval."
+}

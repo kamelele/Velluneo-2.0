@@ -1,0 +1,15 @@
+# SB01 R2 purchasing plan —24 November2026
+
+Use PURCHASE.SB01-R2.csv for exact MPNs, references, fitted and purchase quantities, MOQ, supplier URLs, prices and evidence freshness. procurement.SB01.json is the structured plan; COST.SB01-R2.json is the budget. This is the power-supply electronic BOM only:17 fitted components,16unique MPNs. PCB,LEDs,wires,insulating supports,solder and consumables are excluded. No cart,order,upload or supplier message was submitted.
+
+TME: RV1,BR1,C1,U1,R4,R6,D1,R8/R9. All8SKUs have direct dated public-page positive stock evidence. R6 requires100pcs though only1is fitted;99spares are included in the minimum basket. U1 andR6 carry stock-exhaustion notices; LYT1603D is NRND. Minimum basket19.99PLNnet/about24.59gross, prepaid Pocztex12.18gross, totalabout36.77PLNgross. Gross values assume23%VAT and may differ by cents with supplier line rounding.
+
+DigiKey: RF1,L1,C4,C5,R5,T1,C6,R7. Exact official supplier pages show positive stock in indexed evidence; these are NOT live inventory reservations. Use MOQ1 cut tape/bulk, not reels or paid Digi-Reel. Known indexed subtotal25.66PLNnet plus C6USD1.89net. The Polish C6 price was not obtained. DKpublished shipping80PLN below300PLN; VAT inclusion is unclear, so budget80–98.40gross. Cost file assumes4.50PLN/USD solely for planning, not a current exchange quote. Full minimum component purchase plus both deliveries is158.79–177.19PLN under that assumption; a practical rounded budget is **180PLNgross**, excluding PCB/LED/consumables. This is an estimate, not a guaranteed payable quotation; verify stock,C6PLNprice,VAT and delivery at checkout.
+
+Physical legacy L1 is PR02FS0201000KR500,100ohm10%2W resistor (R10 in analysis). DO NOT purchase the obsolete768772332 choke. RF1 is separate47ohm FW20A47R0JA protective fusible resistor. T1 is ready-madeWurth7687709152,1.5mH,WE-PD HV1210; no custom winding is needed.
+
+EEU-FS2A151 and EEUFS2A151 are punctuation variants of the exact base capacitor. TME currently has0stock andMOQ200forbase,0stock/MOQ250forB, so neither is a sensible1pc purchase there. The Panasonic B suffix is lead-tape packaging with the same body/P5/electrical row; it is documented only as an unselected packaging option. The purchased plan remains unsuffixed base. L/LB have different bodies/ratings and are not permitted substitutions. TME ERJ6ENF1242V corresponds to Panasonic ERJ-6ENF1242V punctuation.
+
+J1/J2 are bare insulated-wire solder lands, not connectors. Manually formed axial resistors and horizontalC6 must follow ASSEMBLY_REVIEW.SB01-R2.md, including support,lead trimming and vent clearance. No energized use or finished-lamp qualification follows from component availability.
+
+Dated acquisition JSON/indexed evidence and source hashes are retained in the workflow packet evidence/purchasing. Raw HTML/text observations remain in work/sc09-sb01-r2-final/purchasing locally. HTTP403/429/access failure is missing observation, never zero inventory. Current DigiKey quote remains unconfirmed; the budget/list is complete with that explicit commercial limitation.

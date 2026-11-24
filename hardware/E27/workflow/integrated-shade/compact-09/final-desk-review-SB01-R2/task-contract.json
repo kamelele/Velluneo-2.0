@@ -1,0 +1,25 @@
+{
+  "coordinator": "/root",
+  "scope": "Finish pre-order NORMAL-operation calculations, actual part fit and current exact-part purchasing list for one SB01 R2 laboratory prototype; no new board",
+  "canonical_writer": "/root",
+  "contributors": {
+    "/root/r2_normal_calcs": "calculations/",
+    "/root/r2_assembly_fit": "assembly/",
+    "/root/r2_purchasing": "purchasing/"
+  },
+  "base_commit": "872adddb3da9b3dbfa57e5c81ef7ba51da2a841c",
+  "owner_authorization": "Actual user design-work instruction plus retained owner-autonomous-completion.json; no repeated internal-stage permission questions; no fabricated release or test approval",
+  "limits": [
+    "207\u2013253VAC50Hz,0\u201340C labprototype",
+    "No supplier upload/order/payment/physicaltest",
+    "No main change or unreviewed global rule relaxation",
+    "Finishedproduct/EMI/surgequalification remain distinct from pre-order prototype design review"
+  ],
+  "required_outputs": [
+    "One coherent normal calculation report, explicit model/assumption confidence",
+    "Current all-part assembly contract and corrected active metadata",
+    "Actionable exact purchase BOM with stock/MOQ/date/links and clearly bounded prices/shipping",
+    "Fresh affected native checks/source bindings or justified unchanged-CAD retention",
+    "Four distinct final read-only reviews and truthful pre-order status"
+  ]
+}

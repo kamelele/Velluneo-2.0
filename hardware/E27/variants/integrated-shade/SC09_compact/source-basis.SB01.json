@@ -15,7 +15,7 @@
       "value": "47ohm 5% 2W fusible",
       "source": "https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
       "package": "axial, same FW20A12x6mm",
-      "notes": "Changed10ohm to47ohm for inputLCdamping after independentreview. RetainBournsFWfusiblefamilyandgeometry; normal60mARMSplanning0.1812W. IdealcornerC4peak588.7V<630V is not nonlinear/surge guarantee.",
+      "notes": "Protective47ohm FW20A retained. R2 downstreamL1 is100ohm PR02-FS. Current RMS/loss authority normal-calculations.SB01-R2.json; prior LC calculations are historical.",
       "assembly": "Existing uprightP6.8customforming, max14.85mmabovePCB, retained. No genericnonfusible replacement."
     },
     "C1": {
@@ -55,7 +55,7 @@
       "mpn": "7687709152",
       "value": "1.5mH 20% 400V",
       "source": "https://www.we-online.com/components/products/datasheet/7687709152.pdf",
-      "package": "WE-PD HV 1280 SMD,12.5x12.5x10.5max",
+      "package": "WE-PD HV 1210 SMD,12.5x12.5x10.5max",
       "body_or_reservation_mm": [
         12.5,
         12.5,
@@ -91,5 +91,11 @@
   "independent_intent": "All samephysicaltwo-terminalmembership and topology as approvedCAT01. Independent sourcepartsresearch precededCADchanges; noCAD-derived expectedgraph.",
   "scope": "Owner-authorized design work, no fabricated human schematic/placement/routing/release approval.",
   "all_waveform_temperature_efficiency_values_are_unmeasured": true,
-  "R2_precedence": "L1 legacy slot now PR02FS100 resistor, not inductor. Earlier LC/stock/thermal claims are historical; new startup-correction.SB01-R2.json and R2 engineering reports govern."
+  "R2_precedence": "L1 legacy slot now PR02FS100 resistor, not inductor. Earlier LC/stock/thermal claims are historical; new startup-correction.SB01-R2.json and R2 engineering reports govern.",
+  "current_review": {
+    "revision": "SC09-SB01-R2-final-desk-review",
+    "normal_file": "normal-calculations.SB01-R2.json",
+    "assembly_file": "assembly-contract.SB01-R2.json",
+    "no_part_or_pin_change_in_final_desk_review": true
+  }
 }

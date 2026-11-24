@@ -1,0 +1,36 @@
+{
+  "role": "Reality Checker",
+  "actor": "/root/r2_final_reality",
+  "date": "2026-11-24",
+  "core_manifest_sha256": "5ef99c2301f666e3aacfee8bb05db913aea9b998f82acdfd672ce4d1ef78e17e",
+  "recommendation": "ready_for_human_review",
+  "scope": "Finalv2 normal/assembly/purchasing desk package for first manual laboratory SB01R2 prototype, not full electrical/product release, powered testing or successful-operation guarantee.",
+  "previous_report": "reality.json",
+  "closure": [
+    {
+      "finding": "R2-REAL-01",
+      "status": "closed",
+      "evidence": "power-supply-specification.json now explicitly identifies8.0063W PI design-equation output and7.9441W surrogate output used for the loss/input/efficiency budget. Both remain labelled approximations, not measurements."
+    }
+  ],
+  "fresh_final_checks": [
+    "Final core-manifest SHA matches5ef99c2301f666e3aacfee8bb05db913aea9b998f82acdfd672ce4d1ef78e17e; independently recalculated every listed member SHA with no missing/mismatched files.",
+    "Independently recalculated all final source-snapshot hashes against candidate bytes: no mismatch.",
+    "Exact purchaseCSV still expands to all17 electronic positions with the same selected MPNs as final bom-build.json;16 unique purchasedMPNs. T1package descriptor now1210 while electricalMPN/value remain7687709152/1.5mH20%400V.",
+    "Fresh final native-export reports native_unconnected0, source_unchangedtrue, native_checks_successtrue and fabrication_exportedtrue. Fresh actual-parts audit passed; fabrication audit passed with unchanged input. Board remains the retained0889e1d7a701c26b89750c4e1a42a170efc6a5b30669d75d5abded6ff8b69bbe identity.",
+    "Current requirements SB01_current_engineering_basis explicitly supersedes historical19.5mm/oldloss estimates with20.5mm and1.2362–1.6862W; no historical owner approval silently extended.",
+    "Canonical purchase report now references included PURCHASE.SB01-R2.csv, procurement.SB01.json and COST.SB01-R2.json names. Two-basket~180PLN budget remains explicitly nonquote with DigiKey indexed freshness/C6PLN price/deliveryVAT limitations.",
+    "Final toolkit-work and toolkit-release are still FAIL with34/52 recorded errors respectively. These are not silently treated as completed release or fresh user acceptance."
+  ],
+  "retained_inspection": "All detailed calculation-code, assembly-contract, exactHVR25primary, native DRCignored-category, mechanical forming and conditional OVP/BP/thermal conclusions from reality.json are retained; finalv2 changes do not alter the circuit, actualpartMPNs, copper, numericalrules or physical dimensions reviewed there.",
+  "material_preorder_hardware_blockers_identified": [],
+  "remaining_scope_limits": [
+    "68V hot regulation remains conditional; dynamic OVP, BP startup, actual waveform/temperature/current and surge/fault/EMI behavior require prototype characterization.",
+    "No guarantee against100VC6 overcharge under U1D-Sshort; ordinary input fuse does not establish fail-safe output protection.",
+    "20.5mm/20.66mm height planning still excludes forming/solder variation and does not qualify20mm enclosure fit.",
+    "DigiKey inventory and payable price must be checked at ordering; existing list is a coherent exact-MPN purchase plan with a budget, not a reserved current quotation."
+  ],
+  "full_toolkit_release_pass": false,
+  "human_approval": false,
+  "source_files_modified": false
+}

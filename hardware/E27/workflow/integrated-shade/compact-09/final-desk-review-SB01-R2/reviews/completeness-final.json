@@ -1,0 +1,107 @@
+{
+  "role": "Completeness Reviewer final closure",
+  "actor": "/root/r2_final_completeness",
+  "date": "2026-11-24",
+  "read_only": true,
+  "core_manifest_sha256": "5ef99c2301f666e3aacfee8bb05db913aea9b998f82acdfd672ce4d1ef78e17e",
+  "previous_review_sha256": "af1380787719d2c54c76cf3997569959c72c603f343d619f0d2df16ea74cb73c",
+  "expected_manifest_match": true,
+  "scope": "First SB01R2 manual guarded laboratory prototype normal/assembly desk review and budgeted exact purchasing list. Not finished lamp, not fullrelease approval, no order or powered test.",
+  "retained_coverage": [
+    {
+      "requirement": "Task: samePCB/sameBOM/no redesign",
+      "evidence": "source-snapshot/retained-scope",
+      "status": "covered",
+      "detail": "PCB0889e1d7,schematic573a1f12 and numericalrules unchanged. BOM electrical MPN/value/pins/kind identity unchanged; final BOM bytes differ from baseline48403606 because T1 descriptor size1280 was corrected to1210. Metadata updates do not change selected components or physical connectivity."
+    },
+    {
+      "requirement": "Task: coherent normalcalculations",
+      "evidence": "NORMAL_REVIEW.md,normal-calculations.SB01-R2.json,current specification/thermalplanning",
+      "status": "covered as calculation",
+      "detail": "Input207–253VAC,0–40C;133.4mA60V nominal; upper68Vhot OVP conditional;1.24–1.69W and82.5–86.5%explicitplanning not guaranteedmeasurement."
+    },
+    {
+      "requirement": "Task: allpart assemblyfit",
+      "evidence": "assembly-contract.SB01-R2.json,ASSEMBLY_REVIEW.md",
+      "status": "covered as deskfit",
+      "detail": "17electronics and2wireports; exactMPNs match nativeBOM;7THT holechecks positive; manual forming/inspection prescribed;20.5nom/20.66maxPCBstack before processvariation;20mmclaim corrected."
+    },
+    {
+      "requirement": "Task: exact purchasingBOM",
+      "evidence": "PURCHASE.SB01-R2.csv,procurement.SB01.json",
+      "status": "covered with explicit supplierfreshness limits",
+      "detail": "16rows/17fitted/16uniqueMPNs; no unmatched nativeMPN. TME8SKUs9fitted,DigiKey8SKUs8fitted; R6MOQ100quantified;J1/J2barepadsno connectorpurchase."
+    },
+    {
+      "requirement": "Task: allpartprice+shipping",
+      "evidence": "COST.SB01-R2.json,PURCHASE_REVIEW.md",
+      "status": "budgeted, not currentquote",
+      "detail": "TME19.99PLNnet verified arithmetic; DK25.66net+C6USD1.89indexed.23%VATassumption;12.18TME and80/98.40DKshipping explicit.4–5PLN/USD assumedonly;157.63–178.35budgetrange;~180planning. PCB/LED/consumablesexcluded."
+    },
+    {
+      "requirement": "Task: manufacturing/nativeevidence",
+      "evidence": "checks/native and retained-scope",
+      "status": "covered with retainedCADscope",
+      "detail": "Native10.0.6 ERC/DRC/parity/unconnected0;17actualelectronicMPNchecks pass;fabricationgeometryaudit pass;8flatmemberretainedZIPexactsha b722078e... verified. Native initialwholemetadataguard predates3docchanges; CAD/BOM/rulesidentityretentiondefensible, not finalfullsnapshotnativeclaim."
+    },
+    {
+      "requirement": "Full toolkit release",
+      "evidence": "toolkit-release.json",
+      "status": "FAIL retained",
+      "detail": "52errors;requirementsreviews/measurement/interface/approval/provider/releasebindings missing. No completion of fullrelease inferred. Ownerautonomousinstruction allows engineeringwork without fabricating stageapproval."
+    },
+    {
+      "requirement": "Task: fourdistinctfinalroles",
+      "evidence": "External review reports assembled bycoordinator",
+      "status": "pending coordinator integration",
+      "detail": "This report is only Completeness; not proof otherthree reviews exist or no remaining majorissues."
+    }
+  ],
+  "closure_checks": [
+    {
+      "id": "COMP-MIN-1",
+      "status": "closed",
+      "evidence": "Canonical PURCHASE_REVIEW.SB01-R2.md now names PURCHASE.SB01-R2.csv,procurement.SB01.json,COST.SB01-R2.json correctly."
+    },
+    {
+      "id": "COMP-MIN-2",
+      "status": "closed",
+      "evidence": "Canonical purchasing report is English; Polish summary remains user-facing."
+    },
+    {
+      "id": "native-snapshot",
+      "status": "closed",
+      "evidence": "Fresh checks/native/native-export.json source_files all match final candidate hashes including hardware,prototypegates,README. Native10.0.6 ERC/DRC/parity/unconnected0; fabrication and actual-parts audits pass."
+    },
+    {
+      "id": "BOMdescriptor",
+      "status": "verified",
+      "evidence": "BOM19refs/17electronics/16MPNs; comparison with priorcanonical confirms identicalref/MPN/value/pins/kind. T1size1210 correction changes description only. Purchase/assembly MPNsets exactmatch."
+    },
+    {
+      "id": "source-freeze",
+      "status": "verified",
+      "evidence": "Every coremanifest and source-snapshot entry hash verified. Retained supplierZIPhash b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e verified."
+    },
+    {
+      "id": "price-limits",
+      "status": "retained",
+      "evidence": "~180PLN remains budget only; TME19.99net/DK25.66net+C6USD1.89indexed; uncertainVATshipping80/98.40; no liveDKquote,PCB/LED/consumables excluded."
+    }
+  ],
+  "inspected_final_hashes": {
+    "PURCHASE_REVIEW.SB01-R2.md": "b0b1a2d8fddfe32e28f26bfb0576a5443122e0a8b7b6b61d086c72774417a1f8",
+    "PURCHASE.SB01-R2.csv": "7caa85c9cbeed13503ce4ee2b22a037a72bcf58b19dd3e701e49b475e2d8f3fa",
+    "procurement.SB01.json": "1dafb69450fc0645adab38249ac24f705da751846581aee9866c5238095bf82f",
+    "COST.SB01-R2.json": "078dcca2a366a756354eb4980011069076aaec11746e7554745169f05fec3172",
+    "bom-build.json": "a72cae032bb05776c790ab765973bee259a78e493ed568e728ac6453a6b94636",
+    "power-supply-specification.json": "bd72d630319ac9823805494b91cc735460bb430fb22f3fdd900aee91001600c9",
+    "thermal-planning.json": "a799119db9cd3e27b3eeabc69315d053a2c0c56716a4ff1f34dacfaa7a481d66"
+  },
+  "findings": [],
+  "major_or_blocker_findings": [],
+  "recommendation": "ready_for_human_review of first manual laboratory prototype desk package and budgeted procurement; not full toolkitrelease acceptance",
+  "retained_limits": "FulltoolkitworkFAIL34/releaseFAIL52 remain explicit. No measurements, order/testauthorization, full lamp compliance or guaranteedliveavailability. Other three final role closures required before coordinator integration.",
+  "supersedes_coverage_clarification": "Prior report mentions BOM byteidentity and initialnativeguard stale3docs: final BOM nowdescriptor-onlychange; finalnativeexport allsourcehashescurrent. Previous report retained as history, these final checks prevail.",
+  "approval_granted": false
+}
