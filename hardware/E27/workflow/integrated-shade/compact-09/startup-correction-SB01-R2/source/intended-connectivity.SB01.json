@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "revision": "SC09-SB01-R2",
+  "basis": "Retained independent CAT01 functional pin membership; exact replacement datasheets retain all two-terminal nonpolar physical memberships. New parts/geometry invalidate previous exact-source stage acceptance; no topology change.",
+  "basis_sources": [
+    {
+      "path": "bom-build.json",
+      "sha256": "48403606a32e1dc21caf0be1688091f222c786c986686aa18dd5f57edcbb905a"
+    },
+    {
+      "path": "source-basis.SB01.json",
+      "sha256": "f00d64d2c6f80db52de41b810eada6887481c75bd20d7e344f6ade0efb311e43"
+    }
+  ],
+  "components": [
+    {
+      "ref": "J1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RF1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "RV1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "BR1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "L1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "T1",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R7",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R8",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R9",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "units": [
+        {
+          "name": "A",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "id": "AC_L",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "1"
+        },
+        {
+          "ref": "RF1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "AC_N",
+      "pins": [
+        {
+          "ref": "J1",
+          "pin": "2"
+        },
+        {
+          "ref": "RV1",
+          "pin": "2"
+        },
+        {
+          "ref": "BR1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "id": "AC_FUSED",
+      "pins": [
+        {
+          "ref": "RF1",
+          "pin": "2"
+        },
+        {
+          "ref": "RV1",
+          "pin": "1"
+        },
+        {
+          "ref": "BR1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "BUS_RECT",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "1"
+        },
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "L1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "DC_RETURN",
+      "pins": [
+        {
+          "ref": "BR1",
+          "pin": "3"
+        },
+        {
+          "ref": "C1",
+          "pin": "2"
+        },
+        {
+          "ref": "C4",
+          "pin": "2"
+        },
+        {
+          "ref": "D1",
+          "pin": "2"
+        },
+        {
+          "ref": "C6",
+          "pin": "2"
+        },
+        {
+          "ref": "R8",
+          "pin": "2"
+        },
+        {
+          "ref": "R9",
+          "pin": "2"
+        },
+        {
+          "ref": "J2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "BUS_FILTERED",
+      "pins": [
+        {
+          "ref": "L1",
+          "pin": "2"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "id": "BP",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "1"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "M",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "2"
+        },
+        {
+          "ref": "R4",
+          "pin": "1"
+        },
+        {
+          "ref": "R7",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "FB_INDUCTOR",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "3"
+        },
+        {
+          "ref": "R5",
+          "pin": "2"
+        },
+        {
+          "ref": "R6",
+          "pin": "2"
+        },
+        {
+          "ref": "D1",
+          "pin": "1"
+        },
+        {
+          "ref": "T1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "id": "SW_SOURCE",
+      "pins": [
+        {
+          "ref": "U1",
+          "pin": "5"
+        },
+        {
+          "ref": "U1",
+          "pin": "6"
+        },
+        {
+          "ref": "U1",
+          "pin": "7"
+        },
+        {
+          "ref": "U1",
+          "pin": "8"
+        },
+        {
+          "ref": "C5",
+          "pin": "2"
+        },
+        {
+          "ref": "R4",
+          "pin": "2"
+        },
+        {
+          "ref": "R5",
+          "pin": "1"
+        },
+        {
+          "ref": "R6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "LED_PLUS",
+      "pins": [
+        {
+          "ref": "T1",
+          "pin": "1"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "R7",
+          "pin": "2"
+        },
+        {
+          "ref": "R8",
+          "pin": "1"
+        },
+        {
+          "ref": "R9",
+          "pin": "1"
+        },
+        {
+          "ref": "J2",
+          "pin": "1"
+        }
+      ]
+    }
+  ],
+  "no_connects": [],
+  "barriers": [],
+  "empty_design_reason": null
+}

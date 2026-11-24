@@ -1,0 +1,34 @@
+# Independent Change Review — SB01 R2 validated candidate
+
+Reviewer: `/root/sb01_r1_final_change`, distinct from the candidate author and startup/protection contributors. Read-only review of frozen `outputs/SC09_SB01_R2_rozruch_validated`.
+
+**Recommendation: ready_for_human_review**, limited to adoption as an **UNRELEASED, same-board engineering candidate**. This is not manufacturing release, fabrication acceptance, approval of an assembled prototype, or permission to energize it. No new blocker/major finding remains in the reviewed change after the positions correction below. Existing electrical and release blockers remain open.
+
+## Exact reviewed objects and independent evidence
+
+- Core manifest SHA256: `ddb90c1270fbfce6e8b64862b64e442b1f56bc66d86071a32232ea3b73235e80`. All 231 declared files verified before and after review.
+- Candidate PCB SHA256: `0889e1d7a701c26b89750c4e1a42a170efc6a5b30669d75d5abded6ff8b69bbe`.
+- Comparison: retained `outputs/SC09_SB01_R1_weryfikacja/source`, baseline commit `a96ee80a3ab4c8c1b56fa7e9e5b9188beba61c3a`, and the R1 hashes in candidate `provenance/before.json`. Eight canonical R1 source guards remain unchanged before/after this review; integration has not been inferred from the candidate packet.
+- Native KiCad 10.0.6 was run on a private, byte-verified source copy under this review directory. Fresh ERC, schematic export, full configured DRC with schematic parity, all-track-errors and refill returned success; unconnected count is zero. Commands and fresh reports are retained beside this report.
+- An independent native geometry comparison found exact equality to R1 of saved tracks/vias, pad membership/coordinates/shapes/sizes/drills/layers/mask expansion, footprint positions/orientations, and board outline. This remains the 51.2 × 33 mm board, 19 positions, 46 pins and 11 nets. Independent original-BOM/native-board/fresh-schematic pin graphs agree.
+- Candidate actual PCB and fresh schematic MPN/value fields agree with the canonical BOM. The only selected component MPN change is L1: `768772332` to `PR02FS0201000KR500`; RF1 remains `FW20A47R0JA`.
+- Native `.kicad_pro` and `.kicad_dru` are byte-identical to R1. Spatial changes are revision/basis-source metadata only. Both consumer contracts are identical after removing their two refreshed intent/constraint digest fields. No numerical width/clearance/region exception was introduced by this change. Hardware changes are confined to current artifact pointers, the historical-release note and procurement revision; approval/waiver records are unchanged.
+- Every current hardware artifact binding resolves to the advertised SHA256. Both front and back assembly drawings are bound. Retained Gerber/drill candidate ZIP SHA256 `b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e` equals R1 byte for byte and contains the expected eight flat manufacturing files. Fresh native fabrication checks are additional evidence; unchanged copper does not establish electrical qualification.
+
+## Finding closure and assembly consistency
+
+**CH-R2-01 — major, CLOSED:** The earlier final packet selected the R1 position export whose L1 value still said `3m3 / EMI`. That active assembly pointer could direct a builder to install the removed choke. The validated packet now binds `source/release-refinement-R2/manual-positions.csv`, SHA256 `aa6d3e05d0cdd11495a78301c9c05dd299c88be72ee25a5a66e2dfe84d7da898`. Its 19-row native export identifies L1 as `100R / RC DAMPER`; L1 is X145.500000, Y−115.500000, rotation180°, top. All exported coordinates, rotations, sides and package identifiers match R1. Current source/release BOMs and procurement selected-MPN row name the Vishay resistor, and the legacy choke purchase observation is explicitly historical. No stale active L1 part instruction was found in these current bound assembly artifacts. Explicit R1 directories remain historical evidence.
+
+**CH-R2-02 — minor, informational:** Procurement retains older basket subtotals/counts. Current selected L1 price/stock are null and `current_cost_quote_available` is false. Those basket figures must not be presented as a complete current R2 delivered-cost quote or a stock guarantee. This does not block review of an unreleased engineering candidate; a fresh quote is required for procurement.
+
+The L1 reference/library identifier is intentionally retained to preserve board annotation and hole mapping; the symbol is a two-terminal zigzag, with current resistor value and datasheet. The assembly ECO is substantive: a 100 Ω pulse resistor replaces a 3.3 mH choke. It is not merely a metadata correction, even though the fabrication files and connectivity membership are unchanged. Startup response, dissipation and EMI behavior change; earlier assembly-specific acceptance and performance estimates do not transfer.
+
+## Remaining limits and invalidation impact
+
+- Strict spacing remains **FAIL23**, the same five intrinsic pad pairs and 18 finite B.Cu escape regions. Full Toolkit release remains **FAIL**, including product/evidence/approval gates. Native configured DRC success does not overrule these results. Existing native ignored check types (`track_not_centered_on_via`, `tuning_profile_track_geometries`) are unchanged and are not claimed to have passed.
+- RC calculations and pulse-curve comparisons are conditional model evidence, not measurements. Actual branch RMS current, added resistor heating, repeated/hot pulse behavior, output OVP dynamics, regulation, switch-short consequences, surge and EMI need physical qualification. A 710 V MOV test point is not a universal clamp bound, and no all-fault survival claim is warranted.
+- The resistor model and planned upright forming are illustrative. The planned 16 mm formed height within the retained 19.5 mm module envelope is not verified sample fit. Lead support, stand-off, tolerance and hot clearances remain open; the nominal small courtyard margin is not tolerance qualification. Previous enclosure temperatures or total driver losses must not be quoted as validated R2 results.
+- The retained R1 backup/provenance and unchanged canonical guards preserve the prior stage. Any later canonical integration must copy this exact reviewed candidate and retain its UNRELEASED status. A changed source, part, model, rule or artifact binding invalidates this exact-source review as applicable.
+- Prior owner decisions do not approve this changed assembly. This review supplies no human approval, accepted electrical waiver, supplier action, order, powered-test authorization or manufacturing release. The root coordinator must preserve these distinctions in the final handoff.
+
+Read-only integrity was verified after all checks. All reviewer-generated files, including native working preferences, stay in this private review directory; neither frozen source nor core was written.

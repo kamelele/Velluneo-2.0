@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "revision": "SC09-SB01-R2",
+  "basis": "Retained51.2x33outline,C6reserveandnumericrules. C1/T1/RV1 footprints changed; explicit newsource has no fabricated stage approval.",
+  "basis_sources": [
+    {
+      "path": "routing-improvement-basis.json",
+      "sha256": "b736fd36083b0b23e79b7286edf37628a53d011d6c2f86860556af32c15b252a"
+    },
+    {
+      "path": "footprint-geometry.json",
+      "sha256": "802bfdb3f1d7bac0e7a47be7d4f1fa1f70a4015fab5c5ee101890d55ed31829a"
+    }
+  ],
+  "outline_mm": [
+    99.4,
+    99.4,
+    150.6,
+    132.4
+  ],
+  "areas": [
+    {
+      "id": "C6_BODY",
+      "rectangle_mm": [
+        100,
+        99.4,
+        113.75,
+        122.5
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "disallow": [
+        "track",
+        "via",
+        "pad",
+        "zone"
+      ],
+      "basis": "Same C6 maximum body and0.5mm packing reserve asROUTE02, extended to99.4mm topPCBedge so added top strip remains copperfree onbothfaces. Maintain5mm free vent-air space measured from actual can vent face at y100, not from shifted board edge. No physical fit qualification implied.",
+      "exceptions": []
+    }
+  ],
+  "blocks": [
+    {
+      "id": "HIGH_SIDE_BUCK",
+      "requirement_id": "C_ROUTING",
+      "basis": "ManufacturerLYTSwitch1PCBLayout/high-side guidance, TI SLYP762 pp16/24/26 and independent baseline findings.",
+      "sensitive_nets": {
+        "objects": [
+          "/BP",
+          "/M",
+          "/FB_INDUCTOR",
+          "U1.1",
+          "U1.2",
+          "U1.3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "rationale": "Separatefloating-source sensing fromforcepaths; directC5andphysicalR5padKelvinbranch required."
+      },
+      "switching_nodes": {
+        "objects": [
+          "/SW_SOURCE",
+          "/FB_INDUCTOR",
+          "U1.5",
+          "D1.1",
+          "T1.2"
+        ],
+        "rationale": "Both SOURCEandFBcommutateatcommonmode; minimizecopperarea andavoidusingSOURCEasquietgroundorlargeheatsink."
+      },
+      "return_paths": {
+        "objects": [
+          "/SW_SOURCE",
+          "/DC_RETURN",
+          "C5.2",
+          "C4.2",
+          "D1.2"
+        ],
+        "rationale": "DistinctfloatingSOURCEandDCreturn;noGNDshort. SOURCEforcebridge preservesseparatesensegeometry."
+      },
+      "loops": {
+        "objects": [
+          "C4.1",
+          "U1.4",
+          "U1.5",
+          "R5",
+          "R6",
+          "D1.1",
+          "D1.2",
+          "C4.2",
+          "T1",
+          "C6",
+          "C5"
+        ],
+        "rationale": "Minimizecommutation/output/decouplingloopsusingactualtopology; measurelengths/areaproxiesafterrefill, not inferredfromDRC."
+      },
+      "kelvin_connections": {
+        "objects": [
+          "R5.2",
+          "U1.3",
+          "R6.2",
+          "/FB_INDUCTOR"
+        ],
+        "rationale": "SeparateKelvinsensemeetsforceonlyinsidephysicalR5FBpad;same-netDRCnotaproof."
+      }
+    }
+  ],
+  "no_blocks_reason": null,
+  "approval": null
+}

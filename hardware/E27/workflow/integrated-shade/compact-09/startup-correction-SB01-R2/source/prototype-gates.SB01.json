@@ -1,0 +1,23 @@
+{
+  "revision": "SC09-SB01-R2",
+  "not_product_qualified": true,
+  "no_powered_measurements_performed": true,
+  "existing_fault_scope_retained": true,
+  "new_qualification_items": [
+    "Measure LED current/ripple and minimum ON across207â€“253VAC,load52â€“68V and0â€“40C before asserting this window",
+    "Retain T1 body90C planning target from previous thermal-planning.json; absolutepart125C is not an operatingtarget. Conditional58â€“107C model is NOT temperaturepass. Measureactualcore/switchingloss/hotbias before asserting fullambient operation",
+    "R6body stop100C below125Ccataloguelimit; thermal drift affectscurrent",
+    "C1 stronger voltage/pulse ratings do not close fullLCstartup/surge orMOV/fuse behavior",
+    "NewMOV21J vsold23J: no inheritedsurgeapproval; verifyactualclamp/current/energy/fault coordination",
+    "No hot-plug. Disconnect and discharge before changingLEDmodule",
+    "No safety/productcertification or IECsurgepass inferred fromERC/DRC"
+  ],
+  "bare_PCB_release": "Fresh manufacturing checks and exact source acceptance remain distinct from design authorization. No order submitted.",
+  "R2_open_items": [
+    "Hot repetitive/restart pulse behavior of PR02FS100 at actual board temperature",
+    "Actual RMS current, resistor body temperature and EMI with RC instead ofLC",
+    "Output OVP dynamics, short faults, surge and maximumT1winding/U1VDS remain measurement-gated",
+    "C6 cannot be guaranteed protected from U1D-Sshort by ordinary input fuse; no fail-safe claim",
+    "Unpowered formed-lead fit and restraint for legacyL1 resistor"
+  ]
+}

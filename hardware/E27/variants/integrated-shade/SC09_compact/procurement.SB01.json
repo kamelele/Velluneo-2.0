@@ -1,10 +1,10 @@
 {
-  "revision": "SC09-SB01",
-  "date": "2026-11-23",
+  "revision": "SC09-SB01-R2",
+  "date": "2026-11-24",
   "actor": "/root/sc09_tme_bom",
-  "scope": "Integrated procurement plan for minimally changed SC09 engineering candidate; no order placed.",
+  "scope": "R2 selection override; no current consolidated basket/price/stock quote. Other dated R1 supplier observations remain historical.",
   "base_PCB_sha256": "3b9188b60e65c67e45f43cd6b55243fc1fee33aa202559efe423ba11768e97f3",
-  "intent": "Minimal SC09 changes: TME plus one consolidated DigiKey basket. Retain original R7/C6/L1 and avoid the abandoned SC10 topology/layout expansion. RF1 changes to same-family47ohm for damping after independent review; D1 changes to same-family1000V for headroom.",
+  "intent": "Fit PR02FS0201000KR500 resistor at legacy L1; do not buy the old choke for R2. Same barePCB, RF147retained.",
   "parts": [
     {
       "refs": [
@@ -104,21 +104,38 @@
         "L1"
       ],
       "original_MPN": "768772332",
-      "purchase_MPN": "768772332",
+      "purchase_MPN": "PR02FS0201000KR500",
       "qty_per_PCB": 1,
-      "seller": "DigiKey",
-      "url": "https://www.digikey.pl/en/products/detail/w%C3%BCrth-elektronik/768772332/16910471",
-      "unit_net_PLN": "5.75",
+      "seller": "Mouser candidate; recheck checkout availability",
+      "url": "https://www.vishay.com/docs/28915/pr02fs.pdf",
+      "unit_net_PLN": null,
       "minimum_purchase": 1,
       "multiple": 1,
-      "stock": 142,
-      "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
-      "CAD_change": false,
+      "stock": null,
+      "evidence": "Exact primaryPR02FS part coding and dimensions verified; authorized distributor indexedstock/MOQ1 observed by protection contributor. No live reservation/current price asserted.",
+      "CAD_change": true,
       "purchase_quantity": 1,
-      "purchase_net_PLN": "5.75",
-      "consumed_net_PLN": "5.75",
-      "BOM_change": false,
-      "footprint_change": false
+      "purchase_net_PLN": null,
+      "consumed_net_PLN": null,
+      "BOM_change": true,
+      "footprint_change": false,
+      "historical_R1_purchase_observation": {
+        "purchase_MPN": "768772332",
+        "seller": "DigiKey",
+        "url": "https://www.digikey.pl/en/products/detail/w%C3%BCrth-elektronik/768772332/16910471",
+        "unit_net_PLN": "5.75",
+        "minimum_purchase": 1,
+        "multiple": 1,
+        "stock": 142,
+        "evidence": "Prior live browser product check 2026-11-23; recorded in outputs/SC09_dostawcy/SC09_aktualna_dostepnosc_koszt.json",
+        "CAD_change": false,
+        "purchase_quantity": 1,
+        "purchase_net_PLN": "5.75",
+        "consumed_net_PLN": "5.75",
+        "BOM_change": false,
+        "footprint_change": false
+      },
+      "notes": "100ohm/2Wresistor at physicallegacyL1slot; no old3.3mHchoke inR2."
     },
     {
       "refs": [
@@ -371,24 +388,6 @@
       "purchase_net_PLN": "39.15"
     }
   },
-  "cost": {
-    "consumed_components_net_PLN": "49.3497459",
-    "consumed_components_gross_PLN": "60.700187457",
-    "minimum_purchase_components_net_PLN": "59.2497459",
-    "minimum_purchase_components_gross_PLN": "72.877187457",
-    "DigiKey_shipping_published_PLN": 80,
-    "DigiKey_shipping_conservative_gross_PLN": "98.40",
-    "TME_standard_shipping_gross_PLN": "17.10",
-    "one_build_all_minimums_and_delivery_conditional_gross_PLN": "188.377187457",
-    "bare_PCB_assembly_LED_housing_excluded": true,
-    "root_T1_live_PLN_price_check_pending": false,
-    "FX": {
-      "USD": "4.0601",
-      "EUR": "4.4556",
-      "source": "NBP227/A/NBP/2026 2026-11-23"
-    },
-    "VAT_percent": 23
-  },
   "changes_requiring_review": [
     {
       "ref": "C1",
@@ -435,7 +434,7 @@
       "ref": "R6",
       "selection": "1206S4F365KT5E",
       "value": "3.65ohm1%0.25W1206",
-      "delta": "TCR400ppm/K vs100 and ambient maximum125C vs155C. Existing 75K resistor-drift paper model predicts current range128.755\u2013141.975mA total vs129.201\u2013141.463original; not a measured or full regulator bound. Minimum100pcs."
+      "delta": "TCR400ppm/K vs100 and ambient maximum125C vs155C. Existing 75K resistor-drift paper model predicts current range128.755–141.975mA total vs129.201–141.463original; not a measured or full regulator bound. Minimum100pcs."
     },
     {
       "ref": "T1",
@@ -474,18 +473,40 @@
     "C5newdielectric/MPN merely to avoidTME10MOQ: original1pcDK is cheaper and same basket",
     "C1R71PF24704030K400V/us: no margin in843V/us initialcoldplugscreen"
   ],
-  "integrated_cost_SBO1": {
-    "consumed_net_PLN": "49.2161399",
-    "consumed_gross_PLN": "60.535852077",
-    "minimum_purchases_net_PLN": "59.1161399",
-    "minimum_purchases_gross_PLN": "72.712852077",
-    "DigiKey_shipping_gross_budget_PLN": "98.40",
-    "TME_shipping_gross_PLN": "17.10",
-    "total_gross_budget_PLN": "188.212852077",
-    "not_final_checkout_quote": true,
-    "RF1_stock_not_live_verified": false,
-    "bare_PCB_and_assembly_and_LED_not_included": true
+  "C1_pulse_screen_revision_note": "Any843.510V/us value records historical10ohmRF1; current47ohmlinear initial slope179.470V/us. Seeindependentreality.damping-screen.json.",
+  "historical_R1_summary": {
+    "cost": {
+      "consumed_components_net_PLN": "49.3497459",
+      "consumed_components_gross_PLN": "60.700187457",
+      "minimum_purchase_components_net_PLN": "59.2497459",
+      "minimum_purchase_components_gross_PLN": "72.877187457",
+      "DigiKey_shipping_published_PLN": 80,
+      "DigiKey_shipping_conservative_gross_PLN": "98.40",
+      "TME_standard_shipping_gross_PLN": "17.10",
+      "one_build_all_minimums_and_delivery_conditional_gross_PLN": "188.377187457",
+      "bare_PCB_assembly_LED_housing_excluded": true,
+      "root_T1_live_PLN_price_check_pending": false,
+      "FX": {
+        "USD": "4.0601",
+        "EUR": "4.4556",
+        "source": "NBP227/A/NBP/2026 2026-11-23"
+      },
+      "VAT_percent": 23
+    },
+    "integrated_cost_SBO1": {
+      "consumed_net_PLN": "49.2161399",
+      "consumed_gross_PLN": "60.535852077",
+      "minimum_purchases_net_PLN": "59.1161399",
+      "minimum_purchases_gross_PLN": "72.712852077",
+      "DigiKey_shipping_gross_budget_PLN": "98.40",
+      "TME_shipping_gross_PLN": "17.10",
+      "total_gross_budget_PLN": "188.212852077",
+      "not_final_checkout_quote": true,
+      "RF1_stock_not_live_verified": false,
+      "bare_PCB_and_assembly_and_LED_not_included": true
+    },
+    "prior_research_cost_is_historical": true
   },
-  "prior_research_cost_is_historical": true,
-  "C1_pulse_screen_revision_note": "Any843.510V/us value records historical10ohmRF1; current47ohmlinear initial slope179.470V/us. Seeindependentreality.damping-screen.json."
+  "current_cost_quote_available": false,
+  "current_stock_reserved": false
 }

@@ -1,0 +1,222 @@
+{
+  "actor": "/root/sb01_r1_final_change",
+  "core_manifest_sha256": "ddb90c1270fbfce6e8b64862b64e442b1f56bc66d86071a32232ea3b73235e80",
+  "core_files_verified_before_after": 231,
+  "source_and_core_unchanged": true,
+  "canonical_R1_guards_preserved": true,
+  "board_sha256": "0889e1d7a701c26b89750c4e1a42a170efc6a5b30669d75d5abded6ff8b69bbe",
+  "only_selected_MPN_change": "L1:768772332 -> PR02FS0201000KR500; RF1 remains FW20A47R0JA",
+  "actual_parts": [
+    {
+      "ref": "L1",
+      "MPN": "PR02FS0201000KR500",
+      "Value": "100R / RC DAMPER"
+    },
+    {
+      "ref": "C1",
+      "MPN": "R76QI24705050J",
+      "Value": "47n / 1000V"
+    },
+    {
+      "ref": "C4",
+      "MPN": "B32671P6154K000",
+      "Value": "150n / 630V"
+    },
+    {
+      "ref": "RV1",
+      "MPN": "B72207S0271K101",
+      "Value": "275 VAC / S07K275"
+    },
+    {
+      "ref": "T1",
+      "MPN": "7687709152",
+      "Value": "1m5 / 400V WE-PD HV"
+    },
+    {
+      "ref": "R7",
+      "MPN": "HVR2500003903FR500",
+      "Value": "390k / HVR25"
+    },
+    {
+      "ref": "RF1",
+      "MPN": "FW20A47R0JA",
+      "Value": "47R / 2W FUSIBLE"
+    },
+    {
+      "ref": "C6",
+      "MPN": "EEUFS2A151",
+      "Value": "150u / 100V"
+    },
+    {
+      "ref": "J1",
+      "MPN": "Direct insulated-wire solder pads",
+      "Value": "230 VAC"
+    },
+    {
+      "ref": "R4",
+      "MPN": "ERJ-6ENF1242V",
+      "Value": "12k4"
+    },
+    {
+      "ref": "R8",
+      "MPN": "RC1206FR-0768KL",
+      "Value": "68k"
+    },
+    {
+      "ref": "BR1",
+      "MPN": "MB10S-13",
+      "Value": "MB10S-13"
+    },
+    {
+      "ref": "R6",
+      "MPN": "1206S4F365KT5E",
+      "Value": "3R65 / Royalohm"
+    },
+    {
+      "ref": "R9",
+      "MPN": "RC1206FR-0768KL",
+      "Value": "68k"
+    },
+    {
+      "ref": "U1",
+      "MPN": "LYT1603D",
+      "Value": "LYT1603D"
+    },
+    {
+      "ref": "D1",
+      "MPN": "US1M-13-F",
+      "Value": "US1M / 1000V"
+    },
+    {
+      "ref": "J2",
+      "MPN": "Direct insulated-wire solder pads",
+      "Value": "20S LED MODULE"
+    },
+    {
+      "ref": "C5",
+      "MPN": "CL21B475KAFNNNE",
+      "Value": "4u7 / 25V"
+    },
+    {
+      "ref": "R5",
+      "MPN": "RL1206FR-7W0R68L",
+      "Value": "0R68 / 0.5W"
+    }
+  ],
+  "pin_graph_independent_R1_native_fresh_XML_equal": true,
+  "pin_count": 46,
+  "refs": 19,
+  "nets": 11,
+  "native_saved_pad_track_via_pose_outline_mask_expansion_equal_to_R1": true,
+  "native_pro_dru_unchanged": true,
+  "spatial_changed_keys": [
+    "basis_sources",
+    "revision"
+  ],
+  "consumer_contracts": [
+    {
+      "file": "placement-input.json",
+      "digest": "d7ad4f558d9f66dd22df96c7c5e51e9699f60f8a71194d023df3d81778dbdc09",
+      "other_contract_content_unchanged": true
+    },
+    {
+      "file": "routing-input.json",
+      "digest": "d7ad4f558d9f66dd22df96c7c5e51e9699f60f8a71194d023df3d81778dbdc09",
+      "other_contract_content_unchanged": true
+    }
+  ],
+  "hardware_changed_keys": [
+    "historical_release_note",
+    "procurement_revision",
+    "release_files"
+  ],
+  "changed_baseline_paths": [
+    "bom-build.csv",
+    "bom-build.json",
+    "E27SC09.kicad_sym",
+    "footprint-geometry.json",
+    "hardware.json",
+    "intended-connectivity.SB01.json",
+    "power-supply-specification.json",
+    "procurement.SB01.json",
+    "prototype-gates.SB01.json",
+    "README.md",
+    "SC09_compact.kicad_pcb",
+    "SC09_compact.kicad_sch",
+    "source-basis.SB01.json",
+    "spatial-constraints.json",
+    "thermal-planning.json",
+    ".electronics-rules/placement-input.json",
+    ".electronics-rules/routing-input.json",
+    "E27SC09.pretty/SC09_L1.kicad_mod",
+    "Models/SC09_L1.wrl"
+  ],
+  "fresh_ERC_DRC_parity_unconnected_zero": true,
+  "bindings": [
+    {
+      "kind": "gerbers",
+      "path": "release-refinement-R2/SC09_SB01_R2_Gerber_Drill_CANDIDATE.zip",
+      "sha256": "b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e"
+    },
+    {
+      "kind": "drills",
+      "path": "release-refinement-R1/SC09_SB01_R1_drills.zip",
+      "sha256": "7d74782f38203310c4f2d5c7c24f9dbf804a49a73f612b4d036c4b43bbe3cb48"
+    },
+    {
+      "kind": "bom",
+      "path": "release-refinement-R2/BOM.csv",
+      "sha256": "398838bfa5b44d80a1f9ebba925d226709bb72fdcc5a2f58b9e37eb8fac10d82"
+    },
+    {
+      "kind": "positions",
+      "path": "release-refinement-R2/manual-positions.csv",
+      "sha256": "aa6d3e05d0cdd11495a78301c9c05dd299c88be72ee25a5a66e2dfe84d7da898"
+    },
+    {
+      "kind": "assembly_drawing",
+      "path": "release-refinement-R2/assembly-F.pdf",
+      "sha256": "c83ec261d4f2923224d849edef84b99e7994257251140cbaaeb062784c7015ae"
+    },
+    {
+      "kind": "assembly_drawing",
+      "path": "release-refinement-R2/assembly-B.pdf",
+      "sha256": "a694bdfcb3e919c40430062e7754879aa540e1f7322e05ee4c17829d28d9d37a"
+    },
+    {
+      "kind": "bringup_plan",
+      "path": "release-refinement-R2/BRINGUP_UNPOWERED.md",
+      "sha256": "5792962e9711521a18ac8e19fff5bf963e300568d3df5c56ec488d8d5587e6ba"
+    }
+  ],
+  "positions_finding_closed": true,
+  "L1_position_row": {
+    "Ref": "L1",
+    "Val": "100R / RC DAMPER",
+    "Package": "SC09_L1",
+    "PosX": "145.500000",
+    "PosY": "-115.500000",
+    "Rot": "180.000000",
+    "Side": "top"
+  },
+  "all_manual_coordinates_rotations_sides_packages_unchanged": true,
+  "both_assembly_sides_bound": true,
+  "procurement_row_current_MPN_correct": true,
+  "full_current_cost_quote_available": false,
+  "retained_manufacturing_ZIP_identical": "b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e",
+  "native_default_ignored_checks": [
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    }
+  ],
+  "strict_spacing_passed": false,
+  "full_Toolkit_release_passed": false,
+  "human_acceptance": false,
+  "powered_qualification": false,
+  "order": false
+}

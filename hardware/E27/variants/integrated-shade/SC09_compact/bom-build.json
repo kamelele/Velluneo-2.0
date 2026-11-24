@@ -1,6 +1,6 @@
 {
-  "revision": "SC09-SB01",
-  "status": "Engineering candidate for two-basket TME + DigiKey procurement. Not a new manufacturing acceptance or product qualification.",
+  "revision": "SC09-SB01-R2",
+  "status": "RC startup correction candidate; physical legacy position L1 retained. No new manufacturing/powered approval.",
   "components": [
     {
       "ref": "J1",
@@ -32,7 +32,7 @@
         6,
         6
       ],
-      "notes": "Changed10ohm to47ohm for inputLCdamping after independentreview. RetainBournsFWfusiblefamilyandgeometry; normal60mARMSplanning0.1812W. IdealcornerC4peak588.7V<630V is not nonlinear/surge guarantee.",
+      "notes": "Protective FW20A47R0JA retained. R2 replaces downstream L1 with a resistor; obsolete LC overshoot screen is historical, not the new RC result.",
       "assembly": "Existing uprightP6.8customforming, max14.85mmabovePCB, retained. No genericnonfusible replacement."
     },
     {
@@ -95,22 +95,22 @@
     },
     {
       "ref": "L1",
-      "value": "3.3mH 10% 400V",
-      "mpn": "768772332",
-      "kind": "inductor",
+      "value": "100ohm 10% 2W RC damper (legacy L1 position)",
+      "mpn": "PR02FS0201000KR500",
+      "kind": "pulse-rated flameproof non-inductive resistor",
       "pins": {
         "1": "BUS_RECT",
         "2": "BUS_FILTERED"
       },
-      "source": "https://www.we-online.com/components/products/datasheet/768772332.pdf",
-      "package": "radialP5,8.3diameterx10max",
+      "source": "https://www.vishay.com/docs/28915/pr02fs.pdf",
+      "package": "axial PR02-FS, vertical manual forming on existing 5.0038mm TH pair",
       "body_or_reservation_mm": [
-        8.3,
-        8.3,
-        10.5
+        3.9,
+        10,
+        16
       ],
-      "notes": "WurthWE-TIHVcatalogue400V;DCR7.08ohmmax@20C,Irms.25A,Isat.27A@10%;normalmanualfreeleadformingandfitinspection. DCRlossdelta~2.18mW@100C60mARMSvsoldRenco.",
-      "assembly": "P5manufacturerrecommended1.2holes;retaincompatibleP5.0038landpattern. Leadpitchtolerancehandledbygentlefreeleadadjustment,notrigidguarantee."
+      "notes": "Analysis designation R10 maps to physical legacy L1. Removes intentional input LC resonance; RF1 remains47ohm. Standard inductor substitution forbidden. Original copper, pads, courtyard and outline unchanged.",
+      "assembly": "Body center above pad1; >=2mm PCB standoff; <=16mm planned total height including bent return lead. Inspect sample/lead forming before assembly; body90C provisional stop."
     },
     {
       "ref": "C4",
@@ -299,7 +299,7 @@
         2.5,
         2.5
       ],
-      "notes": "StandardcatalogueHVR25replacement390k1%/.25W/1600VDC/200ppm;bodyL2max7.5,D2.5,lead.58±.05. RetainstandingP4.8forming. UseHVRaging/deratingdata;doNOTtransferVR25theta140K/W.",
+      "notes": "StandardcatalogueHVR25replacement390k1%/.25W/1600VDC/200ppm;bodyL2max7.5,D2.5,lead.58Â±.05. RetainstandingP4.8forming. UseHVRaging/deratingdata;doNOTtransferVR25theta140K/W.",
       "assembly": "StandingP4.8manualleadformingfromcataloguepart;existingphysicalenvelopeconservative. Sampleinspectionbeforeassemblyacceptance."
     },
     {

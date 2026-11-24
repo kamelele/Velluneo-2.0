@@ -1,0 +1,56 @@
+{
+  "revision": "SC09-ROUTE02",
+  "writer": "/root/routing02_writer",
+  "owner_request": "Opposite left/right edge wire ports and clean axis/45deg routes, preserving same circuit.",
+  "C6": {
+    "anchor_mm": [
+      6.75,
+      26
+    ],
+    "native_angle": 90,
+    "can_bbox_mm": [
+      0.25,
+      0,
+      13.25,
+      22
+    ],
+    "vent_bbox_mm": [
+      0.25,
+      -5,
+      13.25,
+      0
+    ],
+    "fixture_condition": "Can entirely within PCB footprint;5mm free vent air required beyond upperedge."
+  },
+  "ports": {
+    "J1": {
+      "side": "right",
+      "pin_centres_mm": {
+        "1": [
+          48.4,
+          30
+        ],
+        "2": [
+          48.4,
+          24.5
+        ]
+      }
+    },
+    "J2": {
+      "side": "left",
+      "pin_centres_mm": {
+        "1": [
+          1.6,
+          24.5
+        ],
+        "2": [
+          1.6,
+          30
+        ]
+      }
+    }
+  },
+  "no_SOURCE_floods": true,
+  "C5_direct_same_face": true,
+  "approval": null
+}

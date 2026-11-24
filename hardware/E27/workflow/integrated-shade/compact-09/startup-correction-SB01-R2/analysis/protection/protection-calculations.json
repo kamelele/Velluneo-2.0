@@ -1,0 +1,76 @@
+{
+  "kind": "Own static arithmetic; not a SPICE controller model, physical measurement, norm compliance or fault-clearing proof",
+  "actor": "/root/sb01_protection_engineering",
+  "source_guards": {
+    "SC09_compact.kicad_pcb": "532ff6ac51767badaabc49fb627b8feca729daeb1c4368a3cdb2ddad1c0996f8",
+    "SC09_compact.kicad_sch": "16cbd188b02399d2eecd0965939a2f07cda1e96a40c45574b9d7d791a0ff22a4",
+    "SC09_compact.kicad_pro": "d74058d2e0f1e7a0e73a89c4af72a4e0d25f70aac5327f658921bf08f373461c",
+    "SC09_compact.kicad_dru": "980789aef3fb935c0a965f28e33106e95639f3bfe653092931a91b01dc5aa8fe",
+    "hardware.json": "28cd77cb521b1048721fa655014636ddb9cd8169fe6e41d3cf59c3a133a3baf0",
+    ".electronics-rules/placement-input.json": "d435ee079c2410c9009090b9cb1b1579aa7e5d47d735b80868c33f05b6091c53",
+    ".electronics-rules/routing-input.json": "d435ee079c2410c9009090b9cb1b1579aa7e5d47d735b80868c33f05b6091c53",
+    "release-refinement-R1/SC09_SB01_R1_Gerber_Drill_CANDIDATE.zip": "b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e"
+  },
+  "line_crests_V": {
+    "207": 292.7422074112307,
+    "230": 325.2691193458119,
+    "253": 357.7960312803931
+  },
+  "OVP_static25C_V": {
+    "nominal_no_diode_credit": 77.88387096774194,
+    "min_1percent_resistor_only_no_diode_credit": 73.20625998083679,
+    "max_1percent_resistor_only_no_diode_credit": 82.05575757575757,
+    "caveat": "25C IC thresholds only; subtracting positive forward diode voltage would reduce static output threshold. No dynamic overshoot or full-temperature bound."
+  },
+  "C6_energy_J": {
+    "5": 0.0022500000000000003,
+    "60": 0.324,
+    "90": 0.7290000000000001,
+    "100": 0.9000000000000001,
+    "357.7960312803931": 11.521620000000004
+  },
+  "C6_one_bleeder_90to5V_s": 36.450143649393844,
+  "C6_two_bleeders_90to5V_s_nominal": 14.740895965270438,
+  "current_sense_nominal_fault_arithmetic": {
+    "R5_open_R6_only_total_output_A": 0.021232876712328767,
+    "R6_open_R5_only_total_output_A": 0.11397058823529412,
+    "note": "Not a guaranteed IC current; a shorted sense resistor is unbounded by this regulation equation."
+  },
+  "RC_candidate_R10_100ohm_10pct": {
+    "original_L1_ref": "768772332",
+    "proposed_R10_ref": "PR02FS0201000KR500",
+    "proposed_normal_Irms_assumed_A": 0.06,
+    "nominal_loss_W": 0.36,
+    "high_loss_10pct_TCR75K_3pctreserve_W": 0.41552775000000003,
+    "nominal_loss_increment_less_removed_L1_DCRmax20C_W": 0.334512,
+    "normal_rms_drop_V": 6.0,
+    "C4_max_start_charge_energy_J": 0.010561485000000002,
+    "RC_C4_local_tau_s_range_without_RF1": [
+      1.215e-05,
+      1.815e-05
+    ],
+    "all_capacitors_initially_uncharged_peak_R10_voltage_bound_V": 254.49442897409142,
+    "caveat": "Passive RC monotonic/no-resonance proof requires bounded input, passive RC assumptions and bounded initial charge. Downstream switching/parasitics and actual pulse life remain separate."
+  },
+  "MOV_static_engineering_screen": {
+    "retained_RV1": "B72207S0271K101",
+    "table_clamp_V_at10A": 710,
+    "U1_absmax_V": 725,
+    "headroom_V_at_table_point": 15,
+    "min_RF1_ohm": 44.65,
+    "total_instantaneous_source_ceiling_V_for_static_710V_bound": 1156.5,
+    "generator_total1000V_example_loadline_A_at710V": 6.4949608062709965,
+    "1000V_added_to_253Vac_peak_loadline_A_at710V": 14.508309771117425,
+    "limits": "Only algebra using monotonic quasi-static MOV I-V; ignores lead inductance and MOV dynamic overshoot/aging, filter/source/controller behavior. It is NOT a standard surge-test pass. A 1kV impulse superimposed on mains is different from a 1kV absolute total ceiling."
+  },
+  "MOSFET_DS_short_LED_absent": {
+    "prospective_capacitor_voltage_ideal_V": 357.7960312803931,
+    "C6_rating_V": 100,
+    "C6_charging_energy_at_line_peak_Cmax_J": 11.521620000000004,
+    "RC_series147ohm_C180u_timeconstant_s": 0.02646,
+    "consequence": "Internal OVP cannot open an already shorted power MOSFET. Input fusible resistor does not guarantee output capacitor survival; no safe-fault result is claimed."
+  },
+  "no_canonical_changes": true,
+  "no_physical_tests": true,
+  "human_approved": false
+}

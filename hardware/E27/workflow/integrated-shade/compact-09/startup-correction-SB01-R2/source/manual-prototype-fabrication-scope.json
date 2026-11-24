@@ -1,0 +1,39 @@
+{
+  "revision": "SC09-ROUTE05",
+  "actual_user_instruction": "Prepare board for JLCPCB as a manually assembled laboratory prototype; correct spacing, parts and manufacturing files. Same branch, do not change main.",
+  "fabrication": {
+    "service": "Bare rigid FR4PCB",
+    "layers": 2,
+    "thickness_mm": 1.6,
+    "copper_oz": 1,
+    "finish": "leadfreeHASL",
+    "mask": "green",
+    "legend": "white",
+    "PCB_mm": [
+      51.2,
+      33
+    ],
+    "assembly_by_JLCPCB": false,
+    "stencil_requested": false
+  },
+  "final_human_release_pending": true,
+  "assembly_line_qualification": "No contractedPCBAline is selected. Inherited inhouseprovider confirmation check does not describe a barePCBfabrication order; it is retained in the full Toolkit report, not fabricated as confirmed.",
+  "requirements_partition": {
+    "before_bare_fabrication": [
+      "Exact native graph and parts/lands desk review",
+      "Actual copper/mask/silk/drill/edge process geometry",
+      "Matched source-bound manufacturing artifacts",
+      "Final exact prototype release decision"
+    ],
+    "after_bare_fabrication_before_power": [
+      "Samplefit,leadforming/support,vent/wiring/guardedfixture,polarity,jointcleanliness andunpoweredconnectivity inspection",
+      "Responsible person,actual instruments andbringupstoplimits"
+    ],
+    "after_measurement_for_product": [
+      "Current/ripple/startup/OVP/discharge/hotbias/loss/temperature",
+      "Qualifiedfault/surge/EMC/insulation andfinishedlamp enclosure/optics/compliance"
+    ]
+  },
+  "local_package_spacing": "Exact five intrinsic padpairs and finite local escapes remain disclosed, no globally relaxed floor or automatic normative waiver. Prototype release must explicitly cover this assessment.",
+  "no_purchase_or_powered_test": true
+}

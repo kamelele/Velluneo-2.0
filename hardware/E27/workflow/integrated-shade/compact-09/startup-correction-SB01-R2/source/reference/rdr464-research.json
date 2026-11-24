@@ -1,0 +1,320 @@
+{
+  "actor": "/root/compact_rdr_research",
+  "task": "Compact09 RDR464 primary-source feasibility research",
+  "sole_write_scope": "work/compact09/rdr-research/**",
+  "source_documents": [
+    {
+      "id": "RDR464",
+      "url": "https://www.power.com/sites/default/files/documents/rdr464.pdf",
+      "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\sources\\rdr464.pdf",
+      "sha256": "c71ee568ae0c797061deebce5aa8e3d65cc7394d6da323566a3cf0ddc80a1f6d",
+      "revision": "1.0,28-Oct-2016",
+      "pages": 54,
+      "kind": "manufacturer reference design measured report"
+    },
+    {
+      "id": "LYT1",
+      "url": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+      "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\rdr-research\\lytswitch-1_family_datasheet.pdf",
+      "sha256": "c25fe052456356af1437cfd9985182b6e443164aba8d4d89f1fabf4b263e18bc",
+      "revision": "B,July2016",
+      "pages": 14,
+      "kind": "manufacturer component datasheet"
+    },
+    {
+      "id": "AN67",
+      "url": "https://www.power.com/sites/default/files/documents/an67.pdf",
+      "path": "C:\\Users\\kamil\\Documents\\Codex\\2026-11-19\\znajd-na-githubie-veluneo-2-0\\work\\compact09\\rdr-research\\an67.pdf",
+      "sha256": "53069f49b53917459c150a5f8afc2073499a08b3adce4588bcd2e1869d2d68db",
+      "revision": "A,July2016",
+      "pages": 12,
+      "kind": "manufacturer design guide"
+    }
+  ],
+  "reference_measured_230V_50Hz_60Vload": {
+    "page": 23,
+    "Vin_Vrms": 230.01,
+    "Iin_mArms": 42.72,
+    "Pin_W": 9.24,
+    "PF": 0.94,
+    "THD_percent": 21.08,
+    "Vout_Vdc": 60.32,
+    "Iout_mAdc": 139.89,
+    "Pout_W": 8.45,
+    "reported_efficiency_percent": 91.51,
+    "computed_loss_W": 0.79,
+    "measured_by": "Power Integrations reference-board authors, not our project"
+  },
+  "reference_230V_75C_thermal": {
+    "page": 33,
+    "maximum_C": {
+      "ambient": 76.1,
+      "LYT1603D": 95.1,
+      "RF1": 74.6,
+      "D1": 88.3,
+      "T1": 87.7,
+      "C6": 79.0
+    },
+    "boundary": "Open frame in temperature-controlled test setup; not a sealed A60 bulb or our modified board"
+  },
+  "dimensions": {
+    "page": 10,
+    "explicit_width_mm": 22,
+    "explicit_subdimensions_mm": [
+      29.5,
+      9.5,
+      7.5
+    ],
+    "shape": "Stepped/tapered mains nose, not simple29.5x22rectangle",
+    "overall_length": "Approximately50mm by figure scaling; NOT a verified explicit dimension. Exact outline/cavity fit still required.",
+    "major_reference_part_sizes_mm": {
+      "C6": [
+        8,
+        20
+      ],
+      "T1_bobbin": [
+        10.2,
+        10.4,
+        9.7
+      ]
+    },
+    "parts_count": 16,
+    "test_points_excluded": 4
+  },
+  "reference_parts": [
+    {
+      "ref": "BR1",
+      "mpn": "B10S-G",
+      "description": "1000V0.8A MBS bridge",
+      "basis_limits": "RDR p11; actual manufacturer physical pin map still needs separate check"
+    },
+    {
+      "ref": "C1",
+      "mpn": "ECQ-E4473KF",
+      "description": "47nF400V film",
+      "basis_limits": "RDR BOM p11 resolves incorrect47uF schematic annotation"
+    },
+    {
+      "ref": "C4",
+      "mpn": "C222S154K30",
+      "description": "150nF450V film",
+      "basis_limits": "RDR p11; retained reference part, availability not checked"
+    },
+    {
+      "ref": "C5",
+      "mpn": "GRM21BR71C475KA73L",
+      "description": "4.7uF16V X7R0805",
+      "basis_limits": "RDR p11; effective capacitance and sourcing still need checking"
+    },
+    {
+      "ref": "C6",
+      "mpn": "ELXZ630ELL151MH20D",
+      "description": "150uF63V8x20mm",
+      "basis_limits": "Reference ONLY; recommend replacement rated above bounded output OVP, likely100V; exact replacement not selected here"
+    },
+    {
+      "ref": "D1",
+      "mpn": "US1J-13-F",
+      "description": "600V1A ultrafast SMA",
+      "basis_limits": "RDR p11; switching and transient stress must be rechecked for changed circuit"
+    },
+    {
+      "ref": "L1",
+      "mpn": "RL-5480-3-3300",
+      "description": "3.3mH150mA20% EMI choke",
+      "basis_limits": "RDR p11; obsolete/sourcing not checked"
+    },
+    {
+      "ref": "R4",
+      "mpn": "ERJ-6ENF1242V",
+      "description": "12.4kohm1%0805",
+      "basis_limits": "Reference ONLY;13.7kohm alternative calculated, not approved"
+    },
+    {
+      "ref": "R5",
+      "mpn": "RL1206FR-7W0R68L",
+      "description": "0.68ohm1%0.5W1206",
+      "basis_limits": "RDR p11"
+    },
+    {
+      "ref": "R6",
+      "mpn": "CRCW12062R74FKEA",
+      "description": "2.74ohm1%0.25W1206",
+      "basis_limits": "Reference ONLY;3.65ohm alternative calculated for135mA target"
+    },
+    {
+      "ref": "R7",
+      "mpn": "MFR-25FBF-402K",
+      "description": "402kohm1%0.25W axial",
+      "basis_limits": "Actual high-voltage resistor; do not replace by ordinary0805 without working-voltage review"
+    },
+    {
+      "ref": "R8",
+      "mpn": "ERJ-6GEYJ104V",
+      "description": "100kohm5%0.125W0805",
+      "basis_limits": "Reference single bleeder; single-open fault discharge not established"
+    },
+    {
+      "ref": "RF1",
+      "mpn": "FW20A10R0JA",
+      "description": "10ohm5%2W fusible wirewound",
+      "basis_limits": "RDR p11; normal heat~18mW at measured230V input; pulse/fusing qualification separate"
+    },
+    {
+      "ref": "RV1",
+      "mpn": "V275LA4P",
+      "description": "275VAC23J7mm MOV",
+      "basis_limits": "RDR p11; retained MOV does not qualify a new layout surge immunity"
+    },
+    {
+      "ref": "T1",
+      "mpn": "RDR464 build,EE10/EE-1016 or25-01068-00 bobbin",
+      "description": "1mH +/-5%,150turn31AWG,single winding pins8..1",
+      "basis_limits": "RDR pp12..14;10.2x10.4x9.7mm nominal bobbin, gapped core; not an isolated transformer or auxiliary winding"
+    },
+    {
+      "ref": "U1",
+      "mpn": "LYT1603D-TL",
+      "description": "LYTSwitch-1 SO8,725V integrated switch",
+      "basis_limits": "Family pin map verified p2. Product page reported active but not recommended for new designs by root; prototype/procurement risk remains"
+    }
+  ],
+  "protection_assessment": {
+    "integrated": [
+      "Input OVP",
+      "Output OVP/open-load auto-restart",
+      "Output-short auto-restart",
+      "Current limit/SOA handling",
+      "Thermal foldback and shutdown"
+    ],
+    "input_passives": [
+      "Fusible10ohm resistor",
+      "275VAC MOV",
+      "Pi EMI filter"
+    ],
+    "reference_surge": {
+      "page": 51,
+      "differential_V": 500,
+      "ringwave_V": 2500,
+      "strikes_each_condition": 10,
+      "polarities": [
+        "positive",
+        "negative"
+      ],
+      "line_Vac": [
+        115,
+        230
+      ],
+      "phase_deg": [
+        0,
+        90
+      ],
+      "worst_measured_VDS_V": 708.33,
+      "scope": "Reference board only;~16.7V below725V absolute maximum, not a reusable new-layout margin guarantee"
+    },
+    "open_load": {
+      "page": 43,
+      "measured_reference_max_V": [
+        71.486,
+        70.696
+      ],
+      "original_cap_rated_V": 63,
+      "report_relies_on_cap_surge_rating": true,
+      "our_recommendation": "Use output capacitor rated above worst OVP plus verified transient margin;100Vclass is plausible pending exact selection/fit/ripple/lifetime verification"
+    },
+    "removable_module": "Reference is a fixed-load lamp circuit. Bulk output capacitor can dump charge directly into a newly connected LED module independent of U1 regulation. No demonstrated energized-reconnect limit or user-accessible interface safety follows.",
+    "single_fault": "On-chip protections share one IC; MOSFET D-S short/sense-divider failure can defeat regulation/OVP. Reference normal/short/surge tests are not complete abnormal single-fault certification. Required response must be assessed as a complete lamp with fuse/component/containment behavior. Do not claim two independent protection channels.",
+    "discharge": "R8single100k not redundant; two75kbleeders proposed with calculated one-open<=40s at chosen static OVP, pending exact values/dimensions and changed acceptance approval."
+  },
+  "document_conflicts": [
+    {
+      "id": "RDR-C1-UNIT",
+      "pages": "RDRp7vsRDRp11",
+      "resolution": "C1is47nF,not47uF;BOMMPNandfilmfilter supportnF."
+    },
+    {
+      "id": "RDR-SAFETY",
+      "pages": "RDRp6vsactualcircuit/title",
+      "resolution": "Safety table saysIsolated; actualcircuit is nonisolated. Do not inherit this label."
+    },
+    {
+      "id": "RDR-BUCK-SIDE",
+      "pages": "RDRp8vsLYTdatasheetp3/p5",
+      "resolution": "RDRtext sayslow-side, butactualRDR powerMOSFET+inductor sitonpositiverail; datasheetdescribesRDK464ashigh-side. Followactualcircuit."
+    },
+    {
+      "id": "RDR-CURRENT-RATIO",
+      "pages": "RDRp9vsLYTdatasheetp4/AN67p4",
+      "resolution": "RDR4.666ratio conflicts withdatasheet/AN67k3.6. Measured139.89mA andactualsense.5448ohm supportk3.6approx142mA, not4.666approx110mA."
+    },
+    {
+      "id": "RDR-LINE-OVP-RESISTOR",
+      "pages": "RDRp9vsLYTdatasheetp4",
+      "resolution": "LineOVPcurrent flows throughupper402kR7, notlower12.4kR4; datasheet formula andactualschematic supportR7."
+    }
+  ],
+  "calculations": {
+    "sense_reference_ohm": 0.5447953216374269,
+    "reference_current_design_equation_mA": 142.25525976814086,
+    "sense_R6_3p65ohm_proposal_equivalent_ohm": 0.5732101616628176,
+    "sense_R6_3p65ohm_current_equation_mA": 135.2034649476229,
+    "reference_R4_12p4k_OVP": {
+      "typ_V": 80.20645161290322,
+      "static_min_V": 75.38799105717023,
+      "static_max_V": 84.50424242424243
+    },
+    "proposed_R4_13p7k_OVP": {
+      "typ_V": 72.82335766423357,
+      "static_min_V": 68.45263424152634,
+      "static_max_V": 76.7209201504092
+    },
+    "output_Cmax_F": 0.00018,
+    "reference_Cmax_energy_at_static_ovp_J": 0.6426870288925621,
+    "proposed_Cmax_energy_at_static_ovp_J": 0.5297489629852918,
+    "proposed_two75k_bleeder_pair_loss_at60V_W": 0.096,
+    "one75k_plus5percent_bleeder_discharge_maxV_to5V_s": 38.70819005317219,
+    "series_limiter_screens": [
+      {
+        "R_ohm": 33,
+        "worst_initial_A": 0.8523419505712664,
+        "normal_loss_at140mA_W": 0.6468
+      },
+      {
+        "R_ohm": 47,
+        "worst_initial_A": 0.5984528589117402,
+        "normal_loss_at140mA_W": 0.9212000000000001
+      },
+      {
+        "R_ohm": 100,
+        "worst_initial_A": 0.2812728436885179,
+        "normal_loss_at140mA_W": 1.9600000000000002
+      },
+      {
+        "R_ohm": 150,
+        "worst_initial_A": 0.18751522912567858,
+        "normal_loss_at140mA_W": 2.9400000000000004
+      }
+    ],
+    "assumptions": "First-order formula/tolerance screens, not switching simulation, SOA or physical qualification. OVP excludes dynamic overshoot and pin noise. Reconnection assumes Vfmin50V; actual selected LEDs may differ."
+  },
+  "recommended_direction": "Retain LYTSwitch1 high-side buck architecture as compact prototype candidate, not an approved final design. Keep protection/input filter; remove SC08 auxiliary12V/dualPhotoMOS branch by selecting IC with appropriate integrated control, subject to new approved circuit/protection contract. Retain actual~8W output operating class and calibrate current toselectedLED; verify4000KCRI80LEDopticalbudget separately.",
+  "minimal_change_proposal": [
+    "C1annotationcorrect47nF",
+    "C6replace63Vsurge-dependent part by properlyrated100Vclass exactMPN stillopen",
+    "OptionallyretuneR6to3.65ohm for135mA equation target; actual calibration required",
+    "OptionallyretuneR4to13.7k for~72.8VtypOVP; measured/refitregulationrequired",
+    "Use credible separatebleederpaths;2x75k1206screen retainsoneopen~40s target",
+    "Explicitlyresolve energizedreconnect behavior versusdeenergizedreplacement before choosingresistor/MOSFETlimiter; do not silentlyretain470ohmheat orassertIC limitscapacitorpulse"
+  ],
+  "open_items": [
+    "Exact compact C6rated100Vpart and confirmeddimensions/ripple/life",
+    "Exact purchasableT1 or validatedcatalogsinglewindingreplacement withL(I)/Isat/DCR/coreloss at~.5Apeak",
+    "Exact BR1physicalpinmapandallremainingpartpadmapping",
+    "ModuleLEDforwardvoltage/pulsecurrent/SOA/optical4000KCRI80bin",
+    "Reconnection/discharge andcontroller/sense/MOV/fuse fault tests/criteria",
+    "Realassemblyoutline/layerstack/courtyards/cavityfittarget before placement",
+    "NRND/procurementapprovalforLYT1603D-TL orselectionofcurrentlyrecommendedalternative",
+    "Fresh intended-connectivity andspecownerdecisions before native capture"
+  ],
+  "result": "Useful compact reference with actual~0.8W conversionloss, but not a drop-in approvedreplaceablebulb driver. Ready for coordinator comparison; electrical/physical/productacceptance remains incomplete."
+}

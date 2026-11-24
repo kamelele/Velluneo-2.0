@@ -1,5 +1,5 @@
 {
-  "revision": "SC09-SB01",
+  "revision": "SC09-SB01-R2",
   "input_VAC_RMS": [
     207,
     230,
@@ -94,7 +94,7 @@
       58.3645661925608,
       106.72913238512162
     ],
-    "thermal_model_limit": "Only copper loss is calculated. Core loss and theta are planning assumptions, not measurements. Retain existing T1 body target90C; conditional58\u2013107C scenarios do not establish thermal closure. Research100C proposal is superseded, not an approved relaxation.",
+    "thermal_model_limit": "Only copper loss is calculated. Core loss and theta are planning assumptions, not measurements. Retain existing T1 body target90C; conditional58–107C scenarios do not establish thermal closure. Research100C proposal is superseded, not an approved relaxation.",
     "output_current_effect": "Nominal sense resistors and controller fixed peak estimate retained, about135.2mA total /133.4mA LED at60V. New L changes switching frequency/current timing, requires retuning/measurement per manufacturer; do not claim optical/current guarantee.",
     "capacitor_ripple_screen_RMS_A": 0.2665290085695101,
     "ripple_model_limit": "Fulltriangle toy currentoccupancy gives upperplanning estimate, not100Hz outputvoltage ripple or controller actualwaveform.",
@@ -247,7 +247,33 @@
     "linear_input_corner_C4_max_V": 588.7,
     "not_full_transient_qualification": true
   },
-  "updated_loss_basis": "Rounded planning budget includes about0.1\u20130.2W additional T1 copper loss and increased RF1loss. Core, controller and actual switching losses remain unmeasured; these are not guaranteed limits.",
+  "updated_loss_basis": "Rounded planning budget includes about0.1–0.2W additional T1 copper loss and increased RF1loss. Core, controller and actual switching losses remain unmeasured; these are not guaranteed limits.",
   "thermal_reference": "thermal-planning.json, SB01",
-  "historical_routing_only_revision": "ROUTE05 expands outline to51.2x33mm withorigin99.4,99.4, extends C6 spatial keepout and moves D1 return via; electronics and component/pad placements unchanged."
+  "historical_routing_only_revision": "ROUTE05 expands outline to51.2x33mm withorigin99.4,99.4, extends C6 spatial keepout and moves D1 return via; electronics and component/pad placements unchanged.",
+  "R2_overrides": {
+    "L1": {
+      "ref": "L1",
+      "value": "100ohm 10% 2W RC damper (legacy L1 position)",
+      "mpn": "PR02FS0201000KR500",
+      "kind": "pulse-rated flameproof non-inductive resistor",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "BUS_FILTERED"
+      },
+      "source": "https://www.vishay.com/docs/28915/pr02fs.pdf",
+      "package": "axial PR02-FS, vertical manual forming on existing 5.0038mm TH pair",
+      "body_or_reservation_mm": [
+        3.9,
+        10,
+        16
+      ],
+      "notes": "Analysis designation R10 maps to physical legacy L1. Removes intentional input LC resonance; RF1 remains47ohm. Standard inductor substitution forbidden. Original copper, pads, courtyard and outline unchanged.",
+      "assembly": "Body center above pad1; >=2mm PCB standoff; <=16mm planned total height including bent return lead. Inspect sample/lead forming before assembly; body90C provisional stop."
+    },
+    "old_LC_transient_and_choke_thermal_sections": "Historical; do not apply to R2 resistor",
+    "incremental_R10_loss_at60mArms_W": 0.4059,
+    "loss_limit": "Calculated resistor-only loss with112.75ohm screen; actual RMS input/filter current unmeasured; previous total-driver-loss figures do not include this changed part",
+    "provisional_resistor_body_stop_C": 90,
+    "no_powered_tests": true
+  }
 }

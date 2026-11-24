@@ -1,3 +1,5 @@
+Current startup correction candidate: [SB01-R2](README.SB01-R2.md). Earlier R1 release files and descriptions below are historical.
+
 Current engineering candidate: [SC09-SB01 simplified procurement](README.SB01.md). The following older text and release-candidate artifacts are historical.
 
 # SC09-ROUTE05 bare-PCB/manual prototype candidate

@@ -1,5 +1,5 @@
 {
-  "revision": "SC09-SB01",
+  "revision": "SC09-SB01-R2",
   "preserved_remote_commit": "f015f750183ddae738155993823aee4cfbfed463",
   "checkpoint_commit": "74c3ff1565e8b207d3f05fcc10beb0b67e1f659c",
   "part_changes": {
@@ -67,9 +67,29 @@
     "U1": {
       "mpn": "LYT1603D",
       "notes": "Same original silicon/SO8; tube packaging instead of LYT1603D-TL reel. Manufacturer ordering suffix verified in prior record; not an electrical change."
+    },
+    "L1": {
+      "ref": "L1",
+      "value": "100ohm 10% 2W RC damper (legacy L1 position)",
+      "mpn": "PR02FS0201000KR500",
+      "kind": "pulse-rated flameproof non-inductive resistor",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "BUS_FILTERED"
+      },
+      "source": "https://www.vishay.com/docs/28915/pr02fs.pdf",
+      "package": "axial PR02-FS, vertical manual forming on existing 5.0038mm TH pair",
+      "body_or_reservation_mm": [
+        3.9,
+        10,
+        16
+      ],
+      "notes": "Analysis designation R10 maps to physical legacy L1. Removes intentional input LC resonance; RF1 remains47ohm. Standard inductor substitution forbidden. Original copper, pads, courtyard and outline unchanged.",
+      "assembly": "Body center above pad1; >=2mm PCB standoff; <=16mm planned total height including bent return lead. Inspect sample/lead forming before assembly; body90C provisional stop."
     }
   },
   "independent_intent": "All samephysicaltwo-terminalmembership and topology as approvedCAT01. Independent sourcepartsresearch precededCADchanges; noCAD-derived expectedgraph.",
   "scope": "Owner-authorized design work, no fabricated human schematic/placement/routing/release approval.",
-  "all_waveform_temperature_efficiency_values_are_unmeasured": true
+  "all_waveform_temperature_efficiency_values_are_unmeasured": true,
+  "R2_precedence": "L1 legacy slot now PR02FS100 resistor, not inductor. Earlier LC/stock/thermal claims are historical; new startup-correction.SB01-R2.json and R2 engineering reports govern."
 }

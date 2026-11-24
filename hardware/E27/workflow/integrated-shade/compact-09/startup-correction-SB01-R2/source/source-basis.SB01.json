@@ -1,0 +1,95 @@
+{
+  "revision": "SC09-SB01-R2",
+  "preserved_remote_commit": "f015f750183ddae738155993823aee4cfbfed463",
+  "checkpoint_commit": "74c3ff1565e8b207d3f05fcc10beb0b67e1f659c",
+  "part_changes": {
+    "D1": {
+      "mpn": "US1M-13-F",
+      "value": "1000V 1A ultrafast",
+      "source": "https://www.diodes.com/datasheet/download/US1M.pdf",
+      "package": "SMA",
+      "notes": "Same DiodesUS1family/SMApinmap,1A75ns,Vfmax1.7V,Ifsm30A; VRRM1000V instead600V increasesstartupheadroom without new layout. Actual reverse recovery/temperature/surge measurement remains due."
+    },
+    "RF1": {
+      "mpn": "FW20A47R0JA",
+      "value": "47ohm 5% 2W fusible",
+      "source": "https://www.bourns.com/docs/Product-Datasheets/FW.pdf",
+      "package": "axial, same FW20A12x6mm",
+      "notes": "Changed10ohm to47ohm for inputLCdamping after independentreview. RetainBournsFWfusiblefamilyandgeometry; normal60mARMSplanning0.1812W. IdealcornerC4peak588.7V<630V is not nonlinear/surge guarantee.",
+      "assembly": "Existing uprightP6.8customforming, max14.85mmabovePCB, retained. No genericnonfusible replacement."
+    },
+    "C1": {
+      "mpn": "R76QI24705050J",
+      "value": "47nF 5% 1000V pulse film",
+      "source": "https://www.tme.eu/Document/e17ad82984cff1e1d067933eb1fdd0b8/KEM_F3034_R76.pdf",
+      "package": "KEMET R76 radial P15",
+      "body_or_reservation_mm": [
+        18.5,
+        7.7,
+        13.6
+      ],
+      "notes": "Exact pulse-film row: 3500V/us, nominal165A pulse. Cold-plug ideal initialhistorical10ohm843.5V/us screen is not a complete nonlinear/surge qualification.",
+      "assembly": "0.8+/-0.05mm leads; P15; inspect 1.1mm finished holes,2.1mm pads and as-built stand-off."
+    },
+    "RV1": {
+      "mpn": "B72207S0271K101",
+      "value": "275VAC MOV 21J",
+      "source": "https://www.tme.eu/Document/94891b49d586e9338877713baac923fe/SIOV_Leaded_StandarD.pdf",
+      "package": "TDK S07 standard radial P5",
+      "body_or_reservation_mm": [
+        9,
+        4.4,
+        11
+      ],
+      "notes": "275VAC/350VDC,21J,1.2kA,710V at10A. Old23J rating is not inherited. Full RF1/MOV/surge coordination remains an explicit prototype test gate.",
+      "assembly": "Straight P5 leads; project-assigned nonpolar terminal identities follow retained AC_FUSED/AC_N mapping."
+    },
+    "R6": {
+      "mpn": "1206S4F365KT5E",
+      "value": "3.65ohm 1% 0.25W",
+      "source": "https://www.tme.eu/pl/details/smd1206-3.65r-1%25/rezystory-smd/royalohm/1206s4f365kt5e/",
+      "package": "1206",
+      "notes": "TCR400ppm/K versus original100. Range to125C; conservative proposed measured body stop100C. Same nominalparallel sense resistance/current; updated drift screen retained."
+    },
+    "T1": {
+      "mpn": "7687709152",
+      "value": "1.5mH 20% 400V",
+      "source": "https://www.we-online.com/components/products/datasheet/7687709152.pdf",
+      "package": "WE-PD HV 1280 SMD,12.5x12.5x10.5max",
+      "body_or_reservation_mm": [
+        12.5,
+        12.5,
+        10.5
+      ],
+      "notes": "400V working,520mArms/40K,typ800mA10%Ldrop;2.2ohm max20C DCR. Hot/fault/core-loss measurements remain due. Manufacturer no sensitive traces underneath.",
+      "assembly": "Recommended two5.4x2.9mm lands at0,+/-4.95mm. Projectpin1LED_PLUS,pin2FB_INDUCTOR,nonpolar. Preserve visible winding-dot orientation in manual assembly record."
+    },
+    "U1": {
+      "mpn": "LYT1603D",
+      "notes": "Same original silicon/SO8; tube packaging instead of LYT1603D-TL reel. Manufacturer ordering suffix verified in prior record; not an electrical change."
+    },
+    "L1": {
+      "ref": "L1",
+      "value": "100ohm 10% 2W RC damper (legacy L1 position)",
+      "mpn": "PR02FS0201000KR500",
+      "kind": "pulse-rated flameproof non-inductive resistor",
+      "pins": {
+        "1": "BUS_RECT",
+        "2": "BUS_FILTERED"
+      },
+      "source": "https://www.vishay.com/docs/28915/pr02fs.pdf",
+      "package": "axial PR02-FS, vertical manual forming on existing 5.0038mm TH pair",
+      "body_or_reservation_mm": [
+        3.9,
+        10,
+        16
+      ],
+      "notes": "Analysis designation R10 maps to physical legacy L1. Removes intentional input LC resonance; RF1 remains47ohm. Standard inductor substitution forbidden. Original copper, pads, courtyard and outline unchanged.",
+      "assembly": "Body center above pad1; >=2mm PCB standoff; <=16mm planned total height including bent return lead. Inspect sample/lead forming before assembly; body90C provisional stop."
+    }
+  },
+  "independent_intent": "All samephysicaltwo-terminalmembership and topology as approvedCAT01. Independent sourcepartsresearch precededCADchanges; noCAD-derived expectedgraph.",
+  "scope": "Owner-authorized design work, no fabricated human schematic/placement/routing/release approval.",
+  "all_waveform_temperature_efficiency_values_are_unmeasured": true,
+  "R2_precedence": "L1 legacy slot now PR02FS100 resistor, not inductor. Earlier LC/stock/thermal claims are historical; new startup-correction.SB01-R2.json and R2 engineering reports govern."
+}

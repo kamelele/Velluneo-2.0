@@ -1,0 +1,56 @@
+{
+  "kind": "Own arithmetic and explicitly conditional research screens; not measurements ofSC09",
+  "reference230V50Hz": {
+    "page": 23,
+    "Vin_Vrms": 230.01,
+    "Iin_mArms": 42.72,
+    "Pin_W": 9.24,
+    "PF": 0.94,
+    "THD_percent": 21.08,
+    "Vout_Vdc": 60.32,
+    "Iout_mAdc": 139.89,
+    "Pout_W": 8.45,
+    "reported_efficiency_percent": 91.51,
+    "computed_loss_W": 0.79,
+    "measured_by": "Power Integrations reference-board authors, not our project"
+  },
+  "nominal_output_current_mA": 135.2034649476229,
+  "sense_parallel_ohm": 0.5732101616628176,
+  "nominal_LED_voltage_V": 60,
+  "nominal_LED_power_W": 8.006325543916196,
+  "dual_bleeder_nominal_loss_at60V_W": 0.10588235294117647,
+  "own_driver_loss_planning_W": [
+    0.9,
+    1.7
+  ],
+  "loss_planning_basis": "ALL base losses includingbothbleeders; LEDboardexcluded. Planning.9..1.7Wnotaguaranteedbound. Pin=externalLEDpower+baseLoss;donotaddbleedersasecondtime.",
+  "R4_12k4_R7_390k_static_OVP_screen_V": {
+    "nominal": 77.88387096774194,
+    "resistor_temperature_aging_screen_min": 69.37132790479173,
+    "resistor_temperature_aging_screen_max": 86.51092783505155,
+    "limits": "2.3/2.48VICthresholds only25C; resistor spans are declared additive engineering screens. Dynamic target<=90V tobe verified;100Vcapacitorrating isnot measured clamp."
+  },
+  "one_bleeder_open_discharge_90V_to5V_s": 36.450143649393844,
+  "bleeder_screen_inputs": "Cmax180uF,R68k+1%tol,+1%100K100ppm,+1%change reserve,multiplicative.Cold replacement conditional on actualverifieddischarge.",
+  "minimum_ON_time_primary_screen": "At actual proposed52Vminimum:1.29460us versus1.25us,max-min-ON-screen margin3.568%; same conditional1mH tolerances and assumed10%hotinductance drop.53.6Vhistoricalscreen1.299us not minimumofactivewindow. HotL and ICextrema require measurement.",
+  "LED_flux": "Official20x55=1100lmminimumtable/20x63.8=1276lmtyp at120mA25C20ms pulse.135mAselectedvariant needs ownflux/temperature/diffuser/current measurement; do not multiplylinearly as guarantee.800lmis producttarget.",
+  "all_new_physical_measurements_performed": false,
+  "bleeder_worst_screen_per_resistor_at90V_W": 0.12276,
+  "historical_early_loss_planning_W": [
+    0.7,
+    1.2
+  ],
+  "nominal_regulated_total_output_current_mA": 135.2034649476229,
+  "nominal_external_LED_current_at60V_mA": 133.43875906526995,
+  "total_regulated_output_at60V_W": 8.112207896857374,
+  "nominal_output_current_definition": "Existing135.203mAarithmeticestimatereferstoregulatedTOTALoutputincludingbleederload;approx133.44mAremainsforexternalLEDstringat60V. Neitherisaguaranteedactualcurrent.",
+  "planned_input_power_at60V_W": [
+    8.906325543916196,
+    9.706325543916195
+  ],
+  "planned_LED_efficiency_percent": [
+    82.48564822693858,
+    89.89482255547262
+  ],
+  "CAT01_notice": "Historical custom-coil baseline only. Current selected catalogue electrical/thermal values: catalogue-design-calculations.json. Current actual copper and geometry checks are in catalogue-package. No old thermal estimate transfers automatically."
+}

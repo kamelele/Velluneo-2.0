@@ -352,7 +352,7 @@
     "refs": [
       "L1"
     ],
-    "mpn": "RL-5480-3-3300",
+    "mpn": "PR02FS0201000KR500",
     "units": "mm",
     "origin": "DefinedlocalXY;see notes forC6asymmetricorigin",
     "pads": [
@@ -394,10 +394,10 @@
       }
     ],
     "max_body_bbox_xy_mm": [
-      -4.15,
-      -4.15,
-      4.15,
-      4.15
+      -4.4519,
+      -1.95,
+      2.9169,
+      1.95
     ],
     "courtyard_bbox_xy_mm": [
       -4.65,
@@ -405,15 +405,14 @@
       4.65,
       4.65
     ],
-    "planned_max_above_PCB_mm": 10.5,
+    "planned_max_above_PCB_mm": 16,
     "sources": [
-      "Renco_L1"
+      "https://www.vishay.com/docs/28915/pr02fs.pdf"
     ],
-    "design_basis": "Wurth768772332catalogue3.3mHHV400V,bodyD8.3/H10max+.5seating,P5±.5/freeleadforming;manufacturerrecommended1.2holes;compatibleP5.0038retained.",
+    "design_basis": "PR02-FS max D3.9/bodyL10/totalL12/lead.78±.05; upright pad1 over original5.0038mm pad pair. Original conservative circular9.3mm courtyard retained.",
     "notes": [
-      "Wire.8128mmTYPnotguaranteedmax;actualsampleandformingjigrequired.",
-      "Do not useC=.375inaspinpitch:itisminimumshortleadlength9.525mm.",
-      "Circlebody/courtyardmaybemodeledascirclewiththegivenboundingbox;nonpolar."
+      "Physical legacyL1 slot now resistor; R10inanalysis. NativeF.Fabcircle remains original conservative reservation, not literal resistor body.",
+      "2mm standoff plus12mm total plus2mm turn =16mm planning; actual formed-lead/support inspection required. 0.1981mm nominal circle-envelope margin is not tolerance qualification."
     ],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -498,7 +497,7 @@
     "sources": [
       "TDK_C4"
     ],
-    "design_basis": "ManufacturerP10±.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
+    "design_basis": "ManufacturerP10Â±.4/body;1.1finishedhole/2.1pad/.5stand-off/.5courtyardareengineeringchoices. Gentleleadadjustmentmayberequiredwithinrawpitchtolerance.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -728,7 +727,7 @@
     "sources": [
       "Samsung_C5"
     ],
-    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5at±1.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
+    "design_basis": "Exactbodyfrommanufacturer;pad1.0x1.5atÂ±1.0isexplicitengineerlandchoice,NOTmanufacturerquotednumericland. Innergap1.0,outer3.0;reviewcontrolledsoldervolume/manualthermalprocess.",
     "notes": [
       "Catalogmanualsolder0201..1206:350Cmax,preheat>=60s,contact<=3s,deltaT<=190C;actualprocessrequiresvalidation.",
       "Do not present numericland as a Samsung recommendation."
@@ -818,7 +817,7 @@
     "sources": [
       "Panasonic_R4"
     ],
-    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centers±1.15;courtyard.25frompad/bodyunion.",
+    "design_basis": "ChosenwithinPanasonicgenericERJrange:gap1.2,outer3.4,width1.4=>pads1.1x1.4centersÂ±1.15;courtyard.25frompad/bodyunion.",
     "notes": [],
     "mechanical_keepouts": [],
     "electrical_clearance_claim": false,
@@ -1206,7 +1205,7 @@
       "Panasonic_C6",
       "Panasonic_C6_mount"
     ],
-    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5±.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,y±2.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
+    "design_basis": "Horizontalengineerformedleadproposal,originatpairmidpoint. Canaxis+X,sealplaneX4,endventX26. KeeprawP5Â±.5supportedtoP5nominal. Leadsleavesealatz7with2.5mmstraightthen1.5mmcenterlinebendradiusdownwards;verticallegsX0,yÂ±2.5. Bodyunder.5mm. Totalcan22+4mmleadarea+5vent;courtyard33.15x14.",
     "notes": [
       "Pin1positive,pin2negative;verifynegativebodyband/positiveleadbeforeforming.",
       "ManufacturerdoesNOTsupplythishorizontalformingradius/offset;2.5straight/1.5bend/.5supportareexplicitengineeringchoices,notqualifiedmanufacturerforming.",

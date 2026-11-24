@@ -1,0 +1,1 @@
+SC09-ROUTE05 engineering fabrication review artifacts only. Current packet is workflow/integrated-shade/compact-09/routing-order-prep/po_poprawkach. Exact human stage decisions, provider/process confirmation and physical qualification remain open; full Toolkit releaseFAIL. No order or powered test.

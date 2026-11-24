@@ -1,0 +1,102 @@
+{
+  "actual_actor": "/root/sb01_startup_engineering",
+  "base_pcb_sha256": "532ff6ac51767badaabc49fb627b8feca729daeb1c4368a3cdb2ddad1c0996f8",
+  "base_guard": {
+    "SC09_compact.kicad_pcb": "532ff6ac51767badaabc49fb627b8feca729daeb1c4368a3cdb2ddad1c0996f8",
+    "SC09_compact.kicad_sch": "16cbd188b02399d2eecd0965939a2f07cda1e96a40c45574b9d7d791a0ff22a4",
+    "SC09_compact.kicad_pro": "d74058d2e0f1e7a0e73a89c4af72a4e0d25f70aac5327f658921bf08f373461c",
+    "SC09_compact.kicad_dru": "980789aef3fb935c0a965f28e33106e95639f3bfe653092931a91b01dc5aa8fe",
+    "hardware.json": "28cd77cb521b1048721fa655014636ddb9cd8169fe6e41d3cf59c3a133a3baf0",
+    ".electronics-rules/placement-input.json": "d435ee079c2410c9009090b9cb1b1579aa7e5d47d735b80868c33f05b6091c53",
+    ".electronics-rules/routing-input.json": "d435ee079c2410c9009090b9cb1b1579aa7e5d47d735b80868c33f05b6091c53",
+    "release-refinement-R1/SC09_SB01_R1_Gerber_Drill_CANDIDATE.zip": "b722078ed3668e1df757de855754dd7aefc925b9fc8617b28dd7493ece55490e"
+  },
+  "old_model_inputs": {
+    "work\\sc09-simple\\reviews\\reality.damping-screen.py": "d36b86423a0e207f3e3b0249702b1353f4c2b893d77d8b08cbde3deb40bcc10f",
+    "work\\sc09-simple\\reviews\\reality.damping-screen.json": "de8adf40bb71d8be3fd5d34bde81b67ee4c3b9c5a856e6a4197f8196228a47eb"
+  },
+  "allowed_path": "work\\sc09-sb01-startup-improvement\\startup",
+  "canonical_sources_unchanged": true,
+  "candidate_implemented": false,
+  "approved": false,
+  "recommendation": "Engineeringcandidateforcoordinatorintegrationandindependentreview;notrelease",
+  "part": "PR02FS0201000KR500",
+  "functional_designator_map": {
+    "R10_calculations": "legacy_L1_position_in_candidate"
+  },
+  "core_outputs": {
+    "Bourns-pulse-primary.png": {
+      "sha256": "59741a9516b962931b2a4376daf375626bec6901521c8b86e19f14d4aa162d4e",
+      "bytes": 191340
+    },
+    "PR02FS-dimensions.png": {
+      "sha256": "9ce767ca047bad1a014bda0654b1245c7af1e24af5d3a050e9d55a7c45c8c1ce",
+      "bytes": 226161
+    },
+    "PR02FS-primary.pdf": {
+      "sha256": "048a69c3c55dd3be3830586620d25cab23bcde74f2f6696fbd9807a84a512874",
+      "bytes": 178364
+    },
+    "PR02FS-rectpulse.png": {
+      "sha256": "48cf015bf3376fe0cb43ed14f2bda43aa97eb99c8a8bd5ea590f448e676c7fe4",
+      "bytes": 419451
+    },
+    "rc-screen.json": {
+      "sha256": "7ed9848b3093ea360a15a27e19cad8c45f3c2a072e92a5d8ead86ec845a7a5f9",
+      "bytes": 368633
+    },
+    "rc-tail.json": {
+      "sha256": "34d65c494039be2c7cba3782e42d825007c00b62299a531dcfe088e76fed6467",
+      "bytes": 16725
+    },
+    "rc_screen.py": {
+      "sha256": "2ffabddcf0ec56fc46f7bc97dcabc7b502f6e9cdf35529fadd0b23bdbf3f996d",
+      "bytes": 4108
+    },
+    "rc_tail.py": {
+      "sha256": "a035c22a7a1b6218d85b28a1524ae95d402df30276da1dbb046071e9fdde3ede",
+      "bytes": 1408
+    },
+    "REPORT.md": {
+      "sha256": "9ad7367da7868ae6e84565f9087e73d40eba127e589be02900aa065964ce16ba",
+      "bytes": 9651
+    },
+    "screen.py": {
+      "sha256": "b3632e86c7a721d24a66c76375c937fdd55e057e0ddc4aa5da9f077919edfea6",
+      "bytes": 2855
+    },
+    "targeted.json": {
+      "sha256": "4522ee658f5863e09c4553ed7474a295b6b856adf52afe3e223368d252306977",
+      "bytes": 976105
+    },
+    "targeted.py": {
+      "sha256": "ad28aca086d0ecf598b0c8dd77f9ea0043f32e99c3710e6ceba6b1c49dc7c32a",
+      "bytes": 1262
+    },
+    "value-grid.json": {
+      "sha256": "4a9b8fdcfa9921d499c430e6dc7ee358482bd846c1e7f9f0eef50be2bfc952fc",
+      "bytes": 563087
+    },
+    "Vishay-PR.pdf": {
+      "sha256": "1b65216400497850afb3e740f378a10a77cd584809e647ae7fcdb707d9b6a2bc",
+      "bytes": 227845
+    },
+    "Vishay-pulse-prior-primary.png": {
+      "sha256": "12be6a9bbef391bdb5bb3372197b4c3c8655a5d5f4907b4d560026080be86224",
+      "bytes": 262954
+    }
+  },
+  "commands": [
+    "HostPython screen.py",
+    "HostPython targeted.py",
+    "HostPython rc_screen.py",
+    "HostPython rc_tail.py"
+  ],
+  "calculated_not_measured": true,
+  "unresolved": [
+    "Hot/repeatedpulsequalification",
+    "Actualleadformingandplacement",
+    "ActivebuckRMSlossandEMI",
+    "Parasitic/surge/fault/thermal/insulationqualification"
+  ]
+}

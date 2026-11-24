@@ -1,0 +1,13 @@
+import pathlib,json,hashlib,csv,zipfile
+R=pathlib.Path(__file__).resolve().parents[4]; D=pathlib.Path(__file__).parent
+O=R/'outputs/SC09_SB01_R2_rozruch_validated'; P=R/'outputs/SC09_SB01_R2_rozruch_final'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+m=json.loads((O/'core-manifest.json').read_text()); old=json.loads((P/'core-manifest.json').read_text())
+bad=[k for k,v in m['files'].items() if not(O/k).is_file() or sha(O/k)!=v['sha256'] or (O/k).stat().st_size!=v['bytes']]
+h=json.loads((O/'source/hardware.json').read_text()); binding=h['release_files']['positions'][0]; pos=O/'source'/binding['path']
+rows=list(csv.DictReader(pos.open(newline='',encoding='utf-8-sig'))); prev=list(csv.DictReader((O/'source/release-refinement-R1/manual-positions.csv').open(newline='',encoding='utf-8-sig')))
+before={r['Ref']:r for r in prev}; same=len(rows)==len(prev)==19 and all(all(r[k]==before[r['Ref']][k] for k in ['PosX','PosY','Rot','Side','Package']) for r in rows)
+ne=json.loads((O/'checks/native/native-export.json').read_text()); stale=[k for k,v in ne['source_files'].items() if not(O/'source'/k).is_file() or sha(O/'source'/k)!=v]
+z=zipfile.ZipFile(O/'SC09_SB01_R2_Gerber_Drill_CANDIDATE.zip'); oz=zipfile.ZipFile(P/'SC09_SB01_R2_Gerber_Drill_CANDIDATE.zip')
+result={'core_sha256':sha(O/'core-manifest.json'),'file_count':len(m['files']),'manifest_mismatches':bad,'positions_sha256':sha(pos),'positions_binding_matches':sha(pos)==binding['sha256'],'positions_count':len(rows),'L1_position_row':next(r for r in rows if r['Ref']=='L1'),'all_positions_rotation_sides_packages_unchanged':same,'native_source_binding_count':len(ne['source_files']),'stale_bindings':stale,'native_exit_codes':[x['exit_code'] for x in json.loads((O/'checks/native/commands.json').read_text())],'actual_parts_pass':json.loads((O/'checks/native/actual-parts.json').read_text())['passed'],'fresh_fab_pass':json.loads((O/'checks/native/fresh-gerber-audit.json').read_text())['passed'],'unchanged_native_CAD':all(sha(O/'source'/x)==sha(P/'source'/x) for x in ['SC09_compact.kicad_pcb','SC09_compact.kicad_sch','SC09_compact.kicad_pro','SC09_compact.kicad_dru']),'ZIP_CRC_error':z.testzip(),'ZIP_eight_members_unchanged':len(z.namelist())==8 and set(z.namelist())==set(oz.namelist()) and all(z.read(k)==oz.read(k) for k in z.namelist()),'retained_analysis_files_identical':all(m['files'][k]==v for k,v in old['files'].items() if k.startswith('analysis/')),'recommendation':'ready_for_human_review','order_approved':False,'full_release_passed':False,'powered_qualified':False}
+(D/'validated-verification.json').write_text(json.dumps(result,indent=2),encoding='utf-8'); print(json.dumps(result,indent=2))

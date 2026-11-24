@@ -1,0 +1,32 @@
+{
+  "task": "Clarify exact Panasonic C6 board-face guidance",
+  "actual_actor": "/root/sc09_passive_parts",
+  "date": "2026-11-21",
+  "source": "https://industrial.panasonic.com/content/data/CP/PDF/S_Alm_A_cap_catalog_am.pdf",
+  "document": "Panasonic Aluminum Electrolytic Capacitors Products Catalog2020, radial application guidelines28-Feb-2020",
+  "physical_PDF_page_1_based": 5,
+  "section": "1.5(1),1.5(6),1.6",
+  "local_PDF": "addendum-primary-am.pdf",
+  "local_PDF_sha256": "1f7f0440bd1edc8737fb18d2f44bb8fb948c351302b92ffdc6ba780723410670",
+  "actual_primary_page_picture": "addendum-primary-page5.png",
+  "exact_quote_20_words": "Avoid circuit board runs under the capacitor, as an electrical short can occur due to an electrolyte leakage.",
+  "quote_scope": "Section1.5(6);one20wordquote only. No drawing accompanies these mounting paragraphs on page5.",
+  "source_specificity": {
+    "1p5_1": "Explicitly describes pattern located between mounted capacitor and board, in context of capillary solder bridges during solder bath. This is the capacitor-facing surface.",
+    "1p5_6": "Generic wording under the capacitor, with electrolyte leakage rationale; does NOT explicitly identifyF.Cu/B.Cu, undersideofboard,alllayers,ortracksbehind1.6mmFR4.",
+    "1p6": "Requires isolation ofcase/cathode andanode/otherpaths. Sleeve cannot be assumed insulation (followingpage6)."
+  },
+  "correction_of_prior_report": "Prior footprint JSON C6_BODY_UNDER both-copper-layer ban was a conservative engineering implementation, NOT a literal manufacturer requirement. Do not attribute both-layer prohibition to this source. This addendum supersedes that interpretation without changing any approved electrical graph.",
+  "engineering_assessment": "Allowing B.Cu traces behind continuous1.6mmFR4 while keeping capacitor-facingF.Cu and exposedholes/vias clear is a defensible engineering interpretation ofthe identified physical mechanisms, but is not explicit manufacturer permission or measured qualification. The exact document does not substantiate an automatic all-layer exclusion. Conversely, absenceofsuchwordingisnotaproductsafetycertificate.",
+  "proposed_mounting_contract_for_coordinator_review": {
+    "F_Cu": "No tracks/zones/pads under projectedhorizontalcan exceptthedefinedterminalapproachoutsidecanprojection. Keep case clear ofexposedconductors.",
+    "B_Cu_traces": "May be planned behind intactcontinuousFR4, with no slots/through-holes/vias introducingexposedconductivepaths intocap-facingkeepout, subjecttoclearance/voltage/current/thermalroutingreview.",
+    "B_Cu_components": "Avoid heat-producingSMD beneathcanprojection permanufacturerthermalguideline p4; exactthermalbehaviorrequiresmeasurement.",
+    "cradle": "0.5mm saddle is mechanical support/functionalcase separation only; no safety/basic/reinforcedisolation credit or claimed materialqualification.",
+    "vent": "Keep freeventdirectionvolume;5mmproposedreserveunchanged.",
+    "sleeve": "No isolationcredit.",
+    "leakage": "Preventexposedsurfacetraces/holesfromforminganode-to-cathodeorcasepathviaelectrolyte. Actualresidualpathreviewremainsneeded."
+  },
+  "source_CAD_changed": false,
+  "physical_qualification_claimed": false
+}

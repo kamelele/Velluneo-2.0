@@ -1,0 +1,146 @@
+{
+  "actor": "/root/compact_fit_research",
+  "scope": "Candidate component geometry and sourcing addendum; no customer CAD changed; no electrical or manufacturing release",
+  "checked_date": "2026-11-20",
+  "candidates": [
+    {
+      "ref": "C1",
+      "mpn": "B32529E6473K189",
+      "manufacturer": "TDK",
+      "value_nF": 47,
+      "tolerance_percent": 10,
+      "rated_DC_V": 400,
+      "body_max_LWH_mm": [
+        7.3,
+        4.5,
+        9.5
+      ],
+      "lead_pitch_nominal_mm": 5,
+      "geometry_basis": "Exact manufacturer product page specifies maxima, not nominal dimensions",
+      "status": "Production on exact manufacturer page",
+      "primary_source": "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529E6473K189",
+      "procurement": {
+        "supplier": "DigiKey",
+        "page": "https://www.digikey.com/en/products/detail/tdk/B32529E6473K189/18718969",
+        "reported_cut_tape_stock": 5750,
+        "qty1_USD": 0.65,
+        "not_reserved": true
+      },
+      "electrical_limit": "Actual ripple and surge remain subject to root electrical review; 400V is not an across-line X rating"
+    },
+    {
+      "ref": "C4",
+      "mpn": "B32671P6154K000",
+      "manufacturer": "TDK",
+      "value_nF": 150,
+      "tolerance_percent": 10,
+      "rated_DC_V": 630,
+      "rated_AC_Vrms": 200,
+      "body_max_LWH_mm": [
+        13,
+        6,
+        12
+      ],
+      "lead_pitch_nominal_mm": 10,
+      "lead_pitch_tolerance_mm": 0.4,
+      "lead_diameter_mm": 0.6,
+      "lead_diameter_tolerance_mm": 0.05,
+      "geometry_basis": "Exact manufacturer product page and June 2026 series PDF pages2/4",
+      "primary_source": "https://product.tdk.com/en/search/capacitor/film/snubbering_pfc/info?part_no=B32671P6154K000",
+      "primary_series_pdf": "https://product.tdk.com/system/files/dam/doc/product/capacitor/film/mkp_mfp/data_sheet/20/20/db/fc_2009/mkp_b3267_p.pdf",
+      "status": "Production on exact manufacturer page",
+      "procurement": {
+        "supplier": "DigiKey",
+        "page": "https://www.digikey.es/en/products/detail/tdk/B32671P6154K000/3878304",
+        "reported_stock_range": [
+          13275,
+          13460
+        ],
+        "qty1_EUR": 0.92,
+        "qty10_EUR": 0.586,
+        "not_reserved": true,
+        "basis": "Different indexed regional snapshots; no live reservation or guaranteed quantity"
+      },
+      "electrical_limits": {
+        "isolated_pulse_dvdt_V_per_us": 250,
+        "isolated_pulse_k0_V2_per_us": 315000,
+        "continuous_category_voltage_basis": "June2026 p7: rated85C; above85 through110C multiply DC/AC ratings by(165-Top)/80; do not substitute old stepped derating",
+        "repeated_pulses": "Use permissible AC voltage/current curves, not isolated dV/dt alone",
+        "release_gap": "Root must close DC bias plus 100Hz and switching ripple, thermal and surge stress"
+      }
+    },
+    {
+      "ref": "RV1",
+      "mpn": "V275LA4P",
+      "manufacturer": "Littelfuse",
+      "body_max_width_thickness_seated_height_mm": [
+        9,
+        5.6,
+        12
+      ],
+      "disc_class_mm_not_finished_body_diameter": 7,
+      "straight_lead_stagger_nominal_mm": [
+        5,
+        2.5
+      ],
+      "lead_e_minmax_mm": [
+        4,
+        6
+      ],
+      "lead_e1_minmax_mm": [
+        1.5,
+        3.5
+      ],
+      "lead_diameter_minmax_mm": [
+        0.585,
+        0.685
+      ],
+      "proposed_pin_centres_body_origin_mm": [
+        [
+          -2.5,
+          -1.25
+        ],
+        [
+          2.5,
+          1.25
+        ]
+      ],
+      "pin_basis": "Nominal centre choice from staggered straight-lead bottom view. Nonpolar; verify assembly lead forming and actual supplied tolerance. Not collinear5mm footprint.",
+      "primary_source": "https://www.littelfuse.com/assetdocs/varistors-la-datasheet?assetguid=f7c547ce-c2fa-4789-86cc-ec39a5060afb",
+      "primary_page": 10,
+      "primary_revision": "VL16/9/2024",
+      "visual_source": "LA2013.pdf page10, printed132, revision June3/2013; dimensions match current2024 primary table",
+      "mirror_url": "https://static.chipdip.ru/lib/240/DOC012240364.pdf",
+      "visual_image": "LA2013-page10.png",
+      "body_basis": "A12 is straight bulk body/neck seated height; ATRIM15 applies to crimped lead variant and is not used for LA bulk",
+      "clearance_gap": "Lead stagger and tolerance must be accommodated with actual pads and assembly method; no clearance waiver"
+    }
+  ],
+  "rejected_or_held_alternative": {
+    "ref": "C4",
+    "mpn": "ECWFE2W154JA",
+    "body_max_LWH_mm": [
+      13.5,
+      5.5,
+      11
+    ],
+    "primary_pdf": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDI0000/ABD0000C202.pdf",
+    "local_pdf": "ECWFE.pdf",
+    "visual_page": "ECWFE-page2.png",
+    "status": "Currently catalogued; exact authorized stock was not confirmed",
+    "reason": "450V version also requires applied voltage<240Vp-p, whereas unfiltered high-line full-wave bus may swing near0..358V. Do not use merely because450VDC marking exceeds358V. Root may only reinstate after proving waveform bound.",
+    "primary_page1_limits": "Peak-to-peak<240V and zero-to-peak<450V; derate1.25%/C above85C; surface self-heating included"
+  },
+  "remaining_before_footprint_fit": [
+    "Actual pads, THT lead tolerances and forming method",
+    "Voltage clearance matrix and routing space",
+    "Finished wound T1 envelope and pins",
+    "Thermal rise and true bulb cavity"
+  ],
+  "local_evidence_hashes": {
+    "ECWFE.pdf": "8991128f88c0b9b013b5f73e56fdddc622ee946c5149650360d4bec4d396bd86",
+    "ECWFE-page2.png": "5e11d52c9d4d54ca4fd3148b3519c12d7c61fc6157cf5721adce5d46555a23b0",
+    "LA2013.pdf": "15245ddc74a32929fe10fce74910da8af644aa89e2118471221f0eb2ac533454",
+    "LA2013-page10.png": "95ba5c74d44469baae3840a8909cc56bcb9c0d7b2fc87abb2e9e2fb3fd185066"
+  }
+}

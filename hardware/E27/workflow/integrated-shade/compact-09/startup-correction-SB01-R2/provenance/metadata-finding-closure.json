@@ -1,0 +1,17 @@
+{
+  "findings": [
+    "R2-BOM-CSV: active csv still selects old choke",
+    "R2-PROCUREMENT: active shopping table still selects old choke/old quote",
+    "R2-ASSEMBLY-B: back drawing missing in hardware binding",
+    "R2-POSITIONS: active R1 position value old choke"
+  ],
+  "changes": [
+    "Regenerate active CSV from current selected JSON",
+    "Update actualL1purchaseMPN and explicitly archive old purchase observation/prices",
+    "Bind both front and back assembly PDFs",
+    "Fresh native19rowR2positions with actualresistor value; currenthardwarepointer/hashupdated"
+  ],
+  "source_CAD_changed": false,
+  "independent_closure_review_required": true,
+  "owner_approval": false
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "Candidate applicability/test matrix; no compliance claim.Qualified product review andcurrent exactstandardeditions stillrequired.",
+  "reference_only": "RDRsourceEN55015and500Vdifferentialsurge/2.5kVringwave scopebelongs originalmeasuredboard, not SC09. ST2kVdata used PEYnetworkcannotinheritinto2wirebulb.",
+  "plan": [
+    {
+      "area": "Electrical safety/abnormal/insulation",
+      "basis": "Applicablelamp/controlgear classification to be confirmed byqualifiedreview",
+      "due": "Beforeproductrelease; critical functionalspacingbeforeplacement",
+      "status": "Not tested; noSELVorindependentsafetychannelsclaimed"
+    },
+    {
+      "area": "Conducted/radiated emissions andimmunity",
+      "basis": "EN55015/EN61547 assessment,exacteditionsandtestlevels tobeconfirmed",
+      "due": "Prototypeandrelease",
+      "status": "No tests onSC09; referencefilter/sourceclaimsnottransferable"
+    },
+    {
+      "area": "Mains harmonics anddisplacementfactor",
+      "basis": "ApplicableEN/IEC61000-3-2 andEUecodesignclassification",
+      "due": "Release",
+      "status": "PF.940is onlymanufacturerreference; do notlabelnewboardPFverified"
+    },
+    {
+      "area": "Flicker/stroboscopic/optical",
+      "basis": "EU2019/2020consolidatedAnnexII: applicableLEDMLS full-loadPstLM<=1,SVM<=.4;CRI>=80 underdefinedconditions",
+      "source": "https://eur-lex.europa.eu/eli/reg/2019/2020/2021-09-01/eng",
+      "due": "FinishedLED+diffuserrelease",
+      "status": "RDRpercentflicker<30% doesnotestablishthese metrics;800lm4000Kmustbemeasured"
+    },
+    {
+      "area": "Thermal/current/transient/fault",
+      "basis": "207/230/253V,0..40Clab; internalparttemperaturesandsealedbulbconditions separate",
+      "due": "Prototypeandrelease",
+      "status": "MeasureLEDavg/ripple,VDS,C6OVP,BPdroop,hotL,singlefaultinput/output/bleeders/MOSFET; namedqualifiedperson/fixturebeforeenergizing"
+    }
+  ],
+  "before_schematic_acceptance": "C_SAFETY_BASIS/C_ENV/C_OPTICAL_INPUT/interface acceptance remain blocking at schematic, not deferred to release. See original-requirements-crosswalk.",
+  "bleeder_thermal_acceptance": "Worst declared resistance screen at90V:eachR8~0.12276W. Check exact RC1206derating vs measuredlocaltemperature undernormal/abnormalOVPduty before poweredprototype.0.25Wheadline not thermalproof."
+}

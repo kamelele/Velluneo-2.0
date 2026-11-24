@@ -1,0 +1,466 @@
+{
+  "actor": "/root/compact_rdr_research",
+  "scope": "Root compact19-position parameter proposal; research checks only, no CAD or human approval",
+  "root_proposed_primary": "LYT1603D-TL,R5=.68\u03a9,R6=3.65\u03a9;20S4000KCRI80LED;R7=390kVR25,R4=13.3k under headroom review;C6=150uF100V;two68kbleedersRC1206FR-0768KL selected after75kcorner comparison",
+  "physical_pin_count": {
+    "functional_positions": 17,
+    "wire_pad_positions": 2,
+    "physical_pins": 47,
+    "T1_physical_pins": [
+      1,
+      4,
+      8
+    ],
+    "T1_winding_pins": [
+      8,
+      1
+    ],
+    "T1_explicit_NC_pins": [
+      4
+    ],
+    "T1_removed_pins": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "primary_proof": "RDR464pp13/14construction+visuallyinspectedpage14photo,unwoundpin4retained; winding8to1.",
+    "proof_png": "T1-pin4-proof.png",
+    "proof_sha256": "a2d3824450a684783502499f261bd73dc2717a97fdf06dfa9027170ad6e0769f"
+  },
+  "OVP_screens": [
+    {
+      "nominal_V": 72.77593984962405,
+      "min_V": 68.40809201220873,
+      "max_V": 76.6709318751424,
+      "resistor_delta_from25C_K": 0,
+      "R7_resistance_change_reserve": 0,
+      "R4_resistance_change_reserve": 0,
+      "qualification": "Static divider screen; VOOV2.3/2.48V limits specified at25C; not a full-temperature threshold or dynamic overshoot guarantee."
+    },
+    {
+      "nominal_V": 72.77593984962405,
+      "min_V": 66.4444853187768,
+      "max_V": 78.91914193196489,
+      "resistor_delta_from25C_K": 100,
+      "R7_resistance_change_reserve": 0,
+      "R4_resistance_change_reserve": 0,
+      "qualification": "Static divider screen; VOOV2.3/2.48V limits specified at25C; not a full-temperature threshold or dynamic overshoot guarantee."
+    },
+    {
+      "nominal_V": 72.77593984962405,
+      "min_V": 64.85675053365856,
+      "max_V": 80.8494232938832,
+      "resistor_delta_from25C_K": 100,
+      "R7_resistance_change_reserve": 0.015,
+      "R4_resistance_change_reserve": 0.01,
+      "qualification": "Static divider screen; VOOV2.3/2.48V limits specified at25C; not a full-temperature threshold or dynamic overshoot guarantee."
+    }
+  ],
+  "minimum_ON_time_screens": [
+    {
+      "point": "120mA_alternative",
+      "R6_ohm": 13,
+      "sense_nominal_ohm": 0.6461988304093568,
+      "current_equation_nominal_mA": 119.93212669683258,
+      "sense_max_ohm": 0.6526608187134503,
+      "current_peak_min_A": 0.4182877111240536,
+      "L_min_screen_mH": 0.95,
+      "extra_hot_L_drop_screen": 0,
+      "resistor_deltaT_K": 0,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 100,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.3063067387673166,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": 4.5045391013853076,
+      "screen_pass": true,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    },
+    {
+      "point": "120mA_alternative",
+      "R6_ohm": 13,
+      "sense_nominal_ohm": 0.6461988304093568,
+      "current_equation_nominal_mA": 119.93212669683258,
+      "sense_max_ohm": 0.6526608187134503,
+      "current_peak_min_A": 0.4182877111240536,
+      "L_min_screen_mH": 0.855,
+      "extra_hot_L_drop_screen": 0.1,
+      "resistor_deltaT_K": 0,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 100,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.1756760648905848,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": -5.9459148087532165,
+      "screen_pass": false,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    },
+    {
+      "point": "120mA_alternative",
+      "R6_ohm": 13,
+      "sense_nominal_ohm": 0.6461988304093568,
+      "current_equation_nominal_mA": 119.93212669683258,
+      "sense_max_ohm": 0.6653865621111723,
+      "current_peak_min_A": 0.41028781695532257,
+      "L_min_screen_mH": 0.95,
+      "extra_hot_L_drop_screen": 0,
+      "resistor_deltaT_K": 100,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 100,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.2813231798816018,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": 2.5058543905281505,
+      "screen_pass": true,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    },
+    {
+      "point": "120mA_alternative",
+      "R6_ohm": 13,
+      "sense_nominal_ohm": 0.6461988304093568,
+      "current_equation_nominal_mA": 119.93212669683258,
+      "sense_max_ohm": 0.6653865621111723,
+      "current_peak_min_A": 0.41028781695532257,
+      "L_min_screen_mH": 0.855,
+      "extra_hot_L_drop_screen": 0.1,
+      "resistor_deltaT_K": 100,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 100,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.1531908618934414,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": -7.744731048524689,
+      "screen_pass": false,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    },
+    {
+      "point": "135mA_primary",
+      "R6_ohm": 3.65,
+      "sense_nominal_ohm": 0.5732101616628176,
+      "current_equation_nominal_mA": 135.2034649476229,
+      "sense_max_ohm": 0.5789422632794458,
+      "current_peak_min_A": 0.4715496126566726,
+      "L_min_screen_mH": 0.95,
+      "extra_hot_L_drop_screen": 0,
+      "resistor_deltaT_K": 0,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 200,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.4726429208766374,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": 17.81143367013098,
+      "screen_pass": true,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    },
+    {
+      "point": "135mA_primary",
+      "R6_ohm": 3.65,
+      "sense_nominal_ohm": 0.5732101616628176,
+      "current_equation_nominal_mA": 135.2034649476229,
+      "sense_max_ohm": 0.5789422632794458,
+      "current_peak_min_A": 0.4715496126566726,
+      "L_min_screen_mH": 0.855,
+      "extra_hot_L_drop_screen": 0.1,
+      "resistor_deltaT_K": 0,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 200,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.3253786287889735,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": 6.03029030311788,
+      "screen_pass": true,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    },
+    {
+      "point": "135mA_primary",
+      "R6_ohm": 3.65,
+      "sense_nominal_ohm": 0.5732101616628176,
+      "current_equation_nominal_mA": 135.2034649476229,
+      "sense_max_ohm": 0.5905211085450347,
+      "current_peak_min_A": 0.4623035418202672,
+      "L_min_screen_mH": 0.95,
+      "extra_hot_L_drop_screen": 0,
+      "resistor_deltaT_K": 100,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 200,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.4437675694868992,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": 15.50140555895192,
+      "screen_pass": true,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    },
+    {
+      "point": "135mA_primary",
+      "R6_ohm": 3.65,
+      "sense_nominal_ohm": 0.5732101616628176,
+      "current_equation_nominal_mA": 135.2034649476229,
+      "sense_max_ohm": 0.5905211085450347,
+      "current_peak_min_A": 0.4623035418202672,
+      "L_min_screen_mH": 0.855,
+      "extra_hot_L_drop_screen": 0.1,
+      "resistor_deltaT_K": 100,
+      "R5_TCR_ppm_K": 200,
+      "R6_TCR_screen_ppm_K": 200,
+      "Vin_peak_screen_V": 357.7960312803931,
+      "VLED_hot_low_screen_V": 53.6,
+      "required_TON_us": 1.2993908125382092,
+      "datasheet_min_ON_time_max_us": 1.25,
+      "margin_percent": 3.9512650030567142,
+      "screen_pass": true,
+      "limits": "1mH\u00b15%isreference100kHzsmall-signalmeasurement;extra10%hot/biasdropisengineeringSCREEN,notsupplierbound.VFB273mVspecified25C,notprovedhotcorner.Bridge/rectifierdropsomittedconservatively."
+    }
+  ],
+  "bleeder_screens": [
+    {
+      "each_R_ohm": 75000,
+      "deltaT_K": 0,
+      "engineering_longterm_change_reserve": 0,
+      "one_survivor_Rmax_ohm": 75750.0,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 39.41021891891421,
+      "passes40s_screen": true,
+      "normal_pair_loss_at60V_W": 0.096,
+      "fault_each_loss_at90V_W": 0.108
+    },
+    {
+      "each_R_ohm": 75000,
+      "deltaT_K": 0,
+      "engineering_longterm_change_reserve": 0.01,
+      "one_survivor_Rmax_ohm": 76507.5,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 39.804321108103345,
+      "passes40s_screen": true,
+      "normal_pair_loss_at60V_W": 0.096,
+      "fault_each_loss_at90V_W": 0.108
+    },
+    {
+      "each_R_ohm": 75000,
+      "deltaT_K": 100,
+      "engineering_longterm_change_reserve": 0,
+      "one_survivor_Rmax_ohm": 76507.5,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 39.804321108103345,
+      "passes40s_screen": true,
+      "normal_pair_loss_at60V_W": 0.096,
+      "fault_each_loss_at90V_W": 0.108
+    },
+    {
+      "each_R_ohm": 75000,
+      "deltaT_K": 100,
+      "engineering_longterm_change_reserve": 0.01,
+      "one_survivor_Rmax_ohm": 77272.575,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 40.202364319184376,
+      "passes40s_screen": false,
+      "normal_pair_loss_at60V_W": 0.096,
+      "fault_each_loss_at90V_W": 0.108
+    },
+    {
+      "each_R_ohm": 68000,
+      "deltaT_K": 0,
+      "engineering_longterm_change_reserve": 0,
+      "one_survivor_Rmax_ohm": 68680.0,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 35.73193181981555,
+      "passes40s_screen": true,
+      "normal_pair_loss_at60V_W": 0.10588235294117647,
+      "fault_each_loss_at90V_W": 0.11911764705882352
+    },
+    {
+      "each_R_ohm": 68000,
+      "deltaT_K": 0,
+      "engineering_longterm_change_reserve": 0.01,
+      "one_survivor_Rmax_ohm": 69366.8,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 36.0892511380137,
+      "passes40s_screen": true,
+      "normal_pair_loss_at60V_W": 0.10588235294117647,
+      "fault_each_loss_at90V_W": 0.11911764705882352
+    },
+    {
+      "each_R_ohm": 68000,
+      "deltaT_K": 100,
+      "engineering_longterm_change_reserve": 0,
+      "one_survivor_Rmax_ohm": 69366.8,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 36.0892511380137,
+      "passes40s_screen": true,
+      "normal_pair_loss_at60V_W": 0.10588235294117647,
+      "fault_each_loss_at90V_W": 0.11911764705882352
+    },
+    {
+      "each_R_ohm": 68000,
+      "deltaT_K": 100,
+      "engineering_longterm_change_reserve": 0.01,
+      "one_survivor_Rmax_ohm": 70060.46800000001,
+      "Cmax_uF": 180,
+      "initial_V": 90,
+      "target_V": 5,
+      "one_open_time_s": 36.450143649393844,
+      "passes40s_screen": true,
+      "normal_pair_loss_at60V_W": 0.10588235294117647,
+      "fault_each_loss_at90V_W": 0.11911764705882352
+    }
+  ],
+  "C5": {
+    "mpn": "CL21B475KAFNNNE",
+    "official_url": "https://product.samsungsem.com/mlcc/CL21B475KAFNNN.do",
+    "official_HTML_sha256": "bd30bf4933e7d1b9af8733ef51774fce0c5933385c5ae80553808759a3a605eb",
+    "curve_JSON_sha256": "e7cd01f0722f893d7dd006bd96b371962ce2d8bdc54361a959b9bbb3659b7b03",
+    "curves": [
+      {
+        "bias_V": 5.075,
+        "typical_deltaC_percent": -29.08693241935155,
+        "typical_effective_uF_at25C": 3.332914176290477,
+        "combined_engineering_screen_uF": 2.294711410375993,
+        "screen_factors": "nominal4.7uF*typicalDCbias*.9tolerance*.85X7Rtemp*.9explicitagingreserve; multiplicationisengineeringnotguaranteedcombinedsupplierbound"
+      },
+      {
+        "bias_V": 5.22,
+        "typical_deltaC_percent": -30.320025063285005,
+        "typical_effective_uF_at25C": 3.2749588220256047,
+        "combined_engineering_screen_uF": 2.254809148964629,
+        "screen_factors": "nominal4.7uF*typicalDCbias*.9tolerance*.85X7Rtemp*.9explicitagingreserve; multiplicationisengineeringnotguaranteedcombinedsupplierbound"
+      },
+      {
+        "bias_V": 5.35,
+        "typical_deltaC_percent": -31.424876330078195,
+        "typical_effective_uF_at25C": 3.223030812486325,
+        "combined_engineering_screen_uF": 2.2190567143968347,
+        "screen_factors": "nominal4.7uF*typicalDCbias*.9tolerance*.85X7Rtemp*.9explicitagingreserve; multiplicationisengineeringnotguaranteedcombinedsupplierbound"
+      },
+      {
+        "bias_V": 5.55,
+        "typical_deltaC_percent": -33.106784919984314,
+        "typical_effective_uF_at25C": 3.1439811087607374,
+        "combined_engineering_screen_uF": 2.164630993381768,
+        "screen_factors": "nominal4.7uF*typicalDCbias*.9tolerance*.85X7Rtemp*.9explicitagingreserve; multiplicationisengineeringnotguaranteedcombinedsupplierbound"
+      }
+    ],
+    "important_limit": "Samsung labelscurvestypicaldesignreference; nohardworstDCbiaslimitasserted.4.7uFisnominal,notguaranteedeffectiveatBPbias.",
+    "hold_screen": {
+      "engineering_floor_Ceff_uF": 2,
+      "assumed_current_uA": 785,
+      "current_status": "LYT1603D switching supply current datasheetTYP only, notmaxbound",
+      "from_BPmin_to_resetmax_V": [
+        5.075,
+        4.65
+      ],
+      "hold_time_typ_current_ms": 1.0828025477707002,
+      "on_hold_delta_for45us_V": 0.0176625,
+      "not_closed": "Need BPdroop/charger/currentmeasurementacrosslinezero/startup/hot/coldandcapbias/aging;nochargewindoworholdguaranteefromthisscreen"
+    }
+  },
+  "R7": {
+    "mpn": "VR25000003903FR500",
+    "datasheet_url": "https://www.vishay.com/docs/28907/vr25vr37vr68.pdf",
+    "datasheet_sha256": "eaffa53e04b875c64a4e5dd6c3dafa976d0fd667822632e6b9c8e01fbdaa3d7b",
+    "rated_W_at70C": 0.25,
+    "limiting_working_voltage_Vrms_dc": 1600,
+    "TCR_ppm_K": 200,
+    "film_max_C": 155,
+    "thermal_resistance_K_W": 140,
+    "normal_peak_voltage_upper_at253V_V": 304.1960312803931,
+    "resistance_min_at_plus100K_ohm": 378378.0,
+    "cycle_power_upper_bounds": [
+      {
+        "output_V": 53.6,
+        "normal_253Vac_cycle_upper_W": 0.11320517754141626
+      },
+      {
+        "output_V": 56,
+        "normal_253Vac_cycle_upper_W": 0.11114973001438744
+      },
+      {
+        "output_V": 60,
+        "normal_253Vac_cycle_upper_W": 0.10782033676323616
+      },
+      {
+        "output_V": 66,
+        "normal_253Vac_cycle_upper_W": 0.10305761624018817
+      },
+      {
+        "output_V": 90,
+        "normal_253Vac_cycle_upper_W": 0.08697784690898529
+      }
+    ],
+    "rated_power_at100C_W": 0.16176470588235295,
+    "rated_power_at125C_W": 0.08823529411764706,
+    "conclusion": "Atlocal100C,conservativenormal-cycleupper~.11Wisbelowderated~.162W;125Ccannotpasssameconservativebound(allowable~.088W)withoutactualduty/powerdata. ProposeR7localambient<=100CforLABplanning;spikes/faultpulseenergyandphysicaltemperaturestillmustbechecked.1600VlimitisnotpermissiontoignoreP=Vrms\u00b2/R."
+  },
+  "R4": {
+    "mpn": "ERJ6ENF1332V",
+    "official_url": "https://industrial.panasonic.com/ww/products/pt/general-purpose-chip-resistors/models/ERJ6ENF1332V",
+    "value_ohm": 13300,
+    "tolerance_percent": 1,
+    "TCR_ppm_K": 100,
+    "power_W": 0.125,
+    "nominal_max_sense_voltage_V": 2.48,
+    "simple_DC_power_at2p48V_W": 0.00046243609022556393
+  },
+  "operating_scope": {
+    "allowed_proposal": "Bounded unpowered/LABmapcanbeproposedforhumanreviewwithactualparts/connectionsandtheseownedunknowns;~135mAprimaryisclosertoreferencewithusefulTONmargin.",
+    "not_qualified": [
+      "Fulltempcurrentaccuracy",
+      "Guaranteedhot/corebiasinductance",
+      "GuaranteedBPcapacitance/hold",
+      "FulltemperatureOVPthresholdand90Vdynamicovershoot",
+      "Singlefaultcomponent/fuse/MOVcontainment",
+      "Energizedhotplug",
+      "Finishedbulbfit/temperature/800lm/normativecompliance"
+    ],
+    "cold_replacement": "Owneroriginaldeenergizedreplacementintentcanbespecified;wait/dischargeverificationandcontactaccessibilityneedcompleteproductdesign,notclaimedsolelybyinstructions. NoenergizedLEDinsertionisallowedorsupportedbythisproposal.",
+    "current_primary": "135mA3.65\u03a9",
+    "secondary120mA": "13\u03a9sensenetworkconditionalONscreenfailswithextra10%hotLdrop; wouldneedretuned/verifiedmagneticsornewcontrolpoint."
+  },
+  "R4_thermal_aging_screen_tradeoffs": [
+    {
+      "R4_ohm": 13300,
+      "static_min_V": 64.85675053365856,
+      "static_max_V": 80.8494232938832,
+      "status": "Exploratoryresistor-onlyscreen,notfulltemperatureICguaranteeornativechange"
+    },
+    {
+      "R4_ohm": 13000,
+      "static_min_V": 66.30036785366607,
+      "static_max_V": 82.65794844681898,
+      "status": "Exploratoryresistor-onlyscreen,notfulltemperatureICguaranteeornativechange"
+    },
+    {
+      "R4_ohm": 12700,
+      "static_min_V": 67.81218756674478,
+      "static_max_V": 84.55191573296429,
+      "status": "Exploratoryresistor-onlyscreen,notfulltemperatureICguaranteeornativechange"
+    },
+    {
+      "R4_ohm": 12400,
+      "static_min_V": 69.39715984658538,
+      "static_max_V": 86.5375265974715,
+      "status": "Exploratoryresistor-onlyscreen,notfulltemperatureICguaranteeornativechange"
+    }
+  ]
+}

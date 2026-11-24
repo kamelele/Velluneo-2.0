@@ -1,0 +1,196 @@
+{
+  "actor": "/root/compact_fit_research",
+  "revision": "T1-MAGNETIC-ADDENDUM-01",
+  "scope": "Root-proposed180T/AWG32 customcoil screen and requirements; no CAD/graph/approval evidence written",
+  "root_design_choice": "180turnsAWG32 is a reasonable proposed winding improvement within unchangeddeclared12x12x13mm custommechanicalcontract; explicitdeparturefromRDR150turnAWG31recipe",
+  "comparison": [
+    {
+      "turns": 150,
+      "AWG": 31,
+      "bare_diameter_planning_mm": 0.227,
+      "finished_OD_design_max_mm": 0.26,
+      "layers": 6,
+      "layer_turns": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ],
+      "nominal_winding_width_mm": 6.6,
+      "nominal_radial_space_mm": 1.8484848484848484,
+      "axial_occupation_mm": 6.5,
+      "radial_wire_occupation_mm": 1.56,
+      "radial_with0p150_tape_process_allowance_mm": 1.71,
+      "nominal_radial_margin_after_allowance_mm": 0.13848484848484835,
+      "mean_wire_length_excluding_tails_m": 3.5700000000000003,
+      "copper_area_mm2": 0.040470781961707114,
+      "DCR20_nominal_wire_only_ohm": 1.5208928801071948,
+      "DCR25_wire_only_ohm": 1.550778425201301,
+      "DCR25_with10percent_length_reserve_ohm": 1.7058562677214313,
+      "proposed_DCR25_acceptance_max_ohm": 1.8,
+      "calculated_DCR100_from25_limit_ohm": 2.3203256019222285,
+      "proposed_DCR100_acceptance_max_ohm": 2.4,
+      "proposed_Pcu_at0p300Arms_W": 0.216,
+      "required_nominal_gapped_AL_nH_per_turn2": 44.44444444444444,
+      "flux_linear_screen_T": [
+        {
+          "I_A": 0.487,
+          "B_at_Ae12p1_Lmax1p05_T": 0.2817355371900826,
+          "B_at_Amin10p6_Lmax1p05_T": 0.3216037735849056
+        },
+        {
+          "I_A": 0.50222,
+          "B_at_Ae12p1_Lmax1p05_T": 0.29054049586776853,
+          "B_at_Amin10p6_Lmax1p05_T": 0.331654716981132
+        },
+        {
+          "I_A": 0.6,
+          "B_at_Ae12p1_Lmax1p05_T": 0.3471074380165289,
+          "B_at_Amin10p6_Lmax1p05_T": 0.39622641509433953
+        },
+        {
+          "I_A": 1.24,
+          "B_at_Ae12p1_Lmax1p05_T": 0.7173553719008264,
+          "B_at_Amin10p6_Lmax1p05_T": 0.8188679245283018
+        }
+      ],
+      "caveats": "Nominalwindinggeometry/meanwirelength,notmeasured. Finalwiretolerance,laying,crossover,tape,packing,leadtailsandwindowminimumrequiremakerconfirmation. LinearfluxaboveBHkneeisnotphysicalprediction; indicatesfailedmargin."
+    },
+    {
+      "turns": 180,
+      "AWG": 32,
+      "bare_diameter_planning_mm": 0.202,
+      "finished_OD_design_max_mm": 0.225,
+      "layers": 7,
+      "layer_turns": [
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        18
+      ],
+      "nominal_winding_width_mm": 6.6,
+      "nominal_radial_space_mm": 1.8484848484848484,
+      "axial_occupation_mm": 6.075,
+      "radial_wire_occupation_mm": 1.575,
+      "radial_with0p150_tape_process_allowance_mm": 1.7249999999999999,
+      "nominal_radial_margin_after_allowance_mm": 0.12348484848484845,
+      "mean_wire_length_excluding_tails_m": 4.284000000000001,
+      "copper_area_mm2": 0.03204738665926948,
+      "DCR20_nominal_wire_only_ohm": 2.304776665592892,
+      "DCR25_wire_only_ohm": 2.350065527071792,
+      "DCR25_with10percent_length_reserve_ohm": 2.5850720797789717,
+      "proposed_DCR25_acceptance_max_ohm": 2.7,
+      "calculated_DCR100_from25_limit_ohm": 3.480488402883343,
+      "proposed_DCR100_acceptance_max_ohm": 3.6,
+      "proposed_Pcu_at0p300Arms_W": 0.324,
+      "required_nominal_gapped_AL_nH_per_turn2": 30.864197530864196,
+      "flux_linear_screen_T": [
+        {
+          "I_A": 0.487,
+          "B_at_Ae12p1_Lmax1p05_T": 0.23477961432506886,
+          "B_at_Amin10p6_Lmax1p05_T": 0.26800314465408803
+        },
+        {
+          "I_A": 0.50222,
+          "B_at_Ae12p1_Lmax1p05_T": 0.24211707988980716,
+          "B_at_Amin10p6_Lmax1p05_T": 0.27637893081761
+        },
+        {
+          "I_A": 0.6,
+          "B_at_Ae12p1_Lmax1p05_T": 0.2892561983471074,
+          "B_at_Amin10p6_Lmax1p05_T": 0.330188679245283
+        },
+        {
+          "I_A": 1.24,
+          "B_at_Ae12p1_Lmax1p05_T": 0.5977961432506887,
+          "B_at_Amin10p6_Lmax1p05_T": 0.6823899371069182
+        }
+      ],
+      "caveats": "Nominalwindinggeometry/meanwirelength,notmeasured. Finalwiretolerance,laying,crossover,tape,packing,leadtailsandwindowminimumrequiremakerconfirmation. LinearfluxaboveBHkneeisnotphysicalprediction; indicatesfailedmargin."
+    }
+  ],
+  "material": {
+    "source_existing_native": "tdk-core-greenroof.pdf nativep4materialtable,p6typicalBHcurves,p19geometry,p20matchedcore,p23/24bobbin",
+    "material": "PC40",
+    "archived_Bs_average_mT_at_H1194A_per_m": {
+      "25C": 510,
+      "60C": 450,
+      "100C": 390,
+      "120C": 350
+    },
+    "current2026_Bs_typical_mT_at_H1194A_per_m": {
+      "25C": 500,
+      "60C": 450,
+      "100C": 380
+    },
+    "source_difference": "OlderPC40average390mT100C vs currenttypical380mT100C. Neither is a guaranteedminimumsaturationorinductance-droprating. Do notuse390asaguaranteeddesignlimit.",
+    "core_Ae_mm2": 12.1,
+    "core_Acp_nominal_mm2": 11.6,
+    "core_Acp_min_mm2": 10.6,
+    "Amin_basis": "ManufacturerEE10specifictableTDK-E141.PDFandindependentnativep19geometry(4.75-.15)*(2.45-.15)=10.58mm2,rounded10.6. Acpminimumshouldbeusedforlocalfluxscreen.",
+    "core_loss_reference_W": 0.14,
+    "core_loss_reference_conditions": "MatchedPC40EE10/11corecatalogmaxat100kHz,200mT,100C only; not a loss bound for biasedbuckwaveform",
+    "proposed_core_temperature_design_limit_C": 90,
+    "temperature_limit_status": "Planning/testacceptanceproposal,notmeasuredoperationorqualification"
+  },
+  "fault_current": {
+    "source": "PIlytswitch-1_family_datasheetRevB07/16nativep7/8",
+    "VFB25_magnitude_range_mV": [
+      273,
+      285
+    ],
+    "normal_static_sense_example": "R5=.68ohm||R6=3.65ohm,each1percent:Rsnom.57321ohm,Rsmin.56748ohm;285mV/Rsmin≈.50222A beforecurrent-risetime/blanking/temperatureeffects",
+    "LYT1603_internal_autorestart_current_limit_A_at25C": [
+      1.06,
+      1.15,
+      1.24
+    ],
+    "internal_limit_test_di_dt_A_per_us": 0.446,
+    "fault_minimum_on_time_ns_min_typ": [
+      250,
+      400
+    ],
+    "fault_minimum_on_time_has_published_max": false,
+    "normal_minimum_on_time_us_min_typ_max": [
+      1.012,
+      1.1,
+      1.25
+    ],
+    "not_guaranteed": "1.24Aisnotfulltemperatureguaranteedinductorpeakboundand.6AisnotanICfaultlimit. ExternalFBresistordoesnotprovefaultpeakwhenFBpathfails.",
+    "closure": "RootmustanalyzerelevantFB/sensefaults,highlinecurrentrampanddelay,thenqualifycoilDCbias/transientcurrentandautorestartenergy.180TdoesnotkeepPC40unsaturatedat1.24A."
+  },
+  "thermal_planning": {
+    "proposed_copper_allocation_W": 0.324,
+    "proposed_core_plus_extra_AC_winding_allocation_W": 0.4,
+    "allocation_status": "Engineeringbudgetproposedforrootreview,notcalculatedupperboundormeasuredloss",
+    "proposed_total_coil_budget_W": 0.724,
+    "ambient_max_C": 40,
+    "core_temperature_target_max_C": 90,
+    "needed_effective_rise_coefficient_C_per_W_atbudget": 69.06077348066299,
+    "coefficient_status": "Requiredperformanceifbudgetisfullyused; notabobbindatasheetthermalresistance. Coreandwindingareseparatetemperaturepoints.",
+    "tests": "Measurecoiltemperatureandcurrentat207/230/253VACand0..40Cambience,high/lowLEDvoltage,open/short/reconnectandrelevantfaultsunderlaboratorycontrols. Validatewindinghotspotandinsulationsystem separately."
+  },
+  "mandatory_before_energizing": [
+    "Supplier/sampleconfirms180T32AWGwireOD<=.225andpackingwithradialtape/process<=.15mm,actual12x12x13envelopeandpinjig",
+    "Measure1mH±5%at100kHz1VppzeroDC25C;measureDCR<=2.7ohm25C andreport100Cresistance<=3.6ohm",
+    "ProvideL(I,T)curveorcontrolledpulsemeasurementthroughselectednormal/abnormalpeak;atminimumhotL>=.855mH at.60A mustbeDEMONSTRATED,notsourcedfromBs",
+    "Rootclosesnormal/faultcurrentcornersincludingICautorestart1.24A25Cexample,minimumontime,missingdelaymaximumandFBfailures",
+    "CorelossandACwindinglossbudgetrequireswaveform-basedestimateorqualifiedsupplierlossdata; actualtemperaturesrequiremeasurement",
+    "Corematerial/gap/varnish/tapewireinsulationandtemperatureclassmustbeidentified; noanonymousEE10replacement"
+  ],
+  "sources": {
+    "archivedmatchedcorecatalogmirror": "https://www.greenroofsolar.com/datasheets/PC44.pdf",
+    "currentTDKmaterial": "https://product.tdk.com/system/files/dam/doc/product/ferrite/ferrite/ferrite-core/catalog/ferrite_material_characteristics_en.pdf",
+    "EE10Aminmanufacturer_authoredmirror": "https://pccomponents.com/datasheets/TDK-E141.PDF",
+    "PIcontroller": "https://www.power.com/sites/default/files/documents/lytswitch-1_family_datasheet.pdf",
+    "copper_primary_NBS": "https://www.govinfo.gov/content/pkg/GOVPUB-C13-0623ad8ee79f1b1d92b7a3d7465714eb/pdf/GOVPUB-C13-0623ad8ee79f1b1d92b7a3d7465714eb.pdf",
+    "copper_model": "rho20=1/58ohm_mm2/m;alpha20=.00393/K;temperatureconversionnormalizedat25Cwhenstartingfrom25Climit"
+  },
+  "no_physical_measurements_performed": true,
+  "existing_source_sha256": "afcb5389f8e0ce4bea74536f31223814d03cb4094b100e67ae698d4a340965f6"
+}
